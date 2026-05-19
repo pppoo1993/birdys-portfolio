@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #111111;
+  --color-bg-secondary: #1a1a1a;
+  --color-bg-card: #1e1e1e;
+  --color-bg-footer: #0a0a0a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0a0;
+  --color-text-tertiary: #6b6b6b;
+  --color-accent: #e8ff0a;
+  --color-accent-muted: rgba(232, 255, 10, 0.12);
+  --color-divider: #2a2a2a;
+  --color-border: #2a2a2a;
+}
+
+:root {
+  --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Card — Apple-style glass */
+.card {
+  background: rgba(30, 30, 30, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.card-hover:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(30, 30, 30, 0.7);
+  transition: all 0.3s ease;
+}
+
+/* Typography */
+.heading-xl {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  color: var(--color-text-primary);
+}
+
+.heading-lg {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--color-text-primary);
+}
+
+.heading-section {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.body-text {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.caption {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.accent-text {
+  color: var(--color-accent);
+}
+
+/* Semi-transparent layer for depth between hero/contact bg images */
+.section-soft {
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Section backgrounds */
+.section-dark {
+  background: var(--color-bg-primary);
+}
+
+.section-darker {
+  background: var(--color-bg-secondary);
+}
+
+/* Fixed-background section sits above the hero bg image */
+.section-cover {
+  background: var(--color-bg-secondary);
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile: disable fixed background attachment (iOS Safari bug) */
+@media (max-width: 1023px) {
+  .bg-fixed-mobile-fallback {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Horizontal scroll snap */
+.scroll-snap-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.scroll-snap-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-snap-card {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+@media (max-width: 1023px) {
+  .scroll-snap-container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+
+  .scroll-snap-card {
+    flex: auto;
+    scroll-snap-align: none;
+  }
+}
