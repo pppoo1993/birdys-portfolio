@@ -143,6 +143,17 @@ body {
   scroll-snap-align: center;
 }
 
+/* Terminal cursor blink */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.animate-cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+.group:hover .animate-cursor-blink {
+  animation: blink 0.4s step-end infinite;
+}
+
 @media (max-width: 1023px) {
   .scroll-snap-container {
     display: flex;
@@ -155,4 +166,26 @@ body {
     flex: auto;
     scroll-snap-align: none;
   }
+}
+
+/* Mouse spotlight glow */
+.spotlight {
+  position: relative;
+}
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    200px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(224, 255, 0, 0.15) 0%,
+    transparent 80%
+  );
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.spotlight.is-active::before {
+  opacity: 1;
 }

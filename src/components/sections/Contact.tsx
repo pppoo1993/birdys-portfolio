@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-fixed-mobile-fallback relative flex w-full items-center overflow-hidden px-6 py-24 sm:px-8 md:py-32 lg:px-12"
+      className="bg-fixed-mobile-fallback relative flex w-full items-center overflow-hidden px-6 py-12 sm:px-8 md:py-16 lg:px-12"
       style={{
         backgroundImage: `url(${contactBg})`,
         backgroundSize: 'cover',
@@ -22,7 +22,7 @@ export default function Contact() {
             {/* QR Code */}
             <div className="h-36 w-36 shrink-0 overflow-hidden rounded-2xl border-2 border-white/20 bg-white p-2 sm:h-40 sm:w-40">
               <img
-                src="/images/qrcode.png"
+                src="images/qrcode.png"
                 alt="微信二维码"
                 className="h-full w-full object-contain"
               />

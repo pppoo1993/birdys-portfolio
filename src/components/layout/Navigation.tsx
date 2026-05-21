@@ -21,7 +21,7 @@ export default function Navigation() {
         <li key={link.sectionId}>
           <button
             onClick={() => handleNav(link.sectionId)}
-            className={`block w-full px-4 py-2 text-left text-sm transition-all ${
+            className={`block w-full px-6 py-2 text-left text-sm transition-all ${
               activeId === link.sectionId
                 ? 'text-xl font-bold text-accent'
                 : 'text-sm text-white/40 hover:text-white/70'
@@ -59,13 +59,13 @@ export default function Navigation() {
 
       {/* Desktop: fixed left sidebar */}
       <aside className="fixed top-0 left-0 z-40 hidden h-screen w-[240px] flex-col border-r border-divider bg-bg-primary md:flex">
-        <div className="px-4 pb-8" style={{ paddingTop: '15vh' }}>
+        <div className="px-6 pb-3" style={{ paddingTop: '15vh' }}>
           <button onClick={() => scrollTo('intro')} className="text-sm font-medium tracking-wide text-white/60">
             {siteConfig.name}
           </button>
         </div>
         <nav className="flex-1">{navLinks}</nav>
-        <div className="px-4 pb-8">
+        <div className="px-6 pb-4">
           <p className="text-[0.6rem] text-text-tertiary">
             &copy; birdydesign {new Date().getFullYear()}
           </p>

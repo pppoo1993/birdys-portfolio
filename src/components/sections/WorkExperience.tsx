@@ -9,51 +9,65 @@ function formatDate(iso: string): string {
 
 export default function WorkExperience() {
   return (
-    <SectionWrapper id="experience" className="section-darker border-b border-divider">
+    <SectionWrapper id="experience" className="section-darker border-b border-divider !py-12 md:!py-16">
       <div className="mx-auto max-w-xl">
         <p className="heading-section mb-10 sm:hidden">工作经历</p>
         {experienceData.map((exp, i) => {
           const isFirst = i === 0
+          const isLast = i === experienceData.length - 1
           return (
             <ScrollReveal key={exp.id}>
-              <div className="relative flex gap-4">
+              <div className="relative flex w-full gap-x-6">
                 {/* Timeline: dot + line */}
-                <div className="flex w-6 shrink-0 flex-col items-center">
+                <div className="mt-1 flex flex-col items-center">
+                  {isFirst && (
+                    <div
+                      className="w-px min-h-[0.5rem] shrink-0 flex-1"
+                      style={{
+                        background: 'linear-gradient(to bottom, var(--color-accent), transparent)',
+                      }}
+                    />
+                  )}
                   <div
-                    className={`z-10 mt-[7px] h-2 w-2 rounded-full ${
-                      isFirst ? 'bg-accent ring-4 ring-accent-muted' : 'bg-divider'
+                    className={`z-10 shrink-0 rounded-full ${
+                      isFirst
+                        ? 'h-3 w-3 bg-accent shadow-[0_0_8px_rgba(232,255,10,0.5)]'
+                        : 'h-2 w-2 bg-divider'
                     }`}
                   />
-                  {i < experienceData.length - 1 && (
-                    <div className="w-px flex-1 bg-divider" />
-                  )}
+                  {!isLast && <div className="mt-2 w-px flex-1 bg-divider" />}
                 </div>
 
-                {/* Date + Card */}
-                <div className={`flex-1 ${i < experienceData.length - 1 ? 'pb-8' : ''}`}>
-                  <p className="mb-3 text-sm font-medium text-white">
-                    <span>
-                      {formatDate(exp.startDate)}
-                      <span className="text-text-tertiary">—</span>
-                      {exp.endDate ? formatDate(exp.endDate) : '至今'}
+                {/* Content */}
+                <div className={`flex flex-1 flex-col ${isLast ? '' : 'pb-12'}`}>
+                  <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
+                    <h3 className="text-xl font-bold text-white leading-none">
+                      {exp.role}
+                      <span className="mx-2 font-normal text-text-tertiary">·</span>
+                      <span className="font-medium text-text-secondary">
+                        {exp.company}
+                      </span>
+                    </h3>
+                    <span className="font-mono text-sm text-text-tertiary">
+                      {formatDate(exp.startDate)} — {exp.endDate ? formatDate(exp.endDate) : '至今'}
                     </span>
-                    <span className="mx-1.5 text-text-tertiary hidden sm:inline">|</span>
-                    <br className="sm:hidden" />
-                    <span className="font-semibold">{exp.role}</span>
-                    <span className="mx-1 text-text-tertiary">·</span>
-                    <span className="text-text-secondary">{exp.company}</span>
-                  </p>
-                  <div className="card p-5 sm:p-6">
-                    <ul className="space-y-1.5">
+                  </div>
+
+                  {/* Card */}
+                  <div className="rounded-xl border border-divider bg-[#161719] p-5 sm:p-6">
+                    <ul className="list-disc space-y-2 pl-4 text-sm leading-relaxed text-text-secondary">
                       {exp.description.map((item, j) => (
-                        <li key={j} className="text-xs leading-relaxed text-text-secondary sm:text-sm">
-                          {item}
-                        </li>
+                        <li key={j}>{item}</li>
                       ))}
                     </ul>
-                    <div className="flex flex-wrap gap-1.5">
+
+                    {/* Outlined tags with hover fill */}
+                    <div className="mt-4 flex flex-wrap gap-2">
                       {exp.techStack.map((tech) => (
-                        <span key={tech} className="bg-accent-muted px-2.5 py-0.5 text-xs font-medium text-accent">
+                        <span
+                          key={tech}
+                          className="cursor-default rounded-md border border-accent/30 px-2.5 py-1 text-xs text-accent transition-all hover:bg-accent hover:text-black"
+                        >
                           {tech}
                         </span>
                       ))}

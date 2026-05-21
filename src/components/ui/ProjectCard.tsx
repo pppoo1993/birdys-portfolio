@@ -1,64 +1,41 @@
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import type { Project } from '../../types'
 
 interface ProjectCardProps {
   project: Project
-  index: number
-  activeIndex: number
-  onSelect: (index: number) => void
+  onClick: () => void
 }
 
-export default function ProjectCard({ project, index, activeIndex, onSelect }: ProjectCardProps) {
-  const isActive = index === activeIndex
-
+export default function ProjectCard({ project, onClick }: ProjectCardProps) {
   return (
-    <div className="scroll-snap-card w-full px-2">
-      <div className="card overflow-hidden p-0">
-        <div className="relative">
-          <img
-            src={project.imagePath}
-            alt={project.title}
-            className="aspect-[21/9] w-full object-cover sm:aspect-[21/9]"
-            loading="lazy"
-          />
-          {/* Dot indicator — desktop only */}
-          <button
-            onClick={() => onSelect(index)}
-            aria-label={`项目 ${index + 1}`}
-            className={`absolute bottom-3 left-1/2 hidden -translate-x-1/2 rounded-full transition-all sm:block ${
-              isActive
-                ? 'h-2.5 w-8 bg-accent'
-                : 'h-2.5 w-2.5 bg-white/40 hover:bg-white/60'
-            }`}
-          />
-        </div>
-        <div className="p-5 sm:p-6">
-          <h3 className="heading-lg text-xl">{project.title}</h3>
-          <p className="body-text mt-2 text-xs sm:text-sm">{project.description}</p>
-
-          <div className="mt-4 flex gap-5">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-accent transition-colors hover:underline"
+    <div
+      onClick={onClick}
+      className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-xl border border-divider bg-[#161719] transition-all hover:border-white/20 hover:bg-[#1a1b1e]"
+    >
+      <div className="aspect-[4/3] w-full shrink-0 overflow-hidden">
+        <img
+          src={project.imagePath}
+          alt={project.title}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
+        <h3 className="text-base font-semibold text-white transition-colors group-hover:text-accent sm:text-lg">
+          {project.title}
+        </h3>
+        <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-text-secondary sm:text-sm">
+          {project.description}
+        </p>
+        <div className="mt-auto pt-3">
+          <div className="flex flex-nowrap gap-1.5 overflow-hidden">
+            {project.techStack.slice(0, 4).map((tech) => (
+              <span
+                key={tech}
+                className="shrink-0 rounded border border-divider px-2 py-0.5 text-[0.65rem] text-text-tertiary sm:text-xs"
               >
-                <FiExternalLink size={14} />
-                在线预览
-              </a>
-            )}
-            {project.sourceUrl && (
-              <a
-                href={project.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-accent hover:underline"
-              >
-                <FiGithub size={14} />
-                源代码
-              </a>
-            )}
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
       </div>

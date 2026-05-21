@@ -36,14 +36,32 @@ export interface ExperienceEntry {
   companyUrl?: string;
 }
 
+export interface ProjectSection {
+  heading?: string
+  body: string
+  illustration?: {
+    src: string
+    alt: string
+    caption?: string
+  }
+}
+
+export interface ProjectDetail {
+  pageTitle: string
+  mainTitle: string
+  subtitle?: string
+  sections: ProjectSection[]
+}
+
 export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  imagePath: string;
-  techStack: string[];
-  liveUrl?: string;
-  sourceUrl?: string;
+  id: string
+  title: string
+  description: string
+  imagePath: string
+  techStack: string[]
+  liveUrl?: string
+  sourceUrl?: string
+  detail: ProjectDetail
 }
 
 export interface SocialLink {
