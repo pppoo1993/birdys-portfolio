@@ -11,7 +11,9 @@ export interface NavLink {
 }
 
 export interface BioSection {
+  number: string;
   heading: string;
+  tag: string;
   body: string;
 }
 

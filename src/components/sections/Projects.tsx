@@ -1,113 +1,60 @@
-import { useRef, useState, useEffect, useCallback } from 'react'
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
-import SectionWrapper from '../layout/SectionWrapper'
-import ProjectCard from '../ui/ProjectCard'
+import { useState } from 'react'
 import ProjectDetail from '../ui/ProjectDetail'
 import ScrollReveal from '../animations/ScrollReveal'
 import { projectData } from '../../data/projects'
-import { useMediaQuery } from '../../hooks/useMediaQuery'
 import type { Project } from '../../types'
 
 export default function Projects() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [activeIndex, setActiveIndex] = useState(0)
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-  const isDesktop = useMediaQuery('(min-width: 1024px)')
-
-  const scrollToIndex = useCallback(
-    (index: number) => {
-      const container = containerRef.current
-      if (!container) return
-      const card = container.children[index] as HTMLElement
-      if (card) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
-      }
-    },
-    [],
-  )
-
-  useEffect(() => {
-    const container = containerRef.current
-    if (!container || !isDesktop) return
-
-    const handleScroll = () => {
-      const scrollLeft = container.scrollLeft
-      const cardWidth = container.children[0]?.clientWidth ?? 0
-      const gap = 16
-      const index = Math.round(scrollLeft / (cardWidth + gap))
-      setActiveIndex(index)
-    }
-
-    container.addEventListener('scroll', handleScroll, { passive: true })
-    return () => container.removeEventListener('scroll', handleScroll)
-  }, [isDesktop])
-
-  const handlePrev = () => {
-    const next = (activeIndex - 1 + projectData.length) % projectData.length
-    scrollToIndex(next)
-  }
-
-  const handleNext = () => {
-    const next = (activeIndex + 1) % projectData.length
-    scrollToIndex(next)
-  }
-
-  const isAtStart = activeIndex === 0
 
   return (
-    <SectionWrapper id="projects" className="section-dark !py-12 md:!py-16">
-      <div className="mx-auto max-w-5xl">
-        <p className="heading-section mb-10 sm:hidden">项目作品</p>
-        <ScrollReveal>
-          <div className="relative">
+    <section id="projects" className="w-full bg-[#0d0d0d]/30 backdrop-blur-sm py-24 border-t border-zinc-900/60">
+      <div className="max-w-6xl mx-auto px-8 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+          {projectData.map((project, i) => (
+            <ScrollReveal key={project.id} delay={i * 0.1}>
             <div
-              ref={containerRef}
-              className="flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto scroll-smooth"
-              style={{ scrollbarWidth: 'none' }}
+              onClick={() => setSelectedProject(project)}
+              className="project-card h-full flex flex-col rounded-2xl bg-zinc-900/40 backdrop-blur-md border border-white/5 p-4 transition-all duration-500 group hover:border-white/10 hover:bg-zinc-900/60 hover:shadow-[0_20px_40px_rgba(0,0,0,0.7)]"
             >
-              {projectData.map((project) => (
-                <div
-                  key={project.id}
-                  className="w-[38vw] min-w-[260px] max-w-[420px] shrink-0 snap-start"
-                >
-                  <ProjectCard
-                    project={project}
-                    onClick={() => setSelectedProject(project)}
-                  />
-                </div>
-              ))}
-            </div>
+              <div className="relative w-full h-56 rounded-xl overflow-hidden bg-zinc-950 flex-shrink-0">
+                <img
+                  src={project.imagePath}
+                  alt={project.title}
+                  className="w-full h-full object-cover grayscale contrast-125 brightness-75 transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-60" />
+                <span className="absolute top-3 right-3 font-mono text-[10px] tracking-wider text-accent bg-zinc-950/70 backdrop-blur-sm px-2 py-0.5 rounded">
+                  {project.detail?.pageTitle || 'PROJECT'}
+                </span>
+              </div>
 
-            {isDesktop && (
-              <>
-                <button
-                  onClick={handlePrev}
-                  aria-label="上一个项目"
-                  className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-black/30 p-3 text-white/60 backdrop-blur transition-all duration-300 hover:border-accent hover:text-accent"
-                  style={{
-                    opacity: isAtStart ? 0 : 1,
-                    pointerEvents: isAtStart ? 'none' : 'auto',
-                  }}
-                >
-                  <FiChevronLeft size={22} />
-                </button>
-                <button
-                  onClick={handleNext}
-                  aria-label="下一个项目"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-black/30 p-3 text-white/60 backdrop-blur transition-all hover:border-accent hover:text-accent"
-                >
-                  <FiChevronRight size={22} />
-                </button>
-              </>
-            )}
-          </div>
-        </ScrollReveal>
+              <div className="flex-1 flex flex-col p-4">
+                <h3 className="text-lg font-bold text-zinc-100 group-hover:text-accent transition-colors duration-300 mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-xs text-zinc-400 leading-5 font-light line-clamp-2 h-10">
+                  {project.description}
+                </p>
+                <div className="mt-auto pt-4 text-xs text-zinc-500 font-mono tracking-wider">
+                  {project.techStack.slice(0, 2).map((tech, i) => (
+                    <span key={tech}>
+                      {i > 0 && ' / '}
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
 
       <ProjectDetail
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
       />
-    </SectionWrapper>
+    </section>
   )
 }

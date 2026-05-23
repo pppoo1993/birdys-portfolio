@@ -10,63 +10,61 @@ function formatDate(iso: string): string {
 export default function WorkExperience() {
   return (
     <SectionWrapper id="experience" className="section-darker border-b border-divider !py-12 md:!py-16">
-      <div className="mx-auto max-w-xl">
+      <div className="mx-auto py-12">
         <p className="heading-section mb-10 sm:hidden">工作经历</p>
-        {experienceData.map((exp, i) => {
-          const isFirst = i === 0
-          const isLast = i === experienceData.length - 1
-          return (
-            <ScrollReveal key={exp.id}>
-              <div className="relative flex w-full gap-x-6">
-                {/* Timeline: dot + line */}
-                <div className="mt-1 flex flex-col items-center">
-                  {isFirst && (
-                    <div
-                      className="w-px min-h-[0.5rem] shrink-0 flex-1"
-                      style={{
-                        background: 'linear-gradient(to bottom, var(--color-accent), transparent)',
-                      }}
-                    />
-                  )}
-                  <div
-                    className={`z-10 shrink-0 rounded-full ${
-                      isFirst
-                        ? 'h-3 w-3 bg-accent shadow-[0_0_8px_rgba(232,255,10,0.5)]'
-                        : 'h-2 w-2 bg-divider'
-                    }`}
-                  />
-                  {!isLast && <div className="mt-2 w-px flex-1 bg-divider" />}
-                </div>
+        <div>
+          {experienceData.map((exp, i) => {
+            const isLast = i === experienceData.length - 1
+            return (
+              <ScrollReveal key={exp.id}>
+                <div className={`relative flex gap-8 md:gap-12 pb-16 ${isLast ? 'last:pb-0' : ''} group`}>
+                  <div className="relative z-10 flex items-center justify-center flex-shrink-0 w-6 h-6 mt-1">
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-accent/30 animate-pulse" />
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-accent shadow-[0_0_10px_rgba(204,255,0,1)]" />
+                  </div>
 
-                {/* Content */}
-                <div className={`flex flex-1 flex-col ${isLast ? '' : 'pb-12'}`}>
-                  <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
-                    <h3 className="text-xl font-bold text-white leading-none">
-                      {exp.role}
-                      <span className="mx-2 font-normal text-text-tertiary">·</span>
-                      <span className="font-medium text-text-secondary">
-                        {exp.company}
-                      </span>
-                    </h3>
-                    <span className="font-mono text-sm text-text-tertiary">
+                <div className="flex-1 space-y-4">
+                  <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
+                    <div className="flex items-baseline gap-3">
+                      <h3 className="text-xl md:text-2xl font-bold tracking-tight text-zinc-100">
+                        {exp.role}
+                      </h3>
+                      <span className="text-zinc-500 font-light">·</span>
+                      <span className="text-zinc-400 font-medium">{exp.company}</span>
+                    </div>
+                    <span className="font-mono text-xs md:text-sm tracking-wider text-zinc-500">
                       {formatDate(exp.startDate)} — {exp.endDate ? formatDate(exp.endDate) : '至今'}
                     </span>
                   </div>
 
-                  {/* Card */}
-                  <div className="rounded-xl border border-divider bg-[#161719] p-5 sm:p-6">
-                    <ul className="list-disc space-y-2 pl-4 text-sm leading-relaxed text-text-secondary">
-                      {exp.description.map((item, j) => (
-                        <li key={j}>{item}</li>
-                      ))}
-                    </ul>
+                  <div className="relative overflow-hidden rounded-xl bg-zinc-900/40 border border-zinc-800/60 p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-700 hover:bg-zinc-900/60 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                      <ul className="flex-1 space-y-3 text-zinc-300 text-sm leading-relaxed font-light list-none">
+                        {exp.description.map((item, j) => (
+                          <li key={j} className="flex items-start gap-2">
+                            <span className="text-accent mt-1.5 flex-shrink-0 w-1 h-1 rounded-full bg-accent" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
 
-                    {/* Outlined tags with hover fill */}
-                    <div className="mt-4 flex flex-wrap gap-2">
+                      <div className="flex lg:flex-col gap-4 border-t lg:border-t-0 lg:border-l border-zinc-700/40 pt-4 lg:pt-0 lg:pl-8 min-w-[120px] justify-around">
+                        <div>
+                          <div className="text-2xl font-mono font-bold text-accent tracking-tight">+30%</div>
+                          <div className="text-[10px] uppercase tracking-widest text-zinc-500 font-mono mt-0.5">Collab Efficiency</div>
+                        </div>
+                        <div>
+                          <div className="text-2xl font-mono font-bold text-accent tracking-tight">+25%</div>
+                          <div className="text-[10px] uppercase tracking-widest text-zinc-500 font-mono mt-0.5">Conversion Rate</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mt-8 pt-6 border-t border-zinc-700/30">
                       {exp.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="cursor-default rounded-md border border-accent/30 px-2.5 py-1 text-xs text-accent transition-all hover:bg-accent hover:text-black"
+                          className="px-3 py-1 text-xs font-mono font-light rounded-md bg-zinc-950/80 text-zinc-400 border border-zinc-850 transition-colors duration-200 hover:text-accent hover:border-accent/40"
                         >
                           {tech}
                         </span>
@@ -78,6 +76,7 @@ export default function WorkExperience() {
             </ScrollReveal>
           )
         })}
+        </div>
       </div>
     </SectionWrapper>
   )

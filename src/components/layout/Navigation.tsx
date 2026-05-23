@@ -21,10 +21,10 @@ export default function Navigation() {
         <li key={link.sectionId}>
           <button
             onClick={() => handleNav(link.sectionId)}
-            className={`block w-full px-6 py-2 text-left text-sm transition-all ${
+            className={`block w-full px-6 py-2 text-left text-base transition-all ${
               activeId === link.sectionId
-                ? 'text-xl font-bold text-accent'
-                : 'text-sm text-white/40 hover:text-white/70'
+                ? 'font-bold text-accent'
+                : 'text-white/40 hover:text-white/70'
             }`}
           >
             {link.label}
@@ -38,7 +38,7 @@ export default function Navigation() {
     <>
       {/* Mobile: top bar */}
       <nav className="fixed top-0 right-0 left-0 z-50 border-b border-divider bg-bg-primary md:hidden">
-        <div className="flex items-center justify-between px-6 py-4">
+        <div className="flex items-center justify-between px-6 py-2.5">
           <button onClick={() => scrollTo('intro')} className="text-sm font-semibold text-white/80">
             {siteConfig.name}
           </button>
@@ -51,7 +51,7 @@ export default function Navigation() {
           </button>
         </div>
         {mobileOpen && (
-          <div className="border-t border-divider px-4 pb-4 pt-2">
+          <div className="border-t border-divider px-6 pb-4 pt-2">
             {navLinks}
           </div>
         )}
@@ -59,15 +59,18 @@ export default function Navigation() {
 
       {/* Desktop: fixed left sidebar */}
       <aside className="fixed top-0 left-0 z-40 hidden h-screen w-[240px] flex-col border-r border-divider bg-bg-primary md:flex">
-        <div className="px-6 pb-3" style={{ paddingTop: '15vh' }}>
-          <button onClick={() => scrollTo('intro')} className="text-sm font-medium tracking-wide text-white/60">
+        <div className="px-6 pb-3 space-y-4" style={{ paddingTop: '6vh' }}>
+          <button onClick={() => scrollTo('intro')} className="block">
+            <img src="/images/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+          </button>
+          <button onClick={() => scrollTo('intro')} className="block text-sm font-medium tracking-wide text-white/60">
             {siteConfig.name}
           </button>
         </div>
         <nav className="flex-1">{navLinks}</nav>
         <div className="px-6 pb-4">
           <p className="text-[0.6rem] text-text-tertiary">
-            &copy; birdydesign {new Date().getFullYear()}
+            &copy; birdydesign 2026. ALL RIGHTS RESERVED.
           </p>
         </div>
       </aside>
