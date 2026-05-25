@@ -59,7 +59,7 @@ export default function Introduction() {
   return (
     <section
       id="intro"
-      className="relative w-full bg-[#0d0d0d] text-white flex flex-col justify-center min-h-screen px-6 py-20 md:px-24 md:py-28 font-sans"
+      className="relative w-full bg-[#0d0d0d] text-white flex flex-col justify-center px-6 py-24 md:px-24 md:py-28 font-sans" style={{ minHeight: '100dvh' }}
     >
       <div className="fixed inset-0 z-0 opacity-10 md:opacity-20 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50">
         <img
