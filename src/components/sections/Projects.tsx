@@ -10,6 +10,7 @@ export default function Projects() {
   return (
     <section id="projects" className="w-full bg-[#0d0d0d]/30 backdrop-blur-sm py-24 border-t border-zinc-900/60">
       <div className="max-w-6xl mx-auto px-8 md:px-12">
+          <p className="heading-section mb-4 md:hidden">项目作品</p>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
           {projectData.map((project, i) => (
             <ScrollReveal key={project.id} delay={i * 0.1}>

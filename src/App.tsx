@@ -8,6 +8,23 @@ import Contact from './components/sections/Contact'
 import Cursor from './components/ui/Cursor'
 import { useSpotlight } from './hooks/useSpotlight'
 
+function ScrollProgress() {
+  useEffect(() => {
+    const el = document.getElementById('scroll-progress-line')
+    if (!el) return
+    const update = () => {
+      const scrollH = document.documentElement.scrollHeight - window.innerHeight
+      const pct = scrollH > 0 ? (window.scrollY / scrollH) * 100 : 0
+      el.style.height = `${Math.min(pct, 100)}%`
+      el.style.transform = `scaleY(${Math.min(pct / 100, 1)})`
+    }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    return () => window.removeEventListener('scroll', update)
+  }, [])
+  return null
+}
+
 export default function App() {
   const spotlightRef = useSpotlight()
   useEffect(() => {
@@ -35,6 +52,7 @@ export default function App() {
 
       {/* Custom cursor (desktop only) */}
       <Cursor />
+      <ScrollProgress />
     </div>
   )
 }

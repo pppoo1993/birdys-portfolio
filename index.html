@@ -16,8 +16,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://picsum.photos" />
     <title>个人作品集</title>
+    <style>
+      html { overflow-y: scroll !important; }
+      ::-webkit-scrollbar { width: 0 !important; height: 0 !important; display: none !important; }
+      ::-webkit-scrollbar-track { display: none !important; }
+      ::-webkit-scrollbar-thumb { display: none !important; }
+      * { scrollbar-width: none !important; }
+      .scroll-progress-line {
+        position: fixed;
+        right: 2px;
+        top: 0;
+        width: 2px;
+        height: 100vh;
+        background: rgba(204,255,0,0.7);
+        z-index: 2147483647;
+        pointer-events: none;
+        transform-origin: top center;
+      }
+    </style>
+    <script>
+      window.addEventListener('beforeunload', () => window.scrollTo(0, 0));
+      history.scrollRestoration = 'manual';
+    </script>
   </head>
   <body>
+    <div id="scroll-progress-line" class="scroll-progress-line"></div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

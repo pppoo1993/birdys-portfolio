@@ -25,23 +25,26 @@ export default function Contact() {
 
           {/* Right column - QR card */}
           <div className="lg:col-span-5 flex items-center justify-center lg:justify-end">
-            <div className="relative p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800 backdrop-blur-sm flex flex-col items-center gap-4 transition-all duration-300 hover:border-accent/40 group">
-              <span className="absolute top-2 left-2 w-2 h-2 border-t border-l border-zinc-700 group-hover:border-accent" />
-              <span className="absolute top-2 right-2 w-2 h-2 border-t border-r border-zinc-700 group-hover:border-accent" />
-              <span className="absolute bottom-2 left-2 w-2 h-2 border-b border-l border-zinc-700 group-hover:border-accent" />
-              <span className="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-zinc-700 group-hover:border-accent" />
+            <div
+              data-cursor-hover
+              className="relative p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800 backdrop-blur-sm flex flex-col items-center gap-4 transition-all duration-300 group hover:border-accent/40 hover:shadow-[0_0_30px_rgba(204,255,0,0.12)]"
+            >
+              <span className="absolute top-2 left-2 w-2 h-2 border-t border-l border-zinc-700 group-hover:border-accent transition-colors duration-200" />
+              <span className="absolute top-2 right-2 w-2 h-2 border-t border-r border-zinc-700 group-hover:border-accent transition-colors duration-200" />
+              <span className="absolute bottom-2 left-2 w-2 h-2 border-b border-l border-zinc-700 group-hover:border-accent transition-colors duration-200" />
+              <span className="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-zinc-700 group-hover:border-accent transition-colors duration-200" />
 
-              <div className="w-40 h-40 aspect-square bg-white p-2 rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-300 group-hover:scale-[1.02]">
-                <div className="w-full h-full flex items-center justify-center bg-white rounded-lg">
+              <div className="w-40 h-40 aspect-square p-2 rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-300 group-hover:scale-[1.02]">
+                <div className="w-full h-full flex items-center justify-center rounded-lg">
                   <img
-                    src="images/qrcode.png"
+                    src="/images/code.PNG"
                     alt="WeChat QR"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-full max-h-full object-contain opacity-75 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               </div>
 
-              <span className="font-mono text-[10px] text-zinc-500 tracking-[0.15em] uppercase group-hover:text-zinc-300 transition-colors">
+              <span className="text-xs text-zinc-400 tracking-wider group-hover:text-accent transition-colors duration-200">
                 扫码添加微信
               </span>
             </div>

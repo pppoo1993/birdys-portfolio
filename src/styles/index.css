@@ -22,6 +22,31 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Global scrollbar: black track, yellow thumb */
+html,
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(204, 255, 0, 0.35) #0d0d0d;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 2px;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: rgba(204, 255, 0, 0.35);
+  border-radius: 9999px;
+}
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(204, 255, 0, 0.6);
+}
+
 body {
   margin: 0;
   background: var(--color-bg-primary);
@@ -65,12 +90,12 @@ body {
 }
 
 .heading-section {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-weight: 500;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-text-tertiary);
+  color: var(--color-accent);
 }
 
 .body-text {
@@ -253,10 +278,24 @@ body {
   50% { opacity: 0; }
 }
 .animate-cursor-blink {
-  animation: blink 1s step-end infinite;
+  animation: blink 0.6s step-end infinite;
 }
 .group:hover .animate-cursor-blink {
-  animation: blink 0.4s step-end infinite;
+  animation: blink 0.3s step-end infinite;
+}
+
+/* Avatar parallax & pulse */
+.avatar-parallax {
+  will-change: transform, box-shadow;
+  transition: box-shadow 0.4s ease;
+}
+.avatar-parallax:hover {
+  box-shadow: 0 0 25px rgba(204, 255, 0, 0.25);
+  animation: avatar-pulse 2s ease-in-out infinite;
+}
+@keyframes avatar-pulse {
+  0%, 100% { box-shadow: 0 0 25px rgba(204, 255, 0, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(204, 255, 0, 0.35); }
 }
 
 @media (max-width: 1023px) {

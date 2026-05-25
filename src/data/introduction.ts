@@ -4,7 +4,7 @@ export const introductionData: IntroductionData = {
   name: "Hi，I'm Birdy",
   title: 'UX Designer / 效率主义者 / CrossFit 选手',
   photoPath: 'https://picsum.photos/seed/bg-hero/1400/900',
-  avatarPath: 'https://picsum.photos/seed/avatar/120/120',
+  avatarPath: '/images/头像.png',
   quote: 'Next-gen AI，\n做点更酷的体验。',
   bioSections: [
     {

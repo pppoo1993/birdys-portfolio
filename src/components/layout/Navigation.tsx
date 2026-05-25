@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { siteConfig } from '../../data/site-config'
 import { useActiveSection } from '../../hooks/useActiveSection'
@@ -6,22 +6,49 @@ import { useScrollTo } from '../../hooks/useScrollTo'
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [indicatorY, setIndicatorY] = useState(0)
   const sectionIds = siteConfig.navLinks.map((l) => l.sectionId)
   const activeId = useActiveSection(sectionIds)
   const scrollTo = useScrollTo()
+  const btnRefs = useRef<Map<string, HTMLButtonElement>>(new Map())
 
   const handleNav = (sectionId: string) => {
     scrollTo(sectionId)
     setMobileOpen(false)
   }
 
-  const navLinks = (
-    <ul className="flex flex-col gap-0.5">
+  const listRef = useRef<HTMLUListElement>(null)
+
+  // Update indicator Y position relative to the <ul>
+  const updateIndicator = useCallback(() => {
+    // Small delay to ensure DOM has settled after React render
+    requestAnimationFrame(() => {
+      const btn = btnRefs.current.get(activeId)
+      if (btn && listRef.current) {
+        const btnRect = btn.getBoundingClientRect()
+        const listRect = listRef.current.getBoundingClientRect()
+        setIndicatorY(btnRect.top - listRect.top + btnRect.height / 2)
+      }
+    })
+  }, [activeId])
+
+  // Update on mount and when active section changes
+  useEffect(() => {
+    updateIndicator()
+  }, [updateIndicator])
+
+  const setBtnRef = (sectionId: string) => (el: HTMLButtonElement | null) => {
+    if (el) btnRefs.current.set(sectionId, el)
+  }
+
+  const NavButtons = () => (
+    <>
       {siteConfig.navLinks.map((link) => (
         <li key={link.sectionId}>
           <button
+            ref={setBtnRef(link.sectionId)}
             onClick={() => handleNav(link.sectionId)}
-            className={`block w-full px-6 py-2 text-left text-base transition-all ${
+            className={`block w-full px-6 py-2 text-left text-base transition-colors ${
               activeId === link.sectionId
                 ? 'font-bold text-accent'
                 : 'text-white/40 hover:text-white/70'
@@ -31,6 +58,28 @@ export default function Navigation() {
           </button>
         </li>
       ))}
+    </>
+  )
+
+  const navLinks = (
+    <ul className="flex flex-col gap-0.5">
+      <NavButtons />
+    </ul>
+  )
+
+  const desktopNavLinks = (
+    <ul ref={listRef} className="flex flex-col gap-0.5 relative">
+      {/* Sliding indicator — desktop only */}
+      <li
+        className="absolute left-0 w-3 h-px bg-accent pointer-events-none"
+        style={{
+          transform: `translateY(${indicatorY}px)`,
+          transition: 'transform 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
+          willChange: 'transform',
+        }}
+        aria-hidden="true"
+      />
+      <NavButtons />
     </ul>
   )
 
@@ -67,7 +116,7 @@ export default function Navigation() {
             {siteConfig.name}
           </button>
         </div>
-        <nav className="flex-1">{navLinks}</nav>
+        <nav className="flex-1">{desktopNavLinks}</nav>
         <div className="px-6 pb-4">
           <p className="text-[0.6rem] text-text-tertiary">
             &copy; birdydesign 2026. ALL RIGHTS RESERVED.

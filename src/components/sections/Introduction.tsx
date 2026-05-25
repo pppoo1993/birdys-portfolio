@@ -6,6 +6,7 @@ export default function Introduction() {
   const [typed, setTyped] = useState('')
   const [scrolled, setScrolled] = useState(false)
   const indexRef = useRef(0)
+  const avatarRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const text = introductionData.quote
@@ -32,6 +33,29 @@ export default function Introduction() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Avatar parallax on mouse move
+  useEffect(() => {
+    const el = avatarRef.current
+    if (!el) return
+    const onMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect()
+      const cx = rect.left + rect.width / 2
+      const cy = rect.top + rect.height / 2
+      const dx = (e.clientX - cx) / 20
+      const dy = (e.clientY - cy) / 20
+      el.style.transform = `translate3d(${dx}px, ${dy}px, 0)`
+    }
+    const onLeave = () => {
+      el.style.transform = 'translate3d(0, 0, 0)'
+    }
+    el.addEventListener('mousemove', onMove, { passive: true })
+    el.addEventListener('mouseleave', onLeave)
+    return () => {
+      el.removeEventListener('mousemove', onMove)
+      el.removeEventListener('mouseleave', onLeave)
+    }
+  }, [])
+
   return (
     <section
       id="intro"
@@ -46,39 +70,49 @@ export default function Introduction() {
       </div>
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0d0d0d]/80 to-[#0d0d0d]" />
 
-      <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-center text-center gap-12 md:gap-16">
-        {/* Title block */}
-        <div className="space-y-2">
-          <h1 className="text-4xl md:text-5xl font-mono font-bold tracking-tight">
-            {introductionData.name}
-          </h1>
-          <p className="text-[11px] md:text-sm font-mono text-accent tracking-wide md:tracking-widest uppercase">
-            {introductionData.title}
-          </p>
-        </div>
+      <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-center text-center gap-5 md:gap-8">
+        {/* 1. Title */}
+        <h1 className="text-4xl md:text-5xl font-mono font-bold tracking-tight">
+          {introductionData.name}
+        </h1>
 
-        {/* Avatar — centered between tags and typewriter */}
-        <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden border border-accent/40 flex-shrink-0 shadow-[0_0_18px_rgba(204,255,0,0.2)]">
+        {/* 2. Subtitle */}
+        <p className="text-[11px] md:text-sm font-mono text-accent tracking-wide md:tracking-widest uppercase">
+          {introductionData.title}
+        </p>
+
+        {/* 3. Avatar — w-40 h-40, mirrored, subtle border, parallax + pulse */}
+        <div
+          ref={avatarRef}
+          className="avatar-parallax w-40 h-40 rounded-2xl overflow-hidden border border-white/20 flex-shrink-0 bg-[#0d0d0d] transition-all duration-500"
+        >
           <img
             src={introductionData.avatarPath}
             alt="Birdy"
-            className="w-full h-full object-cover grayscale contrast-125"
+            className="w-full h-full object-cover grayscale contrast-125 -scale-x-100 pointer-events-none"
           />
         </div>
 
-        {/* Typewriter */}
-        <h2 className="text-2xl md:text-4xl font-semibold tracking-wide text-zinc-100 leading-tight whitespace-pre-line md:whitespace-normal">
-          {typed || introductionData.quote}
+        {/* 4. Typewriter — compact spacing */}
+        <h2 className="text-2xl md:text-4xl font-semibold tracking-wide text-zinc-100 leading-tight -mt-1 md:-mt-2">
+          {(() => {
+            const text = typed || introductionData.quote
+            const idx = text.indexOf('，')
+            if (idx > -1) {
+              return <><span className="whitespace-nowrap">{text.slice(0, idx + 1)}</span> <span className="whitespace-nowrap">{text.slice(idx + 1)}</span></>
+            }
+            return text
+          })()}
           <span className="animate-cursor-blink text-accent text-xl md:text-2xl relative -top-1">|</span>
         </h2>
 
-        {/* Cards */}
+        {/* 5. Cards — aligned with title edges, wider gap, translucent bg */}
         <div className="hero-intro-grid gap-6 md:gap-6 w-full border-t border-zinc-800/60 pt-8 md:pt-10">
           {introductionData.bioSections.map((section) => (
             <ScrollReveal key={section.number}>
             <div className="intro-card text-left">
               <h4 className="text-zinc-200 font-medium text-base mb-2 tracking-wide flex items-center gap-2">
-                <span className="text-accent font-mono text-sm">[{section.number}]</span> {section.heading}
+                <span className="text-accent font-mono text-sm">[About Me {section.number}]</span> {section.heading}
               </h4>
               <p className="text-zinc-400 text-xs md:text-sm leading-relaxed font-light">
                 {section.body}

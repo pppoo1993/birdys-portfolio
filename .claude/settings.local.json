@@ -14,7 +14,8 @@
       "Bash(ssh-keygen -t ed25519 -C \"birdy@portfolio\" -f ~/.ssh/id_ed25519 -N \"\")",
       "Bash(git remote *)",
       "Bash(ssh-keyscan -H github.com >> ~/.ssh/known_hosts 2>&1 && ssh -T git@github.com 2>&1)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(curl -s http://localhost:5173/src/styles/index.css)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"
