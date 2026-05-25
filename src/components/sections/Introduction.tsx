@@ -63,7 +63,7 @@ export default function Introduction() {
     >
       <div className="fixed inset-0 z-0 opacity-10 md:opacity-20 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50">
         <img
-          src="/images/hero-bg.jpg"
+          src={import.meta.env.BASE_URL + 'images/hero-bg.jpg'}
           alt="code mesh background"
           className="w-full h-full object-cover"
         />
@@ -87,7 +87,7 @@ export default function Introduction() {
           className="avatar-parallax w-40 h-40 rounded-2xl overflow-hidden border border-white/20 flex-shrink-0 bg-[#0d0d0d] transition-all duration-500"
         >
           <img
-            src={introductionData.avatarPath}
+            src={import.meta.env.BASE_URL + introductionData.avatarPath.replace(/^\//, '')}
             alt="Birdy"
             className="w-full h-full object-cover grayscale contrast-125 -scale-x-100 pointer-events-none"
           />

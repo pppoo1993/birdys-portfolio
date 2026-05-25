@@ -110,7 +110,7 @@ export default function Navigation() {
       <aside className="fixed top-0 left-0 z-40 hidden h-screen w-[240px] flex-col border-r border-divider bg-bg-primary md:flex">
         <div className="px-6 pb-3 space-y-4" style={{ paddingTop: '6vh' }}>
           <button onClick={() => scrollTo('intro')} className="block">
-            <img src="/images/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+            <img src={import.meta.env.BASE_URL + 'images/logo.png'} alt="Logo" className="w-10 h-10 object-contain" />
           </button>
           <button onClick={() => scrollTo('intro')} className="block text-sm font-medium tracking-wide text-white/60">
             {siteConfig.name}
