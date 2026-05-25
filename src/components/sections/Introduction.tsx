@@ -59,7 +59,7 @@ export default function Introduction() {
   return (
     <section
       id="intro"
-      className="relative w-full overflow-hidden bg-[#0d0d0d] text-white flex flex-col justify-center min-h-screen px-6 py-20 md:px-24 md:py-28 font-sans"
+      className="relative w-full bg-[#0d0d0d] text-white flex flex-col justify-center min-h-screen px-6 py-20 md:px-24 md:py-28 font-sans"
     >
       <div className="fixed inset-0 z-0 opacity-10 md:opacity-20 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50">
         <img
@@ -93,18 +93,29 @@ export default function Introduction() {
           />
         </div>
 
-        {/* 4. Typewriter — compact spacing */}
-        <h2 className="text-2xl md:text-4xl font-semibold tracking-wide text-zinc-100 leading-tight -mt-1 md:-mt-2">
-          {(() => {
-            const text = typed || introductionData.quote
-            const idx = text.indexOf('，')
-            if (idx > -1) {
-              return <><span className="whitespace-nowrap">{text.slice(0, idx + 1)}</span> <span className="whitespace-nowrap">{text.slice(idx + 1)}</span></>
-            }
-            return text
-          })()}
-          <span className="animate-cursor-blink text-accent text-xl md:text-2xl relative -top-1">|</span>
-        </h2>
+        {/* 4. Typewriter — always 2 lines on mobile, fixed height prevents layout shift */}
+        <div className="min-h-[6rem] md:min-h-0 pb-1 md:pb-0">
+          <h2 className="text-2xl md:text-4xl font-semibold tracking-wide text-zinc-100 leading-relaxed md:leading-tight -mt-1 md:-mt-2 md:whitespace-normal">
+            {(() => {
+              const displayText = typed || introductionData.quote
+              const commaIdx = introductionData.quote.indexOf('，')
+              const beforeComma = displayText.slice(0, Math.min(displayText.length, commaIdx + 1))
+              const afterComma = displayText.length > commaIdx + 1
+                ? displayText.slice(commaIdx + 1)
+                : ' '
+              const cursor = <span className="animate-cursor-blink text-accent text-xl md:text-2xl relative -top-1">|</span>
+              // Cursor follows typing: on line 1 if still typing before comma, else line 2
+              const stillOnLine1 = displayText.length <= commaIdx + 1
+              return <>
+                <span className="whitespace-nowrap">{beforeComma}{stillOnLine1 && cursor}</span>
+                <br className="md:hidden" />
+                <span className="md:hidden" />
+                {' '}
+                <span className="whitespace-nowrap">{afterComma}{!stillOnLine1 && cursor}</span>
+              </>
+            })()}
+          </h2>
+        </div>
 
         {/* 5. Cards — aligned with title edges, wider gap, translucent bg */}
         <div className="hero-intro-grid gap-6 md:gap-6 w-full border-t border-zinc-800/60 pt-8 md:pt-10">

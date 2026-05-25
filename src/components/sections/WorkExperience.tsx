@@ -11,7 +11,7 @@ export default function WorkExperience() {
   return (
     <SectionWrapper id="experience" className="section-darker border-b border-divider !py-12 md:!py-16">
       <div className="mx-auto py-12">
-        <p className="heading-section mb-4 md:hidden">工作经历</p>
+        <p className="heading-section mb-4 md:hidden">Work Experience</p>
         <div>
           {experienceData.map((exp, i) => {
             const isLast = i === experienceData.length - 1

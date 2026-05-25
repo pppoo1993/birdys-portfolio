@@ -25,12 +25,24 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
     if (project) {
       document.addEventListener('keydown', handleKeyDown)
       document.body.style.overflow = 'hidden'
+      document.documentElement.style.overflow = 'hidden'
+      const mainLine = document.getElementById('scroll-progress-line')
+      if (mainLine) mainLine.style.display = 'none'
     }
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
       document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
+      const mainLine = document.getElementById('scroll-progress-line')
+      if (mainLine) mainLine.style.display = ''
     }
   }, [project, handleKeyDown])
+
+
+  // Modal scroll progress
+  const modalScrollProgress = scrollY > 0 && contentRef.current
+    ? (scrollY / (contentRef.current.scrollHeight - contentRef.current.clientHeight)) * 100
+    : 0
 
   useEffect(() => {
     setScrollY(0)
@@ -49,7 +61,8 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-[#0D0E10]/50 backdrop-blur-sm"
+          data-modal-backdrop
+          className="fixed inset-0 z-[100] flex items-start justify-center bg-[#0D0E10]/50 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -58,13 +71,20 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
             if (e.target === e.currentTarget) onClose()
           }}
         >
-          <div className="relative w-full max-w-3xl mx-auto bg-[#0d0d0d] border border-zinc-800 rounded-2xl shadow-[0_30px_100px_rgba(0,0,0,0.8)] my-8 mx-6 overflow-hidden flex flex-col" style={{ maxHeight: '85vh' }}>
+          <div className="relative w-full max-w-3xl mx-auto bg-[#0d0d0d] border border-zinc-800 md:rounded-2xl md:shadow-[0_30px_100px_rgba(0,0,0,0.8)] md:my-8 md:mx-6 overflow-hidden flex flex-col h-full md:max-h-[85vh]">
+            {/* Modal scroll progress line — absolute on card right edge */}
+            <div
+              className="absolute right-0 top-0 w-[2px] bg-accent/50 z-30 pointer-events-none"
+              style={{ height: `${Math.min(modalScrollProgress, 100)}%` }}
+            />
+
+            {/* Scrollable area */}
 
             {/* Scrollable area */}
             <div
               ref={contentRef}
               onScroll={handleScroll}
-              className="flex-1 overflow-y-auto custom-scrollbar"
+              className="flex-1 overflow-y-auto custom-scrollbar overscroll-contain"
             >
               {/* Sticky header bar */}
               <div
@@ -76,12 +96,12 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                 }}
               >
                 <h2
-                  className="absolute left-8 md:left-10 font-medium tracking-tight text-zinc-100 transition-opacity duration-300 pointer-events-none"
+                  className="absolute left-8 md:left-10 font-medium tracking-tight text-zinc-100 transition-opacity duration-300 pointer-events-none truncate"
                   style={{
                     fontSize: '0.95rem',
                     lineHeight: '1.25rem',
                     opacity: progress,
-                    whiteSpace: 'nowrap',
+                    maxWidth: 'calc(100% - 6rem)',
                   }}
                 >
                   {project.detail.mainTitle}
