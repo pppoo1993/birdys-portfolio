@@ -61,16 +61,16 @@ export default function Introduction() {
       id="intro"
       className="relative w-full bg-[#0d0d0d] text-white flex flex-col justify-center px-6 py-24 md:px-24 md:py-28 font-sans" style={{ minHeight: '100dvh' }}
     >
-      <div className="fixed inset-0 z-0 opacity-10 md:opacity-20 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50">
+      <div className="fixed inset-0 z-0 opacity-25 md:opacity-20 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50">
         <img
           src={import.meta.env.BASE_URL + 'images/hero-bg.jpg'}
           alt="code mesh background"
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0d0d0d]/80 to-[#0d0d0d]" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0d0d0d]/50 md:via-[#0d0d0d]/80 to-[#0d0d0d]" />
 
-      <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-center text-center gap-5 md:gap-8">
+      <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-center text-center gap-5 md:gap-8 overflow-visible">
         {/* 1. Title */}
         <h1 className="text-4xl md:text-5xl font-mono font-bold tracking-tight">
           {introductionData.name}
@@ -94,8 +94,8 @@ export default function Introduction() {
         </div>
 
         {/* 4. Typewriter — always 2 lines on mobile, fixed height prevents layout shift */}
-        <div className="min-h-[6rem] md:min-h-0 pb-1 md:pb-0">
-          <h2 className="text-2xl md:text-4xl font-semibold tracking-wide text-zinc-100 leading-relaxed md:leading-tight -mt-1 md:-mt-2 md:whitespace-normal">
+        <div className="md:min-h-0 pb-2 md:pb-0">
+          <h2 className="text-2xl md:text-4xl font-semibold tracking-wide text-zinc-100 leading-loose md:leading-tight -mt-1 md:-mt-2 md:whitespace-normal">
             {(() => {
               const displayText = typed || introductionData.quote
               const commaIdx = introductionData.quote.indexOf('，')

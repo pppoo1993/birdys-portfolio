@@ -88,8 +88,9 @@ export default function Navigation() {
       {/* Mobile: top bar */}
       <nav className="fixed top-0 right-0 left-0 z-50 border-b border-divider bg-bg-primary md:hidden">
         <div className="flex items-center justify-between px-6 py-2.5">
-          <button onClick={() => scrollTo('intro')} className="text-sm font-semibold text-white/80">
-            {siteConfig.name}
+          <button onClick={() => scrollTo('intro')} className="flex items-center gap-2">
+            <img src={import.meta.env.BASE_URL + 'images/logo.png'} alt="Logo" className="w-7 h-7 object-contain" />
+            <span className="text-sm font-semibold text-white/80">{siteConfig.name}</span>
           </button>
           <button
             className="text-white/80"
