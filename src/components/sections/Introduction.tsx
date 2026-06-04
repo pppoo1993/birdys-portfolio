@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import { introductionData } from '../../data/introduction'
 import ScrollReveal from '../animations/ScrollReveal'
+import { useScrollTo } from '../../hooks/useScrollTo'
 
 export default function Introduction() {
   const [typed, setTyped] = useState('')
   const [scrolled, setScrolled] = useState(false)
   const indexRef = useRef(0)
   const avatarRef = useRef<HTMLDivElement>(null)
+  const scrollTo = useScrollTo()
 
   useEffect(() => {
     const text = introductionData.quote
@@ -59,7 +61,7 @@ export default function Introduction() {
   return (
     <section
       id="intro"
-      className="relative w-full bg-[#0d0d0d] text-white flex flex-col justify-center px-6 py-24 md:px-24 md:py-28 font-sans" style={{ minHeight: '100dvh' }}
+      className="relative w-full bg-[#0d0d0d] text-white flex flex-col justify-center py-16 md:py-28 font-sans" style={{ minHeight: '100dvh' }}
     >
       <div className="fixed inset-0 z-0 opacity-25 md:opacity-20 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50">
         <img
@@ -70,7 +72,7 @@ export default function Introduction() {
       </div>
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0d0d0d]/50 md:via-[#0d0d0d]/80 to-[#0d0d0d]" />
 
-      <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-center text-center gap-5 md:gap-8 overflow-visible">
+      <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center gap-5 md:gap-8 overflow-visible px-6 md:px-12">
         {/* 1. Title */}
         <h1 className="text-4xl md:text-5xl font-mono font-bold tracking-tight">
           {introductionData.name}
@@ -95,7 +97,7 @@ export default function Introduction() {
 
         {/* 4. Typewriter — always 2 lines on mobile, fixed height prevents layout shift */}
         <div className="md:min-h-0 pb-2 md:pb-0">
-          <h2 className="text-2xl md:text-4xl font-semibold tracking-wide text-zinc-100 leading-loose md:leading-tight -mt-1 md:-mt-2 md:whitespace-normal">
+          <h2 className="text-2xl md:text-4xl font-semibold tracking-wide text-[#e4e4e7] leading-normal md:leading-tight -mt-1 md:-mt-2 md:whitespace-normal">
             {(() => {
               const displayText = typed || introductionData.quote
               const commaIdx = introductionData.quote.indexOf('，')
@@ -125,7 +127,7 @@ export default function Introduction() {
               <h4 className="text-zinc-200 font-medium text-base mb-2 tracking-wide flex items-center gap-2">
                 <span className="text-accent font-mono text-sm">[About Me {section.number}]</span> {section.heading}
               </h4>
-              <p className="text-zinc-400 text-xs md:text-sm leading-relaxed font-light">
+              <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-normal">
                 {section.body}
               </p>
             </div>
@@ -135,7 +137,8 @@ export default function Introduction() {
       </div>
 
       <div
-        className={`absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 transition-all duration-500 sm:flex md:bottom-8 ${
+        onClick={() => scrollTo('experience')}
+        className={`absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 transition-all duration-500 sm:flex md:bottom-8 cursor-pointer ${
           scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
         }`}
       >

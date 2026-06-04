@@ -22,9 +22,9 @@ export default function ScrollReveal({
   }
 
   const directionMap = {
-    up: { y: 20 },
-    left: { x: 20 },
-    right: { x: -20 },
+    up: { y: 24 },
+    left: { x: 24 },
+    right: { x: -24 },
   }
 
   return (
@@ -33,7 +33,13 @@ export default function ScrollReveal({
       initial={{ opacity: 0, ...directionMap[direction] }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.5, delay, ease: 'easeOut' }}
+      transition={{
+        duration: 0.6,
+        delay,
+        ease: [0.16, 1, 0.3, 1],
+        opacity: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+      }}
+      style={{ willChange: 'transform, opacity' }}
     >
       {children}
     </motion.div>

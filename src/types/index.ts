@@ -41,6 +41,7 @@ export interface ExperienceEntry {
 export interface ProjectSection {
   heading?: string
   body: string
+  html?: string
   illustration?: {
     src: string
     alt: string

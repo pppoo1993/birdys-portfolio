@@ -15,7 +15,7 @@ export default function Cursor() {
     const el = document.elementFromPoint(mouseRef.current.x, mouseRef.current.y)
     if (!el) return
     const interactive = el.closest(
-      'a, button, [role="button"], [data-cursor-hover], .project-card, .cursor-hover',
+      '[data-cursor-hover], .project-card, .cursor-hover, [data-cursor-interactive]',
     )
     hovered.current = !!interactive
   }, [])
@@ -32,7 +32,7 @@ export default function Cursor() {
     document.documentElement.style.cursor = 'none'
     // Re-show on interactive elements if needed (handled by our custom cursor)
     const style = document.createElement('style')
-    style.textContent = 'html { cursor: none !important; } a, button, [role="button"] { cursor: none !important; }'
+    style.textContent = 'html, body, a, button, div, span, p, h1, h2, h3, h4, h5, h6, img, nav, aside, section, ul, li, svg { cursor: none !important; }'
     document.head.appendChild(style)
 
     // Animation loop

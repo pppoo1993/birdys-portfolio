@@ -4,6 +4,85 @@ import { siteConfig } from '../../data/site-config'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import { useScrollTo } from '../../hooks/useScrollTo'
 
+function NavEasterEgg() {
+  const [flying, setFlying] = useState(false)
+  const [particles, setParticles] = useState<{ id: number; x: number; y: number }[]>([])
+  const [label, setLabel] = useState('')
+
+  const launch = () => {
+    if (flying) return
+    setLabel('fly, birdy!')
+    setTimeout(() => {
+      setFlying(true)
+      const p = Array.from({ length: 8 }, (_, i) => ({
+        id: Date.now() + i,
+        x: 50 + Math.random() * 40,
+        y: 90 - i * 12,
+      }))
+      setParticles(p)
+      setTimeout(() => {
+        setFlying(false)
+        setParticles([])
+        setLabel('')
+      }, 1400)
+    }, 200)
+  }
+
+  return (
+    <div className="px-6 pb-1 -translate-y-[50px] cursor-pointer select-none group" data-cursor-hover onClick={launch}>
+      <div className="relative h-10 flex items-center justify-center overflow-visible">
+        {/* Perched bird — cleaner silhouette */}
+        <div className={`transition-all duration-500 ${flying ? 'opacity-0 -translate-y-10' : 'opacity-100 group-hover:-translate-y-0.5'}`}>
+          <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
+            {/* Tail */}
+            <path d="M2 9 L5 7 L5 10 Z" fill={flying ? '#C7FF00' : '#52525b'} opacity="0.6" />
+            {/* Body */}
+            <ellipse cx="10" cy="8" rx="5" ry="3.5" fill={flying ? '#C7FF00' : '#52525b'} opacity="0.8" />
+            {/* Head */}
+            <circle cx="15" cy="6" r="2.5" fill={flying ? '#C7FF00' : '#52525b'} />
+            {/* Beak */}
+            <path d="M17.5 6 L20 5.5 L17.5 5" fill="none" stroke={flying ? '#C7FF00' : '#52525b'} strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+            {/* Eye */}
+            <circle cx="16" cy="5.5" r="0.8" fill="#121212" />
+            {/* Wing */}
+            <path d="M9 7 Q11 3 13 6" fill="none" stroke={flying ? '#C7FF00' : '#52525b'} strokeWidth="1.2" strokeLinecap="round" />
+            {/* Legs */}
+            <line x1="9" y1="11.5" x2="9" y2="14" stroke={flying ? '#C7FF00' : '#52525b'} strokeWidth="0.8" />
+            <line x1="11" y1="11.5" x2="11" y2="14" stroke={flying ? '#C7FF00' : '#52525b'} strokeWidth="0.8" />
+          </svg>
+        </div>
+
+        {flying && (
+          <>
+            {particles.map((p) => (
+              <span key={p.id} className="absolute w-1 h-1 rounded-full bg-[#C7FF00]/60 animate-ping"
+                style={{ left: `${p.x}%`, bottom: `${p.y}%`, animationDuration: '0.6s' }} />
+            ))}
+            <div className="absolute" style={{ animation: 'fly-up 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards' }}>
+              <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
+                <ellipse cx="10" cy="8" rx="5" ry="3.5" fill="#C7FF00" opacity="0.8" />
+                <circle cx="15" cy="6" r="2.5" fill="#C7FF00" />
+                <path d="M17.5 6 L20 5.5 L17.5 5" fill="none" stroke="#C7FF00" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="16" cy="5.5" r="0.8" fill="#121212" />
+                <g style={{ animation: 'flap 0.12s infinite steps(2)', transformOrigin: '10px 8px' }}>
+                  <path d="M6 3 L11 6 L6 7" fill="#C7FF00" opacity="0.5" />
+                </g>
+                <path d="M2 9 L5 7 L5 10 Z" fill="#C7FF00" opacity="0.6" />
+              </svg>
+            </div>
+          </>
+        )}
+
+        <span className={`absolute -bottom-0.5 left-1/2 -translate-x-1/2 font-mono text-[9px] transition-all duration-300 whitespace-nowrap ${
+          label ? 'text-[#C7FF00] opacity-100' : 'text-[#52525b] opacity-0 group-hover:opacity-100'
+        }`}>
+          {label || 'click me'}
+        </span>
+      </div>
+    </div>
+  )
+}
+
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [indicatorY, setIndicatorY] = useState(0)
@@ -21,14 +100,13 @@ export default function Navigation() {
 
   // Update indicator Y position relative to the <ul>
   const updateIndicator = useCallback(() => {
-    // Small delay to ensure DOM has settled after React render
     requestAnimationFrame(() => {
+      const list = listRef.current
       const btn = btnRefs.current.get(activeId)
-      if (btn && listRef.current) {
-        const btnRect = btn.getBoundingClientRect()
-        const listRect = listRef.current.getBoundingClientRect()
-        setIndicatorY(btnRect.top - listRect.top + btnRect.height / 2)
-      }
+      if (!btn || !list) return
+      const btnRect = btn.getBoundingClientRect()
+      const listRect = list.getBoundingClientRect()
+      setIndicatorY(btnRect.top - listRect.top + btnRect.height / 2)
     })
   }, [activeId])
 
@@ -36,6 +114,20 @@ export default function Navigation() {
   useEffect(() => {
     updateIndicator()
   }, [updateIndicator])
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (!mobileOpen) return
+    const preventScroll = (e: TouchEvent) => e.preventDefault()
+    document.documentElement.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
+    document.addEventListener('touchmove', preventScroll, { passive: false })
+    return () => {
+      document.documentElement.style.overflow = ''
+      document.body.style.overflow = ''
+      document.removeEventListener('touchmove', preventScroll)
+    }
+  }, [mobileOpen])
 
   const setBtnRef = (sectionId: string) => (el: HTMLButtonElement | null) => {
     if (el) btnRefs.current.set(sectionId, el)
@@ -47,11 +139,11 @@ export default function Navigation() {
         <li key={link.sectionId}>
           <button
             ref={setBtnRef(link.sectionId)}
-            onClick={() => handleNav(link.sectionId)}
-            className={`block w-full px-6 py-2 text-left text-base transition-colors ${
+            data-cursor-interactive onClick={() => handleNav(link.sectionId)}
+            className={`block w-full py-2 text-left text-base transition-colors md:px-6 ${
               activeId === link.sectionId
-                ? 'font-bold text-accent'
-                : 'text-white/40 hover:text-white/70'
+                ? 'font-bold text-accent text-lg'
+                : 'font-normal text-white/50 hover:text-white/80'
             }`}
           >
             {link.label}
@@ -100,12 +192,23 @@ export default function Navigation() {
             {mobileOpen ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
         </div>
-        {mobileOpen && (
-          <div className="border-t border-divider px-6 pb-4 pt-2">
+      </nav>
+
+      {/* Mobile: half-screen overlay */}
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 z-[60] md:hidden"
+          onTouchMove={(e) => e.preventDefault()}
+        >
+          <div
+            className="absolute inset-0 bg-black/15"
+            onClick={() => setMobileOpen(false)}
+          />
+          <div className="absolute top-0 left-0 right-0 bg-[#161618] border-b border-[#1f1f23] rounded-b-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] px-6 pt-16 pb-8">
             {navLinks}
           </div>
-        )}
-      </nav>
+        </div>
+      )}
 
       {/* Desktop: fixed left sidebar */}
       <aside className="fixed top-0 left-0 z-40 hidden h-screen w-[240px] flex-col border-r border-divider bg-bg-primary md:flex">
@@ -118,6 +221,10 @@ export default function Navigation() {
           </button>
         </div>
         <nav className="flex-1">{desktopNavLinks}</nav>
+
+        {/* ════ Easter Egg: Flying Bird ════ */}
+        <NavEasterEgg />
+
         <div className="px-6 pb-4">
           <p className="text-[0.6rem] text-text-tertiary">
             &copy; birdydesign 2026. ALL RIGHTS RESERVED.

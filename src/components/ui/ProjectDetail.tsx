@@ -3,116 +3,211 @@ import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Project } from '../../types'
 
-const COLLAPSE_THRESHOLD = 60
-
 interface ProjectDetailProps {
   project: Project | null
   onClose: () => void
 }
 
 export default function ProjectDetail({ project, onClose }: ProjectDetailProps) {
-  const contentRef = useRef<HTMLDivElement>(null)
-  const [scrollY, setScrollY] = useState(0)
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
+  const [activeIndex, setActiveIndex] = useState(0)
+  const scrollingLock = useRef(false)
+  const activeIndexRef = useRef(0)
 
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
+  const sections = project?.detail.sections || []
+
+  // Keep refs in sync so callbacks always read latest values without
+  // causing re-render cascades (e.g. body-lock effect resetting activeIndex)
+  activeIndexRef.current = activeIndex
+  const sectionsLen = sections.length
+  const sectionsLenRef = useRef(sectionsLen)
+  sectionsLenRef.current = sectionsLen
+  const onCloseRef = useRef(onClose)
+  onCloseRef.current = onClose
+
+  // ── Navigate to a specific section ──
+  const goTo = useCallback(
+    (index: number) => {
+      const el = sectionRefs.current[index]
+      if (!el || scrollingLock.current) return
+      if (index < 0 || index >= sectionsLen) return
+      scrollingLock.current = true
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      setActiveIndex(index)
+      setTimeout(() => {
+        scrollingLock.current = false
+      }, 400)
     },
-    [onClose],
+    [sectionsLen],
   )
 
+  // ── Track active section via scroll position ──
   useEffect(() => {
-    if (project) {
-      document.addEventListener('keydown', handleKeyDown)
-      document.body.style.overflow = 'hidden'
-      document.documentElement.style.overflow = 'hidden'
-      const mainLine = document.getElementById('scroll-progress-line')
-      if (mainLine) mainLine.style.display = 'none'
+    if (!project || !scrollRef.current) return
+    const container = scrollRef.current
+
+    const handleScroll = () => {
+      if (scrollingLock.current) return
+      const scrollTop = container.scrollTop
+
+      let closestIdx = 0
+      let closestDist = Infinity
+
+      sectionRefs.current.forEach((el, idx) => {
+        if (!el) return
+        const dist = Math.abs(el.offsetTop - scrollTop)
+        if (dist < closestDist) {
+          closestDist = dist
+          closestIdx = idx
+        }
+      })
+
+      if (closestIdx !== activeIndexRef.current) {
+        setActiveIndex(closestIdx)
+      }
     }
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-      document.body.style.overflow = ''
-      document.documentElement.style.overflow = ''
-      const mainLine = document.getElementById('scroll-progress-line')
-      if (mainLine) mainLine.style.display = ''
-    }
-  }, [project, handleKeyDown])
 
-
-  // Modal scroll progress
-  const modalScrollProgress = scrollY > 0 && contentRef.current
-    ? (scrollY / (contentRef.current.scrollHeight - contentRef.current.clientHeight)) * 100
-    : 0
-
-  useEffect(() => {
-    setScrollY(0)
+    container.addEventListener('scroll', handleScroll, { passive: true })
+    return () => container.removeEventListener('scroll', handleScroll)
   }, [project])
 
-  const handleScroll = () => {
-    if (contentRef.current) {
-      setScrollY(contentRef.current.scrollTop)
-    }
-  }
+  // ── Keyboard: Esc / ↑↓ ──
+  // Uses refs to avoid depending on activeIndex — prevents body-lock effect
+  // from re-running (and resetting to page 0) on every scroll.
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onCloseRef.current()
+        return
+      }
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+        e.preventDefault()
+        goTo(Math.min(activeIndexRef.current + 1, sectionsLenRef.current - 1))
+      }
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        e.preventDefault()
+        goTo(Math.max(activeIndexRef.current - 1, 0))
+      }
+    },
+    [goTo],
+  )
 
-  const progress = Math.min(scrollY / COLLAPSE_THRESHOLD, 1)
-  const collapsed = progress >= 1
+  // ── Native wheel listener for responsive page switching ──
+  // Using native addEventListener (passive: false) is more reliable than React's onWheel,
+  // which can be passive in some browsers — preventDefault() would be silently ignored.
+  useEffect(() => {
+    if (!project) return
+    const container = scrollRef.current
+    if (!container) return
+
+    const onWheel = (e: WheelEvent) => {
+      if (scrollingLock.current) return
+
+      const scrollTop = container.scrollTop
+      const maxScroll = container.scrollHeight - container.clientHeight
+      const atTop = scrollTop <= 2
+      const atBottom = scrollTop >= maxScroll - 2
+
+      // Switch pages only when at section boundary.
+      // If content overflows → scroll within page first,
+      // then switch on next tick at bottom/top edge.
+      if (e.deltaY > 0 && atBottom) {
+        e.preventDefault()
+        goTo(Math.min(activeIndexRef.current + 1, sections.length - 1))
+      } else if (e.deltaY < 0 && atTop) {
+        e.preventDefault()
+        goTo(Math.max(activeIndexRef.current - 1, 0))
+      }
+      // Otherwise let native scroll handle within-page overflow
+    }
+
+    container.addEventListener('wheel', onWheel, { passive: false })
+    return () => container.removeEventListener('wheel', onWheel)
+  }, [project, goTo, sections.length])
+
+  // ── Body scroll lock ──
+  const blockScroll = useCallback((e: Event) => {
+    const target = e.target as HTMLElement | null
+    if (target?.closest('[data-modal-scroll]')) return
+    e.preventDefault()
+  }, [])
+
+  useEffect(() => {
+    if (!project) return
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('wheel', blockScroll, { passive: false })
+    document.addEventListener('touchmove', blockScroll, { passive: false })
+    document.documentElement.style.overflow = 'hidden'
+
+    const line = document.getElementById('scroll-progress-line')
+    if (line) line.style.display = 'none'
+
+    setActiveIndex(0)
+    requestAnimationFrame(() => {
+      scrollRef.current?.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
+    })
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('wheel', blockScroll)
+      document.removeEventListener('touchmove', blockScroll)
+      document.documentElement.style.overflow = ''
+
+      if (line) line.style.display = ''
+    }
+  }, [project, handleKeyDown, blockScroll])
 
   return createPortal(
     <AnimatePresence>
       {project && (
         <motion.div
           data-modal-backdrop
-          className="fixed inset-0 z-[100] flex items-start justify-center bg-[#0D0E10]/50 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0D0E10]/60 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.25 }}
+          transition={{ duration: 0.3 }}
           onClick={(e) => {
             if (e.target === e.currentTarget) onClose()
           }}
         >
-          <div className="relative w-full max-w-3xl mx-auto bg-[#0d0d0d] border border-zinc-800 md:rounded-2xl md:shadow-[0_30px_100px_rgba(0,0,0,0.8)] md:my-8 md:mx-6 overflow-hidden flex flex-col h-full md:max-h-[85vh]">
-            {/* Modal scroll progress line — absolute on card right edge */}
-            <div
-              className="absolute right-0 top-0 w-[2px] bg-accent/50 z-30 pointer-events-none"
-              style={{ height: `${Math.min(modalScrollProgress, 100)}%` }}
-            />
-
-            {/* Scrollable area */}
-
-            {/* Scrollable area */}
-            <div
-              ref={contentRef}
-              onScroll={handleScroll}
-              className="flex-1 overflow-y-auto custom-scrollbar overscroll-contain"
-            >
-              {/* Sticky header bar */}
-              <div
-                className="sticky top-0 z-20 flex items-center justify-end transition-all duration-200 pt-6 pr-6"
-                style={{
-                  background: collapsed ? '#0d0d0d' : 'transparent',
-                  borderBottom: collapsed ? '1px solid #27272a' : '1px solid transparent',
-                  paddingBottom: collapsed ? '0.625rem' : '0px',
-                }}
-              >
-                <h2
-                  className="absolute left-8 md:left-10 font-medium tracking-tight text-zinc-100 transition-opacity duration-300 pointer-events-none truncate"
-                  style={{
-                    fontSize: '0.95rem',
-                    lineHeight: '1.25rem',
-                    opacity: progress,
-                    maxWidth: 'calc(100% - 6rem)',
-                  }}
-                >
-                  {project.detail.mainTitle}
-                </h2>
-
+          <motion.div
+            className="relative w-full h-full md:w-[80vw] md:max-h-[85vh] mx-auto bg-[#121212] border border-zinc-800/60 md:rounded-2xl md:shadow-[0_30px_100px_rgba(0,0,0,0.8)] md:overflow-hidden flex flex-col"
+            style={{ aspectRatio: '16 / 9' }}
+            initial={{ scale: 0.96, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.96, opacity: 0 }}
+            transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            {/* ════ Fixed top bar ════ */}
+            <div className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-6 md:px-12 py-3.5 bg-gradient-to-b from-[#121212] via-[#121212]/95 to-transparent pointer-events-none">
+              <p className="text-[18px] md:text-[24px] text-white font-bold tracking-tight line-clamp-2 md:truncate max-w-[88%] md:max-w-[65%]">
+                {activeIndex > 0 ? sections[activeIndex]?.heading : ''}
+              </p>
+              <div className="flex items-center gap-5 pointer-events-auto">
+                <nav className="hidden md:flex items-center gap-1.5" aria-label="章节导航">
+                  {sections.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => goTo(i)}
+                      className={`rounded-full transition-all duration-300 ${
+                        i === activeIndex
+                          ? 'w-5 h-1.5 bg-accent'
+                          : 'w-1.5 h-1.5 bg-zinc-700 hover:bg-zinc-500'
+                      }`}
+                      aria-label={`第 ${i + 1} 章`}
+                      aria-current={i === activeIndex ? 'true' : undefined}
+                    />
+                  ))}
+                </nav>
                 <button
                   onClick={(e) => {
                     e.stopPropagation()
                     onClose()
                   }}
-                  className="group flex items-center justify-center w-8 h-8 border border-zinc-800 hover:border-accent rounded-lg transition-all duration-300 bg-zinc-900/40 flex-shrink-0"
+                  className="absolute top-3.5 right-3 md:static group flex items-center justify-center w-8 h-8 border border-zinc-800 hover:border-accent rounded-lg transition-all duration-300 bg-zinc-900/50"
                   aria-label="关闭"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-zinc-400 group-hover:text-accent transform group-hover:rotate-90 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,63 +215,73 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   </svg>
                 </button>
               </div>
+            </div>
 
-              {/* Top fade group */}
-              <div
-                className="px-8 md:px-10 transition-all duration-200"
-                style={{
-                  opacity: 1 - progress,
-                  maxHeight: `${(1 - progress) * 200}px`,
-                  overflow: 'hidden',
-                }}
-              >
-                <div className="space-y-6">
-                  {/* Tech tags */}
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.techStack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="cursor-pointer font-mono text-[11px] text-zinc-400 border border-zinc-800 px-2.5 py-1 rounded bg-zinc-950/50 hover:border-accent hover:text-accent transition-all duration-200"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+            {/* ════ Scroll pages ════ */}
+            <div
+              ref={scrollRef}
+              data-modal-scroll
+              className="flex-1 overflow-y-auto snap-y snap-mandatory"
+              style={{ overscrollBehavior: 'contain', scrollBehavior: 'smooth' }}
+            >
+              {sections.map((section, i) => (
+                <div
+                  key={i}
+                  ref={(el) => {
+                    sectionRefs.current[i] = el
+                  }}
+                  data-page={i}
+                  className="snap-start min-h-full flex flex-col relative"
+                  style={{
+                    background: i % 2 === 0 ? '#121212' : '#121212',
+                  }}
+                >
+                  {/* Watermark number — top right */}
+                  <div
+                    className="absolute select-none pointer-events-none font-mono font-extrabold text-[140px] md:text-[180px] leading-none tracking-tighter z-0"
+                    style={{
+                      color: 'rgba(255,255,255,0.012)',
+                      right: '12px',
+                      top: '8px',
+                    }}
+                  >
+                    {String(i + 1).padStart(2, '0')}
                   </div>
 
-                  {/* Header */}
-                  <div className="space-y-2">
-                    <p className="text-xs font-mono text-zinc-500 tracking-widest uppercase">
-                      {project.detail.pageTitle}
-                    </p>
-                    <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-zinc-100">
-                      {project.detail.mainTitle}
-                    </h2>
-                    {project.detail.subtitle && (
-                      <p className="text-zinc-400 text-sm font-light">{project.detail.subtitle}</p>
+                  {/* Content */}
+                  <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 py-14 md:py-16">
+                    {/* Page 0 intro */}
+                    {i === 0 && (
+                      <div className="mb-4">
+                        <h2 className="text-[24px] md:text-[28px] font-bold text-white tracking-tight leading-tight mb-1">
+                          {project.title}
+                          <span className="text-zinc-500 font-normal"> · {project.detail.mainTitle}</span>
+                        </h2>
+                        <p className="text-sm text-zinc-500 font-light tracking-wide mb-3">
+                          {project.detail.subtitle}
+                        </p>
+                        <div className="w-12 h-px bg-zinc-700 mb-4" />
+                      </div>
                     )}
-                  </div>
-                </div>
-              </div>
 
-              {/* Sections */}
-              <div className="space-y-10 border-t border-zinc-900 pt-8 px-8 md:px-10 pb-10">
-                {project.detail.sections.map((section, i) => (
-                  <div key={i} className="space-y-3 group">
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono text-[10px] text-accent tracking-wider">
-                        {String(i + 1).padStart(2, '0')} //
-                      </span>
-                      {section.heading && (
-                        <h4 className="text-sm font-medium uppercase tracking-wider text-zinc-400 group-hover:text-zinc-200 transition-colors">
-                          {section.heading}
-                        </h4>
-                      )}
-                    </div>
-                    <div className="text-zinc-300 text-sm leading-relaxed font-light pl-7 whitespace-pre-wrap">
-                      {section.body}
-                    </div>
+                    {/* Body */}
+                    {section.body && (
+                      <div
+                        className="font-light whitespace-pre-wrap mb-5"
+                        style={{ color: '#a1a1aa', fontSize: '14px', lineHeight: '1.8' }}
+                      >
+                        {section.body}
+                      </div>
+                    )}
+
+                    {/* HTML content */}
+                    {section.html && (
+                      <div dangerouslySetInnerHTML={{ __html: section.html }} />
+                    )}
+
+                    {/* Illustration */}
                     {section.illustration && (
-                      <figure className="mt-5 overflow-hidden rounded-xl border border-zinc-800 ml-7">
+                      <figure className="mt-6 overflow-hidden rounded-xl border border-zinc-800/60">
                         <img
                           src={section.illustration.src}
                           alt={section.illustration.alt}
@@ -184,17 +289,68 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                           loading="lazy"
                         />
                         {section.illustration.caption && (
-                          <figcaption className="border-t border-zinc-800 px-4 py-2.5 text-center text-xs text-zinc-500">
+                          <figcaption className="border-t border-zinc-800/60 px-4 py-2.5 text-center text-xs text-zinc-500">
                             {section.illustration.caption}
                           </figcaption>
                         )}
                       </figure>
                     )}
+
+                    {/* Tech tags — page 1 only */}
+                    {i === 0 && (
+                      <div className="mt-8 flex flex-wrap gap-2">
+                        {project.techStack.map((tech) => (
+                          <span
+                            key={tech}
+                            className="font-mono text-[11px] text-zinc-500 border border-zinc-800/60 px-2.5 py-1 rounded bg-zinc-950/50"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                ))}
-              </div>
+
+                  {/* Gradient divider between pages */}
+                  {i < sections.length - 1 && (
+                    <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center pointer-events-none">
+                      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#C7FF00]/25 to-transparent" />
+                      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#C7FF00]/08 to-transparent mt-[1px]" />
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-          </div>
+
+            {/* Keyboard hint */}
+            <div
+              className="absolute bottom-4 right-8 text-[10px] text-zinc-600 hidden md:block transition-opacity duration-500 pointer-events-none"
+              style={{ opacity: activeIndex === 0 ? 1 : 0 }}
+            >
+              ↑↓ 切页 · Esc 关闭
+            </div>
+
+            {/* Mobile: indicator dots at bottom center */}
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-1.5 py-3 bg-gradient-to-t from-[#121212] via-[#121212]/90 to-transparent md:hidden pointer-events-auto z-50">
+              {sections.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => goTo(i)}
+                  className={`rounded-full transition-all duration-300 ${
+                    i === activeIndex
+                      ? 'w-5 h-1.5 bg-accent'
+                      : 'w-1.5 h-1.5 bg-zinc-700'
+                  }`}
+                  aria-label={`第 ${i + 1} 章`}
+                />
+              ))}
+            </div>
+
+            {/* Page counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[11px] font-mono text-zinc-600 hidden md:block pointer-events-none">
+              {String(activeIndex + 1).padStart(2, '0')} / {String(sections.length).padStart(2, '0')}
+            </div>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>,

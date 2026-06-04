@@ -252,13 +252,12 @@ body {
 }
 
 .intro-card {
-  background: rgba(30, 30, 30, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
+  background: #161618;
+  border: 1px solid #1f1f23;
+  border-radius: 8px;
   padding: 1rem 1.25rem;
-  transition: border-color 0.3s ease, background 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @media (min-width: 768px) {
@@ -268,8 +267,8 @@ body {
 }
 
 .intro-card:hover {
-  border-color: rgba(255, 255, 255, 0.12);
-  background: rgba(30, 30, 30, 0.6);
+  border-color: rgba(199, 255, 0, 0.2);
+  background: #1a1a1d;
 }
 
 /* Horizontal scroll snap */
@@ -413,4 +412,21 @@ body {
   .text-4xl {
     font-size: 2.75rem;
   }
+}
+
+/* ════ Easter Egg Bird Animation ════ */
+@keyframes flap {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(-0.5); }
+}
+
+@keyframes fly-up {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  30% { transform: translateY(-30px) scale(0.9); opacity: 1; }
+  80% { transform: translateY(-80px) scale(0.6); opacity: 0.6; }
+  100% { transform: translateY(-120px) scale(0.3); opacity: 0; }
+}
+
+.bird {
+  will-change: transform;
 }
