@@ -413,6 +413,36 @@ body {
   .text-4xl {
     font-size: 2.75rem;
   }
+
+  /* ════ Navigation & Timeline: prevent scaling ════ */
+  .nav-link {
+    font-size: 16px;
+  }
+  .nav-active {
+    font-size: 20px;
+  }
+  .nav-site-name {
+    font-size: 16px;
+  }
+
+  .tl-date-active {
+    font-size: 14px;
+  }
+  .tl-date-inactive {
+    font-size: 13px;
+  }
+  .tl-company-active {
+    font-size: 18px;
+  }
+  .tl-company-inactive {
+    font-size: 14px;
+  }
+  .tl-role-active {
+    font-size: 14px;
+  }
+  .tl-role-inactive {
+    font-size: 13px;
+  }
 }
 
 /* ════ Easter Egg Bird Animation ════ */

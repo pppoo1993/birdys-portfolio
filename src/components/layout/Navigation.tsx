@@ -167,9 +167,9 @@ export default function Navigation() {
           <button
             ref={setBtnRef(link.sectionId)}
             data-cursor-interactive onClick={() => handleNav(link.sectionId)}
-            className={`block w-full py-2 text-left text-base transition-colors md:px-6 ${
+            className={`nav-link block w-full py-2 text-left text-base transition-colors md:px-6 ${
               activeId === link.sectionId
-                ? 'font-bold text-accent text-lg'
+                ? 'nav-active font-bold text-accent text-xl'
                 : 'font-normal text-white/50 hover:text-white/80'
             }`}
           >
@@ -239,11 +239,11 @@ export default function Navigation() {
 
       {/* Desktop: fixed left sidebar */}
       <aside className="fixed top-0 left-0 z-40 hidden h-screen w-[240px] flex-col border-r border-divider bg-bg-primary md:flex">
-        <div className="px-6 pb-3 space-y-4" style={{ paddingTop: '6vh' }}>
+        <div className="px-6 pb-6 space-y-4" style={{ paddingTop: '6vh' }}>
           <button onClick={() => scrollTo('intro')} className="block">
             <img src={import.meta.env.BASE_URL + 'images/logo.png'} alt="Logo" className="w-10 h-10 object-contain" />
           </button>
-          <button onClick={() => scrollTo('intro')} className="block text-sm font-medium tracking-wide text-white/60">
+          <button onClick={() => scrollTo('intro')} className="nav-site-name block text-base font-medium tracking-wide text-white/60">
             {siteConfig.name}
           </button>
         </div>
