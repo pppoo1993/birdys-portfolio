@@ -7,23 +7,23 @@ export const projectData: Project[] = [
     description:
       '爱奇艺内部孵化 AI 视频应用，交互设计负责人，主导从概念孵化到结项的全链路交互设计。',
     imagePath: 'https://picsum.photos/seed/project3/1200/800',
-    techStack: ['AI Video', 'Interaction Design', 'UX Strategy', 'Figma', 'SWOT'],
+    techStack: ['生成式 AI', '交互设计', '体验架构', '商业复盘', '用户旅程', '组件化设计'],
     sourceUrl: 'https://github.com',
     detail: {
-      pageTitle: '吃鲸AI · iQIYI AI Video',
+      pageTitle: '吃鲸AI | 爱奇艺生成式 AI 视频互动平台',
       mainTitle: '爱奇艺AI视频互动社区商业复盘',
-      subtitle: '交互设计负责人 · 2025.10 孵化 — 2026.05 结项',
+      subtitle: '交互设计负责人 · 2025.10 — 2026.05',
       sections: [
         {
           heading: '引言：商业极限下的终局反思',
           body: '',
           html: `<style>.hl-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 1.5rem;font-weight:300;letter-spacing:0.01em}.hl-p b{color:#FFFFFF;font-weight:600}.hl-p:last-child{margin-bottom:0}</style>
-<p class="hl-p">「吃鲸AI」是爱奇艺内部孵化的一款生成式 AI 视频消费与互动应用。作为该项目的<b>交互设计负责人</b>，我和项目组见证了它从概念孵化到结项终止的全过程。</p>
-<p class="hl-p">必须坦诚的是，在当前飞速变幻的 AI 赛道中，「吃鲸AI」最终未能探索出属于它的<b>商业模式</b>。这并非是<b>体验设计上的失败</b>，而是一场受限于<b>技术成熟度</b>与<b>平台基因</b>的艰难实验。复盘一个已经失败的创新项目，给我带来更多是关于商业、技术、平台限制和设计解法上的思考。</p>`,
+<p class="hl-p">「吃鲸AI」是爱奇艺内部孵化的生成式 AI 原生互动社区。我主导了从概念到上线验证的全流程体验设计，跑通了<b>「消费分发 → 生产赋能 → 闭环沉淀」</b>的完整链路。</p>
+<p class="hl-p">虽受限于技术成熟度与平台基因，项目未能实现商业模式的跑通，但这并非设计的止步——这段经历给我带来更多是关于商业、技术、平台限制和设计解法上的思考。</p>`,
         },
         {
           heading: '缘起：长视频平台的生态自救',
-          body: '爱奇艺切入 AI 视频，本质上是一场「生产端降本 & 流量端防御」的生态自救。爱奇艺试图用生成式 AI 视频作为武器，精准破解长视频行业既有的三大商业天花板。',
+          body: '爱奇艺切入 AI 视频，本质上是一场<b>「生产端降本 & 流量端防御」</b>的生态自救。爱奇艺试图用生成式 AI 视频作为武器，精准破解长视频行业既有的三大商业天花板。',
           html: `<style>
 @media(max-width:767px){.ba-row{flex-direction:column!important}.swot-grid{grid-template-columns:1fr!important}}
 /* 三栏对照容器 */
@@ -117,7 +117,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '体验架构设计：AI创作的底层逻辑',
-          body: '破局策略明确后，如何转化为用户可感的界面结构？设计团队梳理出了系统的交互分层，核心是通过「以消带产」盘活链路。',
+          body: '破局策略明确后，如何转化为用户可感的界面结构？设计团队梳理出了系统的交互分层，核心是通过<b>「以消带产」</b>盘活链路。',
           html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:12px!important}}.arch-card{transition:border-color .3s ease,background .3s ease,box-shadow .3s ease}.arch-card:hover{border-color:#333333!important;background:#1A1A1A!important;box-shadow:0 2px 12px rgba(0,0,0,.3)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;box-shadow:0 2px 12px rgba(199,255,0,.04)}.arch-row{display:flex;gap:18px;align-items:stretch;margin:24px 0}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}@media(max-width:767px){.arch-row{flex-direction:column!important}.arch-row .arch-card{flex-direction:row!important}}</style>
 <div class="arch-row">
 <div class="arch-card" style="background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:24px;display:flex;gap:24px;align-items:flex-start">
@@ -169,7 +169,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '全局视界：首页交互架构',
-          body: '基于「消费分发 → 生产赋能 → 闭环沉淀」的增量模型，设计了首页交互架构，实现从内容消费到创作反哺的价值内循环。',
+          body: '基于<b>「消费分发 → 生产赋能 → 闭环沉淀」</b>的增量模型，设计了首页交互架构，实现从内容消费到创作反哺的价值内循环。',
           html: `<style>
 .ds-sub{font-size:18px;font-weight:700;color:#FFFFFF;margin:2rem 0 8px;letter-spacing:0.02em}
 .ds-sub .num{font-family:monospace;font-size:15px;color:#C7FF00;margin-right:8px;font-weight:700}
@@ -207,19 +207,21 @@ export const projectData: Project[] = [
 `,
         },
         {
-          heading: '创意实验：趣味创作玩法',
+          heading: '交互降维：以趣味接龙重构创作门槛',
           body: '',
           html: `<style>
 .mani-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 0}
 .mani-line{color:#A0A0A0;font-size:15px;line-height:2.4;font-weight:300;margin:0}
-@media(max-width:767px){.mani-line{font-size:13px}}
+.mani-highlight{color:#C7FF00;font-size:24px;font-weight:700;line-height:1.6;margin:12px 0;letter-spacing:0.04em}
+.mani-hl{color:#C7FF00;font-weight:700;font-size:24px}
+@media(max-width:767px){.mani-line{font-size:13px}.mani-highlight{font-size:19px}.mani-hl{font-size:19px}}
 </style>
 <div class="mani-wrap">
 <p class="mani-line">除了通用创作流程</p>
 <p class="mani-line">我们通过「换台词」与「故事接龙」等影视相关趣味玩法降低了创作门槛</p>
 <p class="mani-line">用户无需专业技能，即可在 AI 的辅助下通过「微调」完成二创</p>
-<p class="mani-line">这种「渐进式」的交互设计</p>
-<p class="mani-line">将高门槛的内容生产变成了低成本的趣味体验</p>
+<p class="mani-line">这种<span class="mani-hl">「渐进式」</span>的交互设计</p>
+<p class="mani-highlight">将高门槛的内容生产变成了低成本的趣味体验</p>
 </div>`,
         },
         {
@@ -280,8 +282,7 @@ export const projectData: Project[] = [
 .sd-card:hover{border-color:#333333;background:#1A1A1A;transform:translateY(-2px)}
 .sd-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
 .sd-card:hover::before{opacity:.6}
-.sd-card-num{font-family:monospace;font-size:11px;color:#C7FF00;font-weight:600;display:block;margin-bottom:14px;letter-spacing:0.08em}
-.sd-card-icon{font-size:20px;margin-bottom:12px;display:block}
+.sd-card-num{position:absolute;top:14px;right:14px;font-family:monospace;font-size:10px;color:#C7FF00;font-weight:600;letter-spacing:0.06em;background:rgba(199,255,0,0.08);border:1px solid rgba(199,255,0,0.15);border-radius:3px;padding:3px 10px;z-index:1}
 .sd-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-left:10px;border-left:3px solid #C7FF00;line-height:1.4}
 .sd-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
 .sd-card-desc b{color:#FFFFFF;font-weight:600}
@@ -293,9 +294,9 @@ export const projectData: Project[] = [
 </style>
 <p class="sd-intro">即使「吃鲸AI」的产品生命周期画上了句号，但交互团队在从 0 到 1 的摸索中，为爱奇艺体系乃至生成式 AI 交互领域沉淀下了不可抹去的<b>无形资产</b>：</p>
 <div class="sd-grid">
-<div class="sd-card"><span class="sd-card-num">资产一</span><span class="sd-card-icon">📦</span><h4 class="sd-card-title">标准化组件与协同体系</h4><p class="sd-card-desc">将核心交互（如创作页、播放器）标准化为组件库，封装为 <b>SDK 模块</b>，成功支撑了 AI 创作能力在爱奇艺主站的无缝嵌入。这套标准化方案实现了<b>创作能力与主站生态的解耦</b>，为 AI 能力的规模化接入提供了底层支撑。</p></div>
-<div class="sd-card"><span class="sd-card-num">资产二</span><span class="sd-card-icon">⚡</span><h4 class="sd-card-title">AI 生产链路交互重构</h4><p class="sd-card-desc">针对 AI 生成耗时较长的痛点，设计了<b>"即时反馈 + 异步处理"</b>交互闭环。通过后台任务队列与主动通知策略，将用户的<b>线性等待转化为并行体验</b>，有效解决生成过程中的流程阻塞问题，极大提升创作流顺畅度。</p></div>
-<div class="sd-card"><span class="sd-card-num">资产三</span><span class="sd-card-icon">🧩</span><h4 class="sd-card-title">创作资源模块化管理</h4><p class="sd-card-desc">将不同玩法的素材与底层逻辑解耦，搭建统一的<b>资源共享池</b>。资源模块化架构使得创作侧玩法迭代不再依赖复杂底层重构，显著提升产品在处理复杂创作场景时的<b>灵活性与响应效率</b>。</p></div>
+<div class="sd-card"><span class="sd-card-num">资产一</span><h4 class="sd-card-title">标准化组件与协同体系</h4><p class="sd-card-desc">将核心交互（如创作页、播放器）标准化为组件库，封装为 <b>SDK 模块</b>，成功支撑了 AI 创作能力在爱奇艺主站的无缝嵌入。这套标准化方案实现了<b>创作能力与主站生态的解耦</b>，为 AI 能力的规模化接入提供了底层支撑。</p></div>
+<div class="sd-card"><span class="sd-card-num">资产二</span><h4 class="sd-card-title">AI 生产链路交互重构</h4><p class="sd-card-desc">针对 AI 生成耗时较长的痛点，设计了<b>"即时反馈 + 异步处理"</b>交互闭环。通过后台任务队列与主动通知策略，将用户的<b>线性等待转化为并行体验</b>，有效解决生成过程中的流程阻塞问题，极大提升创作流顺畅度。</p></div>
+<div class="sd-card"><span class="sd-card-num">资产三</span><h4 class="sd-card-title">创作资源模块化管理</h4><p class="sd-card-desc">将不同玩法的素材与底层逻辑解耦，搭建统一的<b>资源共享池</b>。资源模块化架构使得创作侧玩法迭代不再依赖复杂底层重构，显著提升产品在处理复杂创作场景时的<b>灵活性与响应效率</b>。</p></div>
 </div>
 <div class="sd-closing"><span class="sd-closing-label">结语</span><p>「吃鲸 AI」不仅是交互设计的实验场，更是<b>商业模型与算力成本博弈</b>的试金石。它警示我们：未来的 AI 设计，必须跳出体验的舒适区，将<b>技术 ROI 与平台基因</b>纳入设计的底层逻辑。</p></div>`,
         },
