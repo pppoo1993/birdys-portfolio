@@ -12,6 +12,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
   const scrollRef = useRef<HTMLDivElement>(null)
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeIndex, setActiveIndex] = useState(0)
+  const [previewSrc, setPreviewSrc] = useState<string | null>(null)
   const scrollingLock = useRef(false)
   const activeIndexRef = useRef(0)
 
@@ -160,6 +161,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
   }, [project, handleKeyDown, blockScroll])
 
   return createPortal(
+    <>
     <AnimatePresence>
       {project && (
         <motion.div
@@ -191,6 +193,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   {sections.map((_, i) => (
                     <button
                       key={i}
+                      data-cursor-hover
                       onClick={() => goTo(i)}
                       className={`rounded-full transition-all duration-300 ${
                         i === activeIndex
@@ -203,6 +206,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   ))}
                 </nav>
                 <button
+                  data-cursor-hover
                   onClick={(e) => {
                     e.stopPropagation()
                     onClose()
@@ -250,33 +254,60 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
 
                   {/* Content */}
                   <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 py-14 md:py-16">
-                    {/* Page 0 intro */}
-                    {i === 0 && (
-                      <div className="mb-4">
-                        <h2 className="text-[24px] md:text-[28px] font-bold text-white tracking-tight leading-tight mb-1">
-                          {project.title}
-                          <span className="text-zinc-500 font-normal"> · {project.detail.mainTitle}</span>
-                        </h2>
-                        <p className="text-sm text-zinc-500 font-light tracking-wide mb-3">
-                          {project.detail.subtitle}
-                        </p>
-                        <div className="w-12 h-px bg-zinc-700 mb-4" />
+                    {/* Page 0: split layout — text left, image right */}
+                    {i === 0 ? (
+                      <div className="flex flex-col md:flex-row gap-8 md:gap-14 items-center md:items-stretch">
+                        <div className="flex-1 flex flex-col justify-between">
+                          <div>
+                            <h2 className="text-[24px] md:text-[28px] font-bold text-white tracking-tight leading-tight mb-1">
+                              {project.title}
+                              <span className="text-zinc-500 font-normal"> · {project.detail.mainTitle}</span>
+                            </h2>
+                            <p className="text-sm text-zinc-500 font-light tracking-wide mb-3">
+                              {project.detail.subtitle}
+                            </p>
+                            <div className="w-12 h-px bg-zinc-700 mb-4" />
+                            {section.body && (
+                              <div
+                                className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
+                                style={{ color: '#a1a1aa', fontSize: '14px', lineHeight: '1.8' }}
+                                dangerouslySetInnerHTML={{ __html: section.body }}
+                              />
+                            )}
+                            {section.html && (
+                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; if (t.tagName === "IMG") setPreviewSrc((t as HTMLImageElement).src) }} className="[&_img]:cursor-pointer" />
+                            )}
+                          </div>
+                          {/* Tech tags — align to bottom */}
+                          <div className="text-xs font-mono font-medium text-zinc-400 mt-4">
+                            {project.techStack.join(' / ')}
+                          </div>
+                        </div>
+                        {/* Image placeholder */}
+                        <div className="w-full md:w-[42%] flex-shrink-0">
+                          <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-[#141416] border border-[#222226] flex items-center justify-center transition-all duration-300 hover:border-[#3f3f46] hover:scale-[1.02] group cursor-pointer">
+                            <span className="text-zinc-600 text-sm font-mono group-hover:text-[#C7FF00] transition-colors duration-300">封面图</span>
+                          </div>
+                        </div>
                       </div>
-                    )}
+                    ) : (
+                      <>
+                        {/* Page 0 intro (non-first-page variant not used for i===0) */}
 
-                    {/* Body */}
-                    {section.body && (
-                      <div
-                        className="font-light whitespace-pre-wrap mb-5"
-                        style={{ color: '#a1a1aa', fontSize: '14px', lineHeight: '1.8' }}
-                      >
-                        {section.body}
-                      </div>
-                    )}
+                        {/* Body */}
+                        {section.body && (
+                          <div
+                            className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
+                            style={{ color: '#a1a1aa', fontSize: '14px', lineHeight: '1.8' }}
+                            dangerouslySetInnerHTML={{ __html: section.body }}
+                          />
+                        )}
 
-                    {/* HTML content */}
-                    {section.html && (
-                      <div dangerouslySetInnerHTML={{ __html: section.html }} />
+                        {/* HTML content */}
+                        {section.html && (
+                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; if (t.tagName === "IMG") setPreviewSrc((t as HTMLImageElement).src) }} className="[&_img]:cursor-pointer" />
+                        )}
+                      </>
                     )}
 
                     {/* Illustration */}
@@ -285,8 +316,9 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                         <img
                           src={section.illustration.src}
                           alt={section.illustration.alt}
-                          className="w-full"
+                          className="w-full cursor-pointer"
                           loading="lazy"
+                          onClick={() => section.illustration && setPreviewSrc(section.illustration.src)}
                         />
                         {section.illustration.caption && (
                           <figcaption className="border-t border-zinc-800/60 px-4 py-2.5 text-center text-xs text-zinc-500">
@@ -296,19 +328,6 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                       </figure>
                     )}
 
-                    {/* Tech tags — page 1 only */}
-                    {i === 0 && (
-                      <div className="mt-8 flex flex-wrap gap-2">
-                        {project.techStack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="font-mono text-[11px] text-zinc-500 border border-zinc-800/60 px-2.5 py-1 rounded bg-zinc-950/50"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    )}
                   </div>
 
                   {/* Gradient divider between pages */}
@@ -353,7 +372,30 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>,
+    </AnimatePresence>
+    {/* ════ Image Preview Overlay ════ */}
+    {previewSrc && (
+      <div
+        className="fixed inset-0 z-[200] bg-black/80 backdrop-blur-md flex items-center justify-center cursor-pointer"
+        onClick={() => setPreviewSrc(null)}
+      >
+        <img
+          src={previewSrc}
+          alt="预览"
+          className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-[0_0_60px_rgba(0,0,0,0.8)]"
+        />
+        <button
+          onClick={() => setPreviewSrc(null)}
+          className="absolute top-6 right-6 group flex items-center justify-center w-8 h-8 border border-zinc-800 hover:border-accent rounded-lg transition-all duration-300 bg-zinc-900/50"
+          aria-label="关闭"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-zinc-400 group-hover:text-accent transform group-hover:rotate-90 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    )}
+    </>,
     document.body,
   )
 }

@@ -27,6 +27,7 @@ function ScrollProgress() {
 
 export default function App() {
   const spotlightRef = useSpotlight()
+
   useEffect(() => {
     const onMouseMove = (e: MouseEvent) => {
       document.documentElement.style.setProperty('--mx', `${e.clientX}px`)

@@ -58,14 +58,18 @@ export default function Projects() {
                         </p>
                       )}
                       <div className="w-10 h-px bg-zinc-700 mb-3" />
-                      <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-normal mb-3">
+                      <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-light mb-3">
                         {project.description}
                       </p>
                     </div>
 
                     {/* Metadata row */}
-                    <p className="text-[10px] font-mono text-[#52525b] tracking-[0.1em] uppercase mt-auto">
-                      STACK {project.techStack.slice(0, 4).join(' / ').toUpperCase()}
+                    <p className="text-[11px] font-mono font-medium text-[#71717a] tracking-[0.06em] mt-auto" style={{ display: "flex", flexWrap: "wrap", maxHeight: "1.4em", overflow: "hidden", gap: "0 2px" }}>
+                      {project.techStack.map((t, i) => (
+                        <span key={t} style={{ whiteSpace: "nowrap" }}>
+                          {t}{i < project.techStack.length - 1 ? <span style={{ color: "#52525b" }}> /</span> : ''}
+                        </span>
+                      ))}
                     </p>
                   </div>
 

@@ -87,7 +87,7 @@ export default function WorkExperience() {
                 )}
                 <ul className="space-y-1.5">
                   {group.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2 text-[#a1a1aa] text-[12px] leading-[1.6] tracking-[0.02em] font-normal">
+                    <li key={j} className="flex items-start gap-2 text-[#a1a1aa] text-[12px] leading-[1.6] tracking-[0.02em] font-light">
                       <span className="text-[#C7FF00]/60 mt-[6px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#C7FF00]/60" />
                       <span>{item}</span>
                     </li>
@@ -138,7 +138,7 @@ export default function WorkExperience() {
                 )}
                 <ul className="space-y-1.5">
                   {group.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2.5 text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-normal">
+                    <li key={j} className="flex items-start gap-2.5 text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
                       <span className="text-[#C7FF00]/60 mt-[7px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#C7FF00]/60" />
                       <span>{item}</span>
                     </li>

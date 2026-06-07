@@ -61,7 +61,7 @@ export default function Introduction() {
   return (
     <section
       id="intro"
-      className="relative w-full bg-[#0d0d0d] text-white flex flex-col justify-center py-16 md:py-28 font-sans" style={{ minHeight: '100dvh' }}
+      className="relative w-full bg-[#0d0d0d] text-white flex flex-col justify-center py-16 md:py-28 font-sans" style={{ minHeight: '100vh' }}
     >
       <div className="fixed inset-0 z-0 opacity-25 md:opacity-20 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50">
         <img
@@ -95,9 +95,14 @@ export default function Introduction() {
           />
         </div>
 
-        {/* 4. Typewriter — always 2 lines on mobile, fixed height prevents layout shift */}
-        <div className="md:min-h-0 pb-2 md:pb-0">
-          <h2 className="text-2xl md:text-4xl font-semibold tracking-wide text-[#e4e4e7] leading-normal md:leading-tight -mt-1 md:-mt-2 md:whitespace-normal">
+        {/* 4. Typewriter — static text on mobile, animated on desktop */}
+        <div className="min-h-[4.5rem] md:min-h-0 pb-2 md:pb-0">
+          {/* Mobile: static text */}
+          <h2 className="md:hidden text-2xl font-semibold tracking-wide text-[#e4e4e7] leading-normal -mt-1">
+            以系统化思维，<br />探索数字体验边界
+          </h2>
+          {/* Desktop: typewriter */}
+          <h2 className="hidden md:block text-4xl font-semibold tracking-wide text-[#e4e4e7] leading-tight -mt-2 whitespace-normal">
             {(() => {
               const displayText = typed || introductionData.quote
               const commaIdx = introductionData.quote.indexOf('，')
@@ -106,12 +111,10 @@ export default function Introduction() {
                 ? displayText.slice(commaIdx + 1)
                 : ' '
               const cursor = <span className="animate-cursor-blink text-accent text-xl md:text-2xl relative -top-1">|</span>
-              // Cursor follows typing: on line 1 if still typing before comma, else line 2
               const stillOnLine1 = displayText.length <= commaIdx + 1
               return <>
                 <span className="whitespace-nowrap">{beforeComma}{stillOnLine1 && cursor}</span>
-                <br className="md:hidden" />
-                <span className="md:hidden" />
+                <br className="hidden" />
                 {' '}
                 <span className="whitespace-nowrap">{afterComma}{!stillOnLine1 && cursor}</span>
               </>
@@ -127,7 +130,7 @@ export default function Introduction() {
               <h4 className="text-zinc-200 font-medium text-base mb-2 tracking-wide flex items-center gap-2">
                 <span className="text-accent font-mono text-sm">[About Me {section.number}]</span> {section.heading}
               </h4>
-              <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-normal">
+              <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
                 {section.body}
               </p>
             </div>

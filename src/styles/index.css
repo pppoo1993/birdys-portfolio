@@ -267,8 +267,9 @@ body {
 }
 
 .intro-card:hover {
-  border-color: rgba(199, 255, 0, 0.2);
-  background: #1a1a1d;
+  border-color: #3f3f46;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Horizontal scroll snap */

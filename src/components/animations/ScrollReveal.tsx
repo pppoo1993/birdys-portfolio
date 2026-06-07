@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 interface ScrollRevealProps {
   children: ReactNode
@@ -16,8 +17,9 @@ export default function ScrollReveal({
   delay = 0,
 }: ScrollRevealProps) {
   const reduced = useReducedMotion()
+  const isMobile = useMediaQuery('(max-width: 767px)')
 
-  if (reduced) {
+  if (reduced || isMobile) {
     return <div className={className}>{children}</div>
   }
 

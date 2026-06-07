@@ -36,9 +36,9 @@ export const projectData: Project[] = [
 .ba-header{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #333333;display:flex;align-items:center;gap:10px}
 .ba-header::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .ba-pair{display:flex;flex-direction:column;gap:10px;align-items:stretch}
-.ba-pain{flex:1;padding:0;background:none;border:none;border-radius:0}
+.ba-pain{flex:0 0 auto;padding:0;background:none;border:none;border-radius:0;min-height:80px}
 .ba-pain:hover{border-color:transparent}
-.ba-solve{flex:1;padding:0;background:none;border:none;border-radius:0}
+.ba-solve{flex:0 0 auto;padding:0;background:none;border:none;border-radius:0;min-height:80px}
 .ba-solve:hover{border-color:transparent}
 .ba-label{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;margin-right:6px;vertical-align:middle;font-family:monospace;letter-spacing:0.06em;font-weight:600}
 .ba-pain .ba-label{background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
@@ -99,7 +99,7 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '破局策略：消费型 AI 互动社区',
+          heading: '定位重塑：消费型 AI 互动社区',
           body: '',
           html: `<style>
 .mani-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 0}
@@ -116,7 +116,7 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '系统架构：产品概念与技术流转模型',
+          heading: '体验架构设计：AI创作的底层逻辑',
           body: '破局策略明确后，如何转化为用户可感的界面结构？设计团队梳理出了系统的交互分层，核心是通过「以消带产」盘活链路。',
           html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:12px!important}}.arch-card{transition:border-color .3s ease,background .3s ease,box-shadow .3s ease}.arch-card:hover{border-color:#333333!important;background:#1A1A1A!important;box-shadow:0 2px 12px rgba(0,0,0,.3)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;box-shadow:0 2px 12px rgba(199,255,0,.04)}.arch-row{display:flex;gap:18px;align-items:stretch;margin:24px 0}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}@media(max-width:767px){.arch-row{flex-direction:column!important}.arch-row .arch-card{flex-direction:row!important}}</style>
 <div class="arch-row">
@@ -129,11 +129,11 @@ export const projectData: Project[] = [
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用基础模型能力 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300">系统的双引擎驱动架构。底层异构接入可灵 O3、Seedance 4.0 及火山引擎等行业领先能力，技术团队通过 Prompt 工程、模型微调与高精度工作流进行定制开发，将复杂模糊的用户意图转化为具体的业务场景算力输出。</p></div>
 </div>
 <div class="arch-card accent" style="border-radius:4px;padding:24px;display:flex;gap:24px;align-items:flex-start;position:relative">
-<div><h4 style="color:#C7FF00;font-size:14px;font-weight:600;padding-bottom:8px;border-bottom:2px solid #C7FF00;display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>03 感知交互层</h4>
-<p style="color:#C7FF00;font-size:14px;font-weight:600;margin:0 0 8px">降低冷启动门槛：从"一键同款"到"IP 互动切口"</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300"><b style="color:#FFFFFF">交互设计负责人（UX Lead）的核心输出主阵地。</b>团队在此完全摒弃了传统的复杂提示词控制面板，改用极低摩擦力的模板化交互承接用户意图。通过联合产品与技术深度解构影视 IP 资产，将底层的硬核算力包装为用户感知轻量的低门槛互动玩法流。</p></div>
+<div><h4 style="color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:8px;border-bottom:1px solid #222226;display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>感知交互层</h4>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">降低冷启动门槛：从"一键同款"到"IP 互动切口"</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300"><b style="color:#FFFFFF">交互设计负责人（UX Lead）的核心输出主阵地。</b>团队在此完全摒弃了传统的复杂提示词控制面板，改用极低摩擦力的模板化交互承接用户意图。通过联合产品与技术深度解构影视 IP 资产，将底层的硬核算力包装为用户感知轻量的低门槛互动玩法流。</p></div>
 </div>
 </div>
-<p style="color:#A0A0A0;font-size:14px;line-height:1.8;margin-top:20px;font-weight:300">这种架构将 AI 能力作为底层引擎，通过消费场景自然引导用户进入创作，形成"看 → 玩 → 分享 → 再看"的闭环飞轮。</p>`,
+`,
         },
         {
           heading: '用户旅程：从看剧观众到AI创作者',
@@ -141,91 +141,94 @@ export const projectData: Project[] = [
           html: `<style>
 .jm-outer{display:flex;gap:16px;margin-top:12px}
 .jm-lbl-col{width:80px;flex-shrink:0}
-.jm-lbl-col .lhdr{height:56px;display:flex;align-items:center;padding:4px 8px;font-size:10px;color:#A0A0A0;font-weight:600;border-bottom:1px solid #333333;box-sizing:border-box}
-.jm-lbl-col .lrow{display:flex;align-items:center;padding:14px 8px;font-size:10px;font-weight:600;color:#A0A0A0;border-bottom:1px solid #333333;height:90px;box-sizing:border-box}
-.jm-lbl-col .lrow.grn{border-left:3px solid #C7FF00;color:#C7FF00;padding-left:5px}
+.jm-lbl-col .lhdr{min-height:56px;display:flex;align-items:center;justify-content:center;padding:4px 8px;font-size:11px;color:#A0A0A0;font-weight:600;border-bottom:1px solid #222226;box-sizing:border-box}
+.jm-lbl-col .lrow{display:flex;align-items:center;justify-content:center;text-align:center;padding:14px 4px;font-size:11px;font-weight:600;color:#A0A0A0;border-bottom:1px solid #222226;height:80px;box-sizing:border-box}
+.jm-lbl-col .lrow.grn{border-left:none;color:#A0A0A0;padding-left:5px;background:rgba(199,255,0,0.10);border-radius:4px}
 .jm-lbl-col .lrow:last-child{border-bottom:none}
-.jm-row{display:flex;gap:0 20px;flex:1}
+.jm-row{display:flex;gap:0 12px;flex:1}
 .jm-row .col{display:flex;flex-direction:column;flex:1}
-.jm-hdr{text-align:left;padding:10px 10px;height:56px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid #333333;box-sizing:border-box}
+.jm-hdr{text-align:left;padding:10px 10px;height:56px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid #222226;box-sizing:border-box}
 .jm-hdr .t{color:#FFFFFF;font-size:14px;font-weight:600;display:block;margin-bottom:2px}.jm-hdr .s{color:#A0A0A0;font-size:10px}
-.jm-hdr.core{border-bottom:2px solid #C7FF00!important}.jm-hdr.core .t,.jm-hdr.core .s{color:#C7FF00!important}
-.jm-cell{padding:14px 10px;font-size:11px;color:#A0A0A0;line-height:1.6;border-bottom:1px solid #333333;height:90px;display:flex;flex-direction:column;justify-content:center;box-sizing:border-box}
+.jm-hdr.core{border-bottom:1px solid #222226!important}.jm-hdr.core .t,.jm-hdr.core .s{color:#FFFFFF!important}
+.jm-cell{padding:14px 10px;font-size:12px;color:#A0A0A0;line-height:1.6;border-bottom:1px solid #222226;height:80px;display:flex;flex-direction:column;justify-content:flex-start;box-sizing:border-box;overflow:visible;word-break:break-word}
 .jm-cell:last-child{border-bottom:none}
 .jm-cell .jm-kw{color:#FFFFFF;font-weight:500;display:block;margin-bottom:2px}
 .jm-mb{display:block;font-size:10px;font-weight:600;margin-bottom:2px;color:#A0A0A0}
 .jm-cell.strat .st{display:block;margin-bottom:2px;color:#C7FF00;font-weight:600;font-size:12px}
 .jm-cell.strat .st.w{color:#FFFFFF!important}
-@media(max-width:767px){.jm-outer{flex-direction:column!important;gap:16px!important;padding-left:14px;border-left:1px solid #333333}.jm-lbl-col{display:none!important}.jm-row{display:flex!important;flex-direction:column!important;gap:16px!important}.jm-row .col{display:flex!important;flex-direction:column!important;gap:4px!important}.jm-hdr{height:auto!important;text-align:left!important;position:relative;border-bottom:none}.jm-hdr::before{content:"";position:absolute;left:-19px;top:8px;width:8px;height:8px;border-radius:50%;background:#A0A0A0}.jm-hdr.core::before{background:#C7FF00!important}.jm-cell{height:auto!important;border-bottom:none}.jm-lbl-col .lrow{height:auto!important}}
+@media(max-width:767px){.jm-outer{flex-direction:column!important;gap:16px!important;padding-left:14px;border-left:1px solid #333333}.jm-lbl-col{display:none!important}.jm-row{display:flex!important;flex-direction:column!important;gap:16px!important}.jm-row .col{display:flex!important;flex-direction:column!important;gap:4px!important}.jm-hdr{height:auto!important;text-align:left!important;position:relative;border-bottom:none}.jm-hdr::before{content:"";position:absolute;left:-19px;top:12px;width:8px;height:8px;border-radius:50%;background:#A0A0A0}.jm-hdr.core::before{background:#C7FF00!important}.jm-cell{height:auto!important;border-bottom:none}.jm-lbl-col .lrow{height:auto!important}}
 </style>
 <div class="jm-outer">
 <div class="jm-lbl-col"><div class="lhdr">阶段</div><div class="lrow">用户真实<br>潜在需求</div><div class="lrow">全局核心<br>卡点</div><div class="lrow grn">核心设计<br>策略</div></div>
 <div class="jm-row">
-<div class="col"><div class="jm-hdr"><span class="t">01. 探索发现</span><span class="s">心智沉浸与共鸣寻找</span></div><div class="jm-cell">看完热播剧后，渴望快速找到同好圈层，寻找剧情共鸣与玩梗新鲜内容。</div><div class="jm-cell"><span class="jm-kw">误当成传统播放器。</span>消费惯性过强，若进场缺乏明确的社区感知，看剧后用户即刻流失。</div><div class="jm-cell strat"><span class="st w">建立社区第一印象</span>分发侧套用双列瀑布流 Card。进场即拉满"能玩、能互动"的二创社区氛围。</div></div>
-<div class="col"><div class="jm-hdr"><span class="t">02. 激发灵感</span><span class="s">意图萌芽与门槛评估</span></div><div class="jm-cell">浏览二创内容时产生强烈表达欲，评估自己跟风创作的门槛与趣味性。</div><div class="jm-cell"><span class="jm-kw">不知道写啥（冷启动死穴）。</span>面对完全空白、无引导的自由创作环境，普通用户极易放弃。</div><div class="jm-cell strat"><span class="st w">降低生产前置摩擦</span>提供海量爆款模板与直观教程。将高难度的发散思考转化为低阻力的"即拿即用"。</div></div>
-<div class="col"><div class="jm-hdr core"><span class="t">03. 获取资源</span><span class="s">独家资产调用 (核心)</span></div><div class="jm-cell">急需高清、合规的版权片段作为二创底座，保障二创产出的速度与质量。</div><div class="jm-cell"><span class="jm-kw">跨平台找素材链路断裂。</span>站外缺乏合规版权，用户自行录屏、切片流转的沉没成本极高。</div><div class="jm-cell strat" style="color:#C7FF00!important"><span class="st" style="color:#C7FF00!important">消除跨平台流转割裂</span>一站式提供官方高清影视切片。无需出站，打通独家版权资产到创作上游的闭环。</div></div>
-<div class="col"><div class="jm-hdr"><span class="t">04. 创作生产</span><span class="s">生产转化与社区反馈</span></div><div class="jm-cell">拒绝专业工具的繁琐，希望以极低的学习与操作成本快速看到成品。</div><div class="jm-cell"><span class="jm-kw">高工具门槛劝退普通观众。</span>复杂的视频轨道与模型参数极易打碎原本纯观众用户的创作热情。</div><div class="jm-cell strat"><span class="st w">纯观众向二创者的低门槛转化</span>创新轻量、易上手的交互玩法。全方位降解生产认知成本，引导消费者无缝跨越。</div></div>
+<div class="col"><div class="jm-hdr"><span class="t">01. 探索发现</span><span class="s">心智沉浸与共鸣寻找</span></div><div class="jm-cell">看完热播剧后，渴望快速找到同好圈层，寻找剧情共鸣与玩梗新鲜内容。</div><div class="jm-cell"><span class="jm-kw">误当成传统播放器。</span>消费惯性过强，若进场缺乏明确的社区感知，看剧后用户即刻流失。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.10);border-radius:4px"><span class="st w">建立社区第一印象</span>分发侧套用双列瀑布流 Card。进场即拉满"能玩、能互动"的二创社区氛围。</div></div>
+<div class="col"><div class="jm-hdr"><span class="t">02. 激发灵感</span><span class="s">意图萌芽与门槛评估</span></div><div class="jm-cell">浏览二创内容时产生强烈表达欲，评估自己跟风创作的门槛与趣味性。</div><div class="jm-cell"><span class="jm-kw">不知道写啥（冷启动死穴）。</span>面对完全空白、无引导的自由创作环境，普通用户极易放弃。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.10);border-radius:4px"><span class="st w">降低生产前置摩擦</span>提供海量爆款模板与直观教程。将高难度的发散思考转化为低阻力的"即拿即用"。</div></div>
+<div class="col"><div class="jm-hdr core"><span class="t">03. 获取资源</span><span class="s">独家资产调用 (核心)</span></div><div class="jm-cell">急需高清、合规的版权片段作为二创底座，保障二创产出的速度与质量。</div><div class="jm-cell"><span class="jm-kw">跨平台找素材链路断裂。</span>站外缺乏合规版权，用户自行录屏、切片流转的沉没成本极高。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.10);border-radius:4px"><span class="st w">消除跨平台流转割裂</span>一站式提供官方高清影视切片。无需出站，打通独家版权资产到创作上游的闭环。</div></div>
+<div class="col"><div class="jm-hdr"><span class="t">04. 创作生产</span><span class="s">生产转化与社区反馈</span></div><div class="jm-cell">拒绝专业工具的繁琐，希望以极低的学习与操作成本快速看到成品。</div><div class="jm-cell"><span class="jm-kw">高工具门槛劝退普通观众。</span>复杂的视频轨道与模型参数极易打碎原本纯观众用户的创作热情。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.10);border-radius:4px"><span class="st w">纯观众向二创者的低门槛转化</span>创新轻量、易上手的交互玩法。全方位降解生产认知成本，引导消费者无缝跨越。</div></div>
 </div></div>`,
         },
         {
-          heading: '5.1 全局视界：首页交互架构',
+          heading: '全局视界：首页交互架构',
           body: '基于「消费分发 → 生产赋能 → 闭环沉淀」的增量模型，设计了首页交互架构，实现从内容消费到创作反哺的价值内循环。',
           html: `<style>
 .ds-sub{font-size:18px;font-weight:700;color:#FFFFFF;margin:2rem 0 8px;letter-spacing:0.02em}
 .ds-sub .num{font-family:monospace;font-size:15px;color:#C7FF00;margin-right:8px;font-weight:700}
 .ds-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:300}
-.arch-wrapper{width:100%;max-width:950px;margin:0 auto}.arch-layer{margin-bottom:24px}.arch-layer-bar{display:flex;align-items:center;margin-bottom:10px;border-bottom:1px solid #333333;padding-bottom:8px}.arch-layer-label{color:#FFFFFF;font-size:14px;font-weight:600;letter-spacing:0.02em;display:flex;align-items:center;gap:8px}.arch-layer-label::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-layer-logic{font-size:12px;color:#C7FF00;background:rgba(199,255,0,.02);border-left:2px solid #C7FF00;padding:6px 14px;border-radius:0 4px 4px 0;font-weight:500}.arch-page-row{display:flex;gap:12px}.arch-page-col{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:1}.arch-page-box{width:100%;box-sizing:border-box;height:150px;background:#121212;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:12px;border:1px solid #333333;transition:all .3s ease}.arch-page-col:hover .arch-page-box{border-color:#C7FF00;color:#fff;background:rgba(255,255,255,.01)}.arch-page-tag{font-size:11px;color:#A0A0A0;letter-spacing:0.02em;padding-left:2px}.arch-page-col.hl .arch-page-box{border:1px solid #C7FF00;background:rgba(199,255,0,.01);color:#fff;font-weight:500;box-shadow:inset 0 0 12px rgba(199,255,0,.03)}.arch-page-col.hl .arch-page-tag{color:#FFFFFF}@media(max-width:767px){.arch-page-row{flex-direction:column!important}.arch-page-box{height:110px}}
+.arch-wrapper{width:100%;max-width:950px;margin:0 auto;display:flex;flex-direction:column;align-items:center}.arch-layer{margin-bottom:24px}.arch-layer-bar{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:12px;padding-bottom:4px;gap:2px}.arch-layer-label{color:#FFFFFF;font-size:14px;font-weight:600;letter-spacing:0.02em;display:flex;align-items:center;gap:8px}.arch-layer-label::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-layer-logic{font-size:13px;color:#A0A0A0;padding:0;font-weight:300}.arch-page-row{display:flex;gap:28px;justify-content:center}.arch-page-col{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:0 1 auto}.arch-page-box{width:auto;display:inline-flex;box-sizing:border-box;height:auto;border-radius:8px;overflow:hidden;border:1px solid #222226;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-page-col:hover .arch-page-box{border-color:#3f3f46}.arch-page-tag{font-size:11px;color:#A0A0A0;letter-spacing:0.02em;text-align:center;width:100%}.arch-page-col.hl .arch-page-box{}.arch-page-col.hl .arch-page-tag{color:#A0A0A0}@media(max-width:767px){.arch-page-row{flex-direction:row!important;flex-wrap:nowrap;gap:12px}.arch-page-box{width:100%!important}.arch-page-box img{max-width:100%!important;width:100%!important}.arch-page-col{flex:1;min-width:0;overflow:hidden}}
 </style>
-<div class="ds-sub"><span class="num">5.1</span> 全局视界</div>
-<p class="ds-p">基于"消费分发 → 生产赋能 → 闭环沉淀"的增量模型，我们设计了首页交互架构，实现了从内容消费到创作反哺的价值内循环：</p>
 <div class="arch-wrapper">
-<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">01 / 消费分发层</span><span class="arch-layer-logic">核心策略：流量精准触达，通过沉浸式体验缩短留存路径</span></div><div class="arch-page-row"><div class="arch-page-col hl"><div class="arch-page-box">首页流分发</div><span class="arch-page-tag">智能分发</span></div><div class="arch-page-col"><div class="arch-page-box">播放器详情</div><span class="arch-page-tag">沉浸播放</span></div><div class="arch-page-col"><div class="arch-page-box">精选内容页</div><span class="arch-page-tag">品牌引导</span></div></div></div>
-<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">02 / 生产赋能层</span><span class="arch-layer-logic">核心策略：创作门槛治理，通过组件解耦提升创作效能</span></div><div class="arch-page-row"><div class="arch-page-col hl"><div class="arch-page-box">创作入口</div><span class="arch-page-tag">创作引擎</span></div><div class="arch-page-col hl"><div class="arch-page-box">创作编辑器</div><span class="arch-page-tag">碎片化改写</span></div><div class="arch-page-col"><div class="arch-page-box">素材检索库</div><span class="arch-page-tag">资源解耦</span></div></div></div>
-<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">03 / 闭环沉淀层</span><span class="arch-layer-logic">核心策略：内容资产内循环，促进用户身份跃迁</span></div><div class="arch-page-row"><div class="arch-page-col"><div class="arch-page-box">创作状态页</div><span class="arch-page-tag">社交互动</span></div><div class="arch-page-col hl"><div class="arch-page-box">作品发布页</div><span class="arch-page-tag">资产发布</span></div><div class="arch-page-col"><div class="arch-page-box">回流分发流</div><span class="arch-page-tag">长尾复利</span></div></div></div>
+<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">消费分发层</span><span class="arch-layer-logic">流量精准触达，通过沉浸式体验缩短留存路径</span></div><div class="arch-page-row"><div class="arch-page-col hl"><div class="arch-page-box"><img src="/birdys-portfolio/images/首页流分发.jpeg" alt="首页流分发" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">智能分发</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/播放器详情.png" alt="播放器详情" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">沉浸播放</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/精选播放页.PNG" alt="精选内容页" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">品牌引导</span></div></div></div>
+<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">生产赋能层</span><span class="arch-layer-logic">创作门槛治理，通过组件解耦提升创作效能</span></div><div class="arch-page-row"><div class="arch-page-col hl"><div class="arch-page-box"><img src="/birdys-portfolio/images/创作入口.png" alt="创作入口" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">创作引擎</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col hl"><div class="arch-page-box"><img src="/birdys-portfolio/images/创作编辑器.png" alt="创作编辑器" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">碎片化改写</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/素材检索库.png" alt="素材检索库" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">资源解耦</span></div></div></div>
+<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">闭环沉淀层</span><span class="arch-layer-logic">内容资产内循环，促进用户身份跃迁</span></div><div class="arch-page-row"><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/创作状态页.png" alt="创作状态页" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">社交互动</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col hl"><div class="arch-page-box"><img src="/birdys-portfolio/images/作品发布页.png" alt="作品发布页" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">资产发布</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/回流分发页.png" alt="回流分发流" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">长尾复利</span></div></div></div>
 </div>`,
         },
         {
-          heading: '5.2 创作中控：素材库与逻辑配置',
+          heading: '创作中控：素材库与逻辑配置',
           body: '将官方影视切片、本地相册及个人库整合为中心化素材库，通过统一交互范式简化素材选择流程。',
           html: `<style>
 .ds-sub{font-size:18px;font-weight:700;color:#FFFFFF;margin:2rem 0 8px;letter-spacing:0.02em}
 .ds-sub .num{font-family:monospace;font-size:15px;color:#C7FF00;margin-right:8px;font-weight:700}
 .ds-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:300}
-.flow-wrapper{width:100%;display:flex;flex-direction:column;gap:28px}.flow-wrapper section{padding:0}.flow-section-label{font-size:13px;color:#C7FF00;font-weight:600;margin-bottom:14px;border-left:3px solid #C7FF00;padding-left:10px}.flow-row{display:flex;align-items:center;justify-content:space-between;gap:10px}.flow-node{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:1}.flow-screen-box{width:100%;box-sizing:border-box;height:180px;background:#121212;border:1px solid #333333;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;font-weight:400;transition:all .3s ease}.flow-node:hover .flow-screen-box{border-color:#C7FF00;color:#fff;background:rgba(255,255,255,.01)}.flow-node-text{font-size:11px;color:#A0A0A0;padding-left:2px;letter-spacing:0.02em}.flow-operator{font-family:monospace;font-size:12px;color:#C7FF00;background:rgba(199,255,0,.03);border:1px solid rgba(199,255,0,.1);width:24px;height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-bottom:16px}.flow-arrow-down{display:flex;flex-direction:column;align-items:center;justify-content:center;height:28px;position:relative}.flow-arrow-down::before{content:'';width:1px;height:100%;background:linear-gradient(to bottom,#333333,rgba(199,255,0,.2),#333333)}@media(max-width:767px){.flow-row{flex-wrap:wrap!important;justify-content:center!important}.flow-operator{margin-bottom:0}.flow-screen-box{height:120px}}
+.flow-wrapper{width:100%;display:flex;flex-direction:column;align-items:center;gap:28px}.flow-wrapper section{padding:0}.flow-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.flow-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}.flow-row{display:flex;align-items:center;justify-content:center;gap:28px}.flow-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:0 1 auto}.flow-screen-box{width:auto;display:inline-flex;box-sizing:border-box;height:auto;border-radius:8px;overflow:hidden;border:1px solid #222226;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.flow-node:hover .flow-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}.flow-node-text{font-size:11px;color:#A0A0A0;letter-spacing:0.02em;text-align:center;width:100%}.flow-operator{font-size:16px;color:#A0A0A0;flex-shrink:0;display:flex;align-items:center;padding:0 4px}.flow-arrow-down{display:flex;flex-direction:column;align-items:center;justify-content:center;height:28px;position:relative}.flow-arrow-down::before{content:'';width:1px;height:100%;background:linear-gradient(to bottom,#333333,rgba(199,255,0,.2),#333333)}@media(max-width:767px){.flow-row{flex-wrap:nowrap!important;justify-content:center!important;gap:8px}.flow-operator{font-size:12px}.flow-screen-box{height:auto!important;width:100%!important}.flow-screen-box img{max-width:100%!important;width:100%!important}.flow-node{flex:1;min-width:0}}
 .ds-list{margin:0 0 20px;list-style:none;padding:0}
 .ds-list li{margin-bottom:12px;font-size:13px;line-height:1.75;color:#A0A0A0;font-weight:300}
 .ds-list li b{color:#FFFFFF;font-weight:600}
 </style>
-<div class="ds-sub"><span class="num">5.2</span> 创作中控</div>
-<p class="ds-p">为了简化创作前置流程，我们将官方影视切片、本地相册及个人库整合为中心化的「素材库」。通过统一的交互范式降低了素材来源的差异，将复杂的素材选择过程简化为三步闭环：</p>
-<div class="flow-wrapper">
-<section><div class="flow-section-label">阶段一 · 资产调用</div><div class="flow-row"><div class="flow-node"><div class="flow-screen-box">影视片段库</div><div class="flow-node-text">多维素材整合</div></div><div class="flow-operator">+</div><div class="flow-node"><div class="flow-screen-box">本地相册</div><div class="flow-node-text">打破平台壁垒</div></div><div class="flow-operator">+</div><div class="flow-node"><div class="flow-screen-box">个人参考库</div><div class="flow-node-text">中心化资源池</div></div></div></section>
-<div class="flow-arrow-down"></div>
-<section><div class="flow-section-label">阶段二 · 逻辑配置</div><div class="flow-row"><div class="flow-node"><div class="flow-screen-box">未添加素材</div><div class="flow-node-text">空载引导</div></div><div class="flow-operator">→</div><div class="flow-node"><div class="flow-screen-box">已添加素材</div><div class="flow-node-text">"@引用"逻辑拼搭</div></div><div class="flow-operator">→</div><div class="flow-node"><div class="flow-screen-box">调用素材</div><div class="flow-node-text">多维资源检索</div></div></div></section>
-</div>
 <ul class="ds-list">
   <li><b>多维素材融合：</b>整合官方影视切片、相册素材与个人参考库，打破了素材获取的平台壁垒，将素材库转化为随手可得的生产要素。</li>
   <li><b>透明化多引用交互：</b>采用 @引用式的交互逻辑，支持用户在生产过程中显性调用多项视觉参考，通过「自然语言描述 + 明确素材引用」的方式，将 AI 渲染的「黑盒」过程转化为用户可控的「逻辑拼搭」过程。</li>
   <li><b>低认知门槛配置：</b>将复杂的剪辑工作流程解构为任务式的素材调用，大幅削弱了二创对专业剪辑技能的依赖。</li>
-</ul>`,
+</ul>
+<div class="flow-wrapper">
+<section><div class="flow-section-label">阶段一 · 资产调用</div><div class="flow-row"><div class="flow-node"><div class="flow-screen-box"><img src="/birdys-portfolio/images/影视片段库.png" alt="影视片段库" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><div class="flow-node-text">多维素材整合</div></div><div class="flow-operator">+</div><div class="flow-node"><div class="flow-screen-box"><img src="/birdys-portfolio/images/本地相册.png" alt="本地相册" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><div class="flow-node-text">打破平台壁垒</div></div><div class="flow-operator">+</div><div class="flow-node"><div class="flow-screen-box"><img src="/birdys-portfolio/images/个人参考库.png" alt="个人参考库" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><div class="flow-node-text">中心化资源池</div></div></div></section>
+<div style="display:flex;justify-content:center;padding:4px 0"><span style="color:#A0A0A0;font-size:16px">↓</span></div>
+<section><div class="flow-section-label">阶段二 · 逻辑配置</div><div class="flow-row"><div class="flow-node"><div class="flow-screen-box"><img src="/birdys-portfolio/images/未添加素材.png" alt="未添加素材" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><div class="flow-node-text">空载引导</div></div><div class="flow-operator">→</div><div class="flow-node"><div class="flow-screen-box"><img src="/birdys-portfolio/images/已添加素材.png" alt="已添加素材" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><div class="flow-node-text">"@引用"逻辑拼搭</div></div><div class="flow-operator">→</div><div class="flow-node"><div class="flow-screen-box"><img src="/birdys-portfolio/images/调用素材.png" alt="调用素材" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><div class="flow-node-text">多维资源检索</div></div></div></section>
+</div>
+`,
         },
         {
-          heading: '5.3 创意实验：换台词',
-          body: '以热门影视 IP 经典名场面为载体，通过低门槛的「换台词」交互，让用户快速接入生产链路，将内容消费转化为互动产出。',
+          heading: '创意实验：趣味创作玩法',
+          body: '',
           html: `<style>
-.ds-sub{font-size:18px;font-weight:700;color:#FFFFFF;margin:2rem 0 8px;letter-spacing:0.02em}
-.ds-sub .num{font-family:monospace;font-size:15px;color:#C7FF00;margin-right:8px;font-weight:700}
-.ds-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:300}
-.qt-flow-wrapper{width:100%}.qt-section-label{font-size:13px;color:#C7FF00;font-weight:600;margin-bottom:14px;border-left:3px solid #C7FF00;padding-left:10px}.qt-flow-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.qt-node{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1}.qt-screen-box{width:100%;box-sizing:border-box;height:280px;background:#121212;border:1px solid #333333;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;transition:all .3s ease}.qt-node:hover .qt-screen-box{border-color:#C7FF00;color:#fff;background:rgba(255,255,255,.01)}.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}.qt-operator{font-size:20px;color:#C7FF00;margin-top:130px;flex-shrink:0}@media(max-width:767px){.qt-flow-row{flex-wrap:wrap!important}.qt-operator{margin-top:0;transform:rotate(90deg)}.qt-screen-box{height:160px}}
+.mani-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 0}
+.mani-line{color:#A0A0A0;font-size:15px;line-height:2.4;font-weight:300;margin:0}
+@media(max-width:767px){.mani-line{font-size:13px}}
 </style>
-<div class="ds-sub"><span class="num">5.3</span> 创意实验</div>
-<p class="ds-p">除了通用创作流程，我们通过「换台词」等影视相关趣味玩法降低了创作门槛。用户无需专业技能，即可在 AI 的辅助下通过「微调」完成二创。</p>
-
-<h5 style="color:#FFFFFF;font-size:13px;font-weight:600;margin:0 0 8px">🎬 换台词</h5>
-<p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:300">以热门影视 IP 的经典名场面为载体，通过低门槛的交互，让用户能够快速接入生产链路。无论是经典的对白解构，还是流行语的趣味梗植入，「换台词」打破了专业创作的围墙，让高光时刻不再高不可攀，真正实现了从内容消费到互动产出的高效转化。</p>
-<div class="qt-flow-wrapper">
-<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div><div class="qt-flow-row"><div class="qt-node"><div class="qt-screen-box">[原始名场面界面]</div><div class="qt-node-text"><b>即兴微调</b>点击台词直接编辑，降低创作心理门槛。</div></div><div class="qt-operator">➔</div><div class="qt-node"><div class="qt-screen-box">[场景化主题标签页]</div><div class="qt-node-text"><b>场景化启发</b>点击标签，快速接入创作方向。</div></div><div class="qt-operator">➔</div><div class="qt-node"><div class="qt-screen-box">[半浮层对话框]</div><div class="qt-node-text"><b>AI 对话式扩展</b>自然语言生成，多版本方案沉淀。</div></div><div class="qt-operator">➔</div><div class="qt-node"><div class="qt-screen-box">[新台词视频预览]</div><div class="qt-node-text"><b>创作资产沉淀</b>每一次尝试都可见、可复用。</div></div></div>
+<div class="mani-wrap">
+<p class="mani-line">除了通用创作流程</p>
+<p class="mani-line">我们通过「换台词」与「故事接龙」等影视相关趣味玩法降低了创作门槛</p>
+<p class="mani-line">用户无需专业技能，即可在 AI 的辅助下通过「微调」完成二创</p>
+<p class="mani-line">这种「渐进式」的交互设计</p>
+<p class="mani-line">将高门槛的内容生产变成了低成本的趣味体验</p>
 </div>`,
+        },
+        {
+          heading: '创意实验：换台词',
+          body: '以热门影视 IP 的经典名场面为载体，通过低门槛的交互，让用户能够快速接入生产链路。无论是经典的对白解构，还是流行语的趣味梗植入，「换台词」打破了专业创作的围墙，让高光时刻不再高不可攀，真正实现了从内容消费到互动产出的高效转化。',
+          html: `<style>
+.qt-flow-wrapper{width:100%}.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}.qt-flow-row{display:flex;align-items:flex-start;justify-content:center;gap:12px}.qt-node{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1}.qt-screen-box{width:100%;box-sizing:border-box;height:280px;background:#141416;border:1px solid #222226;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}.qt-operator{font-size:20px;color:#C7FF00;margin-top:130px;flex-shrink:0}@media(max-width:767px){.qt-flow-row{flex-wrap:wrap!important}.qt-operator{margin-top:0;transform:rotate(90deg)}.qt-screen-box{height:160px}}
+</style>
+<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div><div class="qt-flow-row"><div class="qt-node"><div class="qt-screen-box">[原始名场面界面]</div><div class="qt-node-text"><b>即兴微调</b>点击台词直接编辑，降低创作心理门槛。</div></div><div class="qt-operator">➔</div><div class="qt-node"><div class="qt-screen-box">[场景化主题标签页]</div><div class="qt-node-text"><b>场景化启发</b>点击标签，快速接入创作方向。</div></div><div class="qt-operator">➔</div><div class="qt-node"><div class="qt-screen-box">[半浮层对话框]</div><div class="qt-node-text"><b>AI 对话式扩展</b>自然语言生成，多版本方案沉淀。</div></div><div class="qt-operator">➔</div><div class="qt-node"><div class="qt-screen-box">[新台词视频预览]</div><div class="qt-node-text"><b>创作资产沉淀</b>每一次尝试都可见、可复用。</div></div></div>`,
         },
         {
           heading: '5.4 故事接龙：叙事共创与渐进式创作',
