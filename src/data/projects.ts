@@ -30,11 +30,12 @@ export const projectData: Project[] = [
 .ba-row{display:flex;gap:16px;align-items:stretch;margin-bottom:28px}
 .ba-row .ba-section{flex:1;margin-bottom:0}
 /* 痛点-解法 对照组 */
-.ba-section{margin-bottom:0;background:rgba(255,255,255,.01);border:1px solid #333333;border-radius:4px;padding:20px;transition:border-color .3s ease}
-.ba-section:hover{border-color:#333333}
+.ba-section{margin-bottom:0;background:rgba(255,255,255,.01);border:1px solid #333333;border-radius:4px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.ba-section:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
 .ba-section:last-child{margin-bottom:0}
-.ba-header{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #333333;display:flex;align-items:center;gap:10px}
+.ba-header{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:14px;padding-bottom:10px;display:flex;align-items:center;gap:10px;position:relative}
 .ba-header::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.ba-header::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .ba-pair{display:flex;flex-direction:column;gap:10px;align-items:stretch}
 .ba-pain{flex:0 0 auto;padding:0;background:none;border:none;border-radius:0;min-height:80px}
 .ba-pain:hover{border-color:transparent}
@@ -42,7 +43,7 @@ export const projectData: Project[] = [
 .ba-solve:hover{border-color:transparent}
 .ba-label{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;margin-right:6px;vertical-align:middle;font-family:monospace;letter-spacing:0.06em;font-weight:600}
 .ba-pain .ba-label{background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
-.ba-solve .ba-label{background:rgba(199,255,0,.06);color:#9FB300;border:1px solid rgba(199,255,0,.12)}
+.ba-solve .ba-label{background:rgba(199,255,0,.06);color:#C7FF00;border:1px solid rgba(199,255,0,.12)}
 .ba-pain h5{display:inline;color:#FFFFFF;font-size:13px;font-weight:600;margin:0}
 .ba-solve h5{display:inline;color:#C7FF00;font-size:13px;font-weight:600;margin:0}
 .ba-pain p,.ba-solve p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:8px 0 0;font-weight:300}
@@ -79,11 +80,11 @@ export const projectData: Project[] = [
           html: `<style>
 @media(max-width:767px){.swot-grid{grid-template-columns:1fr!important}}
 .swot-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
-.swot-item{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:border-color .3s ease,background .3s ease;position:relative;overflow:hidden}
-.swot-item:hover{border-color:#333333;background:#1A1A1A}
+.swot-item{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.swot-item:hover{border-color:#3f3f46;background:#1A1A1A;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
 .swot-item::after{content:attr(data-letter);position:absolute;top:-20px;right:-10px;font-size:100px;font-weight:900;color:rgba(255,255,255,.015);font-family:system-ui,-apple-system,sans-serif;line-height:1;pointer-events:none;z-index:0;letter-spacing:-0.02em}
 .swot-item>*{position:relative;z-index:1}
-.swot-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid #333333;display:flex;align-items:center;gap:8px}.swot-title::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.swot-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}.swot-title::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.swot-title::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .swot-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300}
 .swot-desc b{color:#FFFFFF;font-weight:600}
 .tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:24px 0 0;font-weight:300}
@@ -118,18 +119,18 @@ export const projectData: Project[] = [
         {
           heading: '体验架构设计：AI创作的底层逻辑',
           body: '破局策略明确后，如何转化为用户可感的界面结构？设计团队梳理出了系统的交互分层，核心是通过<b>「以消带产」</b>盘活链路。',
-          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:12px!important}}.arch-card{transition:border-color .3s ease,background .3s ease,box-shadow .3s ease}.arch-card:hover{border-color:#333333!important;background:#1A1A1A!important;box-shadow:0 2px 12px rgba(0,0,0,.3)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;box-shadow:0 2px 12px rgba(199,255,0,.04)}.arch-row{display:flex;gap:18px;align-items:stretch;margin:24px 0}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}@media(max-width:767px){.arch-row{flex-direction:column!important}.arch-row .arch-card{flex-direction:row!important}}</style>
+          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:12px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:#3f3f46!important;background:#1A1A1A!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:18px;align-items:stretch;margin:24px 0}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important}.arch-row .arch-card{flex-direction:row!important}}</style>
 <div class="arch-row">
 <div class="arch-card" style="background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:24px;display:flex;gap:24px;align-items:flex-start">
-<div><h4 style="color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:8px;border-bottom:1px solid #333333;display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>01 生态输入层</h4>
+<div><h4 class="arch-h4">01 生态输入层</h4>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">爱奇艺正片、IP 资产、版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300">整个产品的逻辑起点。底层直接对接爱奇艺独家影视正片，为用户提供版权合规的"种子源"，使用户能基于熟悉的剧集和演员进行二创，告别无中生有的冷启动摩擦力。</p></div>
 </div>
 <div class="arch-card" style="background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:24px;display:flex;gap:24px;align-items:flex-start">
-<div><h4 style="color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:8px;border-bottom:1px solid #333333;display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>02 核心逻辑层</h4>
+<div><h4 class="arch-h4">02 核心逻辑层</h4>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用基础模型能力 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300">系统的双引擎驱动架构。底层异构接入可灵 O3、Seedance 4.0 及火山引擎等行业领先能力，技术团队通过 Prompt 工程、模型微调与高精度工作流进行定制开发，将复杂模糊的用户意图转化为具体的业务场景算力输出。</p></div>
 </div>
 <div class="arch-card accent" style="border-radius:4px;padding:24px;display:flex;gap:24px;align-items:flex-start;position:relative">
-<div><h4 style="color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:8px;border-bottom:1px solid #222226;display:flex;align-items:center;gap:8px;margin:0 0 12px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>感知交互层</h4>
+<div><h4 class="arch-h4 accent">感知交互层</h4>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">降低冷启动门槛：从"一键同款"到"IP 互动切口"</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300"><b style="color:#FFFFFF">交互设计负责人（UX Lead）的核心输出主阵地。</b>团队在此完全摒弃了传统的复杂提示词控制面板，改用极低摩擦力的模板化交互承接用户意图。通过联合产品与技术深度解构影视 IP 资产，将底层的硬核算力包装为用户感知轻量的低门槛互动玩法流。</p></div>
 </div>
 </div>
@@ -139,11 +140,11 @@ export const projectData: Project[] = [
           heading: '用户旅程：从看剧观众到AI创作者',
           body: '爱奇艺的用户从观众到创作者，中间隔着极高的行动门槛。为了拆解这个转化过程，团队通过用户体验地图，还原了用户真实行为与痛点：',
           html: `<style>
-.jm-outer{display:flex;gap:16px;margin-top:12px}
+.jm-outer{display:flex;gap:12px;margin-top:12px}
 .jm-lbl-col{width:80px;flex-shrink:0}
 .jm-lbl-col .lhdr{min-height:56px;display:flex;align-items:center;justify-content:center;padding:4px 8px;font-size:11px;color:#A0A0A0;font-weight:600;border-bottom:1px solid #222226;box-sizing:border-box}
 .jm-lbl-col .lrow{display:flex;align-items:center;justify-content:center;text-align:center;padding:14px 4px;font-size:11px;font-weight:600;color:#A0A0A0;border-bottom:1px solid #222226;height:80px;box-sizing:border-box}
-.jm-lbl-col .lrow.grn{border-left:none;color:#A0A0A0;padding-left:5px;background:rgba(199,255,0,0.10);border-radius:4px}
+.jm-lbl-col .lrow.grn{border-left:none;color:#A0A0A0;padding-left:5px;background:rgba(199,255,0,0.06);border-radius:4px}
 .jm-lbl-col .lrow:last-child{border-bottom:none}
 .jm-row{display:flex;gap:0 12px;flex:1}
 .jm-row .col{display:flex;flex-direction:column;flex:1}
@@ -154,17 +155,17 @@ export const projectData: Project[] = [
 .jm-cell:last-child{border-bottom:none}
 .jm-cell .jm-kw{color:#FFFFFF;font-weight:500;display:block;margin-bottom:2px}
 .jm-mb{display:block;font-size:10px;font-weight:600;margin-bottom:2px;color:#A0A0A0}
-.jm-cell.strat .st{display:block;margin-bottom:2px;color:#C7FF00;font-weight:600;font-size:12px}
+.jm-cell.strat .st{display:block;margin-bottom:2px;color:rgba(199,255,0,0.75);font-weight:600;font-size:12px}
 .jm-cell.strat .st.w{color:#FFFFFF!important}
-@media(max-width:767px){.jm-outer{flex-direction:column!important;gap:16px!important;padding-left:14px;border-left:1px solid #333333}.jm-lbl-col{display:none!important}.jm-row{display:flex!important;flex-direction:column!important;gap:16px!important}.jm-row .col{display:flex!important;flex-direction:column!important;gap:4px!important}.jm-hdr{height:auto!important;text-align:left!important;position:relative;border-bottom:none}.jm-hdr::before{content:"";position:absolute;left:-19px;top:12px;width:8px;height:8px;border-radius:50%;background:#A0A0A0}.jm-hdr.core::before{background:#C7FF00!important}.jm-cell{height:auto!important;border-bottom:none}.jm-lbl-col .lrow{height:auto!important}}
+@media(max-width:767px){.jm-outer{flex-direction:column!important;gap:16px!important;padding-left:14px;border-left:1px solid #333333}.jm-lbl-col{display:none!important}.jm-row{display:flex!important;flex-direction:column!important;gap:16px!important}.jm-row .col{display:flex!important;flex-direction:column!important;gap:4px!important}.jm-hdr{height:auto!important;text-align:left!important;position:relative;border-bottom:none}.jm-hdr::before{content:"";position:absolute;left:-19px;top:12px;width:8px;height:8px;border-radius:50%;background:#A0A0A0}.jm-hdr.core::before{background:rgba(199,255,0,0.75)!important}.jm-cell{height:auto!important;border-bottom:none}.jm-lbl-col .lrow{height:auto!important}}
 </style>
 <div class="jm-outer">
 <div class="jm-lbl-col"><div class="lhdr">阶段</div><div class="lrow">用户真实<br>潜在需求</div><div class="lrow">全局核心<br>卡点</div><div class="lrow grn">核心设计<br>策略</div></div>
 <div class="jm-row">
-<div class="col"><div class="jm-hdr"><span class="t">01. 探索发现</span><span class="s">心智沉浸与共鸣寻找</span></div><div class="jm-cell">看完热播剧后，渴望快速找到同好圈层，寻找剧情共鸣与玩梗新鲜内容。</div><div class="jm-cell"><span class="jm-kw">误当成传统播放器。</span>消费惯性过强，若进场缺乏明确的社区感知，看剧后用户即刻流失。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.10);border-radius:4px"><span class="st w">建立社区第一印象</span>分发侧套用双列瀑布流 Card。进场即拉满"能玩、能互动"的二创社区氛围。</div></div>
-<div class="col"><div class="jm-hdr"><span class="t">02. 激发灵感</span><span class="s">意图萌芽与门槛评估</span></div><div class="jm-cell">浏览二创内容时产生强烈表达欲，评估自己跟风创作的门槛与趣味性。</div><div class="jm-cell"><span class="jm-kw">不知道写啥（冷启动死穴）。</span>面对完全空白、无引导的自由创作环境，普通用户极易放弃。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.10);border-radius:4px"><span class="st w">降低生产前置摩擦</span>提供海量爆款模板与直观教程。将高难度的发散思考转化为低阻力的"即拿即用"。</div></div>
-<div class="col"><div class="jm-hdr core"><span class="t">03. 获取资源</span><span class="s">独家资产调用 (核心)</span></div><div class="jm-cell">急需高清、合规的版权片段作为二创底座，保障二创产出的速度与质量。</div><div class="jm-cell"><span class="jm-kw">跨平台找素材链路断裂。</span>站外缺乏合规版权，用户自行录屏、切片流转的沉没成本极高。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.10);border-radius:4px"><span class="st w">消除跨平台流转割裂</span>一站式提供官方高清影视切片。无需出站，打通独家版权资产到创作上游的闭环。</div></div>
-<div class="col"><div class="jm-hdr"><span class="t">04. 创作生产</span><span class="s">生产转化与社区反馈</span></div><div class="jm-cell">拒绝专业工具的繁琐，希望以极低的学习与操作成本快速看到成品。</div><div class="jm-cell"><span class="jm-kw">高工具门槛劝退普通观众。</span>复杂的视频轨道与模型参数极易打碎原本纯观众用户的创作热情。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.10);border-radius:4px"><span class="st w">纯观众向二创者的低门槛转化</span>创新轻量、易上手的交互玩法。全方位降解生产认知成本，引导消费者无缝跨越。</div></div>
+<div class="col"><div class="jm-hdr"><span class="t">01. 探索发现</span><span class="s">心智沉浸与共鸣寻找</span></div><div class="jm-cell">看完热播剧后，渴望快速找到同好圈层，寻找剧情共鸣与玩梗新鲜内容。</div><div class="jm-cell"><span class="jm-kw">误当成传统播放器。</span>消费惯性过强，若进场缺乏明确的社区感知，看剧后用户即刻流失。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.06);border-radius:4px"><span class="st w">建立社区第一印象</span>分发侧套用双列瀑布流 Card。进场即拉满"能玩、能互动"的二创社区氛围。</div></div>
+<div class="col"><div class="jm-hdr"><span class="t">02. 激发灵感</span><span class="s">意图萌芽与门槛评估</span></div><div class="jm-cell">浏览二创内容时产生强烈表达欲，评估自己跟风创作的门槛与趣味性。</div><div class="jm-cell"><span class="jm-kw">不知道写啥（冷启动死穴）。</span>面对完全空白、无引导的自由创作环境，普通用户极易放弃。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.06);border-radius:4px"><span class="st w">降低生产前置摩擦</span>提供海量爆款模板与直观教程。将高难度的发散思考转化为低阻力的"即拿即用"。</div></div>
+<div class="col"><div class="jm-hdr core"><span class="t">03. 获取资源</span><span class="s">独家资产调用 (核心)</span></div><div class="jm-cell">急需高清、合规的版权片段作为二创底座，保障二创产出的速度与质量。</div><div class="jm-cell"><span class="jm-kw">跨平台找素材链路断裂。</span>站外缺乏合规版权，用户自行录屏、切片流转的沉没成本极高。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.06);border-radius:4px"><span class="st w">消除跨平台流转割裂</span>一站式提供官方高清影视切片。无需出站，打通独家版权资产到创作上游的闭环。</div></div>
+<div class="col"><div class="jm-hdr"><span class="t">04. 创作生产</span><span class="s">生产转化与社区反馈</span></div><div class="jm-cell">拒绝专业工具的繁琐，希望以极低的学习与操作成本快速看到成品。</div><div class="jm-cell"><span class="jm-kw">高工具门槛劝退普通观众。</span>复杂的视频轨道与模型参数极易打碎原本纯观众用户的创作热情。</div><div class="jm-cell strat" style="background:rgba(199,255,0,0.06);border-radius:4px"><span class="st w">纯观众向二创者的低门槛转化</span>创新轻量、易上手的交互玩法。全方位降解生产认知成本，引导消费者无缝跨越。</div></div>
 </div></div>`,
         },
         {
@@ -174,7 +175,7 @@ export const projectData: Project[] = [
 .ds-sub{font-size:18px;font-weight:700;color:#FFFFFF;margin:2rem 0 8px;letter-spacing:0.02em}
 .ds-sub .num{font-family:monospace;font-size:15px;color:#C7FF00;margin-right:8px;font-weight:700}
 .ds-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:300}
-.arch-wrapper{width:100%;max-width:950px;margin:0 auto;display:flex;flex-direction:column;align-items:center}.arch-layer{margin-bottom:24px}.arch-layer-bar{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:12px;padding-bottom:4px;gap:2px}.arch-layer-label{color:#FFFFFF;font-size:14px;font-weight:600;letter-spacing:0.02em;display:flex;align-items:center;gap:8px}.arch-layer-label::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-layer-logic{font-size:13px;color:#A0A0A0;padding:0;font-weight:300}.arch-page-row{display:flex;gap:28px;justify-content:center}.arch-page-col{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:0 1 auto}.arch-page-box{width:auto;display:inline-flex;box-sizing:border-box;height:auto;border-radius:8px;overflow:hidden;border:1px solid #222226;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-page-col:hover .arch-page-box{border-color:#3f3f46}.arch-page-tag{font-size:11px;color:#A0A0A0;letter-spacing:0.02em;text-align:center;width:100%}.arch-page-col.hl .arch-page-box{}.arch-page-col.hl .arch-page-tag{color:#A0A0A0}@media(max-width:767px){.arch-page-row{flex-direction:row!important;flex-wrap:nowrap;gap:12px}.arch-page-box{width:100%!important}.arch-page-box img{max-width:100%!important;width:100%!important}.arch-page-col{flex:1;min-width:0;overflow:hidden}}
+.arch-wrapper{width:100%;max-width:950px;margin:0 auto;display:flex;flex-direction:column;align-items:center}.arch-layer{margin-bottom:24px}.arch-layer-bar{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:12px;padding-bottom:4px;gap:2px}.arch-layer-label{color:#FFFFFF;font-size:14px;font-weight:600;letter-spacing:0.02em;display:flex;align-items:center;gap:8px}.arch-layer-label::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-layer-logic{font-size:13px;color:#A0A0A0;padding:0;font-weight:300}.arch-page-row{display:flex;gap:28px;justify-content:center}.arch-page-col{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:0 1 auto}.arch-page-box{width:auto;display:inline-flex;box-sizing:border-box;height:auto;border-radius:8px;overflow:hidden;border:1px solid #222226;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-page-col:hover .arch-page-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}.arch-page-tag{font-size:11px;color:#A0A0A0;letter-spacing:0.02em;text-align:center;width:100%}.arch-page-col.hl .arch-page-box{}.arch-page-col.hl .arch-page-tag{color:#A0A0A0}@media(max-width:767px){.arch-page-row{flex-direction:row!important;flex-wrap:nowrap;gap:12px}.arch-page-box{width:100%!important}.arch-page-box img{max-width:100%!important;width:100%!important}.arch-page-col{flex:1;min-width:0;overflow:hidden}}
 </style>
 <div class="arch-wrapper">
 <div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">消费分发层</span><span class="arch-layer-logic">流量精准触达，通过沉浸式体验缩短留存路径</span></div><div class="arch-page-row"><div class="arch-page-col hl"><div class="arch-page-box"><img src="/birdys-portfolio/images/首页流分发.jpeg" alt="首页流分发" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">智能分发</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/播放器详情.png" alt="播放器详情" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">沉浸播放</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/精选播放页.PNG" alt="精选内容页" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">品牌引导</span></div></div></div>
@@ -242,7 +243,7 @@ export const projectData: Project[] = [
 .ds-img-placeholder{background:linear-gradient(135deg,#121212 0%,#121212 100%);border:1px solid #333333;border-radius:4px;padding:48px 20px;text-align:center;margin:16px 0 24px;font-size:11px;color:#A0A0A0;font-family:system-ui,-apple-system,sans-serif;letter-spacing:0.05em;position:relative;overflow:hidden}.ds-img-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}.ds-img-placeholder::after{content:'🖼';display:block;font-size:24px;margin-bottom:12px;opacity:.3;filter:grayscale(1)}
 .progressive-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
 @media(max-width:767px){.progressive-steps{grid-template-columns:1fr!important}}
-.progressive-steps .ps-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:18px;text-align:center;transition:border-color .3s ease,background .3s ease,transform .2s ease}.progressive-steps .ps-card:hover{border-color:#333333;background:#1A1A1A;transform:translateY(-2px)}
+.progressive-steps .ps-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:18px;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.progressive-steps .ps-card:hover{border-color:#3f3f46;background:#1A1A1A;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
 .progressive-steps .ps-card .ps-num{font-family:monospace;font-size:10px;color:#C7FF00;display:block;margin-bottom:8px}
 .progressive-steps .ps-card .ps-title{color:#FFFFFF;font-size:13px;font-weight:600;display:block;margin-bottom:4px}
 .progressive-steps .ps-card .ps-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:300}
@@ -278,12 +279,12 @@ export const projectData: Project[] = [
 .sd-intro{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 32px;font-weight:300}
 .sd-intro b{color:#FFFFFF;font-weight:600}
 .sd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
-.sd-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:24px;transition:border-color .3s ease,background .3s ease,transform .2s ease;position:relative;overflow:hidden}
-.sd-card:hover{border-color:#333333;background:#1A1A1A;transform:translateY(-2px)}
+.sd-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:24px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.sd-card:hover{border-color:#3f3f46;background:#1A1A1A;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
 .sd-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
 .sd-card:hover::before{opacity:.6}
-.sd-card-num{position:absolute;top:14px;right:14px;font-family:monospace;font-size:10px;color:#C7FF00;font-weight:600;letter-spacing:0.06em;background:rgba(199,255,0,0.08);border:1px solid rgba(199,255,0,0.15);border-radius:3px;padding:3px 10px;z-index:1}
-.sd-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-left:10px;border-left:3px solid #C7FF00;line-height:1.4}
+.sd-card-num{position:absolute;top:24px;right:14px;font-family:monospace;font-size:10px;color:#C7FF00;font-weight:600;letter-spacing:0.06em;background:rgba(199,255,0,0.08);border:1px solid rgba(199,255,0,0.15);border-radius:3px;padding:3px 10px;z-index:1}
+.sd-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;line-height:1.4;position:relative}.sd-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.sd-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .sd-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
 .sd-card-desc b{color:#FFFFFF;font-weight:600}
 .sd-closing{margin-top:32px;background:linear-gradient(135deg,rgba(199,255,0,.02) 0%,rgba(199,255,0,.005) 100%);border:1px solid rgba(199,255,0,.08);border-left:3px solid #C7FF00;border-radius:4px;padding:24px 28px}
