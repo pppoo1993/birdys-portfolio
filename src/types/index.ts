@@ -15,6 +15,7 @@ export interface BioSection {
   heading: string;
   tag: string;
   body: string;
+  image?: string;
 }
 
 export interface IntroductionData {

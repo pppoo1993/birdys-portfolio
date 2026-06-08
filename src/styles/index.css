@@ -256,8 +256,9 @@ body {
   border: 1px solid #1f1f23;
   border-radius: 8px;
   padding: 1rem 1.25rem;
+  height: 100%;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media (min-width: 768px) {
@@ -267,9 +268,9 @@ body {
 }
 
 .intro-card:hover {
-  border-color: #3f3f46;
+  border-color: #27272a;
+  background: #141416;
   transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Horizontal scroll snap */
