@@ -8,32 +8,53 @@ function SplitRevealCard({ section }: { section: BioSection }) {
   const cardRef = useRef<HTMLDivElement>(null)
   const [splitPct, setSplitPct] = useState<number | null>(null)
   const [closing, setClosing] = useState(false)
+  const [locked, setLocked] = useState(false)
   const closeTimer = useRef<ReturnType<typeof setTimeout>>()
   const isActive = splitPct !== null
   const hasImage = !!section.image
 
   const updateSplit = useCallback((e: React.MouseEvent) => {
-    if (closing) return
+    if (closing || locked) return
     const rect = cardRef.current?.getBoundingClientRect()
     if (!rect) return
     const x = e.clientX - rect.left
     const pct = Math.max(0, Math.min((x / rect.width) * 100, 100))
     setSplitPct(pct)
-  }, [closing])
+  }, [closing, locked])
 
   const handleEnter = (e: React.MouseEvent) => {
+    if (locked) return
     clearTimeout(closeTimer.current)
     setClosing(false)
     updateSplit(e)
   }
 
   const handleLeave = () => {
+    if (locked) return
     setClosing(true)
-    setSplitPct(100) // animate divider to right edge
+    setSplitPct(100)
     closeTimer.current = setTimeout(() => {
       setSplitPct(null)
       setClosing(false)
     }, 350)
+  }
+
+  const handleClick = () => {
+    if (!hasImage) return
+    if (locked) {
+      setLocked(false)
+      setClosing(true)
+      setSplitPct(100)
+      closeTimer.current = setTimeout(() => {
+        setSplitPct(null)
+        setClosing(false)
+      }, 350)
+    } else {
+      clearTimeout(closeTimer.current)
+      setClosing(false)
+      setLocked(true)
+      setSplitPct(50)
+    }
   }
 
   useEffect(() => () => clearTimeout(closeTimer.current), [])
@@ -42,7 +63,8 @@ function SplitRevealCard({ section }: { section: BioSection }) {
     <div
       ref={cardRef}
       className="intro-card text-left relative overflow-hidden"
-      style={{ cursor: isActive ? 'col-resize' : undefined }}
+      style={{ cursor: isActive && !locked ? 'col-resize' : locked ? 'pointer' : undefined }}
+      onClick={handleClick}
       onMouseMove={hasImage ? updateSplit : undefined}
       onMouseEnter={hasImage ? handleEnter : undefined}
       onMouseLeave={hasImage ? handleLeave : undefined}
@@ -136,7 +158,7 @@ export default function Introduction() {
   return (
     <section
       id="intro"
-      className="relative w-full text-white flex flex-col justify-center py-16 md:py-28 font-sans"
+      className="relative w-full text-white flex flex-col justify-center py-16 md:py-28 font-sans noise-overlay"
       style={{ minHeight: '100vh', background: 'radial-gradient(circle at 50% 40%, rgba(204, 255, 0, 0.04) 0%, rgba(0, 0, 0, 0) 60%), #0a0a0c' }}
     >
       <div className="fixed inset-0 z-0 opacity-25 md:opacity-20 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50">
@@ -162,7 +184,7 @@ export default function Introduction() {
         {/* 3. Avatar — w-40 h-40, mirrored, subtle border, parallax + pulse */}
         <div
           ref={avatarRef}
-          className="avatar-parallax w-40 h-40 rounded-2xl overflow-hidden border border-white/20 flex-shrink-0 bg-[#0a0a0c] transition-all duration-500"
+          className="avatar-parallax w-40 h-40 rounded-2xl overflow-hidden border border-white/20 flex-shrink-0 bg-[#0a0a0c] transition-all duration-500 hover:shadow-[0_0_32px_rgba(204,255,0,0.12)] hover:border-white/30"
         >
           <img
             src={import.meta.env.BASE_URL + introductionData.avatarPath.replace(/^\//, '')}
@@ -220,7 +242,7 @@ export default function Introduction() {
           scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
         }`}
       >
-        <div className="flex animate-bounce flex-col items-center gap-1 text-white/25">
+        <div className="flex animate-bounce flex-col items-center gap-1 text-white/40">
           <span className="text-2xs tracking-widest uppercase">Scroll</span>
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
             <rect x="1" y="1" width="10" height="18" rx="5" stroke="currentColor" strokeWidth="1.5" />
