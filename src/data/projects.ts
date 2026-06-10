@@ -143,7 +143,7 @@ export const projectData: Project[] = [
 .jm-table{width:100%;border-collapse:collapse;margin-top:12px;table-layout:fixed}
 .jm-table th,.jm-table td{padding:24px 16px;font-size:12px;color:#A0A0A0;line-height:1.6;border-bottom:1px solid #222226;vertical-align:top;font-weight:400;text-align:left;word-break:break-word}
 .jm-table th{padding:24px 16px;vertical-align:middle}
-.jm-table .lbl{padding:24px 0}
+.jm-table .lbl{padding:24px 16px 24px 24px}
 .jm-table th .t{color:#FFFFFF;font-size:14px;font-weight:600;display:block;margin-bottom:2px}
 .jm-table th .s{color:#A0A0A0;font-size:10px;font-weight:400}
 .jm-table th.core .t,.jm-table th.core .s{color:#FFFFFF!important}
@@ -154,7 +154,8 @@ export const projectData: Project[] = [
 .jm-table .strat .st{display:block;margin-bottom:2px;color:rgba(199,255,0,0.75);font-weight:600;font-size:12px}
 .jm-table .strat .st.w{color:#FFFFFF!important}
 .jm-table tr:last-child td{border-bottom:none}
-@media(max-width:767px){.jm-table,.jm-table tbody,.jm-table tr,.jm-table th,.jm-table td{display:block;width:100%!important}.jm-table thead{display:none}.jm-table tr{border-left:1px solid #333333;padding-left:14px;margin-bottom:16px}.jm-table td{border-bottom:none;padding:8px 10px;height:auto!important}.jm-table td::before{content:attr(data-label);display:block;font-size:10px;color:#71717a;margin-bottom:4px;text-transform:uppercase}}
+.jm-mobile{display:none}
+@media(max-width:767px){.jm-table{display:none!important}.jm-mobile{display:flex;flex-direction:column;gap:24px}.jm-mobile-col{border-left:1px solid #222226;padding-left:22px}.jm-mobile-col-header{font-size:14px;font-weight:600;color:#FFFFFF;margin-bottom:12px;position:relative}.jm-mobile-col-header::before{content:'';position:absolute;left:-29px;top:50%;transform:translateY(-50%);width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a}.jm-mobile-col-item{margin-bottom:12px;padding:8px 0}.jm-mobile-col-item:last-child{margin-bottom:0}.jm-mobile-col-label{font-size:10px;color:#71717a;text-transform:uppercase;margin-bottom:4px;display:block}.jm-mobile-col-desc{font-size:12px;color:#A0A0A0;line-height:1.6}.jm-mobile-col-desc .jm-kw{color:#FFFFFF;font-weight:500;margin-bottom:2px}.jm-mobile-col-item.strat .jm-mobile-col-desc{color:rgba(199,255,0,0.75)}}
 </style>
 <table class="jm-table">
 <thead>
@@ -165,7 +166,33 @@ export const projectData: Project[] = [
 <tr><td class="lbl">核心卡点</td><td><span class="jm-kw">误当成传统播放器。</span>消费惯性过强，若进场缺乏明确的社区感知，看剧后用户即刻流失。</td><td><span class="jm-kw">不知道写啥（冷启动死穴）。</span>面对完全空白、无引导的自由创作环境，普通用户极易放弃。</td><td><span class="jm-kw">跨平台找素材链路断裂。</span>站外缺乏合规版权，用户自行录屏、切片流转的沉没成本极高。</td><td><span class="jm-kw">高工具门槛劝退普通观众。</span>复杂的视频轨道与模型参数极易打碎原本纯观众用户的创作热情。</td></tr>
 <tr><td class="lbl grn">设计策略</td><td class="strat"><span class="st w">建立社区第一印象</span>分发侧套用双列瀑布流 Card。进场即拉满"能玩、能互动"的二创社区氛围。</td><td class="strat"><span class="st w">降低生产前置摩擦</span>提供海量爆款模板与直观教程。将高难度的发散思考转化为低阻力的"即拿即用"。</td><td class="strat"><span class="st w">消除跨平台流转割裂</span>一站式提供官方高清影视切片。无需出站，打通独家版权资产到创作上游的闭环。</td><td class="strat"><span class="st w">纯观众向二创者的低门槛转化</span>创新轻量、易上手的交互玩法。全方位降解生产认知成本，引导消费者无缝跨越。</td></tr>
 </tbody>
-</table>`,
+</table>
+<div class="jm-mobile">
+<div class="jm-mobile-col">
+<div class="jm-mobile-col-header">探索发现 · 心智沉浸与共鸣寻找</div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">看完热播剧后，渴望快速找到同好圈层，寻找剧情共鸣与玩梗新鲜内容。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">误当成传统播放器。</span>消费惯性过强，若进场缺乏明确的社区感知，看剧后用户即刻流失。</p></div>
+<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">建立社区第一印象 — 分发侧套用双列瀑布流 Card。进场即拉满"能玩、能互动"的二创社区氛围。</p></div>
+</div>
+<div class="jm-mobile-col">
+<div class="jm-mobile-col-header">激发灵感 · 意图萌芽与门槛评估</div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">浏览二创内容时产生强烈表达欲，评估自己跟风创作的门槛与趣味性。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">不知道写啥（冷启动死穴）。</span>面对完全空白、无引导的自由创作环境，普通用户极易放弃。</p></div>
+<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">降低生产前置摩擦 — 提供海量爆款模板与直观教程。将高难度的发散思考转化为低阻力的"即拿即用"。</p></div>
+</div>
+<div class="jm-mobile-col">
+<div class="jm-mobile-col-header">获取资源 · 独家资产调用</div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">急需高清、合规的版权片段作为二创底座，保障二创产出的速度与质量。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">跨平台找素材链路断裂。</span>站外缺乏合规版权，用户自行录屏、切片流转的沉没成本极高。</p></div>
+<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">消除跨平台流转割裂 — 一站式提供官方高清影视切片。无需出站，打通独家版权资产到创作上游的闭环。</p></div>
+</div>
+<div class="jm-mobile-col">
+<div class="jm-mobile-col-header">创作生产 · 生产转化与社区反馈</div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">拒绝专业工具的繁琐，希望以极低的学习与操作成本快速看到成品。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">高工具门槛劝退普通观众。</span>复杂的视频轨道与模型参数极易打碎原本纯观众用户的创作热情。</p></div>
+<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">纯观众向二创者的低门槛转化 — 创新轻量、易上手的交互玩法。全方位降解生产认知成本，引导消费者无缝跨越。</p></div>
+</div>
+</div>`,
         },
         {
           heading: '全局视界：首页交互架构',
@@ -403,37 +430,68 @@ export const projectData: Project[] = [
         {
           heading: '目标拆解：从业务诉求到设计策略',
           body: '根据以上页面背景和破局分析，我们依托「流量蓄水 ➔ 沉浸式体验 ➔ 情感变现」的完整价值闭环，对「设计目标 ➔ 设计策略 ➔ 设计手段」进行推导，深度解构核心交互层的破局方案。',
-          html: `<div style="overflow-x: auto;">
-<table style="width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 600px;">
+          html: `<style>
+.dt-table{width:100%;border-collapse:collapse;table-layout:fixed;min-width:600px}
+.dt-table th,.dt-table td{padding:24px 16px;font-size:12px;color:#A0A0A0;line-height:1.6;border-bottom:1px solid #222226;vertical-align:top;font-weight:400;text-align:left;word-break:break-word}
+.dt-table th{font-size:14px;font-weight:600;color:#FFFFFF;vertical-align:middle;padding:24px 16px}
+.dt-table .lbl{width:120px;font-size:11px;font-weight:600;color:#A0A0A0;vertical-align:middle;text-align:left;text-transform:uppercase;padding:24px 16px 24px 24px}
+.dt-table tr.hl td{background:rgba(199,255,0,0.06)}
+.dt-table tbody td{height:80px}
+.dt-table tr:last-child td{border-bottom:none}
+.dt-mobile{display:none}
+@media(max-width:767px){.dt-table{display:none!important}.dt-mobile{display:flex;flex-direction:column;gap:24px}.dt-mobile-col{border-left:1px solid #222226;padding-left:22px}.dt-mobile-col-header{font-size:14px;font-weight:600;color:#FFFFFF;margin-bottom:12px;position:relative}.dt-mobile-col-header::before{content:'';position:absolute;left:-29px;top:50%;transform:translateY(-50%);width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a}.dt-mobile-col-item{margin-bottom:12px}.dt-mobile-col-item:last-child{margin-bottom:0}.dt-mobile-col-label{font-size:10px;color:#71717a;text-transform:uppercase;margin-bottom:4px;display:block}.dt-mobile-col-desc{font-size:12px;color:#A0A0A0;line-height:1.6}}
+</style>
+<div style="overflow-x: auto;">
+<table class="dt-table">
     <thead>
-        <tr style="border-bottom: 1px solid #1f1f23;">
-            <th style="width: 120px; padding: 12px 0; font-size: 13px; text-align: left; color: #A0A0A0; text-transform: uppercase; font-weight: 300;">维度</th>
-            <th style="padding: 12px 16px; font-size: 14px; text-align: left; color: #A0A0A0; font-weight: 300;">流量蓄水</th>
-            <th style="padding: 12px 16px; font-size: 14px; text-align: left; color: #A0A0A0; font-weight: 300;">沉浸式体验</th>
-            <th style="padding: 12px 16px; font-size: 14px; text-align: left; color: #A0A0A0; font-weight: 300;">情感变现</th>
+        <tr>
+            <th class="lbl">维度</th>
+            <th>流量蓄水</th>
+            <th>沉浸式体验</th>
+            <th>情感变现</th>
         </tr>
     </thead>
     <tbody>
-        <tr style="border-bottom: 1px solid #1f1f23;">
-            <td style="padding: 36px 0; font-size: 13px; font-weight: 300; color: #A0A0A0; vertical-align: top; text-transform: uppercase;">目标</td>
-            <td style="padding: 36px 16px; font-size: 13px; color: #A0A0A0; vertical-align: top; line-height: 1.75; font-weight: 300;">阻断单向流失，实现长尾流量的有效触达与资产沉淀。</td>
-            <td style="padding: 36px 16px; font-size: 13px; color: #A0A0A0; vertical-align: top; line-height: 1.75; font-weight: 300;">确立高并发干扰场景下的实时互动标准，保障观影沉浸感。</td>
-            <td style="padding: 36px 16px; font-size: 13px; color: #A0A0A0; vertical-align: top; line-height: 1.75; font-weight: 300;">消除付费防御，将商业行为转译为自然的社交情感宣泄。</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #1f1f23;">
-            <td style="padding: 36px 0; font-size: 13px; font-weight: 300; color: #A0A0A0; vertical-align: top; text-transform: uppercase;">策略</td>
-            <td style="padding: 36px 16px; font-size: 13px; color: #A0A0A0; vertical-align: top; line-height: 1.75; font-weight: 300;">高频触达与结构化聚合心智构建。</td>
-            <td style="padding: 36px 16px; font-size: 13px; color: #A0A0A0; vertical-align: top; line-height: 1.75; font-weight: 300;">智能视听降噪：动态调配渲染权重的自适应算法逻辑。</td>
-            <td style="padding: 36px 16px; font-size: 13px; color: #A0A0A0; vertical-align: top; line-height: 1.75; font-weight: 300;">即时反馈驱动：情感触发器与多模态反馈的深度绑定。</td>
+        <tr>
+            <td class="lbl" data-label="维度">目标</td>
+            <td data-label="流量蓄水">阻断单向流失，实现长尾流量的有效触达与资产沉淀。</td>
+            <td data-label="沉浸式体验">确立高并发干扰场景下的实时互动标准，保障观影沉浸感。</td>
+            <td data-label="情感变现">消除付费防御，将商业行为转译为自然的社交情感宣泄。</td>
         </tr>
         <tr>
-            <td style="padding: 36px 0; font-size: 13px; font-weight: 300; color: #A0A0A0; vertical-align: top; text-transform: uppercase;">手段</td>
-            <td style="padding: 36px 16px; font-size: 13px; color: #A0A0A0; vertical-align: top; line-height: 1.75; font-weight: 300;">播放页动态状态卡片、陪看中心聚合页。</td>
-            <td style="padding: 36px 16px; font-size: 13px; color: #A0A0A0; vertical-align: top; line-height: 1.75; font-weight: 300;">重构连麦布局架构、规范多人互动栅格系统。</td>
-            <td style="padding: 36px 16px; font-size: 13px; color: #A0A0A0; vertical-align: top; line-height: 1.75; font-weight: 300;">重构送礼快捷面板、轻量化情感交互组件。</td>
+            <td class="lbl" data-label="维度">策略</td>
+            <td data-label="流量蓄水">高频触达与结构化聚合心智构建。</td>
+            <td data-label="沉浸式体验">智能视听降噪：动态调配渲染权重的自适应算法逻辑。</td>
+            <td data-label="情感变现">即时反馈驱动：情感触发器与多模态反馈的深度绑定。</td>
+        </tr>
+        <tr class="hl">
+            <td class="lbl" data-label="维度">手段</td>
+            <td data-label="流量蓄水">播放页动态状态卡片、陪看中心聚合页。</td>
+            <td data-label="沉浸式体验">重构连麦布局架构、规范多人互动栅格系统。</td>
+            <td data-label="情感变现">重构送礼快捷面板、轻量化情感交互组件。</td>
         </tr>
     </tbody>
 </table>
+</div>
+<div class="dt-mobile">
+<div class="dt-mobile-col">
+<div class="dt-mobile-col-header">流量蓄水</div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">目标</span><p class="dt-mobile-col-desc">阻断单向流失，实现长尾流量的有效触达与资产沉淀。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">策略</span><p class="dt-mobile-col-desc">高频触达与结构化聚合心智构建。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">手段</span><p class="dt-mobile-col-desc">播放页动态状态卡片、陪看中心聚合页。</p></div>
+</div>
+<div class="dt-mobile-col">
+<div class="dt-mobile-col-header">沉浸式体验</div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">目标</span><p class="dt-mobile-col-desc">确立高并发干扰场景下的实时互动标准，保障观影沉浸感。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">策略</span><p class="dt-mobile-col-desc">智能视听降噪：动态调配渲染权重的自适应算法逻辑。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">手段</span><p class="dt-mobile-col-desc">重构连麦布局架构、规范多人互动栅格系统。</p></div>
+</div>
+<div class="dt-mobile-col">
+<div class="dt-mobile-col-header">情感变现</div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">目标</span><p class="dt-mobile-col-desc">消除付费防御，将商业行为转译为自然的社交情感宣泄。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">策略</span><p class="dt-mobile-col-desc">即时反馈驱动：情感触发器与多模态反馈的深度绑定。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">手段</span><p class="dt-mobile-col-desc">重构送礼快捷面板、轻量化情感交互组件。</p></div>
+</div>
 </div>`,
         },
         // ═══ P4 流量蓄水 ═══
@@ -443,7 +501,6 @@ export const projectData: Project[] = [
           html: `<style>
 .tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:300}
 .tx-p b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.funnel-row{flex-direction:column!important;gap:12px!important}}
 /* 蓄水漏斗 */
 .funnel-row{display:flex;gap:32px;align-items:stretch;margin:28px 0}
 .funnel-card{flex:1;background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;display:flex;flex-direction:column}
@@ -455,7 +512,7 @@ export const projectData: Project[] = [
 .funnel-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .funnel-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0;flex:1}
 .funnel-desc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.funnel-row{flex-direction:column!important;gap:24px!important}.funnel-card::after{right:50%;top:auto;bottom:-20px;transform:translateX(50%) rotate(90deg)}}
+@media(max-width:767px){.funnel-row{flex-direction:column!important;gap:40px!important}.funnel-card::after{right:50%;top:calc(100% + 20px);bottom:auto;transform:translate(50%,-50%) rotate(90deg)}}
 .image-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;padding:48px 20px;text-align:center;margin:16px 0;font-size:11px;color:#A0A0A0;font-family:system-ui,-apple-system,sans-serif;letter-spacing:0.05em;position:relative;overflow:hidden}
 .image-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .image-placeholder::after{content:'🖼';display:block;font-size:24px;margin-bottom:12px;opacity:.3;filter:grayscale(1)}
@@ -586,50 +643,55 @@ export const projectData: Project[] = [
           html: `<style>
 .tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:300}
 .tx-p b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.gap-row{flex-direction:column!important}.gap-card{flex-direction:column!important;gap:12px!important}}
-.gap-row{display:flex;gap:16px;align-items:stretch;margin:28px 0}
-.gap-card{flex:1;background:rgba(255,255,255,.01);border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-.gap-card:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
-.gap-label{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;margin-bottom:12px;font-family:monospace;letter-spacing:0.06em;font-weight:600}
-.gap-label.pain{background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
-.gap-label.solve{background:rgba(199,255,0,.06);color:#C7FF00;border:1px solid rgba(199,255,0,.12)}
-.gap-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px;display:block}
-.gap-card-desc{color:#A0A0A0;font-size:13px;line-height:1.7;font-weight:300;margin:0}
-.gap-card-desc b{color:#FFFFFF;font-weight:600}
-.image-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;padding:48px 20px;text-align:center;margin:16px 0;font-size:11px;color:#A0A0A0;font-family:system-ui,-apple-system,sans-serif;letter-spacing:0.05em;position:relative;overflow:hidden}
-.image-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.image-placeholder::after{content:'🖼';display:block;font-size:24px;margin-bottom:12px;opacity:.3;filter:grayscale(1)}
-.ba-breakthrough{background:linear-gradient(135deg,rgba(199,255,0,.02) 0%,rgba(199,255,0,.005) 100%);border:1px solid rgba(199,255,0,.08);border-left:3px solid #C7FF00;border-radius:4px;padding:24px 28px;margin-top:24px}
-.ba-breakthrough-label{font-family:monospace;font-size:11px;color:#C7FF00;letter-spacing:0.08em;margin-bottom:10px;display:block;font-weight:600}
-.ba-breakthrough-desc{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0;font-weight:300}
-.ba-breakthrough-desc b{color:#FFFFFF;font-weight:600}
+.entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:900px}
+.entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
+.entry-right{flex:0.8;display:flex;flex-direction:column;gap:16px;min-width:0}
+.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:9/19.5;max-height:480px}
+.entry-img-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.entry-img-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1}
+.principle-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);flex:1}
+.principle-card:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+.principle-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
+.principle-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.principle-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.principle-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
+.principle-card-desc b{color:#FFFFFF;font-weight:600}
+.card-arrow{display:flex;align-items:center;justify-content:center;color:#555555;font-size:16px;font-weight:300;padding:4px 0}
+@media(max-width:767px){.entry-split{flex-direction:column!important;gap:24px!important}.entry-left{flex-direction:column!important}}
 </style>
 <p class="tx-p">在明星陪看这一垂类场景中，直播间已不仅是内容的消费窗口，更是粉丝实时情感共鸣的社交场。然而，早期基于图文/语音的互动模式面临着显著的<b>体验断层</b>：互动载体与视频内容在视觉上是剥离的，且难以承载明星丰富的情绪表达，导致用户在阅读与观看之间频繁产生<b>心智割裂</b>，明星变为剧集视频的附属。</p>
 
-<div class="gap-row">
-<div class="gap-card">
-<span class="gap-label pain">体验断层</span>
-<span class="gap-card-title">视觉剥离</span>
-<p class="gap-card-desc">早期互动区与视频播放区<b>物理分离</b>，用户在弹幕/聊天与观影之间频繁切换注意力，产生严重的<b>心智割裂</b>。</p>
+<div class="entry-split">
+<div class="entry-left">
+<div class="entry-img-box">
+<span class="entry-img-label">视觉剥离示意</span>
 </div>
-<div class="gap-card">
-<span class="gap-label pain">体验断层</span>
-<span class="gap-card-title">情绪表达受限</span>
-<p class="gap-card-desc">纯图文/语音的互动载体<b>无法承载明星的丰富情绪</b>，削弱了"陪伴感"的核心价值，明星沦为视频的<b>"画外音"附属</b>。</p>
-</div>
-<div class="gap-card">
-<span class="gap-label solve">设计解法</span>
-<span class="gap-card-title">沉浸式融合</span>
-<p class="gap-card-desc">将互动层与视频层<b>深度融合</b>，通过画中画、表情回应气泡、实时情绪可视化等手段，让明星的陪伴从<b>"背景音"升维为"在场感"</b>。</p>
+<div class="entry-img-box">
+<span class="entry-img-label">沉浸式融合示意</span>
 </div>
 </div>
-
-<div class="ba-breakthrough">
-<span class="ba-breakthrough-label">设计洞察</span>
-<p class="ba-breakthrough-desc">沉浸式陪看的关键不在于功能的堆砌，而在于<b>"视觉连续性"</b>的建立。当粉丝的目光无需在聊天区和视频区之间反复跳转，当明星的情绪表达与剧集画面融为一体——此时的直播间才真正从<b>"伴随式社交"进化为"沉浸式陪看"</b>。</p>
+<div class="entry-right">
+<div class="principle-card">
+<div class="principle-card-title">体验断层</div>
+<p class="principle-card-desc">早期互动区与视频播放区<b>物理分离</b>，用户在弹幕/聊天与观影之间频繁切换注意力，产生严重的<b>心智割裂</b>。<br><br>同时，纯图文/语音的互动载体<b>无法承载明星的丰富情绪</b>，削弱了"陪伴感"的核心价值，明星沦为视频的<b>"画外音"附属</b>。</p>
 </div>
-
-<div class="image-placeholder">示意图：体验断层分析 — 从视觉剥离到沉浸式融合的交互重构</div>`,
+<div class="card-arrow">↓</div>
+<div class="principle-card">
+<div class="principle-card-title">沉浸式融合</div>
+<p class="principle-card-desc">将互动层与视频层<b>深度融合</b>，通过画中画、表情回应气泡、实时情绪可视化等手段，让明星的陪伴从<b>"背景音"升维为"在场感"</b>。</p>
+</div>
+</div>
+</div>`,
+        },
+        // ═══ P8 陪看布局重构1 ═══
+        {
+          heading: '陪看布局重构1：直播间页面结构分层治理',
+          body: '直播陪看界面分层治理：通过合理布局，建立动态图层架构（明星画面 > 影视视频 > 弹幕/礼物 > 挂件），明确明星陪看画面为直播间的主体。',
+        },
+        // ═══ P9 陪看布局重构2 ═══
+        {
+          heading: '陪看布局重构2：场景化动态平衡',
+          body: '交互避让机制：引入"动态避让算法"，确保互动内容在触发时能够智能规避核心视听区域，保障主体内容始终处于纯净状态。\n\n场景化信息治理：在回看场景中引入播控，并设计"4秒自动隐匿"的智能收纳逻辑，在用户无操作时，视觉焦点自动回归内容本身。在用户调节进度时展示进度缩略图并自动隐藏非必要的飘评与挂件，最大限度释放屏幕空间，聚焦用户的深度复盘心智。',
         },
       ],
     },
