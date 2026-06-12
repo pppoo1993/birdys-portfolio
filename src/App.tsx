@@ -29,6 +29,9 @@ export default function App() {
   const spotlightRef = useSpotlight()
 
   useEffect(() => {
+    // Initialize glow off-screen, move to cursor on first mouse move
+    document.documentElement.style.setProperty('--mx', '-999px')
+    document.documentElement.style.setProperty('--my', '-999px')
     const onMouseMove = (e: MouseEvent) => {
       document.documentElement.style.setProperty('--mx', `${e.clientX}px`)
       document.documentElement.style.setProperty('--my', `${e.clientY}px`)

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { motion } from 'framer-motion'
 import { introductionData } from '../../data/introduction'
 import type { BioSection } from '../../types'
 import ScrollReveal from '../animations/ScrollReveal'
@@ -194,13 +195,19 @@ export default function Introduction() {
       className="relative w-full text-white flex flex-col justify-center py-16 md:py-28 font-sans noise-overlay"
       style={{ minHeight: '100vh', background: 'radial-gradient(circle at 50% 40%, rgba(204, 255, 0, 0.04) 0%, rgba(0, 0, 0, 0) 60%), #0a0a0c' }}
     >
-      <div className="fixed inset-0 z-0 opacity-25 md:opacity-20 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50">
+      <motion.div
+        className="fixed inset-0 z-0 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50 overflow-hidden"
+        initial={{ opacity: 0, scale: 1.15, y: '10%', rotateX: -15 }}
+        animate={{ opacity: 0.22, scale: 0.85, y: '0%', rotateX: 0 }}
+        transition={{ duration: 2.5, ease: [0.25, 0.1, 0.25, 1] }}
+        style={{ transformOrigin: 'center top' }}
+      >
         <img
           src={import.meta.env.BASE_URL + 'images/hero-bg.jpg'}
           alt="code mesh background"
           className="w-full h-full object-cover"
         />
-      </div>
+      </motion.div>
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0a0a0c]/50 md:via-[#0a0a0c]/80 to-[#0a0a0c]" />
 
       <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center gap-5 md:gap-8 overflow-visible px-6 md:px-12">

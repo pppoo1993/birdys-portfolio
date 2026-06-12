@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
+import { motion } from 'framer-motion'
 import ProjectDetail from '../ui/ProjectDetail'
-import ScrollReveal from '../animations/ScrollReveal'
 import { projectData } from '../../data/projects'
 import type { Project } from '../../types'
 
@@ -112,13 +112,19 @@ export default function Projects() {
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <p className="heading-section mb-4 md:hidden">Projects</p>
 
-        <div className="flex flex-col gap-10 md:gap-14">
+        <div className="flex flex-col gap-10 md:gap-14" style={{ perspective: '1200px' }}>
           {projectData.map((project, i) => {
             const isHovered = activeIdx === i
             const isDimmed = activeIdx !== null && activeIdx !== i
 
             return (
-            <ScrollReveal key={project.id} delay={i * 0.05}>
+            <motion.div
+                key={project.id}
+                initial={{ opacity: 0, scale: 1.15, filter: 'blur(8px)', y: 50, rotateX: -15 }}
+                whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)', y: 0, rotateX: 0 }}
+                viewport={{ once: true, margin: '-30px' }}
+                transition={{ duration: 0.7, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
+              >
               <div
                 onClick={() => setSelectedProject(project)}
                 onMouseEnter={() => handleMouseEnter(i)}
@@ -153,7 +159,7 @@ export default function Projects() {
                         </h3>
                       </div>
                       {project.detail?.subtitle && (
-                        <p className="text-[15px] text-[#a1a1aa] font-semibold mb-2">
+                        <p className="text-[15px] text-[#a1a1aa] font-normal mb-2">
                           {project.detail.subtitle}
                         </p>
                       )}
@@ -247,14 +253,14 @@ export default function Projects() {
                             background: '#17151a',
                             border: isHovered ? '2px solid #3f3f46' : '2px solid #27272a',
                           }}>
-                          <div className="h-[100px] opacity-30" style={{ background: 'linear-gradient(to bottom, #3b0764, #16161a)' }} />
+                          <div className="h-[100px] opacity-30" style={{ background: 'linear-gradient(to bottom, #1a1a1e, #16161a)' }} />
                           <div className="px-2.5 -mt-10 space-y-1.5">
-                            <div className="h-[36px] bg-[rgba(236,72,153,0.08)] border border-[rgba(236,72,153,0.15)] rounded-md flex items-center px-2 gap-1.5">
-                              <div className="w-3 h-3 rounded-full bg-[#f43f5e] shrink-0" />
+                            <div className="h-[36px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center px-2 gap-1.5">
+                              <div className="w-3 h-3 rounded-full bg-[#C7FF00] shrink-0" />
                               <div className="flex-1 h-1.5 bg-[rgba(255,255,255,0.06)] rounded" />
                             </div>
                             <div className="h-[36px] bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center px-2 gap-1.5">
-                              <div className="w-3 h-3 rounded-full bg-[#a855f7] shrink-0" />
+                              <div className="w-3 h-3 rounded-full bg-[#71717a] shrink-0" />
                               <div className="flex-1 h-1.5 bg-[rgba(255,255,255,0.06)] rounded" />
                             </div>
                             <div className="h-[40px] flex items-center justify-center gap-2 mt-1">
@@ -301,7 +307,7 @@ export default function Projects() {
                           <div className="h-[18px] bg-[#09090b] flex justify-center items-center">
                             <div className="w-[35px] h-[4px] bg-[#222] rounded-sm" />
                           </div>
-                          <div className="h-[100px] opacity-30" style={{ background: 'linear-gradient(to bottom, #064e3b, #16161a)' }} />
+                          <div className="h-[100px] opacity-30" style={{ background: 'linear-gradient(to bottom, #1a1a1e, #16161a)' }} />
                           <div className="px-3 -mt-10">
                             <div className="flex items-end gap-0.5 h-[50px] justify-center">
                               {[6,12,8,16,10,18,7,14,9,11,15,8].map((h,i) => (
@@ -309,10 +315,10 @@ export default function Projects() {
                               ))}
                             </div>
                             <div className="grid grid-cols-2 gap-1 mt-2">
-                              <div className="h-[32px] bg-[rgba(16,185,129,0.06)] border border-[rgba(16,185,129,0.12)] rounded-md flex items-center justify-center text-[7px] text-[#34d399]">高能</div>
-                              <div className="h-[32px] bg-[rgba(16,185,129,0.06)] border border-[rgba(16,185,129,0.12)] rounded-md flex items-center justify-center text-[7px] text-[#34d399]">愉悦</div>
-                              <div className="h-[32px] bg-[rgba(16,185,129,0.06)] border border-[rgba(16,185,129,0.12)] rounded-md flex items-center justify-center text-[7px] text-[#34d399]">平静</div>
-                              <div className="h-[32px] bg-[rgba(16,185,129,0.06)] border border-[rgba(16,185,129,0.12)] rounded-md flex items-center justify-center text-[7px] text-[#34d399]">忧郁</div>
+                              <div className="h-[32px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center justify-center text-[7px] text-[#a1a1aa]">高能</div>
+                              <div className="h-[32px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center justify-center text-[7px] text-[#a1a1aa]">愉悦</div>
+                              <div className="h-[32px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center justify-center text-[7px] text-[#a1a1aa]">平静</div>
+                              <div className="h-[32px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center justify-center text-[7px] text-[#a1a1aa]">忧郁</div>
                             </div>
                           </div>
                           <div className="mx-3 mt-1.5 h-8 rounded-2xl flex items-center justify-center"
@@ -325,7 +331,7 @@ export default function Projects() {
                   </div>
                 </div>
               </div>
-            </ScrollReveal>
+            </motion.div>
             )
           })}
         </div>

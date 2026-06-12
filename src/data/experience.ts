@@ -22,7 +22,7 @@ export const experienceData: ExperienceEntry[] = [
   },
   {
     id: 'job-3',
-    company: '菜鸟网络',
+    company: '全速创意设计',
     role: '资深用户体验设计师',
     startDate: '2020-05',
     endDate: '2021-08',
