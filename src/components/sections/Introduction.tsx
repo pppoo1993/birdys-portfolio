@@ -9,7 +9,7 @@ function SplitRevealCard({ section }: { section: BioSection }) {
   const [splitPct, setSplitPct] = useState<number | null>(null)
   const [closing, setClosing] = useState(false)
   const [locked, setLocked] = useState(false)
-  const closeTimer = useRef<ReturnType<typeof setTimeout>>()
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const isActive = splitPct !== null
   const hasImage = !!section.image
 

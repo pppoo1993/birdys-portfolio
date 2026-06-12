@@ -48,7 +48,19 @@
       "Bash(sed -n '115,119p' src/data/projects.ts)",
       "Bash(pkill -f \"vite\")",
       "Bash(git checkout *)",
-      "Bash(grep -v \"^--$\")"
+      "Bash(grep -v \"^--$\")",
+      "mcp__ide__executeCode",
+      "Bash(awk NR>=785 && NR<=790 {printf \"L%d: [%s]\\\\n\", NR, $0} *)",
+      "Bash(awk NR==752 {printf \"[%s]\\\\n\", $0} *)",
+      "Bash(awk *)",
+      "Bash(grep -n '`')",
+      "Bash(grep -n \"html: \\\\`<style>\" /Users/birdy/Documents/birdys-portfolio/src/data/projects.ts)",
+      "Bash(grep -n \"^    },$\" /Users/birdy/Documents/birdys-portfolio/src/data/projects.ts)",
+      "Bash(identify \"/Users/birdy/Documents/birdys-portfolio/public/images/头像.png\")",
+      "Bash(sips -s format png \"/Users/birdy/Documents/birdys-portfolio/public/images/头像.png\" --out \"/Users/birdy/Documents/birdys-portfolio/public/images/头像.png\")",
+      "Bash(sips -z 320 320 \"/Users/birdy/Documents/birdys-portfolio/public/images/头像.png\" --out \"/Users/birdy/Documents/birdys-portfolio/public/images/头像.png\")",
+      "Bash(sips -z 400 400 \"public/images/头像.png\" --out \"public/images/头像.png\")",
+      "Bash(git fetch *)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"
