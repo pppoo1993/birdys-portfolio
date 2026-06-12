@@ -91,10 +91,10 @@ function SplitRevealCard({ section }: { section: BioSection }) {
           transition: isMobile ? 'opacity 0.35s ease' : undefined,
         }}
       >
-        <h4 className="text-zinc-200 font-medium text-base mb-2 tracking-wide flex items-center gap-2">
+        <h4 className="text-zinc-200 font-semibold text-base mb-2 tracking-wide flex items-center gap-2">
           <span className="font-mono text-sm tracking-[0.05em]" style={{ color: '#ccff00' }}>[About Me {section.number}]</span> {section.heading}
         </h4>
-        <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
+        <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-normal">
           {section.body}
         </p>
       </div>
@@ -205,19 +205,19 @@ export default function Introduction() {
 
       <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center gap-5 md:gap-8 overflow-visible px-6 md:px-12">
         {/* 1. Title */}
-        <h1 className="text-4xl md:text-5xl font-mono font-bold tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
           {introductionData.name}
         </h1>
 
         {/* 2. Subtitle */}
-        <p className="text-[11px] md:text-sm font-mono text-accent tracking-wide md:tracking-widest uppercase">
+        <p className="text-[11px] md:text-sm text-accent tracking-wide md:tracking-widest uppercase font-semibold">
           {introductionData.title}
         </p>
 
         {/* 3. Avatar — borderless, mirrored, parallax, plus-lighter blend for seamless bg fusion */}
         <div
           ref={avatarRef}
-          className="avatar-parallax group w-60 h-60 rounded-2xl overflow-hidden flex-shrink-0"
+          className="avatar-parallax group w-48 md:w-60 h-48 md:h-60 rounded-2xl overflow-hidden flex-shrink-0"
           style={{ isolation: 'isolate' }}
         >
           <img
@@ -233,10 +233,9 @@ export default function Introduction() {
         </div>
 
         {/* 4. Typewriter — animated on all devices, overlaps avatar slightly */}
-        <div className="pb-2 md:pb-0 -mt-4 md:-mt-6 relative z-10">
+        <div className="pb-0 -mt-4 md:-mt-6 relative z-10">
           <h2
-            className="text-2xl md:text-4xl font-semibold tracking-wide leading-normal md:leading-tight"
-            style={{ background: 'linear-gradient(to bottom, #ffffff 30%, #a1a1aa 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+            className="text-3xl md:text-4xl font-semibold tracking-wide leading-normal md:leading-tight text-white"
           >
             {(() => {
               const displayText = typed || introductionData.quote
@@ -248,17 +247,23 @@ export default function Introduction() {
               const cursor = <span className="animate-cursor-blink relative -top-1 text-xl md:text-3xl" style={{ color: '#ccff00', WebkitTextFillColor: '#ccff00' }}>|</span>
               const stillOnLine1 = displayText.length <= commaIdx + 1
               return <>
-                {beforeComma}{stillOnLine1 && cursor}
-                <br className="md:hidden" />
-                {' '}
-                {afterComma}{!stillOnLine1 && cursor}
+                <span className="md:hidden">
+                  {beforeComma}{stillOnLine1 && cursor}
+                  <br />
+                  {afterComma}{!stillOnLine1 && cursor}
+                </span>
+                <span className="hidden md:inline">
+                  {beforeComma}{stillOnLine1 && cursor}
+                  {' '}
+                  {afterComma}{!stillOnLine1 && cursor}
+                </span>
               </>
             })()}
           </h2>
         </div>
 
         {/* 5. Cards — aligned with title edges, wider gap, translucent bg */}
-        <div className="hero-intro-grid gap-6 md:gap-6 w-full border-t border-zinc-800/60 pt-8 md:pt-10">
+        <div className="hero-intro-grid gap-6 md:gap-6 w-full pt-2 md:pt-4">
           {introductionData.bioSections.map((section) => (
             <ScrollReveal key={section.number}>
               <SplitRevealCard section={section} />

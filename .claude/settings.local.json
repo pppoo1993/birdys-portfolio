@@ -60,7 +60,8 @@
       "Bash(sips -s format png \"/Users/birdy/Documents/birdys-portfolio/public/images/头像.png\" --out \"/Users/birdy/Documents/birdys-portfolio/public/images/头像.png\")",
       "Bash(sips -z 320 320 \"/Users/birdy/Documents/birdys-portfolio/public/images/头像.png\" --out \"/Users/birdy/Documents/birdys-portfolio/public/images/头像.png\")",
       "Bash(sips -z 400 400 \"public/images/头像.png\" --out \"public/images/头像.png\")",
-      "Bash(git fetch *)"
+      "Bash(git fetch *)",
+      "Read(//private/var/folders/m3/0vv8v__s75d2d6vl2cyj6xk40000gn/T/TemporaryItems/NSIRD_screencaptureui_hNUAdj/**)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"
