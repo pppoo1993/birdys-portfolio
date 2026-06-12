@@ -20,6 +20,9 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Global scrollbar: black track, yellow thumb */
@@ -317,18 +320,9 @@ body {
   animation: blink 0.3s step-end infinite;
 }
 
-/* Avatar parallax & pulse */
+/* Avatar parallax */
 .avatar-parallax {
-  will-change: transform, box-shadow;
-  transition: box-shadow 0.4s ease;
-}
-.avatar-parallax:hover {
-  box-shadow: 0 0 25px rgba(204, 255, 0, 0.25);
-  animation: avatar-pulse 2s ease-in-out infinite;
-}
-@keyframes avatar-pulse {
-  0%, 100% { box-shadow: 0 0 25px rgba(204, 255, 0, 0.2); }
-  50% { box-shadow: 0 0 35px rgba(204, 255, 0, 0.35); }
+  will-change: transform;
 }
 
 @media (max-width: 1023px) {

@@ -181,30 +181,28 @@ export default function Introduction() {
           {introductionData.title}
         </p>
 
-        {/* 3. Avatar — w-40 h-40, mirrored, subtle border, parallax + pulse */}
+        {/* 3. Avatar — borderless, mirrored, parallax, plus-lighter blend for seamless bg fusion */}
         <div
           ref={avatarRef}
-          className="avatar-parallax w-40 h-40 rounded-2xl overflow-hidden border border-white/20 flex-shrink-0 bg-[#0a0a0c] transition-all duration-500 hover:shadow-[0_0_32px_rgba(204,255,0,0.12)] hover:border-white/30"
+          className="avatar-parallax group w-60 h-60 rounded-2xl overflow-hidden flex-shrink-0"
+          style={{ isolation: 'isolate' }}
         >
           <img
             src={import.meta.env.BASE_URL + introductionData.avatarPath.replace(/^\//, '')}
             alt="Birdy"
-            className="w-full h-full object-cover grayscale contrast-125 -scale-x-100 pointer-events-none"
+            className="w-full h-full object-cover pointer-events-none"
+            style={{
+              mixBlendMode: 'plus-lighter',
+              filter: 'contrast(1.08) brightness(0.95)',
+              transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+            }}
           />
         </div>
 
-        {/* 4. Typewriter — static text on mobile, animated on desktop */}
-        <div className="min-h-[4.5rem] md:min-h-0 pb-2 md:pb-0">
-          {/* Mobile: static text */}
+        {/* 4. Typewriter — animated on all devices, overlaps avatar slightly */}
+        <div className="pb-2 md:pb-0 -mt-8 md:-mt-12 relative z-10">
           <h2
-            className="md:hidden text-2xl font-semibold tracking-wide leading-normal -mt-1"
-            style={{ background: 'linear-gradient(to bottom, #ffffff 30%, #a1a1aa 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-          >
-            以系统化思维，<br />探索数字体验边界
-          </h2>
-          {/* Desktop: typewriter */}
-          <h2
-            className="hidden md:block text-4xl font-semibold tracking-wide leading-tight -mt-2 whitespace-normal"
+            className="text-2xl md:text-4xl font-semibold tracking-wide leading-normal md:leading-tight"
             style={{ background: 'linear-gradient(to bottom, #ffffff 30%, #a1a1aa 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
           >
             {(() => {
@@ -214,13 +212,13 @@ export default function Introduction() {
               const afterComma = displayText.length > commaIdx + 1
                 ? displayText.slice(commaIdx + 1)
                 : ' '
-              const cursor = <span className="animate-cursor-blink relative -top-1 text-xl md:text-2xl" style={{ color: '#ccff00', WebkitTextFillColor: '#ccff00' }}>|</span>
+              const cursor = <span className="animate-cursor-blink relative -top-1 text-xl md:text-3xl" style={{ color: '#ccff00', WebkitTextFillColor: '#ccff00' }}>|</span>
               const stillOnLine1 = displayText.length <= commaIdx + 1
               return <>
-                <span className="whitespace-nowrap">{beforeComma}{stillOnLine1 && cursor}</span>
-                <br className="hidden" />
+                {beforeComma}{stillOnLine1 && cursor}
+                <br className="md:hidden" />
                 {' '}
-                <span className="whitespace-nowrap">{afterComma}{!stillOnLine1 && cursor}</span>
+                {afterComma}{!stillOnLine1 && cursor}
               </>
             })()}
           </h2>
