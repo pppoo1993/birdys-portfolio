@@ -13,6 +13,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeIndex, setActiveIndex] = useState(0)
   const [previewSrc, setPreviewSrc] = useState<string | null>(null)
+  const [previewHtml, setPreviewHtml] = useState<string | null>(null)
   const scrollingLock = useRef(false)
   const activeIndexRef = useRef(0)
 
@@ -275,7 +276,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               />
                             )}
                             {section.html && (
-                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; if (t.tagName === "IMG") setPreviewSrc((t as HTMLImageElement).src) }} className="[&_img]:cursor-pointer" />
+                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { setPreviewHtml(el.outerHTML) } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                             )}
                           </div>
                           {/* Tech tags — align to bottom */}
@@ -305,7 +306,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
 
                         {/* HTML content */}
                         {section.html && (
-                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; if (t.tagName === "IMG") setPreviewSrc((t as HTMLImageElement).src) }} className="[&_img]:cursor-pointer" />
+                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { setPreviewHtml(el.outerHTML) } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                         )}
                       </>
                     )}
@@ -373,19 +374,27 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
         </motion.div>
       )}
     </AnimatePresence>
-    {/* ════ Image Preview Overlay ════ */}
-    {previewSrc && (
+    {/* ════ Unified Preview Overlay ════ */}
+    {(previewSrc || previewHtml) && (
       <div
         className="fixed inset-0 z-[200] bg-black/80 backdrop-blur-md flex items-center justify-center cursor-pointer"
-        onClick={() => setPreviewSrc(null)}
+        onClick={() => { setPreviewSrc(null); setPreviewHtml(null) }}
       >
-        <img
-          src={previewSrc}
-          alt="预览"
-          className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-[0_0_60px_rgba(0,0,0,0.8)]"
-        />
+        {previewSrc ? (
+          <img
+            src={previewSrc}
+            alt="预览"
+            className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-[0_0_60px_rgba(0,0,0,0.8)]"
+          />
+        ) : (
+          <div
+            className="rounded-lg shadow-[0_0_60px_rgba(0,0,0,0.8)] overflow-hidden"
+            style={{ width: 'min(50vw, 360px)', maxHeight: '90vh', aspectRatio: '1/2.168' }}
+            dangerouslySetInnerHTML={{ __html: (previewHtml || '').replace(/max-height:[^;"]+[;"]/g, '').replace(/max-width:[^;"]+[;"]/g, '').replace(/width:[^;"]+[;"]/g, 'width:100%!important;') }}
+          />
+        )}
         <button
-          onClick={() => setPreviewSrc(null)}
+          onClick={() => { setPreviewSrc(null); setPreviewHtml(null) }}
           className="absolute top-6 right-6 group flex items-center justify-center w-8 h-8 border border-zinc-800 hover:border-accent rounded-lg transition-all duration-300 bg-zinc-900/50"
           aria-label="关闭"
         >

@@ -250,10 +250,28 @@ export const projectData: Project[] = [
         {
           heading: '创意实验：换台词',
           body: '以热门影视 IP 的经典名场面为载体，通过低门槛的交互，让用户能够快速接入生产链路。无论是经典的对白解构，还是流行语的趣味梗植入，「换台词」打破了专业创作的围墙，让高光时刻不再高不可攀，真正实现了从内容消费到互动产出的高效转化。',
-          html: `<style>
-.qt-flow-wrapper{width:100%}.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}.qt-flow-row{display:flex;align-items:flex-start;justify-content:center;gap:12px}.qt-node{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1}.qt-screen-box{width:100%;box-sizing:border-box;height:280px;background:#141416;border:1px solid #222226;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}.qt-operator{font-size:20px;color:#C7FF00;margin-top:130px;flex-shrink:0}@media(max-width:767px){.qt-flow-row{flex-wrap:wrap!important}.qt-operator{margin-top:0;transform:rotate(90deg)}.qt-screen-box{height:160px}}
-</style>
-<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div><div class="qt-flow-row"><div class="qt-node"><div class="qt-screen-box">[原始名场面界面]</div><div class="qt-node-text"><b>即兴微调</b>点击台词直接编辑，降低创作心理门槛。</div></div><div class="qt-operator">➔</div><div class="qt-node"><div class="qt-screen-box">[场景化主题标签页]</div><div class="qt-node-text"><b>场景化启发</b>点击标签，快速接入创作方向。</div></div><div class="qt-operator">➔</div><div class="qt-node"><div class="qt-screen-box">[半浮层对话框]</div><div class="qt-node-text"><b>AI 对话式扩展</b>自然语言生成，多版本方案沉淀。</div></div><div class="qt-operator">➔</div><div class="qt-node"><div class="qt-screen-box">[新台词视频预览]</div><div class="qt-node-text"><b>创作资产沉淀</b>每一次尝试都可见、可复用。</div></div></div>`,
+                    html: `<style>
+	.qt-chart{max-width:900px;margin:0 auto}
+	.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}
+	.qt-flow-row{display:flex;align-items:flex-start;gap:28px;margin:0}
+	.qt-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
+	.qt-screen-box{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+	.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
+	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:190px}
+	@media(max-width:767px){.qt-chart{max-width:100%}.qt-operator{transform:rotate(90deg);margin-top:0}}
+	</style>
+	<div class="qt-chart">
+	<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div>
+	<div class="qt-flow-row">
+	<div class="qt-node"><div data-preview class="qt-screen-box">[原始名场面界面]</div><div class="qt-node-text"><b>即兴微调</b>点击台词直接编辑，降低创作心理门槛。</div></div>
+	<div class="qt-operator">→</div>
+	<div class="qt-node"><div data-preview class="qt-screen-box">[场景化主题标签页]</div><div class="qt-node-text"><b>场景化启发</b>点击标签，快速接入创作方向。</div></div>
+	<div class="qt-operator">→</div>
+	<div class="qt-node"><div data-preview class="qt-screen-box">[半浮层对话框]</div><div class="qt-node-text"><b>AI 对话式扩展</b>自然语言生成，多版本方案沉淀。</div></div>
+	<div class="qt-operator">→</div>
+	<div class="qt-node"><div data-preview class="qt-screen-box">[新台词视频预览]</div><div class="qt-node-text"><b>创作资产沉淀</b>每一次尝试都可见、可复用。</div></div>
+	</div>
+	</div>`,
         },
         {
           heading: '5.4 故事接龙：叙事共创与渐进式创作',
@@ -540,7 +558,7 @@ export const projectData: Project[] = [
 .entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:900px}
 .entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
 .entry-right{flex:0.8;display:flex;flex-direction:column;gap:16px;min-width:0}
-.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:9/19.5;max-height:480px}
+.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168;max-height:480px}
 .entry-img-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .entry-img-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1}
 .principle-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);flex:1}
@@ -549,15 +567,15 @@ export const projectData: Project[] = [
 .principle-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .principle-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .principle-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
-@media(max-width:767px){.entry-split{flex-direction:column!important;gap:24px!important}.entry-left{flex-direction:column!important}}</style>
+@media(max-width:767px){.entry-split{flex-direction:column!important;gap:24px!important}.entry-left{flex:0 0 auto!important;width:100%}.entry-right{flex:0 0 auto!important;width:100%}.entry-img-box{max-height:360px}}</style>
 <p class="tx-p">依托核心播放场景，通过<b>动态状态卡片</b>构建即时交互触点。无论是"预约提醒"还是"直播中进入"，设计始终保持<b>低干扰、高转化</b>的策略，在不打断用户观影流的前提下，引导高意向粉丝通过便捷入口快速切入陪看现场，完成从视频消费到直播互动的行为转化。</p>
 
 <div class="entry-split">
 <div class="entry-left">
-<div class="entry-img-box">
+<div data-preview class="entry-img-box">
 <span class="entry-img-label">直播中状态</span>
 </div>
-<div class="entry-img-box">
+<div data-preview class="entry-img-box">
 <span class="entry-img-label">预约态</span>
 </div>
 </div>
@@ -584,41 +602,32 @@ export const projectData: Project[] = [
           html: `<style>
 .tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:300}
 .tx-p b{color:#FFFFFF;font-weight:600}
-.agg-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:900px}
-.agg-left{flex:1;display:flex;gap:12px;min-width:0}
-.agg-right{flex:1;display:flex;flex-direction:column;gap:16px;min-width:0}
-.agg-img{flex:1;min-width:0;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.agg-img::after{content:'';display:block;padding-bottom:216.67%}
-.agg-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.agg-img-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1}
-.agg-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);flex:1}
-.agg-card:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
-.agg-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.agg-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.agg-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.agg-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
-.agg-card-desc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.agg-split{flex-direction:column!important;gap:24px!important}}
+.agg-chart{max-width:600px;margin:0 auto}
+.agg-row{display:flex;gap:24px;align-items:flex-start;margin:28px 0}
+.agg-col{flex:1;display:flex;flex-direction:column;gap:10px;min-width:0;align-items:center}
+.agg-col-img{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.agg-col-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.agg-col-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
+.agg-col-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5;width:100%}
+.agg-col-text strong{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
+.agg-col-text b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.agg-chart{max-width:100%}}
 </style>
 <p class="tx-p">我们设计了「明星陪看」聚合阵地，旨在沉淀流量并延长内容价值周期：</p>
 
-<div class="agg-split">
-<div class="agg-left">
-<div class="agg-img"><span class="agg-img-label">聚合页首屏 — 直播/预约动态</span></div>
-<div class="agg-img"><span class="agg-img-label">陪看榜单界面</span></div>
-<div class="agg-img"><span class="agg-img-label">回看合集界面</span></div>
+<div class="agg-chart">
+<div class="agg-row">
+<div class="agg-col">
+<div data-preview class="agg-col-img"><span class="agg-col-img-label">聚合页首屏</span></div>
+<div class="agg-col-text"><strong>直播 / 预约动态</strong>作为流量转化的实时枢纽，通过清晰的<b>预约⇄直播中⇄回看</b>状态切换机制，建立用户对明星陪看的时间心智。</div>
 </div>
-<div class="agg-right">
-<div class="agg-card">
-<div class="agg-card-title">直播 / 预约动态</div>
-<p class="agg-card-desc">作为流量转化的实时枢纽，通过清晰的<b>预约⇄直播中⇄回看</b>状态切换机制，建立用户对明星陪看的时间心智。</p>
+<div class="agg-col">
+<div data-preview class="agg-col-img"><span class="agg-col-img-label">陪看榜单界面</span></div>
+<div class="agg-col-text"><strong>陪看榜单</strong>引入<b>社群竞技感</b>，通过实时互动数据可视化——贡献榜、送礼榜、互动热力值——激发粉丝参与热度与集体荣誉感。</div>
 </div>
-<div class="agg-card">
-<div class="agg-card-title">陪看榜单</div>
-<p class="agg-card-desc">引入<b>社群竞技感</b>，通过实时互动数据可视化——贡献榜、送礼榜、互动热力值——激发粉丝参与热度与集体荣誉感。</p>
-</div>
-<div class="agg-card">
-<div class="agg-card-title">回看合集</div>
-<p class="agg-card-desc">不仅是内容的二次消费，更是将单次直播转化为<b>长效互动资产</b>，实现剧集与直播流量的<b>跨周期复利</b>，破解"看后即走"的留存困境。</p>
+<div class="agg-col">
+<div data-preview class="agg-col-img"><span class="agg-col-img-label">回看合集界面</span></div>
+<div class="agg-col-text"><strong>回看合集</strong>不仅是内容的二次消费，更是将单次直播转化为<b>长效互动资产</b>，实现剧集与直播流量的<b>跨周期复利</b>，破解"看后即走"的留存困境。</div>
 </div>
 </div>
 </div>`,
@@ -633,39 +642,38 @@ export const projectData: Project[] = [
 .entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:900px}
 .entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
 .entry-right{flex:0.8;display:flex;flex-direction:column;gap:16px;min-width:0}
-.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:9/19.5;max-height:480px}
+.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168;max-height:480px}
 .entry-img-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .entry-img-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1}
-.principle-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);flex:1}
-.principle-card:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
-.principle-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.principle-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.principle-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.principle-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
-.principle-card-desc b{color:#FFFFFF;font-weight:600}
-.card-arrow{display:flex;align-items:center;justify-content:center;color:#555555;font-size:16px;font-weight:300;padding:4px 0}
-@media(max-width:767px){.entry-split{flex-direction:column!important;gap:24px!important}.entry-left{flex-direction:column!important}}
+.p7-card{background:transparent;border:none;padding:0 0 0 30px;position:relative}
+.p7-card::after{content:'';position:absolute;left:15px;top:0;bottom:0;width:1px;background:#222226;z-index:0}
+.p7-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px;display:flex;align-items:center;gap:8px;position:relative}
+.p7-card-title::before{content:'';width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a;flex-shrink:0;position:absolute;left:-22px;top:50%;transform:translateY(-50%);z-index:2}
+.p7-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
+.p7-card-desc b{color:#FFFFFF;font-weight:600}
+.card-arrow{display:none}
+@media(max-width:767px){.p7-card{padding:0 0 0 22px}.p7-card::after{left:15px}.p7-card-title::before{left:-14px}}
 </style>
 <p class="tx-p">在明星陪看这一垂类场景中，直播间已不仅是内容的消费窗口，更是粉丝实时情感共鸣的社交场。然而，早期基于图文/语音的互动模式面临着显著的<b>体验断层</b>：互动载体与视频内容在视觉上是剥离的，且难以承载明星丰富的情绪表达，导致用户在阅读与观看之间频繁产生<b>心智割裂</b>，明星变为剧集视频的附属。</p>
 
 <div class="entry-split">
 <div class="entry-left">
-<div class="entry-img-box">
+<div data-preview class="entry-img-box">
 <span class="entry-img-label">视觉剥离示意</span>
 </div>
-<div class="entry-img-box">
+<div data-preview class="entry-img-box">
 <span class="entry-img-label">沉浸式融合示意</span>
 </div>
 </div>
 <div class="entry-right">
-<div class="principle-card">
-<div class="principle-card-title">体验断层</div>
-<p class="principle-card-desc">早期互动区与视频播放区<b>物理分离</b>，用户在弹幕/聊天与观影之间频繁切换注意力，产生严重的<b>心智割裂</b>。<br><br>同时，纯图文/语音的互动载体<b>无法承载明星的丰富情绪</b>，削弱了"陪伴感"的核心价值，明星沦为视频的<b>"画外音"附属</b>。</p>
+<div class="p7-card">
+<div class="p7-card-title">体验断层</div>
+<p class="p7-card-desc">早期互动区与视频播放区<b>物理分离</b>，用户在弹幕/聊天与观影之间频繁切换注意力，产生严重的<b>心智割裂</b>。<br><br>同时，纯图文/语音的互动载体<b>无法承载明星的丰富情绪</b>，削弱了"陪伴感"的核心价值，明星沦为视频的<b>"画外音"附属</b>。</p>
 </div>
 <div class="card-arrow">↓</div>
-<div class="principle-card">
-<div class="principle-card-title">沉浸式融合</div>
-<p class="principle-card-desc">将互动层与视频层<b>深度融合</b>，通过画中画、表情回应气泡、实时情绪可视化等手段，让明星的陪伴从<b>"背景音"升维为"在场感"</b>。</p>
+<div class="p7-card">
+<div class="p7-card-title">沉浸式融合</div>
+<p class="p7-card-desc">将互动层与视频层<b>深度融合</b>，通过画中画、表情回应气泡、实时情绪可视化等手段，让明星的陪伴从<b>"背景音"升维为"在场感"</b>。</p>
 </div>
 </div>
 </div>`,
@@ -719,33 +727,35 @@ export const projectData: Project[] = [
           heading: '基础送礼链路：极简支付体验',
           body: '商业行为应是内容消费的顺滑延伸，我们通过资产集成与路径压缩，实现支付环节的"零感知"切换。',
           html: `<style>
-.p11-row{display:flex;gap:32px;align-items:flex-start;margin:28px 0}
+.p11-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content}
 .p11-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-.p11-col:first-child{width:180px;flex-shrink:0}
-.p11-col:last-child{width:372px;flex-shrink:0}
+.p11-col{width:372px;flex-shrink:0}
 .p11-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .p11-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .p11-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .p11-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
 .p11-col-desc b{color:#FFFFFF;font-weight:600}
-.p11-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:9/19.5;width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.p11-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .p11-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 .p11-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
 .p11-img-row{display:flex;gap:12px}.p11-img-row .p11-img{width:180px;flex-shrink:0}
-@media(max-width:767px){.p11-row{flex-direction:column!important}.p11-col:first-child,.p11-col:last-child{width:100%!important}.p11-img{width:100%!important;max-width:180px}.p11-img-row .p11-img{width:100%!important;max-width:180px}}
+@media(max-width:767px){.p11-row{flex-direction:column!important}.p11-col{width:100%!important}.p11-img{width:100%!important;max-width:180px}.p11-img-row .p11-img{width:100%!important;max-width:180px}}
 </style>
 <div class="p11-row">
 <div class="p11-col">
 <div class="p11-col-title">资产流通体系</div>
 <p class="p11-col-desc">深度整合<b>奇点支付与VIP积分抵扣</b>，打通会员权益，为用户提供低门槛的参与路径。</p>
-<div class="p11-img"><span class="p11-img-label">奇点支付与会员抵扣占位图</span></div>
+<div class="p11-img-row">
+<div data-preview class="p11-img"><span class="p11-img-label">奇点支付入口</span></div>
+<div data-preview class="p11-img"><span class="p11-img-label">会员抵扣页</span></div>
+</div>
 </div>
 <div class="p11-col">
 <div class="p11-col-title">送礼效率优化</div>
 <p class="p11-col-desc">通过<b>入口重构与连击机制</b>，将复杂的支付决策转化为高频互动的"感官节奏"，实现从动作触发到情感回馈的秒级响应。</p>
 <div class="p11-img-row">
-<div class="p11-img"><span class="p11-img-label">快捷送礼示意图</span></div>
-<div class="p11-img"><span class="p11-img-label">连击送礼示意图</span></div>
+<div data-preview class="p11-img"><span class="p11-img-label">快捷送礼示意图</span></div>
+<div data-preview class="p11-img"><span class="p11-img-label">连击送礼示意图</span></div>
 </div>
 </div>
 </div>`,
@@ -756,82 +766,107 @@ export const projectData: Project[] = [
           body: '送礼玩法游戏化，将付费动作转译为具有惊喜感的沉浸式社交体验。',
           html: `<style>
 .p12-subtitle{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:24px 0 8px}
+.p12-chart{max-width:660px;margin:0 auto}
 .p12-subtitle::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .p12-subtitle::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .p12-subdesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0 0 24px}
-.p12-flow{display:flex;gap:16px;align-items:flex-start;margin:0}
-.p12-flow-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}
-.p12-flow-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:9/19.5;max-height:280px;width:100%;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.p12-flow{display:flex;gap:28px;align-items:flex-start;margin:0}
+.p12-flow-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.p12-flow-img{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .p12-flow-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 .p12-flow-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-.p12-flow-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0;display:block}
-.p12-flow-desc{color:#A0A0A0;font-size:12px;line-height:1.6;font-weight:300;margin:0;text-align:center}
-.p12-flow-arrow{display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding-top:120px}
-@media(max-width:767px){.p12-flow{flex-direction:column!important;align-items:center}.p12-flow-arrow{transform:rotate(90deg);padding-top:0}}
+.p12-flow-title{display:none}
+.p12-flow-desc{display:none}
+.p12-flow-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5;width:100%}
+.p12-flow-text strong{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
+.p12-flow-text b{color:#FFFFFF;font-weight:600}
+.p12-flow-arrow{display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:170px}
+@media(max-width:767px){.p12-chart{max-width:100%}.p12-flow-arrow{transform:rotate(90deg);margin-top:0}}
 </style>
+<div class="p12-chart">
 <div class="p12-subtitle">送礼玩法通用模板</div>
 <p class="p12-subdesc">从"孤立功能"到"组件矩阵"，通过构建标准化的交互模组，实现多元化商业玩法的高效迭代。</p>
 <div class="p12-flow">
 <div class="p12-flow-item">
-<div class="p12-flow-img"><span class="p12-flow-label">送礼入口占位图</span></div>
-<span class="p12-flow-title">送礼入口</span>
-<p class="p12-flow-desc">智能排布，最大化露出</p>
+<div data-preview class="p12-flow-img"><span class="p12-flow-label">送礼入口占位图</span></div>
+<div class="p12-flow-text"><strong>送礼入口</strong>智能排布，最大化露出</div>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div class="p12-flow-img"><span class="p12-flow-label">承接浮层占位图</span></div>
-<span class="p12-flow-title">承接浮层</span>
-<p class="p12-flow-desc">沉浸式情感激励</p>
+<div data-preview class="p12-flow-img"><span class="p12-flow-label">承接浮层占位图</span></div>
+<div class="p12-flow-text"><strong>承接浮层</strong>沉浸式情感激励</div>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div class="p12-flow-img"><span class="p12-flow-label">反馈动效占位图</span></div>
-<span class="p12-flow-title">反馈动效</span>
-<p class="p12-flow-desc">即时视觉回馈</p>
+<div data-preview class="p12-flow-img"><span class="p12-flow-label">反馈动效占位图</span></div>
+<div class="p12-flow-text"><strong>反馈动效</strong>即时视觉回馈</div>
+</div>
 </div>
 </div>`,
+        },
+        // ═══ P12.5 玩法矩阵落地 ═══
+        {
+          heading: '进阶创意送礼：组件化赋能送礼玩法"生产线"',
+          body: '',
+          html: `<style>
+        .p12b-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 0}
+        .p12b-text{color:#A0A0A0;font-size:14px;line-height:1.8;font-weight:300;margin:0;max-width:600px}
+        .p12b-text b{color:#FFFFFF;font-weight:600}
+        @media(max-width:767px){.p12b-text{font-size:13px;line-height:1.8}}
+        </style>
+        <div class="p12b-wrap">
+        <p class="p12b-text">标准化的交互模组支撑了<b>冠名送礼、定制礼物、梯度礼物、心动套组、盲盒礼物</b>…<br>多元玩法快速落地，极大提升上线效率。</p>
+        </div>`,
         },
         // ═══ P13 终极玩法 ═══
         {
           heading: '终极玩法：明星爆灯的成就闭环',
-          body: '核心逻辑：将付费目标转化为"集体参与的成就事件"，极大释放粉丝的社交能量。',
+          body: '在"尖叫之夜"等顶级活动中，我们以"明星爆灯"为核心，将单一付费动作重构为全场狂欢的集体成就事件，通过高密度交互引爆活动高潮，将明星影响力转化为粉丝社交能量的爆发点。',
           html: `<style>
-.p13-flow{display:flex;gap:16px;align-items:stretch;margin:28px 0}
-.p13-stage{flex:1;background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative}
-.p13-stage:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
-.p13-stage::after{content:attr(data-arrow);position:absolute;right:-16px;top:50%;transform:translateY(-50%);color:#A0A0A0;font-size:16px;z-index:2}
-.p13-stage:last-child::after{display:none}
-.p13-stage-tag{display:inline-block;font-family:monospace;font-size:10px;color:#C7FF00;letter-spacing:0.08em;background:rgba(199,255,0,0.08);border:1px solid rgba(199,255,0,0.15);border-radius:3px;padding:3px 10px;margin-bottom:10px}
-.p13-stage-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.p13-stage-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.p13-stage-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.p13-stage-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;margin:12px 0;position:relative;overflow:hidden}
-.p13-stage-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
-.p13-stage-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-.p13-stage-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0;text-align:left}
-.p13-stage-desc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.p13-flow{flex-direction:column!important;gap:24px!important}.p13-stage::after{right:50%;top:auto;bottom:-20px;transform:translateX(50%) rotate(90deg)}.p13-stage:last-child::after{display:none}}
-</style>
-<div class="p13-flow">
-<div class="p13-stage" data-arrow="→">
-<span class="p13-stage-tag">STEP 01</span>
-<div class="p13-stage-title">入口层</div>
-<div class="p13-stage-img"><span class="p13-stage-img-label">为TA爆灯组件占位图</span></div>
-<p class="p13-stage-desc">通过高亮的<b>"为TA爆灯"</b>组件，明确引导用户产生指向性极强的交互目标。</p>
-</div>
-<div class="p13-stage" data-arrow="→">
-<span class="p13-stage-tag">STEP 02</span>
-<div class="p13-stage-title">浮层与反馈层</div>
-<div class="p13-stage-img"><span class="p13-stage-img-label">全屏爆灯特效占位图</span></div>
-<p class="p13-stage-desc">引入<b>全屏级的视觉特效</b>承接反馈，通过高规格的视听呈现给予用户巨大的成就满足感。</p>
-</div>
-<div class="p13-stage">
-<span class="p13-stage-tag">STEP 03</span>
-<div class="p13-stage-title">成就达成</div>
-<div class="p13-stage-img"><span class="p13-stage-img-label">成就达成直播间效果图</span></div>
-<p class="p13-stage-desc">将用户转化为直播间的<b>"高价值活跃资产"</b>，完成从付费行为到社交资产的闭环。</p>
-</div>
-</div>`,
+	.p13-chart{max-width:660px;margin:0 auto}
+	.p13-flow{display:flex;gap:28px;align-items:flex-start;margin:28px 0}
+	.p13-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
+	.p13-arrow{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:170px}
+	.p13-item-img{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+	.p13-item-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
+	.p13-item-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
+	.p13-item-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5;width:100%}
+	.p13-item-text strong{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
+	.p13-item-text b{color:#FFFFFF;font-weight:600}
+	.p13-subtitle{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:24px 0 8px}
+	.p13-subtitle::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+	.p13-subtitle::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+	.p13-chart-wide{max-width:780px;margin:0 auto}
+	.p13-tag-row{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:nowrap;overflow-x:auto}
+	.p13-tag{display:inline-flex;align-items:center;padding:6px 16px;font-size:13px;font-weight:500;color:#FFFFFF;background:rgba(199,255,0,0.06);border:1px solid rgba(199,255,0,0.15);border-radius:20px;white-space:nowrap;transition:all 0.3s ease}
+	.p13-tag:hover{background:rgba(199,255,0,0.10);border-color:rgba(199,255,0,0.25);transform:translateY(-1px)}
+	.p13-tag-arrow{color:#71717a;font-size:14px;flex-shrink:0}
+	@media(max-width:767px){.p13-chart,.p13-chart-wide{max-width:100%}.p13-tag-row{flex-wrap:wrap;gap:6px}.p13-tag{padding:4px 12px;font-size:12px}.p13-tag-arrow{font-size:12px}.p13-arrow{transform:rotate(90deg);margin-top:0}}
+	</style>
+	<div class="p13-chart-wide">
+	<div class="p13-subtitle">爆灯流程</div>
+	<div class="p13-tag-row">
+	<span class="p13-tag">点击头像</span><span class="p13-tag-arrow">→</span><span class="p13-tag">选中反馈</span><span class="p13-tag-arrow">→</span><span class="p13-tag">展示助力任务</span><span class="p13-tag-arrow">→</span><span class="p13-tag">送出礼物</span><span class="p13-tag-arrow">→</span><span class="p13-tag">尖叫值达成</span><span class="p13-tag-arrow">→</span><span class="p13-tag">触发爆灯特效</span>
+	</div>
+	</div>
+	<div class="p13-chart">
+	<div class="p13-flow">
+	<div class="p13-item">
+	<div data-preview class="p13-item-img"><span class="p13-item-img-label">为TA爆灯组件</span></div>
+	<div class="p13-item-text"><strong>入口层</strong>通过高亮的<b>"为TA爆灯"</b>组件，明确引导用户产生指向性极强的交互目标。</div>
+	</div>
+	<div class="p13-arrow">→</div>
+	<div class="p13-item">
+	<div data-preview class="p13-item-img"><span class="p13-item-img-label">全屏爆灯特效</span></div>
+	<div class="p13-item-text"><strong>浮层与反馈层</strong>引入<b>全屏级的视觉特效</b>承接反馈，通过高规格的视听呈现给予用户巨大的成就满足感。</div>
+	</div>
+	<div class="p13-arrow">→</div>
+	<div class="p13-item">
+	<div data-preview class="p13-item-img"><span class="p13-item-img-label">成就达成直播间</span></div>
+	<div class="p13-item-text"><strong>成就达成</strong>将用户转化为直播间的<b>"高价值活跃资产"</b>，完成从付费行为到社交资产的闭环。</div>
+	</div>
+	</div>
+	</div>`,
         },
       ],
     },
