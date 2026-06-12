@@ -1,8 +1,58 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import ProjectDetail from '../ui/ProjectDetail'
 import ScrollReveal from '../animations/ScrollReveal'
 import { projectData } from '../../data/projects'
 import type { Project } from '../../types'
+
+function TagsRow({ tags }: { tags: string[] }) {
+  const wrapperRef = useRef<HTMLDivElement>(null)
+  const measureRef = useRef<HTMLDivElement>(null)
+  const [count, setCount] = useState(tags.length)
+
+  const measure = useCallback(() => {
+    const wrapper = wrapperRef.current
+    const measureEl = measureRef.current
+    if (!wrapper || !measureEl) return
+    const maxW = wrapper.clientWidth
+    let acc = 0
+    const children = measureEl.children
+    let visible = 0
+    for (let i = 0; i < children.length; i++) {
+      acc += (children[i] as HTMLElement).offsetWidth
+      if (acc <= maxW) visible++
+      else break
+    }
+    setCount(visible || 1)
+  }, [])
+
+  useEffect(() => {
+    measure()
+    const ro = new ResizeObserver(measure)
+    if (wrapperRef.current) ro.observe(wrapperRef.current)
+    return () => ro.disconnect()
+  }, [tags, measure])
+
+  return (
+    <div ref={wrapperRef} className="mt-6 pt-4 border-t border-[#1f1f23] overflow-hidden relative">
+      {/* Visible row */}
+      <div className="font-mono text-[11px] text-[#52525b] whitespace-nowrap">
+        {tags.slice(0, count).map((tag, idx) => (
+          <span key={tag}>
+            {tag}{idx < Math.min(count, tags.length) - 1 ? <span className="text-[#27272a]"> / </span> : ''}
+          </span>
+        ))}
+      </div>
+      {/* Hidden measurement row */}
+      <div ref={measureRef} className="font-mono text-[11px] absolute invisible whitespace-nowrap pointer-events-none top-0 left-0" aria-hidden="true">
+        {tags.map((tag, idx) => (
+          <span key={tag}>
+            {tag}{idx < tags.length - 1 ? <span className="text-[#27272a]"> / </span> : ''}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 const achievementTags: Record<string, string> = {
   'project-3': 'AI 架构从 0 到 1',
@@ -31,7 +81,7 @@ export default function Projects() {
                 onMouseEnter={() => setHoveredIdx(i)}
                 onMouseLeave={() => setHoveredIdx(null)}
                 data-cursor-interactive
-                className="group cursor-pointer bg-[#161618] border border-[#1f1f23] rounded-lg overflow-hidden"
+                className="group cursor-pointer border border-[#1f1f23] rounded-lg overflow-visible min-h-[320px] md:min-h-[340px]"
                 style={{
                   boxShadow: isHovered
                     ? '0 30px 60px rgba(0, 0, 0, 0.6)'
@@ -46,38 +96,34 @@ export default function Projects() {
                 }}
               >
                 <div className="flex flex-col md:flex-row gap-0 items-stretch">
-                  {/* Left: text — 42% */}
-                  <div className="w-full md:w-[50%] flex flex-col justify-between pl-7 md:pl-10 pr-7 md:pr-0 pt-0 md:pt-10 pb-7 md:pb-10 order-2 md:order-1">
+                  {/* Left: text */}
+                  <div className="w-full md:max-w-[45%] flex flex-col justify-between pl-7 md:pl-10 pr-7 md:pr-0 pt-5 md:pt-10 pb-7 md:pb-10 order-2 md:order-1">
                     <div>
-                      <h3 className="text-2xl md:text-[26px] font-bold text-white group-hover:text-[#C7FF00] transition-colors duration-300 mb-1.5">
+                      {/* Title */}
+                      <h3 className="text-2xl md:text-[32px] font-extrabold text-white tracking-wider mb-2">
                         {project.title}
                       </h3>
-                      {project.detail?.mainTitle && (
-                        <p className="text-sm md:text-base text-zinc-400 font-medium mb-3">
-                          {project.detail.mainTitle}
+                      {project.detail?.subtitle && (
+                        <p className="text-[15px] text-[#a1a1aa] font-medium mb-3">
+                          {project.detail.subtitle}
                         </p>
                       )}
-                      <div className="w-10 h-px bg-zinc-700 mb-3" />
-                      <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-light mb-3">
+                      <p className="text-[13px] text-[#61616a] leading-relaxed border-l-2 border-[#27272a] pl-4 mb-3">
                         {project.description}
                       </p>
                     </div>
 
-                    {/* Metadata row */}
-                    <p className="text-[11px] font-mono font-medium text-[#71717a] tracking-[0.06em] mt-auto" style={{ display: "flex", flexWrap: "wrap", maxHeight: "1.4em", overflow: "hidden", gap: "0 2px" }}>
-                      {project.techStack.map((t, i) => (
-                        <span key={t} style={{ whiteSpace: "nowrap" }}>
-                          {t}{i < project.techStack.length - 1 ? <span style={{ color: "#52525b" }}> /</span> : ''}
-                        </span>
-                      ))}
-                    </p>
+                    {/* Tags */}
+                    <TagsRow tags={project.techStack} />
                   </div>
 
-                  {/* Right: image — 58% */}
-                  <div className="w-full md:w-[50%] flex-shrink-0 relative overflow-hidden bg-[#161618] order-1 md:order-2 min-h-[220px] md:min-h-[280px]">
+                  {/* Right: 3D Phone Mockups */}
+                  <div className="w-full md:w-[50%] flex-shrink-0 relative overflow-visible bg-transparent order-1 md:order-2 min-h-[280px] md:min-h-[320px] flex justify-end items-center"
+                    style={{ perspective: '1000px' }}
+                  >
                     {/* Achievement tag */}
                     <span
-                      className="absolute top-3 right-3 z-20 font-mono text-[10px] font-semibold tracking-[0.05em] rounded px-2.5 py-1"
+                      className="absolute top-3 right-0 z-20 font-mono text-[10px] font-semibold tracking-[0.05em] rounded px-2.5 py-1"
                       style={{
                         background: 'rgba(0, 0, 0, 0.55)',
                         color: '#C7FF00',
@@ -86,20 +132,47 @@ export default function Projects() {
                     >
                       {achievementTags[project.id]}
                     </span>
-                    {/* Ambient dark gradient mask */}
+
+                    {/* Background phone */}
                     <div
-                      className="absolute inset-0 z-10 pointer-events-none project-mask"
-                    />
-                    <img
-                      src={project.imagePath}
-                      alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
+                      className="phone-bg absolute w-[135px] h-[270px] bg-[#121214] border-[3px] border-[#27272a] rounded-[18px] overflow-hidden opacity-50 transition-all duration-500 group-hover:opacity-70"
                       style={{
-                        filter: 'grayscale(100%) brightness(0.65) contrast(0.9)',
-                        opacity: 1,
-                        transition: 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                        transform: 'rotateY(-25deg) rotateX(15deg) translateZ(0px) translateX(-20px) scale(0.9)',
+                        boxShadow: '-10px 15px 30px rgba(0,0,0,0.7)',
                       }}
-                    />
+                    >
+                      <div className="p-2 grid grid-cols-2 gap-1.5">
+                        <div className="h-[90px] bg-[#1f1f23] rounded-md" />
+                        <div className="h-[120px] bg-[#1f1f23] rounded-md" />
+                        <div className="h-[110px] bg-[#1f1f23] rounded-md" />
+                        <div className="h-[75px] bg-[#1f1f23] rounded-md" />
+                      </div>
+                    </div>
+
+                    {/* Foreground phone */}
+                    <div
+                      className="phone-fg absolute w-[145px] h-[290px] bg-[#16161a] border-[3px] border-[#3f3f46] rounded-[20px] overflow-hidden z-5 transition-all duration-500 group-hover:border-[#6b7280]"
+                      style={{
+                        transform: 'rotateY(-25deg) rotateX(15deg) translateZ(50px) translateX(50px) scale(0.9)',
+                        boxShadow: '-20px 25px 40px rgba(0,0,0,0.8)',
+                      }}
+                    >
+                      <div className="h-[140px] opacity-30" style={{ background: 'linear-gradient(to bottom, #222, #16161a)' }} />
+                      <div className="px-2.5 grid grid-cols-2 gap-1.5 -mt-10">
+                        <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#71717a]">画画</div>
+                        <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#71717a]">台词</div>
+                        <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#71717a]">接龙</div>
+                        <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#71717a]">MV</div>
+                      </div>
+                      <div className="mx-2.5 mt-3 h-8 rounded-2xl flex items-center justify-center"
+                        style={{
+                          background: 'linear-gradient(90deg, #0099ff, #0066cc)',
+                          boxShadow: '0 4px 12px rgba(0,102,204,0.4)',
+                        }}
+                      >
+                        <span className="text-white text-[9px] font-bold tracking-wider">AI 创作视频</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -114,25 +187,18 @@ export default function Projects() {
         onClose={() => setSelectedProject(null)}
       />
 
-      {/* ════ Hover image reveal styles ════ */}
+      {/* ════ 3D Phone hover tilt + tag color ════ */}
       <style>{`
-        .group:hover img {
-          filter: grayscale(20%) brightness(0.85) contrast(1) !important;
-          opacity: 0.75 !important;
+        .group:hover .phone-fg {
+          transform: rotateY(-20deg) rotateX(10deg) translateZ(70px) translateX(55px) scale(0.9) !important;
+          border-color: #6b7280 !important;
         }
-        .project-mask {
-          background: linear-gradient(to top, rgba(22,22,24,1) 0%, rgba(22,22,24,1) 15%, rgba(22,22,24,0.3) 50%, transparent 100%) !important;
+        .group:hover .phone-bg {
+          transform: rotateY(-28deg) rotateX(18deg) translateZ(-10px) translateX(-25px) scale(0.9) !important;
+          opacity: 0.7 !important;
         }
-        .group:hover .project-mask {
-          background: linear-gradient(to top, rgba(26,26,28,1) 0%, rgba(26,26,28,1) 15%, rgba(26,26,28,0.3) 50%, transparent 100%) !important;
-        }
-        @media (min-width: 768px) {
-          .project-mask {
-            background: linear-gradient(to right, rgba(22,22,24,1) 0%, rgba(22,22,24,1) 15%, rgba(22,22,24,0.3) 50%, transparent 100%) !important;
-          }
-          .group:hover .project-mask {
-            background: linear-gradient(to right, rgba(26,26,28,1) 0%, rgba(26,26,28,1) 15%, rgba(26,26,28,0.3) 50%, transparent 100%) !important;
-          }
+        .group:hover .project-tag-line {
+          color: #a1a1aa;
         }
       `}</style>
     </section>

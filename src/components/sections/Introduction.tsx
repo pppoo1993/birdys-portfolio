@@ -3,34 +3,40 @@ import { introductionData } from '../../data/introduction'
 import type { BioSection } from '../../types'
 import ScrollReveal from '../animations/ScrollReveal'
 import { useScrollTo } from '../../hooks/useScrollTo'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 function SplitRevealCard({ section }: { section: BioSection }) {
   const cardRef = useRef<HTMLDivElement>(null)
   const [splitPct, setSplitPct] = useState<number | null>(null)
   const [closing, setClosing] = useState(false)
   const [locked, setLocked] = useState(false)
+  const [showImage, setShowImage] = useState(false)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const isActive = splitPct !== null
   const hasImage = !!section.image
+  const isMobile = useMediaQuery('(max-width: 767px)')
 
+  // ═══ Desktop: hover split-reveal ═══
   const updateSplit = useCallback((e: React.MouseEvent) => {
-    if (closing || locked) return
+    if (closing || locked || isMobile) return
     const rect = cardRef.current?.getBoundingClientRect()
     if (!rect) return
     const x = e.clientX - rect.left
     const pct = Math.max(0, Math.min((x / rect.width) * 100, 100))
     setSplitPct(pct)
-  }, [closing, locked])
+  }, [closing, locked, isMobile])
 
   const handleEnter = (e: React.MouseEvent) => {
-    if (locked) return
+    if (isMobile) return
     clearTimeout(closeTimer.current)
+    setLocked(false)
     setClosing(false)
     updateSplit(e)
   }
 
   const handleLeave = () => {
-    if (locked) return
+    if (isMobile) return
+    setLocked(false)
     setClosing(true)
     setSplitPct(100)
     closeTimer.current = setTimeout(() => {
@@ -39,8 +45,14 @@ function SplitRevealCard({ section }: { section: BioSection }) {
     }, 350)
   }
 
+  // ═══ Mobile: click toggles fade ═══
   const handleClick = () => {
     if (!hasImage) return
+    if (isMobile) {
+      setShowImage((prev) => !prev)
+      return
+    }
+    // Desktop: split-reveal lock
     if (locked) {
       setLocked(false)
       setClosing(true)
@@ -63,14 +75,22 @@ function SplitRevealCard({ section }: { section: BioSection }) {
     <div
       ref={cardRef}
       className="intro-card text-left relative overflow-hidden"
-      style={{ cursor: isActive && !locked ? 'col-resize' : locked ? 'pointer' : undefined }}
+      style={{
+        cursor: isMobile ? 'pointer' : isActive && !locked ? 'col-resize' : locked ? 'pointer' : undefined,
+      }}
       onClick={handleClick}
-      onMouseMove={hasImage ? updateSplit : undefined}
-      onMouseEnter={hasImage ? handleEnter : undefined}
-      onMouseLeave={hasImage ? handleLeave : undefined}
+      onMouseMove={!isMobile && hasImage ? updateSplit : undefined}
+      onMouseEnter={!isMobile && hasImage ? handleEnter : undefined}
+      onMouseLeave={!isMobile && hasImage ? handleLeave : undefined}
     >
-      {/* Text — full width, always intact */}
-      <div className="relative z-10">
+      {/* Text layer */}
+      <div
+        className="relative z-10"
+        style={{
+          opacity: isMobile && showImage ? 0 : 1,
+          transition: isMobile ? 'opacity 0.35s ease' : undefined,
+        }}
+      >
         <h4 className="text-zinc-200 font-medium text-base mb-2 tracking-wide flex items-center gap-2">
           <span className="font-mono text-sm tracking-[0.05em]" style={{ color: '#ccff00' }}>[About Me {section.number}]</span> {section.heading}
         </h4>
@@ -79,20 +99,33 @@ function SplitRevealCard({ section }: { section: BioSection }) {
         </p>
       </div>
 
-      {/* Image — overlays right of split */}
-      {hasImage && isActive && (
+      {/* ═══ Desktop: split-reveal image ═══ */}
+      {!isMobile && hasImage && isActive && (
         <div
           className="absolute inset-0 z-20"
           style={{ clipPath: `inset(0 0 0 ${splitPct}%)` }}
         >
           <div className="absolute inset-0 bg-[#141416]">
             <img src={section.image} alt="" className="w-full h-full object-cover opacity-60" />
-            {/* Edge softening strip at clip boundary */}
             <div
               className="absolute top-0 bottom-0 w-3"
               style={{ left: 0, background: 'linear-gradient(to right, #141416, transparent)' }}
             />
           </div>
+        </div>
+      )}
+
+      {/* ═══ Mobile: fade-in image overlay ═══ */}
+      {isMobile && hasImage && (
+        <div
+          className="absolute inset-0 z-20 bg-[#141416]"
+          style={{
+            opacity: showImage ? 1 : 0,
+            transition: 'opacity 0.35s ease',
+            pointerEvents: showImage ? 'auto' : 'none',
+          }}
+        >
+          <img src={section.image} alt="" className="w-full h-full object-cover opacity-60" />
         </div>
       )}
 
@@ -200,7 +233,7 @@ export default function Introduction() {
         </div>
 
         {/* 4. Typewriter — animated on all devices, overlaps avatar slightly */}
-        <div className="pb-2 md:pb-0 -mt-8 md:-mt-12 relative z-10">
+        <div className="pb-2 md:pb-0 -mt-4 md:-mt-6 relative z-10">
           <h2
             className="text-2xl md:text-4xl font-semibold tracking-wide leading-normal md:leading-tight"
             style={{ background: 'linear-gradient(to bottom, #ffffff 30%, #a1a1aa 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
