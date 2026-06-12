@@ -253,8 +253,8 @@ export default function Navigation() {
         <NavEasterEgg />
 
         <div className="px-6 pb-4">
-          <p className="text-[0.6rem] text-text-tertiary">
-            &copy; BIRDY DESIGN 2026. ALL RIGHTS RESERVED.
+          <p className="text-[0.6rem] text-text-tertiary text-center">
+            &copy; BIRDY DESIGN 2026.<br />ALL RIGHTS RESERVED.
           </p>
         </div>
       </aside>

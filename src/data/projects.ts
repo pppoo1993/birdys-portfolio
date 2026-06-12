@@ -347,7 +347,7 @@ export const projectData: Project[] = [
 
   {
     id: 'project-2',
-    title: '爱奇艺明星陪看直播间',
+    title: '明星陪看直播间',
     description:
       '爱奇艺「一起聊」明星陪看直播，交互设计负责人，重构影视听布局与商业闭环，通过创意送礼机制激活直播间互动收入。',
     imagePath: 'https://picsum.photos/seed/project2/1200/800',
@@ -873,7 +873,7 @@ export const projectData: Project[] = [
   },
   {
     id: 'project-1',
-    title: 'Vibes · 音乐社交 App',
+    title: 'Pad端播放器',
     description:
       '以"音乐情绪"为核心的社交应用，用户通过分享当下心情音乐来连接同频的人，上线首月获 5 万注册用户。',
     imagePath: 'https://picsum.photos/seed/project1/1200/800',
