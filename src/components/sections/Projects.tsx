@@ -112,7 +112,7 @@ export default function Projects() {
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <p className="heading-section mb-4 md:hidden">Projects</p>
 
-        <div className="flex flex-col gap-10 md:gap-14" style={{ perspective: '1200px' }}>
+        <div className="flex flex-col gap-12 md:gap-20" >
           {projectData.map((project, i) => {
             const isHovered = activeIdx === i
             const isDimmed = activeIdx !== null && activeIdx !== i
@@ -120,8 +120,8 @@ export default function Projects() {
             return (
             <motion.div
                 key={project.id}
-                initial={{ opacity: 0, scale: 1.15, filter: 'blur(8px)', y: 50, rotateX: -15 }}
-                whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)', y: 0, rotateX: 0 }}
+                initial={{ opacity: 0, scale: 1.08, filter: 'blur(6px)', y: 30, rotate: 1.5 }}
+                whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)', y: 0, rotate: 0 }}
                 viewport={{ once: true, margin: '-30px' }}
                 transition={{ duration: 0.7, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
               >
@@ -134,10 +134,12 @@ export default function Projects() {
                 className="group cursor-pointer border border-[#1f1f23] rounded-lg overflow-visible min-h-[320px] md:min-h-[340px]"
                 style={{
                   boxShadow: isHovered
-                    ? '0 30px 60px rgba(0,0,0,0.6)'
-                    : '0 20px 40px rgba(0,0,0,0.4)',
+                    ? '0 30px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04)'
+                    : '0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.03)',
                   transform: isHovered ? 'translateY(-4px)' : 'translateY(0)',
-                  background: isHovered ? '#1a1a1c' : '#161618',
+                  background: isHovered ? 'rgba(26,26,28,0.85)' : 'rgba(22,22,24,0.75)',
+                  backdropFilter: 'blur(16px)',
+                  WebkitBackdropFilter: 'blur(16px)',
                   borderColor: isHovered ? '#27272a' : '#1f1f23',
                   opacity: isDimmed ? 0.4 : 1,
                   filter: isDimmed ? 'blur(0.5px)' : 'none',
@@ -159,12 +161,12 @@ export default function Projects() {
                         </h3>
                       </div>
                       {project.detail?.subtitle && (
-                        <p className="text-[15px] text-[#a1a1aa] font-normal mb-2">
+                        <p className="text-base md:text-lg text-[#d4d4d8] font-normal mb-2">
                           {project.detail.subtitle}
                         </p>
                       )}
                       <div className="w-10 h-px mb-2" style={{ background: '#333333' }} />
-                      <p className="text-[13px] text-[#a1a1aa] leading-relaxed mb-0 md:mb-2 font-normal">
+                      <p className="text-[14px] text-[#a1a1aa] leading-relaxed mb-0 font-normal">
                         {project.description}
                       </p>
                     </div>
@@ -284,7 +286,7 @@ export default function Projects() {
                           style={{
                             top: '50%', left: '50%',
                             marginTop: '-148px', marginLeft: '-74px',
-                            transform: isHovered ? 'rotateY(-30deg) rotateX(20deg) translateZ(-40px) translateX(-50px) scale(0.9)' : 'rotateY(-25deg) rotateX(15deg) translateZ(-20px) translateX(-45px) scale(0.9)',
+                            transform: isHovered ? 'rotateY(18deg) rotateX(14deg) rotateZ(12deg) translateZ(-30px) translateX(-25px) scale(0.88)' : 'rotateY(15deg) rotateX(12deg) rotateZ(10deg) translateZ(-20px) translateX(-20px) scale(0.9)',
                             border: '2px solid #242427',
                             boxShadow: isHovered ? '0 20px 50px rgba(0,0,0,0.95)' : '0 15px 40px rgba(0,0,0,0.85)',
                           }}>
@@ -298,7 +300,7 @@ export default function Projects() {
                           style={{
                             top: '50%', left: '50%',
                             marginTop: '-148px', marginLeft: '-74px',
-                            transform: isHovered ? 'rotateY(-18deg) rotateX(10deg) translateZ(75px) translateX(35px) scale(0.92)' : 'rotateY(-25deg) rotateX(15deg) translateZ(50px) translateX(30px) scale(0.9)',
+                            transform: isHovered ? 'rotateY(12deg) rotateX(10deg) rotateZ(12deg) translateZ(65px) translateX(15px) scale(0.94)' : 'rotateY(10deg) rotateX(8deg) rotateZ(10deg) translateZ(45px) translateX(10px) scale(0.92)',
                             boxShadow: isHovered ? '0 20px 50px rgba(0,0,0,0.95)' : '0 15px 40px rgba(0,0,0,0.85)',
                             background: '#161a18',
                             border: isHovered ? '2px solid #3f3f46' : '2px solid #27272a',

@@ -197,9 +197,9 @@ export default function Introduction() {
     >
       <motion.div
         className="fixed inset-0 z-0 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50 overflow-hidden"
-        initial={{ opacity: 0, scale: 1.15, y: '10%', rotateX: -15 }}
-        animate={{ opacity: 0.22, scale: 0.85, y: '0%', rotateX: 0 }}
-        transition={{ duration: 2.5, ease: [0.25, 0.1, 0.25, 1] }}
+        initial={{ opacity: 0, scale: 1.08, y: '6%', rotate: 1.2 }}
+        animate={{ opacity: 0.22, scale: 0.85, y: '0%', rotate: 0 }}
+        transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
         style={{ transformOrigin: 'center top' }}
       >
         <img

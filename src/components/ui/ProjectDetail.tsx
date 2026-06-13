@@ -389,9 +389,13 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
         ) : (
           <div
             className="rounded-lg shadow-[0_0_60px_rgba(0,0,0,0.8)] overflow-hidden"
-            style={{ width: 'min(50vw, 360px)', maxHeight: '90vh', aspectRatio: '1/2.168' }}
-            dangerouslySetInnerHTML={{ __html: (previewHtml || '').replace(/max-height:[^;"]+[;"]/g, '').replace(/max-width:[^;"]+[;"]/g, '').replace(/width:[^;"]+[;"]/g, 'width:100%!important;') }}
-          />
+            style={{ width: 'min(50vw, 360px)', maxHeight: '90vh', aspectRatio: '1/2.168', background: 'linear-gradient(135deg, #141416 0%, #1A1A1A 100%)', border: '1px solid #222226', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}
+          >
+            <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 30%, rgba(199,255,0,0.03) 0%, transparent 70%)', pointerEvents: 'none' }} />
+            <span style={{ fontSize: '14px', color: '#71717a', fontFamily: 'monospace', letterSpacing: '0.06em', position: 'relative', zIndex: 1 }}>
+              {(previewHtml || '').match(/<span[^>]*class="[^"]*-label[^"]*"[^>]*>([^<]*)<\/span>/)?.[1] || '预览'}
+            </span>
+          </div>
         )}
         <button
           onClick={() => { setPreviewSrc(null); setPreviewHtml(null) }}

@@ -5,14 +5,14 @@ export const projectData: Project[] = [
     id: 'project-3',
     title: '吃鲸AI',
     description:
-      '爱奇艺内部孵化 AI 视频应用，交互设计负责人，主导从概念孵化到结项的全链路交互设计。',
+      '交互设计负责人，从 0 到 1 搭建 AI 原生互动社区，跑通「消费分发 → 生产赋能 → 闭环沉淀」全链路，在商业与技术博弈中沉淀系统化交互资产。',
     imagePath: 'https://picsum.photos/seed/project3/1200/800',
     techStack: ['生成式 AI', '交互设计', '体验架构', '商业复盘', '用户旅程', '组件化设计'],
     sourceUrl: 'https://github.com',
     detail: {
       pageTitle: '吃鲸AI | 爱奇艺生成式 AI 视频互动平台',
       mainTitle: '爱奇艺AI视频互动社区商业复盘',
-      subtitle: '交互设计负责人 · 2025.10 — 2026.05',
+      subtitle: '生成式 AI 视频互动社区',
       sections: [
         {
           heading: '引言：商业极限下的终局反思',
@@ -253,12 +253,12 @@ export const projectData: Project[] = [
                     html: `<style>
 	.qt-chart{max-width:900px;margin:0 auto}
 	.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}
-	.qt-flow-row{display:flex;align-items:flex-start;gap:28px;margin:0}
+	.qt-flow-row{display:flex;align-items:center;gap:28px;margin:0}
 	.qt-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
 	.qt-screen-box{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
 	.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
-	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:190px}
-	@media(max-width:767px){.qt-chart{max-width:100%}.qt-operator{transform:rotate(90deg);margin-top:0}}
+	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px}
+	@media(max-width:767px){.qt-chart{max-width:100%}.qt-operator{transform:rotate(90deg)}}
 	</style>
 	<div class="qt-chart">
 	<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div>
@@ -687,6 +687,40 @@ export const projectData: Project[] = [
         {
           heading: '陪看布局重构2：场景化动态平衡',
           body: '交互避让机制：引入"动态避让算法"，确保互动内容在触发时能够智能规避核心视听区域，保障主体内容始终处于纯净状态。\n\n场景化信息治理：在回看场景中引入播控，并设计"4秒自动隐匿"的智能收纳逻辑，在用户无操作时，视觉焦点自动回归内容本身。在用户调节进度时展示进度缩略图并自动隐藏非必要的飘评与挂件，最大限度释放屏幕空间，聚焦用户的深度复盘心智。',
+          html: `<style>
+	.p9-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content}
+	.p9-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+	.p9-col{width:372px;flex-shrink:0}.p9-col.wide{width:564px}
+	.p9-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
+	.p9-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+	.p9-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+	.p9-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
+	.p9-col-desc b{color:#FFFFFF;font-weight:600}
+	.p9-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+	.p9-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
+	.p9-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
+	.p9-img-row{display:flex;gap:12px}.p9-img-row .p9-img{width:180px;flex-shrink:0}
+	@media(max-width:767px){.p9-row{flex-direction:column!important}.p9-col,.p9-col.wide{width:100%!important}.p9-img{width:100%!important;max-width:180px}.p9-img-row .p9-img{width:100%!important;max-width:180px}}
+	</style>
+	<div class="p9-row">
+	<div class="p9-col">
+	<div class="p9-col-title">动态避让机制</div>
+	<p class="p9-col-desc">互动内容触发时<b>智能规避</b>核心视听区域，直播中弹幕与礼物自动偏移，保障主体画面始终纯净。</p>
+	<div class="p9-img-row">
+	<div data-preview class="p9-img"><span class="p9-img-label">避让前状态</span></div>
+	<div data-preview class="p9-img"><span class="p9-img-label">避让后状态</span></div>
+	</div>
+	</div>
+	<div class="p9-col wide">
+	<div class="p9-col-title">回看场景信息治理</div>
+	<p class="p9-col-desc"><b>4秒自动隐匿</b>播控与飘评，进度调节时展示缩略图并隐藏非必要元素，释放屏幕空间聚焦复盘心智。</p>
+	<div class="p9-img-row">
+	<div data-preview class="p9-img"><span class="p9-img-label">回看播控界面</span></div>
+	<div data-preview class="p9-img"><span class="p9-img-label">进度缩略图</span></div>
+	<div data-preview class="p9-img"><span class="p9-img-label">自动隐匿后</span></div>
+	</div>
+	</div>
+	</div>`,
         },
         // ═══ P10 情感变现 ═══
         {
@@ -694,31 +728,23 @@ export const projectData: Project[] = [
           body: '商业闭环不应是生硬的支付行为，而是情感互动的自然延伸。我们将送礼逻辑划分为"基础、创意、成就"三层架构，以满足不同场景下的用户情感释放需求，实现商业价值与互动氛围的同步跃升。',
           html: `<style>
 .pyramid-wrap{display:flex;justify-content:center;margin:32px 0}
-.pyramid{display:flex;flex-direction:column;align-items:center;width:400px}
-.pyramid-tier{display:flex;align-items:center;justify-content:center;text-align:center;padding:28px 20px;position:relative;width:100%;box-sizing:border-box}
-.pyramid-tier.top{clip-path:polygon(20% 0,80% 0,90% 100%,10% 100%);background:#1A1A1A;border-left:1px solid #333333;border-right:1px solid #333333;min-height:90px}
-.pyramid-tier.mid{clip-path:polygon(10% 0,90% 0,95% 100%,5% 100%);background:#181818;border-left:1px solid #333333;border-right:1px solid #333333;margin-top:-1px;min-height:90px}
-.pyramid-tier.btm{clip-path:polygon(0% 0,100% 0,100% 100%,0% 100%);background:#161616;border:1px solid #333333;border-top:none;margin-top:-1px;min-height:90px}
-.pyramid-tier-label{font-family:monospace;font-size:10px;color:#C7FF00;letter-spacing:0.08em;margin-bottom:4px;display:block;font-weight:600}
-.pyramid-tier-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 2px;display:block}
-.pyramid-tier-desc{color:#A0A0A0;font-size:12px;line-height:1.6;font-weight:300;margin:0}
-@media(max-width:767px){.pyramid{width:100%;max-width:340px}}
+.pyramid{display:flex;flex-direction:column;width:400px;height:300px;clip-path:polygon(50% 0,100% 100%,0% 100%);overflow:hidden}
+.pyramid-tier{display:flex;align-items:center;justify-content:center;text-align:center;flex:1;position:relative}
+.pyramid-tier.top{background:rgba(199,255,0,0.08)}
+.pyramid-tier.mid{background:rgba(199,255,0,0.05);border-top:1px solid rgba(199,255,0,0.15)}
+.pyramid-tier.btm{background:rgba(199,255,0,0.03);border-top:1px solid rgba(199,255,0,0.15)}
+.pyramid-tier-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0}
+@media(max-width:767px){.pyramid{width:100%;max-width:340px;height:260px}}
 </style>
 <div class="pyramid-wrap"><div class="pyramid">
 <div class="pyramid-tier top">
-<span class="pyramid-tier-label">成就层</span>
-<span class="pyramid-tier-title">高价值成就事件</span>
-<p class="pyramid-tier-desc">明星爆灯</p>
+<span class="pyramid-tier-title">成就共鸣</span>
 </div>
 <div class="pyramid-tier mid">
-<span class="pyramid-tier-label">创意层</span>
-<span class="pyramid-tier-title">游戏化互动</span>
-<p class="pyramid-tier-desc">创意玩法</p>
+<span class="pyramid-tier-title">创意体验</span>
 </div>
 <div class="pyramid-tier btm">
-<span class="pyramid-tier-label">基础层</span>
-<span class="pyramid-tier-title">高频通用型</span>
-<p class="pyramid-tier-desc">基础支付</p>
+<span class="pyramid-tier-title">基础馈赠</span>
 </div>
 </div></div>`,
         },
