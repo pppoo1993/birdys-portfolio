@@ -166,7 +166,7 @@ export default function Projects() {
                         </p>
                       )}
                       <div className="w-10 h-px mb-2" style={{ background: '#333333' }} />
-                      <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-light mb-0">
+                      <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light mb-0">
                         {project.description}
                       </p>
                     </div>

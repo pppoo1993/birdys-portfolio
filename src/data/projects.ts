@@ -253,12 +253,12 @@ export const projectData: Project[] = [
                     html: `<style>
 	.qt-chart{max-width:900px;margin:0 auto}
 	.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}
-	.qt-flow-row{display:flex;align-items:flex-start;gap:28px;margin:0}
+	.qt-flow-row{display:flex;align-items:center;gap:28px;margin:0}
 	.qt-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
 	.qt-screen-box{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
 	.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
-	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:185px}
-	@media(max-width:767px){.qt-chart{max-width:100%}.qt-operator{transform:rotate(90deg);margin-top:0}}
+	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px}
+	@media(max-width:767px){.qt-chart{max-width:100%}.qt-flow-row{flex-wrap:wrap;justify-content:center;gap:12px}.qt-node{flex:1 1 40%;min-width:140px}.qt-operator{display:none}.qt-screen-box{max-width:180px;margin:0 auto}}
 	</style>
 	<div class="qt-chart">
 	<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div>
@@ -379,7 +379,7 @@ export const projectData: Project[] = [
 .model-node-dot{width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a;flex-shrink:0;margin-top:3px;z-index:1}
 .model-node-body{flex:1;min-width:0}
 .model-node-title{font-size:14px;font-weight:600;color:#FFFFFF;display:block;margin-bottom:4px}
-.model-node-desc{font-size:13px;color:#a1a1aa;line-height:1.75;margin:0}
+.model-node-desc{font-size:13px;color:#A0A0A0;line-height:1.75;margin:0}
 .val-dim-branch{display:flex;gap:0;margin-top:20px}
 .val-dim-branch-body{flex:1;min-width:0}
 .val-dim-cards{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
@@ -558,7 +558,7 @@ export const projectData: Project[] = [
 .entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:900px}
 .entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
 .entry-right{flex:0.8;display:flex;flex-direction:column;gap:16px;min-width:0}
-.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168;max-height:480px}
+.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168}
 .entry-img-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .entry-img-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1}
 .principle-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);flex:1}
@@ -567,7 +567,7 @@ export const projectData: Project[] = [
 .principle-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .principle-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .principle-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
-@media(max-width:767px){.entry-split{flex-direction:column!important;gap:24px!important}.entry-left{flex:0 0 auto!important;width:100%}.entry-right{flex:0 0 auto!important;width:100%}.entry-img-box{max-height:360px}}</style>
+@media(max-width:767px){.entry-split{flex-direction:column!important;gap:24px!important}.entry-left{flex:0 0 auto!important;width:100%}.entry-right{flex:0 0 auto!important;width:100%}}</style>
 <p class="tx-p">依托核心播放场景，通过<b>动态状态卡片</b>构建即时交互触点。无论是"预约提醒"还是"直播中进入"，设计始终保持<b>低干扰、高转化</b>的策略，在不打断用户观影流的前提下，引导高意向粉丝通过便捷入口快速切入陪看现场，完成从视频消费到直播互动的行为转化。</p>
 
 <div class="entry-split">
@@ -642,7 +642,7 @@ export const projectData: Project[] = [
 .entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:900px}
 .entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
 .entry-right{flex:0.8;display:flex;flex-direction:column;gap:16px;min-width:0}
-.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168;max-height:480px}
+.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168}
 .entry-img-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .entry-img-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1}
 .p7-card{background:transparent;border:none;padding:0 0 0 30px;position:relative}

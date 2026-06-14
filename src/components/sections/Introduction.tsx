@@ -95,7 +95,7 @@ function SplitRevealCard({ section }: { section: BioSection }) {
         <h4 className="text-zinc-200 font-semibold text-base mb-2 tracking-wide flex items-center gap-2">
           <span className="font-mono text-sm tracking-[0.05em]" style={{ color: '#ccff00' }}>[About Me {section.number}]</span> {section.heading}
         </h4>
-        <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
+        <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
           {section.body}
         </p>
       </div>

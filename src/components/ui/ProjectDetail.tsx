@@ -222,6 +222,18 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               </div>
             </div>
 
+            {/* ════ Shared chart styles ════ */}
+            <style>{`
+              .sec-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 10px}
+              .sec-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+              .sec-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+              .sec-body{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
+              .sec-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+              .sec-card:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+              [data-preview]{cursor:pointer;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+              [data-preview]:hover{border-color:#3f3f46!important;transform:translateY(-2px);box-shadow:0 15px 30px rgba(0,0,0,0.6)}
+            `}</style>
+
             {/* ════ Scroll pages ════ */}
             <div
               ref={scrollRef}
@@ -271,7 +283,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                             {section.body && (
                               <div
                                 className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
-                                style={{ color: '#a1a1aa', fontSize: '14px', lineHeight: '1.8' }}
+                                style={{ color: '#A0A0A0', fontSize: '14px', lineHeight: '1.8' }}
                                 dangerouslySetInnerHTML={{ __html: section.body }}
                               />
                             )}
@@ -299,7 +311,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                         {section.body && (
                           <div
                             className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
-                            style={{ color: '#a1a1aa', fontSize: '14px', lineHeight: '1.8' }}
+                            style={{ color: '#A0A0A0', fontSize: '14px', lineHeight: '1.8' }}
                             dangerouslySetInnerHTML={{ __html: section.body }}
                           />
                         )}
