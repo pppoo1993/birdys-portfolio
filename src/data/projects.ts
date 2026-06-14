@@ -253,12 +253,12 @@ export const projectData: Project[] = [
                     html: `<style>
 	.qt-chart{max-width:900px;margin:0 auto}
 	.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}
-	.qt-flow-row{display:flex;align-items:center;gap:28px;margin:0}
+	.qt-flow-row{display:flex;align-items:flex-start;gap:28px;margin:0}
 	.qt-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
 	.qt-screen-box{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
 	.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
-	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px}
-	@media(max-width:767px){.qt-chart{max-width:100%}.qt-operator{transform:rotate(90deg)}}
+	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:185px}
+	@media(max-width:767px){.qt-chart{max-width:100%}.qt-operator{transform:rotate(90deg);margin-top:0}}
 	</style>
 	<div class="qt-chart">
 	<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div>
@@ -730,7 +730,7 @@ export const projectData: Project[] = [
 .pyramid-wrap{display:flex;justify-content:center;margin:32px 0}
 .pyramid{display:flex;flex-direction:column;width:400px;height:300px;clip-path:polygon(50% 0,100% 100%,0% 100%);overflow:hidden}
 .pyramid-tier{display:flex;align-items:center;justify-content:center;text-align:center;flex:1;position:relative}
-.pyramid-tier.top{background:rgba(199,255,0,0.08)}
+.pyramid-tier.top{flex:1.4;background:rgba(199,255,0,0.08);padding-top:48px}
 .pyramid-tier.mid{background:rgba(199,255,0,0.05);border-top:1px solid rgba(199,255,0,0.15)}
 .pyramid-tier.btm{background:rgba(199,255,0,0.03);border-top:1px solid rgba(199,255,0,0.15)}
 .pyramid-tier-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0}

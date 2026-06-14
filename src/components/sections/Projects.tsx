@@ -166,7 +166,7 @@ export default function Projects() {
                         </p>
                       )}
                       <div className="w-10 h-px mb-2" style={{ background: '#333333' }} />
-                      <p className="text-[14px] text-[#a1a1aa] leading-relaxed mb-0 font-normal">
+                      <p className="text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-light mb-0">
                         {project.description}
                       </p>
                     </div>
@@ -176,12 +176,12 @@ export default function Projects() {
                   </div>
 
                   {/* Right: Phone Mockups — unique container per project */}
-                  <div className="w-full md:w-[50%] flex-shrink-0 relative overflow-visible bg-transparent order-1 md:order-2 flex justify-center items-center pt-8 pb-2 md:pb-8"
+                  <div className="w-full md:w-[50%] flex-shrink-0 relative overflow-visible bg-transparent order-1 md:order-2 flex justify-center items-center pt-6 pb-2 md:pb-6"
                     style={{ perspective: project.id === 'project-3' ? '600px' : project.id === 'project-2' ? 'none' : '1000px' }}
                   >
                     {/* Achievement tag */}
                     <span
-                      className="absolute top-8 right-7 md:right-10 z-20 font-mono text-[10px] font-medium tracking-[0.05em] rounded px-2.5 py-1"
+                      className="absolute top-6 right-7 md:right-10 z-20 font-mono text-[10px] font-medium tracking-[0.05em] rounded px-2.5 py-1"
                       style={{ background: 'rgba(0, 0, 0, 0.55)', color: '#C7FF00', backdropFilter: 'blur(4px)' }}
                     >
                       {achievementTags[project.id]}
@@ -267,7 +267,7 @@ export default function Projects() {
                             </div>
                             <div className="h-[40px] flex items-center justify-center gap-2 mt-1">
                               {['🎁','💎','🌟'].map((e,i) => (
-                                <div key={i} className="w-[30px] h-[30px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-lg flex items-center justify-center text-[14px]">{e}</div>
+                                <div key={i} className="w-[30px] h-[30px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-lg flex items-center justify-center text-[13px]">{e}</div>
                               ))}
                             </div>
                           </div>

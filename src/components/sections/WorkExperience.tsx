@@ -71,7 +71,7 @@ export default function WorkExperience() {
                 <span className={`block truncate text-xs mt-0.5 ${isActive ? 'text-[#C7FF00] font-bold' : 'text-white'}`}>
                   {item.company}
                 </span>
-                <span className={`block truncate text-[11px] mt-0.5 ${isActive ? 'text-zinc-400' : 'text-zinc-600'}`}>
+                <span className={`block truncate text-[13px] mt-0.5 ${isActive ? 'text-zinc-400' : 'text-zinc-600'}`}>
                   {item.role}
                 </span>
               </div>
@@ -83,11 +83,11 @@ export default function WorkExperience() {
             {groups.map((group, gi) => (
               <div key={gi}>
                 {group.header && (
-                  <h4 className="text-[11px] font-semibold text-white mb-1.5">{group.header}</h4>
+                  <h4 className="text-[13px] font-semibold text-white mb-1.5">{group.header}</h4>
                 )}
                 <ul className="space-y-1.5">
                   {group.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2 text-[#a1a1aa] text-[11px] leading-[1.6] tracking-[0.02em] font-light">
+                    <li key={j} className="flex items-start gap-2 text-[#a1a1aa] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
                       <span className="text-[#C7FF00]/60 mt-[6px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#C7FF00]/60" />
                       <span>{item}</span>
                     </li>
@@ -122,7 +122,7 @@ export default function WorkExperience() {
                 <p className={`font-semibold truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-company-active text-base md:text-lg text-[#C7FF00]' : 'tl-company-inactive text-xs md:text-sm text-white'}`}>
                   {item.company}
                 </p>
-                <p className={`font-light truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-role-active text-xs md:text-sm text-zinc-300' : 'tl-role-inactive text-[13px] text-zinc-500'}`}>
+                <p className={`font-normal truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-role-active text-xs md:text-sm text-zinc-300' : 'tl-role-inactive text-[13px] text-zinc-500'}`}>
                   {item.role}
                 </p>
               </div>
