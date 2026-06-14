@@ -33,8 +33,8 @@ function NavEasterEgg() {
   const birdPath = "M342.8 255s52.5-16.8 94.6-0.6c0 0 116.8 50.8 142.6 37.1 0 0 47.5-43-21.5-88.1 0 0-162.8-68.4-195-194.2 0 0-14.9-29.9-24 18.5a90 90 0 0 0 13.2 61.1s-75.2-21.3-17.6 43.3c0 0-66.6-1 8.3 47.6 0 0-74.4 12.7 3.8 44.1 0 0-62 39.8-4.4 31.2z m-1.7 704.4c-3.9 70.5 51 27.1 51 27.1 15.6 67.9 57.7 9.4 57.7 9.4 37 64.6 58-2.6 58-2.6 53.5-138.7 63-237.7 63-237.7 3.5-63.9 37.2-74.7 37.2-74.7 193.6-103.1 157.7-293.7 157.7-293.7-21.3-133.3 87.5-174.1 87.5-174.1a336.8 336.8 0 0 0-53.8-4c-21.4-36.7-54.1-33.2-54.1-33.2-48.1 3.6-132.5 110.6-132.5 110.6-48.6 55.6-90.4 31.4-90.4 31.4-119.7-63.6-170.2-48.7-170.2-48.7-122.4 33-213.1-3.6-213.1-3.6-115.2-18.7 31.5 51.7 31.5 51.7-79 27.2 65.7 44.4 65.7 44.4-93.9 55.3 39.8 42.7 39.8 42.7-90.5 52.2 46.7 35 46.7 35-62.4 67.1 45 27.6 45 27.6-58.2 81.2 34.1 32.5 34.1 32.5-34.8 80.1 42 18.9 42 18.9-44.5 73.7 40.6 22.7 40.6 22.7-31.6 83.5 33.5 31.8 33.5 31.8-28.2 25-28 95.7-28 95.7 12.5 60.4-215.9 206.3-215.9 206.3-55.8 52 22.2 51.4 22.2 51.4-31.8 68.2 44.8 32.9 44.8 32.9z m414.1-743.8s18.8-4.7 12.8 12.5c0 0-17.5 6-12.8-12.5z"
 
   return (
-    <div className="px-6 pb-1 -translate-y-[35px] cursor-pointer select-none group" data-cursor-hover onClick={launch}>
-      <div className="relative h-10 flex items-center justify-center overflow-visible">
+    <div className="cursor-pointer select-none group" data-cursor-hover onClick={launch}>
+      <div className="relative h-8 flex items-center overflow-visible">
         <div className={`transition-all duration-500 ${
           phase === 'fly' ? 'opacity-0 scale-50' :
           'opacity-100 group-hover:-translate-y-0.5'
@@ -167,7 +167,7 @@ export default function Navigation() {
           <button
             ref={setBtnRef(link.sectionId)}
             data-cursor-interactive onClick={() => handleNav(link.sectionId)}
-            className={`nav-link block w-full py-2 text-left text-base transition-colors md:px-6 ${
+            className={`nav-link block w-full py-2 text-left text-sm transition-colors ${
               activeId === link.sectionId
                 ? 'nav-active font-bold text-accent text-xl'
                 : 'font-normal text-white/50 hover:text-white/80'
@@ -190,7 +190,7 @@ export default function Navigation() {
     <ul ref={listRef} className="flex flex-col gap-0.5 relative">
       {/* Sliding indicator — desktop only */}
       <li
-        className="absolute left-0 w-3 h-px bg-accent pointer-events-none"
+        className="absolute -left-4 w-3 h-px bg-accent pointer-events-none"
         style={{
           transform: `translateY(${indicatorY}px)`,
           transition: 'transform 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
@@ -240,20 +240,20 @@ export default function Navigation() {
       {/* Desktop: fixed left sidebar card */}
       <aside className="fixed top-3 left-3 bottom-3 z-40 hidden md:flex w-[220px] flex-col bg-[#121214] border border-[#1f1f23] rounded-2xl shadow-[4px_0_30px_rgba(0,0,0,0.6)] overflow-hidden">
         <div className="px-5 pb-4 space-y-3" style={{ paddingTop: '4vh' }}>
-          <button onClick={() => scrollTo('intro')} className="block">
-            <img src={import.meta.env.BASE_URL + 'images/logo.png'} alt="Logo" className="w-9 h-9 object-contain" />
-          </button>
-          <button onClick={() => scrollTo('intro')} className="nav-site-name block text-sm font-medium tracking-wide text-white/60">
+          <div className="flex items-center justify-between">
+            <button onClick={() => scrollTo('intro')} className="block">
+              <img src={import.meta.env.BASE_URL + 'images/logo.png'} alt="Logo" className="w-9 h-9 object-contain" />
+            </button>
+            {/* <NavEasterEgg /> */}
+          </div>
+          <button onClick={() => scrollTo('intro')} className="nav-site-name block text-sm font-normal tracking-wide text-white/60">
             {siteConfig.name}
           </button>
         </div>
         <nav className="flex-1 px-5">{desktopNavLinks}</nav>
 
-        {/* ════ Easter Egg: Flying Bird ════ */}
-        <NavEasterEgg />
-
         <div className="px-5 pb-4">
-          <p className="text-[0.6rem] text-text-tertiary text-center">
+          <p className="text-[0.6rem] text-text-tertiary text-left">
             &copy; BIRDY DESIGN 2026.<br />ALL RIGHTS RESERVED.
           </p>
         </div>

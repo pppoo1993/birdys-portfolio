@@ -33,7 +33,8 @@ function TagsRow({ tags }: { tags: string[] }) {
   }, [tags, measure])
 
   return (
-    <div ref={wrapperRef} className="mt-3 md:mt-8 pt-3 md:pt-5 overflow-hidden relative">
+    <div ref={wrapperRef} className="mt-3 md:mt-8 overflow-hidden relative">
+      <div className="w-full h-px mb-3 md:mb-5" style={{ background: '#27272a' }} />
       {/* Visible row */}
       <div className="font-mono text-[11px] text-[#71717a] whitespace-nowrap group-hover:text-[#a1a1aa] transition-colors duration-300">
         {tags.slice(0, count).map((tag, idx) => (
@@ -161,14 +162,26 @@ export default function Projects() {
                         </h3>
                       </div>
                       {project.detail?.subtitle && (
-                        <p className="text-base md:text-lg text-[#d4d4d8] font-normal mb-2">
+                        <p className="text-base md:text-lg text-[#d4d4d8] font-normal mb-3">
                           {project.detail.subtitle}
                         </p>
                       )}
-                      <div className="w-10 h-px mb-2" style={{ background: '#333333' }} />
                       <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light mb-0">
                         {project.description}
                       </p>
+
+                      {/* CTA Button */}
+                      <button
+                        onClick={(e) => { e.stopPropagation(); setSelectedProject(project) }}
+                        className="mt-5 px-5 py-2 text-[13px] font-medium text-[#a1a1aa] rounded-full transition-all duration-300 hover:text-white"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))',
+                          border: '1px solid rgba(255,255,255,0.08)',
+                          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.04)',
+                        }}
+                      >
+                        查看详情
+                      </button>
                     </div>
 
                     {/* Tags */}
