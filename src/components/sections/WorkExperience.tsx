@@ -65,13 +65,13 @@ export default function WorkExperience() {
                     : 'opacity-60 border-b-[3px] border-transparent bg-white/[0.02]'
                 }`}
               >
-                <span className={`font-mono block text-[10px] ${isActive ? 'text-[#C7FF00] font-bold' : 'text-zinc-500'}`}>
+                <span className={`font-mono block text-[10px] ${isActive ? 'text-[#C7FF00] font-bold' : 'text-[#8a8a8a]'}`}>
                   {t}
                 </span>
                 <span className={`block truncate text-xs mt-0.5 ${isActive ? 'text-[#C7FF00] font-bold' : 'text-white'}`}>
                   {item.company}
                 </span>
-                <span className={`block truncate text-[13px] mt-0.5 ${isActive ? 'text-zinc-400' : 'text-zinc-600'}`}>
+                <span className={`block truncate text-[13px] mt-0.5 ${isActive ? 'text-[#a0a0a0]' : 'text-[#8a8a8a]'}`}>
                   {item.role}
                 </span>
               </div>
@@ -88,7 +88,7 @@ export default function WorkExperience() {
                 <ul className="space-y-1.5">
                   {group.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-2 text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
-                      <span className="text-[#C7FF00]/60 mt-[6px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#C7FF00]/60" />
+                      <span className="text-[#C7FF00] mt-[6px] opacity-60 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#8a8a8a]" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -116,13 +116,13 @@ export default function WorkExperience() {
                     : 'border-l-[3px] border-l-transparent bg-white/[0.015] hover:bg-white/[0.03] py-2 md:py-3'
                 }`}
               >
-                <span className={`font-mono transition-all duration-300 ${isActive ? 'tl-date-active text-xs md:text-sm text-[#C7FF00]' : 'tl-date-inactive text-[13px] text-zinc-500'}`}>
+                <span className={`font-mono transition-all duration-300 ${isActive ? 'tl-date-active text-xs md:text-sm text-[#C7FF00]' : 'tl-date-inactive text-[13px] text-[#9a9a9a]'}`}>
                   {t}
                 </span>
                 <p className={`font-semibold truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-company-active text-base md:text-lg text-[#C7FF00]' : 'tl-company-inactive text-xs md:text-sm text-white'}`}>
                   {item.company}
                 </p>
-                <p className={`font-normal truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-role-active text-xs md:text-sm text-zinc-300' : 'tl-role-inactive text-[13px] text-zinc-500'}`}>
+                <p className={`font-normal truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-role-active text-xs md:text-sm text-[#c0c0c0]' : 'tl-role-inactive text-[13px] text-[#9a9a9a]'}`}>
                   {item.role}
                 </p>
               </div>
@@ -139,7 +139,7 @@ export default function WorkExperience() {
                 <ul className="space-y-1.5">
                   {group.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-2.5 text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
-                      <span className="text-[#C7FF00]/60 mt-[7px] flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#C7FF00]/60" />
+                      <span className="text-[#C7FF00] mt-[7px] opacity-60 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#8a8a8a]" />
                       <span>{item}</span>
                     </li>
                   ))}

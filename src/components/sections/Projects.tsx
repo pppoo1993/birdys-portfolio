@@ -36,15 +36,15 @@ function TagsRow({ tags }: { tags: string[] }) {
     <div ref={wrapperRef} className="mt-3 md:mt-8 overflow-hidden relative">
       <div className="w-full h-px mb-3 md:mb-5" style={{ background: '#27272a' }} />
       {/* Visible row */}
-      <div className="font-mono text-[11px] text-[#71717a] whitespace-nowrap group-hover:text-[#a1a1aa] transition-colors duration-300">
+      <div className="text-[12px] text-[#8a8a8a] font-light whitespace-nowrap group-hover:text-[#a1a1aa] transition-colors duration-300">
         {tags.slice(0, count).map((tag, idx) => (
           <span key={tag}>
-            {tag}{idx < Math.min(count, tags.length) - 1 ? <span className="text-[#3f3f46]"> / </span> : ''}
+            {tag}{idx < Math.min(count, tags.length) - 1 ? <span className="text-[#52525b]"> &nbsp;/&nbsp; </span> : ''}
           </span>
         ))}
       </div>
       {/* Hidden measurement row */}
-      <div ref={measureRef} className="font-mono text-[11px] absolute invisible whitespace-nowrap pointer-events-none top-0 left-0" aria-hidden="true">
+      <div ref={measureRef} className="text-[12px] font-light absolute invisible whitespace-nowrap pointer-events-none top-0 left-0" aria-hidden="true">
         {tags.map((tag, idx) => (
           <span key={tag}>
             {tag}{idx < tags.length - 1 ? <span className="text-[#3f3f46]"> / </span> : ''}
@@ -229,10 +229,10 @@ export default function Projects() {
                           }}>
                           <div className="h-[140px] opacity-30" style={{ background: 'linear-gradient(to bottom, #222, #16161a)' }} />
                           <div className="px-2.5 grid grid-cols-2 gap-1.5 -mt-10">
-                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#71717a]">画画</div>
-                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#71717a]">台词</div>
-                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#71717a]">接龙</div>
-                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#71717a]">MV</div>
+                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#8a8a8a]">画画</div>
+                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#8a8a8a]">台词</div>
+                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#8a8a8a]">接龙</div>
+                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#8a8a8a]">MV</div>
                           </div>
                           <div className="mx-2.5 mt-3 h-8 rounded-2xl flex items-center justify-center"
                             style={{ background: 'linear-gradient(90deg, #0099ff, #0066cc)', boxShadow: '0 4px 12px rgba(0,102,204,0.4)' }}>
@@ -293,52 +293,60 @@ export default function Projects() {
                     )}
 
                     {project.id === 'project-1' && (
-                      <div className="relative" style={{ width: '200px', aspectRatio: '200/310' }}>
-                        {/* Vibes — stacked 3D dual phones with dynamic island */}
-                        <div className="phone-bg absolute w-[148px] h-[296px] bg-[#111114] rounded-[20px] overflow-hidden opacity-40 transition-all duration-500 group-hover:opacity-60"
+                      <div className="relative" style={{ width: '240px', aspectRatio: '240/190' }}>
+                        {/* Pad — stacked 3D dual tablets, landscape */}
+                        <div className="phone-bg absolute w-[210px] h-[148px] bg-[#111114] rounded-[16px] overflow-hidden opacity-40 transition-all duration-500 group-hover:opacity-60"
                           style={{
                             top: '50%', left: '50%',
-                            marginTop: '-148px', marginLeft: '-74px',
-                            transform: isHovered ? 'rotateY(18deg) rotateX(14deg) rotateZ(12deg) translateZ(-30px) translateX(-25px) scale(0.88)' : 'rotateY(15deg) rotateX(12deg) rotateZ(10deg) translateZ(-20px) translateX(-20px) scale(0.9)',
+                            marginTop: '-74px', marginLeft: '-105px',
+                            transform: isHovered ? 'rotateY(12deg) rotateX(8deg) translateZ(-20px) translateX(-20px) scale(0.88)' : 'rotateY(10deg) rotateX(6deg) translateZ(-15px) translateX(-15px) scale(0.9)',
                             border: '2px solid #242427',
                             boxShadow: isHovered ? '0 20px 50px rgba(0,0,0,0.95)' : '0 15px 40px rgba(0,0,0,0.85)',
                           }}>
-                          <div className="p-2.5 flex flex-col gap-1.5">
-                            <div className="h-[15px] bg-[#222] rounded w-[40%]" />
-                            <div className="h-[100px] bg-[#1a1a1f] rounded-md" />
-                            <div className="h-[80px] bg-[#1a1a1f] rounded-md" />
+                          <div className="p-3 flex gap-2">
+                            <div className="w-[100px] h-[100px] bg-[#1a1a1f] rounded-md" />
+                            <div className="flex-1 flex flex-col gap-1.5">
+                              <div className="h-[12px] bg-[#222] rounded w-[60%]" />
+                              <div className="h-[8px] bg-[#222] rounded w-[80%]" />
+                              <div className="h-[8px] bg-[#222] rounded w-[40%]" />
+                            </div>
                           </div>
                         </div>
-                        <div className="phone-fg absolute w-[148px] h-[296px] rounded-[20px] overflow-hidden z-5 transition-all duration-500"
+                        <div className="phone-fg absolute w-[220px] h-[155px] rounded-[18px] overflow-hidden z-5 transition-all duration-500"
                           style={{
                             top: '50%', left: '50%',
-                            marginTop: '-148px', marginLeft: '-74px',
-                            transform: isHovered ? 'rotateY(12deg) rotateX(10deg) rotateZ(12deg) translateZ(65px) translateX(15px) scale(0.94)' : 'rotateY(10deg) rotateX(8deg) rotateZ(10deg) translateZ(45px) translateX(10px) scale(0.92)',
+                            marginTop: '-77px', marginLeft: '-110px',
+                            transform: isHovered ? 'rotateY(8deg) rotateX(5deg) translateZ(50px) translateX(15px) scale(0.94)' : 'rotateY(6deg) rotateX(3deg) translateZ(35px) translateX(10px) scale(0.92)',
                             boxShadow: isHovered ? '0 20px 50px rgba(0,0,0,0.95)' : '0 15px 40px rgba(0,0,0,0.85)',
                             background: '#161a18',
                             border: isHovered ? '2px solid #3f3f46' : '2px solid #27272a',
                           }}>
-                          {/* Dynamic island notch */}
-                          <div className="h-[18px] bg-[#09090b] flex justify-center items-center">
-                            <div className="w-[35px] h-[4px] bg-[#222] rounded-sm" />
+                          {/* Status bar */}
+                          <div className="h-[14px] bg-[#09090b] flex items-center justify-between px-3">
+                            <div className="w-[40px] h-[3px] bg-[#333] rounded-sm" />
+                            <div className="w-[18px] h-[3px] bg-[#333] rounded-sm" />
                           </div>
-                          <div className="h-[100px] opacity-30" style={{ background: 'linear-gradient(to bottom, #1a1a1e, #16161a)' }} />
-                          <div className="px-3 -mt-10">
-                            <div className="flex items-end gap-0.5 h-[50px] justify-center">
-                              {[6,12,8,16,10,18,7,14,9,11,15,8].map((h,i) => (
-                                <div key={i} className="w-[6px] rounded-t-sm" style={{ height: `${h}px`, background: i%3===0 ? '#10b981' : 'rgba(16,185,129,0.25)' }} />
-                              ))}
-                            </div>
-                            <div className="grid grid-cols-2 gap-1 mt-2">
-                              <div className="h-[32px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center justify-center text-[7px] text-[#a1a1aa]">高能</div>
-                              <div className="h-[32px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center justify-center text-[7px] text-[#a1a1aa]">愉悦</div>
-                              <div className="h-[32px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center justify-center text-[7px] text-[#a1a1aa]">平静</div>
-                              <div className="h-[32px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center justify-center text-[7px] text-[#a1a1aa]">忧郁</div>
+                          {/* Video player area */}
+                          <div className="h-[80px] mx-3 mt-2 rounded-md flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #1a1a20, #111)' }}>
+                            <div className="w-7 h-7 rounded-full bg-[#C7FF00]/20 flex items-center justify-center">
+                              <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-[#C7FF00] ml-0.5" />
                             </div>
                           </div>
-                          <div className="mx-3 mt-1.5 h-8 rounded-2xl flex items-center justify-center"
-                            style={{ background: 'linear-gradient(90deg, #10b981, #059669)', boxShadow: '0 4px 12px rgba(16,185,129,0.4)' }}>
-                            <span className="text-white text-[9px] font-bold tracking-wider">播放音乐</span>
+                          {/* Controls */}
+                          <div className="px-3 mt-2 flex items-center gap-2">
+                            <div className="flex-1 h-[3px] bg-[#2a2a2a] rounded relative">
+                              <div className="absolute left-0 top-0 h-full w-[35%] bg-[#C7FF00]/80 rounded" />
+                              <div className="absolute left-[35%] -top-[2px] w-[7px] h-[7px] rounded-full bg-[#C7FF00]" />
+                            </div>
+                            <span className="text-[8px] text-[#52525b] font-mono">1:23</span>
+                          </div>
+                          {/* Bottom actions */}
+                          <div className="px-3 mt-2 flex items-center justify-between">
+                            <div className="flex gap-2">
+                              <div className="w-[22px] h-[22px] rounded-md bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)]" />
+                              <div className="w-[22px] h-[22px] rounded-md bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)]" />
+                            </div>
+                            <div className="text-[8px] text-[#8a8a8a] font-mono">1080p</div>
                           </div>
                         </div>
                       </div>

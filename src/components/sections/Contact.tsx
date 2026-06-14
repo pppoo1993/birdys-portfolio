@@ -18,8 +18,8 @@ export default function Contact() {
               但体验的本质<span className="text-accent font-semibold">不曾改变</span>。
             </h3>
 
-            <p className="text-zinc-500 text-sm md:text-base font-normal tracking-wider pt-2">
-              下一个新时代的产品，<span className="text-zinc-300 border-b border-zinc-800 pb-1 hover:border-accent transition-colors ">一起聊聊吗？</span>
+            <p className="text-[#9a9a9a] text-sm md:text-base font-normal tracking-wider pt-2">
+              下一个新时代的产品，<span className="text-[#c0c0c0] border-b border-zinc-800 pb-1 hover:border-accent transition-colors ">一起聊聊吗？</span>
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <span className="text-xs text-zinc-400 tracking-wider group-hover:text-[#C7FF00] transition-colors duration-200">
+              <span className="text-xs text-[#a0a0a0] tracking-wider group-hover:text-[#C7FF00] transition-colors duration-200">
                 扫码添加微信
               </span>
             </div>

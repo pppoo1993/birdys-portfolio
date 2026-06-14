@@ -272,18 +272,18 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                       <div className="flex flex-col md:flex-row gap-8 md:gap-14 items-center md:items-stretch">
                         <div className="flex-1 flex flex-col justify-between">
                           <div>
-                            <h2 className="text-[24px] md:text-[28px] font-bold text-white tracking-tight leading-tight mb-1">
+                            <h2 className="text-[28px] md:text-[32px] font-semibold text-white tracking-tight leading-tight mb-1">
                               {project.title}
                               <span className="text-zinc-500 font-normal"> · {project.detail.mainTitle}</span>
                             </h2>
-                            <p className="text-sm text-zinc-500 font-light tracking-wide mb-3">
+                            <p className="text-base md:text-lg text-[#d4d4d8] font-normal mb-3">
                               {project.detail.subtitle}
                             </p>
                             <div className="w-12 h-px bg-zinc-700 mb-4" />
                             {section.body && (
                               <div
                                 className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
-                                style={{ color: '#A0A0A0', fontSize: '14px', lineHeight: '1.8' }}
+                                style={{ color: '#A0A0A0', fontSize: '13px', lineHeight: '1.6', letterSpacing: '0.02em' }}
                                 dangerouslySetInnerHTML={{ __html: section.body }}
                               />
                             )}
@@ -291,9 +291,12 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { setPreviewHtml(el.outerHTML) } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                             )}
                           </div>
-                          {/* Tech tags — align to bottom */}
-                          <div className="text-xs font-mono font-medium text-zinc-400 mt-4">
-                            {project.techStack.join(' / ')}
+                          <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
+                            {project.techStack.map((tag, idx) => (
+                              <span key={tag}>
+                                {tag}{idx < project.techStack.length - 1 ? <span className="text-[#52525b]"> &nbsp;/&nbsp; </span> : ''}
+                              </span>
+                            ))}
                           </div>
                         </div>
                         {/* Image placeholder */}
@@ -311,7 +314,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                         {section.body && (
                           <div
                             className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
-                            style={{ color: '#A0A0A0', fontSize: '14px', lineHeight: '1.8' }}
+                            style={{ color: '#A0A0A0', fontSize: '13px', lineHeight: '1.6', letterSpacing: '0.02em' }}
                             dangerouslySetInnerHTML={{ __html: section.body }}
                           />
                         )}

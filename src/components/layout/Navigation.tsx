@@ -4,6 +4,7 @@ import { siteConfig } from '../../data/site-config'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import { useScrollTo } from '../../hooks/useScrollTo'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function NavEasterEgg() {
   const [phase, setPhase] = useState<'idle' | 'flap' | 'fly'>('idle')
   const [particles, setParticles] = useState<{ id: number; x: number; y: number }[]>([])
@@ -170,7 +171,7 @@ export default function Navigation() {
             className={`nav-link block w-full py-2 text-left text-sm transition-colors ${
               activeId === link.sectionId
                 ? 'nav-active font-bold text-accent text-xl'
-                : 'font-normal text-white/50 hover:text-white/80'
+                : 'font-normal text-[#8a8a8a] hover:text-white/80'
             }`}
           >
             {link.label}
