@@ -343,7 +343,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
 
                   </div>
 
-                  {/* Gradient divider between pages */}
+                  {/* Divider between pages */}
                   {i < sections.length - 1 && (
                     <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center pointer-events-none">
                       <div className="w-full h-px bg-gradient-to-r from-transparent via-[#C7FF00]/25 to-transparent" />

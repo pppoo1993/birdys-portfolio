@@ -46,7 +46,7 @@ export default function App() {
       <div className="hero-bg-glow fixed inset-0 z-[100] pointer-events-none" />
 
       <Navigation />
-      <main ref={spotlightRef} className="spotlight md:pl-[240px]">
+      <main ref={spotlightRef} className="spotlight md:pl-[226px]">
         <Introduction />
         <WorkExperience />
         <Projects />

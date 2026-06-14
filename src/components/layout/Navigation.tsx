@@ -237,22 +237,22 @@ export default function Navigation() {
         </div>
       )}
 
-      {/* Desktop: fixed left sidebar */}
-      <aside className="fixed top-0 left-0 z-40 hidden h-screen w-[240px] flex-col border-r border-divider bg-bg-primary md:flex">
-        <div className="px-6 pb-6 space-y-4" style={{ paddingTop: '6vh' }}>
+      {/* Desktop: fixed left sidebar card */}
+      <aside className="fixed top-3 left-3 bottom-3 z-40 hidden md:flex w-[220px] flex-col bg-[#121214] border border-[#1f1f23] rounded-2xl shadow-[4px_0_30px_rgba(0,0,0,0.6)] overflow-hidden">
+        <div className="px-5 pb-4 space-y-3" style={{ paddingTop: '4vh' }}>
           <button onClick={() => scrollTo('intro')} className="block">
-            <img src={import.meta.env.BASE_URL + 'images/logo.png'} alt="Logo" className="w-10 h-10 object-contain" />
+            <img src={import.meta.env.BASE_URL + 'images/logo.png'} alt="Logo" className="w-9 h-9 object-contain" />
           </button>
-          <button onClick={() => scrollTo('intro')} className="nav-site-name block text-base font-medium tracking-wide text-white/60">
+          <button onClick={() => scrollTo('intro')} className="nav-site-name block text-sm font-medium tracking-wide text-white/60">
             {siteConfig.name}
           </button>
         </div>
-        <nav className="flex-1">{desktopNavLinks}</nav>
+        <nav className="flex-1 px-5">{desktopNavLinks}</nav>
 
         {/* ════ Easter Egg: Flying Bird ════ */}
         <NavEasterEgg />
 
-        <div className="px-6 pb-4">
+        <div className="px-5 pb-4">
           <p className="text-[0.6rem] text-text-tertiary text-center">
             &copy; BIRDY DESIGN 2026.<br />ALL RIGHTS RESERVED.
           </p>
