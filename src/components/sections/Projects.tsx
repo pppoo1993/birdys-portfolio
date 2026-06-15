@@ -3,6 +3,9 @@ import { motion } from 'framer-motion'
 import ProjectDetail from '../ui/ProjectDetail'
 import { projectData } from '../../data/projects'
 import type { Project } from '../../types'
+import MockupChijing from '../ui/MockupChijing'
+import MockupLive from '../ui/MockupLive'
+import MockupPad from '../ui/MockupPad'
 
 function TagsRow({ tags }: { tags: string[] }) {
   const wrapperRef = useRef<HTMLDivElement>(null)
@@ -227,17 +230,7 @@ export default function Projects() {
                             background: '#161a1e',
                             border: isHovered ? '2px solid #3f3f46' : '2px solid #27272a',
                           }}>
-                          <div className="h-[140px] opacity-30" style={{ background: 'linear-gradient(to bottom, #222, #16161a)' }} />
-                          <div className="px-2.5 grid grid-cols-2 gap-1.5 -mt-10">
-                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#8a8a8a]">画画</div>
-                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#8a8a8a]">台词</div>
-                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#8a8a8a]">接龙</div>
-                            <div className="h-[45px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center justify-center text-[8px] text-[#8a8a8a]">MV</div>
-                          </div>
-                          <div className="mx-2.5 mt-3 h-8 rounded-2xl flex items-center justify-center"
-                            style={{ background: 'linear-gradient(90deg, #0099ff, #0066cc)', boxShadow: '0 4px 12px rgba(0,102,204,0.4)' }}>
-                            <span className="text-white text-[9px] font-bold tracking-wider">AI 创作视频</span>
-                          </div>
+                          <MockupChijing />
                         </div>
                       </div>
                     )}
@@ -268,26 +261,7 @@ export default function Projects() {
                             background: '#17151a',
                             border: isHovered ? '2px solid #3f3f46' : '2px solid #27272a',
                           }}>
-                          <div className="h-[100px] opacity-30" style={{ background: 'linear-gradient(to bottom, #1a1a1e, #16161a)' }} />
-                          <div className="px-2.5 -mt-10 space-y-1.5">
-                            <div className="h-[36px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-md flex items-center px-2 gap-1.5">
-                              <div className="w-3 h-3 rounded-full bg-[#C7FF00] shrink-0" />
-                              <div className="flex-1 h-1.5 bg-[rgba(255,255,255,0.06)] rounded" />
-                            </div>
-                            <div className="h-[36px] bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.05)] rounded-md flex items-center px-2 gap-1.5">
-                              <div className="w-3 h-3 rounded-full bg-[#71717a] shrink-0" />
-                              <div className="flex-1 h-1.5 bg-[rgba(255,255,255,0.06)] rounded" />
-                            </div>
-                            <div className="h-[40px] flex items-center justify-center gap-2 mt-1">
-                              {['🎁','💎','🌟'].map((e,i) => (
-                                <div key={i} className="w-[30px] h-[30px] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-lg flex items-center justify-center text-[13px]">{e}</div>
-                              ))}
-                            </div>
-                          </div>
-                          <div className="mx-2.5 mt-2 h-8 rounded-2xl flex items-center justify-center"
-                            style={{ background: 'linear-gradient(90deg, #ec4899, #a855f7)', boxShadow: '0 4px 12px rgba(236,72,153,0.4)' }}>
-                            <span className="text-white text-[9px] font-bold tracking-wider">送礼互动</span>
-                          </div>
+                          <MockupLive />
                         </div>
                       </div>
                     )}
@@ -321,33 +295,7 @@ export default function Projects() {
                             background: '#161a18',
                             border: isHovered ? '2px solid #3f3f46' : '2px solid #27272a',
                           }}>
-                          {/* Status bar */}
-                          <div className="h-[14px] bg-[#09090b] flex items-center justify-between px-3">
-                            <div className="w-[40px] h-[3px] bg-[#333] rounded-sm" />
-                            <div className="w-[18px] h-[3px] bg-[#333] rounded-sm" />
-                          </div>
-                          {/* Video player area */}
-                          <div className="h-[80px] mx-3 mt-2 rounded-md flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #1a1a20, #111)' }}>
-                            <div className="w-7 h-7 rounded-full bg-[#C7FF00]/20 flex items-center justify-center">
-                              <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-[#C7FF00] ml-0.5" />
-                            </div>
-                          </div>
-                          {/* Controls */}
-                          <div className="px-3 mt-2 flex items-center gap-2">
-                            <div className="flex-1 h-[3px] bg-[#2a2a2a] rounded relative">
-                              <div className="absolute left-0 top-0 h-full w-[35%] bg-[#C7FF00]/80 rounded" />
-                              <div className="absolute left-[35%] -top-[2px] w-[7px] h-[7px] rounded-full bg-[#C7FF00]" />
-                            </div>
-                            <span className="text-[8px] text-[#52525b] font-mono">1:23</span>
-                          </div>
-                          {/* Bottom actions */}
-                          <div className="px-3 mt-2 flex items-center justify-between">
-                            <div className="flex gap-2">
-                              <div className="w-[22px] h-[22px] rounded-md bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)]" />
-                              <div className="w-[22px] h-[22px] rounded-md bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)]" />
-                            </div>
-                            <div className="text-[8px] text-[#8a8a8a] font-mono">1080p</div>
-                          </div>
+                          <MockupPad />
                         </div>
                       </div>
                     )}
