@@ -16,7 +16,7 @@ export const projectData: Project[] = [
       sections: [
         {
           heading: '引言：商业极限下的终局反思',
-          body: '',
+          body: '基于终端行为分析，我们将 Pad 端播放页的价值重新锚定为三大战略支点，以此校准信息优先级：',
           html: `<style>.hl-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 1.5rem;font-weight:300;letter-spacing:0.01em}.hl-p b{color:#FFFFFF;font-weight:600}.hl-p:last-child{margin-bottom:0}</style>
 <p class="hl-p">「吃鲸AI」是爱奇艺内部孵化的生成式 AI 原生互动社区。我主导了从概念到上线验证的全流程体验设计，跑通了<b>「消费分发 → 生产赋能 → 闭环沉淀」</b>的完整链路。</p>
 <p class="hl-p">虽受限于技术成熟度与平台基因，项目未能实现商业模式的跑通，但这并非设计的止步——这段经历给我带来更多是关于商业、技术、平台限制和设计解法上的思考。</p>`,
@@ -255,7 +255,7 @@ export const projectData: Project[] = [
 	.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}
 	.qt-flow-row{display:flex;align-items:center;gap:28px;margin:0}
 	.qt-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
-	.qt-screen-box{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+	.qt-screen-box{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
 	.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
 	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px}
 	@media(max-width:767px){.qt-chart{max-width:100%}.qt-flow-row{flex-wrap:wrap;justify-content:center;gap:12px}.qt-node{flex:1 1 40%;min-width:140px}.qt-operator{display:none}.qt-screen-box{max-width:180px;margin:0 auto}}
@@ -898,45 +898,189 @@ export const projectData: Project[] = [
     },
   },
   {
+    
+    
     id: 'project-1',
     title: 'Pad端播放器',
     description:
-      '以"音乐情绪"为核心的社交应用，用户通过分享当下心情音乐来连接同频的人，上线首月获 5 万注册用户。',
+      'Pad 端播放页交互设计负责人，主导从"三分屏"到"二分屏"的架构重构，以沉浸消费为核心，显著提升长视频完播率与连播转化效率。',
     imagePath: 'https://picsum.photos/seed/project1/1200/800',
-    techStack: ['iOS', 'Android', 'Motion Design', 'Prototyping', 'Principle'],
-    liveUrl: 'https://example.com',
+    techStack: ['Pad UX', '交互设计', '用户调研', '体验架构', '设计系统'],
     detail: {
-      pageTitle: 'Vibes · 音乐社交',
-      mainTitle: '用音乐情绪连接同频的人',
-      subtitle: '一款以情感共鸣为核心的轻社交产品设计',
+      pageTitle: 'Pad端播放器',
+      mainTitle: '构建极致沉浸的视听生态',
+      subtitle: '交互设计负责人 · Pad 端播放体验重构',
       sections: [
         {
-          heading: '产品洞察',
-          body: '传统音乐 App 围绕"歌单"和"歌手"组织内容，但音乐消费的本质往往不是"听什么"，而是"此刻我是什么心情"。我们想做一个以情绪为入口的音乐社交产品——用户分享的不是一首歌，而是一个"此刻的心情"。',
+          heading: 'Pad 端播放页',
+          body: '本项目致力于爱奇艺 iPad 端播放体验的体系化重构。作为交互设计 Owner，我全链路主导了从痛点挖掘、策略推导到组件化落地的全过程。针对原"三分屏"布局导致的信息过载及适配断层，本项目跳出传统的流量分发思维，以"沉浸消费"为核心，将架构由"三分屏"精简至"二分屏"。通过重构大屏信息黄金比例，在解决系统适配断层的同时，显著提升了长视频的完播率与连播转化效率，实现了从"功能堆叠"到"体验留存"的范式转移。',
         },
         {
-          heading: '设计策略',
-          body: '情绪入口设计：打开 App 的第一屏不是歌单，而是一个情绪矩阵（横轴：能量高低，纵轴：愉悦度），用户通过拖拽位置来表达当前心情。音乐可视化：播放页的动效随音乐节奏实时变化，每种情绪有不同的色彩主题和粒子效果。匹配机制：通过情绪距离算法，将"此刻心情相近"的用户连接——不是基于兴趣标签，而是基于情感共鸣。',
-          illustration: {
-            src: 'https://picsum.photos/seed/vibes-ui/1200/600',
-            alt: 'Vibes 界面设计',
-            caption: '情绪矩阵入口与音乐可视化播放页',
-          },
+          heading: '重构背景：Pad 端的"沉浸式"增长困境',
+          body: '在审视 Pad 端业务表现时，我们意识到原有的架构已无法承载高净值用户的观影需求。继续沿用手机端的流量策略不仅是功能的冗余，更是对用户体验的干扰，这导致了留存价值的持续流失。因此，针对 Pad 端的重构已势在必行。',
+          html: `<style>
+.pad2-row{display:flex;gap:16px;align-items:stretch;margin:24px 0}
+.pad2-card{flex:1;background:#1A1A1A;border:1px solid #333333;display:flex;flex-direction:column;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.pad2-card:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+.pad2-header{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:14px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
+.pad2-header::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.pad2-header::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.pad2-pair{display:flex;flex-direction:column;gap:12px}
+.pad2-item{padding:0;min-height:50px}
+.pad2-item h5{display:inline;color:#FFFFFF;font-size:13px;font-weight:600;margin:0}
+.pad2-item.solve h5{color:#FFFFFF}
+.pad2-item p{color:#A0A0A0;font-size:13px;line-height:1.6;margin:8px 0 0;font-weight:300}
+.pad2-item p b{color:#FFFFFF;font-weight:600}
+.pad2-label{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;margin-right:6px;font-family:monospace;font-weight:600}
+.pad2-label.pain{background:rgba(199,255,0,0.08);color:#C7FF00;border:1px solid rgba(199,255,0,0.2)}
+.pad2-label.solve{background:rgba(199,255,0,0.08);color:#C7FF00;border:1px solid rgba(199,255,0,0.2)}
+.pad2-arrow{color:#C7FF00;font-weight:600;letter-spacing:0.05em}@media(max-width:767px){.pad2-row{flex-direction:column!important}}
+</style>
+<div class="pad2-row">
+<div class="pad2-card">
+<div class="pad2-header">业务数据鸿沟</div>
+<div class="pad2-pair">
+<div class="pad2-item"><span class="pad2-label pain">现状</span><h5>用户价值被低估</h5><p>Pad 端虽用户量占比小于手机，但用户画像显示其多为<b>家庭高净值人群</b>，ARPU 值与会员付费倾向显著高于手机端。</p></div>
+<div class="pad2-item solve"><span class="pad2-label solve">痛点</span><h5>转化潜力被扼杀</h5><p>现有"三分屏"布局导致 Pad 端完播率与连播转化率长期滞后。手机的<b>"流量逻辑"</b>正在扼杀 Pad 端的"转化潜力"。</p></div>
+</div>
+</div>
+<div class="pad2-card">
+<div class="pad2-header">界面干扰与交互断层</div>
+<div class="pad2-pair">
+<div class="pad2-item"><span class="pad2-label pain">现状</span><h5>视觉干扰严重</h5><p>改版前的布局在长视频消费中造成<b>视觉干扰</b>，且在横竖屏切换中存在自适应适配问题，严重影响操作连贯性。</p></div>
+<div class="pad2-item solve"><span class="pad2-label solve">对比</span><h5>与行业严重错位</h5><p>对比行业领先的 Pad 端沉浸式布局，我们现有的"三分屏"模式已与<b>用户心智形成严重错位</b>。</p></div>
+</div>
+</div>
+<div class="pad2-card">
+<div class="pad2-header">战略转型路径</div>
+<div class="pad2-pair">
+<div class="pad2-item"><span class="pad2-label pain">目标</span><h5>高净值消费基地</h5><p>重新明确目标，将 Pad 端定位为平台的<b>"高净值内容消费基地"</b>。</p></div>
+<div class="pad2-item solve"><span class="pad2-label solve">行动</span><h5>体验留存替代流量分发</h5><p>从<span class="pad2-arrow">流量分发 → 体验留存</span>，通过重构布局将商业路径嵌入沉浸场景，以品质留存换取付费转化。</p></div>
+</div>
+</div>
+</div>`,
         },
         {
-          heading: '动效设计',
-          body: '动效是 Vibes 体验的核心差异化。我制定了完整的动效规范：转场采用弹性缓动（spring），时长 300-500ms；音乐播放页粒子系统跟随 BPM 实时变化；情绪切换时色彩渐变过渡，使用 LAB 色彩空间确保过渡平滑。所有动效都通过 Principle 制作原型并与开发团队逐一对接参数。',
-          illustration: {
-            src: 'https://picsum.photos/seed/motion-design/1200/600',
-            alt: '动效设计规范',
-            caption: '动效规范：时长、缓动曲线、BPM 映射关系',
-          },
+          heading: '用户调研：不同终端的心智差异',
+          body: '我们通过 30+ 场深度访谈，在真实场景中观察 Pad/手机双端用户的行为轨迹，从而揭开了界面背后的心理差异。',
+          html: `<style>
+.pad3-row{display:flex;gap:48px;align-items:stretch;justify-content:center;margin:24px 0}
+.pad3-col{flex:0 1 380px;display:flex;flex-direction:column;gap:12px}
+.pad3-col-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+.pad3-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.pad3-bubble{background:#1A1A1A;border:1px solid #333333;border-radius:8px;padding:14px 16px;position:relative;align-self:center}
+.pad3-bubble.pad::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1A1A1A;border-left:1px solid rgba(199,255,0,0.25);border-bottom:1px solid rgba(199,255,0,0.25);transform:translateY(-50%) rotate(45deg)}
+.pad3-bubble.phone::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1A1A1A;border-left:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);transform:translateY(-50%) rotate(45deg)}
+.pad3-bubble.pad{background:rgba(199,255,0,0.06);border-color:rgba(199,255,0,0.25)}
+.pad3-bubble.phone{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.12)}
+.pad3-bubble-text{color:#A0A0A0;font-size:13px;line-height:1.7;font-weight:300}
+.pad3-bubble-text b{color:#FFFFFF;font-weight:600}
+.pad3-quote{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.pad3-avatar{width:48px;height:48px;border-radius:50%;flex-shrink:0;overflow:hidden;border:1.5px solid #333;align-self:center;display:flex;align-items:center;justify-content:center;background:#1a1a1e}
+@media(max-width:767px){.pad3-row{flex-direction:column!important}}
+</style>
+<div class="pad3-row">
+<div class="pad3-col">
+<div class="pad3-col-title">Pad 用户</div>
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-1.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">Pad 对我来说是<b>"私人电影院"</b>，我不希望在观影时被打断。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-2.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">右侧栏太多推荐和密集的标签，让我觉得<b>内容不够沉浸</b>。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-3.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">我希望 Pad 端有<b>更纯粹的观影体验</b>，像在电影院一样专注。</p></div></div>
+</div>
+<div class="pad3-col">
+<div class="pad3-col-title">手机用户</div>
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-1.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">手机是在<b>通勤路上</b>用的，操作越快越好。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-2.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">我习惯<b>一边看一边刷评论</b>，是种陪伴感。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-3.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text"><b>弹幕和互动</b>让看视频更有趣，一个人看太无聊了。</p></div></div>
+</div>
+</div>
+<p style="color:#d4d4d8;font-size:15px;margin:24px 0 0;text-align:center;font-weight:500;line-height:1.8">用户在不同终端下存在明确的心智差异。<br>手机端追求信息的即时反馈，而 Pad 端用户则寻求观影的深度留存与纯净体验。<br>此差异揭示了传统"一刀切"设计的本质局限。</p>`,
         },
         {
-          heading: '上线数据',
-          body: '产品上线首月获得 5 万注册用户，日均使用时长 28 分钟，情绪匹配功能周活跃率 62%。用户反馈中最常出现的词是"治愈"和"懂我"，验证了"情绪共鸣"作为社交连接点的设计假设。',
+          heading: '双端差异策略：手机做"互动"，Pad 做"降噪"',
+          body: '在不同的硬件终端下，用户对"内容消费"的定义完全不同。基于此，我们将这些感性诉求提炼为严谨的"双端心智差异模型"。',
+          html: `<style>
+.pad4-chart{position:relative;width:100%;max-width:520px;height:340px;border-left:1px solid #3f3f46;border-bottom:1px solid #3f3f46;margin:40px auto 20px;background-image:linear-gradient(rgba(63,63,70,0.15) 1px,transparent 1px),linear-gradient(90deg,rgba(63,63,70,0.15) 1px,transparent 1px);background-size:50px 50px}
+.pad4-yl{position:absolute;left:8px;top:0px;font-size:13px;font-weight:500;color:#a0a0a0;white-space:nowrap}
+.pad4-xl{position:absolute;bottom:-28px;right:0;font-size:13px;font-weight:500;color:#a0a0a0}
+.pad4-cross-v{position:absolute;left:50%;top:0;bottom:0;width:0;border-left:1px dashed rgba(63,63,70,0.4)}
+.pad4-cross-h{position:absolute;left:0;right:0;top:50%;height:0;border-top:1px dashed rgba(63,63,70,0.4)}
+.pad4-box{width:190px;background:#141416;padding:16px 20px;border-radius:10px;position:absolute;box-shadow:0 4px 24px rgba(0,0,0,0.5)}
+.pad4-box.phone{border:1px solid rgba(255,255,255,0.2);top:50px;left:30px}
+.pad4-box.pad{border:1px solid #C7FF00;bottom:50px;right:30px;box-shadow:0 4px 24px rgba(199,255,0,0.08),0 4px 24px rgba(0,0,0,0.5)}
+.pad4-box h3{margin:0 0 8px 0;font-size:15px;font-weight:600}
+.pad4-box.phone h3{color:#FFFFFF}
+.pad4-box.pad h3{color:#C7FF00}
+.pad4-box p{font-size:12px;margin:0;color:#A0A0A0;line-height:1.6;white-space:nowrap}
+
+@media(max-width:767px){.pad4-chart{height:360px}.pad4-box{width:140px;padding:12px}.pad4-box p{white-space:normal}}
+</style>
+<div class="pad4-chart">
+<div class="pad4-cross-v"></div>
+<div class="pad4-cross-h"></div>
+<div class="pad4-yl">互动效率</div>
+<div class="pad4-xl">沉浸体验</div>
+<div class="pad4-box phone"><h3>Phone</h3><p>• 碎片化使用场景<br>• 机制驱动：高频触达<br>• 核心：社交与即时搜索</p></div>
+<div class="pad4-box pad"><h3>Pad</h3><p>• 沉浸式观影场景<br>• 视觉降噪：克制干扰<br>• 核心：品质与深层留存</p></div>
+
+</div>
+`,
+        },
+        {
+          heading: 'Pad 端重定位：以沉浸为体，以商业为用',
+          body: '基于终端行为分析，我们将 Pad 端播放页的价值重新锚定为三大战略支点，以此校准信息优先级。',
+          html: `<style>
+.pad5-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.pad5-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.pad5-card:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+.pad5-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
+.pad5-card:hover::before{opacity:.6}
+.pad5-num{font-family:monospace;font-size:10px;color:#C7FF00;margin-bottom:8px;display:block;font-weight:600}
+.pad5-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
+.pad5-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.pad5-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.pad5-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300}
+.pad5-desc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.pad5-grid{grid-template-columns:1fr!important}}
+</style>
+<div class="pad5-grid">
+<div class="pad5-card"><h4 class="pad5-title">核心消费场景</h4><p class="pad5-desc"><b>构建纯净观影阵地：</b>保障播放画面的视觉纯净，确立 Pad 端作为长视频内容完整消费的核心阵地。</p></div>
+<div class="pad5-card"><h4 class="pad5-title">深层内容生态</h4><p class="pad5-desc"><b>推动体验升维：</b>将琐碎互动升级为深度关联信息聚合（演职员专访、原著解读），实现从"孤立观影"向"内容价值探索"的跃迁。</p></div>
+<div class="pad5-card"><h4 class="pad5-title">商业转化枢纽</h4><p class="pad5-desc"><b>变干扰为服务：</b>构建克制且顺滑的转化链路，在保障沉浸体验的前提下，实现商业闭环的自然嵌入。</p></div>
+</div>
+<p style="color:#71717a;font-size:13px;margin:20px 0 0;text-align:right;font-weight:400">接下来，我们将基于这三大支点，展开具体的架构重构与交互设计。</p>`,
+        },
+        {
+          heading: '架构诊断：三分屏模式的体验错配',
+          body: '',
+          html: `<style>
+.pad6-split{display:flex;gap:24px;align-items:stretch;margin:24px 0}
+.pad6-left{flex-shrink:0;display:flex}
+.pad6-mockup{height:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pad6-mockup::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
+.pad6-mockup-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
+.pad6-right{flex:1;display:flex;flex-direction:column;gap:12px}
+.pad6-card{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.pad6-card:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+.pad6-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
+.pad6-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.pad6-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.pad6-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300}
+.pad6-card-desc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.pad6-split{flex-direction:column!important}.pad6-mockup{width:100%;max-width:240px;margin:0 auto}}
+</style>
+<div class="pad6-split">
+<div class="pad6-left">
+<div data-preview class="pad6-mockup"><img src="/birdys-portfolio/images/pad-player.png" alt="Pad 播放页截图" style="width:100%;height:100%;object-fit:cover" /></div>
+</div>
+<div class="pad6-right">
+<div class="pad6-card"><h4 class="pad6-card-title">视觉重心失衡</h4><p class="pad6-card-desc">右侧推荐流占据过大权重，导致<b>播放主体被边缘化</b>，破坏了 Pad 端应有的沉浸心智。</p></div>
+<div class="pad6-card"><h4 class="pad6-card-title">交互路径冗余</h4><p class="pad6-card-desc">播放器下方功能平铺，造成严重的<b>视觉噪音与认知过载</b>。</p></div>
+<div class="pad6-card"><h4 class="pad6-card-title">商业触达错位</h4><p class="pad6-card-desc">生硬的权益植入不仅未提升转化，反而因<b>干扰体验推高了用户跳出率</b>。</p></div>
+</div>
+</div>`,
         },
       ],
     },
   },
-]
+
+];
