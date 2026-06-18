@@ -10,14 +10,14 @@ export const introductionData: IntroductionData = {
     {
       number: '01',
       heading: '设计演变',
-      tag: 'EVOLUTION',
+      tag: 'About Design',
       body: '我的设计生涯是一场从 UI 构建到交互体验，再到 AI 全链路设计的持续进化。跨维度的职业积累赋予我跳出画布从商业与科技的底层逻辑去审视业务并重新定义体验价值的能力。',
       image: 'https://picsum.photos/seed/design-evo/600/400',
     },
     {
       number: '02',
       heading: '生活方式',
-      tag: 'DISCIPLINE',
+      tag: 'Life & Soul',
       body: '清晨 7 点的 CrossFit 是我生活的"底层代码"。训练场上的磨砺，赋予了我耐力与专注；每日变化的训练，让我更加沉稳与从容。CF 不仅使我受益于身体，更教会我该如何面对一切生活中的难题。',
       image: 'https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=600&h=400&fit=crop&q=80',
     },

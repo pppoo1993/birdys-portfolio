@@ -33,7 +33,7 @@ export default function WorkExperience() {
   return (
     <section
       id="experience"
-      className="relative w-full section-darker border-b border-divider py-16 md:py-20"
+      className="relative w-full section-darker border-b border-divider py-16"
     >
       <p className="heading-section mb-6 md:hidden px-4">Work Experience</p>
 
@@ -112,17 +112,17 @@ export default function WorkExperience() {
                 data-cursor-interactive
                 className={`cursor-pointer pl-6 pr-0 transition-all duration-300 ${
                   isActive
-                    ? 'bg-[#C7FF00]/[0.06] border-l-[3px] border-l-[#C7FF00] py-4 md:py-5'
-                    : 'border-l-[3px] border-l-transparent bg-white/[0.015] hover:bg-white/[0.03] py-2 md:py-3'
+                    ? 'bg-[#C7FF00]/[0.06] border-l-[3px] border-l-[#C7FF00] py-4'
+                    : 'border-l-[3px] border-l-transparent bg-white/[0.015] hover:bg-white/[0.03] py-2'
                 }`}
               >
-                <span className={`font-mono transition-all duration-300 ${isActive ? 'tl-date-active text-xs md:text-sm text-[#C7FF00]' : 'tl-date-inactive text-[13px] text-[#9a9a9a]'}`}>
+                <span className={`font-mono transition-all duration-300 ${isActive ? 'tl-date-active text-sm text-[#C7FF00]' : 'tl-date-inactive text-[13px] text-[#9a9a9a]'}`}>
                   {t}
                 </span>
-                <p className={`font-semibold truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-company-active text-base md:text-lg text-[#C7FF00]' : 'tl-company-inactive text-xs md:text-sm text-white'}`}>
+                <p className={`font-semibold truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-company-active text-lg text-[#C7FF00]' : 'tl-company-inactive text-sm text-white'}`}>
                   {item.company}
                 </p>
-                <p className={`font-normal truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-role-active text-xs md:text-sm text-[#c0c0c0]' : 'tl-role-inactive text-[13px] text-[#9a9a9a]'}`}>
+                <p className={`font-normal truncate mt-0.5 transition-all duration-300 ${isActive ? 'tl-role-active text-sm text-[#c0c0c0]' : 'tl-role-inactive text-[13px] text-[#9a9a9a]'}`}>
                   {item.role}
                 </p>
               </div>

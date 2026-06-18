@@ -1,22 +1,25 @@
 export default function MockupPad() {
   return (
-    <>
-      <div className="flex gap-0" style={{ height: '155px' }}>
-        <div className="flex-1 flex flex-col justify-center px-1.5" style={{ background: '#0a0a0c' }}>
-          <div className="w-full bg-[#111] rounded-sm flex items-center justify-center relative" style={{ aspectRatio: '4/3' }}>
-            <div className="w-5 h-5 rounded-full bg-[#C7FF00]/20 flex items-center justify-center">
-              <div className="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[7px] border-l-[#C7FF00] ml-0.5" />
-            </div>
-            <div className="absolute bottom-1 right-1 text-[7px] text-white/70 bg-black/60 px-1 rounded">1:23</div>
+    <div style={{ display: 'flex', height: '180px' }}>
+      <div style={{ width: '70%', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingLeft: '4px', paddingRight: '4px', background: '#09090b' }}>
+        <div style={{ width: '100%', background: '#111114', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', aspectRatio: '16/9' }}>
+          <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(0,217,90,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ width: 0, height: 0, borderTop: '6px solid transparent', borderBottom: '6px solid transparent', borderLeft: '10px solid #00D95A', marginLeft: '2px' }} />
           </div>
         </div>
-        <div className="w-[80px] px-2 py-2 flex flex-col gap-1" style={{ background: '#121215' }}>
-          <div className="text-[8px] text-[#a0a0a0] font-medium mb-0.5">选集</div>
-          {[1,2,3,4,5].map((ep) => (
-            <div key={ep} className={`h-[16px] rounded-sm flex items-center px-1.5 text-[7px] ${ep === 2 ? 'bg-[#C7FF00]/10 text-[#C7FF00] border border-[#C7FF00]/20' : 'text-[#6a6a6a]'}`}>{ep}. 第{ep}集</div>
-          ))}
-        </div>
       </div>
-    </>
+      <div style={{ width: '30%', padding: '10px 8px', display: 'flex', flexDirection: 'column', gap: '4px', background: '#18181b' }}>
+        <div style={{ height: '10px', width: '100%', background: 'rgba(255,255,255,0.1)', borderRadius: '2px', marginBottom: '6px' }} />
+        <div style={{ height: '5px', width: '20px', background: 'rgba(255,255,255,0.06)', borderRadius: '2px', marginBottom: '4px' }} />
+        {[1,2,3,4,5].map((i) => (
+          <div key={i} style={{
+            height: '16px',
+            borderRadius: '2px',
+            background: i === 2 ? 'rgba(0,217,90,0.1)' : 'rgba(255,255,255,0.03)',
+            border: i === 2 ? '1px solid rgba(0,217,90,0.15)' : 'none'
+          }} />
+        ))}
+      </div>
+    </div>
   )
 }

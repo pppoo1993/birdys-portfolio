@@ -92,8 +92,8 @@ function SplitRevealCard({ section }: { section: BioSection }) {
           transition: isMobile ? 'opacity 0.35s ease' : undefined,
         }}
       >
-        <h4 className="text-zinc-200 font-semibold text-base mb-2 tracking-wide flex items-center gap-2">
-          <span className="font-mono text-sm tracking-[0.05em]" style={{ color: '#ccff00' }}>[About Me {section.number}]</span> {section.heading}
+        <h4 className="text-zinc-200 font-semibold mb-2 tracking-wide flex items-center gap-2" style={{ fontSize: '16px' }}>
+          <span className="font-mono tracking-[0.05em]" style={{ color: '#ccff00', fontSize: '14px' }}>[{section.tag}]</span> {section.heading}
         </h4>
         <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
           {section.body}
