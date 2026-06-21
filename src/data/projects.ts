@@ -3,117 +3,115 @@ import type { Project } from '../types'
 export const projectData: Project[] = [
   {
     id: 'project-3',
-    title: '吃鲸AI',
+    title: '吃鲸 AI',
     description:
-      '交互设计负责人，从 0 到 1 搭建 AI 原生互动社区，跑通「消费分发 → 生产赋能 → 闭环沉淀」全链路，在商业与技术博弈中沉淀系统化交互资产。',
+      '吃鲸 AI 是爱奇艺孵化的 AI 互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路闭环。',
     imagePath: 'https://picsum.photos/seed/project3/1200/800',
-    techStack: ['生成式 AI', '交互设计', '体验架构', '商业复盘', '用户旅程', '组件化设计'],
+    techStack: ['AI 视频创作', '产品架构设计', '渐进式交互'],
     sourceUrl: 'https://github.com',
     detail: {
-      pageTitle: '吃鲸AI | 爱奇艺生成式 AI 视频互动平台',
-      mainTitle: '爱奇艺AI视频互动社区商业复盘',
-      subtitle: '生成式 AI 视频互动社区',
+      pageTitle: '吃鲸 AI | AI视频创作与消费闭环架构',
+      mainTitle: '',
+      subtitle: 'AI视频创作与消费闭环架构',
       sections: [
         {
-          heading: '引言：商业极限下的终局反思',
-          body: '基于终端行为分析，我们将 Pad 端播放页的价值重新锚定为三大战略支点，以此校准信息优先级：',
-          html: `<style>.hl-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 1.5rem;font-weight:300;letter-spacing:0.01em}.hl-p b{color:#FFFFFF;font-weight:600}.hl-p:last-child{margin-bottom:0}</style>
-<p class="hl-p">「吃鲸AI」是爱奇艺内部孵化的生成式 AI 原生互动社区。我主导了从概念到上线验证的全流程体验设计，跑通了<b>「消费分发 → 生产赋能 → 闭环沉淀」</b>的完整链路。</p>
-<p class="hl-p">虽受限于技术成熟度与平台基因，项目未能实现商业模式的跑通，但这并非设计的止步——这段经历给我带来更多是关于商业、技术、平台限制和设计解法上的思考。</p>`,
+          heading: '项目概述',
+          body: '吃鲸 AI 是爱奇艺孵化的 AI 互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路闭环。',
+          html: `<style>.role-text{color:#A0A0A0;font-size:13px;line-height:1.6;font-weight:300;margin:0;letter-spacing:0.02em}</style>
+<p class="role-text">作为设计 Owner，我主导了产品从 0 到 1 的全流程设计。通过定义渐进式交互范式，解决了 AI 创作门槛高的核心瓶颈，跑通了<b style="color:#FFFFFF;font-weight:600">「消费—创作—沉淀」</b>的生态增长逻辑。</p>`,
         },
         {
           heading: '缘起：长视频平台的生态自救',
           body: '爱奇艺切入 AI 视频，本质上是一场<b>「生产端降本 & 流量端防御」</b>的生态自救。爱奇艺试图用生成式 AI 视频作为武器，精准破解长视频行业既有的三大商业天花板。',
           html: `<style>
-@media(max-width:767px){.ba-row{flex-direction:column!important}.swot-grid{grid-template-columns:1fr!important}}
-/* 三栏对照容器 */
-.ba-row{display:flex;gap:16px;align-items:stretch;margin-bottom:28px}
-.ba-row .ba-section{flex:1;margin-bottom:0}
-/* 痛点-解法 对照组 */
-.ba-section{margin-bottom:0;background:rgba(255,255,255,.01);border:1px solid #333333;border-radius:4px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-.ba-section:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
-.ba-section:last-child{margin-bottom:0}
-.ba-header{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:14px;padding-bottom:10px;display:flex;align-items:center;gap:10px;position:relative}
-.ba-header::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.ba-header::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.ba-pair{display:flex;flex-direction:column;gap:10px;align-items:stretch}
-.ba-pain{flex:0 0 auto;padding:0;background:none;border:none;border-radius:0;min-height:80px}
-.ba-pain:hover{border-color:transparent}
-.ba-solve{flex:0 0 auto;padding:0;background:none;border:none;border-radius:0;min-height:80px}
-.ba-solve:hover{border-color:transparent}
-.ba-label{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;margin-right:6px;vertical-align:middle;font-family:monospace;letter-spacing:0.06em;font-weight:600}
-.ba-pain .ba-label{background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
-.ba-solve .ba-label{background:rgba(199,255,0,.06);color:#C7FF00;border:1px solid rgba(199,255,0,.12)}
-.ba-pain h5{display:inline;color:#FFFFFF;font-size:13px;font-weight:600;margin:0}
-.ba-solve h5{display:inline;color:#C7FF00;font-size:13px;font-weight:600;margin:0}
-.ba-pain p,.ba-solve p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:8px 0 0;font-weight:300}
-.ba-pain p b,.ba-solve p b{color:#FFFFFF;font-weight:600}
+.ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:0 auto}
+.ba-col{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.ba-col:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+.ba-header{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 14px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
+.ba-header::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.ba-header::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.ba-item{margin-bottom:14px}
+.ba-item:last-child{margin-bottom:0}
+.ba-item .tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;font-family:monospace;letter-spacing:.06em;font-weight:600;margin:0 8px 0 0;vertical-align:middle}
+.ba-item.pain .tag{background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
+.ba-item.solve .tag{background:rgba(199,255,0,.06);color:#C7FF00;border:1px solid rgba(199,255,0,.12)}
+.ba-item .ititle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0;display:inline;vertical-align:middle}
+.ba-item.solve .ititle{color:#C7FF00}
+.ba-item .idesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:8px 0 0}
+.ba-item .idesc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.ba-row{grid-template-columns:1fr;gap:12px}}
 </style>
-
 <div class="ba-row">
-<div class="ba-section">
+<div class="ba-col">
 <div class="ba-header">生产端</div>
-<div class="ba-pair">
-<div class="ba-pain"><span class="ba-label">痛点</span><h5>重资产死循环</h5><p>传统影视制作周期长、投资高、容错率低。平台需承担高昂制作成本，且面临高昂的废片率与市场不确定性。</p></div>
-<div class="ba-solve"><span class="ba-label">解法</span><h5>转嫁成本风险</h5><p>利用 AI <b>边际成本趋近于零</b>的特性，将高成本的影视制作转化为低成本的算力消耗，在保障质量的同时，彻底打破了传统创作的预算围墙。</p></div>
+<div class="ba-item pain"><span class="tag">痛点</span><span class="ititle">重资产死循环</span><p class="idesc">传统影视制作周期长、投入高、容错率低。</p></div>
+<div class="ba-item solve"><span class="tag">解法</span><span class="ititle">转嫁成本风险</span><p class="idesc">利用 AI 边际成本趋于零的特性，打破传统制作的预算围墙。</p></div>
 </div>
-</div>
-<div class="ba-section">
+<div class="ba-col">
 <div class="ba-header">变现端</div>
-<div class="ba-pair">
-<div class="ba-pain"><span class="ba-label">痛点</span><h5>线性 ROI 脆弱</h5><p>营收过度依赖单一的"广告+会员"订阅制，ARPU 值天花板明显，版权烧钱速度与平台收入增长严重脱节。</p></div>
-<div class="ba-solve"><span class="ba-label">解法</span><h5>拓宽付费场景</h5><p>将影视IP从"被动观看的内容"转化为"随手可得的生产要素"。激发用户对影视IP的掌控欲，顺理成章地<b>引入高毛利的 AI 算力购买模式</b>，打破订阅制天花板。</p></div>
+<div class="ba-item pain"><span class="tag">痛点</span><span class="ititle">线性 ROI 脆弱</span><p class="idesc">营收过度依赖"广告+会员"，ARPU 天花板低。</p></div>
+<div class="ba-item solve"><span class="tag">解法</span><span class="ititle">高毛利增值变现</span><p class="idesc">将 IP 资产转化为生产要素，引入高毛利 AI 增值购模式。</p></div>
 </div>
-</div>
-<div class="ba-section">
+<div class="ba-col">
 <div class="ba-header">流量端</div>
-<div class="ba-pair">
-<div class="ba-pain"><span class="ba-label">痛点</span><h5>用户注意力流失</h5><p>短视频平台利用极高分发效率吞噬娱乐时长。长视频固守传统单向喂养的"躺椅模式"，面临彻底失去年轻世代的危机。</p></div>
-<div class="ba-solve"><span class="ba-label">解法</span><h5>长短互哺流量闭环</h5><p>打通<b>"看正片 → AI 一键低摩擦二创 → 产生新梗吸引新用户回流正片"</b>的合法正版生态闭环。短视频的高频流动不再蚕食注意力，反而成了长视频版权资产的长尾增值工具。</p></div>
-</div>
+<div class="ba-item pain"><span class="tag">痛点</span><span class="ititle">用户注意力流失</span><p class="idesc">长视频"被动喂养"模式无法满足年轻一代对高频互动的需求。</p></div>
+<div class="ba-item solve"><span class="tag">解法</span><span class="ititle">全链路流量闭环</span><p class="idesc">打通<b>"看正片 → AI 二创 → 新梗回流"</b>链路，实现长视频版权的长尾增值。</p></div>
 </div>
 </div>`,
         },
         {
-          heading: 'SWOT 分析：核心挑战与破局方向',
+          heading: '挑战与破局：从 SWOT 模型看长视频的 AI 跨界',
           body: '',
           html: `<style>
-@media(max-width:767px){.swot-grid{grid-template-columns:1fr!important}}
-.swot-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
-.swot-item{background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-.swot-item:hover{border-color:#3f3f46;background:#1A1A1A;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
-.swot-item::after{content:attr(data-letter);position:absolute;top:-20px;right:-10px;font-size:100px;font-weight:900;color:rgba(255,255,255,.015);font-family:system-ui,-apple-system,sans-serif;line-height:1;pointer-events:none;z-index:0;letter-spacing:-0.02em}
-.swot-item>*{position:relative;z-index:1}
-.swot-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}.swot-title::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.swot-title::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.swot-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300}
-.swot-desc b{color:#FFFFFF;font-weight:600}
-.tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:24px 0 0;font-weight:300}
-.tx-p b{color:#FFFFFF;font-weight:600}
+.quadrant-wrap{position:relative;width:100%;max-width:640px;margin:0 auto 32px}
+.quad-cell .qwatermark{position:absolute;top:6px;right:8px;font-size:80px;font-weight:900;color:rgba(255,255,255,.025);font-family:system-ui,-apple-system,sans-serif;line-height:1;pointer-events:none;z-index:0;letter-spacing:-0.02em}
+.quadrant-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.quadrant-inner{grid-column:1/3;grid-row:1/3;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;position:relative;min-height:360px}
+.quadrant-inner::before,.quadrant-inner::after{content:"";position:absolute;background:#C7FF00;opacity:.25;z-index:0}
+.quadrant-inner::before{left:0;right:0;top:50%;height:1px;transform:translateY(-0.5px)}
+.quadrant-inner::after{top:0;bottom:0;left:50%;width:1px;transform:translateX(-0.5px)}
+.quadrant-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;background:#C7FF00;z-index:2;opacity:.6}
+.quad-cell{position:relative;z-index:1;padding:20px;display:flex;flex-direction:column;justify-content:center;transition:all .3s ease}
+.quad-cell:hover{background:rgba(199,255,0,.02)}
+.quad-cell .qlabel{color:#C7FF00;font-size:10px;font-weight:600;letter-spacing:.06em;margin-bottom:6px}
+.quad-cell .qtitle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px}
+.quad-cell .qdesc{color:#A0A0A0;font-size:12px;line-height:1.7;font-weight:300;margin:0}
+.quad-cell .qdesc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.quadrant-inner{min-height:300px}.quad-cell{padding:12px}.quad-cell .qtitle{font-size:12px}.quad-cell .qdesc{font-size:11px}}
 </style>
-<p class="tx-p">这套「长视频孵化 IP → AI 二创 → 流量反哺正片」的商业闭环，逻辑上完全跑得通。但在产品落地前，设计团队通过 SWOT 模型，理清了宏观环境下的核心挑战与体验枷锁。</p>
-
-<div class="swot-grid">
-<div class="swot-item" data-letter="S"><h4 class="swot-title">优势</h4><p class="swot-desc"><b>正版合规壁垒</b>：背靠爱奇艺海量长视频资产，天然具备独立 AI 工具无法企及的全链路法务合规与素材基础。<br><br><b>爆款 IP 引力</b>：直连《莲花楼》《唐朝诡事录》等高热度独家剧集，自带庞大粉丝基本盘与天然的二创玩梗心智。</p></div>
-<div class="swot-item" data-letter="O"><h4 class="swot-title">机会</h4><p class="swot-desc"><b>错位竞争</b>：放弃与即梦、可灵等专业视频工具的功能内卷，破局转向"低认知门槛的 AI 互动社区"。<br><br><b>角色升维</b>：通过界面重组，将影视版权从"只能被动观看的内容"，升维成用户随手可得的"生产要素"。</p></div>
-<div class="swot-item" data-letter="W"><h4 class="swot-title">劣势</h4><p class="swot-desc"><b>消费心智冲突</b>：长视频的基因是"躺椅模式（Lean-back）"的被动喂养；而 AI 二创天然要求强主动的"靠前交互（Lean-forward）"。<br><br><b>容错率极低</b>：AI 生成的早期"废片率"和不确定性，极易打破长视频用户对内容连续性、精美度的固有预期。</p></div>
-<div class="swot-item" data-letter="T"><h4 class="swot-title">威胁</h4><p class="swot-desc"><b>ROI 模式死穴</b>：单次视频渲染的 API 与算力成本极其高昂，传统长视频"广告+会员"的低 ARPU 模型根本无法覆盖。<br><br><b>赛道洗牌退潮</b>：专业工具已被头部软件垄断，而行业内类似的轻量化互动社区尝试已相继面临停服与清场。</p></div>
-</div>`,
-        },
+<div class="quadrant-wrap">
+<div class="quadrant-grid">
+<div class="quadrant-inner">
+<div class="quadrant-center"></div>
+<div class="quad-cell"><span class="qwatermark">S</span><span class="qlabel">优势</span><p class="qtitle">资产壁垒</p><p class="qdesc">依托爱奇艺长视频生态，构建了原生 AI 创作工具无法跨越的版权合规壁垒与核心 IP 素材库。</p></div>
+<div class="quad-cell"><span class="qwatermark">O</span><span class="qlabel">机会</span><p class="qtitle">传播增量</p><p class="qdesc">短视频的碎片化特性契合 AI 碎片化改写逻辑，影视版权资产具备转化为社区创作资产的爆发潜力。</p></div>
+<div class="quad-cell"><span class="qwatermark">W</span><span class="qlabel">劣势</span><p class="qtitle">心智鸿沟</p><p class="qdesc">长视频"被动喂养"模式与 AI 二创所需的"主动交互"存在认知偏差，且 AI 的生成不确定性易打破粉丝对角色人设与视觉美学的稳定预期。</p></div>
+<div class="quad-cell"><span class="qwatermark">T</span><span class="qlabel">威胁</span><p class="qtitle">ROI 承压</p><p class="qdesc">高质量生成的高昂算力成本，与社区轻量化互动带来的低 ARPU 商业模式存在结构性矛盾。</p></div>
+</div>
+</div>
+</div>`,        },
         {
           heading: '定位重塑：消费型 AI 互动社区',
-          body: '',
+          body: '基于上述分析，为规避专业生产力工具的内卷红海，我们确立了核心差异化定位：',
           html: `<style>
-.mani-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 0}
-.mani-line{color:#A0A0A0;font-size:15px;line-height:2.4;font-weight:300;margin:0}
-.mani-highlight{color:#C7FF00;font-size:24px;font-weight:700;line-height:1.6;margin:12px 0;letter-spacing:0.04em}
-.mani-footnote{color:#A0A0A0;font-size:15px;line-height:2.4;font-weight:300;margin:0;white-space:nowrap}
-@media(max-width:767px){.mani-highlight{font-size:19px}.mani-line,.mani-footnote{font-size:13px;white-space:normal}}
+.pos-highlight{color:#C7FF00;font-size:16px;font-weight:700;line-height:1.6;margin:0 0 32px;text-align:center}
+.circle-row{display:flex;align-items:flex-start;justify-content:center;gap:0}
+.circle-col{display:flex;flex-direction:column;align-items:center;flex:1;max-width:220px}
+.circle-node{width:120px;height:120px;border-radius:50%;border:1.5px solid #333333;background:#1A1A1A;display:flex;align-items:center;justify-content:center;text-align:center;transition:all 0.35s ease}
+.circle-node:hover{border-color:#C7FF00;box-shadow:0 0 20px rgba(199,255,0,0.08)}
+.circle-node span{color:#FFFFFF;font-size:14px;font-weight:600;line-height:1.3;padding:10px}
+.circle-op{display:flex;align-items:center;justify-content:center;width:36px;height:120px;flex-shrink:0;color:#52525b;font-size:18px}
+.circle-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:300;text-align:center;margin-top:12px;width:100%}
+.circle-desc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.circle-row{flex-wrap:wrap;gap:8px}.circle-col{flex:1 1 40%;min-width:100px;max-width:none}.circle-op{width:24px;height:90px}.circle-node{width:90px;height:90px}.circle-node span{font-size:12px}}
 </style>
-<div class="mani-wrap">
-<p class="mani-line">不能做一个类似即梦或可灵的"专业视频生产力工具"</p>
-<p class="mani-line">而必须做一个</p>
-<p class="mani-highlight">"降低认知与操作门槛的消费型 AI 互动社区"</p>
-<p class="mani-footnote">通过短视频流的轻量分发把复杂高门槛的 AI 生产环节转化为生态内的轻量级玩法</p>
+<p class="pos-highlight">构建低认知与低操作门槛的消费型 AI 互动社区</p>
+<div class="circle-row">
+<div class="circle-col"><div class="circle-node"><span>交互动线平滑化</span></div><p class="circle-desc">将复杂的 AI 创作链路拆解为"台词改写"、"故事接龙"等碎片化玩法，利用短视频分发实现创作体验的<b>"隐形化"</b>。</p></div>
+<div class="circle-op">+</div>
+<div class="circle-col"><div class="circle-node"><span>体验架构闭环</span></div><p class="circle-desc">通过对"消费—生产—赋能—沉淀"全链路的架构设计，建立长期的<b>用户增长驱动机制</b>。</p></div>
+<div class="circle-op">→</div>
+<div class="circle-col"><div class="circle-node"><span>核心目标</span></div><p class="circle-desc">以轻量交互降低参与门槛，将长视频受众内化为社区创作者，跑通<b>"内容消费与生态共创"</b>的商业闭环。</p></div>
 </div>`,
         },
         {
@@ -255,7 +253,7 @@ export const projectData: Project[] = [
 	.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}
 	.qt-flow-row{display:flex;align-items:center;gap:28px;margin:0}
 	.qt-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
-	.qt-screen-box{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+	.qt-screen-box{width:100%;aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
 	.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
 	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px}
 	@media(max-width:767px){.qt-chart{max-width:100%}.qt-flow-row{flex-wrap:wrap;justify-content:center;gap:12px}.qt-node{flex:1 1 40%;min-width:140px}.qt-operator{display:none}.qt-screen-box{max-width:180px;margin:0 auto}}
@@ -263,13 +261,13 @@ export const projectData: Project[] = [
 	<div class="qt-chart">
 	<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div>
 	<div class="qt-flow-row">
-	<div class="qt-node"><div data-preview class="qt-screen-box">[原始名场面界面]</div><div class="qt-node-text"><b>即兴微调</b>点击台词直接编辑，降低创作心理门槛。</div></div>
+	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/01-original-scene.jpeg" alt="原始名场面界面" style="width:100%;height:100%;object-fit:cover" /></div><div class="qt-node-text"><b>即兴微调</b>点击台词直接编辑，降低创作心理门槛。</div></div>
 	<div class="qt-operator">→</div>
-	<div class="qt-node"><div data-preview class="qt-screen-box">[场景化主题标签页]</div><div class="qt-node-text"><b>场景化启发</b>点击标签，快速接入创作方向。</div></div>
+	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/02-tags.jpeg" alt="场景化主题标签页" style="width:100%;height:100%;object-fit:cover" /></div><div class="qt-node-text"><b>场景化启发</b>点击标签，快速接入创作方向。</div></div>
 	<div class="qt-operator">→</div>
-	<div class="qt-node"><div data-preview class="qt-screen-box">[半浮层对话框]</div><div class="qt-node-text"><b>AI 对话式扩展</b>自然语言生成，多版本方案沉淀。</div></div>
+	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/03-dialog.jpeg" alt="半浮层对话框" style="width:100%;height:100%;object-fit:cover" /></div><div class="qt-node-text"><b>AI 对话式扩展</b>自然语言生成，多版本方案沉淀。</div></div>
 	<div class="qt-operator">→</div>
-	<div class="qt-node"><div data-preview class="qt-screen-box">[新台词视频预览]</div><div class="qt-node-text"><b>创作资产沉淀</b>每一次尝试都可见、可复用。</div></div>
+	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/04-preview.jpeg" alt="新台词视频预览" style="width:100%;height:100%;object-fit:cover" /></div><div class="qt-node-text"><b>创作资产沉淀</b>每一次尝试都可见、可复用。</div></div>
 	</div>
 	</div>`,
         },
@@ -349,20 +347,22 @@ export const projectData: Project[] = [
     id: 'project-2',
     title: '明星陪看直播间',
     description:
-      '爱奇艺「一起聊」明星陪看直播，交互设计负责人，重构影视听布局与商业闭环，通过创意送礼机制激活直播间互动收入。',
+      '明星陪看旨在重构影视观影的社交体验，通过将传统内容消费升级为"边看边聊"的沉浸式现场，建立起粉丝与偶像间的高频情感连接。',
     imagePath: 'https://picsum.photos/seed/project2/1200/800',
-    techStack: ['直播体验', '流量蓄水', '情感化设计', '商业变现'],
+    techStack: ['沉浸式社交', '视听交互重构', '商业化设计驱动', '组件化设计策略'],
     liveUrl: 'https://example.com',
     sourceUrl: 'https://github.com',
     detail: {
-      pageTitle: '爱奇艺明星陪看直播间',
-      mainTitle: '影视听布局重构与商业闭环',
-      subtitle: '交互设计负责人 · 2026.03 — 2026.05',
+      pageTitle: '明星陪看直播间 | 视听布局重构与商业增长',
+      mainTitle: '',
+      subtitle: '视听布局重构与商业增长',
       sections: [
         // ═══ P1 项目概述 ═══
         {
           heading: '项目概述',
-          body: '「一起聊」旨在打破传统观影的孤岛效应，将直播转化为"边聊边看"的沉浸式社交现场，以创新交互建立起粉丝与偶像的高强度情感纽带。\n\n在提升粉丝黏性与留存的同时，对送礼面板进行交互重构，通过创意送礼机制成功激活了直播间的互动收入，实现了流量价值的高效变现。',
+          body: '明星陪看旨在重构影视观影的社交体验，通过将传统内容消费升级为"边看边聊"的沉浸式现场，建立起粉丝与偶像间的高频情感连接。',
+          html: `<style>.role-text{color:#A0A0A0;font-size:13px;line-height:1.6;font-weight:300;margin:0;letter-spacing:0.02em}</style>
+	<p class="role-text">作为设计 Owner，我主导了视听布局的深度重构。并通过对直播间互动路径的重塑与送礼面板的组件化改造，在确立沉浸式社交交互标准的同时，驱动<b style="color:#FFFFFF;font-weight:600">送礼营收数据突破业务历史峰值</b>。</p>`,
         },
         // ═══ P2 互动破局 ═══
         {
@@ -908,7 +908,7 @@ export const projectData: Project[] = [
     techStack: ['Pad UX', '交互设计', '用户调研', '体验架构', '设计系统'],
     detail: {
       pageTitle: 'Pad端播放器',
-      mainTitle: '构建极致沉浸的视听生态',
+      mainTitle: '',
       subtitle: '交互设计负责人 · Pad 端播放体验重构',
       sections: [
         {

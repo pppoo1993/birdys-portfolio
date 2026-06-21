@@ -43,7 +43,7 @@ export default function Contact() {
               </div>
 
               <span className="text-xs text-[#a0a0a0] tracking-wider group-hover:text-[#C7FF00] transition-colors duration-200">
-                扫码添加微信
+                加个微信吧
               </span>
             </div>
           </div>

@@ -169,7 +169,7 @@ export default function Projects() {
                     <div>
                       {/* Title + logo */}
                       <div className="flex items-center gap-3 mb-1">
-                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden">
+                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden opacity-90">
                           <img
                             src={import.meta.env.BASE_URL + (
                               project.id === 'project-3' ? 'images/吃鲸.webp' :

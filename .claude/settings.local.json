@@ -64,7 +64,25 @@
       "Read(//private/var/folders/m3/0vv8v__s75d2d6vl2cyj6xk40000gn/T/TemporaryItems/NSIRD_screencaptureui_hNUAdj/**)",
       "Bash(sips -Z 400 \"/Users/birdy/Documents/birdys-portfolio/public/images/pad-player.png\" --out \"/Users/birdy/Documents/birdys-portfolio/public/images/pad-player.png\")",
       "Bash(sips -Z 400 \"/Users/birdy/Documents/birdys-portfolio/public/images/live-room.jpeg\" --out \"/Users/birdy/Documents/birdys-portfolio/public/images/live-room.jpeg\")",
-      "Bash(sips *)"
+      "Bash(sips *)",
+      "Bash(cp \"/Users/birdy/Documents/DesktopOrganizer/文件夹 2/后期设计美工.svg\" /Users/birdy/Documents/birdys-portfolio/public/images/icon-design.svg)",
+      "Bash(cp \"/Users/birdy/Documents/DesktopOrganizer/文件夹 2/健身.svg\" /Users/birdy/Documents/birdys-portfolio/public/images/icon-fitness.svg)",
+      "Read(//private/var/folders/m3/0vv8v__s75d2d6vl2cyj6xk40000gn/T/TemporaryItems/NSIRD_screencaptureui_VJlLTQ/**)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const p = require\\('three/package.json'\\); console.log\\(p.version\\)\")",
+      "Bash(ffprobe -v quiet -print_format json -show_format -show_streams \"/Users/birdy/Documents/DesktopOrganizer/文件夹 2/iShot_2026-06-18_08.26.40.mp4\")",
+      "Bash(ffmpeg -i \"/Users/birdy/Documents/DesktopOrganizer/文件夹 2/iShot_2026-06-18_08.26.40.mp4\" -vf \"fps=1\" -frames:v 3 /tmp/dotted_frames/frame_%02d.png -y)",
+      "Read(//tmp/**)",
+      "Bash(sed -i '' 's/#00B3FE/#C7FF00/g; s/#0090e0/#b3e600/g; s/rgba\\(0,179,254/rgba\\(199,255,0/g' /Users/birdy/Documents/birdys-portfolio/src/components/ui/MockupChijing.tsx)",
+      "Bash(sed -i '' 's/#EA56F1/#C7FF00/g; s/rgba\\(234,86,241/rgba\\(199,255,0/g' /Users/birdy/Documents/birdys-portfolio/src/components/ui/MockupLive.tsx)",
+      "Bash(sed -i '' 's/#00D95A/#C7FF00/g; s/rgba\\(0,217,90/rgba\\(199,255,0/g' /Users/birdy/Documents/birdys-portfolio/src/components/ui/MockupPad.tsx)",
+      "Bash(cp '/Volumes/简历作品集/吃鲸复盘/截图/换台词/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3550008452532705955&skey=@crypt_40492347_c3cdbc4219270cdaa0279f3550dee0d9&mmweb_appid=wx_webfilehelper.jpeg' /Users/birdy/Documents/birdys-portfolio/public/images/chijing/01-original-scene.jpeg)",
+      "Bash(cp '/Volumes/简历作品集/吃鲸复盘/截图/换台词/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4977118643806390162&skey=@crypt_40492347_c3cdbc4219270cdaa0279f3550dee0d9&mmweb_appid=wx_webfilehelper.jpeg' /Users/birdy/Documents/birdys-portfolio/public/images/chijing/02-tags.jpeg)",
+      "Bash(cp '/Volumes/简历作品集/吃鲸复盘/截图/换台词/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=585566997844930425&skey=@crypt_40492347_c3cdbc4219270cdaa0279f3550dee0d9&mmweb_appid=wx_webfilehelper.jpeg' /Users/birdy/Documents/birdys-portfolio/public/images/chijing/03-dialog.jpeg)",
+      "Bash(cp '/Volumes/简历作品集/吃鲸复盘/截图/换台词/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=9177989941045650019&skey=@crypt_40492347_c3cdbc4219270cdaa0279f3550dee0d9&mmweb_appid=wx_webfilehelper.jpeg' /Users/birdy/Documents/birdys-portfolio/public/images/chijing/04-preview.jpeg)",
+      "Bash(xxd)",
+      "Bash(grep -c 'html: \\\\\\\\\\\\\\\\\\\\`' src/data/projects.ts)",
+      "Bash(grep -c 'html: \\\\`' src/data/projects.ts)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"

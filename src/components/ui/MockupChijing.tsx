@@ -58,9 +58,9 @@ export default function MockupChijing() {
         </div>
         <div style={{
           width: '100%', height: '22px',
-          background: 'linear-gradient(90deg, #00B3FE 0%, #0090e0 100%)',
+          background: 'rgba(199,255,0,0.3)',
           borderRadius: '11px', display: 'flex', justifyContent: 'center', alignItems: 'center',
-          boxShadow: '0 4px 12px rgba(0,179,254,0.4)', gap: '4px'
+          boxShadow: '0 4px 12px rgba(199,255,0,0.15)', gap: '4px'
         }}>
           <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '8px', fontWeight: 600, letterSpacing: '0.04em' }}>AI 创作视频</span>
         </div>

@@ -1,8 +1,8 @@
 import type { SiteConfig } from '../types'
 
 export const siteConfig: SiteConfig = {
-  name: "Birdy's Portfolio",
-  title: '',
+  name: 'BirdyDesign',
+  title: 'BirdyDesign',
   subtitle: '',
   navLinks: [
     { label: '关于我', sectionId: 'intro' },

@@ -272,9 +272,19 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                       <div className="flex flex-col md:flex-row gap-8 md:gap-14 items-center md:items-stretch">
                         <div className="flex-1 flex flex-col justify-between">
                           <div>
-                            <h2 className="text-[28px] md:text-[32px] font-semibold text-white tracking-tight leading-tight mb-1">
-                              {project.title}
-                              <span className="text-zinc-500 font-normal"> · {project.detail.mainTitle}</span>
+                            <h2 className="text-[28px] md:text-[32px] font-semibold text-white tracking-tight leading-tight mb-1 flex items-center gap-3">
+                              <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden opacity-90">
+                                <img
+                                  src={import.meta.env.BASE_URL + (
+                                    project.id === 'project-3' ? 'images/吃鲸.webp' :
+                                    project.id === 'project-2' ? 'images/爱奇艺.webp' :
+                                    'images/爱奇艺Pad.webp'
+                                  )}
+                                  alt=""
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                              <span>{project.title}{project.detail.mainTitle && <span className="text-zinc-500 font-normal"> · {project.detail.mainTitle}</span>}</span>
                             </h2>
                             <p className="text-base md:text-lg text-[#d4d4d8] font-normal mb-3">
                               {project.detail.subtitle}
@@ -288,7 +298,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               />
                             )}
                             {section.html && (
-                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { setPreviewHtml(el.outerHTML) } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                             )}
                           </div>
                           <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
@@ -321,7 +331,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
 
                         {/* HTML content */}
                         {section.html && (
-                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { setPreviewHtml(el.outerHTML) } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                         )}
                       </>
                     )}
