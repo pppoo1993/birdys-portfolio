@@ -61,9 +61,9 @@ export const projectData: Project[] = [
         },
         {
           heading: '挑战与破局：从 SWOT 模型看长视频的 AI 跨界',
-          body: '',
+          body: '在梳理三大业务痛点后，我们引入 SWOT 模型审视长视频平台跨界 AI 的核心博弈格局，以此校准破局方向。',
           html: `<style>
-.quadrant-wrap{position:relative;width:100%;max-width:640px;margin:0 auto 32px}
+.quadrant-wrap{position:relative;width:100%;max-width:720px;margin:0 auto 32px}
 .quad-cell .qwatermark{position:absolute;top:6px;right:8px;font-size:80px;font-weight:900;color:rgba(255,255,255,.025);font-family:system-ui,-apple-system,sans-serif;line-height:1;pointer-events:none;z-index:0;letter-spacing:-0.02em}
 .quadrant-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
 .quadrant-inner{grid-column:1/3;grid-row:1/3;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;position:relative;min-height:360px}
@@ -71,9 +71,9 @@ export const projectData: Project[] = [
 .quadrant-inner::before{left:0;right:0;top:50%;height:1px;transform:translateY(-0.5px)}
 .quadrant-inner::after{top:0;bottom:0;left:50%;width:1px;transform:translateX(-0.5px)}
 .quadrant-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;background:#C7FF00;z-index:2;opacity:.6}
-.quad-cell{position:relative;z-index:1;padding:20px;display:flex;flex-direction:column;justify-content:center;transition:all .3s ease}
+.quad-cell{position:relative;z-index:1;padding:20px;display:flex;flex-direction:column;justify-content:flex-start;transition:all .3s ease}
 .quad-cell:hover{background:rgba(199,255,0,.02)}
-.quad-cell .qlabel{color:#C7FF00;font-size:10px;font-weight:600;letter-spacing:.06em;margin-bottom:6px}
+.quad-cell .qlabel{color:#C7FF00;font-size:11px;font-weight:600;letter-spacing:.04em;margin-bottom:8px}
 .quad-cell .qtitle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px}
 .quad-cell .qdesc{color:#A0A0A0;font-size:12px;line-height:1.7;font-weight:300;margin:0}
 .quad-cell .qdesc b{color:#FFFFFF;font-weight:600}
@@ -83,53 +83,55 @@ export const projectData: Project[] = [
 <div class="quadrant-grid">
 <div class="quadrant-inner">
 <div class="quadrant-center"></div>
-<div class="quad-cell"><span class="qwatermark">S</span><span class="qlabel">优势</span><p class="qtitle">资产壁垒</p><p class="qdesc">依托爱奇艺长视频生态，构建了原生 AI 创作工具无法跨越的版权合规壁垒与核心 IP 素材库。</p></div>
-<div class="quad-cell"><span class="qwatermark">O</span><span class="qlabel">机会</span><p class="qtitle">传播增量</p><p class="qdesc">短视频的碎片化特性契合 AI 碎片化改写逻辑，影视版权资产具备转化为社区创作资产的爆发潜力。</p></div>
-<div class="quad-cell"><span class="qwatermark">W</span><span class="qlabel">劣势</span><p class="qtitle">心智鸿沟</p><p class="qdesc">长视频"被动喂养"模式与 AI 二创所需的"主动交互"存在认知偏差，且 AI 的生成不确定性易打破粉丝对角色人设与视觉美学的稳定预期。</p></div>
-<div class="quad-cell"><span class="qwatermark">T</span><span class="qlabel">威胁</span><p class="qtitle">ROI 承压</p><p class="qdesc">高质量生成的高昂算力成本，与社区轻量化互动带来的低 ARPU 商业模式存在结构性矛盾。</p></div>
+<div class="quad-cell"><span class="qwatermark">S</span><p class="qlabel">核心资产</p><p class="qtitle">IP 资产版权护城河</p><p class="qdesc">依托长视频生态，构建了独立 AI 工具难以复制的内容合规底座与粉丝素材库。</p></div>
+<div class="quad-cell"><span class="qwatermark">W</span><p class="qlabel">内在瓶颈</p><p class="qtitle">用户认知内耗</p><p class="qdesc">影视消费的"被动喂养"与 AI 创作的"主动交互"存在心智抵触；生成质量的不可控，打破了用户对长视频精美质感的心理共识。</p></div>
+<div class="quad-cell"><span class="qwatermark">O</span><p class="qlabel">增量机遇</p><p class="qtitle">传播逻辑重构</p><p class="qdesc">改变长视频单向传播模式，通过 AI 赋能将影视 IP 转化为碎片化素材，实现从"单向观看"到"裂变式二次创作"的爆发性传播。</p></div>
+<div class="quad-cell"><span class="qwatermark">T</span><p class="qlabel">战略威胁</p><p class="qtitle">工具侧降维挤压</p><p class="qdesc">头部专业工具已完成心智垄断，若强行竞争生成技术，极易被工具类产品降维击穿。</p></div>
 </div>
 </div>
 </div>`,        },
         {
           heading: '定位重塑：消费型 AI 互动社区',
-          body: '基于上述分析，为规避专业生产力工具的内卷红海，我们确立了核心差异化定位：',
+          body: '基于 SWOT 分析，我们发现若单纯复刻"专业AI视频创作工具"的模式，不仅无法解决巨额算力成本与 ARPU 的结构矛盾，更将陷入长视频用户对"被动娱乐"与"主动创作"之间的认知内耗。因此，我们确立了从"工具范式"转向"社区范式"的战略重构——不再通过技术硬拼获取用户，而是通过互动降低创作门槛。',
           html: `<style>
-.pos-highlight{color:#C7FF00;font-size:16px;font-weight:700;line-height:1.6;margin:0 0 32px;text-align:center}
+.pos-highlight{color:#C7FF00;font-size:16px;font-weight:700;line-height:1.6;margin:8px 0 32px;text-align:center}
 .circle-row{display:flex;align-items:flex-start;justify-content:center;gap:0}
 .circle-col{display:flex;flex-direction:column;align-items:center;flex:1;max-width:220px}
 .circle-node{width:120px;height:120px;border-radius:50%;border:1.5px solid #333333;background:#1A1A1A;display:flex;align-items:center;justify-content:center;text-align:center;transition:all 0.35s ease}
 .circle-node:hover{border-color:#C7FF00;box-shadow:0 0 20px rgba(199,255,0,0.08)}
 .circle-node span{color:#FFFFFF;font-size:14px;font-weight:600;line-height:1.3;padding:10px}
 .circle-op{display:flex;align-items:center;justify-content:center;width:36px;height:120px;flex-shrink:0;color:#52525b;font-size:18px}
-.circle-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:300;text-align:center;margin-top:12px;width:100%}
-.circle-desc b{color:#FFFFFF;font-weight:600}
+.circle-sub{color:#FFFFFF;font-size:12px;font-weight:600;text-align:center;margin:12px 0 6px;width:100%}
+.circle-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:300;text-align:center;margin:0;width:100%}
 @media(max-width:767px){.circle-row{flex-wrap:wrap;gap:8px}.circle-col{flex:1 1 40%;min-width:100px;max-width:none}.circle-op{width:24px;height:90px}.circle-node{width:90px;height:90px}.circle-node span{font-size:12px}}
 </style>
-<p class="pos-highlight">构建低认知与低操作门槛的消费型 AI 互动社区</p>
+<p class="pos-highlight">构建低门槛、轻操作的消费型 AI 互动社区</p>
 <div class="circle-row">
-<div class="circle-col"><div class="circle-node"><span>交互动线平滑化</span></div><p class="circle-desc">将复杂的 AI 创作链路拆解为"台词改写"、"故事接龙"等碎片化玩法，利用短视频分发实现创作体验的<b>"隐形化"</b>。</p></div>
-<div class="circle-op">+</div>
-<div class="circle-col"><div class="circle-node"><span>体验架构闭环</span></div><p class="circle-desc">通过对"消费—生产—赋能—沉淀"全链路的架构设计，建立长期的<b>用户增长驱动机制</b>。</p></div>
+<div class="circle-col"><div class="circle-node"><span>身份重构</span></div><p class="circle-sub">从"被动观看者"到"生态共创者"</p><p class="circle-desc">引导用户从单一的"内容观众"转型为"生态共创者"，通过参与创作实现社区归属。</p></div>
 <div class="circle-op">→</div>
-<div class="circle-col"><div class="circle-node"><span>核心目标</span></div><p class="circle-desc">以轻量交互降低参与门槛，将长视频受众内化为社区创作者，跑通<b>"内容消费与生态共创"</b>的商业闭环。</p></div>
+<div class="circle-col"><div class="circle-node"><span>体验降维</span></div><p class="circle-sub">从"重度生产力"到"消费级互动"</p><p class="circle-desc">将复杂模型交互隐藏于播放场景，让 AI 创作如同刷视频般自然、无感。</p></div>
+<div class="circle-op">→</div>
+<div class="circle-col"><div class="circle-node"><span>价值闭环</span></div><p class="circle-sub">从"单向播放"到"IP 增值循环"</p><p class="circle-desc">打通消费、创作与传播循环，使 AI 二创成为激活影视 IP 版权价值的增值引擎。</p></div>
 </div>`,
         },
         {
           heading: '体验架构设计：AI创作的底层逻辑',
-          body: '破局策略明确后，如何转化为用户可感的界面结构？设计团队梳理出了系统的交互分层，核心是通过<b>「以消带产」</b>盘活链路。',
-          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:12px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:#3f3f46!important;background:#1A1A1A!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:18px;align-items:stretch;margin:24px 0}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important}.arch-row .arch-card{flex-direction:row!important}}</style>
+          body: '基于<b>「以消带产」</b>的核心策略，我们将产品架构解构为三层协同逻辑，旨在通过对第三方底层模型的场景化精调，在优化研发成本的同时，最大化保障影视 IP 的生成品质。',
+          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:12px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:#3f3f46!important;background:#1A1A1A!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.4)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px 0}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important}.arch-row .arch-card{flex-direction:row!important}.arch-arrow{display:none!important}}</style>
 <div class="arch-row">
 <div class="arch-card" style="background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">01 生态输入层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">爱奇艺正片、IP 资产、版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300">整个产品的逻辑起点。底层直接对接爱奇艺独家影视正片，为用户提供版权合规的"种子源"，使用户能基于熟悉的剧集和演员进行二创，告别无中生有的冷启动摩擦力。</p></div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">爱奇艺正片、IP 资产、版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300">对接爱奇艺独家正片与 IP 资产，提供版权合规的二创素材，消除用户的冷启动摩擦。</p></div>
 </div>
+<span class="arch-arrow">→</span>
 <div class="arch-card" style="background:#1A1A1A;border:1px solid #333333;border-radius:4px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">02 核心逻辑层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用基础模型能力 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300">系统的双引擎驱动架构。底层异构接入可灵 O3、Seedance 4.0 及火山引擎等行业领先能力，技术团队通过 Prompt 工程、模型微调与高精度工作流进行定制开发，将复杂模糊的用户意图转化为具体的业务场景算力输出。</p></div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用模型 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300">接入行业领先模型，通过 Prompt 工程与工作流定制，将模糊的用户意图转化为精准的场景算力。</p></div>
 </div>
+<span class="arch-arrow">→</span>
 <div class="arch-card accent" style="border-radius:4px;padding:24px;display:flex;gap:24px;align-items:flex-start;position:relative">
 <div><h4 class="arch-h4 accent">感知交互层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">降低冷启动门槛：从"一键同款"到"IP 互动切口"</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300"><b style="color:#FFFFFF">交互设计负责人（UX Lead）的核心输出主阵地。</b>团队在此完全摒弃了传统的复杂提示词控制面板，改用极低摩擦力的模板化交互承接用户意图。通过联合产品与技术深度解构影视 IP 资产，将底层的硬核算力包装为用户感知轻量的低门槛互动玩法流。</p></div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">模板化交互，降低创作门槛</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300"><b style="color:#FFFFFF">UX 设计核心阵地。</b>以模板化交互替代复杂控制面板，将底层算力包装为轻量玩法，让普通用户也能轻松参与创作。</p></div>
 </div>
 </div>
 `,
