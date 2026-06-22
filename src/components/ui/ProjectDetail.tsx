@@ -232,6 +232,8 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               .sec-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
               [data-preview]{cursor:pointer;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
               [data-preview]:hover{border-color:#3f3f46!important;transform:translateY(-2px);box-shadow:0 15px 30px rgba(0,0,0,0.6)}
+              [data-goto]{cursor:pointer;transition:all 0.3s ease}
+              [data-goto]:hover{background:rgba(255,255,255,0.03)}
             `}</style>
 
             {/* ════ Scroll pages ════ */}
@@ -298,7 +300,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               />
                             )}
                             {section.html && (
-                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                             )}
                           </div>
                           <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
@@ -331,7 +333,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
 
                         {/* HTML content */}
                         {section.html && (
-                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                         )}
                       </>
                     )}
