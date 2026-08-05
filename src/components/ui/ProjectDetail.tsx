@@ -268,7 +268,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-8 py-14 md:py-16">
+                  <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 py-14 md:py-16">
                     {/* Page 0: split layout — text left, image right */}
                     {i === 0 ? (
                       <div className="flex flex-col md:flex-row gap-8 md:gap-14 items-center md:items-stretch">

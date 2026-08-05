@@ -5,20 +5,20 @@ export const projectData: Project[] = [
     id: 'project-3',
     title: '吃鲸 AI',
     description:
-      '吃鲸 AI 是爱奇艺孵化的 AI 互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路闭环。',
+      '吃鲸 AI 是爱奇艺孵化的 AI 视频互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路。',
     imagePath: 'https://picsum.photos/seed/project3/1200/800',
     techStack: ['AI 视频创作', '产品架构设计', '渐进式交互'],
     sourceUrl: 'https://github.com',
     detail: {
-      pageTitle: '吃鲸 AI | AI视频创作与消费闭环架构',
+      pageTitle: '吃鲸 AI | AI视频消费与生成共创',
       mainTitle: '',
-      subtitle: 'AI视频创作与消费闭环架构',
+      subtitle: 'AI视频消费与生成共创',
       sections: [
         {
           heading: '项目概述',
-          body: '吃鲸 AI 是爱奇艺孵化的 AI 互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路闭环。',
+          body: '吃鲸 AI 是爱奇艺孵化的 AI 视频互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路。',
           html: `<style>.role-text{color:#A0A0A0;font-size:13px;line-height:1.6;font-weight:300;margin:0;letter-spacing:0.02em}</style>
-<p class="role-text">作为设计 Owner，我主导了产品从 0 到 1 的全流程设计。通过定义渐进式交互范式，解决了 AI 创作门槛高的核心瓶颈，跑通了<b style="color:#FFFFFF;font-weight:600">「消费—创作—沉淀」</b>的生态增长逻辑。</p>`,
+<p class="role-text">作为设计 Owner，我完整参与了从项目立项到产品上线的全流程设计。通过定义渐进式交互范式，解决了 AI 创作门槛高的核心瓶颈，跑通了<b style="color:#FFFFFF;font-weight:600">「消费—创作—沉淀」</b>的生态增长逻辑。</p>`,
         },
         {
           heading: '缘起：长视频平台的生态自救',
@@ -189,19 +189,91 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '策略一：建立社区认知 — 全局视界',
-          body: '将首页重构为三层架构——消费分发、生产赋能、闭环沉淀——确保用户进场即感知"能玩、能互动"的社区氛围。',
+          heading: '产品框架：以消带产，影视素材赋能创作',
+          body: '我们在消费场景的末端无缝衔接创作触发点，将用户的观看行为转化为生产动力，打通「以消带产」的转化链路。并通过多元素材库为创作减负，其中核心打造的"影视创意玩法"与"爱奇艺影视库"构成了产品的核心护城河。',
           html: `<style>
-.ds-sub{font-size:18px;font-weight:700;color:#FFFFFF;margin:2rem 0 8px;letter-spacing:0.02em}
-.ds-sub .num{font-family:monospace;font-size:15px;color:#C7FF00;margin-right:8px;font-weight:700}
-.ds-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:300}
-.arch-wrapper{max-width:950px;display:inline-flex;flex-direction:column}.arch-layer{position:relative;padding:0 50px;margin-bottom:24px}.arch-layer::after{content:"";position:absolute;left:32px;top:0;width:1px;background:#222226;z-index:0}.arch-layer:not(:last-child)::after{height:calc(100% + 24px)}.arch-layer:last-child::after{height:100%}.arch-layer-bar{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:12px;padding-bottom:4px;gap:2px;position:relative;z-index:1}.arch-layer-label{color:#FFFFFF;font-size:14px;font-weight:600;letter-spacing:0.02em;display:flex;align-items:center;gap:10px;position:relative}.arch-layer-label::before{content:"";width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a;flex-shrink:0;position:absolute;left:-25px;top:50%;transform:translateY(-50%);z-index:2}.arch-layer-logic{font-size:13px;color:#A0A0A0;padding:0;font-weight:300}.arch-page-row{display:flex;gap:28px;justify-content:flex-start}.arch-page-col{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:1 1 0;min-width:0}.arch-page-box{width:auto;display:inline-flex;box-sizing:border-box;height:auto;border-radius:8px;overflow:hidden;border:1px solid #222226;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-page-col:hover .arch-page-box{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}.arch-page-tag{font-size:11px;color:#A0A0A0;letter-spacing:0.02em;text-align:center;width:100%}.arch-page-col.hl .arch-page-tag{color:#A0A0A0}@media(max-width:767px){.arch-wrapper{width:100%!important;max-width:100%!important;padding:0}.arch-layer{padding:0 0 0 22px!important}.arch-layer::after{left:5px!important}.arch-layer-label::before{left:-25px!important}.arch-page-row{flex-direction:row!important;flex-wrap:nowrap;gap:4px}.arch-page-row>span{font-size:12px!important;padding:0 2px!important}.arch-page-box{width:100%!important}.arch-page-box img{max-width:100%!important;width:100%!important;max-width:none!important}.arch-page-col{flex:1;min-width:0;overflow:hidden}}
+.arch-flow{display:flex;flex-direction:column;align-items:center;gap:30px}
+.arch-flow-row{display:flex;align-items:center;justify-content:center;gap:20px;width:100%}
+.arch-col{flex:1;min-width:0;background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.arch-col:hover{border-color:rgba(255,255,255,0.12)}
+.arch-col-label{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 14px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
+.arch-col-label::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.arch-col-label::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.arch-col-items{display:flex;flex-direction:column;gap:8px}
+.arch-item{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:4px;padding:10px 14px;font-size:13px;color:#D4D4D8;font-weight:400;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.arch-item:hover{border-color:rgba(255,255,255,0.12)}
+.arch-item.hl{border-color:#C7FF00;color:#C7FF00;background:rgba(199,255,0,0.04)}
+.arch-arrow{display:flex;flex-direction:column;align-items:center;width:40px;flex-shrink:0;justify-content:center}
+.arch-arrow-line{width:100%;height:1px;background:#333333;position:relative}
+.arch-arrow-line::after{content:'';position:absolute;right:0;top:-3px;width:0;height:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:6px solid #333333}
+.arch-arrow.rev .arch-arrow-line::after{right:auto;left:0;border-left:none;border-right:6px solid #333333}
+.arch-arrow-label{font-size:11px;color:#71717a;margin-top:6px;text-align:center}
+.arch-footnote{margin-top:12px;font-size:13px;color:#A0A0A0;font-weight:400;display:flex;align-items:center;gap:8px}
+.arch-footnote::before{content:'';width:6px;height:6px;background:#C7FF00;border-radius:50%;flex-shrink:0}
+@media(max-width:767px){.arch-flow-row{flex-direction:column;gap:0}.arch-col{width:100%!important;max-width:100%!important;padding:16px}.arch-col-label{font-size:13px;margin-bottom:10px;padding-bottom:8px}.arch-col-label::after{width:60px}.arch-item{font-size:12px;padding:8px 12px}.arch-arrow{width:100%;padding:6px 0}.arch-arrow-line{display:none}.arch-arrow-line::after{display:none}.arch-arrow-label{font-size:13px;color:#C7FF00;margin-top:0}}
 </style>
-<div style="display:flex;justify-content:center;width:100%"><div class="arch-wrapper">
-<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">消费分发层</span><span class="arch-layer-logic">流量精准触达，通过沉浸式体验缩短留存路径</span></div><div class="arch-page-row"><div class="arch-page-col hl"><div class="arch-page-box"><img src="/birdys-portfolio/images/首页流分发.jpeg" alt="首页流分发" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">智能分发</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/播放器详情.png" alt="播放器详情" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">沉浸播放</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/精选播放页.PNG" alt="精选内容页" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">品牌引导</span></div></div></div>
-<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">生产赋能层</span><span class="arch-layer-logic">创作门槛治理，通过组件解耦提升创作效能</span></div><div class="arch-page-row"><div class="arch-page-col hl"><div class="arch-page-box"><img src="/birdys-portfolio/images/创作入口.png" alt="创作入口" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">创作引擎</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col hl"><div class="arch-page-box"><img src="/birdys-portfolio/images/创作编辑器.png" alt="创作编辑器" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">碎片化改写</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/素材检索库.png" alt="素材检索库" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">资源解耦</span></div></div></div>
-<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">闭环沉淀层</span><span class="arch-layer-logic">内容资产内循环，促进用户身份跃迁</span></div><div class="arch-page-row"><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/创作状态页.png" alt="创作状态页" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">社交互动</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col hl"><div class="arch-page-box"><img src="/birdys-portfolio/images/作品发布页.png" alt="作品发布页" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">资产发布</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/回流分发页.png" alt="回流分发流" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">长尾复利</span></div></div></div>
-</div></div>`,
+<div class="arch-flow">
+<div class="arch-flow-row">
+<div class="arch-col"><div class="arch-col-label">分发层</div><div class="arch-col-items"><div class="arch-item">首页瀑布流</div><div class="arch-item">精选播放器</div><div class="arch-item">模板</div></div></div>
+<div class="arch-arrow"><div class="arch-arrow-line"></div><span class="arch-arrow-label">以消带产</span></div>
+<div class="arch-col"><div class="arch-col-label">创作层</div><div class="arch-col-items"><div class="arch-item">通用视频生成</div><div class="arch-item hl">影视创意玩法</div><div class="arch-item">上传AI视频作品</div></div></div>
+<div class="arch-arrow rev"><div class="arch-arrow-line"></div><span class="arch-arrow-label">赋能创作</span></div>
+<div class="arch-col"><div class="arch-col-label">素材层</div><div class="arch-col-items"><div class="arch-item hl">爱奇艺影视库</div><div class="arch-item">手机相册</div><div class="arch-item">已有作品</div></div></div>
+</div>
+</div>`,
+        },
+        {
+          heading: '分发层：互动社区心智建设',
+          body: '首页以双列瀑布流承载AI创作内容，让用户进场即感知"能玩、能互动"的社区氛围。同时提供海量影视二创相关模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。',
+          html: `<style>
+.dist-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content}
+.dist-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.dist-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
+.dist-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.dist-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.dist-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
+.dist-img-row{display:flex;gap:12px}
+@media(max-width:767px){.dist-row{flex-direction:column!important}.dist-col{width:100%!important}}
+.dist-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
+.dist-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.dist-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
+@media(max-width:767px){.dist-row{grid-template-columns:repeat(2,1fr);gap:12px}}
+</style>
+<div class="dist-row">
+<div class="dist-col">
+<div class="dist-col-title">内容分发</div>
+<p class="dist-col-desc">在各分发场景下设置创作按钮，以便用户产生灵感后随时创作。</p>
+<div class="dist-img-row">
+<div class="dist-placeholder"><span>截图 1</span></div>
+<div class="dist-placeholder"><span>截图 2</span></div>
+<div class="dist-placeholder"><span>截图 3</span></div>
+</div>
+</div>
+<div class="dist-col">
+<div class="dist-col-title">底部创作按钮</div>
+<p class="dist-col-desc">集中展示全部AI视频玩法。</p>
+<div class="dist-img-row">
+<div class="dist-placeholder"><span>截图 4</span></div>
+</div>
+</div>
+</div>`,
+        },
+        {
+          heading: '创作层：通用创作与影视创意玩法',
+          body: '',
+          html: `<style>
+.cr-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:780px;margin:0 auto}
+.cr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0;margin:0 auto}
+.cr-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.cr-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
+@media(max-width:767px){.cr-row{grid-template-columns:repeat(2,1fr);gap:12px}}
+</style>
+<div class="cr-row">
+<div class="cr-placeholder"><span>截图 1</span></div>
+<div class="cr-placeholder"><span>截图 2</span></div>
+<div class="cr-placeholder"><span>截图 3</span></div>
+<div class="cr-placeholder"><span>截图 4</span></div>
+</div>`,
         },
         {
           heading: '策略三：站内素材闭环 — 创作中控',
@@ -532,21 +604,24 @@ export const projectData: Project[] = [
           body: '',
           html: `<style>
 .entry-split{display:flex;gap:24px;align-items:flex-start;margin:28px 0}
-.entry-left{flex:2.5;min-width:0}
-.entry-left img{width:100%;display:block}
-.entry-right{flex:1;display:flex;flex-direction:column;gap:20px;min-width:0;padding-top:8px}
+.entry-left{flex:1;align-self:flex-start}
+.entry-left img{width:100%;display:block;border-radius:6px}
+.entry-right{width:250px;min-width:250px;max-width:250px;flex-shrink:0}
+.entry-text-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:16px}
 .entry-text-item{padding-bottom:16px;border-bottom:1px solid #222226}
 .entry-text-item:last-child{padding-bottom:0;border-bottom:none}
 .entry-text-label{color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px}
 .entry-text-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-@media(max-width:767px){.entry-split{flex-direction:column!important}}
+@media(max-width:767px){.entry-split{flex-direction:column!important}.entry-right{width:auto!important}}
 </style>
 <div class="entry-split">
-<div class="entry-left"><img src="/birdys-portfolio/images/live-all-states.png" alt="直播入口状态" style="width:100%;border-radius:6px" /></div>
+<div class="entry-left"><img src="/birdys-portfolio/images/live-entry.png" alt="直播入口状态" /></div>
 <div class="entry-right">
+<div class="entry-text-card">
 <div class="entry-text-item"><p class="entry-text-label">低干扰</p><p class="entry-text-desc">触达入口设置在选集下方，仅在临近直播/直播中时显示，在不打断观影流的前提下完成轻量触达。</p></div>
 <div class="entry-text-item"><p class="entry-text-label">高转化</p><p class="entry-text-desc">入口实时展示直播状态，直播间内活动权益通过角标透传，辅助用户进行决策，一键切入陪看现场。</p></div>
 <div class="entry-text-item"><p class="entry-text-label">心智建设</p><p class="entry-text-desc">通过直播预告培养用户一键预约本剧全部直播陪看的习惯，将剧集观众转化为直播间的存量用户。</p></div>
+</div>
 </div>
 </div>`,
         },
