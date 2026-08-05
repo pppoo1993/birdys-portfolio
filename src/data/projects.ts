@@ -15,10 +15,26 @@ export const projectData: Project[] = [
       subtitle: 'AI视频消费与生成共创',
       sections: [
         {
-          heading: '项目概述',
-          body: '吃鲸 AI 是爱奇艺孵化的 AI 视频互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路。',
-          html: `<style>.role-text{color:#A0A0A0;font-size:13px;line-height:1.6;font-weight:300;margin:0;letter-spacing:0.02em}</style>
-<p class="role-text">作为设计 Owner，我完整参与了从项目立项到产品上线的全流程设计。通过定义渐进式交互范式，解决了 AI 创作门槛高的核心瓶颈，跑通了<b style="color:#FFFFFF;font-weight:600">「消费—创作—沉淀」</b>的生态增长逻辑。</p>`,
+          heading: '目录',
+          body: '',
+          html: `<style>
+.toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%}
+.toc-col{display:flex;flex-direction:column}
+.toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.15);margin-bottom:2px;font-family:monospace}
+.toc-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box}
+.toc-card-title{font-size:15px;font-weight:500;color:#C7FF00;line-height:1.4}
+.toc-card-pages{font-size:11px;color:#71717a;line-height:1.6;display:flex;flex-direction:column;gap:2px}
+.toc-page-row{display:flex;justify-content:space-between;align-items:baseline}
+.toc-page-name{color:#A0A0A0;font-size:13px}
+.toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:160px;padding:18px}.toc-card-title{font-size:13px}}
+</style>
+<div class="toc-grid">
+<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">项目背景</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">缘起</span><span class="toc-page-num">P02</span></div><div class="toc-page-row"><span class="toc-page-name">挑战与破局</span><span class="toc-page-num">P03</span></div><div class="toc-page-row"><span class="toc-page-name">定位重塑</span><span class="toc-page-num">P04</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><p class="toc-card-title">架构与策略</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">体验架构设计</span><span class="toc-page-num">P05</span></div><div class="toc-page-row"><span class="toc-page-name">用户旅程</span><span class="toc-page-num">P06</span></div><div class="toc-page-row"><span class="toc-page-name">产品框架</span><span class="toc-page-num">P07</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="7"><p class="toc-card-title">交互呈现</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">分发层</span><span class="toc-page-num">P08</span></div><div class="toc-page-row"><span class="toc-page-name">创作层</span><span class="toc-page-num">P09</span></div><div class="toc-page-row"><span class="toc-page-name">创作中控</span><span class="toc-page-num">P10</span></div><div class="toc-page-row"><span class="toc-page-name">换台词</span><span class="toc-page-num">P11</span></div><div class="toc-page-row"><span class="toc-page-name">故事接龙</span><span class="toc-page-num">P12</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="12"><p class="toc-card-title">沉淀</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">留下的交互资产</span><span class="toc-page-num">P13</span></div></div></div></div>
+</div>`,
         },
         {
           heading: '缘起：长视频平台的生态自救',

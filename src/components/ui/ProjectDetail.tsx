@@ -193,7 +193,12 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
             {/* ════ Fixed top bar ════ */}
             <div className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-6 md:px-12 py-3.5 bg-gradient-to-b from-[#121212] via-[#121212]/95 to-transparent pointer-events-none">
               <p className="text-[18px] md:text-[24px] text-white font-bold tracking-tight line-clamp-2 md:truncate max-w-[88%] md:max-w-[65%]">
-                {activeIndex > 0 ? sections[activeIndex]?.heading : ''}
+                {activeIndex > 0 ? sections[activeIndex]?.heading : (
+                  <span className="flex items-center gap-2">
+                    <img src={import.meta.env.BASE_URL + (project.id === 'project-3' ? 'images/吃鲸.webp' : project.id === 'project-2' ? 'images/爱奇艺.webp' : 'images/爱奇艺Pad.webp')} alt="" className="w-7 h-7 rounded-md object-cover" />
+                    {project.title}
+                  </span>
+                )}
               </p>
               <div className="flex items-center gap-5 pointer-events-auto">
                 <span className="hidden md:block text-[13px] font-mono text-zinc-500 tracking-wider">
@@ -266,14 +271,13 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 pt-20 pb-32 md:py-16">
                     {/* Page 0: split layout — text left, image right */}
                     {i === 0 ? (
-                      <div className="flex flex-col md:flex-row gap-8 md:gap-14 items-center md:items-stretch">
-                        <div className="flex-1 flex flex-col justify-between">
+                        <div className={`flex-1 flex flex-col ${project.id === 'project-3' ? 'justify-center' : 'justify-between'}`}>
                           <div>
+                            {project.id !== 'project-3' && (
                             <h2 className="text-[28px] md:text-[32px] font-semibold text-white tracking-tight leading-tight mb-1 flex items-center gap-3">
                               <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden opacity-90">
                                 <img
                                   src={import.meta.env.BASE_URL + (
-                                    project.id === 'project-3' ? 'images/吃鲸.webp' :
                                     project.id === 'project-2' ? 'images/爱奇艺.webp' :
                                     'images/爱奇艺Pad.webp'
                                   )}
@@ -283,10 +287,13 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               </div>
                               <span>{project.title}{project.detail.mainTitle && <span className="text-zinc-500 font-normal"> · {project.detail.mainTitle}</span>}</span>
                             </h2>
+                            )}
+                            {project.id !== 'project-3' && (
                             <p className="text-base md:text-lg text-[#d4d4d8] font-normal mb-3">
                               {project.detail.subtitle}
                             </p>
-                            <div className="w-12 h-px bg-zinc-700 mb-4" />
+                            )}
+                            {project.id !== 'project-3' && <div className="w-12 h-px bg-zinc-700 mb-4" />}
                             {section.body && (
                               <div
                                 className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
@@ -298,21 +305,14 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                             )}
                           </div>
-                          <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
+                          {project.id !== 'project-3' && <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
                             {project.techStack.map((tag, idx) => (
                               <span key={tag}>
                                 {tag}{idx < project.techStack.length - 1 ? <span className="text-[#52525b]"> &nbsp;/&nbsp; </span> : ''}
                               </span>
                             ))}
-                          </div>
+                          </div>}
                         </div>
-                        {/* Image placeholder */}
-                        <div className="w-full md:w-[42%] flex-shrink-0">
-                          <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-[#141416] border border-[#222226] flex items-center justify-center transition-all duration-300 hover:border-[#3f3f46] hover:scale-[1.02] group cursor-pointer">
-                            <span className="text-zinc-600 text-sm font-mono group-hover:text-[#C7FF00] transition-colors duration-300">封面图</span>
-                          </div>
-                        </div>
-                      </div>
                     ) : (
                       <>
                         {/* Page 0 intro (non-first-page variant not used for i===0) */}
@@ -379,10 +379,6 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               </span>
             </div>
 
-            {/* Page counter */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[11px] font-mono text-zinc-600 hidden md:block pointer-events-none">
-              {String(activeIndex + 1).padStart(2, '0')} / {String(sections.length).padStart(2, '0')}
-            </div>
           </motion.div>
         </motion.div>
       )}
