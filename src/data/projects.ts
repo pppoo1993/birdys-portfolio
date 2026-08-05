@@ -226,7 +226,7 @@ export const projectData: Project[] = [
           heading: '分发层：互动社区心智建设',
           body: '首页以双列瀑布流承载AI创作内容，让用户进场即感知"能玩、能互动"的社区氛围。同时提供海量影视二创相关模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。',
           html: `<style>
-.dist-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content}
+.dist-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
 .dist-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 .dist-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .dist-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
@@ -706,7 +706,7 @@ export const projectData: Project[] = [
           heading: '陪看布局重构2：场景化动态平衡',
           body: '交互避让机制：引入"动态避让算法"，确保互动内容在触发时能够智能规避核心视听区域，保障主体内容始终处于纯净状态。\n\n场景化信息治理：在回看场景中引入播控，并设计"4秒自动隐匿"的智能收纳逻辑，在用户无操作时，视觉焦点自动回归内容本身。在用户调节进度时展示进度缩略图并自动隐藏非必要的飘评与挂件，最大限度释放屏幕空间，聚焦用户的深度复盘心智。',
           html: `<style>
-	.p9-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content}
+	.p9-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
 	.p9-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 	.p9-col{width:372px;flex-shrink:0}.p9-col.wide{width:564px}
 	.p9-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
@@ -771,7 +771,7 @@ export const projectData: Project[] = [
           heading: '基础送礼链路：极简支付体验',
           body: '商业行为应是内容消费的顺滑延伸，我们通过资产集成与路径压缩，实现支付环节的"零感知"切换。',
           html: `<style>
-.p11-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content}
+.p11-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
 .p11-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 .p11-col{width:372px;flex-shrink:0}
 .p11-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}

@@ -190,9 +190,22 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                 {activeIndex > 0 ? sections[activeIndex]?.heading : ''}
               </p>
               <div className="flex items-center gap-5 pointer-events-auto">
-                <span className="hidden md:block text-[13px] font-mono text-zinc-500 tracking-wider">
-                  {String(activeIndex + 1).padStart(2, '0')} / {String(sections.length).padStart(2, '0')}
-                </span>
+                <nav className="hidden md:flex items-center gap-1.5" aria-label="章节导航">
+                  {sections.map((_, i) => (
+                    <button
+                      key={i}
+                      data-cursor-hover
+                      onClick={() => goTo(i)}
+                      className={`rounded-full transition-all duration-300 ${
+                        i === activeIndex
+                          ? 'w-5 h-1.5 bg-accent'
+                          : 'w-1.5 h-1.5 bg-zinc-700 hover:bg-zinc-500'
+                      }`}
+                      aria-label={`第 ${i + 1} 章`}
+                      aria-current={i === activeIndex ? 'true' : undefined}
+                    />
+                  ))}
+                </nav>
                 <button
                   data-cursor-hover
                   onClick={(e) => {
@@ -211,10 +224,12 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
 
             {/* ════ Shared chart styles ════ */}
             <style>{`
+              .snap-start,.snap-start>*{max-width:100%;overflow-x:hidden}
+              img,table,pre,code{max-width:100%;height:auto}
               .sec-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 10px}
               .sec-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
               .sec-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-              .sec-body{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
+              .sec-body{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
               .sec-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
               .sec-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
               [data-preview]{cursor:pointer;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
@@ -281,7 +296,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                             <div className="w-12 h-px bg-zinc-700 mb-4" />
                             {section.body && (
                               <div
-                                className="font-normal whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
+                                className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
                                 style={{ color: '#A0A0A0', fontSize: '13px', lineHeight: '1.6', letterSpacing: '0.02em' }}
                                 dangerouslySetInnerHTML={{ __html: section.body }}
                               />
@@ -312,7 +327,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                         {/* Body */}
                         {section.body && (
                           <div
-                            className="font-normal whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
+                            className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
                             style={{ color: '#A0A0A0', fontSize: '13px', lineHeight: '1.6', letterSpacing: '0.02em' }}
                             dangerouslySetInnerHTML={{ __html: section.body }}
                           />
@@ -380,6 +395,10 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               ))}
             </div>
 
+            {/* Page counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[11px] font-mono text-zinc-600 hidden md:block pointer-events-none">
+              {String(activeIndex + 1).padStart(2, '0')} / {String(sections.length).padStart(2, '0')}
+            </div>
           </motion.div>
         </motion.div>
       )}
