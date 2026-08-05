@@ -227,7 +227,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               .sec-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 10px}
               .sec-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
               .sec-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-              .sec-body{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
+              .sec-body{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
               .sec-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
               .sec-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
               [data-preview]{cursor:pointer;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
@@ -296,7 +296,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                             {project.id !== 'project-3' && <div className="w-12 h-px bg-zinc-700 mb-4" />}
                             {section.body && (
                               <div
-                                className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
+                                className="font-normal whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
                                 style={{ color: '#A0A0A0', fontSize: '13px', lineHeight: '1.6', letterSpacing: '0.02em' }}
                                 dangerouslySetInnerHTML={{ __html: section.body }}
                               />
@@ -320,7 +320,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                         {/* Body */}
                         {section.body && (
                           <div
-                            className="font-light whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
+                            className="font-normal whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
                             style={{ color: '#A0A0A0', fontSize: '13px', lineHeight: '1.6', letterSpacing: '0.02em' }}
                             dangerouslySetInnerHTML={{ __html: section.body }}
                           />

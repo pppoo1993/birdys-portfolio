@@ -21,11 +21,12 @@ export const projectData: Project[] = [
 .toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%}
 .toc-col{display:flex;flex-direction:column}
 .toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.15);margin-bottom:2px;font-family:monospace}
-.toc-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box}
-.toc-card-title{font-size:15px;font-weight:500;color:#C7FF00;line-height:1.4}
-.toc-card-pages{font-size:11px;color:#71717a;line-height:1.6;display:flex;flex-direction:column;gap:2px}
+.toc-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
+.toc-card:hover{border-color:rgba(255,255,255,0.1);background:rgba(26,26,30,0.9);transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(199,255,0,0.08),inset 0 1px 0 rgba(255,255,255,0.04)}
+.toc-card-title{font-size:14px;font-weight:600;color:#C7FF00;line-height:1.4}
+.toc-card-pages{font-size:13px;color:#A0A0A0;line-height:1.6;display:flex;flex-direction:column;gap:2px}
 .toc-page-row{display:flex;justify-content:space-between;align-items:baseline}
-.toc-page-name{color:#A0A0A0;font-size:13px}
+.toc-page-name{color:#B0B0B0;font-size:13px;font-weight:400}
 .toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
 @media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:160px;padding:18px}.toc-card-title{font-size:13px}}
 </style>
@@ -42,7 +43,8 @@ export const projectData: Project[] = [
                     html: `<style>
 .ba-section{display:flex;flex-direction:column;gap:12px;margin:0 auto}
 .ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:12px}
-.ba-header{color:#FFFFFF;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;padding:4px 0}
+.ba-header{color:#FFFFFF;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;padding-bottom:10px;position:relative}
+.ba-header::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .ba-header::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .ba-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
@@ -96,7 +98,7 @@ export const projectData: Project[] = [
 .quad-cell:hover{background:rgba(199,255,0,.02)}
 .quad-cell .qlabel{color:#C7FF00;font-size:11px;font-weight:600;letter-spacing:.04em;margin-bottom:8px}
 .quad-cell .qtitle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px}
-.quad-cell .qdesc{color:#A0A0A0;font-size:12px;line-height:1.7;font-weight:300;margin:0}
+.quad-cell .qdesc{color:#A0A0A0;font-size:12px;line-height:1.7;font-weight:400;margin:0}
 .quad-cell .qdesc b{color:#FFFFFF;font-weight:600}
 @media(max-width:767px){.quadrant-inner{min-height:300px}.quad-cell{padding:12px}.quad-cell .qtitle{font-size:12px}.quad-cell .qdesc{font-size:11px}}
 </style>
@@ -123,7 +125,7 @@ export const projectData: Project[] = [
 .circle-node span{color:#FFFFFF;font-size:14px;font-weight:600;line-height:1.3;padding:10px}
 .circle-op{display:flex;align-items:center;justify-content:center;width:36px;height:120px;flex-shrink:0;color:#52525b;font-size:18px}
 .circle-sub{color:#FFFFFF;font-size:12px;font-weight:600;text-align:center;margin:12px 0 6px;width:100%}
-.circle-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:300;text-align:center;margin:0;width:100%}
+.circle-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:400;text-align:center;margin:0;width:100%}
 @media(max-width:767px){.circle-row{flex-wrap:wrap;gap:8px}.circle-col{flex:1 1 40%;min-width:100px;max-width:none}.circle-op{width:24px;height:90px}.circle-node{width:90px;height:90px}.circle-node span{font-size:12px}}
 </style>
 <p class="pos-highlight">构建低门槛、轻操作的消费型 AI 互动社区</p>
@@ -142,17 +144,17 @@ export const projectData: Project[] = [
 <div class="arch-row">
 <div class="arch-card" style="background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">生态输入层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">爱奇艺正片、IP 资产、版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300">对接爱奇艺独家正片与 IP 资产，提供版权合规的二创素材，消除用户的冷启动摩擦。</p></div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">爱奇艺正片、IP 资产、版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">对接爱奇艺独家正片与 IP 资产，提供版权合规的二创素材，消除用户的冷启动摩擦。</p></div>
 </div>
 <span class="arch-arrow">→</span>
 <div class="arch-card" style="background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">核心逻辑层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用模型 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300">接入行业领先模型，通过 Prompt 工程与工作流定制，将模糊的用户意图转化为精准的场景算力。</p></div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用模型 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">接入行业领先模型，通过 Prompt 工程与工作流定制，将模糊的用户意图转化为精准的场景算力。</p></div>
 </div>
 <span class="arch-arrow">→</span>
 <div class="arch-card" style="background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">感知交互层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">模板化交互，降低创作门槛</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300"><b style="color:#FFFFFF">UX 设计核心阵地。</b>以模板化交互替代复杂控制面板，将底层算力包装为轻量玩法，让普通用户也能轻松参与创作。</p></div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">模板化交互，降低创作门槛</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400"><b style="color:#FFFFFF">UX 设计核心阵地。</b>以模板化交互替代复杂控制面板，将底层算力包装为轻量玩法，让普通用户也能轻松参与创作。</p></div>
 </div>
 </div>
 `,
@@ -223,9 +225,11 @@ export const projectData: Project[] = [
 .arch-flow-row{display:flex;align-items:center;justify-content:center;gap:20px;width:100%}
 .arch-col{flex:1;min-width:0;background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
 .arch-col:hover{border-color:rgba(255,255,255,0.12)}
-.arch-col-label{color:#A0A0A0;font-size:13px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.arch-col-label{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 14px}
+.arch-col-label::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.arch-col-label::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .arch-col-items{display:flex;flex-direction:column;gap:8px}
-.arch-item{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:4px;padding:10px 14px;font-size:13px;color:#D4D4D8;font-weight:400;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.arch-item{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:4px;padding:10px 14px;font-size:13px;color:#A0A0A0;font-weight:400;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
 .arch-item:hover{border-color:rgba(255,255,255,0.12)}
 .arch-item.hl{border-color:#C7FF00;color:#C7FF00;background:rgba(199,255,0,0.04)}
 .arch-arrow{display:flex;flex-direction:column;align-items:center;width:40px;flex-shrink:0;justify-content:center}
@@ -253,7 +257,7 @@ export const projectData: Project[] = [
           html: `<style>
 .dist-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
 .dist-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-.dist-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
+.dist-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 10px}
 .dist-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .dist-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .dist-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
@@ -305,7 +309,7 @@ export const projectData: Project[] = [
           body: '将官方影视切片、本地相册及个人库整合为中心化素材库，配合 @引用式配置逻辑，消除跨平台素材获取的流转割裂。',
           html: `<style>
 .ds-list{margin:0 0 24px;list-style:none;padding:0}
-.ds-list li{margin-bottom:12px;font-size:13px;line-height:1.75;color:#A0A0A0;font-weight:300}
+.ds-list li{margin-bottom:12px;font-size:13px;line-height:1.75;color:#A0A0A0;font-weight:400}
 .ds-list li b{color:#FFFFFF;font-weight:600}
 .arch-wrapper{max-width:950px;display:inline-flex;flex-direction:column}.arch-layer{position:relative;padding:0 50px;margin-bottom:24px}.arch-layer::after{content:"";position:absolute;left:32px;top:0;width:1px;background:#222226;z-index:0}.arch-layer:not(:last-child)::after{height:calc(100% + 24px)}.arch-layer:last-child::after{height:100%}.arch-layer-bar{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:12px;padding-bottom:4px;gap:2px;position:relative;z-index:1}.arch-layer-label{color:#FFFFFF;font-size:14px;font-weight:600;letter-spacing:0.02em;display:flex;align-items:center;gap:10px;position:relative}.arch-layer-label::before{content:"";width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a;flex-shrink:0;position:absolute;left:-25px;top:50%;transform:translateY(-50%);z-index:2}.arch-page-row{display:flex;gap:28px;justify-content:flex-start}.arch-page-col{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:1 1 0;min-width:0}.arch-page-box{width:auto;display:inline-flex;box-sizing:border-box;height:auto;border-radius:8px;overflow:hidden;border:1px solid #222226;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-page-col:hover .arch-page-box{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}.arch-page-tag{font-size:11px;color:#A0A0A0;letter-spacing:0.02em;text-align:center;width:100%}@media(max-width:767px){.arch-wrapper{width:100%!important;max-width:100%!important;padding:0}.arch-layer{padding:0 0 0 22px!important}.arch-layer::after{left:5px!important}.arch-layer-label::before{left:-25px!important}.arch-page-row{flex-direction:row!important;flex-wrap:nowrap;gap:4px}.arch-page-row>span{font-size:12px!important;padding:0 2px!important}.arch-page-box{width:100%!important}.arch-page-box img{max-width:100%!important;width:100%!important;max-width:none!important}.arch-page-col{flex:1;min-width:0;overflow:hidden}}
 </style>
@@ -352,18 +356,18 @@ export const projectData: Project[] = [
           html: `<style>
 .ds-sub{font-size:18px;font-weight:700;color:#FFFFFF;margin:2rem 0 8px;letter-spacing:0.02em}
 .ds-sub .num{font-family:monospace;font-size:15px;color:#C7FF00;margin-right:8px;font-weight:700}
-.ds-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:300}
+.ds-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:400}
 .ds-img-placeholder{background:linear-gradient(135deg,#121212 0%,#121212 100%);border:1px solid #333333;border-radius:4px;padding:48px 20px;text-align:center;margin:16px 0 24px;font-size:11px;color:#A0A0A0;font-family:system-ui,-apple-system,sans-serif;letter-spacing:0.05em;position:relative;overflow:hidden}.ds-img-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}.ds-img-placeholder::after{content:'🖼';display:block;font-size:24px;margin-bottom:12px;opacity:.3;filter:grayscale(1)}
 .progressive-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
 @media(max-width:767px){.progressive-steps{grid-template-columns:1fr!important}}
 .progressive-steps .ps-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:18px;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.progressive-steps .ps-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
 .progressive-steps .ps-card .ps-num{font-family:monospace;font-size:10px;color:#C7FF00;display:block;margin-bottom:8px}
 .progressive-steps .ps-card .ps-title{color:#FFFFFF;font-size:13px;font-weight:600;display:block;margin-bottom:4px}
-.progressive-steps .ps-card .ps-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:300}
+.progressive-steps .ps-card .ps-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:400}
 </style>
 <h5 style="color:#FFFFFF;font-size:13px;font-weight:600;margin:0 0 8px">📖 故事接龙</h5>
-<p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 8px;font-weight:300">为打破传统 UGC 内容发布即终点的「静态限制」，我们推出了「故事接龙」进阶玩法，通过将创作起点锚定在「结局之后」的空白叙事区，实现叙事的无限延伸。</p>
-<p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:300">在这里，用户既是剧情的消费者，通过浏览多条平行结局分支获取感官体验；也是剧情的重构者，可随时通过「改写节点」介入叙事。这种「边看边写」的交互机制，让每一段内容都成为叙事的动态节点，用户的碎片化灵感通过「接力式」共创汇聚成可持续生长的社区叙事资产，成功将单点输出转化为链式共创。</p>
+<p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 8px;font-weight:400">为打破传统 UGC 内容发布即终点的「静态限制」，我们推出了「故事接龙」进阶玩法，通过将创作起点锚定在「结局之后」的空白叙事区，实现叙事的无限延伸。</p>
+<p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:400">在这里，用户既是剧情的消费者，通过浏览多条平行结局分支获取感官体验；也是剧情的重构者，可随时通过「改写节点」介入叙事。这种「边看边写」的交互机制，让每一段内容都成为叙事的动态节点，用户的碎片化灵感通过「接力式」共创汇聚成可持续生长的社区叙事资产，成功将单点输出转化为链式共创。</p>
 <div class="ds-img-placeholder">示意图：故事接龙叙事分支界面</div>
 
 <p class="ds-p" style="margin-top:24px">我们设计了一套「渐进式创作」交互模式，将 AI 能力自然嵌入用户的创作流中：</p>
@@ -389,7 +393,7 @@ export const projectData: Project[] = [
           heading: '沉淀：当潮水退去，留下的交互资产',
           body: '',
           html: `<style>
-.sd-intro{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 32px;font-weight:300}
+.sd-intro{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 32px;font-weight:400}
 .sd-intro b{color:#FFFFFF;font-weight:600}
 .sd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
 .sd-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
@@ -398,11 +402,11 @@ export const projectData: Project[] = [
 .sd-card:hover::before{opacity:.6}
 .sd-card-num{position:absolute;top:24px;right:14px;font-family:monospace;font-size:10px;color:#C7FF00;font-weight:600;letter-spacing:0.06em;background:rgba(199,255,0,0.08);border:1px solid rgba(199,255,0,0.15);border-radius:3px;padding:3px 10px;z-index:1}
 .sd-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;line-height:1.4;position:relative}.sd-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.sd-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.sd-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
+.sd-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .sd-card-desc b{color:#FFFFFF;font-weight:600}
 .sd-closing{margin-top:32px;background:linear-gradient(135deg,rgba(199,255,0,.02) 0%,rgba(199,255,0,.005) 100%);border:1px solid rgba(199,255,0,.08);border-left:3px solid #C7FF00;border-radius:4px;padding:24px 28px}
 .sd-closing-label{font-family:monospace;font-size:11px;color:#C7FF00;letter-spacing:0.08em;margin-bottom:10px;display:block;font-weight:600}
-.sd-closing p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0;font-weight:300}
+.sd-closing p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0;font-weight:400}
 .sd-closing p b{color:#FFFFFF;font-weight:600}
 @media(max-width:767px){.sd-grid{grid-template-columns:1fr!important}.sd-closing{padding:20px}}
 </style>
@@ -436,7 +440,7 @@ export const projectData: Project[] = [
         {
           heading: '项目概述',
           body: '明星陪看旨在重构影视观影的社交体验，通过将传统内容消费升级为"边看边聊"的沉浸式现场，建立起粉丝与偶像间的高频情感连接。',
-          html: `<style>.role-text{color:#A0A0A0;font-size:13px;line-height:1.6;font-weight:300;margin:0;letter-spacing:0.02em}</style>
+          html: `<style>.role-text{color:#A0A0A0;font-size:13px;line-height:1.6;font-weight:400;margin:0;letter-spacing:0.02em}</style>
 	<p class="role-text">作为设计 Owner，我主导了视听布局的深度重构。并通过对直播间互动路径的重塑与送礼面板的组件化改造，在确立沉浸式社交交互标准的同时，驱动<b style="color:#FFFFFF;font-weight:600">送礼营收数据突破业务历史峰值</b>。</p>`,
         },
         // ═══ P2 互动破局 ═══
@@ -444,7 +448,7 @@ export const projectData: Project[] = [
           heading: '互动破局：将单向观影升级为情感共鸣',
           body: '',
           html: `<style>
-.hl-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 1.5rem;font-weight:300;letter-spacing:0.01em}
+.hl-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 1.5rem;font-weight:400;letter-spacing:0.01em}
 .hl-p b{color:#FFFFFF;font-weight:600}
 .hl-p:last-child{margin-bottom:0}
 .model-timeline{display:flex;flex-direction:column;position:relative;margin-top:8px}
@@ -463,7 +467,7 @@ export const projectData: Project[] = [
 .val-dim-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
 .val-dim-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .val-dim-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.val-dim-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:300}
+.val-dim-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400}
 .val-dim-card-desc b{color:#FFFFFF;font-weight:600}
 @media(max-width:767px){.val-dim-cards{flex-direction:column!important;gap:8px}}
 </style>
@@ -588,18 +592,18 @@ export const projectData: Project[] = [
           heading: '流量蓄水：触达入口及陪看聚合页构建',
           body: '',
           html: `<style>
-.tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:300}
+.tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:400}
 .tx-p b{color:#FFFFFF;font-weight:600}
 /* 蓄水漏斗 */
 .funnel-row{display:flex;gap:32px;align-items:stretch;margin:28px 0}
 .funnel-card{flex:1;background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;display:flex;flex-direction:column}
 .funnel-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
-.funnel-card::after{content:attr(data-arrow);position:absolute;right:-24px;top:50%;transform:translateY(-50%);color:#555555;font-size:16px;font-weight:300;z-index:2}
+.funnel-card::after{content:attr(data-arrow);position:absolute;right:-24px;top:50%;transform:translateY(-50%);color:#555555;font-size:16px;font-weight:400;z-index:2}
 .funnel-card:last-child::after{display:none}
 .funnel-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
 .funnel-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .funnel-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.funnel-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0;flex:1}
+.funnel-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0;flex:1}
 .funnel-desc b{color:#FFFFFF;font-weight:600}
 @media(max-width:767px){.funnel-row{flex-direction:column!important;gap:40px!important}.funnel-card::after{right:50%;top:calc(100% + 20px);bottom:auto;transform:translate(50%,-50%) rotate(90deg)}}
 .image-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;padding:48px 20px;text-align:center;margin:16px 0;font-size:11px;color:#A0A0A0;font-family:system-ui,-apple-system,sans-serif;letter-spacing:0.05em;position:relative;overflow:hidden}
@@ -680,7 +684,7 @@ export const projectData: Project[] = [
           heading: '沉浸式体验：从"伴随式社交"到"沉浸式陪看"',
           body: '',
           html: `<style>
-.tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:300}
+.tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:400}
 .tx-p b{color:#FFFFFF;font-weight:600}
 .entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:900px}
 .entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
@@ -692,7 +696,7 @@ export const projectData: Project[] = [
 .p7-card::after{content:'';position:absolute;left:15px;top:0;bottom:0;width:1px;background:#222226;z-index:0}
 .p7-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px;display:flex;align-items:center;gap:8px;position:relative}
 .p7-card-title::before{content:'';width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a;flex-shrink:0;position:absolute;left:-22px;top:50%;transform:translateY(-50%);z-index:2}
-.p7-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
+.p7-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .p7-card-desc b{color:#FFFFFF;font-weight:600}
 .card-arrow{display:none}
 @media(max-width:767px){.p7-card{padding:0 0 0 22px}.p7-card::after{left:15px}.p7-card-title::before{left:-14px}}
@@ -734,10 +738,10 @@ export const projectData: Project[] = [
 	.p9-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
 	.p9-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 	.p9-col{width:372px;flex-shrink:0}.p9-col.wide{width:564px}
-	.p9-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
+	.p9-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 10px}
 	.p9-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 	.p9-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-	.p9-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
+	.p9-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 	.p9-col-desc b{color:#FFFFFF;font-weight:600}
 	.p9-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 	.p9-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
@@ -802,7 +806,7 @@ export const projectData: Project[] = [
 .p11-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .p11-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .p11-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.p11-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
+.p11-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .p11-col-desc b{color:#FFFFFF;font-weight:600}
 .p11-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .p11-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
@@ -838,7 +842,7 @@ export const projectData: Project[] = [
 .p12-chart{max-width:660px;margin:0 auto}
 .p12-subtitle::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .p12-subtitle::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.p12-subdesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0 0 24px}
+.p12-subdesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0 0 24px}
 .p12-flow{display:flex;gap:28px;align-items:flex-start;margin:0}
 .p12-flow-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
 .p12-flow-img{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
@@ -879,7 +883,7 @@ export const projectData: Project[] = [
           body: '',
           html: `<style>
         .p12b-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 0}
-        .p12b-text{color:#A0A0A0;font-size:14px;line-height:1.8;font-weight:300;margin:0;max-width:600px}
+        .p12b-text{color:#A0A0A0;font-size:14px;line-height:1.8;font-weight:400;margin:0;max-width:600px}
         .p12b-text b{color:#FFFFFF;font-weight:600}
         @media(max-width:767px){.p12b-text{font-size:13px;line-height:1.8}}
         </style>
@@ -972,7 +976,7 @@ export const projectData: Project[] = [
 .pad2-item{padding:0;min-height:50px}
 .pad2-item h5{display:inline;color:#FFFFFF;font-size:13px;font-weight:600;margin:0}
 .pad2-item.solve h5{color:#FFFFFF}
-.pad2-item p{color:#A0A0A0;font-size:13px;line-height:1.6;margin:8px 0 0;font-weight:300}
+.pad2-item p{color:#A0A0A0;font-size:13px;line-height:1.6;margin:8px 0 0;font-weight:400}
 .pad2-item p b{color:#FFFFFF;font-weight:600}
 .pad2-label{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;margin-right:6px;font-family:monospace;font-weight:600}
 .pad2-label.pain{background:rgba(199,255,0,0.08);color:#C7FF00;border:1px solid rgba(199,255,0,0.2)}
@@ -1016,7 +1020,7 @@ export const projectData: Project[] = [
 .pad3-bubble.phone::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1A1A1A;border-left:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);transform:translateY(-50%) rotate(45deg)}
 .pad3-bubble.pad{background:rgba(199,255,0,0.06);border-color:rgba(199,255,0,0.25)}
 .pad3-bubble.phone{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.12)}
-.pad3-bubble-text{color:#A0A0A0;font-size:13px;line-height:1.7;font-weight:300}
+.pad3-bubble-text{color:#A0A0A0;font-size:13px;line-height:1.7;font-weight:400}
 .pad3-bubble-text b{color:#FFFFFF;font-weight:600}
 .pad3-quote{display:flex;gap:10px;align-items:center;margin-bottom:10px}
 .pad3-avatar{width:48px;height:48px;border-radius:50%;flex-shrink:0;overflow:hidden;border:1.5px solid #333;align-self:center;display:flex;align-items:center;justify-content:center;background:#1a1a1e}
@@ -1081,7 +1085,7 @@ export const projectData: Project[] = [
 .pad5-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
 .pad5-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .pad5-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.pad5-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300}
+.pad5-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400}
 .pad5-desc b{color:#FFFFFF;font-weight:600}
 @media(max-width:767px){.pad5-grid{grid-template-columns:1fr!important}}
 </style>
@@ -1107,7 +1111,7 @@ export const projectData: Project[] = [
 .pad6-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
 .pad6-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .pad6-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.pad6-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300}
+.pad6-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400}
 .pad6-card-desc b{color:#FFFFFF;font-weight:600}
 @media(max-width:767px){.pad6-split{flex-direction:column!important}.pad6-mockup{width:100%;max-width:240px;margin:0 auto}}
 </style>
