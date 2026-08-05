@@ -86,7 +86,9 @@
       "Bash(cp \"/Users/birdy/Desktop/陪看日历优化/无直播.png\" public/images/live-no-live.png)",
       "Bash(cp \"/Users/birdy/Desktop/陪看日历优化/直播预告.png\" public/images/live-preview.png)",
       "Bash(cp \"/Users/birdy/Desktop/陪看日历优化/直播倒计时.png\" public/images/live-countdown.png)",
-      "Bash(cp \"/Users/birdy/Desktop/陪看日历优化/直播态.png\" public/images/live-ongoing.png)"
+      "Bash(cp \"/Users/birdy/Desktop/陪看日历优化/直播态.png\" public/images/live-ongoing.png)",
+      "Bash(xargs -0 -I{} sh -c 'test -f \"{}\" && wc -c < \"{}\"')",
+      "Bash(read s *)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"
