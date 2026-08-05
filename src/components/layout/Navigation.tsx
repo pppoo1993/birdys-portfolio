@@ -207,7 +207,7 @@ export default function Navigation() {
     <>
       {/* Mobile: top bar */}
       <nav className="fixed top-0 right-0 left-0 z-50 border-b border-divider bg-bg-primary md:hidden">
-        <div className="flex items-center justify-between px-6 py-0">
+        <div className="flex items-center justify-between px-6 py-3">
           <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" className="h-[26px] w-auto object-contain opacity-90" />
           <button
             className="text-white/80"
@@ -229,7 +229,7 @@ export default function Navigation() {
             className="absolute inset-0 bg-black/15"
             onClick={() => setMobileOpen(false)}
           />
-          <div className="absolute top-0 left-0 right-0 bg-[#161618] border-b border-[#1f1f23] rounded-b-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] px-6 pt-16 pb-8">
+          <div className="absolute top-0 left-0 right-0 bg-[#161618] border-b border-[#1f1f23] rounded-b-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] px-6 py-[30px]">
             {navLinks}
           </div>
         </div>
