@@ -25,8 +25,8 @@ export const projectData: Project[] = [
           body: '爱奇艺切入 AI 视频，本质上是一场<b>「生产端降本 & 流量端防御」</b>的生态自救。爱奇艺试图用生成式 AI 视频作为武器，精准破解长视频行业既有的三大商业天花板。',
                     html: `<style>
 .ba-section{display:flex;flex-direction:column;gap:12px;margin:0 auto}
-.ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.ba-header{color:#FFFFFF;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
+.ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:12px}
+.ba-header{color:#FFFFFF;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;padding:4px 0}
 .ba-header::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .ba-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
@@ -68,7 +68,7 @@ export const projectData: Project[] = [
           heading: '挑战与破局：从 SWOT 模型看长视频的 AI 跨界',
           body: '在梳理三大业务痛点后，我们引入 SWOT 模型审视长视频平台跨界 AI 的核心博弈格局，以此校准破局方向。',
           html: `<style>
-.quadrant-wrap{position:relative;width:100%;max-width:720px;margin:0 auto 32px}
+.quadrant-wrap{position:relative;width:100%;max-width:720px;margin:12px auto 32px}
 .quad-cell .qwatermark{position:absolute;top:6px;right:8px;font-size:80px;font-weight:900;color:rgba(255,255,255,.025);font-family:system-ui,-apple-system,sans-serif;line-height:1;pointer-events:none;z-index:0;letter-spacing:-0.02em}
 .quadrant-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
 .quadrant-inner{grid-column:1/3;grid-row:1/3;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;position:relative;min-height:360px}
@@ -207,9 +207,7 @@ export const projectData: Project[] = [
 .arch-flow-row{display:flex;align-items:center;justify-content:center;gap:20px;width:100%}
 .arch-col{flex:1;min-width:0;background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
 .arch-col:hover{border-color:rgba(255,255,255,0.12)}
-.arch-col-label{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 14px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.arch-col-label::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.arch-col-label::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.arch-col-label{color:#A0A0A0;font-size:13px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px}
 .arch-col-items{display:flex;flex-direction:column;gap:8px}
 .arch-item{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:4px;padding:10px 14px;font-size:13px;color:#D4D4D8;font-weight:400;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
 .arch-item:hover{border-color:rgba(255,255,255,0.12)}
@@ -221,7 +219,7 @@ export const projectData: Project[] = [
 .arch-arrow-label{font-size:11px;color:#71717a;margin-top:6px;text-align:center}
 .arch-footnote{margin-top:12px;font-size:13px;color:#A0A0A0;font-weight:400;display:flex;align-items:center;gap:8px}
 .arch-footnote::before{content:'';width:6px;height:6px;background:#C7FF00;border-radius:50%;flex-shrink:0}
-@media(max-width:767px){.arch-flow-row{flex-direction:column;gap:20px}.arch-col{width:100%!important;max-width:100%!important;padding:16px}.arch-col-label{font-size:13px;margin-bottom:10px;padding-bottom:8px}.arch-col-label::after{width:60px}.arch-item{font-size:12px;padding:8px 12px}.arch-arrow{display:none}.arch-arrow-line{display:none}.arch-arrow-line::after{display:none}.arch-arrow-label{display:none}}
+@media(max-width:767px){.arch-flow-row{flex-direction:column;gap:20px}.arch-col{width:100%!important;max-width:100%!important;padding:16px}.arch-col-label{font-size:13px;margin-bottom:10px;padding-bottom:8px}.arch-item{font-size:12px;padding:8px 12px}.arch-arrow{display:none}.arch-arrow-line{display:none}.arch-arrow-line::after{display:none}.arch-arrow-label{display:none}}
 </style>
 <div class="arch-flow">
 <div class="arch-flow-row">

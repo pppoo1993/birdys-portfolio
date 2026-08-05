@@ -196,22 +196,9 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                 {activeIndex > 0 ? sections[activeIndex]?.heading : ''}
               </p>
               <div className="flex items-center gap-5 pointer-events-auto">
-                <nav className="hidden md:flex items-center gap-1.5" aria-label="章节导航">
-                  {sections.map((_, i) => (
-                    <button
-                      key={i}
-                      data-cursor-hover
-                      onClick={() => goTo(i)}
-                      className={`rounded-full transition-all duration-300 ${
-                        i === activeIndex
-                          ? 'w-5 h-1.5 bg-accent'
-                          : 'w-1.5 h-1.5 bg-zinc-700 hover:bg-zinc-500'
-                      }`}
-                      aria-label={`第 ${i + 1} 章`}
-                      aria-current={i === activeIndex ? 'true' : undefined}
-                    />
-                  ))}
-                </nav>
+                <span className="hidden md:block text-[13px] font-mono text-zinc-500 tracking-wider">
+                  {String(activeIndex + 1).padStart(2, '0')} / {String(sections.length).padStart(2, '0')}
+                </span>
                 <button
                   data-cursor-hover
                   onClick={(e) => {
