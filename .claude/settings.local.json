@@ -82,7 +82,11 @@
       "Bash(cp '/Volumes/简历作品集/吃鲸复盘/截图/换台词/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=9177989941045650019&skey=@crypt_40492347_c3cdbc4219270cdaa0279f3550dee0d9&mmweb_appid=wx_webfilehelper.jpeg' /Users/birdy/Documents/birdys-portfolio/public/images/chijing/04-preview.jpeg)",
       "Bash(xxd)",
       "Bash(grep -c 'html: \\\\\\\\\\\\\\\\\\\\`' src/data/projects.ts)",
-      "Bash(grep -c 'html: \\\\`' src/data/projects.ts)"
+      "Bash(grep -c 'html: \\\\`' src/data/projects.ts)",
+      "Bash(cp \"/Users/birdy/Desktop/陪看日历优化/无直播.png\" public/images/live-no-live.png)",
+      "Bash(cp \"/Users/birdy/Desktop/陪看日历优化/直播预告.png\" public/images/live-preview.png)",
+      "Bash(cp \"/Users/birdy/Desktop/陪看日历优化/直播倒计时.png\" public/images/live-countdown.png)",
+      "Bash(cp \"/Users/birdy/Desktop/陪看日历优化/直播态.png\" public/images/live-ongoing.png)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"

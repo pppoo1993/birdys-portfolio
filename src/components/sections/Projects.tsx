@@ -58,12 +58,6 @@ function TagsRow({ tags }: { tags: string[] }) {
   )
 }
 
-const achievementTags: Record<string, string> = {
-  'project-3': 'AI 架构从 0 到 1',
-  'project-2': '直播间转化率 +35%',
-  'project-1': 'Pad端体验重构',
-}
-
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null)
@@ -226,13 +220,6 @@ export default function Projects() {
                   <div className="w-full md:w-[50%] flex-shrink-0 relative overflow-visible bg-transparent order-1 md:order-2 flex justify-center items-center pt-6 pb-2 md:pb-6"
                     style={{ perspective: project.id === 'project-3' ? '600px' : project.id === 'project-2' ? 'none' : '1000px' }}
                   >
-                    {/* Achievement tag */}
-                    <span
-                      className="absolute top-6 right-7 md:right-10 z-20 font-mono text-[10px] font-medium tracking-[0.05em] rounded px-2.5 py-1"
-                      style={{ background: 'rgba(255, 255, 255, 0.08)', color: 'rgba(255, 255, 255, 0.8)', backdropFilter: 'blur(4px)' }}
-                    >
-                      {achievementTags[project.id]}
-                    </span>
 
                     {project.id === 'project-3' && (
                       <div className="relative" style={{ width: '200px', aspectRatio: '200/310' }}>

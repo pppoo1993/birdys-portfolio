@@ -23,39 +23,33 @@ export const projectData: Project[] = [
         {
           heading: '缘起：长视频平台的生态自救',
           body: '爱奇艺切入 AI 视频，本质上是一场<b>「生产端降本 & 流量端防御」</b>的生态自救。爱奇艺试图用生成式 AI 视频作为武器，精准破解长视频行业既有的三大商业天花板。',
-          html: `<style>
-.ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:0 auto}
-.ba-col{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-.ba-col:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
-.ba-header{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 14px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.ba-header::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.ba-header::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.ba-item{margin-bottom:14px}
-.ba-item:last-child{margin-bottom:0}
-.ba-item .tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;font-family:monospace;letter-spacing:.06em;font-weight:600;margin:0 8px 0 0;vertical-align:middle}
-.ba-item.pain .tag{background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
-.ba-item.solve .tag{background:rgba(199,255,0,.06);color:#C7FF00;border:1px solid rgba(199,255,0,.12)}
-.ba-item .ititle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0;display:inline;vertical-align:middle}
-.ba-item.solve .ititle{color:#C7FF00}
-.ba-item .idesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:8px 0 0}
-.ba-item .idesc b{color:#FFFFFF;font-weight:600}
+                    html: `<style>
+.ba-section{display:flex;flex-direction:column;gap:12px;margin:0 auto}
+.ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ba-header{color:#FFFFFF;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
+.ba-header::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ba-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.ba-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+.ba-card .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:2px;font-family:monospace;letter-spacing:.04em;font-weight:600;margin:0 6px 0 0;vertical-align:middle;background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
+.ba-card .ititle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0;display:inline;vertical-align:middle}
+.ba-arrow-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.ba-arrow-row span{text-align:center;color:#52525b;font-size:16px}
+.ba-card .idesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:8px 0 0}
+.ba-card .idesc b{color:#FFFFFF;font-weight:600}
 @media(max-width:767px){.ba-row{grid-template-columns:1fr;gap:12px}}
 </style>
+<div class="ba-section">
+<div class="ba-header-row"><div class="ba-header">生产端</div><div class="ba-header">变现端</div><div class="ba-header">流量端</div></div>
 <div class="ba-row">
-<div class="ba-col">
-<div class="ba-header">生产端</div>
-<div class="ba-item pain"><span class="tag">痛点</span><span class="ititle">重资产死循环</span><p class="idesc">传统影视制作周期长、投入高、容错率低。</p></div>
-<div class="ba-item solve"><span class="tag">解法</span><span class="ititle">转嫁成本风险</span><p class="idesc">利用 AI 边际成本趋于零的特性，打破传统制作的预算围墙。</p></div>
+<div class="ba-card pain"><span class="tag">痛点</span><span class="ititle">重资产死循环</span><p class="idesc">传统影视制作周期长、投入高、容错率低。</p></div>
+<div class="ba-card pain"><span class="tag">痛点</span><span class="ititle">线性 ROI 脆弱</span><p class="idesc">营收过度依赖"广告+会员"，ARPU 天花板低。</p></div>
+<div class="ba-card pain"><span class="tag">痛点</span><span class="ititle">用户注意力流失</span><p class="idesc">长视频"被动喂养"模式无法满足年轻一代对高频互动的需求。</p></div>
 </div>
-<div class="ba-col">
-<div class="ba-header">变现端</div>
-<div class="ba-item pain"><span class="tag">痛点</span><span class="ititle">线性 ROI 脆弱</span><p class="idesc">营收过度依赖"广告+会员"，ARPU 天花板低。</p></div>
-<div class="ba-item solve"><span class="tag">解法</span><span class="ititle">高毛利增值变现</span><p class="idesc">将 IP 资产转化为生产要素，引入高毛利 AI 增值购模式。</p></div>
-</div>
-<div class="ba-col">
-<div class="ba-header">流量端</div>
-<div class="ba-item pain"><span class="tag">痛点</span><span class="ititle">用户注意力流失</span><p class="idesc">长视频"被动喂养"模式无法满足年轻一代对高频互动的需求。</p></div>
-<div class="ba-item solve"><span class="tag">解法</span><span class="ititle">全链路流量闭环</span><p class="idesc">打通<b>"看正片 → AI 二创 → 新梗回流"</b>链路，实现长视频版权的长尾增值。</p></div>
+<div class="ba-arrow-row"><span>↓</span><span>↓</span><span>↓</span></div>
+<div class="ba-row">
+<div class="ba-card solve"><span class="tag">解法</span><span class="ititle">转嫁成本风险</span><p class="idesc">利用 AI 边际成本趋于零的特性，打破传统制作的预算围墙。</p></div>
+<div class="ba-card solve"><span class="tag">解法</span><span class="ititle">高毛利增值变现</span><p class="idesc">将 IP 资产转化为生产要素，引入高毛利 AI 增值购模式。</p></div>
+<div class="ba-card solve"><span class="tag">解法</span><span class="ititle">全链路流量闭环</span><p class="idesc">打通<b>"看正片 → AI 二创 → 新梗回流"</b>链路，实现长视频版权的长尾增值。</p></div>
 </div>
 </div>`,
         },
@@ -537,45 +531,22 @@ export const projectData: Project[] = [
           heading: '播放页入口：动态链路触达',
           body: '',
           html: `<style>
-.tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:300}
-.tx-p b{color:#FFFFFF;font-weight:600}
-.entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:900px}
-.entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
-.entry-right{flex:0.8;display:flex;flex-direction:column;gap:16px;min-width:0}
-.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168}
-.entry-img-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.entry-img-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1}
-.principle-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);flex:1}
-.principle-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
-.principle-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.principle-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.principle-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.principle-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:300;margin:0}
-@media(max-width:767px){.entry-split{flex-direction:column!important;gap:24px!important}.entry-left{flex:0 0 auto!important;width:100%}.entry-right{flex:0 0 auto!important;width:100%}}</style>
-<p class="tx-p">依托核心播放场景，通过<b>动态状态卡片</b>构建即时交互触点。无论是"预约提醒"还是"直播中进入"，设计始终保持<b>低干扰、高转化</b>的策略，在不打断用户观影流的前提下，引导高意向粉丝通过便捷入口快速切入陪看现场，完成从视频消费到直播互动的行为转化。</p>
-
+.entry-split{display:flex;gap:24px;align-items:flex-start;margin:28px 0}
+.entry-left{flex:2.5;min-width:0}
+.entry-left img{width:100%;display:block}
+.entry-right{flex:1;display:flex;flex-direction:column;gap:20px;min-width:0;padding-top:8px}
+.entry-text-item{padding-bottom:16px;border-bottom:1px solid #222226}
+.entry-text-item:last-child{padding-bottom:0;border-bottom:none}
+.entry-text-label{color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px}
+.entry-text-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
+@media(max-width:767px){.entry-split{flex-direction:column!important}}
+</style>
 <div class="entry-split">
-<div class="entry-left">
-<div data-preview class="entry-img-box">
-<span class="entry-img-label">直播中状态</span>
-</div>
-<div data-preview class="entry-img-box">
-<span class="entry-img-label">预约态</span>
-</div>
-</div>
+<div class="entry-left"><img src="/birdys-portfolio/images/live-all-states.png" alt="直播入口状态" style="width:100%;border-radius:6px" /></div>
 <div class="entry-right">
-<div class="principle-card">
-<div class="principle-card-title">低干扰</div>
-<p class="principle-card-desc">悬浮胶囊不遮挡播放核心区，仅在适当时机以呼吸动效提示，在不打断观影流的前提下完成轻量触达。</p>
-</div>
-<div class="principle-card">
-<div class="principle-card-title">高转化</div>
-<p class="principle-card-desc">状态信息实时更新，缩短用户从"看到"到"进入"的决策链路，一键切入陪看现场。</p>
-</div>
-<div class="principle-card">
-<div class="principle-card-title">心智建设</div>
-<p class="principle-card-desc">通过预约倒计时培养用户对"陪看时间"的预期和习惯，将剧集观众转化为直播间的存量用户。</p>
-</div>
+<div class="entry-text-item"><p class="entry-text-label">低干扰</p><p class="entry-text-desc">触达入口设置在选集下方，仅在临近直播/直播中时显示，在不打断观影流的前提下完成轻量触达。</p></div>
+<div class="entry-text-item"><p class="entry-text-label">高转化</p><p class="entry-text-desc">入口实时展示直播状态，直播间内活动权益通过角标透传，辅助用户进行决策，一键切入陪看现场。</p></div>
+<div class="entry-text-item"><p class="entry-text-label">心智建设</p><p class="entry-text-desc">通过直播预告培养用户一键预约本剧全部直播陪看的习惯，将剧集观众转化为直播间的存量用户。</p></div>
 </div>
 </div>`,
         },
@@ -584,35 +555,23 @@ export const projectData: Project[] = [
           heading: '明星陪看聚合页：沉淀互动资产',
           body: '',
           html: `<style>
-.tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:300}
-.tx-p b{color:#FFFFFF;font-weight:600}
-.agg-chart{max-width:600px;margin:0 auto}
-.agg-row{display:flex;gap:24px;align-items:flex-start;margin:28px 0}
-.agg-col{flex:1;display:flex;flex-direction:column;gap:10px;min-width:0;align-items:center}
-.agg-col-img{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.agg-col-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.agg-col-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-.agg-col-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5;width:100%}
-.agg-col-text strong{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
-.agg-col-text b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.agg-chart{max-width:100%}}
+.agg-split{display:flex;gap:32px;align-items:flex-start;margin:28px 0}
+.agg-left{flex:1;min-width:0}
+.agg-left img{width:100%;height:auto;border-radius:6px}
+.agg-right{flex:1;display:flex;flex-direction:column;gap:20px;min-width:0;padding-top:8px}
+.agg-text-item{padding-bottom:16px;border-bottom:1px solid #222226}
+.agg-text-item:last-child{padding-bottom:0;border-bottom:none}
+.agg-text-label{color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px}
+.agg-text-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
+.agg-text-desc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.agg-split{flex-direction:column!important}}
 </style>
-<p class="tx-p">我们设计了「明星陪看」聚合阵地，旨在沉淀流量并延长内容价值周期：</p>
-
-<div class="agg-chart">
-<div class="agg-row">
-<div class="agg-col">
-<div data-preview class="agg-col-img"><span class="agg-col-img-label">聚合页首屏</span></div>
-<div class="agg-col-text"><strong>直播 / 预约动态</strong>作为流量转化的实时枢纽，通过清晰的<b>预约⇄直播中⇄回看</b>状态切换机制，建立用户对明星陪看的时间心智。</div>
-</div>
-<div class="agg-col">
-<div data-preview class="agg-col-img"><span class="agg-col-img-label">陪看榜单界面</span></div>
-<div class="agg-col-text"><strong>陪看榜单</strong>引入<b>社群竞技感</b>，通过实时互动数据可视化——贡献榜、送礼榜、互动热力值——激发粉丝参与热度与集体荣誉感。</div>
-</div>
-<div class="agg-col">
-<div data-preview class="agg-col-img"><span class="agg-col-img-label">回看合集界面</span></div>
-<div class="agg-col-text"><strong>回看合集</strong>不仅是内容的二次消费，更是将单次直播转化为<b>长效互动资产</b>，实现剧集与直播流量的<b>跨周期复利</b>，破解"看后即走"的留存困境。</div>
-</div>
+<div class="agg-split">
+<div class="agg-left"><img src="/birdys-portfolio/images/agg-page.png" alt="聚合页" style="width:100%;border-radius:6px" /></div>
+<div class="agg-right">
+<div class="agg-text-item"><p class="agg-text-label">直播 / 预约动态</p><p class="agg-text-desc">作为流量转化的实时枢纽，通过清晰的预约、直播中、回看状态切换机制，建立用户对明星陪看的<b>时间心智</b>。</p></div>
+<div class="agg-text-item"><p class="agg-text-label">陪看榜单</p><p class="agg-text-desc">引入<b>社群竞技感</b>，通过实时互动数据可视化——贡献榜、送礼榜、互动热力值——激发粉丝参与热度与集体荣誉感。</p></div>
+<div class="agg-text-item"><p class="agg-text-label">回看合集</p><p class="agg-text-desc">将单次直播转化为<b>长效互动资产</b>，实现剧集与直播流量的跨周期复利，破解"看后即走"的留存困境。</p></div>
 </div>
 </div>`,
         },
