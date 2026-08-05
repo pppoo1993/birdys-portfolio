@@ -114,6 +114,8 @@ function NavEasterEgg() {
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [indicatorY, setIndicatorY] = useState(0)
+  const [navVisible, setNavVisible] = useState(true)
+  const lastScrollY = useRef(0)
   const sectionIds = siteConfig.navLinks.map((l) => l.sectionId)
   const activeId = useActiveSection(sectionIds)
   const scrollTo = useScrollTo()
@@ -137,6 +139,30 @@ export default function Navigation() {
       setIndicatorY(btnRect.top - listRect.top + btnRect.height / 2)
     })
   }, [activeId])
+
+  // ── Scroll-direction aware nav fade ──
+  useEffect(() => {
+    let ticking = false
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const currentY = window.scrollY
+          const scrollingDown = currentY > lastScrollY.current
+          const nearBottom = currentY + window.innerHeight >= document.documentElement.scrollHeight - 50
+          if (scrollingDown && currentY > 200) {
+            setNavVisible(false)
+          } else if (!scrollingDown && !nearBottom) {
+            setNavVisible(true)
+          }
+          lastScrollY.current = currentY
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   // Update on mount and when active section changes
   useEffect(() => {
@@ -206,7 +232,7 @@ export default function Navigation() {
   return (
     <>
       {/* Mobile: top bar */}
-      <nav className="fixed top-0 right-0 left-0 z-50 border-b border-divider bg-bg-primary md:hidden">
+      <nav className={`fixed top-0 right-0 left-0 z-50 border-b border-divider bg-bg-primary md:hidden transition-transform duration-500 ${navVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="flex items-center justify-between px-6 py-3">
           <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" className="h-[26px] w-auto object-contain opacity-90" />
           <button

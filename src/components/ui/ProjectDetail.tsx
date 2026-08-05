@@ -158,7 +158,10 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
       document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('wheel', blockScroll)
       document.removeEventListener('touchmove', blockScroll)
-      document.documentElement.style.overflow = ''
+      // Delay to sync with close animation (350ms)
+      setTimeout(() => {
+        document.documentElement.style.overflow = ''
+      }, 350)
 
       if (line) line.style.display = ''
     }
@@ -273,7 +276,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 pt-20 pb-24 md:py-16">
+                  <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 pt-20 pb-32 md:py-16">
                     {/* Page 0: split layout — text left, image right */}
                     {i === 0 ? (
                       <div className="flex flex-col md:flex-row gap-8 md:gap-14 items-center md:items-stretch">
@@ -382,20 +385,11 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               ↑↓ 切页 · Esc 关闭
             </div>
 
-            {/* Mobile: indicator dots at bottom center */}
-            <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-1.5 py-3 bg-gradient-to-t from-[#121212] via-[#121212]/90 to-transparent md:hidden pointer-events-auto z-50">
-              {sections.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => goTo(i)}
-                  className={`rounded-full transition-all duration-300 ${
-                    i === activeIndex
-                      ? 'w-5 h-1.5 bg-accent'
-                      : 'w-1.5 h-1.5 bg-zinc-700'
-                  }`}
-                  aria-label={`第 ${i + 1} 章`}
-                />
-              ))}
+            {/* Mobile: page counter at bottom center */}
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center py-3 bg-gradient-to-t from-[#121212] via-[#121212]/90 to-transparent md:hidden pointer-events-none z-50">
+              <span className="text-[13px] font-mono text-zinc-500 tracking-wider">
+                {String(activeIndex + 1).padStart(2, '0')} / {String(sections.length).padStart(2, '0')}
+              </span>
             </div>
 
             {/* Page counter */}

@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full bg-[#0d0d0d] py-24 border-t border-zinc-900 relative overflow-hidden"
+      className="w-full bg-[#0d0d0d] py-32 md:py-24 border-t border-zinc-900 relative overflow-hidden"
     >
       <DottedSurface />
 

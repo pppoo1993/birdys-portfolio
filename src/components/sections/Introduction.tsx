@@ -192,7 +192,7 @@ export default function Introduction() {
   return (
     <section
       id="intro"
-      className="relative w-full text-white flex flex-col justify-center py-16 md:py-28 font-sans noise-overlay"
+      className="relative w-full text-white flex flex-col justify-center pt-20 pb-16 md:py-28 font-sans noise-overlay"
       style={{ minHeight: '100vh', background: 'radial-gradient(circle at 50% 40%, rgba(204, 255, 0, 0.04) 0%, rgba(0, 0, 0, 0) 60%), #0a0a0c' }}
     >
       <motion.div
