@@ -327,7 +327,8 @@ export const projectData: Project[] = [
           heading: '素材库：AI视频创作中枢',
           body: '我们将素材库打包为通用模组，支持爱奇艺<b>官方影视片段</b>、<b>本地图片/视频</b>、<b>已创作视频</b>三种素材类型，方便在不同AI视频玩法中按需随时调取。\n<b>影视片段库</b>作为吃鲸AI的核心创作中枢，针对不同玩法进行了精选，并计划不断扩充。',
           html: `<style>
-.m-split{display:flex;gap:48px;align-items:flex-start;margin:24px auto 0;width:fit-content;max-width:100%}
+.m-wrapper{width:fit-content;max-width:100%;margin:0 auto}
+.m-split{display:flex;gap:48px;align-items:flex-start;margin:0;width:100%}
 .m-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .m-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .m-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
@@ -337,7 +338,7 @@ export const projectData: Project[] = [
 .m-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 @media(max-width:767px){.m-split{flex-direction:column!important}.m-col{width:100%!important}}
 </style>
-<img src="/birdys-portfolio/images/material-hub.png" alt="素材库" style="width:60%;border-radius:6px;display:block;margin:0 auto" />
+<div class="m-wrapper"><img src="/birdys-portfolio/images/material-hub.png" alt="素材库" style="width:600px;max-width:100%;border-radius:6px;display:block;margin-bottom:24px" />
 <div class="m-split">
 <div class="m-col">
 <div class="m-col-title">影视素材库形态演变预想</div>
@@ -354,7 +355,7 @@ export const projectData: Project[] = [
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.png" alt="多选已选择" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">多选-已选择</span></div>
 </div>
 </div>
-</div>`,
+</div></div>`,
         },
         {
           heading: '通用视频创作中的素材调用',
