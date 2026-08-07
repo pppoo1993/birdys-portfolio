@@ -255,53 +255,121 @@ export const projectData: Project[] = [
           heading: '分发层：互动社区心智建设',
           body: '首页以双列瀑布流承载AI创作内容，让用户进场即感知"能玩、能互动"的社区氛围。同时提供海量影视二创相关模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。',
           html: `<style>
-.dist-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
+.dist-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .dist-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-.dist-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 10px}
+.dist-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .dist-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .dist-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .dist-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-.dist-img-row{display:flex;gap:12px}
-@media(max-width:767px){.dist-row{flex-direction:column!important}.dist-col{width:100%!important}}
+.dist-img-row{display:flex;gap:16px}
 .dist-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
 .dist-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.dist-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
-@media(max-width:767px){.dist-row{grid-template-columns:repeat(2,1fr);gap:12px}}
+.dist-img-wrap{display:flex;flex-direction:column;align-items:center}
+.dist-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
+@media(max-width:767px){.dist-row{flex-direction:column!important}.dist-col{width:100%!important}}
 </style>
 <div class="dist-row">
 <div class="dist-col">
 <div class="dist-col-title">内容分发</div>
-<p class="dist-col-desc">在各分发场景下设置创作按钮，以便用户产生灵感后随时创作。</p>
+<p class="dist-col-desc">在各分发场景下设置创作按钮，以便用户产生灵感后即可创作。</p>
 <div class="dist-img-row">
-<div class="dist-placeholder"><span>截图 1</span></div>
-<div class="dist-placeholder"><span>截图 2</span></div>
-<div class="dist-placeholder"><span>截图 3</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-home.png" alt="首页" style="width:100%;height:100%;object-fit:contain" /></div><span class="dist-img-label">首页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-player.png" alt="播放页" style="width:100%;height:100%;object-fit:contain" /></div><span class="dist-img-label">播放页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-template.png" alt="模板tab" style="width:100%;height:100%;object-fit:contain" /></div><span class="dist-img-label">模板tab</span></div>
 </div>
 </div>
 <div class="dist-col">
 <div class="dist-col-title">底部创作按钮</div>
-<p class="dist-col-desc">集中展示全部AI视频玩法。</p>
+<p class="dist-col-desc">展示全部AI视频玩法。</p>
 <div class="dist-img-row">
-<div class="dist-placeholder"><span>截图 4</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-float.png" alt="+浮层" style="width:100%;height:100%;object-fit:contain" /></div><span class="dist-img-label">「+」浮层</span></div>
 </div>
 </div>
 </div>`,
         },
         {
           heading: '创作层：通用创作与影视创意玩法',
-          body: '',
+          body: '通用视频创作是平台的基础能力，承接用户日常创作需求。影视创意玩法则是吃鲸AI的核心亮点——我们调研了热播剧的二创生态后，归纳出初期三个核心方向：<b>画风转换</b>、<b>换台词</b>、<b>故事接龙</b>。',
           html: `<style>
-.cr-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:780px;margin:0 auto}
-.cr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0;margin:0 auto}
+.cr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
+.cr-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.cr-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
+.cr-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.cr-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.cr-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
+.cr-img-row{display:flex;gap:16px}
+.cr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
 .cr-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.cr-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
-@media(max-width:767px){.cr-row{grid-template-columns:repeat(2,1fr);gap:12px}}
+.cr-img-wrap{display:flex;flex-direction:column;align-items:center}
+.cr-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
+@media(max-width:767px){.cr-row{flex-direction:column!important}.cr-col{width:100%!important}}
 </style>
 <div class="cr-row">
-<div class="cr-placeholder"><span>截图 1</span></div>
-<div class="cr-placeholder"><span>截图 2</span></div>
-<div class="cr-placeholder"><span>截图 3</span></div>
-<div class="cr-placeholder"><span>截图 4</span></div>
+<div class="cr-col">
+<div class="cr-col-title">通用视频生成</div>
+<p class="cr-col-desc">支持多模态输入自由创作。</p>
+<div class="cr-img-row">
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-create-video.png" alt="创作视频" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">通用创作入口</span></div>
+</div>
+</div>
+<div class="cr-col">
+<div class="cr-col-title">影视创意玩法</div>
+<p class="cr-col-desc">选择影视素材后，即可针对该视频进行画风转换、台词改写等定向创作。</p>
+<div class="cr-img-row">
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-lines-rewrite.png" alt="台词改写" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">台词改写</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-story-chain.png" alt="故事接龙" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">故事接龙</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-style-transfer.png" alt="画风转换" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">画风转换</span></div>
+</div>
+</div>
+</div>`,
+        },
+        {
+          heading: '素材库：AI视频创作中枢',
+          body: '我们将素材库打包为通用模组，支持爱奇艺<b>官方影视片段</b>、<b>本地图片/视频</b>、<b>已创作视频</b>三种素材类型，方便在不同AI视频玩法中按需随时调取。\n<b>影视片段库</b>作为吃鲸AI的核心创作中枢，针对不同玩法进行了精选，并计划不断扩充。',
+          html: `<style>
+.m-split{display:flex;gap:48px;align-items:flex-start;margin:24px auto 0;width:fit-content;max-width:100%}
+.m-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.m-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
+.m-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.m-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.m-img-row{display:flex;gap:16px}
+.m-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:150px;flex-shrink:0}
+.m-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+@media(max-width:767px){.m-split{flex-direction:column!important}.m-col{width:100%!important}}
+</style>
+<img src="/birdys-portfolio/images/material-hub.png" alt="素材库" style="width:60%;border-radius:6px;display:block;margin:0 auto" />
+<div class="m-split">
+<div class="m-col">
+<div class="m-col-title">影视素材库形态演变预想</div>
+<div class="m-img-row">
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.png" alt="初期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">初期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.png" alt="中期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">中期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-late.png" alt="后期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">后期</span></div>
+</div>
+</div>
+<div class="m-col">
+<div class="m-col-title">支持多选场景</div>
+<div class="m-img-row">
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-unselected.png" alt="多选未选择" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">多选-未选择</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.png" alt="多选已选择" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">多选-已选择</span></div>
+</div>
+</div>
+</div>`,
+        },
+        {
+          heading: '通用视频创作中的素材调用',
+          body: '通用视频创作支持添加多参考素材，添加后可通过三种方式调用：\n1. 点击参考缩略图 → 光标处自动展示参考标签\n2. 点击参考标签 → 拉起已添加参考浮层，选择后更新标签\n3. 输入 @ → 拉起参考浮层，选择后光标处展示参考标签',
+          html: `<style>
+.lib-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:780px;margin:0 auto}
+.lib-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0;margin:0 auto}
+.lib-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.lib-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
+@media(max-width:767px){.lib-row{grid-template-columns:repeat(2,1fr);gap:12px}}
+</style>
+<div class="lib-row">
+<div class="cr-img-wrap"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-unused.png" alt="未调用参考" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">未调用参考</span></div>
+<div class="cr-img-wrap"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-used.png" alt="已调用参考" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">已调用参考</span></div>
+<div class="cr-img-wrap"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-overlay.png" alt="已添加参考浮层" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">已添加参考浮层</span></div>
 </div>`,
         },
         {
