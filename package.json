@@ -6,6 +6,7 @@
   "homepage": "https://[PLACEHOLDER: 你的GitHub用户名].github.io/[PLACEHOLDER: 仓库名称]",
   "scripts": {
     "dev": "vite",
+    "compress-images": "node scripts/compress-images.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
