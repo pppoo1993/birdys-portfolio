@@ -197,6 +197,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   <span className="flex items-center gap-2">
                     <img src={import.meta.env.BASE_URL + (project.id === 'project-3' ? 'images/吃鲸.webp' : project.id === 'project-2' ? 'images/爱奇艺.webp' : 'images/爱奇艺Pad.webp')} alt="" className="w-7 h-7 rounded-md object-cover" />
                     {project.title}
+                    {project.detail.subtitle && <span className="text-zinc-500 font-normal"> &nbsp;|&nbsp; {project.detail.subtitle}</span>}
                   </span>
                 )}
               </p>
@@ -228,10 +229,10 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               .sec-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
               .sec-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
               .sec-body{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-              .sec-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-              .sec-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+              .sec-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+              .sec-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
               [data-preview]{cursor:pointer;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-              [data-preview]:hover{border-color:#3f3f46!important;transform:translateY(-2px);box-shadow:0 15px 30px rgba(0,0,0,0.6)}
+              [data-preview]:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
               [data-goto]{cursor:pointer;transition:all 0.3s ease}
               [data-goto]:hover{background:rgba(255,255,255,0.03)}
             `}</style>
@@ -271,9 +272,9 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 pt-20 pb-32 md:py-16">
                     {/* Page 0: split layout — text left, image right */}
                     {i === 0 ? (
-                        <div className={`flex-1 flex flex-col ${project.id === 'project-3' ? 'justify-center' : 'justify-between'}`}>
+                        <div className={`flex-1 flex flex-col ${'justify-center'}`}>
                           <div>
-                            {project.id !== 'project-3' && (
+                            {false && (
                             <h2 className="text-[28px] md:text-[32px] font-semibold text-white tracking-tight leading-tight mb-1 flex items-center gap-3">
                               <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden opacity-90">
                                 <img
@@ -288,12 +289,12 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               <span>{project.title}{project.detail.mainTitle && <span className="text-zinc-500 font-normal"> · {project.detail.mainTitle}</span>}</span>
                             </h2>
                             )}
-                            {project.id !== 'project-3' && (
+                            {false && (
                             <p className="text-base md:text-lg text-[#d4d4d8] font-normal mb-3">
                               {project.detail.subtitle}
                             </p>
                             )}
-                            {project.id !== 'project-3' && <div className="w-12 h-px bg-zinc-700 mb-4" />}
+                            {false && <div className="w-12 h-px bg-zinc-700 mb-4" />}
                             {section.body && (
                               <div
                                 className="font-normal whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
@@ -305,7 +306,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                             )}
                           </div>
-                          {project.id !== 'project-3' && <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
+                          {false && <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
                             {project.techStack.map((tag, idx) => (
                               <span key={tag}>
                                 {tag}{idx < project.techStack.length - 1 ? <span className="text-[#52525b]"> &nbsp;/&nbsp; </span> : ''}

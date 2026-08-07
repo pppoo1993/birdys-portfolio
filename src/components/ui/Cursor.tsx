@@ -15,7 +15,7 @@ export default function Cursor() {
     const el = document.elementFromPoint(mouseRef.current.x, mouseRef.current.y)
     if (!el) return
     const interactive = el.closest(
-      '[data-cursor-hover], .project-card, .cursor-hover, [data-cursor-interactive]',
+      '[data-cursor-hover], .project-card, .cursor-hover, [data-cursor-interactive], [data-goto], [data-preview]',
     )
     hovered.current = !!interactive
   }, [])

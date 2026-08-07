@@ -93,7 +93,7 @@ function SplitRevealCard({ section }: { section: BioSection }) {
         }}
       >
         <h4 className="text-zinc-200 font-semibold mb-2 tracking-wide flex items-center gap-2" style={{ fontSize: '16px' }}>
-          <span className="font-mono tracking-[0.05em]" style={{ color: '#ccff00', fontSize: '14px' }}>[{section.tag}]</span> {section.heading}
+          <span className="font-mono tracking-[0.05em]" style={{ color: '#ccff00', fontSize: '14px' }}>{section.tag}</span> {section.heading}
         </h4>
         <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
           {section.body}
@@ -242,7 +242,7 @@ export default function Introduction() {
         {/* 4. Typewriter — animated on all devices, overlaps avatar slightly */}
         <div className="pb-0 -mt-4 md:-mt-6 relative z-10">
           <h2
-            className="text-3xl md:text-4xl font-semibold tracking-wide leading-normal md:leading-tight text-white"
+            className="text-3xl md:text-4xl font-extrabold tracking-wider leading-normal md:leading-tight text-white"
           >
             {(() => {
               const displayText = typed || introductionData.quote

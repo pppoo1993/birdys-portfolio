@@ -337,18 +337,12 @@ export const projectData: Project[] = [
 	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px}
 	@media(max-width:767px){.qt-chart{max-width:100%}.qt-flow-row{flex-wrap:wrap;justify-content:center;gap:12px}.qt-node{flex:1 1 40%;min-width:140px}.qt-operator{display:none}.qt-screen-box{max-width:180px;margin:0 auto}}
 	</style>
-	<div class="qt-chart">
-	<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div>
 	<div class="qt-flow-row">
-	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/01-original-scene.jpeg" alt="原始名场面界面" style="width:100%;height:100%;object-fit:cover" /></div><div class="qt-node-text"><b>即兴微调</b>点击台词直接编辑，降低创作心理门槛。</div></div>
-	<div class="qt-operator">→</div>
-	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/02-tags.jpeg" alt="场景化主题标签页" style="width:100%;height:100%;object-fit:cover" /></div><div class="qt-node-text"><b>场景化启发</b>点击标签，快速接入创作方向。</div></div>
-	<div class="qt-operator">→</div>
-	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/03-dialog.jpeg" alt="半浮层对话框" style="width:100%;height:100%;object-fit:cover" /></div><div class="qt-node-text"><b>AI 对话式扩展</b>自然语言生成，多版本方案沉淀。</div></div>
-	<div class="qt-operator">→</div>
-	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/04-preview.jpeg" alt="新台词视频预览" style="width:100%;height:100%;object-fit:cover" /></div><div class="qt-node-text"><b>创作资产沉淀</b>每一次尝试都可见、可复用。</div></div>
-	</div>
-	</div>`,
+<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/01-original-scene.jpeg" alt="原始名场面界面" style="width:100%;height:100%;object-fit:contain" /></div></div>
+<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/02-tags.jpeg" alt="场景化主题标签页" style="width:100%;height:100%;object-fit:contain" /></div></div>
+<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/03-dialog.jpeg" alt="半浮层对话框" style="width:100%;height:100%;object-fit:contain" /></div></div>
+<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/04-preview.jpeg" alt="新台词视频预览" style="width:100%;height:100%;object-fit:contain" /></div></div>
+</div>`,
         },
         {
           heading: '策略四：轻量交互转化 — 故事接龙',
