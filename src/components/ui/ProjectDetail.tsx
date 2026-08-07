@@ -13,6 +13,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeIndex, setActiveIndex] = useState(0)
   const [previewSrc, setPreviewSrc] = useState<string | null>(null)
+  const [previewVideo, setPreviewVideo] = useState<string | null>(null)
   const [previewHtml, setPreviewHtml] = useState<string | null>(null)
   const scrollingLock = useRef(false)
   const activeIndexRef = useRef(0)
@@ -303,7 +304,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               />
                             )}
                             {section.html && (
-                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); const vid = el.querySelector('video'); if (vid) { setPreviewVideo(vid.querySelector('source')?.src || vid.src); setPreviewSrc(null); setPreviewHtml(null) } else if (img) { setPreviewSrc(img.src); setPreviewVideo(null) } else { setPreviewHtml(el.outerHTML); setPreviewVideo(null) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src); setPreviewVideo(null) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                             )}
                           </div>
                           {false && <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
@@ -329,7 +330,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
 
                         {/* HTML content */}
                         {section.html && (
-                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); if (img) { setPreviewSrc(img.src) } else { setPreviewHtml(el.outerHTML) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); const vid = el.querySelector('video'); if (vid) { setPreviewVideo(vid.querySelector('source')?.src || vid.src); setPreviewSrc(null); setPreviewHtml(null) } else if (img) { setPreviewSrc(img.src); setPreviewVideo(null) } else { setPreviewHtml(el.outerHTML); setPreviewVideo(null) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src); setPreviewVideo(null) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                         )}
                       </>
                     )}
@@ -385,12 +386,16 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
       )}
     </AnimatePresence>
     {/* ════ Unified Preview Overlay ════ */}
-    {(previewSrc || previewHtml) && (
+    {(previewSrc || previewVideo || previewHtml) && (
       <div
         className="fixed inset-0 z-[200] bg-black/80 backdrop-blur-md flex items-center justify-center cursor-pointer"
-        onClick={() => { setPreviewSrc(null); setPreviewHtml(null) }}
+        onClick={() => { setPreviewSrc(null); setPreviewVideo(null); setPreviewHtml(null) }}
       >
-        {previewSrc ? (
+        {previewVideo ? (
+          <video src={previewVideo} autoPlay loop muted playsInline controls
+            className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-[0_0_60px_rgba(0,0,0,0.8)]"
+          />
+        ) : previewSrc ? (
           <img
             src={previewSrc}
             alt="预览"
@@ -408,7 +413,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           </div>
         )}
         <button
-          onClick={() => { setPreviewSrc(null); setPreviewHtml(null) }}
+          onClick={() => { setPreviewSrc(null); setPreviewVideo(null); setPreviewHtml(null) }}
           className="absolute top-6 right-6 group flex items-center justify-center w-8 h-8 border border-zinc-800 hover:border-accent rounded-lg transition-all duration-300 bg-zinc-900/50"
           aria-label="关闭"
         >

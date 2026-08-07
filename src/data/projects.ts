@@ -3,14 +3,14 @@ import type { Project } from '../types'
 export const projectData: Project[] = [
   {
     id: 'project-3',
-    title: '吃鲸 AI',
+    title: '吃鲸AI',
     description:
-      '吃鲸 AI 是爱奇艺孵化的 AI 视频互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路。',
+      '吃鲸AI 是爱奇艺孵化的 AI 视频互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路。',
     imagePath: 'https://picsum.photos/seed/project3/1200/800',
     techStack: ['AI 视频创作', '产品架构设计', '渐进式交互'],
     sourceUrl: 'https://github.com',
     detail: {
-      pageTitle: '吃鲸 AI | AI视频消费与生成共创',
+      pageTitle: '吃鲸AI | AI视频消费与生成共创',
       mainTitle: '',
       subtitle: 'AI视频消费与生成共创',
       sections: [
@@ -21,41 +21,44 @@ export const projectData: Project[] = [
 .toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%}
 .toc-col{display:flex;flex-direction:column}
 .toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.15);margin-bottom:2px;font-family:monospace}
-.toc-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
+.toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
 .toc-card:hover{border-color:rgba(255,255,255,0.1);background:rgba(26,26,30,0.9);transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(199,255,0,0.08),inset 0 1px 0 rgba(255,255,255,0.04)}
 .toc-card-title{font-size:14px;font-weight:600;color:#C7FF00;line-height:1.4}
 .toc-card-pages{font-size:13px;color:#A0A0A0;line-height:1.6;display:flex;flex-direction:column;gap:2px}
-.toc-page-row{display:flex;justify-content:space-between;align-items:baseline}
+.toc-page-row{display:flex;justify-content:space-between;align-items:baseline;padding:3px 8px;margin:0 -8px;border-radius:4px;transition:all 0.2s ease;cursor:pointer}
+.toc-page-row:hover{background:rgba(255,255,255,0.04)}
+.toc-page-row:hover .toc-page-name{color:#FFFFFF}
+.toc-page-row:hover .toc-page-num{color:#C7FF00}
 .toc-page-name{color:#B0B0B0;font-size:13px;font-weight:400}
 .toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
 @media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:160px;padding:18px}.toc-card-title{font-size:13px}}
 </style>
 <div class="toc-grid">
-<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">项目背景</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">缘起</span><span class="toc-page-num">P02</span></div><div class="toc-page-row"><span class="toc-page-name">挑战与破局</span><span class="toc-page-num">P03</span></div><div class="toc-page-row"><span class="toc-page-name">定位重塑</span><span class="toc-page-num">P04</span></div></div></div></div>
-<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><p class="toc-card-title">架构与策略</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">体验架构设计</span><span class="toc-page-num">P05</span></div><div class="toc-page-row"><span class="toc-page-name">用户旅程</span><span class="toc-page-num">P06</span></div><div class="toc-page-row"><span class="toc-page-name">产品框架</span><span class="toc-page-num">P07</span></div></div></div></div>
-<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="7"><p class="toc-card-title">交互呈现</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">分发层</span><span class="toc-page-num">P08</span></div><div class="toc-page-row"><span class="toc-page-name">创作层</span><span class="toc-page-num">P09</span></div><div class="toc-page-row"><span class="toc-page-name">创作中控</span><span class="toc-page-num">P10</span></div><div class="toc-page-row"><span class="toc-page-name">换台词</span><span class="toc-page-num">P11</span></div><div class="toc-page-row"><span class="toc-page-name">故事接龙</span><span class="toc-page-num">P12</span></div></div></div></div>
-<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="12"><p class="toc-card-title">沉淀</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">留下的交互资产</span><span class="toc-page-num">P13</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">项目背景</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">缘起</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">挑战与破局</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">定位重塑</span><span class="toc-page-num">P04</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><p class="toc-card-title">架构与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="4"><span class="toc-page-name">体验架构设计</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">用户旅程</span><span class="toc-page-num">P06</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">产品框架</span><span class="toc-page-num">P07</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="7"><p class="toc-card-title">交互呈现</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">分发层</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">创作层</span><span class="toc-page-num">P09</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">台词改写</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">换台词</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="13"><span class="toc-page-name">故事接龙</span><span class="toc-page-num">P12</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="14"><p class="toc-card-title">沉淀与思考</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="14"><span class="toc-page-name">留下的交互资产</span><span class="toc-page-num">P13</span></div></div></div></div>
 </div>`,
         },
         {
           heading: '缘起：长视频平台的生态自救',
-          body: '爱奇艺切入 AI 视频，本质上是一场<b>「生产端降本 & 流量端防御」</b>的生态自救。爱奇艺试图用生成式 AI 视频作为武器，精准破解长视频行业既有的三大商业天花板。',
+          body: '在2025中旬，我接到组内任务，要为爱奇艺内部AI视频应用准备前期探索材料。作为被临时任命的设计owner，我需要站在公司的角度来思考爱奇艺为什么选择 AI 视频赛道。\n爱奇艺切入 AI 视频，本质上是一场<b>「生产端降本 & 流量端防御」</b>的生态自救。爱奇艺试图抓住时代基于用 AI 视频作为武器来破解长视频行业发展的三个瓶颈。',
                     html: `<style>
-.ba-section{display:flex;flex-direction:column;gap:12px;margin:0 auto}
+.ba-section{display:flex;flex-direction:column;gap:16px;margin:0 auto}
 .ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:12px}
 .ba-header{color:#FFFFFF;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;padding-bottom:10px;position:relative}
 .ba-header::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .ba-header::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.ba-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-.ba-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+.ba-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.ba-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .ba-card .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:2px;font-family:monospace;letter-spacing:.04em;font-weight:600;margin:0 6px 0 0;vertical-align:middle;background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
 .ba-card .ititle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0;display:inline;vertical-align:middle}
 .ba-arrow-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.ba-arrow-row span{text-align:center;color:#52525b;font-size:16px}
 .ba-card .idesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:8px 0 0}
 .ba-card .idesc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.ba-row{grid-template-columns:1fr;gap:12px}.ba-header-row{display:none}.ba-arrow-row{display:none}.ba-desktop{display:none}.ba-mobile{display:flex;flex-direction:column;gap:20px}}@media(min-width:768px){.ba-mobile{display:none}}
-.ba-mobile-group{display:flex;flex-direction:column;gap:12px}
+@media(max-width:767px){.ba-row{grid-template-columns:1fr;gap:16px}.ba-header-row{display:none}.ba-arrow-row{display:none}.ba-desktop{display:none}.ba-mobile{display:flex;flex-direction:column;gap:20px}}@media(min-width:768px){.ba-mobile{display:none}}
+.ba-mobile-group{display:flex;flex-direction:column;gap:16px}
 .ba-mobile-label{color:#FFFFFF;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;padding-bottom:8px;border-bottom:1px solid #222226}
 .ba-mobile-label::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .ba-mobile-arrow{text-align:center;color:#52525b;font-size:14px;padding:2px 0}
@@ -120,8 +123,8 @@ export const projectData: Project[] = [
 .pos-highlight{color:#C7FF00;font-size:16px;font-weight:700;line-height:1.6;margin:8px 0 32px;text-align:center}
 .circle-row{display:flex;align-items:flex-start;justify-content:center;gap:0}
 .circle-col{display:flex;flex-direction:column;align-items:center;flex:1;max-width:220px}
-.circle-node{width:120px;height:120px;border-radius:50%;border:1px solid rgba(255,255,255,0.06);background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-.circle-node:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+.circle-node{width:120px;height:120px;border-radius:50%;border:1px solid rgba(255,255,255,0.08);background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.circle-node:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .circle-node span{color:#FFFFFF;font-size:14px;font-weight:600;line-height:1.3;padding:10px}
 .circle-op{display:flex;align-items:center;justify-content:center;width:36px;height:120px;flex-shrink:0;color:#52525b;font-size:18px}
 .circle-sub{color:#FFFFFF;font-size:12px;font-weight:600;text-align:center;margin:12px 0 6px;width:100%}
@@ -140,19 +143,19 @@ export const projectData: Project[] = [
         {
           heading: '体验架构设计：AI创作的底层逻辑',
           body: '基于<b>「以消带产」</b>的核心策略，我们将产品架构解构为三层协同逻辑，旨在通过对第三方底层模型的场景化精调，在优化研发成本的同时，最大化保障影视 IP 的生成品质。',
-          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:12px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:rgba(255,255,255,0.12)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px 0}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important;gap:16px}.arch-row .arch-card{flex-direction:row!important}.arch-arrow{display:none!important}}</style>
+          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:16px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px 0}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important;gap:16px}.arch-row .arch-card{flex-direction:row!important}.arch-arrow{display:none!important}}</style>
 <div class="arch-row">
-<div class="arch-card" style="background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
+<div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">生态输入层</h4>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">爱奇艺正片、IP 资产、版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">对接爱奇艺独家正片与 IP 资产，提供版权合规的二创素材，消除用户的冷启动摩擦。</p></div>
 </div>
 <span class="arch-arrow">→</span>
-<div class="arch-card" style="background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
+<div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">核心逻辑层</h4>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用模型 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">接入行业领先模型，通过 Prompt 工程与工作流定制，将模糊的用户意图转化为精准的场景算力。</p></div>
 </div>
 <span class="arch-arrow">→</span>
-<div class="arch-card" style="background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
+<div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">感知交互层</h4>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">模板化交互，降低创作门槛</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400"><b style="color:#FFFFFF">UX 设计核心阵地。</b>以模板化交互替代复杂控制面板，将底层算力包装为轻量玩法，让普通用户也能轻松参与创作。</p></div>
 </div>
@@ -223,50 +226,51 @@ export const projectData: Project[] = [
           html: `<style>
 .arch-flow{display:flex;flex-direction:column;align-items:center;gap:30px}
 .arch-flow-row{display:flex;align-items:center;justify-content:center;gap:20px;width:100%}
-.arch-col{flex:1;min-width:0;background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-.arch-col:hover{border-color:rgba(255,255,255,0.12)}
+.arch-col{flex:1;min-width:0;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.arch-col:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .arch-col-label{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 14px}
 .arch-col-label::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .arch-col-label::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .arch-col-items{display:flex;flex-direction:column;gap:8px}
-.arch-item{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:4px;padding:10px 14px;font-size:13px;color:#A0A0A0;font-weight:400;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-.arch-item:hover{border-color:rgba(255,255,255,0.12)}
-.arch-item.hl{border-color:#C7FF00;color:#C7FF00;background:rgba(199,255,0,0.04)}
+.arch-item{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:10px 14px;font-size:13px;color:#A0A0A0;font-weight:400;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.arch-item:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
+.arch-item.hl{border-color:rgba(199,255,0,0.2);color:#C7FF00;background:rgba(199,255,0,0.06)}
 .arch-arrow{display:flex;flex-direction:column;align-items:center;width:40px;flex-shrink:0;justify-content:center}
-.arch-arrow-line{width:100%;height:1px;background:#333333;position:relative}
-.arch-arrow-line::after{content:'';position:absolute;right:0;top:-3px;width:0;height:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:6px solid #333333}
-.arch-arrow.rev .arch-arrow-line::after{right:auto;left:0;border-left:none;border-right:6px solid #333333}
-.arch-arrow-label{font-size:11px;color:#71717a;margin-top:6px;text-align:center}
+.arch-arrow-line{width:100%;height:1px;background:#A0A0A0;position:relative}
+.arch-arrow-line::after{content:'';position:absolute;right:0;top:-3px;width:0;height:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:6px solid #A0A0A0}
+.arch-arrow.rev .arch-arrow-line::after{right:auto;left:0;border-left:none;border-right:6px solid #A0A0A0}
+.arch-arrow-label{font-size:11px;color:#A0A0A0;margin-top:6px;text-align:center}
 .arch-footnote{margin-top:12px;font-size:13px;color:#A0A0A0;font-weight:400;display:flex;align-items:center;gap:8px}
 .arch-footnote::before{content:'';width:6px;height:6px;background:#C7FF00;border-radius:50%;flex-shrink:0}
 @media(max-width:767px){.arch-flow-row{flex-direction:column;gap:20px}.arch-col{width:100%!important;max-width:100%!important;padding:16px}.arch-col-label{font-size:13px;margin-bottom:10px;padding-bottom:8px}.arch-item{font-size:12px;padding:8px 12px}.arch-arrow{display:none}.arch-arrow-line{display:none}.arch-arrow-line::after{display:none}.arch-arrow-label{display:none}}
 </style>
 <div class="arch-flow">
 <div class="arch-flow-row">
-<div class="arch-col"><div class="arch-col-label">分发层</div><div class="arch-col-items"><div class="arch-item">首页瀑布流</div><div class="arch-item">精选播放器</div><div class="arch-item">模板</div></div></div>
+<div class="arch-col"><div class="arch-col-label">分发页</div><div class="arch-col-items"><div class="arch-item">首页瀑布流</div><div class="arch-item">精选播放器</div><div class="arch-item">模板</div></div></div>
 <div class="arch-arrow"><div class="arch-arrow-line"></div><span class="arch-arrow-label">以消带产</span></div>
-<div class="arch-col"><div class="arch-col-label">创作层</div><div class="arch-col-items"><div class="arch-item">通用视频生成</div><div class="arch-item hl">影视创意玩法</div><div class="arch-item">上传AI视频作品</div></div></div>
+<div class="arch-col"><div class="arch-col-label">创作页</div><div class="arch-col-items"><div class="arch-item">通用视频生成</div><div class="arch-item hl">影视创意玩法</div><div class="arch-item">上传AI视频作品</div></div></div>
 <div class="arch-arrow rev"><div class="arch-arrow-line"></div><span class="arch-arrow-label">赋能创作</span></div>
-<div class="arch-col"><div class="arch-col-label">素材层</div><div class="arch-col-items"><div class="arch-item hl">爱奇艺影视库</div><div class="arch-item">手机相册</div><div class="arch-item">已有作品</div></div></div>
+<div class="arch-col"><div class="arch-col-label">素材库</div><div class="arch-col-items"><div class="arch-item hl">影视片段</div><div class="arch-item">本地图片/视频</div><div class="arch-item">已创作视频</div></div></div>
 </div>
 </div>`,
         },
         {
-          heading: '分发层：互动社区心智建设',
+          heading: '以消费带动创作',
           body: '首页以双列瀑布流承载AI创作内容，让用户进场即感知"能玩、能互动"的社区氛围。同时提供海量影视二创相关模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。',
           html: `<style>
 .dist-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
-.dist-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.dist-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .dist-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .dist-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .dist-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .dist-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-.dist-img-row{display:flex;gap:16px}
+.dist-img-row{display:flex;gap:22px}
+@media(max-width:767px){.dist-row{flex-direction:column!important}.dist-col{width:100%!important}}
 .dist-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
 .dist-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .dist-img-wrap{display:flex;flex-direction:column;align-items:center}
 .dist-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
-@media(max-width:767px){.dist-row{flex-direction:column!important}.dist-col{width:100%!important}}
+@media(max-width:767px){.dist-row{grid-template-columns:repeat(2,1fr);gap:16px}}
 </style>
 <div class="dist-row">
 <div class="dist-col">
@@ -285,23 +289,24 @@ export const projectData: Project[] = [
 <div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-float.png" alt="+浮层" style="width:100%;height:100%;object-fit:contain" /></div><span class="dist-img-label">「+」浮层</span></div>
 </div>
 </div>
-</div>`,
+</div>
+`,
         },
         {
-          heading: '创作层：通用创作与影视创意玩法',
+          heading: '通用创作与影视创意玩法',
           body: '通用视频创作是平台的基础能力，承接用户日常创作需求。影视创意玩法则是吃鲸AI的核心亮点——我们调研了热播剧的二创生态后，归纳出初期三个核心方向：<b>画风转换</b>、<b>换台词</b>、<b>故事接龙</b>。',
           html: `<style>
 .cr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
-.cr-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.cr-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .cr-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .cr-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .cr-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .cr-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-.cr-img-row{display:flex;gap:16px}
+.cr-img-row{display:flex;gap:22px}
 .cr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
-.cr-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .cr-img-wrap{display:flex;flex-direction:column;align-items:center}
 .cr-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
+.cr-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
 @media(max-width:767px){.cr-row{flex-direction:column!important}.cr-col{width:100%!important}}
 </style>
 <div class="cr-row">
@@ -314,7 +319,7 @@ export const projectData: Project[] = [
 </div>
 <div class="cr-col">
 <div class="cr-col-title">影视创意玩法</div>
-<p class="cr-col-desc">选择影视素材后，即可针对该视频进行画风转换、台词改写等定向创作。</p>
+<p class="cr-col-desc">选择影视素材后，即可针对该视频进行定向创作。</p>
 <div class="cr-img-row">
 <div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-lines-rewrite.png" alt="台词改写" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">台词改写</span></div>
 <div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-story-chain.png" alt="故事接龙" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">故事接龙</span></div>
@@ -327,22 +332,23 @@ export const projectData: Project[] = [
           heading: '素材库：AI视频创作中枢',
           body: '我们将素材库打包为通用模组，支持爱奇艺<b>官方影视片段</b>、<b>本地图片/视频</b>、<b>已创作视频</b>三种素材类型，方便在不同AI视频玩法中按需随时调取。\n<b>影视片段库</b>作为吃鲸AI的核心创作中枢，针对不同玩法进行了精选，并计划不断扩充。',
           html: `<style>
-.m-wrapper{width:fit-content;max-width:100%;margin:0 auto}
-.m-split{display:flex;gap:48px;align-items:flex-start;margin:0;width:100%}
+.m-split{display:flex;gap:48px;align-items:flex-start;margin:0;width:fit-content;max-width:100%}
 .m-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .m-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .m-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .m-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.m-img-row{display:flex;gap:16px}
+.m-img-row{display:flex;gap:22px}
 .m-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:150px;flex-shrink:0}
 .m-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.m-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
 @media(max-width:767px){.m-split{flex-direction:column!important}.m-col{width:100%!important}}
 </style>
-<div class="m-wrapper"><img src="/birdys-portfolio/images/material-hub.png" alt="素材库" style="width:600px;max-width:100%;border-radius:6px;display:block;margin-bottom:24px" />
+<div style="width:fit-content;margin:0 auto">
+<img src="/birdys-portfolio/images/material-hub.png" alt="素材库" style="width:640px;border-radius:6px;display:block;margin-bottom:24px" />
 <div class="m-split">
 <div class="m-col">
-<div class="m-col-title">影视素材库形态演变预想</div>
-<p class="cr-col-desc">随着素材的扩充，为提升素材选择的效率，我们规划了影视库的不同形态。</p>
+<div class="m-col-title">影视片段库形态演变预想</div>
+<p class="cr-col-desc">影视片段按照专辑维度聚合，随着素材的扩充，我们规划了不同形态，并增加相应功能。</p>
 <div class="m-img-row">
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.png" alt="初期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">初期</span></div>
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.png" alt="中期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">中期</span></div>
@@ -357,17 +363,18 @@ export const projectData: Project[] = [
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.png" alt="多选已选择" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">多选-已选择</span></div>
 </div>
 </div>
-</div></div>`,
+</div>
+</div>`,
         },
         {
           heading: '通用视频创作中的素材调用',
           body: '通用视频创作支持添加多参考素材，添加后可通过三种方式调用：\n1. 点击参考缩略图 → 光标处自动展示参考标签\n2. 点击参考标签 → 拉起已添加参考浮层，选择后更新标签\n3. 输入 @ → 拉起参考浮层，选择后光标处展示参考标签',
           html: `<style>
-.lib-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:780px;margin:0 auto}
+.lib-row{display:flex;justify-content:center;gap:32px;max-width:780px;margin:0 auto;flex-wrap:wrap}
 .lib-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0;margin:0 auto}
 .lib-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .lib-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
-@media(max-width:767px){.lib-row{grid-template-columns:repeat(2,1fr);gap:12px}}
+@media(max-width:767px){.lib-row{gap:18px}.cr-img-wrap{max-width:160px}}
 </style>
 <div class="lib-row">
 <div class="cr-img-wrap"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-unused.png" alt="未调用参考" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">未调用参考</span></div>
@@ -377,20 +384,34 @@ export const projectData: Project[] = [
         },
         {
           heading: '台词改写：启发式交互设计',
-          body: '',
+          body: '重新改编影视经典片段中的台词是短视频平台上的经典玩法。我们为该玩法设计了一套启发式交互流程。用户可以通过以下方式改写台词：\n1. 点击视频原台词逐句改写或删除台词\n2. 点击「AI写台词」在弹出浮层中输入改编主题或方向，点击生成台词后，AI将自动生成改写台词\n3. 点击底部主题标签，AI将自动生成改写台词',
           html: `<style>
-.lr-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:780px;margin:0 auto}
-.lr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0;margin:0 auto}
+.lr-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:0 auto}
+.lr-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+.lr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
 .lr-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.lr-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
-@media(max-width:767px){.lr-row{grid-template-columns:repeat(2,1fr);gap:12px}}
+.lr-placeholder img{width:100%;height:100%;object-fit:contain}
+.lr-placeholder video{width:100%;height:100%;object-fit:contain}
+.lr-video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);cursor:pointer;transition:all 0.3s ease}
+.lr-video-overlay:hover{background:rgba(0,0,0,0.15)}
+.lr-play-circle{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;transition:all 0.3s ease}
+.lr-video-overlay:hover .lr-play-circle{background:rgba(255,255,255,0.35);transform:scale(1.08)}
+.lr-play-circle img{width:22px!important;height:22px!important;opacity:0.6;transition:all 0.3s ease}
+.lr-video-overlay:hover .lr-play-circle img{opacity:0.9}
+.lr-label{font-size:12px;color:#A0A0A0;text-align:center}
+@media(max-width:767px){.lr-row{grid-template-columns:repeat(2,1fr);gap:18px}}
 </style>
 <div class="lr-row">
-<div data-preview class="lr-placeholder"><span>截图 1</span></div>
-<div data-preview class="lr-placeholder"><span>截图 2</span></div>
-<div data-preview class="lr-placeholder"><span>截图 3</span></div>
-<div data-preview class="lr-placeholder"><span>截图 4</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-original.png" alt="原始台词" /></div><span class="lr-label">原始台词</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-manual.png" alt="手动编辑" /></div><span class="lr-label">手动编辑</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-ai.png" alt="AI写台词" /></div><span class="lr-label">AI写台词</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="/birdys-portfolio/images/lines-preview.png"><source src="/birdys-portfolio/videos/lines-demo.mov" type="video/quicktime" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="/birdys-portfolio/images/play-btn.png" alt="播放" /></span></div></div><span class="lr-label">台词生成过程</span></div>
 </div>`,
+        },
+        {
+          heading: '故事接龙：影视衍生短剧共创生成',
+          body: '',
+          html: ``,
         },
         {
           heading: '策略四：轻量交互转化 — 换台词',
@@ -400,17 +421,23 @@ export const projectData: Project[] = [
 	.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}
 	.qt-flow-row{display:flex;align-items:center;gap:28px;margin:0}
 	.qt-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
-	.qt-screen-box{width:100%;aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+	.qt-screen-box{width:100%;aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 	.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
 	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px}
-	@media(max-width:767px){.qt-chart{max-width:100%}.qt-flow-row{flex-wrap:wrap;justify-content:center;gap:12px}.qt-node{flex:1 1 40%;min-width:140px}.qt-operator{display:none}.qt-screen-box{max-width:180px;margin:0 auto}}
+	@media(max-width:767px){.qt-chart{max-width:100%}.qt-flow-row{flex-wrap:wrap;justify-content:center;gap:16px}.qt-node{flex:1 1 40%;min-width:140px}.qt-operator{display:none}.qt-screen-box{max-width:180px;margin:0 auto}}
 	</style>
+	<div class="qt-chart">
+	<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div>
 	<div class="qt-flow-row">
-<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/01-original-scene.jpeg" alt="原始名场面界面" style="width:100%;height:100%;object-fit:contain" /></div></div>
-<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/02-tags.jpeg" alt="场景化主题标签页" style="width:100%;height:100%;object-fit:contain" /></div></div>
-<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/03-dialog.jpeg" alt="半浮层对话框" style="width:100%;height:100%;object-fit:contain" /></div></div>
-<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/04-preview.jpeg" alt="新台词视频预览" style="width:100%;height:100%;object-fit:contain" /></div></div>
-</div>`,
+	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/01-original-scene.jpeg" alt="原始名场面界面" style="width:100%;height:100%;object-fit:contain" /></div><div class="qt-node-text"><b>即兴微调</b>点击台词直接编辑，降低创作心理门槛。</div></div>
+	<div class="qt-operator">→</div>
+	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/02-tags.jpeg" alt="场景化主题标签页" style="width:100%;height:100%;object-fit:contain" /></div><div class="qt-node-text"><b>场景化启发</b>点击标签，快速接入创作方向。</div></div>
+	<div class="qt-operator">→</div>
+	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/03-dialog.jpeg" alt="半浮层对话框" style="width:100%;height:100%;object-fit:contain" /></div><div class="qt-node-text"><b>AI 对话式扩展</b>自然语言生成，多版本方案沉淀。</div></div>
+	<div class="qt-operator">→</div>
+	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/04-preview.jpeg" alt="新台词视频预览" style="width:100%;height:100%;object-fit:contain" /></div><div class="qt-node-text"><b>创作资产沉淀</b>每一次尝试都可见、可复用。</div></div>
+	</div>
+	</div>`,
         },
         {
           heading: '策略四：轻量交互转化 — 故事接龙',
@@ -420,9 +447,9 @@ export const projectData: Project[] = [
 .ds-sub .num{font-family:monospace;font-size:15px;color:#C7FF00;margin-right:8px;font-weight:700}
 .ds-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:400}
 .ds-img-placeholder{background:linear-gradient(135deg,#121212 0%,#121212 100%);border:1px solid #333333;border-radius:4px;padding:48px 20px;text-align:center;margin:16px 0 24px;font-size:11px;color:#A0A0A0;font-family:system-ui,-apple-system,sans-serif;letter-spacing:0.05em;position:relative;overflow:hidden}.ds-img-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}.ds-img-placeholder::after{content:'🖼';display:block;font-size:24px;margin-bottom:12px;opacity:.3;filter:grayscale(1)}
-.progressive-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.progressive-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
 @media(max-width:767px){.progressive-steps{grid-template-columns:1fr!important}}
-.progressive-steps .ps-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:18px;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.progressive-steps .ps-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+.progressive-steps .ps-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:18px;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.progressive-steps .ps-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .progressive-steps .ps-card .ps-num{font-family:monospace;font-size:10px;color:#C7FF00;display:block;margin-bottom:8px}
 .progressive-steps .ps-card .ps-title{color:#FFFFFF;font-size:13px;font-weight:600;display:block;margin-bottom:4px}
 .progressive-steps .ps-card .ps-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:400}
@@ -458,8 +485,8 @@ export const projectData: Project[] = [
 .sd-intro{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 32px;font-weight:400}
 .sd-intro b{color:#FFFFFF;font-weight:600}
 .sd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
-.sd-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:24px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-.sd-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+.sd-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.sd-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .sd-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
 .sd-card:hover::before{opacity:.6}
 .sd-card-num{position:absolute;top:24px;right:14px;font-family:monospace;font-size:10px;color:#C7FF00;font-weight:600;letter-spacing:0.06em;background:rgba(199,255,0,0.08);border:1px solid rgba(199,255,0,0.15);border-radius:3px;padding:3px 10px;z-index:1}
@@ -478,7 +505,7 @@ export const projectData: Project[] = [
 <div class="sd-card"><span class="sd-card-num">资产二</span><h4 class="sd-card-title">AI 生产链路交互重构</h4><p class="sd-card-desc">针对 AI 生成耗时较长的痛点，设计了<b>"即时反馈 + 异步处理"</b>交互闭环。通过后台任务队列与主动通知策略，将用户的<b>线性等待转化为并行体验</b>，有效解决生成过程中的流程阻塞问题，极大提升创作流顺畅度。</p></div>
 <div class="sd-card"><span class="sd-card-num">资产三</span><h4 class="sd-card-title">创作资源模块化管理</h4><p class="sd-card-desc">将不同玩法的素材与底层逻辑解耦，搭建统一的<b>资源共享池</b>。资源模块化架构使得创作侧玩法迭代不再依赖复杂底层重构，显著提升产品在处理复杂创作场景时的<b>灵活性与响应效率</b>。</p></div>
 </div>
-<div class="sd-closing"><span class="sd-closing-label">结语</span><p>「吃鲸 AI」不仅是交互设计的实验场，更是<b>商业模型与算力成本博弈</b>的试金石。它警示我们：未来的 AI 设计，必须跳出体验的舒适区，将<b>技术 ROI 与平台基因</b>纳入设计的底层逻辑。</p></div>`,
+<div class="sd-closing"><span class="sd-closing-label">结语</span><p>「吃鲸AI」不仅是交互设计的实验场，更是<b>商业模型与算力成本博弈</b>的试金石。它警示我们：未来的 AI 设计，必须跳出体验的舒适区，将<b>技术 ROI 与平台基因</b>纳入设计的底层逻辑。</p></div>`,
         },
       ],
     },
@@ -500,12 +527,28 @@ export const projectData: Project[] = [
       sections: [
         // ═══ P1 项目概述 ═══
         {
-          heading: '项目概述',
-          body: '明星陪看旨在重构影视观影的社交体验，通过将传统内容消费升级为"边看边聊"的沉浸式现场，建立起粉丝与偶像间的高频情感连接。',
-          html: `<style>.role-text{color:#A0A0A0;font-size:13px;line-height:1.6;font-weight:400;margin:0;letter-spacing:0.02em}</style>
-	<p class="role-text">作为设计 Owner，我主导了视听布局的深度重构。并通过对直播间互动路径的重塑与送礼面板的组件化改造，在确立沉浸式社交交互标准的同时，驱动<b style="color:#FFFFFF;font-weight:600">送礼营收数据突破业务历史峰值</b>。</p>`,
-        },
-        // ═══ P2 互动破局 ═══
+          heading: '目录',
+          body: '',
+          html: `<style>
+.toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%}
+.toc-col{display:flex;flex-direction:column}
+.toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.15);margin-bottom:2px;font-family:monospace}
+.toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
+.toc-card:hover{border-color:rgba(255,255,255,0.1);background:rgba(26,26,30,0.9);transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(199,255,0,0.08),inset 0 1px 0 rgba(255,255,255,0.04)}
+.toc-card-title{font-size:14px;font-weight:600;color:#C7FF00;line-height:1.4}
+.toc-card-pages{font-size:13px;color:#A0A0A0;line-height:1.6;display:flex;flex-direction:column;gap:2px}
+.toc-page-row{display:flex;justify-content:space-between;align-items:baseline}
+.toc-page-name{color:#B0B0B0;font-size:13px;font-weight:400}
+.toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:160px;padding:18px}.toc-card-title{font-size:13px}}
+</style>
+<div class="toc-grid">
+<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">背景与策略</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">互动破局</span><span class="toc-page-num">P02</span></div><div class="toc-page-row"><span class="toc-page-name">目标拆解</span><span class="toc-page-num">P03</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><p class="toc-card-title">流量与入口</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">流量蓄水</span><span class="toc-page-num">P04</span></div><div class="toc-page-row"><span class="toc-page-name">播放页入口</span><span class="toc-page-num">P05</span></div><div class="toc-page-row"><span class="toc-page-name">明星陪看聚合页</span><span class="toc-page-num">P06</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">沉浸式体验</span><span class="toc-page-num">P07</span></div><div class="toc-page-row"><span class="toc-page-name">陪看布局重构1</span><span class="toc-page-num">P08</span></div><div class="toc-page-row"><span class="toc-page-name">陪看布局重构2</span><span class="toc-page-num">P09</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="9"><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P10</span></div></div></div></div>
+</div>`,
+        },        // ═══ P2 互动破局 ═══
         {
           heading: '互动破局：将单向观影升级为情感共鸣',
           body: '',
@@ -524,8 +567,8 @@ export const projectData: Project[] = [
 .val-dim-branch{display:flex;gap:0;margin-top:20px}
 .val-dim-branch-body{flex:1;min-width:0}
 .val-dim-cards{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
-.val-dim-card{flex:1;min-width:150px;padding:22px;background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;display:flex;flex-direction:column;justify-content:flex-start;transition:all .35s cubic-bezier(0.16,1,0.3,1)}
-.val-dim-card:hover{border-color:#3f3f46;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.val-dim-card{flex:1;min-width:150px;padding:22px;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;display:flex;flex-direction:column;justify-content:flex-start;transition:all .35s cubic-bezier(0.16,1,0.3,1)}
+.val-dim-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .val-dim-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
 .val-dim-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .val-dim-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
@@ -658,8 +701,8 @@ export const projectData: Project[] = [
 .tx-p b{color:#FFFFFF;font-weight:600}
 /* 蓄水漏斗 */
 .funnel-row{display:flex;gap:32px;align-items:stretch;margin:28px 0}
-.funnel-card{flex:1;background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;display:flex;flex-direction:column}
-.funnel-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+.funnel-card{flex:1;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;display:flex;flex-direction:column}
+.funnel-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .funnel-card::after{content:attr(data-arrow);position:absolute;right:-24px;top:50%;transform:translateY(-50%);color:#555555;font-size:16px;font-weight:400;z-index:2}
 .funnel-card:last-child::after{display:none}
 .funnel-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
@@ -698,7 +741,7 @@ export const projectData: Project[] = [
 .entry-left{flex:1;align-self:flex-start}
 .entry-left img{width:100%;display:block;border-radius:6px}
 .entry-right{width:250px;min-width:250px;max-width:250px;flex-shrink:0}
-.entry-text-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:16px}
+.entry-text-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:16px}
 .entry-text-item{padding-bottom:16px;border-bottom:1px solid #222226}
 .entry-text-item:last-child{padding-bottom:0;border-bottom:none}
 .entry-text-label{color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px}
@@ -798,7 +841,7 @@ export const projectData: Project[] = [
           body: '交互避让机制：引入"动态避让算法"，确保互动内容在触发时能够智能规避核心视听区域，保障主体内容始终处于纯净状态。\n\n场景化信息治理：在回看场景中引入播控，并设计"4秒自动隐匿"的智能收纳逻辑，在用户无操作时，视觉焦点自动回归内容本身。在用户调节进度时展示进度缩略图并自动隐藏非必要的飘评与挂件，最大限度释放屏幕空间，聚焦用户的深度复盘心智。',
           html: `<style>
 	.p9-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
-	.p9-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+	.p9-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 	.p9-col{width:372px;flex-shrink:0}.p9-col.wide{width:564px}
 	.p9-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 10px}
 	.p9-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
@@ -808,7 +851,7 @@ export const projectData: Project[] = [
 	.p9-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 	.p9-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 	.p9-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-	.p9-img-row{display:flex;gap:12px}.p9-img-row .p9-img{width:180px;flex-shrink:0}
+	.p9-img-row{display:flex;gap:16px}.p9-img-row .p9-img{width:180px;flex-shrink:0}
 	@media(max-width:767px){.p9-row{flex-direction:column!important}.p9-col,.p9-col.wide{width:100%!important}.p9-img{width:100%!important;max-width:180px}.p9-img-row .p9-img{width:100%!important;max-width:180px}}
 	</style>
 	<div class="p9-row">
@@ -863,7 +906,7 @@ export const projectData: Project[] = [
           body: '商业行为应是内容消费的顺滑延伸，我们通过资产集成与路径压缩，实现支付环节的"零感知"切换。',
           html: `<style>
 .p11-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
-.p11-col{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.p11-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .p11-col{width:372px;flex-shrink:0}
 .p11-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .p11-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
@@ -873,7 +916,7 @@ export const projectData: Project[] = [
 .p11-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .p11-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 .p11-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-.p11-img-row{display:flex;gap:12px}.p11-img-row .p11-img{width:180px;flex-shrink:0}
+.p11-img-row{display:flex;gap:16px}.p11-img-row .p11-img{width:180px;flex-shrink:0}
 @media(max-width:767px){.p11-row{flex-direction:column!important}.p11-col{width:100%!important}.p11-img{width:100%!important;max-width:180px}.p11-img-row .p11-img{width:100%!important;max-width:180px}}
 </style>
 <div class="p11-row">
@@ -1021,20 +1064,39 @@ export const projectData: Project[] = [
       subtitle: '交互设计负责人 · Pad 端播放体验重构',
       sections: [
         {
-          heading: 'Pad 端播放页',
-          body: '本项目致力于爱奇艺 iPad 端播放体验的体系化重构。作为交互设计 Owner，我全链路主导了从痛点挖掘、策略推导到组件化落地的全过程。针对原"三分屏"布局导致的信息过载及适配断层，本项目跳出传统的流量分发思维，以"沉浸消费"为核心，将架构由"三分屏"精简至"二分屏"。通过重构大屏信息黄金比例，在解决系统适配断层的同时，显著提升了长视频的完播率与连播转化效率，实现了从"功能堆叠"到"体验留存"的范式转移。',
+          heading: '目录',
+          body: '',
+          html: `<style>
+.toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%}
+.toc-col{display:flex;flex-direction:column}
+.toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.15);margin-bottom:2px;font-family:monospace}
+.toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
+.toc-card:hover{border-color:rgba(255,255,255,0.1);background:rgba(26,26,30,0.9);transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(199,255,0,0.08),inset 0 1px 0 rgba(255,255,255,0.04)}
+.toc-card-title{font-size:14px;font-weight:600;color:#C7FF00;line-height:1.4}
+.toc-card-pages{font-size:13px;color:#A0A0A0;line-height:1.6;display:flex;flex-direction:column;gap:2px}
+.toc-page-row{display:flex;justify-content:space-between;align-items:baseline}
+.toc-page-name{color:#B0B0B0;font-size:13px;font-weight:400}
+.toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:160px;padding:18px}.toc-card-title{font-size:13px}}
+</style>
+<div class="toc-grid">
+<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">背景与定位</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">重构背景</span><span class="toc-page-num">P02</span></div><div class="toc-page-row"><span class="toc-page-name">Pad 端重定位</span><span class="toc-page-num">P03</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><p class="toc-card-title">体验重构</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">待补充</span><span class="toc-page-num">P04</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="4"><p class="toc-card-title">设计落地</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">待补充</span><span class="toc-page-num">P05</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="5"><p class="toc-card-title">沉淀</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">待补充</span><span class="toc-page-num">P06</span></div></div></div></div>
+</div>`,
         },
         {
           heading: '重构背景：Pad 端的"沉浸式"增长困境',
           body: '在审视 Pad 端业务表现时，我们意识到原有的架构已无法承载高净值用户的观影需求。继续沿用手机端的流量策略不仅是功能的冗余，更是对用户体验的干扰，这导致了留存价值的持续流失。因此，针对 Pad 端的重构已势在必行。',
           html: `<style>
 .pad2-row{display:flex;gap:16px;align-items:stretch;margin:24px 0}
-.pad2-card{flex:1;background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);display:flex;flex-direction:column;border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-.pad2-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+.pad2-card{flex:1;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);display:flex;flex-direction:column;border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.pad2-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .pad2-header{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:14px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
 .pad2-header::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .pad2-header::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.pad2-pair{display:flex;flex-direction:column;gap:12px}
+.pad2-pair{display:flex;flex-direction:column;gap:16px}
 .pad2-item{padding:0;min-height:50px}
 .pad2-item h5{display:inline;color:#FFFFFF;font-size:13px;font-weight:600;margin:0}
 .pad2-item.solve h5{color:#FFFFFF}
@@ -1074,14 +1136,14 @@ export const projectData: Project[] = [
           body: '我们通过 30+ 场深度访谈，在真实场景中观察 Pad/手机双端用户的行为轨迹，从而揭开了界面背后的心理差异。',
           html: `<style>
 .pad3-row{display:flex;gap:48px;align-items:stretch;justify-content:center;margin:24px 0}
-.pad3-col{flex:0 1 380px;display:flex;flex-direction:column;gap:12px}
+.pad3-col{flex:0 1 380px;display:flex;flex-direction:column;gap:16px}
 .pad3-col-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px}
 .pad3-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .pad3-bubble{background:#1A1A1A;border:1px solid #333333;border-radius:8px;padding:14px 16px;position:relative;align-self:center}
 .pad3-bubble.pad::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1A1A1A;border-left:1px solid rgba(199,255,0,0.25);border-bottom:1px solid rgba(199,255,0,0.25);transform:translateY(-50%) rotate(45deg)}
 .pad3-bubble.phone::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1A1A1A;border-left:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);transform:translateY(-50%) rotate(45deg)}
 .pad3-bubble.pad{background:rgba(199,255,0,0.06);border-color:rgba(199,255,0,0.25)}
-.pad3-bubble.phone{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.12)}
+.pad3-bubble.phone{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .pad3-bubble-text{color:#A0A0A0;font-size:13px;line-height:1.7;font-weight:400}
 .pad3-bubble-text b{color:#FFFFFF;font-weight:600}
 .pad3-quote{display:flex;gap:10px;align-items:center;margin-bottom:10px}
@@ -1139,8 +1201,8 @@ export const projectData: Project[] = [
           body: '基于终端行为分析，我们将 Pad 端播放页的价值重新锚定为三大战略支点，以此校准信息优先级。',
           html: `<style>
 .pad5-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
-.pad5-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-.pad5-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+.pad5-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.pad5-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .pad5-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
 .pad5-card:hover::before{opacity:.6}
 .pad5-num{font-family:monospace;font-size:10px;color:#C7FF00;margin-bottom:8px;display:block;font-weight:600}
@@ -1167,9 +1229,9 @@ export const projectData: Project[] = [
 .pad6-mockup{height:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .pad6-mockup::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 .pad6-mockup-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-.pad6-right{flex:1;display:flex;flex-direction:column;gap:12px}
-.pad6-card{background:rgba(22,22,24,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-.pad6-card:hover{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}
+.pad6-right{flex:1;display:flex;flex-direction:column;gap:16px}
+.pad6-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.pad6-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .pad6-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
 .pad6-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .pad6-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
@@ -1179,7 +1241,7 @@ export const projectData: Project[] = [
 </style>
 <div class="pad6-split">
 <div class="pad6-left">
-<div data-preview class="pad6-mockup"><img src="/birdys-portfolio/images/pad-player.png" alt="Pad 播放页截图" style="width:100%;height:100%;object-fit:cover" /></div>
+<div data-preview class="pad6-mockup"><img src="/birdys-portfolio/images/pad-player.png" alt="Pad 播放页截图" style="width:100%;height:100%;object-fit:contain" /></div>
 </div>
 <div class="pad6-right">
 <div class="pad6-card"><h4 class="pad6-card-title">视觉重心失衡</h4><p class="pad6-card-desc">右侧推荐流占据过大权重，导致<b>播放主体被边缘化</b>，破坏了 Pad 端应有的沉浸心智。</p></div>
