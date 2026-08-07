@@ -342,6 +342,7 @@ export const projectData: Project[] = [
 <div class="m-split">
 <div class="m-col">
 <div class="m-col-title">影视素材库形态演变预想</div>
+<p class="cr-col-desc">随着素材的扩充，为提升素材选择的效率，我们规划了影视库的不同形态。</p>
 <div class="m-img-row">
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.png" alt="初期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">初期</span></div>
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.png" alt="中期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">中期</span></div>
@@ -350,6 +351,7 @@ export const projectData: Project[] = [
 </div>
 <div class="m-col">
 <div class="m-col-title">支持多选场景</div>
+<p class="cr-col-desc">通用视频创作时支持多选素材。</p>
 <div class="m-img-row">
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-unselected.png" alt="多选未选择" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">多选-未选择</span></div>
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.png" alt="多选已选择" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">多选-已选择</span></div>
@@ -374,24 +376,21 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '策略三：站内素材闭环 — 创作中控',
-          body: '将官方影视切片、本地相册及个人库整合为中心化素材库，配合 @引用式配置逻辑，消除跨平台素材获取的流转割裂。',
+          heading: '台词改写：启发式交互设计',
+          body: '',
           html: `<style>
-.ds-list{margin:0 0 24px;list-style:none;padding:0}
-.ds-list li{margin-bottom:12px;font-size:13px;line-height:1.75;color:#A0A0A0;font-weight:400}
-.ds-list li b{color:#FFFFFF;font-weight:600}
-.arch-wrapper{max-width:950px;display:inline-flex;flex-direction:column}.arch-layer{position:relative;padding:0 50px;margin-bottom:24px}.arch-layer::after{content:"";position:absolute;left:32px;top:0;width:1px;background:#222226;z-index:0}.arch-layer:not(:last-child)::after{height:calc(100% + 24px)}.arch-layer:last-child::after{height:100%}.arch-layer-bar{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:12px;padding-bottom:4px;gap:2px;position:relative;z-index:1}.arch-layer-label{color:#FFFFFF;font-size:14px;font-weight:600;letter-spacing:0.02em;display:flex;align-items:center;gap:10px;position:relative}.arch-layer-label::before{content:"";width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a;flex-shrink:0;position:absolute;left:-25px;top:50%;transform:translateY(-50%);z-index:2}.arch-page-row{display:flex;gap:28px;justify-content:flex-start}.arch-page-col{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:1 1 0;min-width:0}.arch-page-box{width:auto;display:inline-flex;box-sizing:border-box;height:auto;border-radius:8px;overflow:hidden;border:1px solid #222226;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-page-col:hover .arch-page-box{border-color:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.02)}.arch-page-tag{font-size:11px;color:#A0A0A0;letter-spacing:0.02em;text-align:center;width:100%}@media(max-width:767px){.arch-wrapper{width:100%!important;max-width:100%!important;padding:0}.arch-layer{padding:0 0 0 22px!important}.arch-layer::after{left:5px!important}.arch-layer-label::before{left:-25px!important}.arch-page-row{flex-direction:row!important;flex-wrap:nowrap;gap:4px}.arch-page-row>span{font-size:12px!important;padding:0 2px!important}.arch-page-box{width:100%!important}.arch-page-box img{max-width:100%!important;width:100%!important;max-width:none!important}.arch-page-col{flex:1;min-width:0;overflow:hidden}}
+.lr-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:780px;margin:0 auto}
+.lr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0;margin:0 auto}
+.lr-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.lr-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
+@media(max-width:767px){.lr-row{grid-template-columns:repeat(2,1fr);gap:12px}}
 </style>
-<ul class="ds-list">
-  <li><b>多维素材融合：</b>整合官方影视切片、相册素材与个人参考库，打破了素材获取的平台壁垒，将素材库转化为随手可得的生产要素。</li>
-  <li><b>透明化多引用交互：</b>采用 @引用式的交互逻辑，支持用户在生产过程中显性调用多项视觉参考，通过「自然语言描述 + 明确素材引用」的方式，将 AI 渲染的「黑盒」过程转化为用户可控的「逻辑拼搭」过程。</li>
-  <li><b>低认知门槛配置：</b>将复杂的剪辑工作流程解构为任务式的素材调用，大幅削弱了二创对专业剪辑技能的依赖。</li>
-</ul>
-<div style="display:flex;justify-content:center;width:100%"><div class="arch-wrapper">
-<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">资产调用</span></div><div class="arch-page-row"><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/影视片段库.png" alt="影视片段库" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">多维素材整合</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">+</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/本地相册.png" alt="本地相册" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">打破平台壁垒</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">+</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/个人参考库.png" alt="个人参考库" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">中心化资源池</span></div></div></div>
-<div class="arch-layer"><div class="arch-layer-bar"><span class="arch-layer-label">逻辑配置</span></div><div class="arch-page-row"><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/未添加素材.png" alt="未添加素材" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">空载引导</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/已添加素材.png" alt="已添加素材" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">"@引用"逻辑拼搭</span></div><span style="display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px">→</span><div class="arch-page-col"><div class="arch-page-box"><img src="/birdys-portfolio/images/调用素材.png" alt="调用素材" style="max-width:160px;height:auto;display:block;border-radius:6px" /></div><span class="arch-page-tag">多维资源检索</span></div></div></div>
-</div></div>
-`,
+<div class="lr-row">
+<div data-preview class="lr-placeholder"><span>截图 1</span></div>
+<div data-preview class="lr-placeholder"><span>截图 2</span></div>
+<div data-preview class="lr-placeholder"><span>截图 3</span></div>
+<div data-preview class="lr-placeholder"><span>截图 4</span></div>
+</div>`,
         },
         {
           heading: '策略四：轻量交互转化 — 换台词',
