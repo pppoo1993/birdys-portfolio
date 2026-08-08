@@ -256,7 +256,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '以消带产：核心内容分发页',
-          body: '首页以双列瀑布流承载AI创作内容，让用户进场即感知"能玩、能互动"的社区氛围。同时提供海量影视二创相关模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。',
+          body: '对于以"消费"为起点的用户，进入 AI 创作工具最大的心理门槛是"不知道该创作什么"。我们的设计策略是将创作触发点嵌入消费场景——双列瀑布流展示他人作品激发参与欲，模板和教程将模糊的创作意图转化为具体的低门槛动作。核心原则：不让用户"想创作"，让用户"看到 → 想要 → 开始"。',
           html: `<style>
 .dist-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .dist-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -294,7 +294,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '以消带产：核心视频创作页',
-          body: '通用视频创作是平台的基础能力，承接用户日常创作需求。影视创意玩法则是吃鲸AI的核心亮点——我们调研了热播剧的二创生态后，归纳出初期三个核心方向：<b>画风转换</b>、<b>换台词</b>、<b>故事接龙</b>。',
+          body: '通用视频生成是平台的基础能力底。但仅靠"自由创作"难以激活普通用户——调研发现，影视二创用户真正需要的是<b>降低创作门槛的定向工具</b>。我们扫描了热播剧的二创生态，从中提炼出三个兼具流量潜力和 IP 关联度的方向：<b>画风转换</b>、<b>换台词</b>、<b>故事接龙</b>，作为初期核心玩法。',
           html: `<style>
 .cr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .cr-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -330,7 +330,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '创作中枢：影视片段库搭建',
-          body: '我们将素材库打包为通用模组，支持爱奇艺<b>官方影视片段</b>、<b>本地图片/视频</b>、<b>已创作视频</b>三种素材类型，方便在不同AI视频玩法中按需随时调取。\n<b>影视片段库</b>作为吃鲸AI的核心创作中枢，针对不同玩法进行了精选，并计划不断扩充。',
+          body: '影视二创的最大痛点在于素材获取——用户在站内外反复搬运高清片段，耗时长且版权风险高。我们的策略是将素材库打造为产品的<b>核心护城河</b>：一边整合官方版权素材降低使用门槛，一边针对画风转换、台词改写等玩法预置精选素材集，让"找到素材"不再是创作前的绊脚石。素材库支持<b>官方影视片段</b>、<b>本地图片/视频</b>、<b>已创作视频</b>三种类型，随用随调。',
           html: `<style>
 .m-split{display:flex;gap:48px;align-items:flex-start;margin:0;width:fit-content;max-width:100%}
 .m-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -368,7 +368,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '创作中枢：参考添加调用',
-          body: '通用视频创作支持添加多参考素材，添加后可通过三种方式调用：\n1. 点击参考缩略图 → 光标处自动展示参考标签\n2. 点击参考标签 → 拉起已添加参考浮层，选择后更新标签\n3. 输入 @ → 拉起参考浮层，选择后光标处展示参考标签',
+          body: 'AI 视频生成过程中，用户经常需要引用多张参考图来精确控制输出效果。我们对比了三种素材调用方式（侧栏拖拽 / 独立选择页 / @ 引用），最终选择 @ 引用式交互——因为它让素材配置发生在输入框内，不打断用户的创作思路，降低了"跳出感"。添加参考素材后，可通过以下三种方式调用：\n1. 点击参考缩略图 → 光标处自动展示参考标签\n2. 点击参考标签 → 拉起已添加参考浮层，选择后更新标签\n3. 输入 @ → 拉起参考浮层，选择后光标处展示参考标签',
           html: `<style>
 .lr-label{font-size:12px;color:#A0A0A0;text-align:center}
 </style>
@@ -381,7 +381,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '台词改写：启发式交互设计',
-          body: '重新改编影视经典片段中的台词是短视频平台上的经典玩法。我们为该玩法设计了一套启发式交互流程。用户可以通过以下方式改写台词：\n1. 点击视频原台词逐句改写或删除台词\n2. 点击「AI写台词」在弹出浮层中输入改编主题或方向，点击生成台词后，AI将自动生成改写台词\n3. 点击底部主题标签，AI将自动生成改写台词',
+          body: '台词改写是短视频平台上长盛不衰的二创玩法。相比自由输入（门槛高、方向散），我们选择「启发式交互」——在关键节点预设方向引导，让用户从"不知道写什么"变为"选一个方向试试"。核心决策：将 AI 能力嵌入三种不同深度的交互入口，从全手动到全自动渐进。用户可通过以下方式改写台词：\n1. 点击视频原台词逐句改写或删除台词\n2. 点击「AI写台词」在弹出浮层中输入改编主题或方向，点击生成台词后，AI将自动生成改写台词\n3. 点击底部主题标签，AI将自动生成改写台词',
           html: `<style>
 .lr-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;max-width:min(900px,100%);margin:0 auto}
 .lr-item{display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -407,9 +407,8 @@ export const projectData: Project[] = [
         },
         {
           heading: '故事接龙：AI视频链式共创',
-          body: '',
-          html: `<p style="color:#A0A0A0;font-size:13px;line-height:1.6;letter-spacing:0.02em;text-align:left;margin:0 0 20px;font-weight:400">打破传统 UGC「发布即终点」的静态模式，我们创造了「故事接龙」玩法。将创作起点设在大热影视剧「结局之后」的空白叙事区，让故事可以无限延伸。<br>用户可以一边观看剧情，一边随时插入自己的改写，每个灵感都能接续前文、成为新故事的起点。通过这种「接力式」共创，零散的创意最终汇聚成不断生长的社区叙事。</p>
-<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.png" alt="故事接龙" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#a1a1aa;font-size:12px;margin-top:8px">故事接龙逻辑示意</p></div>`,
+          body: '传统 UGC "发布即终点"——内容发出后便进入静态沉淀，缺乏持续参与的动力。我们从影视 IP 的"结局之后"找到突破口：将创作起点锚定在热门剧集的大结局处，依托已有影视世界观降低冷启动门槛，让用户从"看剧"自然过渡到"编剧"。用户一边追剧一边随时改写，每个灵感接续前文——「接力式」共创让零散创意汇聚成不断生长的社区叙事。',
+          html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.png" alt="故事接龙" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#a1a1aa;font-size:12px;margin-top:8px">故事接龙逻辑示意</p></div>`,
         },
         {
           heading: '故事接龙：起点页方案探索',
