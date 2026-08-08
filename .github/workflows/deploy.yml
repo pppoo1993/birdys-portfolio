@@ -1,9 +1,11 @@
-name: Deploy
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches: [main]
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -12,11 +14,7 @@ jobs:
           node-version: '20'
       - run: npm install
       - run: npm run build
-      - run: |
-          cd dist
-          git init
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add -A
-          git commit -m "deploy"
-          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/pppoo1993/birdys-portfolio.git HEAD:gh-pages
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
