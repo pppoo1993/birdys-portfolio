@@ -192,7 +192,7 @@ export default function Introduction() {
   return (
     <section
       id="intro"
-      className="relative w-full text-white flex flex-col justify-center pt-20 pb-16 md:py-28 font-sans noise-overlay"
+      className="relative w-full text-white flex flex-col justify-center pt-20 pb-16 md:pt-16 md:pb-24 font-sans noise-overlay"
       style={{ minHeight: '100vh', background: 'radial-gradient(circle at 50% 40%, rgba(204, 255, 0, 0.04) 0%, rgba(0, 0, 0, 0) 60%), #0a0a0c' }}
     >
       <motion.div
@@ -210,14 +210,14 @@ export default function Introduction() {
       </motion.div>
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0a0a0c]/50 md:via-[#0a0a0c]/80 to-[#0a0a0c]" />
 
-      <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center gap-5 md:gap-8 overflow-visible px-6 md:px-12">
+      <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center overflow-visible px-6 md:px-12">
         {/* 1. Title */}
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
+        <h1 className="text-5xl md:text-6xl mb-3 md:mb-5" style={{ fontFamily: "'Caveat', cursive", fontWeight: 400 }}>
           {introductionData.name}
         </h1>
 
         {/* 2. Subtitle */}
-        <p className="text-[11px] md:text-sm text-accent tracking-wide md:tracking-widest uppercase font-semibold">
+        <p className="text-[11px] md:text-sm text-accent tracking-wide md:tracking-widest uppercase font-semibold mb-8 md:mb-12">
           {introductionData.title}
         </p>
 
@@ -240,7 +240,7 @@ export default function Introduction() {
         </div>
 
         {/* 4. Typewriter — animated on all devices, overlaps avatar slightly */}
-        <div className="pb-0 -mt-4 md:-mt-6 relative z-10">
+        <div className="pb-2 md:pb-6 -mt-6 md:mt-6 relative z-10">
           <h2
             className="text-3xl md:text-4xl font-extrabold tracking-wider leading-normal md:leading-tight text-white"
           >

@@ -41,7 +41,7 @@ function TagsRow({ tags }: { tags: string[] }) {
       {/* Visible row */}
       <div className="text-[12px] text-[#8a8a8a] font-light whitespace-nowrap group-hover:text-[#a1a1aa] transition-colors duration-300">
         {tags.slice(0, count).map((tag, idx) => (
-          <span key={tag}>
+          <span key={tag} className={idx === 0 ? 'text-[#C7FF00] font-medium' : ''}>
             {tag}{idx < Math.min(count, tags.length) - 1 ? <span className="text-[#52525b]"> &nbsp;/&nbsp; </span> : ''}
           </span>
         ))}
@@ -49,7 +49,7 @@ function TagsRow({ tags }: { tags: string[] }) {
       {/* Hidden measurement row */}
       <div ref={measureRef} className="text-[12px] font-light absolute invisible whitespace-nowrap pointer-events-none top-0 left-0" aria-hidden="true">
         {tags.map((tag, idx) => (
-          <span key={tag}>
+          <span key={tag} className={idx === 0 ? 'text-[#C7FF00] font-medium' : ''}>
             {tag}{idx < tags.length - 1 ? <span className="text-[#3f3f46]"> / </span> : ''}
           </span>
         ))}
@@ -159,7 +159,7 @@ export default function Projects() {
               >
                 <div className="flex flex-col md:flex-row gap-0 items-stretch">
                   {/* Left: text */}
-                  <div className="w-full md:w-[50%] flex flex-col justify-between pl-7 md:pl-10 pr-7 md:pr-10 pt-2 md:pt-8 pb-5 md:pb-8 order-2 md:order-1">
+                  <div className="w-full md:w-[50%] flex flex-col justify-between pl-7 md:pl-10 pr-7 md:pr-10 pt-2 md:pt-8 pb-2 md:pb-8 order-2 md:order-1">
                     <div>
                       {/* Title + logo */}
                       <div className="flex items-center gap-3 mb-1">
@@ -183,14 +183,15 @@ export default function Projects() {
                           {project.detail.subtitle}
                         </p>
                       )}
-                      <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-normal mb-0">
+                      <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-normal mb-3">
                         {project.description}
                       </p>
+                    </div>
 
                       {/* CTA Button */}
                       <button
                         onClick={(e) => { e.stopPropagation(); setSelectedProject(project) }}
-                        className="mt-5 px-5 py-2 text-[13px] font-medium rounded-full"
+                        className="mt-5 px-5 md:px-8 py-2 text-[13px] font-medium rounded-full md:self-start"
                         style={{
                           color: isHovered ? '#FFFFFF' : isFocused ? '#a1a1aa' : '#71717a',
                           background: isHovered
@@ -210,10 +211,11 @@ export default function Projects() {
                       >
                         查看详情
                       </button>
-                    </div>
 
-                    {/* Tags */}
-                    <TagsRow tags={project.techStack} />
+                      {/* Tags */}
+                    <div className="mt-5 mb-3">
+                      <TagsRow tags={project.techStack} />
+                    </div>
                   </div>
 
                   {/* Right: Phone Mockups — unique container per project */}

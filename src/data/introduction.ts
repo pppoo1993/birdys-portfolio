@@ -2,10 +2,10 @@ import type { IntroductionData } from '../types'
 
 export const introductionData: IntroductionData = {
   name: "Hi，I'm Birdy",
-  title: '体验设计师 / 效率主义者 / 系统化实践者',
+  title: '资深体验设计师 / 10年+设计经验 / AI 内容生态 / 跨平台体验',
   photoPath: 'https://picsum.photos/seed/bg-hero/1400/900',
   avatarPath: '/images/头像.png',
-  quote: '把设计作为解决问题的方法',
+  quote: '把设计作为方法',
   bioSections: [
     {
       number: '01',

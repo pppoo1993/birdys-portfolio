@@ -90,7 +90,9 @@
       "Bash(xargs -0 -I{} sh -c 'test -f \"{}\" && wc -c < \"{}\"')",
       "Bash(read s *)",
       "Bash(npx gh-pages *)",
-      "Bash(timeout 10 git ls-remote https://github.com/pppoo1993/birdys-portfolio.git HEAD)"
+      "Bash(timeout 10 git ls-remote https://github.com/pppoo1993/birdys-portfolio.git HEAD)",
+      "Bash(ipconfig getifaddr *)",
+      "Bash(/usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"

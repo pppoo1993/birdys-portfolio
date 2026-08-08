@@ -7,7 +7,7 @@ export const projectData: Project[] = [
     description:
       '吃鲸AI 是爱奇艺孵化的 AI 视频互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路。',
     imagePath: 'https://picsum.photos/seed/project3/1200/800',
-    techStack: ['AI 视频创作', '产品架构设计', '渐进式交互'],
+    techStack: ['0→1 产品架构', '独立设计 Owner', '影视 IP 激活'],
     sourceUrl: 'https://github.com',
     detail: {
       pageTitle: '吃鲸AI | AI视频消费与生成共创',
@@ -498,7 +498,7 @@ export const projectData: Project[] = [
     description:
       '明星陪看旨在重构影视观影的社交体验，通过将传统内容消费升级为"边看边聊"的沉浸式现场，建立起粉丝与偶像间的高频情感连接。',
     imagePath: 'https://picsum.photos/seed/project2/1200/800',
-    techStack: ['沉浸式社交', '视听交互重构', '商业化设计驱动', '组件化设计策略'],
+    techStack: ['DAU +200%', '直播社交', '送礼玩法矩阵', '陪看体验设计'],
     liveUrl: 'https://example.com',
     sourceUrl: 'https://github.com',
     detail: {
@@ -1038,7 +1038,7 @@ export const projectData: Project[] = [
     description:
       'Pad 端播放页交互设计负责人，主导从"三分屏"到"二分屏"的架构重构，以沉浸消费为核心，显著提升长视频完播率与连播转化效率。',
     imagePath: 'https://picsum.photos/seed/project1/1200/800',
-    techStack: ['Pad UX', '交互设计', '用户调研', '体验架构', '设计系统'],
+    techStack: ['体验重构', 'Pad 端适配', '沉浸式交互'],
     detail: {
       pageTitle: 'Pad端播放器',
       mainTitle: '',
