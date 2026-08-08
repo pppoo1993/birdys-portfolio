@@ -256,7 +256,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '以消带产：核心内容分发页',
-          body: '对于以"消费"为起点的用户，进入 AI 创作工具最大的心理门槛是"不知道该创作什么"。我们的设计策略是将创作触发点嵌入消费场景——双列瀑布流展示他人作品激发参与欲，模板和教程将模糊的创作意图转化为具体的低门槛动作。核心原则：不让用户"想创作"，让用户"看到 → 想要 → 开始"。',
+          body: '对于以<b>"消费"</b>为起点的用户，进入 AI 创作工具最大的心理门槛是<b>"不知道该创作什么"</b>。我们的设计策略是将创作触发点嵌入消费场景——双列瀑布流展示他人作品激发参与欲，模板和教程将模糊的创作意图转化为具体的<b>低门槛动作</b>。核心原则：不让用户"想创作"，让用户<b>"看到 → 想要 → 开始"</b>。',
           html: `<style>
 .dist-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .dist-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -294,7 +294,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '以消带产：核心视频创作页',
-          body: '通用视频生成是平台的基础能力底。但仅靠"自由创作"难以激活普通用户——调研发现，影视二创用户真正需要的是<b>降低创作门槛的定向工具</b>。我们扫描了热播剧的二创生态，从中提炼出三个兼具流量潜力和 IP 关联度的方向：<b>画风转换</b>、<b>换台词</b>、<b>故事接龙</b>，作为初期核心玩法。',
+          body: '通用视频生成是平台的基础能力底。但仅靠"自由创作"难以激活普通用户——调研发现，影视二创用户真正需要的是<b>降低创作门槛的定向工具</b>。我们扫描了热播剧的二创生态，从中提炼出三个兼具<b>流量潜力</b>和<b>IP 关联度</b>的方向：<b>画风转换</b>、<b>换台词</b>、<b>故事接龙</b>，作为初期核心玩法。',
           html: `<style>
 .cr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .cr-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -330,7 +330,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '创作中枢：影视片段库搭建',
-          body: '影视二创的最大痛点在于素材获取——用户在站内外反复搬运高清片段，耗时长且版权风险高。我们的策略是将素材库打造为产品的<b>核心护城河</b>：一边整合官方版权素材降低使用门槛，一边针对画风转换、台词改写等玩法预置精选素材集，让"找到素材"不再是创作前的绊脚石。素材库支持<b>官方影视片段</b>、<b>本地图片/视频</b>、<b>已创作视频</b>三种类型，随用随调。',
+          body: '影视二创的最大痛点在于<b>素材获取</b>——用户在站内外反复搬运高清片段，耗时长且<b>版权风险高</b>。我们的策略是将素材库打造为产品的<b>核心护城河</b>：一边整合官方版权素材降低使用门槛，一边针对不同玩法<b>预置精选素材集</b>，让"找到素材"不再是创作前的绊脚石。素材库支持<b>官方影视片段</b>、<b>本地图片/视频</b>、<b>已创作视频</b>三种类型，随用随调。',
           html: `<style>
 .m-split{display:flex;gap:48px;align-items:flex-start;margin:0;width:fit-content;max-width:100%}
 .m-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -381,7 +381,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '台词改写：启发式交互设计',
-          body: '台词改写是短视频平台上长盛不衰的二创玩法。相比自由输入（门槛高、方向散），我们选择「启发式交互」——在关键节点预设方向引导，让用户从"不知道写什么"变为"选一个方向试试"。核心决策：将 AI 能力嵌入三种不同深度的交互入口，从全手动到全自动渐进。用户可通过以下方式改写台词：\n1. 点击视频原台词逐句改写或删除台词\n2. 点击「AI写台词」在弹出浮层中输入改编主题或方向，点击生成台词后，AI将自动生成改写台词\n3. 点击底部主题标签，AI将自动生成改写台词',
+          body: '台词改写是短视频平台上长盛不衰的二创玩法。但「自由输入框」门槛太高——用户打开后不知道该写什么。我们的核心决策是设计三种交互入口，覆盖不同创作状态的用户：\n1. 逐句点击改写 —— 适合有明确想法的用户，所见即所得\n2. AI 写台词浮层 —— 有方向但缺灵感时，输入主题由 AI 生成\n3. 底部主题标签 —— 完全没想法时一键生成，降低决策成本\n三种方式形成从「主动编辑」到「被动启发」的渐进光谱，让不同意愿强度的用户都能找到适合的切入点。',
           html: `<style>
 .lr-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;max-width:min(900px,100%);margin:0 auto}
 .lr-item{display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -407,7 +407,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '故事接龙：AI视频链式共创',
-          body: '传统 UGC "发布即终点"——内容发出后便进入静态沉淀，缺乏持续参与的动力。我们从影视 IP 的"结局之后"找到突破口：将创作起点锚定在热门剧集的大结局处，依托已有影视世界观降低冷启动门槛，让用户从"看剧"自然过渡到"编剧"。用户一边追剧一边随时改写，每个灵感接续前文——「接力式」共创让零散创意汇聚成不断生长的社区叙事。',
+          body: '传统 UGC <b>"发布即终点"</b>——内容发出后便进入静态沉淀，缺乏持续参与的动力。我们从影视 IP 的<b>"结局之后"</b>找到突破口：将创作起点锚定在热门剧集的大结局处，依托已有影视世界观<b>降低冷启动门槛</b>，让用户从"看剧"自然过渡到"编剧"。用户一边追剧一边随时改写，每个灵感接续前文——<b>「接力式」共创</b>让零散创意汇聚成不断生长的社区叙事。',
           html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.png" alt="故事接龙" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#a1a1aa;font-size:12px;margin-top:8px">故事接龙逻辑示意</p></div>`,
         },
         {
