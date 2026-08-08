@@ -231,24 +231,44 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Mobile: top bar */}
-      <nav className={`fixed top-0 right-0 left-0 z-50 border-b border-divider bg-bg-primary md:hidden transition-transform duration-500 ${navVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-        <div className="flex items-center justify-between px-6 py-3">
+      {/* Mobile/Tablet: top bar */}
+      <nav className={`fixed top-0 right-0 left-0 z-50 xl:hidden transition-transform duration-500 ${navVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className="absolute inset-0 bg-[#0c0c0e]/50 backdrop-blur-md" />
+        <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-b from-[#0c0c0e]/50 to-transparent translate-y-full" />
+        <div className="relative flex items-center justify-between px-6 md:px-12 py-3">
           <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" className="h-[26px] w-auto object-contain opacity-90" />
+          {/* Mobile: hamburger */}
           <button
-            className="text-white/80"
+            className="text-white/80 md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? '关闭菜单' : '打开菜单'}
           >
             {mobileOpen ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
+          {/* Tablet: horizontal nav links */}
+          <ul className="hidden md:flex items-center gap-8">
+            {siteConfig.navLinks.map((link) => (
+              <li key={link.sectionId}>
+                <button
+                  data-cursor-interactive onClick={() => handleNav(link.sectionId)}
+                  className={`text-sm transition-colors ${
+                    activeId === link.sectionId
+                      ? 'font-bold text-accent'
+                      : 'font-normal text-[#8a8a8a] hover:text-white/80'
+                  }`}
+                >
+                  {link.label}
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
       </nav>
 
-      {/* Mobile: half-screen overlay */}
+      {/* Mobile/Tablet: half-screen overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-[60] md:hidden"
+          className="fixed inset-0 z-[60] xl:hidden"
           onTouchMove={(e) => e.preventDefault()}
         >
           <div
@@ -262,7 +282,7 @@ export default function Navigation() {
       )}
 
       {/* Desktop: fixed left sidebar card */}
-      <aside className="fixed top-3 left-3 bottom-3 z-40 hidden md:flex w-[220px] flex-col bg-[#121214] border border-[#1f1f23] rounded-2xl shadow-[4px_0_30px_rgba(0,0,0,0.6)] overflow-hidden">
+      <aside className="fixed top-3 left-3 bottom-3 z-40 hidden xl:flex w-[220px] flex-col bg-[#121214] border border-[#1f1f23] rounded-2xl shadow-[4px_0_30px_rgba(0,0,0,0.6)] overflow-hidden">
         <div className="px-5 pt-10 pb-6">
           <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" className="h-[26px] w-auto object-contain opacity-90" />
         </div>
