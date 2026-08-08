@@ -370,26 +370,20 @@ export const projectData: Project[] = [
           heading: '创作中枢：参考添加调用',
           body: '通用视频创作支持添加多参考素材，添加后可通过三种方式调用：\n1. 点击参考缩略图 → 光标处自动展示参考标签\n2. 点击参考标签 → 拉起已添加参考浮层，选择后更新标签\n3. 输入 @ → 拉起参考浮层，选择后光标处展示参考标签',
           html: `<style>
-.lib-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:min(900px,100%);margin:0 auto}
-.lib-item{display:flex;flex-direction:column;align-items:center;gap:8px}
-.lib-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;max-width:180px;width:100%;margin:0 auto;overflow:hidden}
-.lib-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.lib-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
-.lib-placeholder img{width:100%;height:100%;object-fit:contain}
-@media(max-width:767px){.lib-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+.lr-label{font-size:12px;color:#A0A0A0;text-align:center}
 </style>
-<div class="lib-row">
-<div class="lib-item"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-none.png" alt="未添加参考" /></div><span class="cr-img-label">未添加参考</span></div>
-<div class="lib-item"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-unused.png" alt="未调用参考" /></div><span class="cr-img-label">未调用参考</span></div>
-<div class="lib-item"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-used.png" alt="已调用参考" /></div><span class="cr-img-label">已调用参考</span></div>
-<div class="lib-item"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-overlay.png" alt="已添加参考浮层" /></div><span class="cr-img-label">已添加参考浮层</span></div>
+<div class="lr-row">
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-none.png" alt="未添加参考" /></div><span class="lr-label">未添加参考</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-unused.png" alt="未调用参考" /></div><span class="lr-label">未调用参考</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-used.png" alt="已调用参考" /></div><span class="lr-label">已调用参考</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-overlay.png" alt="已添加参考浮层" /></div><span class="lr-label">已添加参考浮层</span></div>
 </div>`,
         },
         {
           heading: '台词改写：启发式交互设计',
           body: '重新改编影视经典片段中的台词是短视频平台上的经典玩法。我们为该玩法设计了一套启发式交互流程。用户可以通过以下方式改写台词：\n1. 点击视频原台词逐句改写或删除台词\n2. 点击「AI写台词」在弹出浮层中输入改编主题或方向，点击生成台词后，AI将自动生成改写台词\n3. 点击底部主题标签，AI将自动生成改写台词',
           html: `<style>
-.lr-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:min(900px,100%);margin:0 auto}
+.lr-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;max-width:min(900px,100%);margin:0 auto}
 .lr-item{display:flex;flex-direction:column;align-items:center;gap:8px}
 .lr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;overflow:hidden}
 .lr-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
@@ -402,7 +396,7 @@ export const projectData: Project[] = [
 .lr-play-circle img{width:22px!important;height:22px!important;opacity:0.6;transition:all 0.3s ease}
 .lr-video-overlay:hover .lr-play-circle img{opacity:0.9}
 .lr-label{font-size:12px;color:#A0A0A0;text-align:center}
-@media(max-width:767px){.lr-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+@media(max-width:767px){.lr-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
 </style>
 <div class="lr-row">
 <div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-original.png" alt="原始台词" /></div><span class="lr-label">原始台词</span></div>
@@ -420,7 +414,7 @@ export const projectData: Project[] = [
         {
           heading: '故事接龙：起点页方案探索',
           body: '',
-          html: `<p style="color:#A0A0A0;font-size:13px;line-height:1.6;letter-spacing:0.02em;text-align:left;margin:0 0 24px;font-weight:400">作为驱动粉丝共创的核心创意玩法，「故事接龙起点页」承担着世界观透传、轻量化创作引导、以及生态图谱透传的核心职责。面对复杂的故事线与剧情分支，在缺乏成熟行业参考的背景下，我们通过多轮脑洞大开的设计探索，力求将庞大的非线性叙事清晰、直观地呈现在用户面前。</p>
+          html: `<p style="color:#A0A0A0;font-size:13px;line-height:1.6;letter-spacing:0.02em;text-align:left;margin:0 0 24px;font-weight:400">作为驱动粉丝共创的核心创意玩法，「故事接龙起点页」承担着世界观透传、轻量化创作引导、以及生态图谱透传的核心职责。<br>面对复杂的故事线与剧情分支，在缺乏成熟行业参考的背景下，我们通过多轮脑洞大开的设计探索，力求将庞大的非线性叙事清晰、直观地呈现在用户面前。</p>
 <style>
 .sk-wrapper{display:flex;gap:16px;justify-content:center;max-width:100%;flex-wrap:wrap}
 .sk-group{flex-shrink:0}
@@ -436,13 +430,31 @@ export const projectData: Project[] = [
 .sk-placeholder img{width:100%;height:100%;object-fit:contain}
 .sk-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .sk-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
-.sk-label{font-size:12px;color:#a1a1aa;text-align:center}
 @media(max-width:767px){.sk-row{gap:10px}}
 </style>
 <div class="sk-wrapper">
-<div class="sk-group"><div class="sk-group-title">方向 A</div><div class="sk-row"><div class="sk-item"><div class="sk-placeholder"><span>截图 1</span></div><span class="sk-label">方案 1</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">方向 B</div><div class="sk-row"><div class="sk-item"><div class="sk-placeholder"><span>截图 2</span></div><span class="sk-label">方案 2</span></div><div class="sk-item"><div class="sk-placeholder"><span>截图 3</span></div><span class="sk-label">方案 3</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">方向 C</div><div class="sk-row"><div class="sk-item"><div class="sk-placeholder"><span>截图 4</span></div><span class="sk-label">方案 4</span></div><div class="sk-item"><div class="sk-placeholder"><span>截图 5</span></div><span class="sk-label">方案 5</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 A</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">初始方案</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 B</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">方案 B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">展开地图</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 C</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">方案 C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">展开地图</span></div></div></div>
+</div>`,
+        },
+        {
+          heading: '故事接龙：最终方案确定',
+          body: '',
+          html: `<style>
+.lr-video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);cursor:pointer;transition:all 0.3s ease}
+.lr-video-overlay:hover{background:rgba(0,0,0,0.15)}
+.lr-play-circle{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;transition:all 0.3s ease}
+.lr-video-overlay:hover .lr-play-circle{background:rgba(255,255,255,0.35);transform:scale(1.08)}
+.lr-play-circle img{width:22px!important;height:22px!important;opacity:0.6;transition:all 0.3s ease}
+.lr-video-overlay:hover .lr-play-circle img{opacity:0.9}
+.lr-label{font-size:12px;color:#A0A0A0;text-align:center}
+</style>
+<div class="lr-row">
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/sk-final-start.png" alt="起点页" /></div><span class="lr-label">起点页</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/sk-final-ending.png" alt="大结局预览" /></div><span class="lr-label">大结局预览</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/sk-final-create.png" alt="接龙创作页" /></div><span class="lr-label">接龙创作页</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="/birdys-portfolio/images/sk-final-player.png"><source src="/birdys-portfolio/videos/story-demo.mov" type="video/quicktime" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="/birdys-portfolio/images/play-btn.png" alt="播放" /></span></div></div><span class="lr-label">接龙播放器</span></div>
 </div>`,
         },
         {

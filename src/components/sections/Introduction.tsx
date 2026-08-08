@@ -95,7 +95,7 @@ function SplitRevealCard({ section }: { section: BioSection }) {
         <h4 className="text-zinc-200 font-semibold mb-2 tracking-wide flex items-center gap-2" style={{ fontSize: '16px' }}>
           <span className="font-mono tracking-[0.05em]" style={{ color: '#ccff00', fontSize: '14px' }}>{section.tag}</span> {section.heading}
         </h4>
-        <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
+        <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-normal">
           {section.body}
         </p>
       </div>
@@ -197,8 +197,8 @@ export default function Introduction() {
     >
       <motion.div
         className="fixed inset-0 z-0 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50 overflow-hidden"
-        initial={{ opacity: 0, scale: 1.08, y: '6%', rotate: 1.2 }}
-        animate={{ opacity: 0.22, scale: 0.85, y: '0%', rotate: 0 }}
+        initial={{ opacity: 0, scale: 1.2, y: '6%', rotate: 1.2 }}
+        animate={{ opacity: 0.22, scale: 1.05, y: '0%', rotate: 0 }}
         transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
         style={{ transformOrigin: 'center top' }}
       >

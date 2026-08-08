@@ -59,19 +59,19 @@ export default function WorkExperience() {
                 ref={setRef}
                 onClick={() => setActive(i)}
                 data-cursor-interactive
-                className={`cursor-pointer flex-shrink-0 min-w-[110px] px-3 py-2 text-center transition-all duration-300 ${
+                className={`cursor-pointer flex-shrink-0 min-w-[180px] px-4 py-2 text-center transition-all duration-300 ${
                   isActive
                     ? 'opacity-100 bg-[#C7FF00]/[0.06] border-b-[3px] border-[#C7FF00]'
                     : 'opacity-60 border-b-[3px] border-transparent bg-white/[0.02]'
                 }`}
               >
-                <span className={`font-mono block text-[10px] ${isActive ? 'text-[#C7FF00] font-bold' : 'text-[#8a8a8a]'}`}>
+                <span className={`font-mono block text-[11px] ${isActive ? 'text-[#C7FF00] font-bold' : 'text-[#8a8a8a]'}`}>
                   {t}
                 </span>
-                <span className={`block truncate text-xs mt-0.5 ${isActive ? 'text-[#C7FF00] font-bold' : 'text-white'}`}>
+                <span className={`block truncate text-sm mt-0.5 ${isActive ? 'text-[#C7FF00] font-bold' : 'text-white'}`}>
                   {item.company}
                 </span>
-                <span className={`block truncate text-[13px] mt-0.5 ${isActive ? 'text-[#a0a0a0]' : 'text-[#8a8a8a]'}`}>
+                <span className={`block truncate text-[11px] mt-0.5 ${isActive ? 'text-[#a0a0a0]' : 'text-[#8a8a8a]'}`}>
                   {item.role}
                 </span>
               </div>
@@ -87,7 +87,7 @@ export default function WorkExperience() {
                 )}
                 <ul className="space-y-1.5">
                   {group.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2 text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
+                    <li key={j} className="flex items-start gap-2 text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-normal">
                       <span className="text-[#C7FF00] mt-[6px] opacity-60 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#8a8a8a]" />
                       <span>{item}</span>
                     </li>
@@ -138,7 +138,7 @@ export default function WorkExperience() {
                 )}
                 <ul className="space-y-1.5">
                   {group.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2.5 text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light">
+                    <li key={j} className="flex items-start gap-2.5 text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-normal">
                       <span className="text-[#C7FF00] mt-[7px] opacity-60 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#8a8a8a]" />
                       <span>{item}</span>
                     </li>

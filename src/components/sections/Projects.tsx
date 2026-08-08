@@ -183,7 +183,7 @@ export default function Projects() {
                           {project.detail.subtitle}
                         </p>
                       )}
-                      <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-light mb-0">
+                      <p className="text-[#A0A0A0] text-[13px] leading-[1.6] tracking-[0.02em] font-normal mb-0">
                         {project.description}
                       </p>
 
