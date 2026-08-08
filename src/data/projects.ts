@@ -442,7 +442,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '故事接龙：最终方案确定',
-          body: '',
+          body: '经过多轮方案探索，我们最终选择精简起点页的信息层级：用列表清晰呈现主线故事，将支线剧情收纳进接龙播放器的选集列表，降低首屏认知负担。用户参与接龙的完整路径如下：\n1. 起点页 → 点击「去接龙」→ 进入大结局预览\n2. 大结局预览 → 点击「开启故事线」→ 拉起创作页，开始编写新剧情\n3. 起点页故事线列表 → 点击任意故事线 → 进入接龙播放器\n4. 接龙播放器 → 打开选集列表 → 浏览并切换支线剧情\n5. 播放器中点击「接龙」→ 拉起创作页，基于当前剧情继续创作',
           html: `<style>
 .lr-video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);cursor:pointer;transition:all 0.3s ease}
 .lr-video-overlay:hover{background:rgba(0,0,0,0.15)}
