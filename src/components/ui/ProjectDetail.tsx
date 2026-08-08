@@ -196,9 +196,9 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
               <p className="text-[18px] md:text-[24px] text-white font-bold tracking-tight line-clamp-2 md:truncate max-w-[88%] md:max-w-[65%]">
                 {activeIndex > 0 ? sections[activeIndex]?.heading : (
                   <span className="flex items-center gap-2">
-                    <img src={import.meta.env.BASE_URL + (project.id === 'project-3' ? 'images/吃鲸.webp' : project.id === 'project-2' ? 'images/爱奇艺.webp' : 'images/爱奇艺Pad.webp')} alt="" className="w-7 h-7 rounded-md object-cover" />
-                    {project.title}
-                    {project.detail.subtitle && <span className="text-zinc-500 font-normal"> &nbsp;|&nbsp; {project.detail.subtitle}</span>}
+                    <img src={import.meta.env.BASE_URL + (project!.id === 'project-3' ? 'images/吃鲸.webp' : project!.id === 'project-2' ? 'images/爱奇艺.webp' : 'images/爱奇艺Pad.webp')} alt="" className="w-7 h-7 rounded-md object-cover" />
+                    {project!.title}
+                    {project!.detail.subtitle && <span className="text-zinc-500 font-normal"> &nbsp;|&nbsp; {project!.detail.subtitle}</span>}
                   </span>
                 )}
               </p>
@@ -280,19 +280,19 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden opacity-90">
                                 <img
                                   src={import.meta.env.BASE_URL + (
-                                    project.id === 'project-2' ? 'images/爱奇艺.webp' :
+                                    project!.id === 'project-2' ? 'images/爱奇艺.webp' :
                                     'images/爱奇艺Pad.webp'
                                   )}
                                   alt=""
                                   className="w-full h-full object-cover"
                                 />
                               </div>
-                              <span>{project.title}{project.detail.mainTitle && <span className="text-zinc-500 font-normal"> · {project.detail.mainTitle}</span>}</span>
+                              <span>{project!.title}{project!.detail.mainTitle && <span className="text-zinc-500 font-normal"> · {project!.detail.mainTitle}</span>}</span>
                             </h2>
                             )}
                             {false && (
                             <p className="text-base md:text-lg text-[#d4d4d8] font-normal mb-3">
-                              {project.detail.subtitle}
+                              {project!.detail.subtitle}
                             </p>
                             )}
                             {false && <div className="w-12 h-px bg-zinc-700 mb-4" />}
@@ -308,9 +308,9 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                             )}
                           </div>
                           {false && <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
-                            {project.techStack.map((tag, idx) => (
+                            {project!.techStack.map((tag, idx) => (
                               <span key={tag}>
-                                {tag}{idx < project.techStack.length - 1 ? <span className="text-[#52525b]"> &nbsp;/&nbsp; </span> : ''}
+                                {tag}{idx < project!.techStack.length - 1 ? <span className="text-[#52525b]"> &nbsp;/&nbsp; </span> : ''}
                               </span>
                             ))}
                           </div>}

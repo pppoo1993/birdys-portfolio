@@ -5,6 +5,7 @@ import { useActiveSection } from '../../hooks/useActiveSection'
 import { useScrollTo } from '../../hooks/useScrollTo'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
+// @ts-expect-error unused but kept for future
 function NavEasterEgg() {
   const [phase, setPhase] = useState<'idle' | 'flap' | 'fly'>('idle')
   const [particles, setParticles] = useState<{ id: number; x: number; y: number }[]>([])
