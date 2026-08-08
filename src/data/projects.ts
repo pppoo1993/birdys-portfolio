@@ -21,7 +21,7 @@ export const projectData: Project[] = [
 .toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%;max-width:1080px;margin:0 auto}
 .toc-col{display:flex;flex-direction:column}
 .toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.5);margin-bottom:8px;letter-spacing:-1px;font-family:var(--font-mono,monospace)}
-.toc-card{background:rgba(20,20,22,0.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:240px;box-sizing:border-box;cursor:pointer}
+.toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:240px;box-sizing:border-box;cursor:pointer;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.toc-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .toc-card-title{font-size:15px;font-weight:500;color:#C7FF00;line-height:1.4;margin-bottom:20px}
 .toc-card-pages{display:flex;flex-direction:column;gap:8px}
 .toc-card-pages.sm{gap:6px}
@@ -44,12 +44,12 @@ export const projectData: Project[] = [
           heading: '缘起：长视频平台的生态自救',
           body: '在2025中旬，我接到组内任务，要为爱奇艺内部AI视频应用准备前期探索材料。作为被临时任命的设计owner，我需要站在公司的角度来思考爱奇艺为什么选择 AI 视频赛道。\n爱奇艺切入 AI 视频，本质上是一场<b>「生产端降本 & 流量端防御」</b>的生态自救。爱奇艺试图抓住时代基于用 AI 视频作为武器来破解长视频行业发展的三个瓶颈。',
                     html: `<style>
-.ba-section{display:flex;flex-direction:column;gap:16px;margin:0 auto}
+.ba-section{display:flex;flex-direction:column;gap:16px;margin:0 auto;max-width:1080px}
 .ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:12px}
 .ba-header{color:#FFFFFF;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;padding-bottom:10px;position:relative}
 .ba-header::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .ba-header::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:100%}
 .ba-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
 .ba-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .ba-card .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:2px;font-family:monospace;letter-spacing:.04em;font-weight:600;margin:0 6px 0 0;vertical-align:middle;background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
@@ -121,7 +121,7 @@ export const projectData: Project[] = [
           body: '基于 SWOT 分析，我们发现若单纯复刻"专业AI视频创作工具"的模式，不仅无法解决巨额算力成本与 ARPU 的结构矛盾，更将陷入长视频用户对"被动娱乐"与"主动创作"之间的认知内耗。因此，我们确立了从"工具范式"转向"社区范式"的战略重构——不再通过技术硬拼获取用户，而是通过互动降低创作门槛。',
           html: `<style>
 .pos-highlight{color:#C7FF00;font-size:16px;font-weight:700;line-height:1.6;margin:8px 0 32px;text-align:center}
-.circle-row{display:flex;align-items:flex-start;justify-content:center;gap:0}
+.circle-row{display:flex;align-items:flex-start;justify-content:center;gap:0;max-width:1080px;margin:0 auto}
 .circle-col{display:flex;flex-direction:column;align-items:center;flex:1;max-width:220px}
 .circle-node{width:120px;height:120px;border-radius:50%;border:1px solid rgba(255,255,255,0.08);background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
 .circle-node:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
@@ -143,7 +143,7 @@ export const projectData: Project[] = [
         {
           heading: '体验架构设计：AI创作的底层逻辑',
           body: '基于<b>「以消带产」</b>的核心策略，我们将产品架构解构为三层协同逻辑，旨在通过对第三方底层模型的场景化精调，在优化研发成本的同时，最大化保障影视 IP 的生成品质。',
-          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:16px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px 0}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important;gap:16px}.arch-row .arch-card{flex-direction:row!important}.arch-arrow{display:none!important}}</style>
+          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:16px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px auto;max-width:1080px}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important;gap:16px}.arch-row .arch-card{flex-direction:row!important}.arch-arrow{display:none!important}}</style>
 <div class="arch-row">
 <div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">生态输入层</h4>
@@ -224,8 +224,8 @@ export const projectData: Project[] = [
           heading: '产品框架：以消带产，影视素材赋能创作',
           body: '我们在消费场景的末端无缝衔接创作触发点，将用户的观看行为转化为生产动力，打通「以消带产」的转化链路。并通过多元素材库为创作减负，其中核心打造的"影视创意玩法"与"爱奇艺影视库"构成了产品的核心护城河。',
           html: `<style>
-.arch-flow{display:flex;flex-direction:column;align-items:center;gap:30px}
-.arch-flow-row{display:flex;align-items:center;justify-content:center;gap:20px;width:100%}
+.arch-flow{display:flex;flex-direction:column;align-items:center;gap:30px;max-width:1080px;margin:0 auto}
+.arch-flow-row{display:flex;align-items:center;justify-content:center;gap:20px;width:100%;max-width:1080px;margin:0 auto}
 .arch-col{flex:1;min-width:0;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
 .arch-col:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .arch-col-label{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 14px}
@@ -264,9 +264,9 @@ export const projectData: Project[] = [
 .dist-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .dist-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .dist-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-.dist-img-row{display:flex;gap:22px}
+.dist-img-row{display:flex;gap:16px;flex-wrap:nowrap;overflow:hidden}
 @media(max-width:767px){.dist-row{flex-direction:column!important}.dist-col{width:100%!important}}
-.dist-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
+.dist-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;overflow:hidden}
 .dist-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .dist-img-wrap{display:flex;flex-direction:column;align-items:center}
 .dist-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
@@ -302,8 +302,8 @@ export const projectData: Project[] = [
 .cr-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .cr-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .cr-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-.cr-img-row{display:flex;gap:22px}
-.cr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
+.cr-img-row{display:flex;gap:16px;flex-wrap:nowrap;overflow:hidden}
+.cr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;overflow:hidden}
 .cr-img-wrap{display:flex;flex-direction:column;align-items:center}
 .cr-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
 .cr-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
@@ -337,8 +337,8 @@ export const projectData: Project[] = [
 .m-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .m-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .m-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.m-img-row{display:flex;gap:22px}
-.m-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:150px;flex-shrink:0}
+.m-img-row{display:flex;gap:16px;flex-wrap:nowrap;overflow:hidden}
+.m-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:150px;overflow:hidden}
 .m-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .m-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
 @media(max-width:767px){.m-split{flex-direction:column!important}.m-col{width:100%!important}}
@@ -370,13 +370,13 @@ export const projectData: Project[] = [
           heading: '创作中枢：参考添加调用',
           body: '通用视频创作支持添加多参考素材，添加后可通过三种方式调用：\n1. 点击参考缩略图 → 光标处自动展示参考标签\n2. 点击参考标签 → 拉起已添加参考浮层，选择后更新标签\n3. 输入 @ → 拉起参考浮层，选择后光标处展示参考标签',
           html: `<style>
-.lib-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:0 auto}
+.lib-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:min(900px,100%);margin:0 auto}
 .lib-item{display:flex;flex-direction:column;align-items:center;gap:8px}
-.lib-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0;margin:0 auto}
+.lib-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;max-width:180px;width:100%;margin:0 auto;overflow:hidden}
 .lib-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .lib-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
 .lib-placeholder img{width:100%;height:100%;object-fit:contain}
-@media(max-width:767px){.lib-row{grid-template-columns:repeat(2,1fr);gap:18px}}
+@media(max-width:767px){.lib-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
 </style>
 <div class="lib-row">
 <div class="lib-item"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-none.png" alt="未添加参考" /></div><span class="cr-img-label">未添加参考</span></div>
@@ -389,9 +389,9 @@ export const projectData: Project[] = [
           heading: '台词改写：启发式交互设计',
           body: '重新改编影视经典片段中的台词是短视频平台上的经典玩法。我们为该玩法设计了一套启发式交互流程。用户可以通过以下方式改写台词：\n1. 点击视频原台词逐句改写或删除台词\n2. 点击「AI写台词」在弹出浮层中输入改编主题或方向，点击生成台词后，AI将自动生成改写台词\n3. 点击底部主题标签，AI将自动生成改写台词',
           html: `<style>
-.lr-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:0 auto}
+.lr-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:min(900px,100%);margin:0 auto}
 .lr-item{display:flex;flex-direction:column;align-items:center;gap:8px}
-.lr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
+.lr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;overflow:hidden}
 .lr-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .lr-placeholder img{width:100%;height:100%;object-fit:contain}
 .lr-placeholder video{width:100%;height:100%;object-fit:contain}
@@ -402,7 +402,7 @@ export const projectData: Project[] = [
 .lr-play-circle img{width:22px!important;height:22px!important;opacity:0.6;transition:all 0.3s ease}
 .lr-video-overlay:hover .lr-play-circle img{opacity:0.9}
 .lr-label{font-size:12px;color:#A0A0A0;text-align:center}
-@media(max-width:767px){.lr-row{grid-template-columns:repeat(2,1fr);gap:18px}}
+@media(max-width:767px){.lr-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
 </style>
 <div class="lr-row">
 <div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-original.png" alt="原始台词" /></div><span class="lr-label">原始台词</span></div>
@@ -415,15 +415,43 @@ export const projectData: Project[] = [
           heading: '故事接龙：AI视频链式共创',
           body: '',
           html: `<p style="color:#A0A0A0;font-size:13px;line-height:1.6;letter-spacing:0.02em;text-align:left;margin:0 0 20px;font-weight:400">打破传统 UGC「发布即终点」的静态模式，我们创造了「故事接龙」玩法。将创作起点设在大热影视剧「结局之后」的空白叙事区，让故事可以无限延伸。<br>用户可以一边观看剧情，一边随时插入自己的改写，每个灵感都能接续前文、成为新故事的起点。通过这种「接力式」共创，零散的创意最终汇聚成不断生长的社区叙事。</p>
-<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.png" alt="故事接龙" style="max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div></div>`,
+<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.png" alt="故事接龙" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#a1a1aa;font-size:12px;margin-top:8px">故事接龙逻辑示意</p></div>`,
+        },
+        {
+          heading: '故事接龙：起点页方案探索',
+          body: '',
+          html: `<p style="color:#A0A0A0;font-size:13px;line-height:1.6;letter-spacing:0.02em;text-align:left;margin:0 0 24px;font-weight:400">作为驱动粉丝共创的核心创意玩法，「故事接龙起点页」承担着世界观透传、轻量化创作引导、以及生态图谱透传的核心职责。面对复杂的故事线与剧情分支，在缺乏成熟行业参考的背景下，我们通过多轮脑洞大开的设计探索，力求将庞大的非线性叙事清晰、直观地呈现在用户面前。</p>
+<style>
+.sk-wrapper{display:flex;gap:16px;justify-content:center;max-width:100%;flex-wrap:wrap}
+.sk-group{flex-shrink:0}
+.sk-row{display:flex;gap:12px;flex-wrap:nowrap}
+.sk-item{width:150px;flex-shrink:0}
+.sk-placeholder{width:100%;max-width:150px;aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+@media(max-width:767px){.sk-wrapper{flex-direction:column;align-items:center;gap:24px}.sk-group{flex:none;width:100%}.sk-row{gap:3%}.sk-item{width:auto;flex:1 1 0;min-width:0}.sk-placeholder{width:100%}}
+.sk-group-title{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sk-group-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.sk-row{display:flex;gap:22px;flex-wrap:wrap}
+.sk-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+
+.sk-placeholder img{width:100%;height:100%;object-fit:contain}
+.sk-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.sk-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
+.sk-label{font-size:12px;color:#a1a1aa;text-align:center}
+@media(max-width:767px){.sk-row{gap:10px}}
+</style>
+<div class="sk-wrapper">
+<div class="sk-group"><div class="sk-group-title">方向 A</div><div class="sk-row"><div class="sk-item"><div class="sk-placeholder"><span>截图 1</span></div><span class="sk-label">方案 1</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 B</div><div class="sk-row"><div class="sk-item"><div class="sk-placeholder"><span>截图 2</span></div><span class="sk-label">方案 2</span></div><div class="sk-item"><div class="sk-placeholder"><span>截图 3</span></div><span class="sk-label">方案 3</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 C</div><div class="sk-row"><div class="sk-item"><div class="sk-placeholder"><span>截图 4</span></div><span class="sk-label">方案 4</span></div><div class="sk-item"><div class="sk-placeholder"><span>截图 5</span></div><span class="sk-label">方案 5</span></div></div></div>
+</div>`,
         },
         {
           heading: '沉淀：当潮水退去，留下的交互资产',
           body: '',
           html: `<style>
-.sd-intro{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 32px;font-weight:400}
+.sd-intro{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 auto 32px;font-weight:400;max-width:1080px}
 .sd-intro b{color:#FFFFFF;font-weight:600}
-.sd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.sd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 auto 32px;max-width:1080px}
 .sd-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
 .sd-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .sd-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
@@ -432,7 +460,7 @@ export const projectData: Project[] = [
 .sd-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;line-height:1.4;position:relative}.sd-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.sd-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .sd-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .sd-card-desc b{color:#FFFFFF;font-weight:600}
-.sd-closing{margin-top:32px;background:linear-gradient(135deg,rgba(199,255,0,.02) 0%,rgba(199,255,0,.005) 100%);border:1px solid rgba(199,255,0,.08);border-left:3px solid #C7FF00;border-radius:4px;padding:24px 28px}
+.sd-closing{margin:32px auto 0;max-width:1080px;background:linear-gradient(135deg,rgba(199,255,0,.02) 0%,rgba(199,255,0,.005) 100%);border:1px solid rgba(199,255,0,.08);border-left:3px solid #C7FF00;border-radius:4px;padding:24px 28px}
 .sd-closing-label{font-family:monospace;font-size:11px;color:#C7FF00;letter-spacing:0.08em;margin-bottom:10px;display:block;font-weight:600}
 .sd-closing p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0;font-weight:400}
 .sd-closing p b{color:#FFFFFF;font-weight:600}
@@ -495,7 +523,7 @@ export const projectData: Project[] = [
 .hl-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 1.5rem;font-weight:400;letter-spacing:0.01em}
 .hl-p b{color:#FFFFFF;font-weight:600}
 .hl-p:last-child{margin-bottom:0}
-.model-timeline{display:flex;flex-direction:column;position:relative;margin-top:8px}
+.model-timeline{display:flex;flex-direction:column;position:relative;margin-top:8px;max-width:100%}
 .model-node{position:relative;padding-bottom:24px}
 .model-node:last-child{padding-bottom:0}
 .model-node-line{position:absolute;left:7px;top:16px;bottom:0;width:1px;background:#222226}
@@ -505,7 +533,7 @@ export const projectData: Project[] = [
 .model-node-desc{font-size:13px;color:#A0A0A0;line-height:1.75;margin:0}
 .val-dim-branch{display:flex;gap:0;margin-top:20px}
 .val-dim-branch-body{flex:1;min-width:0}
-.val-dim-cards{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
+.val-dim-cards{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;max-width:100%}
 .val-dim-card{flex:1;min-width:150px;padding:22px;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;display:flex;flex-direction:column;justify-content:flex-start;transition:all .35s cubic-bezier(0.16,1,0.3,1)}
 .val-dim-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .val-dim-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
@@ -639,7 +667,7 @@ export const projectData: Project[] = [
 .tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:400}
 .tx-p b{color:#FFFFFF;font-weight:600}
 /* 蓄水漏斗 */
-.funnel-row{display:flex;gap:32px;align-items:stretch;margin:28px 0}
+.funnel-row{display:flex;gap:32px;align-items:stretch;margin:28px 0;max-width:100%}
 .funnel-card{flex:1;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;display:flex;flex-direction:column}
 .funnel-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .funnel-card::after{content:attr(data-arrow);position:absolute;right:-24px;top:50%;transform:translateY(-50%);color:#555555;font-size:16px;font-weight:400;z-index:2}
@@ -676,7 +704,7 @@ export const projectData: Project[] = [
           heading: '播放页入口：动态链路触达',
           body: '',
           html: `<style>
-.entry-split{display:flex;gap:24px;align-items:flex-start;margin:28px 0}
+.entry-split{display:flex;gap:24px;align-items:flex-start;margin:28px 0;max-width:100%}
 .entry-left{flex:1;align-self:flex-start}
 .entry-left img{width:100%;display:block;border-radius:6px}
 .entry-right{width:250px;min-width:250px;max-width:250px;flex-shrink:0}
@@ -730,7 +758,7 @@ export const projectData: Project[] = [
           html: `<style>
 .tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:400}
 .tx-p b{color:#FFFFFF;font-weight:600}
-.entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:900px}
+.entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:1080px}
 .entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
 .entry-right{flex:0.8;display:flex;flex-direction:column;gap:16px;min-width:0}
 .entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168}
@@ -787,10 +815,10 @@ export const projectData: Project[] = [
 	.p9-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 	.p9-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 	.p9-col-desc b{color:#FFFFFF;font-weight:600}
-	.p9-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+	.p9-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:100%;max-width:180px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 	.p9-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 	.p9-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-	.p9-img-row{display:flex;gap:16px}.p9-img-row .p9-img{width:180px;flex-shrink:0}
+	.p9-img-row{display:flex;gap:16px}.p9-img-row .p9-img{width:100%;max-width:180px;overflow:hidden}
 	@media(max-width:767px){.p9-row{flex-direction:column!important}.p9-col,.p9-col.wide{width:100%!important}.p9-img{width:100%!important;max-width:180px}.p9-img-row .p9-img{width:100%!important;max-width:180px}}
 	</style>
 	<div class="p9-row">
@@ -852,10 +880,10 @@ export const projectData: Project[] = [
 .p11-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .p11-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .p11-col-desc b{color:#FFFFFF;font-weight:600}
-.p11-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:180px;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.p11-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:100%;max-width:180px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .p11-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 .p11-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-.p11-img-row{display:flex;gap:16px}.p11-img-row .p11-img{width:180px;flex-shrink:0}
+.p11-img-row{display:flex;gap:16px}.p11-img-row .p11-img{width:100%;max-width:180px;overflow:hidden}
 @media(max-width:767px){.p11-row{flex-direction:column!important}.p11-col{width:100%!important}.p11-img{width:100%!important;max-width:180px}.p11-img-row .p11-img{width:100%!important;max-width:180px}}
 </style>
 <div class="p11-row">

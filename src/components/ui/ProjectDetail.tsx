@@ -298,7 +298,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                             {false && <div className="w-12 h-px bg-zinc-700 mb-4" />}
                             {section.body && (
                               <div
-                                className="font-normal whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
+                                className="font-normal whitespace-pre-wrap mb-8 [&_b]:text-white [&_b]:font-semibold"
                                 style={{ color: '#A0A0A0', fontSize: '13px', lineHeight: '1.6', letterSpacing: '0.02em' }}
                                 dangerouslySetInnerHTML={{ __html: section.body }}
                               />
@@ -319,18 +319,20 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                       <>
                         {/* Page 0 intro (non-first-page variant not used for i===0) */}
 
-                        {/* Body */}
-                        {section.body && (
-                          <div
-                            className="font-normal whitespace-pre-wrap mb-5 [&_b]:text-white [&_b]:font-semibold"
-                            style={{ color: '#A0A0A0', fontSize: '13px', lineHeight: '1.6', letterSpacing: '0.02em' }}
-                            dangerouslySetInnerHTML={{ __html: section.body }}
-                          />
-                        )}
-
-                        {/* HTML content */}
-                        {section.html && (
-                          <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); const vid = el.querySelector('video'); if (vid) { setPreviewVideo(vid.querySelector('source')?.src || vid.src); setPreviewSrc(null); setPreviewHtml(null) } else if (img) { setPreviewSrc(img.src); setPreviewVideo(null) } else { setPreviewHtml(el.outerHTML); setPreviewVideo(null) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src); setPreviewVideo(null) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                        {/* Body + HTML wrapped together */}
+                        {(section.body || section.html) && (
+                          <div style={{ width: 'fit-content', maxWidth: '1080px', margin: '0 auto' }}>
+                            {section.body && (
+                              <div
+                                className="font-normal whitespace-pre-wrap mb-8 [&_b]:text-white [&_b]:font-semibold"
+                                style={{ color: '#A0A0A0', fontSize: '13px', lineHeight: '1.6', letterSpacing: '0.02em' }}
+                                dangerouslySetInnerHTML={{ __html: section.body }}
+                              />
+                            )}
+                            {section.html && (
+                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); const vid = el.querySelector('video'); if (vid) { setPreviewVideo(vid.querySelector('source')?.src || vid.src); setPreviewSrc(null); setPreviewHtml(null) } else if (img) { setPreviewSrc(img.src); setPreviewVideo(null) } else { setPreviewHtml(el.outerHTML); setPreviewVideo(null) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src); setPreviewVideo(null) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                            )}
+                          </div>
                         )}
                       </>
                     )}
