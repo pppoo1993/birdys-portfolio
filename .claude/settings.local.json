@@ -93,7 +93,8 @@
       "Bash(timeout 10 git ls-remote https://github.com/pppoo1993/birdys-portfolio.git HEAD)",
       "Bash(ipconfig getifaddr *)",
       "Bash(/usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate)",
-      "Bash(unzip -p /tmp/gh-logs.zip)"
+      "Bash(unzip -p /tmp/gh-logs.zip)",
+      "Bash(npm -v)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"
