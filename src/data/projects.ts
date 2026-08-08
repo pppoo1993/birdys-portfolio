@@ -18,26 +18,26 @@ export const projectData: Project[] = [
           heading: '目录',
           body: '',
           html: `<style>
-.toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%}
+.toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%;max-width:1080px;margin:0 auto}
 .toc-col{display:flex;flex-direction:column}
-.toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.15);margin-bottom:2px;font-family:monospace}
-.toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
-.toc-card:hover{border-color:rgba(255,255,255,0.1);background:rgba(26,26,30,0.9);transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(199,255,0,0.08),inset 0 1px 0 rgba(255,255,255,0.04)}
-.toc-card-title{font-size:14px;font-weight:600;color:#C7FF00;line-height:1.4}
-.toc-card-pages{font-size:13px;color:#A0A0A0;line-height:1.6;display:flex;flex-direction:column;gap:2px}
-.toc-page-row{display:flex;justify-content:space-between;align-items:baseline;padding:3px 8px;margin:0 -8px;border-radius:4px;transition:all 0.2s ease;cursor:pointer}
+.toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.5);margin-bottom:8px;letter-spacing:-1px;font-family:var(--font-mono,monospace)}
+.toc-card{background:rgba(20,20,22,0.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:240px;box-sizing:border-box;cursor:pointer}
+.toc-card-title{font-size:15px;font-weight:500;color:#C7FF00;line-height:1.4;margin-bottom:20px}
+.toc-card-pages{display:flex;flex-direction:column;gap:8px}
+.toc-card-pages.sm{gap:6px}
+.toc-page-row{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;padding:3px 8px;margin:0 -8px;border-radius:4px;transition:all 0.2s ease;cursor:pointer}
 .toc-page-row:hover{background:rgba(255,255,255,0.04)}
-.toc-page-row:hover .toc-page-name{color:#FFFFFF}
-.toc-page-row:hover .toc-page-num{color:#C7FF00}
-.toc-page-name{color:#B0B0B0;font-size:13px;font-weight:400}
-.toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
-@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:160px;padding:18px}.toc-card-title{font-size:13px}}
+.toc-card-pages.sm .toc-page-row{font-size:12px}
+.toc-page-name{color:#a1a1aa;font-weight:400}
+.toc-page-num{color:#71717a;font-family:monospace;flex-shrink:0;margin-left:12px}
+.toc-card-tag{font-size:11px;color:#52525b;font-family:monospace;margin-top:8px}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:200px;padding:18px}.toc-card-title{font-size:13px}}
 </style>
 <div class="toc-grid">
-<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">项目背景</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">缘起</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">挑战与破局</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">定位重塑</span><span class="toc-page-num">P04</span></div></div></div></div>
-<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><p class="toc-card-title">架构与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="4"><span class="toc-page-name">体验架构设计</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">用户旅程</span><span class="toc-page-num">P06</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">产品框架</span><span class="toc-page-num">P07</span></div></div></div></div>
-<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="7"><p class="toc-card-title">交互呈现</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">分发层</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">创作层</span><span class="toc-page-num">P09</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">台词改写</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">换台词</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="13"><span class="toc-page-name">故事接龙</span><span class="toc-page-num">P12</span></div></div></div></div>
-<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="14"><p class="toc-card-title">沉淀与思考</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="14"><span class="toc-page-name">留下的交互资产</span><span class="toc-page-num">P13</span></div></div></div></div>
+<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">项目背景</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">缘起</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">挑战与破局</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">定位重塑</span><span class="toc-page-num">P04</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><div><p class="toc-card-title">架构与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="4"><span class="toc-page-name">体验架构设计</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">用户旅程</span><span class="toc-page-num">P06</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">产品框架</span><span class="toc-page-num">P07</span></div></div></div><span class="toc-card-tag">/ Architecture</span></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="7"><div><p class="toc-card-title" style="margin-bottom:16px">交互呈现</p><div class="toc-card-pages sm"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">以消带产</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="9"><span class="toc-page-name">创作中枢</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">台词改写</span><span class="toc-page-num">P12</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">故事接龙</span><span class="toc-page-num">P13</span></div></div></div><span class="toc-card-tag">/ Interaction</span></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="13"><div><p class="toc-card-title">沉淀与思考</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="13"><span class="toc-page-name">沉淀资产</span><span class="toc-page-num">P14</span></div></div></div><span class="toc-card-tag">/ Reflection</span></div></div>
 </div>`,
         },
         {
@@ -255,7 +255,7 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '以消费带动创作',
+          heading: '以消带产：核心内容分发页',
           body: '首页以双列瀑布流承载AI创作内容，让用户进场即感知"能玩、能互动"的社区氛围。同时提供海量影视二创相关模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。',
           html: `<style>
 .dist-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
@@ -293,7 +293,7 @@ export const projectData: Project[] = [
 `,
         },
         {
-          heading: '通用创作与影视创意玩法',
+          heading: '以消带产：核心视频创作页',
           body: '通用视频创作是平台的基础能力，承接用户日常创作需求。影视创意玩法则是吃鲸AI的核心亮点——我们调研了热播剧的二创生态后，归纳出初期三个核心方向：<b>画风转换</b>、<b>换台词</b>、<b>故事接龙</b>。',
           html: `<style>
 .cr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
@@ -329,7 +329,7 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '素材库：AI视频创作中枢',
+          heading: '创作中枢：影视片段库搭建',
           body: '我们将素材库打包为通用模组，支持爱奇艺<b>官方影视片段</b>、<b>本地图片/视频</b>、<b>已创作视频</b>三种素材类型，方便在不同AI视频玩法中按需随时调取。\n<b>影视片段库</b>作为吃鲸AI的核心创作中枢，针对不同玩法进行了精选，并计划不断扩充。',
           html: `<style>
 .m-split{display:flex;gap:48px;align-items:flex-start;margin:0;width:fit-content;max-width:100%}
@@ -367,19 +367,22 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '通用视频创作中的素材调用',
+          heading: '创作中枢：参考添加调用',
           body: '通用视频创作支持添加多参考素材，添加后可通过三种方式调用：\n1. 点击参考缩略图 → 光标处自动展示参考标签\n2. 点击参考标签 → 拉起已添加参考浮层，选择后更新标签\n3. 输入 @ → 拉起参考浮层，选择后光标处展示参考标签',
           html: `<style>
-.lib-row{display:flex;justify-content:center;gap:32px;max-width:780px;margin:0 auto;flex-wrap:wrap}
+.lib-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:0 auto}
+.lib-item{display:flex;flex-direction:column;align-items:center;gap:8px}
 .lib-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0;margin:0 auto}
 .lib-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .lib-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
-@media(max-width:767px){.lib-row{gap:18px}.cr-img-wrap{max-width:160px}}
+.lib-placeholder img{width:100%;height:100%;object-fit:contain}
+@media(max-width:767px){.lib-row{grid-template-columns:repeat(2,1fr);gap:18px}}
 </style>
 <div class="lib-row">
-<div class="cr-img-wrap"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-unused.png" alt="未调用参考" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">未调用参考</span></div>
-<div class="cr-img-wrap"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-used.png" alt="已调用参考" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">已调用参考</span></div>
-<div class="cr-img-wrap"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-overlay.png" alt="已添加参考浮层" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">已添加参考浮层</span></div>
+<div class="lib-item"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-none.png" alt="未添加参考" /></div><span class="cr-img-label">未添加参考</span></div>
+<div class="lib-item"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-unused.png" alt="未调用参考" /></div><span class="cr-img-label">未调用参考</span></div>
+<div class="lib-item"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-used.png" alt="已调用参考" /></div><span class="cr-img-label">已调用参考</span></div>
+<div class="lib-item"><div data-preview class="lib-placeholder"><img src="/birdys-portfolio/images/ref-overlay.png" alt="已添加参考浮层" /></div><span class="cr-img-label">已添加参考浮层</span></div>
 </div>`,
         },
         {
@@ -409,74 +412,10 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '故事接龙：影视衍生短剧共创生成',
+          heading: '故事接龙：AI视频链式共创',
           body: '',
-          html: ``,
-        },
-        {
-          heading: '策略四：轻量交互转化 — 换台词',
-          body: '以热门影视 IP 的经典名场面为载体，用户只需点击台词即可改写，将专业创作降维为碎片化趣味互动。',
-                    html: `<style>
-	.qt-chart{max-width:900px;margin:0 auto}
-	.qt-section-label{font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:14px;padding-left:11px;position:relative}.qt-section-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#C7FF00;border-radius:1px}
-	.qt-flow-row{display:flex;align-items:center;gap:28px;margin:0}
-	.qt-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
-	.qt-screen-box{width:100%;aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#A0A0A0;position:relative;overflow:hidden;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.qt-screen-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}.qt-node:hover .qt-screen-box{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-	.qt-node-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5}.qt-node-text b{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
-	.qt-operator{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px}
-	@media(max-width:767px){.qt-chart{max-width:100%}.qt-flow-row{flex-wrap:wrap;justify-content:center;gap:16px}.qt-node{flex:1 1 40%;min-width:140px}.qt-operator{display:none}.qt-screen-box{max-width:180px;margin:0 auto}}
-	</style>
-	<div class="qt-chart">
-	<div class="qt-section-label">交互范式：渐进式"换台词"创作流</div>
-	<div class="qt-flow-row">
-	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/01-original-scene.jpeg" alt="原始名场面界面" style="width:100%;height:100%;object-fit:contain" /></div><div class="qt-node-text"><b>即兴微调</b>点击台词直接编辑，降低创作心理门槛。</div></div>
-	<div class="qt-operator">→</div>
-	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/02-tags.jpeg" alt="场景化主题标签页" style="width:100%;height:100%;object-fit:contain" /></div><div class="qt-node-text"><b>场景化启发</b>点击标签，快速接入创作方向。</div></div>
-	<div class="qt-operator">→</div>
-	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/03-dialog.jpeg" alt="半浮层对话框" style="width:100%;height:100%;object-fit:contain" /></div><div class="qt-node-text"><b>AI 对话式扩展</b>自然语言生成，多版本方案沉淀。</div></div>
-	<div class="qt-operator">→</div>
-	<div class="qt-node"><div data-preview class="qt-screen-box"><img src="/birdys-portfolio/images/chijing/04-preview.jpeg" alt="新台词视频预览" style="width:100%;height:100%;object-fit:contain" /></div><div class="qt-node-text"><b>创作资产沉淀</b>每一次尝试都可见、可复用。</div></div>
-	</div>
-	</div>`,
-        },
-        {
-          heading: '策略四：轻量交互转化 — 故事接龙',
-          body: '在"换台词"基础上进一步深化——推出「故事接龙」玩法，通过「边看边写」将单点输出转化为链式共创，让普通观众在参与中自然过渡为创作者。',
-          html: `<style>
-.ds-sub{font-size:18px;font-weight:700;color:#FFFFFF;margin:2rem 0 8px;letter-spacing:0.02em}
-.ds-sub .num{font-family:monospace;font-size:15px;color:#C7FF00;margin-right:8px;font-weight:700}
-.ds-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:400}
-.ds-img-placeholder{background:linear-gradient(135deg,#121212 0%,#121212 100%);border:1px solid #333333;border-radius:4px;padding:48px 20px;text-align:center;margin:16px 0 24px;font-size:11px;color:#A0A0A0;font-family:system-ui,-apple-system,sans-serif;letter-spacing:0.05em;position:relative;overflow:hidden}.ds-img-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}.ds-img-placeholder::after{content:'🖼';display:block;font-size:24px;margin-bottom:12px;opacity:.3;filter:grayscale(1)}
-.progressive-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
-@media(max-width:767px){.progressive-steps{grid-template-columns:1fr!important}}
-.progressive-steps .ps-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:18px;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.progressive-steps .ps-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.progressive-steps .ps-card .ps-num{font-family:monospace;font-size:10px;color:#C7FF00;display:block;margin-bottom:8px}
-.progressive-steps .ps-card .ps-title{color:#FFFFFF;font-size:13px;font-weight:600;display:block;margin-bottom:4px}
-.progressive-steps .ps-card .ps-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:400}
-</style>
-<h5 style="color:#FFFFFF;font-size:13px;font-weight:600;margin:0 0 8px">📖 故事接龙</h5>
-<p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 8px;font-weight:400">为打破传统 UGC 内容发布即终点的「静态限制」，我们推出了「故事接龙」进阶玩法，通过将创作起点锚定在「结局之后」的空白叙事区，实现叙事的无限延伸。</p>
-<p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 20px;font-weight:400">在这里，用户既是剧情的消费者，通过浏览多条平行结局分支获取感官体验；也是剧情的重构者，可随时通过「改写节点」介入叙事。这种「边看边写」的交互机制，让每一段内容都成为叙事的动态节点，用户的碎片化灵感通过「接力式」共创汇聚成可持续生长的社区叙事资产，成功将单点输出转化为链式共创。</p>
-<div class="ds-img-placeholder">示意图：故事接龙叙事分支界面</div>
-
-<p class="ds-p" style="margin-top:24px">我们设计了一套「渐进式创作」交互模式，将 AI 能力自然嵌入用户的创作流中：</p>
-<div class="progressive-steps">
-  <div class="ps-card">
-    <span class="ps-num">01 即兴微调</span>
-    <span class="ps-title">点击即改</span>
-    <span class="ps-desc">用最直观的方式留住用户转瞬即逝的灵感</span>
-  </div>
-  <div class="ps-card">
-    <span class="ps-num">02 场景化启发</span>
-    <span class="ps-title">预设趣味标签</span>
-    <span class="ps-desc">当用户没灵感时，点击即可获得创作方向</span>
-  </div>
-  <div class="ps-card">
-    <span class="ps-num">03 AI 对话式扩展</span>
-    <span class="ps-title">自然语言驱动</span>
-    <span class="ps-desc">半浮层交互将复杂生成逻辑转化为简单对话，自动沉淀多版本方案</span>
-  </div>
-</div>`,
+          html: `<p style="color:#A0A0A0;font-size:13px;line-height:1.6;letter-spacing:0.02em;text-align:left;margin:0 0 20px;font-weight:400">打破传统 UGC「发布即终点」的静态模式，我们创造了「故事接龙」玩法。将创作起点设在大热影视剧「结局之后」的空白叙事区，让故事可以无限延伸。<br>用户可以一边观看剧情，一边随时插入自己的改写，每个灵感都能接续前文、成为新故事的起点。通过这种「接力式」共创，零散的创意最终汇聚成不断生长的社区叙事。</p>
+<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.png" alt="故事接龙" style="max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div></div>`,
         },
         {
           heading: '沉淀：当潮水退去，留下的交互资产',
@@ -533,14 +472,14 @@ export const projectData: Project[] = [
 .toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%}
 .toc-col{display:flex;flex-direction:column}
 .toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.15);margin-bottom:2px;font-family:monospace}
-.toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
+.toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:250px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
 .toc-card:hover{border-color:rgba(255,255,255,0.1);background:rgba(26,26,30,0.9);transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(199,255,0,0.08),inset 0 1px 0 rgba(255,255,255,0.04)}
 .toc-card-title{font-size:14px;font-weight:600;color:#C7FF00;line-height:1.4}
 .toc-card-pages{font-size:13px;color:#A0A0A0;line-height:1.6;display:flex;flex-direction:column;gap:2px}
 .toc-page-row{display:flex;justify-content:space-between;align-items:baseline}
 .toc-page-name{color:#B0B0B0;font-size:13px;font-weight:400}
 .toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
-@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:160px;padding:18px}.toc-card-title{font-size:13px}}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:200px;padding:18px}.toc-card-title{font-size:13px}}
 </style>
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">背景与策略</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">互动破局</span><span class="toc-page-num">P02</span></div><div class="toc-page-row"><span class="toc-page-name">目标拆解</span><span class="toc-page-num">P03</span></div></div></div></div>
@@ -1070,14 +1009,14 @@ export const projectData: Project[] = [
 .toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%}
 .toc-col{display:flex;flex-direction:column}
 .toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.15);margin-bottom:2px;font-family:monospace}
-.toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:200px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
+.toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:250px;box-sizing:border-box;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);cursor:pointer}
 .toc-card:hover{border-color:rgba(255,255,255,0.1);background:rgba(26,26,30,0.9);transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(199,255,0,0.08),inset 0 1px 0 rgba(255,255,255,0.04)}
 .toc-card-title{font-size:14px;font-weight:600;color:#C7FF00;line-height:1.4}
 .toc-card-pages{font-size:13px;color:#A0A0A0;line-height:1.6;display:flex;flex-direction:column;gap:2px}
 .toc-page-row{display:flex;justify-content:space-between;align-items:baseline}
 .toc-page-name{color:#B0B0B0;font-size:13px;font-weight:400}
 .toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
-@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:160px;padding:18px}.toc-card-title{font-size:13px}}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:200px;padding:18px}.toc-card-title{font-size:13px}}
 </style>
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">背景与定位</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">重构背景</span><span class="toc-page-num">P02</span></div><div class="toc-page-row"><span class="toc-page-name">Pad 端重定位</span><span class="toc-page-num">P03</span></div></div></div></div>
