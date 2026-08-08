@@ -321,7 +321,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
 
                         {/* Body + HTML wrapped together */}
                         {(section.body || section.html) && (
-                          <div style={{ width: 'fit-content', maxWidth: '1080px', margin: '0 auto' }}>
+                          <div style={{ maxWidth: '1080px', margin: '0 auto', width: '100%' }}>
                             {section.body && (
                               <div
                                 className="font-normal whitespace-pre-wrap mb-8 [&_b]:text-white [&_b]:font-semibold"

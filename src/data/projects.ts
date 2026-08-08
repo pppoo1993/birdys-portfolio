@@ -416,7 +416,7 @@ export const projectData: Project[] = [
           body: '',
           html: `<p style="color:#A0A0A0;font-size:13px;line-height:1.6;letter-spacing:0.02em;text-align:left;margin:0 0 24px;font-weight:400">作为驱动粉丝共创的核心创意玩法，「故事接龙起点页」承担着世界观透传、轻量化创作引导、以及生态图谱透传的核心职责。<br>面对复杂的故事线与剧情分支，在缺乏成熟行业参考的背景下，我们通过多轮脑洞大开的设计探索，力求将庞大的非线性叙事清晰、直观地呈现在用户面前。</p>
 <style>
-.sk-wrapper{display:flex;gap:16px;justify-content:center;max-width:100%;flex-wrap:wrap}
+.sk-wrapper{display:flex;gap:40px;justify-content:center;max-width:100%;flex-wrap:wrap}
 .sk-group{flex-shrink:0}
 .sk-row{display:flex;gap:12px;flex-wrap:nowrap}
 .sk-item{width:150px;flex-shrink:0}
@@ -424,8 +424,10 @@ export const projectData: Project[] = [
 @media(max-width:767px){.sk-wrapper{flex-direction:column;align-items:center;gap:24px}.sk-group{flex:none;width:100%}.sk-row{gap:3%}.sk-item{width:auto;flex:1 1 0;min-width:0}.sk-placeholder{width:100%}}
 .sk-group-title{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .sk-group-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.sk-group-desc{color:#A0A0A0;font-size:13px;line-height:1.6;margin:0 0 12px;font-weight:400}
 .sk-row{display:flex;gap:22px;flex-wrap:wrap}
 .sk-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+.sk-label{font-size:12px;color:#A0A0A0;text-align:center}
 
 .sk-placeholder img{width:100%;height:100%;object-fit:contain}
 .sk-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
@@ -433,9 +435,9 @@ export const projectData: Project[] = [
 @media(max-width:767px){.sk-row{gap:10px}}
 </style>
 <div class="sk-wrapper">
-<div class="sk-group"><div class="sk-group-title">方向 A</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">初始方案</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">方向 B</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">方案 B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">展开地图</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">方向 C</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">方案 C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">展开地图</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 A</div><p class="sk-group-desc">评论盖楼方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">起点页A</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 B</div><p class="sk-group-desc">平行宇宙方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">起点页B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">接龙宇宙</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 C</div><p class="sk-group-desc">线路图方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">起点页C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">接龙地图</span></div></div></div>
 </div>`,
         },
         {
