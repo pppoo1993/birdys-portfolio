@@ -5,14 +5,14 @@ export const projectData: Project[] = [
     id: 'project-3',
     title: '吃鲸AI',
     description:
-      '吃鲸AI 是爱奇艺孵化的 AI 视频互动社区。本项目旨在通过 AI 技术激活平台存量影视资产，构建从内容消费到生产共创的完整链路。',
+      '爱奇艺孵化的 AI 视频互动社区。以「以消带产」策略打通从观看到创作的链路，通过台词改写、故事接龙等轻量玩法激活影视 IP 资产。',
     imagePath: 'https://picsum.photos/seed/project3/1200/800',
-    techStack: ['0→1 产品架构', '独立设计 Owner', '影视 IP 激活'],
+    techStack: ['0→1 设计 Owner', '以消带产策略', 'AI 内容生态'],
     sourceUrl: 'https://github.com',
     detail: {
-      pageTitle: '吃鲸AI | AI视频消费与生成共创',
+      pageTitle: '吃鲸AI | AI 视频互动社区 · 从消费到共创',
       mainTitle: '',
-      subtitle: 'AI视频消费与生成共创',
+      subtitle: 'AI 视频互动社区 · 从消费到共创',
       sections: [
         {
           heading: '目录',
