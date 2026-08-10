@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* Prevent WeChat/WebView from auto-scaling font size */
+html {
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+body {
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+
 @theme {
   --color-bg-primary: #111111;
   --color-bg-secondary: #1a1a1a;

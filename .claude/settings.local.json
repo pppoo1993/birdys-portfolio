@@ -94,7 +94,9 @@
       "Bash(ipconfig getifaddr *)",
       "Bash(/usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate)",
       "Bash(unzip -p /tmp/gh-logs.zip)",
-      "Bash(npm -v)"
+      "Bash(npm -v)",
+      "Bash(git pull *)",
+      "Bash(git stash *)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"

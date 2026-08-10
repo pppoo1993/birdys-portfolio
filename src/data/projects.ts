@@ -31,7 +31,7 @@ export const projectData: Project[] = [
 .toc-page-name{color:#a1a1aa;font-weight:400}
 .toc-page-num{color:#71717a;font-family:monospace;flex-shrink:0;margin-left:12px}
 .toc-card-tag{font-size:11px;color:#52525b;font-family:monospace;margin-top:8px}
-@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:200px;padding:18px}.toc-card-title{font-size:13px}}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:230px;padding:18px}.toc-card-title{font-size:13px}}
 </style>
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">项目背景</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">缘起</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">挑战与破局</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">定位重塑</span><span class="toc-page-num">P04</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
@@ -47,21 +47,21 @@ export const projectData: Project[] = [
 .ba-section{display:flex;flex-direction:column;gap:16px;margin:0 auto;max-width:1080px}
 .ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:12px}
 .ba-header{color:#FFFFFF;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;padding-bottom:10px;position:relative}
-.ba-header::after{content:"";position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.ba-header::after{display:none}
 .ba-header::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:100%}
 .ba-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
 .ba-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.ba-card .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:2px;font-family:monospace;letter-spacing:.04em;font-weight:600;margin:0 6px 0 0;vertical-align:middle;background:rgba(255,255,255,.03);color:#A0A0A0;border:1px solid #333333}
+.ba-card .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:2px;font-family:monospace;letter-spacing:.04em;font-weight:600;margin:0 6px 0 0;vertical-align:middle;background:rgba(199,255,0,0.1);color:#C7FF00;border:1px solid rgba(199,255,0,0.2)}
 .ba-card .ititle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0;display:inline;vertical-align:middle}
 .ba-arrow-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.ba-arrow-row span{text-align:center;color:#52525b;font-size:16px}
 .ba-card .idesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:8px 0 0}
 .ba-card .idesc b{color:#FFFFFF;font-weight:600}
 @media(max-width:767px){.ba-row{grid-template-columns:1fr;gap:16px}.ba-header-row{display:none}.ba-arrow-row{display:none}.ba-desktop{display:none}.ba-mobile{display:flex;flex-direction:column;gap:20px}}@media(min-width:768px){.ba-mobile{display:none}}
 .ba-mobile-group{display:flex;flex-direction:column;gap:16px}
-.ba-mobile-label{color:#FFFFFF;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;padding-bottom:8px;border-bottom:1px solid #222226}
+.ba-mobile-label{color:#FFFFFF;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;padding-bottom:8px}
 .ba-mobile-label::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.ba-mobile-arrow{text-align:center;color:#52525b;font-size:14px;padding:2px 0}
+.ba-mobile-arrow{display:none}
 </style>
 <div class="ba-section">
 <div class="ba-desktop">
@@ -129,21 +129,21 @@ export const projectData: Project[] = [
 .circle-op{display:flex;align-items:center;justify-content:center;width:36px;height:120px;flex-shrink:0;color:#52525b;font-size:18px}
 .circle-sub{color:#FFFFFF;font-size:12px;font-weight:600;text-align:center;margin:12px 0 6px;width:100%}
 .circle-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:400;text-align:center;margin:0;width:100%}
-@media(max-width:767px){.circle-row{flex-wrap:wrap;gap:8px}.circle-col{flex:1 1 40%;min-width:100px;max-width:none}.circle-op{width:24px;height:90px}.circle-node{width:90px;height:90px}.circle-node span{font-size:12px}}
+@media(max-width:767px){.circle-row{flex-wrap:wrap;gap:8px;justify-content:center}.circle-col{flex:1 1 40%;min-width:100px;max-width:none}.circle-op{display:none}.circle-node{width:90px;height:90px}.circle-node span{font-size:12px}}
 </style>
 <p class="pos-highlight">构建低门槛、轻操作的消费型 AI 互动社区</p>
 <div class="circle-row">
 <div class="circle-col"><div class="circle-node"><span>身份重构</span></div><p class="circle-sub">从"被动观看者"到"生态共创者"</p><p class="circle-desc">引导用户从单一的"内容观众"转型为"生态共创者"，通过参与创作实现社区归属。</p></div>
-<div class="circle-op">→</div>
+<div class="circle-op" style="font-weight:700">+</div>
 <div class="circle-col"><div class="circle-node"><span>体验降维</span></div><p class="circle-sub">从"重度生产力"到"消费级互动"</p><p class="circle-desc">将复杂模型交互隐藏于播放场景，让 AI 创作如同刷视频般自然、无感。</p></div>
-<div class="circle-op">→</div>
+<div class="circle-op" style="font-weight:700">→</div>
 <div class="circle-col"><div class="circle-node"><span>价值闭环</span></div><p class="circle-sub">从"单向播放"到"IP 增值循环"</p><p class="circle-desc">打通消费、创作与传播循环，使 AI 二创成为激活影视 IP 版权价值的增值引擎。</p></div>
 </div>`,
         },
         {
           heading: '体验架构设计：AI创作的底层逻辑',
           body: '基于<b>「以消带产」</b>的核心策略，我们将产品架构解构为三层协同逻辑，旨在通过对第三方底层模型的场景化精调，在优化研发成本的同时，最大化保障影视 IP 的生成品质。',
-          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:16px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px auto;max-width:1080px}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important;gap:16px}.arch-row .arch-card{flex-direction:row!important}.arch-arrow{display:none!important}}</style>
+          html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:16px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px auto;max-width:1080px}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important;gap:16px}.arch-row .arch-card{flex-direction:row!important}.arch-row .arch-arrow{display:none!important}}</style>
 <div class="arch-row">
 <div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">生态输入层</h4>
@@ -181,7 +181,7 @@ export const projectData: Project[] = [
 .jm-table .strat .st.w{color:#FFFFFF!important}
 .jm-table tr:last-child td{border-bottom:none}
 .jm-mobile{display:none}
-@media(max-width:767px){.jm-table{display:none!important}.jm-mobile{display:flex;flex-direction:column;gap:24px}.jm-mobile-col{border-left:1px solid #222226;padding-left:22px}.jm-mobile-col-header{font-size:14px;font-weight:600;color:#FFFFFF;margin-bottom:12px;position:relative}.jm-mobile-col-header::before{content:'';position:absolute;left:-29px;top:50%;transform:translateY(-50%);width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a}.jm-mobile-col-item{margin-bottom:12px;padding:8px 0}.jm-mobile-col-item:last-child{margin-bottom:0}.jm-mobile-col-label{font-size:10px;color:#71717a;text-transform:uppercase;margin-bottom:4px;display:block}.jm-mobile-col-desc{font-size:12px;color:#A0A0A0;line-height:1.6}.jm-mobile-col-desc .jm-kw{color:#FFFFFF;font-weight:500;margin-bottom:2px}.jm-mobile-col-item.strat .jm-mobile-col-desc{color:rgba(199,255,0,0.75)}}
+@media(max-width:767px){.jm-table{display:none!important}.jm-mobile{display:flex;flex-direction:column;gap:24px}.jm-mobile-col{border-left:1px solid #222226;padding-left:22px}.jm-mobile-col-header{font-size:14px;font-weight:600;color:#FFFFFF;margin-bottom:12px;position:relative}.jm-mobile-col-header::before{content:'';position:absolute;left:-29px;top:50%;transform:translateY(-50%);width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a}.jm-mobile-col-item{margin-bottom:12px;padding:14px;background:rgba(30,30,34,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:8px}.jm-mobile-col-item:last-child{margin-bottom:0}.jm-mobile-col-label{font-size:10px;color:#71717a;text-transform:uppercase;margin-bottom:4px;display:block}.jm-mobile-col-desc{font-size:12px;color:#A0A0A0;line-height:1.6}.jm-mobile-col-desc .jm-kw{color:#FFFFFF;font-weight:500;margin-bottom:2px}.jm-mobile-col-item.strat{background:rgba(199,255,0,0.03);border:1px solid rgba(199,255,0,0.1)}.jm-mobile-col-item.strat .jm-mobile-col-desc{color:#C7FF00}}
 </style>
 <table class="jm-table">
 <thead>
@@ -236,13 +236,13 @@ export const projectData: Project[] = [
 .arch-item:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .arch-item.hl{border-color:rgba(199,255,0,0.2);color:#C7FF00;background:rgba(199,255,0,0.06)}
 .arch-arrow{display:flex;flex-direction:column;align-items:center;width:40px;flex-shrink:0;justify-content:center}
-.arch-arrow-line{width:100%;height:1px;background:#A0A0A0;position:relative}
-.arch-arrow-line::after{content:'';position:absolute;right:0;top:-3px;width:0;height:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:6px solid #A0A0A0}
-.arch-arrow.rev .arch-arrow-line::after{right:auto;left:0;border-left:none;border-right:6px solid #A0A0A0}
-.arch-arrow-label{font-size:11px;color:#A0A0A0;margin-top:6px;text-align:center}
+.arch-arrow-line{width:100%;height:1px;background:#C7FF00;position:relative}
+.arch-arrow-line::after{content:'';position:absolute;right:0;top:-3px;width:0;height:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:6px solid #C7FF00}
+.arch-arrow.rev .arch-arrow-line::after{right:auto;left:0;border-left:none;border-right:6px solid #C7FF00}
+.arch-arrow-label{font-size:11px;color:#C7FF00;margin-top:6px;text-align:center}
 .arch-footnote{margin-top:12px;font-size:13px;color:#A0A0A0;font-weight:400;display:flex;align-items:center;gap:8px}
 .arch-footnote::before{content:'';width:6px;height:6px;background:#C7FF00;border-radius:50%;flex-shrink:0}
-@media(max-width:767px){.arch-flow-row{flex-direction:column;gap:20px}.arch-col{width:100%!important;max-width:100%!important;padding:16px}.arch-col-label{font-size:13px;margin-bottom:10px;padding-bottom:8px}.arch-item{font-size:12px;padding:8px 12px}.arch-arrow{display:none}.arch-arrow-line{display:none}.arch-arrow-line::after{display:none}.arch-arrow-label{display:none}}
+@media(max-width:767px){.arch-flow-row{flex-direction:column;gap:20px}.arch-col{width:100%!important;max-width:100%!important;padding:16px}.arch-col-label{font-size:13px;margin-bottom:10px;padding-bottom:8px}.arch-item{font-size:12px;padding:8px 12px}.arch-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;padding:6px 0;gap:4px}.arch-arrow-line{display:none}.arch-arrow-line::after{display:none}.arch-arrow-label{display:block;font-size:11px;color:#C7FF00;text-align:center}.arch-arrow::before{content:"↓";color:#C7FF00;font-size:16px}.arch-arrow.rev::before{content:"↑"}}
 </style>
 <div class="arch-flow">
 <div class="arch-flow-row">
@@ -520,7 +520,7 @@ export const projectData: Project[] = [
 .toc-page-row{display:flex;justify-content:space-between;align-items:baseline}
 .toc-page-name{color:#B0B0B0;font-size:13px;font-weight:400}
 .toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
-@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:200px;padding:18px}.toc-card-title{font-size:13px}}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:230px;padding:18px}.toc-card-title{font-size:13px}}
 </style>
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">背景与策略</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">互动破局</span><span class="toc-page-num">P02</span></div><div class="toc-page-row"><span class="toc-page-name">目标拆解</span><span class="toc-page-num">P03</span></div></div></div></div>
@@ -1057,7 +1057,7 @@ export const projectData: Project[] = [
 .toc-page-row{display:flex;justify-content:space-between;align-items:baseline}
 .toc-page-name{color:#B0B0B0;font-size:13px;font-weight:400}
 .toc-page-num{color:#52525b;font-family:monospace;flex-shrink:0;margin-left:12px}
-@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:200px;padding:18px}.toc-card-title{font-size:13px}}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:230px;padding:18px}.toc-card-title{font-size:13px}}
 </style>
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><p class="toc-card-title">背景与定位</p><div class="toc-card-pages"><div class="toc-page-row"><span class="toc-page-name">重构背景</span><span class="toc-page-num">P02</span></div><div class="toc-page-row"><span class="toc-page-name">Pad 端重定位</span><span class="toc-page-num">P03</span></div></div></div></div>

@@ -212,12 +212,12 @@ export default function Introduction() {
 
       <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center overflow-visible px-6 md:px-12">
         {/* 1. Title */}
-        <h1 className="text-5xl md:text-6xl mb-3 md:mb-5" style={{ fontFamily: "'Snell Roundhand', 'Apple Chancery', 'Comic Sans MS', cursive", fontWeight: 400 }}>
+        <h1 className="text-5xl md:text-6xl mb-3 md:mb-5" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 500 }}>
           {introductionData.name}
         </h1>
 
         {/* 2. Subtitle */}
-        <p className="text-[11px] md:text-sm text-accent tracking-wide md:tracking-widest uppercase font-semibold mb-8 md:mb-12">
+        <p className="text-[13px] md:text-sm text-accent tracking-wide md:tracking-widest uppercase font-semibold mb-8 md:mb-12">
           {introductionData.title}
         </p>
 
