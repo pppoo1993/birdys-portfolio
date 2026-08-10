@@ -194,7 +194,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
             {/* ════ Fixed top bar ════ */}
             <div className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-6 md:px-12 py-3.5 bg-gradient-to-b from-[#121212] via-[#121212]/95 to-transparent pointer-events-none">
               <p className="text-[18px] md:text-[24px] text-white font-bold tracking-tight line-clamp-2 md:truncate max-w-[88%] md:max-w-[65%]">
-                {activeIndex > 0 ? sections[activeIndex]?.heading : (
+                {activeIndex > 0 ? (sections[activeIndex]?.heading === 'Thanks' ? '' : sections[activeIndex]?.heading) : (
                   <span className="flex items-center gap-2">
                     <img src={import.meta.env.BASE_URL + (project!.id === 'project-3' ? 'images/吃鲸.webp' : project!.id === 'project-2' ? 'images/爱奇艺.webp' : 'images/爱奇艺Pad.webp')} alt="" className="w-7 h-7 rounded-md object-cover" />
                     {project!.title}
