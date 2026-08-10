@@ -239,17 +239,17 @@ export const projectData: Project[] = [
 .arch-arrow-line{width:100%;height:1px;background:#C7FF00;position:relative}
 .arch-arrow-line::after{content:'';position:absolute;right:0;top:-3px;width:0;height:0;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:6px solid #C7FF00}
 .arch-arrow.rev .arch-arrow-line::after{right:auto;left:0;border-left:none;border-right:6px solid #C7FF00}
-.arch-arrow-label{font-size:11px;color:#C7FF00;margin-top:6px;text-align:center}
+.arch-arrow-label{font-size:11px;color:#C7FF00;margin-top:6px;text-align:center}.arch-arrow-sym{display:none}
 .arch-footnote{margin-top:12px;font-size:13px;color:#A0A0A0;font-weight:400;display:flex;align-items:center;gap:8px}
 .arch-footnote::before{content:'';width:6px;height:6px;background:#C7FF00;border-radius:50%;flex-shrink:0}
-@media(max-width:767px){.arch-flow-row{flex-direction:column;gap:20px}.arch-col{width:100%!important;max-width:100%!important;padding:16px}.arch-col-label{font-size:13px;margin-bottom:10px;padding-bottom:8px}.arch-item{font-size:12px;padding:8px 12px}.arch-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;padding:6px 0;gap:4px}.arch-arrow-line{display:none}.arch-arrow-line::after{display:none}.arch-arrow-label{display:block;font-size:11px;color:#C7FF00;text-align:center}.arch-arrow::before{content:"↓";color:#C7FF00;font-size:16px}.arch-arrow.rev::before{content:"↑"}}
+@media(max-width:767px){.arch-flow-row{flex-direction:column;gap:20px}.arch-col{width:100%!important;max-width:100%!important;padding:16px}.arch-col-label{font-size:13px;margin-bottom:10px;padding-bottom:8px}.arch-item{font-size:12px;padding:8px 12px}.arch-arrow{text-align:center;width:100%;padding:6px 0;white-space:nowrap}.arch-arrow-line{display:none}.arch-arrow-line::after{display:none}.arch-arrow-sym{display:inline;color:#C7FF00;font-size:16px;margin-right:6px}.arch-arrow-label{font-size:11px;color:#C7FF00}}
 </style>
 <div class="arch-flow">
 <div class="arch-flow-row">
 <div class="arch-col"><div class="arch-col-label">分发页</div><div class="arch-col-items"><div class="arch-item">首页瀑布流</div><div class="arch-item">精选播放器</div><div class="arch-item">模板</div></div></div>
-<div class="arch-arrow"><div class="arch-arrow-line"></div><span class="arch-arrow-label">以消带产</span></div>
+<div class="arch-arrow"><div class="arch-arrow-line"></div><span class="arch-arrow-sym">↓</span><span class="arch-arrow-label">以消带产</span></div>
 <div class="arch-col"><div class="arch-col-label">创作页</div><div class="arch-col-items"><div class="arch-item">通用视频生成</div><div class="arch-item hl">影视创意玩法</div><div class="arch-item">上传AI视频作品</div></div></div>
-<div class="arch-arrow rev"><div class="arch-arrow-line"></div><span class="arch-arrow-label">赋能创作</span></div>
+<div class="arch-arrow rev"><div class="arch-arrow-line"></div><span class="arch-arrow-sym">↑</span><span class="arch-arrow-label">赋能创作</span></div>
 <div class="arch-col"><div class="arch-col-label">素材库</div><div class="arch-col-items"><div class="arch-item hl">影视片段</div><div class="arch-item">本地图片/视频</div><div class="arch-item">已创作视频</div></div></div>
 </div>
 </div>`,
@@ -259,14 +259,14 @@ export const projectData: Project[] = [
           body: '对于以<b>"消费"</b>为起点的用户，进入 AI 创作工具最大的心理门槛是<b>"不知道该创作什么"</b>。我们的设计策略是将创作触发点嵌入消费场景——双列瀑布流展示他人作品激发参与欲，模板和教程将模糊的创作意图转化为具体的<b>低门槛动作</b>。核心原则：不让用户"想创作"，让用户<b>"看到 → 想要 → 开始"</b>。',
           html: `<style>
 .dist-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
-.dist-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.dist-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}@media(min-width:768px){.dist-col{align-items:flex-start}}
 .dist-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .dist-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .dist-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .dist-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-.dist-img-row{display:flex;gap:16px;flex-wrap:nowrap;overflow:hidden}
-@media(max-width:767px){.dist-row{flex-direction:column!important}.dist-col{width:100%!important}}
-.dist-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;overflow:hidden}
+.dist-img-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(min-width:768px){.dist-img-row{display:flex;justify-content:center}}
+@media(max-width:767px){.dist-row{flex-direction:column!important;gap:24px}.dist-col{width:100%!important;flex:none}}
+.dist-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;margin:0 auto}
 .dist-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .dist-img-wrap{display:flex;flex-direction:column;align-items:center}
 .dist-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
@@ -302,7 +302,7 @@ export const projectData: Project[] = [
 .cr-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .cr-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .cr-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-.cr-img-row{display:flex;gap:16px;flex-wrap:nowrap;overflow:hidden}
+.cr-img-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(min-width:768px){.cr-img-row{display:flex;justify-content:center}}
 .cr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;overflow:hidden}
 .cr-img-wrap{display:flex;flex-direction:column;align-items:center}
 .cr-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
@@ -337,7 +337,7 @@ export const projectData: Project[] = [
 .m-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .m-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .m-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.m-img-row{display:flex;gap:16px;flex-wrap:nowrap;overflow:hidden}
+.m-img-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(min-width:768px){.m-img-row{display:flex;justify-content:center}}
 .m-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:150px;overflow:hidden}
 .m-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .m-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
@@ -417,14 +417,13 @@ export const projectData: Project[] = [
 <style>
 .sk-wrapper{display:flex;gap:40px;justify-content:center;max-width:100%;flex-wrap:wrap}
 .sk-group{flex-shrink:0}
-.sk-row{display:flex;gap:12px;flex-wrap:nowrap}
 .sk-item{width:150px;flex-shrink:0}
 .sk-placeholder{width:100%;max-width:150px;aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 @media(max-width:767px){.sk-wrapper{flex-direction:column;align-items:center;gap:24px}.sk-group{flex:none;width:100%}.sk-row{gap:3%}.sk-item{width:auto;flex:1 1 0;min-width:0}.sk-placeholder{width:100%}}
 .sk-group-title{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .sk-group-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .sk-group-desc{color:#A0A0A0;font-size:13px;line-height:1.6;margin:0 0 12px;font-weight:400}
-.sk-row{display:flex;gap:22px;flex-wrap:wrap}
+.sk-row{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}@media(min-width:768px){.sk-row{display:flex;justify-content:center}}
 .sk-item{display:flex;flex-direction:column;align-items:center;gap:8px}
 .sk-label{font-size:12px;color:#A0A0A0;text-align:center}
 
