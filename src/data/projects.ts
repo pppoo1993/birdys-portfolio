@@ -277,16 +277,16 @@ export const projectData: Project[] = [
 <div class="dist-col-title">内容分发</div>
 <p class="dist-col-desc">在各分发场景下设置创作按钮，以便用户产生灵感后即可创作。</p>
 <div class="dist-img-row">
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-home.png" alt="首页" style="width:100%;height:100%;object-fit:contain" /></div><span class="dist-img-label">首页</span></div>
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-player.png" alt="播放页" style="width:100%;height:100%;object-fit:contain" /></div><span class="dist-img-label">播放页</span></div>
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-template.png" alt="模板tab" style="width:100%;height:100%;object-fit:contain" /></div><span class="dist-img-label">模板tab</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-home.png" alt="首页" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">首页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-player.png" alt="播放页" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">播放页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-template.png" alt="模板tab" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">模板tab</span></div>
 </div>
 </div>
 <div class="dist-col">
 <div class="dist-col-title">底部创作按钮</div>
 <p class="dist-col-desc">展示全部AI视频玩法。</p>
 <div class="dist-img-row">
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-float.png" alt="+浮层" style="width:100%;height:100%;object-fit:contain" /></div><span class="dist-img-label">「+」浮层</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-float.png" alt="+浮层" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">「+」浮层</span></div>
 </div>
 </div>
 </div>
@@ -314,16 +314,16 @@ export const projectData: Project[] = [
 <div class="cr-col-title">通用视频生成</div>
 <p class="cr-col-desc">支持多模态输入自由创作。</p>
 <div class="cr-img-row">
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-create-video.png" alt="创作视频" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">通用创作入口</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-create-video.png" alt="创作视频" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">通用创作入口</span></div>
 </div>
 </div>
 <div class="cr-col">
 <div class="cr-col-title">影视创意玩法</div>
 <p class="cr-col-desc">选择影视素材后，即可针对该视频进行定向创作。</p>
 <div class="cr-img-row">
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-lines-rewrite.png" alt="台词改写" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">台词改写</span></div>
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-story-chain.png" alt="故事接龙" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">故事接龙</span></div>
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-style-transfer.png" alt="画风转换" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">画风转换</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-lines-rewrite.png" alt="台词改写" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">台词改写</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-story-chain.png" alt="故事接龙" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">故事接龙</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-style-transfer.png" alt="画风转换" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">画风转换</span></div>
 </div>
 </div>
 </div>`,
@@ -350,17 +350,17 @@ export const projectData: Project[] = [
 <div class="m-col-title">影视片段库形态演变预想</div>
 <p class="cr-col-desc">影视片段按照专辑维度聚合，随着素材的扩充，我们规划了不同形态，并增加相应功能。</p>
 <div class="m-img-row">
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.png" alt="初期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">初期</span></div>
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.png" alt="中期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">中期</span></div>
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-late.png" alt="后期" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">后期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.png" alt="初期" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">初期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.png" alt="中期" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">中期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-late.png" alt="后期" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">后期</span></div>
 </div>
 </div>
 <div class="m-col">
 <div class="m-col-title">支持多选场景</div>
 <p class="cr-col-desc">通用视频创作时支持多选素材。</p>
 <div class="m-img-row">
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-unselected.png" alt="多选未选择" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">多选-未选择</span></div>
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.png" alt="多选已选择" style="width:100%;height:100%;object-fit:contain" /></div><span class="cr-img-label">多选-已选择</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-unselected.png" alt="多选未选择" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">多选-未选择</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.png" alt="多选已选择" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">多选-已选择</span></div>
 </div>
 </div>
 </div>
@@ -433,9 +433,9 @@ export const projectData: Project[] = [
 @media(max-width:767px){.sk-row{gap:10px}}
 </style>
 <div class="sk-wrapper">
-<div class="sk-group"><div class="sk-group-title">方向 A</div><p class="sk-group-desc">评论盖楼方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">起点页A</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">方向 B</div><p class="sk-group-desc">平行宇宙方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">起点页B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">接龙宇宙</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">方向 C</div><p class="sk-group-desc">线路图方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">起点页C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="width:100%;height:100%;object-fit:contain" /></div><span class="sk-label">接龙地图</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 A</div><p class="sk-group-desc">评论盖楼方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页A</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 B</div><p class="sk-group-desc">平行宇宙方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="height:100%;width:auto;display:block" /></div><span class="sk-label">接龙宇宙</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">方向 C</div><p class="sk-group-desc">线路图方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="height:100%;width:auto;display:block" /></div><span class="sk-label">接龙地图</span></div></div></div>
 </div>`,
         },
         {
@@ -548,8 +548,8 @@ export const projectData: Project[] = [
 </style>
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">互动破局</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">目标拆解</span><span class="toc-page-num">P03</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
-<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><div><p class="toc-card-title">流量与入口</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="3"><span class="toc-page-name">流量蓄水</span><span class="toc-page-num">P04</span></div><div class="toc-page-row" data-goto="4"><span class="toc-page-name">播放页入口</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">明星陪看聚合页</span><span class="toc-page-num">P06</span></div></div></div><span class="toc-card-tag">/ Traffic</span></div></div>
-<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><div><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="6"><span class="toc-page-name">沉浸式体验</span><span class="toc-page-num">P07</span></div><div class="toc-page-row" data-goto="7"><span class="toc-page-name">陪看布局重构1</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">陪看布局重构2</span><span class="toc-page-num">P09</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><div><p class="toc-card-title">流量与入口</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="3"><span class="toc-page-name">流量蓄水</span><span class="toc-page-num">P04</span></div><div class="toc-page-row" data-goto="4"><span class="toc-page-name">播放页入口</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">明星陪看聚合页</span><span class="toc-page-num">P07</span></div></div></div><span class="toc-card-tag">/ Traffic</span></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><div><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">沉浸式体验</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">陪看布局重构2</span><span class="toc-page-num">P09</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
 <div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="9"><div><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="9"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">基础送礼链路</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">进阶送礼</span><span class="toc-page-num">P12</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">终极爆灯</span><span class="toc-page-num">P13</span></div></div></div><span class="toc-card-tag">/ Revenue</span></div></div>
 </div>`,
         },
@@ -570,7 +570,7 @@ export const projectData: Project[] = [
 .model-node-desc{font-size:13px;color:#A0A0A0;line-height:1.75;margin:0}
 .val-dim-branch{display:flex;gap:0;margin-top:20px}
 .val-dim-branch-body{flex:1;min-width:0}
-.val-dim-cards{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;max-width:100%}
+.val-dim-cards{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;max-width:1080px;margin:0 auto}
 .val-dim-card{flex:1;min-width:150px;padding:22px;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;display:flex;flex-direction:column;justify-content:flex-start;transition:all .35s cubic-bezier(0.16,1,0.3,1)}
 .val-dim-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .val-dim-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
@@ -704,7 +704,7 @@ export const projectData: Project[] = [
 .tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:400}
 .tx-p b{color:#FFFFFF;font-weight:600}
 /* 蓄水漏斗 */
-.funnel-row{display:flex;gap:32px;align-items:stretch;margin:28px 0;max-width:100%}
+.funnel-row{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:1080px}
 .funnel-card{flex:1;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;display:flex;flex-direction:column}
 .funnel-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .funnel-card::after{content:attr(data-arrow);position:absolute;right:-24px;top:50%;transform:translateY(-50%);color:#555555;font-size:16px;font-weight:400;z-index:2}
@@ -739,29 +739,59 @@ export const projectData: Project[] = [
         // ═══ P5 播放页入口 ═══
         {
           heading: '播放页入口：动态链路触达',
-          body: '',
+          body: '直播陪看的核心挑战在于「触达而不打扰」。我们将入口嵌入播放页的选集下方，根据直播状态动态显隐，在观影流中完成轻量触达。通过实时状态透传与角标引导，将用户的观看行为自然转化为参与行为。',
           html: `<style>
-.entry-split{display:flex;gap:24px;align-items:flex-start;margin:28px 0;max-width:100%}
-.entry-left{flex:1;align-self:flex-start}
-.entry-left img{width:100%;display:block;border-radius:6px}
-.entry-right{width:250px;min-width:250px;max-width:250px;flex-shrink:0}
-.entry-text-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:16px}
-.entry-text-item{padding-bottom:16px;border-bottom:1px solid #222226}
-.entry-text-item:last-child{padding-bottom:0;border-bottom:none}
-.entry-text-label{color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px}
-.entry-text-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-@media(max-width:767px){.entry-split{flex-direction:column!important}.entry-right{width:auto!important}}
+.entry-phone-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0 auto;max-width:800px}
+.entry-phone{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;margin:0 auto}
+.entry-phone::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.entry-phone span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
+.entry-card{flex:1;background:rgba(30,30,34,0.7);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.entry-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
+@media(max-width:767px){.entry-phone-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
 </style>
-<div class="entry-split">
-<div class="entry-left"><img src="/birdys-portfolio/images/live-entry.png" alt="直播入口状态" /></div>
-<div class="entry-right">
-<div class="entry-text-card">
-<div class="entry-text-item"><p class="entry-text-label">低干扰</p><p class="entry-text-desc">触达入口设置在选集下方，仅在临近直播/直播中时显示，在不打断观影流的前提下完成轻量触达。</p></div>
-<div class="entry-text-item"><p class="entry-text-label">高转化</p><p class="entry-text-desc">入口实时展示直播状态，直播间内活动权益通过角标透传，辅助用户进行决策，一键切入陪看现场。</p></div>
-<div class="entry-text-item"><p class="entry-text-label">心智建设</p><p class="entry-text-desc">通过直播预告培养用户一键预约本剧全部直播陪看的习惯，将剧集观众转化为直播间的存量用户。</p></div>
+<div style="max-width:800px;margin:0 auto">
+<div style="display:flex;gap:16px;margin-bottom:24px">
+<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">低干扰</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">入口置于选集下方，仅在临近直播时显示，不打断观影流。</p></div>
+<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">高转化</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">实时展示直播状态与活动权益，辅助决策，一键切入陪看。</p></div>
+<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">心智建设</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">通过直播预告培养预约习惯，将剧集观众转化为直播间存量用户。</p></div>
 </div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>播放页触达入口</p>
+<div class="entry-phone-grid">
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-no-entry.png" alt="无直播入口" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无直播时</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-has-entry.png" alt="有直播入口" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有直播时</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-entry-status.png" alt="直播入口状态" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">入口状态</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-booking.png" alt="一键预约弹窗" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">一键预约</span></div>
 </div>
 </div>`,
+        },
+        {
+          heading: '明星陪看聚合页：互动资产沉淀',
+          body: '明星陪看聚合页是连接粉丝、驱动社交的核心中枢。通过「时效引导 + 数据可视化 + 资产沉淀」三维交互系统，将粉丝瞬时的追星热情转化为平台的长效互动资产。',
+          html: `<style>
+.ap-split{display:flex;gap:48px;align-items:center;max-width:800px;margin:0 auto}
+.ap-left{flex:0 0 280px;position:relative}
+.ap-phone{width:220px;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:2px solid #27272a;border-radius:24px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin:0 auto}
+.ap-phone::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.ap-right{flex:1;display:flex;flex-direction:column;gap:24px;max-width:380px}
+.ap-module{border-left:2px solid #333333;padding-left:20px}
+.ap-module-title{color:#FFFFFF;font-size:15px;font-weight:600;margin:0 0 6px}
+.ap-module-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
+.ap-module-desc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.ap-split{flex-direction:column!important}.ap-left{flex:none;width:100%}}
+</style>
+<div style="display:flex;justify-content:center;width:100%"><div class="ap-split">
+<div class="ap-left">
+<div style="position:absolute;left:-90px;top:30px;z-index:10;display:flex;flex-direction:column;gap:8px">
+<div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">我的页「一起聊」入口</div>
+<div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">搜索结果页「一起聊」入口</div>
+</div>
+<div class="ap-phone"><img src="/birdys-portfolio/images/agg-page.png" alt="聚合页" style="height:100%;width:auto;display:block" /></div>
+</div>
+<div class="ap-right">
+<div class="ap-module"><p class="ap-module-title">直播 / 预约动态</p><p class="ap-module-desc"><b>时间心智重构</b>——通过"正在直播、预约中、回看"多状态时间轴，建立用户对明星陪看的长期时间预期。</p></div>
+<div class="ap-module"><p class="ap-module-title">陪看榜单</p><p class="ap-module-desc"><b>社群竞技场</b>——引入贡献榜、送礼榜与热力值可视化，借助粉丝荣誉感激发高频互动。</p></div>
+<div class="ap-module"><p class="ap-module-title">回看合集</p><p class="ap-module-desc"><b>长效资产沉淀</b>——将即时直播转化为可复用的版权衍生内容，破解"看后即走"的留存困境。</p></div>
+</div>
+</div></div>`,
         },
         // ═══ P6 明星陪看聚合页 ═══
         {
@@ -836,8 +866,21 @@ export const projectData: Project[] = [
         },
         // ═══ P8 陪看布局重构1 ═══
         {
-          heading: '陪看布局重构1：直播间页面结构分层治理',
-          body: '直播陪看界面分层治理：通过合理布局，建立动态图层架构（明星画面 > 影视视频 > 弹幕/礼物 > 挂件），明确明星陪看画面为直播间的主体。',
+          heading: '沉浸式体验：直播间页面分层治理',
+          body: '直播间同时承载明星画面、影视内容、弹幕互动与商业挂件，多源信息极易造成视觉干扰。我们通过分层治理策略建立动态图层架构——从底层到顶层依次为：影视视频 → 弹幕/礼物 → 商业挂件 → 明星陪看画面。核心原则：明星始终在最顶层，确保粉丝注意力不被稀释，各层按场景动态显隐。',
+          html: `<style>
+.im-row{display:flex;gap:24px;justify-content:center;align-items:flex-start;max-width:1080px;margin:24px auto 0}
+.im-item{display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex-shrink:0}
+.im-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px}.im-title::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.im-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;height:390px;width:auto}
+.im-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+@media(max-width:767px){.im-row{flex-wrap:wrap;gap:12px}}
+</style>
+<div class="im-row">
+<div class="im-item"><p class="im-title">分层治理示意</p><div data-preview class="im-placeholder" style="width:511px;height:390px"><img src="/birdys-portfolio/images/im-layers.png" alt="分层治理" style="width:100%;height:100%;display:block" /></div></div>
+<div class="im-item"><p class="im-title">控件隐藏</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-player.png" alt="精简播控" style="height:100%;width:auto;display:block" /></div></div>
+<div class="im-item"><p class="im-title">动态避让</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-avoid.png" alt="动态避让" style="height:100%;width:auto;display:block" /></div></div>
+</div>`,
         },
         // ═══ P9 陪看布局重构2 ═══
         {
@@ -1265,7 +1308,7 @@ export const projectData: Project[] = [
 </style>
 <div class="pad6-split">
 <div class="pad6-left">
-<div data-preview class="pad6-mockup"><img src="/birdys-portfolio/images/pad-player.png" alt="Pad 播放页截图" style="width:100%;height:100%;object-fit:contain" /></div>
+<div data-preview class="pad6-mockup"><img src="/birdys-portfolio/images/pad-player.png" alt="Pad 播放页截图" style="height:100%;width:auto;display:block" /></div>
 </div>
 <div class="pad6-right">
 <div class="pad6-card"><h4 class="pad6-card-title">视觉重心失衡</h4><p class="pad6-card-desc">右侧推荐流占据过大权重，导致<b>播放主体被边缘化</b>，破坏了 Pad 端应有的沉浸心智。</p></div>

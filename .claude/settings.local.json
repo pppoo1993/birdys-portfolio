@@ -97,7 +97,8 @@
       "Bash(npm -v)",
       "Bash(git pull *)",
       "Bash(git stash *)",
-      "Bash(grep -n \"},\\\\s*$\" /Users/birdy/Documents/birdys-portfolio/src/data/projects.ts)"
+      "Bash(grep -n \"},\\\\s*$\" /Users/birdy/Documents/birdys-portfolio/src/data/projects.ts)",
+      "Bash(pip3 install *)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"
