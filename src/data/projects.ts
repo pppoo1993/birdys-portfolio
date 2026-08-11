@@ -549,8 +549,8 @@ export const projectData: Project[] = [
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">互动破局</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">目标拆解</span><span class="toc-page-num">P03</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
 <div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><div><p class="toc-card-title">流量与入口</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="3"><span class="toc-page-name">流量蓄水</span><span class="toc-page-num">P04</span></div><div class="toc-page-row" data-goto="4"><span class="toc-page-name">播放页入口</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">明星陪看聚合页</span><span class="toc-page-num">P07</span></div></div></div><span class="toc-card-tag">/ Traffic</span></div></div>
-<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><div><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">沉浸式体验</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">陪看布局重构2</span><span class="toc-page-num">P09</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
-<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="9"><div><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="9"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">基础送礼链路</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">进阶送礼</span><span class="toc-page-num">P12</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">终极爆灯</span><span class="toc-page-num">P13</span></div></div></div><span class="toc-card-tag">/ Revenue</span></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><div><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">沉浸式体验</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">直播间状态</span><span class="toc-page-num">P09</span></div><div class="toc-page-row" data-goto="9"><span class="toc-page-name">陪看布局重构2</span><span class="toc-page-num">P10</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="10"><div><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="10"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">基础送礼链路</span><span class="toc-page-num">P12</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">进阶送礼</span><span class="toc-page-num">P13</span></div><div class="toc-page-row" data-goto="14"><span class="toc-page-name">终极爆灯</span><span class="toc-page-num">P14</span></div></div></div><span class="toc-card-tag">/ Revenue</span></div></div>
 </div>`,
         },
         {
@@ -825,7 +825,7 @@ export const projectData: Project[] = [
           html: `<style>
 .tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:400}
 .tx-p b{color:#FFFFFF;font-weight:600}
-.entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:1080px}
+.entry-split{display:flex;gap:16px;align-items:stretch;margin:28px auto;width:fit-content;max-width:100%}
 .entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
 .entry-right{flex:0.8;display:flex;flex-direction:column;gap:16px;min-width:0}
 .entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168}
@@ -880,6 +880,24 @@ export const projectData: Project[] = [
 <div class="im-item"><p class="im-title">分层治理示意</p><div data-preview class="im-placeholder" style="width:511px;height:390px"><img src="/birdys-portfolio/images/im-layers.png" alt="分层治理" style="width:100%;height:100%;display:block" /></div></div>
 <div class="im-item"><p class="im-title">控件隐藏</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-player.png" alt="精简播控" style="height:100%;width:auto;display:block" /></div></div>
 <div class="im-item"><p class="im-title">动态避让</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-avoid.png" alt="动态避让" style="height:100%;width:auto;display:block" /></div></div>
+</div>`,
+        },
+        {
+          heading: '直播间状态：场景化信息治理',
+          body: '预约态提供直播前的信息透传与一键预约入口，将用户对明星陪看的期待转化为明确的回访行为。\n回看态则在回看场景中引入播控，并设计「4秒自动隐匿」的智能收纳逻辑——用户无操作时视觉焦点自动回归内容本身；调节进度时展示进度缩略图并自动隐藏飘评与挂件，最大限度释放屏幕空间，聚焦用户的深度复盘心智。',
+          html: `<style>
+.sr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
+.sr-col{display:flex;flex-direction:column;gap:0;align-items:flex-start}
+.sr-col-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.sr-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.sr-img-row{display:flex;gap:16px}
+.sr-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
+.sr-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+@media(max-width:767px){.sr-row{flex-direction:column!important}}
+</style>
+<div class="sr-row">
+<div class="sr-col"><div class="sr-col-title">预约态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-book.png" alt="预约态" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">预约态</span></div></div></div>
+<div class="sr-col"><div class="sr-col-title">回看态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-ctrl-on.png" alt="有播控" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有播控</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-ctrl-off.png" alt="无播控" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无播控</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-seek.png" alt="调节进度" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">调节进度</span></div></div></div>
 </div>`,
         },
         // ═══ P9 陪看布局重构2 ═══
