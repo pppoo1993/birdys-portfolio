@@ -549,8 +549,8 @@ export const projectData: Project[] = [
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">互动破局</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">目标拆解</span><span class="toc-page-num">P03</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
 <div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><div><p class="toc-card-title">流量与入口</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="3"><span class="toc-page-name">流量蓄水</span><span class="toc-page-num">P04</span></div><div class="toc-page-row" data-goto="4"><span class="toc-page-name">播放页入口</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">明星陪看聚合页</span><span class="toc-page-num">P07</span></div></div></div><span class="toc-card-tag">/ Traffic</span></div></div>
-<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><div><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">沉浸式体验</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">直播间状态</span><span class="toc-page-num">P09</span></div><div class="toc-page-row" data-goto="9"><span class="toc-page-name">陪看布局重构2</span><span class="toc-page-num">P10</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
-<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="10"><div><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="10"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">基础送礼链路</span><span class="toc-page-num">P12</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">进阶送礼</span><span class="toc-page-num">P13</span></div><div class="toc-page-row" data-goto="14"><span class="toc-page-name">终极爆灯</span><span class="toc-page-num">P14</span></div></div></div><span class="toc-card-tag">/ Revenue</span></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><div><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">沉浸式体验</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">直播间状态</span><span class="toc-page-num">P09</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="9"><div><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="9"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">基础送礼链路</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">进阶送礼</span><span class="toc-page-num">P12</span></div><div class="toc-page-row" data-goto="13"><span class="toc-page-name">终极爆灯</span><span class="toc-page-num">P13</span></div></div></div><span class="toc-card-tag">/ Revenue</span></div></div>
 </div>`,
         },
         {
@@ -795,31 +795,6 @@ export const projectData: Project[] = [
         },
         // ═══ P6 明星陪看聚合页 ═══
         {
-          heading: '明星陪看聚合页：沉淀互动资产',
-          body: '',
-          html: `<style>
-.agg-split{display:flex;gap:32px;align-items:flex-start;margin:28px 0}
-.agg-left{flex:1;min-width:0}
-.agg-left img{width:100%;height:auto;border-radius:6px}
-.agg-right{flex:1;display:flex;flex-direction:column;gap:20px;min-width:0;padding-top:8px}
-.agg-text-item{padding-bottom:16px;border-bottom:1px solid #222226}
-.agg-text-item:last-child{padding-bottom:0;border-bottom:none}
-.agg-text-label{color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px}
-.agg-text-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-.agg-text-desc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.agg-split{flex-direction:column!important}}
-</style>
-<div class="agg-split">
-<div class="agg-left"><img src="/birdys-portfolio/images/agg-page.png" alt="聚合页" style="width:100%;border-radius:6px" /></div>
-<div class="agg-right">
-<div class="agg-text-item"><p class="agg-text-label">直播 / 预约动态</p><p class="agg-text-desc">作为流量转化的实时枢纽，通过清晰的预约、直播中、回看状态切换机制，建立用户对明星陪看的<b>时间心智</b>。</p></div>
-<div class="agg-text-item"><p class="agg-text-label">陪看榜单</p><p class="agg-text-desc">引入<b>社群竞技感</b>，通过实时互动数据可视化——贡献榜、送礼榜、互动热力值——激发粉丝参与热度与集体荣誉感。</p></div>
-<div class="agg-text-item"><p class="agg-text-label">回看合集</p><p class="agg-text-desc">将单次直播转化为<b>长效互动资产</b>，实现剧集与直播流量的跨周期复利，破解"看后即走"的留存困境。</p></div>
-</div>
-</div>`,
-        },
-        // ═══ P7 沉浸式体验 ═══
-        {
           heading: '沉浸式体验：从"伴随式社交"到"沉浸式陪看"',
           body: '',
           html: `<style>
@@ -902,104 +877,50 @@ export const projectData: Project[] = [
         },
         // ═══ P9 陪看布局重构2 ═══
         {
-          heading: '陪看布局重构2：场景化动态平衡',
-          body: '交互避让机制：引入"动态避让算法"，确保互动内容在触发时能够智能规避核心视听区域，保障主体内容始终处于纯净状态。\n\n场景化信息治理：在回看场景中引入播控，并设计"4秒自动隐匿"的智能收纳逻辑，在用户无操作时，视觉焦点自动回归内容本身。在用户调节进度时展示进度缩略图并自动隐藏非必要的飘评与挂件，最大限度释放屏幕空间，聚焦用户的深度复盘心智。',
-          html: `<style>
-	.p9-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
-	.p9-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
-	.p9-col{width:372px;flex-shrink:0}.p9-col.wide{width:564px}
-	.p9-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0 0 10px}
-	.p9-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-	.p9-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-	.p9-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-	.p9-col-desc b{color:#FFFFFF;font-weight:600}
-	.p9-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:100%;max-width:180px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-	.p9-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
-	.p9-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-	.p9-img-row{display:flex;gap:16px}.p9-img-row .p9-img{width:100%;max-width:180px;overflow:hidden}
-	@media(max-width:767px){.p9-row{flex-direction:column!important}.p9-col,.p9-col.wide{width:100%!important}.p9-img{width:100%!important;max-width:180px}.p9-img-row .p9-img{width:100%!important;max-width:180px}}
-	</style>
-	<div class="p9-row">
-	<div class="p9-col">
-	<div class="p9-col-title">动态避让机制</div>
-	<p class="p9-col-desc">互动内容触发时<b>智能规避</b>核心视听区域，直播中弹幕与礼物自动偏移，保障主体画面始终纯净。</p>
-	<div class="p9-img-row">
-	<div data-preview class="p9-img"><span class="p9-img-label">避让前状态</span></div>
-	<div data-preview class="p9-img"><span class="p9-img-label">避让后状态</span></div>
-	</div>
-	</div>
-	<div class="p9-col wide">
-	<div class="p9-col-title">回看场景信息治理</div>
-	<p class="p9-col-desc"><b>4秒自动隐匿</b>播控与飘评，进度调节时展示缩略图并隐藏非必要元素，释放屏幕空间聚焦复盘心智。</p>
-	<div class="p9-img-row">
-	<div data-preview class="p9-img"><span class="p9-img-label">回看播控界面</span></div>
-	<div data-preview class="p9-img"><span class="p9-img-label">进度缩略图</span></div>
-	<div data-preview class="p9-img"><span class="p9-img-label">自动隐匿后</span></div>
-	</div>
-	</div>
-	</div>`,
-        },
-        // ═══ P10 情感变现 ═══
-        {
-          heading: '情感变现：构建分层式送礼玩法矩阵',
+          heading: '情感变现：送礼分层玩法矩阵',
           body: '商业闭环不应是生硬的支付行为，而是情感互动的自然延伸。我们将送礼逻辑划分为"基础、创意、成就"三层架构，以满足不同场景下的用户情感释放需求，实现商业价值与互动氛围的同步跃升。',
           html: `<style>
-.pyramid-wrap{display:flex;justify-content:center;margin:32px 0}
-.pyramid{display:flex;flex-direction:column;width:400px;height:300px;clip-path:polygon(50% 0,100% 100%,0% 100%);overflow:hidden}
-.pyramid-tier{display:flex;align-items:center;justify-content:center;text-align:center;flex:1;position:relative}
-.pyramid-tier.top{flex:1.4;background:rgba(199,255,0,0.08);padding-top:48px}
-.pyramid-tier.mid{background:rgba(199,255,0,0.05);border-top:1px solid rgba(199,255,0,0.15)}
-.pyramid-tier.btm{background:rgba(199,255,0,0.03);border-top:1px solid rgba(199,255,0,0.15)}
-.pyramid-tier-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0}
-@media(max-width:767px){.pyramid{width:100%;max-width:340px;height:260px}}
+.pyramid-wrap{text-align:center;margin:24px 0}
+.pyramid-img{width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block;margin:0 auto}
+.pyramid-caption{color:#A0A0A0;font-size:12px;margin-top:8px}
 </style>
-<div class="pyramid-wrap"><div class="pyramid">
-<div class="pyramid-tier top">
-<span class="pyramid-tier-title">成就共鸣</span>
-</div>
-<div class="pyramid-tier mid">
-<span class="pyramid-tier-title">创意体验</span>
-</div>
-<div class="pyramid-tier btm">
-<span class="pyramid-tier-title">基础馈赠</span>
-</div>
-</div></div>`,
+<div class="pyramid-wrap">
+<div data-preview style="display:inline-block"><img class="pyramid-img" src="/birdys-portfolio/images/送礼金字塔.png" alt="送礼金字塔" /></div>
+<p class="pyramid-caption">送礼分层金字塔</p>
+</div>`,
         },
         // ═══ P11 基础送礼链路 ═══
         {
           heading: '基础送礼链路：极简支付体验',
           body: '商业行为应是内容消费的顺滑延伸，我们通过资产集成与路径压缩，实现支付环节的"零感知"切换。',
           html: `<style>
-.p11-row{display:flex;gap:32px;align-items:flex-start;margin:28px auto;width:fit-content;max-width:100%}
+.p11-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .p11-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
-.p11-col{width:372px;flex-shrink:0}
 .p11-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .p11-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .p11-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .p11-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .p11-col-desc b{color:#FFFFFF;font-weight:600}
-.p11-img{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;aspect-ratio:1/2.168;width:100%;max-width:180px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.p11-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
-.p11-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-.p11-img-row{display:flex;gap:16px}.p11-img-row .p11-img{width:100%;max-width:180px;overflow:hidden}
-@media(max-width:767px){.p11-row{flex-direction:column!important}.p11-col{width:100%!important}.p11-img{width:100%!important;max-width:180px}.p11-img-row .p11-img{width:100%!important;max-width:180px}}
+.p11-img-row{display:flex;gap:16px;width:316px}
+.p11-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:150px;flex-shrink:0}
+.p11-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
+.p11-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:0.06em;position:relative;z-index:1}
+.p11-diagram{width:480px;height:auto;display:block;border-radius:8px;border:1px solid #27272a}
+@media(max-width:767px){.p11-row{flex-direction:column!important;gap:32px}.p11-col{width:100%!important}.p11-col-desc{max-width:100%!important}.p11-placeholder{width:100%;max-width:150px}.p11-img-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%}.p11-diagram{width:100%;max-width:480px}}
 </style>
 <div class="p11-row">
 <div class="p11-col">
 <div class="p11-col-title">资产流通体系</div>
-<p class="p11-col-desc">深度整合<b>奇点支付与VIP积分抵扣</b>，打通会员权益，为用户提供低门槛的参与路径。</p>
+<p class="p11-col-desc" style="max-width:316px">深度整合<b>奇点支付与VIP积分抵扣</b>，打通会员权益，为用户提供低门槛的参与路径。</p>
 <div class="p11-img-row">
-<div data-preview class="p11-img"><span class="p11-img-label">奇点支付入口</span></div>
-<div data-preview class="p11-img"><span class="p11-img-label">会员抵扣页</span></div>
+<div data-preview class="p11-placeholder"><span>奇点支付入口</span></div>
+<div data-preview class="p11-placeholder"><span>会员抵扣页</span></div>
 </div>
 </div>
 <div class="p11-col">
 <div class="p11-col-title">送礼效率优化</div>
-<p class="p11-col-desc">通过<b>入口重构与连击机制</b>，将复杂的支付决策转化为高频互动的"感官节奏"，实现从动作触发到情感回馈的秒级响应。</p>
-<div class="p11-img-row">
-<div data-preview class="p11-img"><span class="p11-img-label">快捷送礼示意图</span></div>
-<div data-preview class="p11-img"><span class="p11-img-label">连击送礼示意图</span></div>
-</div>
+<p class="p11-col-desc" style="max-width:480px">通过<b>入口重构与连击机制</b>，将复杂的支付决策转化为高频互动的"感官节奏"，实现从动作触发到情感回馈的秒级响应。</p>
+<div data-preview style="display:inline-block"><img class="p11-diagram" src="/birdys-portfolio/images/whiteboard_exported_image.png" alt="送礼效率优化" /></div>
 </div>
 </div>`,
         },
