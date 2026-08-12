@@ -35,9 +35,9 @@ export const projectData: Project[] = [
 </style>
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">项目背景</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">缘起</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">挑战与破局</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">定位重塑</span><span class="toc-page-num">P04</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
-<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><div><p class="toc-card-title">架构与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="4"><span class="toc-page-name">体验架构设计</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">用户旅程</span><span class="toc-page-num">P06</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">产品框架</span><span class="toc-page-num">P07</span></div></div></div><span class="toc-card-tag">/ Architecture</span></div></div>
-<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="7"><div><p class="toc-card-title" style="margin-bottom:16px">交互呈现</p><div class="toc-card-pages sm"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">以消带产</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="9"><span class="toc-page-name">创作中枢</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">台词改写</span><span class="toc-page-num">P12</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">故事接龙</span><span class="toc-page-num">P13</span></div></div></div><span class="toc-card-tag">/ Interaction</span></div></div>
-<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="15"><div><p class="toc-card-title">沉淀与思考</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="15"><span class="toc-page-name">尾声</span><span class="toc-page-num">P16</span></div><div class="toc-page-row" data-goto="16"><span class="toc-page-name">沉淀资产</span><span class="toc-page-num">P17</span></div></div></div><span class="toc-card-tag">/ Reflection</span></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="5"><div><p class="toc-card-title">架构与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="5"><span class="toc-page-name">体验架构设计</span><span class="toc-page-num">P06</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">用户旅程</span><span class="toc-page-num">P07</span></div><div class="toc-page-row" data-goto="7"><span class="toc-page-name">产品框架</span><span class="toc-page-num">P08</span></div></div></div><span class="toc-card-tag">/ Architecture</span></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="8"><div><p class="toc-card-title" style="margin-bottom:16px">交互呈现</p><div class="toc-card-pages sm"><div class="toc-page-row" data-goto="8"><span class="toc-page-name">以消带产</span><span class="toc-page-num">P09</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">创作中枢</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">台词改写</span><span class="toc-page-num">P13</span></div><div class="toc-page-row" data-goto="13"><span class="toc-page-name">故事接龙</span><span class="toc-page-num">P14</span></div></div></div><span class="toc-card-tag">/ Interaction</span></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="16"><div><p class="toc-card-title">沉淀与思考</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="16"><span class="toc-page-name">尾声</span><span class="toc-page-num">P17</span></div><div class="toc-page-row" data-goto="17"><span class="toc-page-name">沉淀资产</span><span class="toc-page-num">P18</span></div></div></div><span class="toc-card-tag">/ Reflection</span></div></div>
 </div>`,
         },
         {
@@ -109,7 +109,7 @@ export const projectData: Project[] = [
 <div class="quadrant-grid">
 <div class="quadrant-inner">
 <div class="quadrant-center"></div>
-<div class="quad-cell"><span class="qwatermark">S</span><p class="qlabel">核心资产</p><p class="qtitle">IP 资产版权护城河</p><p class="qdesc">依托长视频生态，构建了独立 AI 工具难以复制的正版影视素材库。</p></div>
+<div class="quad-cell" style="background:rgba(199,255,0,0.04)"><span class="qwatermark">S</span><p class="qlabel">核心资产</p><p class="qtitle">IP 资产版权护城河</p><p class="qdesc">依托长视频生态，构建了独立 AI 工具难以复制的正版影视素材库。</p></div>
 <div class="quad-cell"><span class="qwatermark">W</span><p class="qlabel">内在瓶颈</p><p class="qtitle">用户认知内耗</p><p class="qdesc">影视消费的"被动喂养"与 AI 创作的"主动交互"存在心智抵触；生成质量的不可控，打破了用户对长视频精美质感的心理共识。</p></div>
 <div class="quad-cell"><span class="qwatermark">O</span><p class="qlabel">增量机遇</p><p class="qtitle">传播逻辑重构</p><p class="qdesc">改变长视频单向传播模式，通过 AI 赋能将影视 IP 转化为碎片化素材，实现从"单向观看"到"裂变式二次创作"的爆发性传播。</p></div>
 <div class="quad-cell"><span class="qwatermark">T</span><p class="qlabel">战略威胁</p><p class="qtitle">工具侧降维挤压</p><p class="qdesc">头部专业工具已完成心智垄断，若强行竞争生成技术，极易被工具类产品降维击穿。</p></div>
@@ -117,11 +117,37 @@ export const projectData: Project[] = [
 </div>
 </div>`,        },
         {
-          heading: '定位重塑：消费型 AI 互动社区',
-          body: 'SWOT 分析后，我面临关键抉择：做「专业 AI 创作工具」，还是另辟蹊径。\n专业工具路线看似合理——市场成熟、认知清晰。但两个致命问题让我否掉了它：爱奇艺订阅制扛不住 AI 视频的巨额算力成本；技术上也追不上深耕多年的视频大模型厂商。硬走这条路，设计再好也是给别人的战场铺路。\n这让我把思路从「做更好的工具」扭转为「让普通观众也能玩起来」。基于此提炼了三条设计原则：身份重构（观众→共创者）、体验降维（工具→消费级互动）、价值闭环（播放→二创→回流）。这三条成了后续所有设计决策的北极星。',
+          heading: '定位重塑：关键抉择',
+          body: 'SWOT 分析后，我面临关键抉择：做「专业 AI 创作工具」，还是另辟蹊径。\n专业工具路线看似合理——市场成熟、认知清晰。但两个致命问题让我否掉了它：爱奇艺订阅制扛不住 AI 视频的巨额算力成本；技术上也追不上深耕多年的视频大模型厂商。硬走这条路，设计再好也是给别人的战场铺路。',
           html: `<style>
-.pos-highlight{color:#C7FF00;font-size:16px;font-weight:700;line-height:1.6;margin:8px 0 32px;text-align:center}
-.circle-row{display:flex;align-items:flex-start;justify-content:center;gap:0;max-width:1080px;margin:0 auto}
+.decision-compare{display:flex;align-items:center;justify-content:center;gap:24px;margin:32px 0;flex-wrap:wrap}
+.decision-opt{display:flex;flex-direction:column;align-items:center;gap:6px;padding:20px 32px;border-radius:8px;min-width:220px}
+.decision-opt.reject{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06)}
+.decision-opt.pick{background:rgba(199,255,0,0.04);border:1px solid rgba(199,255,0,0.15)}
+.decision-opt-label{font-size:16px;font-weight:700;margin:0}
+.decision-opt.reject .decision-opt-label{color:#52525b;text-decoration:line-through}
+.decision-opt.pick .decision-opt-label{color:#C7FF00}
+.decision-opt-desc{font-size:12px;color:#71717a;text-align:center;line-height:1.5;margin:0}
+.decision-arrow{color:#52525b;font-size:20px;font-weight:700}
+@media(max-width:767px){.decision-compare{gap:12px}.decision-opt{min-width:140px;padding:16px 20px}.decision-opt-label{font-size:14px}.decision-arrow{font-size:16px}}
+</style>
+<div class="decision-compare">
+<div class="decision-opt reject">
+<p class="decision-opt-label">专业 AI 创作工具</p>
+<p class="decision-opt-desc">算力成本不可持续 · 技术壁垒无法突破</p>
+</div>
+<div class="decision-arrow">→</div>
+<div class="decision-opt pick">
+<p class="decision-opt-label">消费型 AI 互动社区</p>
+<p class="decision-opt-desc">轻量级低门槛 · 基于IP资产优势</p>
+</div>
+</div>`,
+        },
+        {
+          heading: '定位重塑：三条设计原则',
+          body: '这让我把思路从「做更好的工具」扭转为「让普通观众也能玩起来」。基于此提炼了三条设计原则：身份重构（观众→共创者）、体验降维（工具→消费级互动）、价值闭环（播放→二创→回流）。这三条成了后续所有设计决策的北极星。',
+          html: `<style>
+.circle-row{display:flex;align-items:flex-start;justify-content:center;gap:0;max-width:1080px;margin:32px auto 0}
 .circle-col{display:flex;flex-direction:column;align-items:center;flex:1;max-width:220px}
 .circle-node{width:120px;height:120px;border-radius:50%;border:1px solid rgba(255,255,255,0.08);background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
 .circle-node:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
@@ -131,7 +157,6 @@ export const projectData: Project[] = [
 .circle-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:400;text-align:center;margin:0;width:100%}
 @media(max-width:767px){.circle-row{flex-wrap:wrap;gap:8px;justify-content:center}.circle-col{flex:1 1 40%;min-width:100px;max-width:none}.circle-op{display:none}.circle-node{width:90px;height:90px}.circle-node span{font-size:12px}}
 </style>
-<p class="pos-highlight">构建低门槛、轻操作的消费型 AI 互动社区</p>
 <div class="circle-row">
 <div class="circle-col"><div class="circle-node"><span>身份重构</span></div><p class="circle-sub">从"被动观看者"到"生态共创者"</p><p class="circle-desc">爱奇艺站内已有大量的重视用户，我们需引导用户从单一的"内容观众"转型为"生态共创者"，通过参与创作实现社区归属。</p></div>
 <div class="circle-op" style="font-weight:700">+</div>
@@ -155,17 +180,20 @@ export const projectData: Project[] = [
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用模型 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">接入行业领先模型（可灵、Seedance），通过内部AI团队定制化调优，将模糊的用户意图转化为精准的场景算力。</p></div>
 </div>
 <span class="arch-arrow">→</span>
-<div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
+<div class="arch-card" style="background:rgba(199,255,0,0.03);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(199,255,0,0.12);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">感知交互层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">模板化交互，降低创作门槛</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400"><b style="color:#FFFFFF">UX 设计核心阵地。</b>以模板化交互替代复杂控制面板，将底层算力包装为轻量玩法，让普通用户也能轻松参与创作。</p></div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">模板化交互，降低创作门槛</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400"><b style="color:#C7FF00">UX 设计核心阵地。</b>以模板化交互替代复杂控制面板，将底层算力包装为轻量玩法，让普通用户也能轻松参与创作。</p></div>
 </div>
 </div>
 `,
         },
         {
           heading: '用户旅程：从看剧观众到AI创作者',
-          body: '架构落定后，我需要验证它是否能覆盖真实用户路径。我用旅程地图还原了从「看剧观众」到「AI 创作者」的完整转化链路。\n走完整条链路后，最触动我的发现是：<b>最大的阻力不在创作环节，而在素材获取</b>——用户有想法，却找不到合规可用的影视素材。这个洞察让我们把素材库从辅助功能升级为产品护城河，也直接催生了后续「影视创意玩法」的设计方向。',
+          body: '架构落定后，我需要验证它是否能覆盖真实用户路径。我用旅程地图还原了从「看剧观众」到「AI 创作者」的完整转化链路。',
           html: `<style>
+.jm-insight{background:rgba(199,255,0,0.04);border-left:3px solid #C7FF00;padding:14px 18px;border-radius:0 6px 6px 0;margin-top:20px;max-width:1080px;margin-left:auto;margin-right:auto}
+.jm-insight p{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
+.jm-insight b{color:#C7FF00;font-weight:600}
 .jm-table{width:100%;border-collapse:collapse;margin-top:12px;table-layout:fixed}
 .jm-table th,.jm-table td{padding:24px 16px;font-size:12px;color:#A0A0A0;line-height:1.6;border-bottom:1px solid #222226;vertical-align:top;font-weight:400;text-align:left;word-break:break-word}
 .jm-table th{padding:24px 16px;vertical-align:middle}
@@ -218,7 +246,7 @@ export const projectData: Project[] = [
 <div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">工具门槛过高</span>复杂的视频编辑与参数设置，足以劝退毫无经验的普通观众。</p></div>
 <div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">轻量交互转化 — 以台词改写、故事接龙等低门槛玩法，将普通观众自然转化为内容创作者。</p></div>
 </div>
-</div>`,
+<div class="jm-insight"><p>走完整条链路后，最触动我的发现是：<b>最大的阻力不在创作环节，而在素材获取</b>——用户有想法，却找不到合规可用的影视素材。这个洞察让我们把素材库从辅助功能升级为产品护城河，也直接催生了后续「影视创意玩法」的设计方向。</p></div>`,
         },
         {
           heading: '产品框架：以消带产，影视素材赋能创作',
