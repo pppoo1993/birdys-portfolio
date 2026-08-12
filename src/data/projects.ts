@@ -42,7 +42,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '缘起：长视频平台的生态自救',
-          body: '在2025中旬，我接到组内任务，要为爱奇艺内部AI视频应用准备前期探索材料。作为被临时任命的设计owner，我需要站在公司的角度来思考爱奇艺为什么选择 AI 视频赛道。\n爱奇艺切入 AI 视频，本质上是一场<b>「生产端降本 & 流量端防御」</b>的生态自救。爱奇艺试图抓住时代基于用 AI 视频作为武器来破解长视频行业发展的三个瓶颈。',
+          body: '2025 年中，我以临时设计 owner 身份接手吃鲸AI前期探索。第一个问题不是「做什么功能」，而是「爱奇艺为什么要做这件事」——不理解业务动机，设计无从锚定。\n第一周我梳理出长视频行业三个结构性瓶颈：生产成本高、变现依赖单一、用户注意力流失。它们看似是业务问题，但每一个都指向了设计机会——AI 不只是降本，更是重构用户关系的杠杆。\n基于此，我将每个瓶颈拆解为「痛点 → 解法」的两层推演，作为后续所有设计决策的起点。',
                     html: `<style>
 .ba-section{display:flex;flex-direction:column;gap:16px;margin:0 auto;max-width:1080px}
 .ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:12px}
@@ -87,7 +87,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '挑战与破局：从 SWOT 模型看长视频的 AI 跨界',
-          body: '既然已经做了切入AI赛道的决定，我们需要结合当下的内外时常环节做出宏观分析长视频平台跨界 AI 的核心博弈格局，以此校准破局方向。',
+          body: '厘清三个瓶颈后，我需要更系统地去判断：爱奇艺跨界 AI 的真正筹码是什么，风险又在哪里。\nSWOT 帮我完成了这轮结构化思考。结论是：爱奇艺的核心优势不在技术，而在 IP 版权——这是我们唯一不可被复制的东西，也是设计应该死死咬住的锚点。',
           html: `<style>
 .quadrant-wrap{position:relative;width:100%;max-width:720px;margin:12px auto 32px}
 .quad-cell .qwatermark{position:absolute;top:6px;right:8px;font-size:80px;font-weight:900;color:rgba(255,255,255,.025);font-family:system-ui,-apple-system,sans-serif;line-height:1;pointer-events:none;z-index:0;letter-spacing:-0.02em}
@@ -118,7 +118,7 @@ export const projectData: Project[] = [
 </div>`,        },
         {
           heading: '定位重塑：消费型 AI 互动社区',
-          body: '对市场环节进行宏观分析后，我们发现若单纯复刻"专业AI视频创作工具"的模式，爱奇艺目前的会员订阅制盈利模式既无法覆盖巨额的算力成本，也无法攻克其他视频大模型工具的技术壁垒。因此，我们决定重新校准吃鲸AI的定位，避免陷入技术竞争的泥潭。',
+          body: 'SWOT 分析后，我面临关键抉择：做「专业 AI 创作工具」，还是另辟蹊径。\n专业工具路线看似合理——市场成熟、认知清晰。但两个致命问题让我否掉了它：爱奇艺订阅制扛不住 AI 视频的巨额算力成本；技术上也追不上深耕多年的视频大模型厂商。硬走这条路，设计再好也是给别人的战场铺路。\n这让我把思路从「做更好的工具」扭转为「让普通观众也能玩起来」。基于此提炼了三条设计原则：身份重构（观众→共创者）、体验降维（工具→消费级互动）、价值闭环（播放→二创→回流）。这三条成了后续所有设计决策的北极星。',
           html: `<style>
 .pos-highlight{color:#C7FF00;font-size:16px;font-weight:700;line-height:1.6;margin:8px 0 32px;text-align:center}
 .circle-row{display:flex;align-items:flex-start;justify-content:center;gap:0;max-width:1080px;margin:0 auto}
@@ -142,7 +142,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '底层逻辑：三层协同的创作引擎',
-          body: '结合爱奇艺站内<b>正版影视资源</b>优势、借助站外成熟的AI视频生成通用大模型技术，我们将产品架构解构为三层协同逻辑，旨在在优化研发成本的同时，最大化保障影视 IP 的生成品质。',
+          body: '定位明确后，下一步是设计产品架构。我的核心考量是：如何在借力外部 AI 模型的同时，让 UX 团队保持足够的控制权。\n最终选择了三层协同架构：底层对接爱奇艺 IP 资产（素材壁垒），中层接入三方模型（技术借力），顶层由 UX 完全掌控——以模板化交互包装底层算力，让用户感知不到「模型」的存在。',
           html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:16px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px auto;max-width:1080px}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important;gap:16px}.arch-row .arch-card{flex-direction:row!important}.arch-row .arch-arrow{display:none!important}}</style>
 <div class="arch-row">
 <div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
@@ -164,7 +164,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '用户旅程：从看剧观众到AI创作者',
-          body: '爱奇艺的用户从观众到创作者，中间隔着极高的行动门槛。为了拆解这个转化过程，团队通过用户体验地图，还原了用户真实行为与痛点：',
+          body: '架构落定后，我需要验证它是否能覆盖真实用户路径。我用旅程地图还原了从「看剧观众」到「AI 创作者」的完整转化链路。\n走完整条链路后，最触动我的发现是：<b>最大的阻力不在创作环节，而在素材获取</b>——用户有想法，却找不到合规可用的影视素材。这个洞察让我们把素材库从辅助功能升级为产品护城河，也直接催生了后续「影视创意玩法」的设计方向。',
           html: `<style>
 .jm-table{width:100%;border-collapse:collapse;margin-top:12px;table-layout:fixed}
 .jm-table th,.jm-table td{padding:24px 16px;font-size:12px;color:#A0A0A0;line-height:1.6;border-bottom:1px solid #222226;vertical-align:top;font-weight:400;text-align:left;word-break:break-word}
@@ -222,7 +222,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '产品框架：以消带产，影视素材赋能创作',
-          body: '我们在消费场景的末端无缝衔接创作触发点，将用户的观看行为转化为生产动力，打通「以消带产」的转化链路。并通过多元素材库为创作减负，其中核心打造的"影视创意玩法"与"爱奇艺影视库"构成了产品的核心护城河。',
+          body: '基于旅程洞察，我将产品框架收敛为「以消带产」的核心策略：在用户消费内容的高光时刻嵌入创作入口，将观看冲动直接转化为创作动力。\n框架左侧承载内容分发与消费闭环，右侧通过多层素材库降低创作门槛。其中「影视创意玩法」和「爱奇艺影视库」是两根核心支柱——前者降低创作的心理门槛，后者解决素材的获取障碍，二者共同构成了产品不可替代的体验壁垒。',
           html: `<style>
 .arch-flow{display:flex;flex-direction:column;align-items:center;gap:30px;max-width:1080px;margin:0 auto}
 .arch-flow-row{display:flex;align-items:center;justify-content:center;gap:20px;width:100%;max-width:1080px;margin:0 auto}
