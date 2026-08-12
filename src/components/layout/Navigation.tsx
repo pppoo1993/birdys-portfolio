@@ -237,7 +237,7 @@ export default function Navigation() {
         <div className="absolute inset-0 bg-[#0c0c0e]/50 backdrop-blur-md" />
         <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-b from-[#0c0c0e]/50 to-transparent translate-y-full" />
         <div className="relative flex items-center justify-between px-6 md:px-12 py-3">
-          <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" className="h-[24px] w-auto object-contain opacity-90 flex-shrink-0 self-center" />
+          <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" width="110" height="24" className="h-[24px] w-auto object-contain opacity-90 flex-shrink-0 self-center" />
           {/* Mobile: hamburger */}
           <button
             className="text-white/80 md:hidden"
@@ -285,7 +285,7 @@ export default function Navigation() {
       {/* Desktop: fixed left sidebar card */}
       <aside className="fixed top-3 left-3 bottom-3 z-40 hidden xl:flex w-[220px] flex-col bg-[#121214] border border-[#1f1f23] rounded-2xl shadow-[4px_0_30px_rgba(0,0,0,0.6)] overflow-hidden">
         <div className="px-5 pt-10 pb-6">
-          <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" className="h-[24px] w-auto object-contain opacity-90 flex-shrink-0 self-center" />
+          <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" width="110" height="24" className="h-[24px] w-auto object-contain opacity-90 flex-shrink-0 self-center" />
         </div>
         <nav className="flex-1 px-5">{desktopNavLinks}</nav>
 

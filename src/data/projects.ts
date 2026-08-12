@@ -87,7 +87,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '挑战与破局：从 SWOT 模型看长视频的 AI 跨界',
-          body: '在梳理三大业务痛点后，我们引入 SWOT 模型审视长视频平台跨界 AI 的核心博弈格局，以此校准破局方向。',
+          body: '既然已经做了切入AI赛道的决定，我们需要结合当下的内外时常环节做出宏观分析长视频平台跨界 AI 的核心博弈格局，以此校准破局方向。',
           html: `<style>
 .quadrant-wrap{position:relative;width:100%;max-width:720px;margin:12px auto 32px}
 .quad-cell .qwatermark{position:absolute;top:6px;right:8px;font-size:80px;font-weight:900;color:rgba(255,255,255,.025);font-family:system-ui,-apple-system,sans-serif;line-height:1;pointer-events:none;z-index:0;letter-spacing:-0.02em}
@@ -109,7 +109,7 @@ export const projectData: Project[] = [
 <div class="quadrant-grid">
 <div class="quadrant-inner">
 <div class="quadrant-center"></div>
-<div class="quad-cell"><span class="qwatermark">S</span><p class="qlabel">核心资产</p><p class="qtitle">IP 资产版权护城河</p><p class="qdesc">依托长视频生态，构建了独立 AI 工具难以复制的内容合规底座与粉丝素材库。</p></div>
+<div class="quad-cell"><span class="qwatermark">S</span><p class="qlabel">核心资产</p><p class="qtitle">IP 资产版权护城河</p><p class="qdesc">依托长视频生态，构建了独立 AI 工具难以复制的正版影视素材库。</p></div>
 <div class="quad-cell"><span class="qwatermark">W</span><p class="qlabel">内在瓶颈</p><p class="qtitle">用户认知内耗</p><p class="qdesc">影视消费的"被动喂养"与 AI 创作的"主动交互"存在心智抵触；生成质量的不可控，打破了用户对长视频精美质感的心理共识。</p></div>
 <div class="quad-cell"><span class="qwatermark">O</span><p class="qlabel">增量机遇</p><p class="qtitle">传播逻辑重构</p><p class="qdesc">改变长视频单向传播模式，通过 AI 赋能将影视 IP 转化为碎片化素材，实现从"单向观看"到"裂变式二次创作"的爆发性传播。</p></div>
 <div class="quad-cell"><span class="qwatermark">T</span><p class="qlabel">战略威胁</p><p class="qtitle">工具侧降维挤压</p><p class="qdesc">头部专业工具已完成心智垄断，若强行竞争生成技术，极易被工具类产品降维击穿。</p></div>
@@ -118,7 +118,7 @@ export const projectData: Project[] = [
 </div>`,        },
         {
           heading: '定位重塑：消费型 AI 互动社区',
-          body: '基于 SWOT 分析，我们发现若单纯复刻"专业AI视频创作工具"的模式，不仅无法解决巨额算力成本与 ARPU 的结构矛盾，更将陷入长视频用户对"被动娱乐"与"主动创作"之间的认知内耗。因此，我们确立了从"工具范式"转向"社区范式"的战略重构——不再通过技术硬拼获取用户，而是通过互动降低创作门槛。',
+          body: '对市场环节进行宏观分析后，我们发现若单纯复刻"专业AI视频创作工具"的模式，爱奇艺目前的会员订阅制盈利模式既无法覆盖巨额的算力成本，也无法攻克其他视频大模型工具的技术壁垒。因此，我们决定重新校准吃鲸AI的定位，避免陷入技术竞争的泥潭。',
           html: `<style>
 .pos-highlight{color:#C7FF00;font-size:16px;font-weight:700;line-height:1.6;margin:8px 0 32px;text-align:center}
 .circle-row{display:flex;align-items:flex-start;justify-content:center;gap:0;max-width:1080px;margin:0 auto}
@@ -133,26 +133,26 @@ export const projectData: Project[] = [
 </style>
 <p class="pos-highlight">构建低门槛、轻操作的消费型 AI 互动社区</p>
 <div class="circle-row">
-<div class="circle-col"><div class="circle-node"><span>身份重构</span></div><p class="circle-sub">从"被动观看者"到"生态共创者"</p><p class="circle-desc">引导用户从单一的"内容观众"转型为"生态共创者"，通过参与创作实现社区归属。</p></div>
+<div class="circle-col"><div class="circle-node"><span>身份重构</span></div><p class="circle-sub">从"被动观看者"到"生态共创者"</p><p class="circle-desc">爱奇艺站内已有大量的重视用户，我们需引导用户从单一的"内容观众"转型为"生态共创者"，通过参与创作实现社区归属。</p></div>
 <div class="circle-op" style="font-weight:700">+</div>
-<div class="circle-col"><div class="circle-node"><span>体验降维</span></div><p class="circle-sub">从"重度生产力"到"消费级互动"</p><p class="circle-desc">将复杂模型交互隐藏于播放场景，让 AI 创作如同刷视频般自然、无感。</p></div>
+<div class="circle-col"><div class="circle-node"><span>体验降维</span></div><p class="circle-sub">从"重度生产力"到"消费级互动"</p><p class="circle-desc">将复杂模型交互隐藏于播放场景，并降低创作的交互门槛，让 AI 创作如同刷视频般自然、无感。</p></div>
 <div class="circle-op" style="font-weight:700">→</div>
 <div class="circle-col"><div class="circle-node"><span>价值闭环</span></div><p class="circle-sub">从"单向播放"到"IP 增值循环"</p><p class="circle-desc">打通消费、创作与传播循环，使 AI 二创成为激活影视 IP 版权价值的增值引擎。</p></div>
 </div>`,
         },
         {
-          heading: '体验架构设计：AI创作的底层逻辑',
-          body: '基于<b>「以消带产」</b>的核心策略，我们将产品架构解构为三层协同逻辑，旨在通过对第三方底层模型的场景化精调，在优化研发成本的同时，最大化保障影视 IP 的生成品质。',
+          heading: '底层逻辑：三层协同的创作引擎',
+          body: '结合爱奇艺站内<b>正版影视资源</b>优势、借助站外成熟的AI视频生成通用大模型技术，我们将产品架构解构为三层协同逻辑，旨在在优化研发成本的同时，最大化保障影视 IP 的生成品质。',
           html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:16px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px auto;max-width:1080px}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important;gap:16px}.arch-row .arch-card{flex-direction:row!important}.arch-row .arch-arrow{display:none!important}}</style>
 <div class="arch-row">
 <div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">生态输入层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">爱奇艺正片、IP 资产、版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">对接爱奇艺独家正片与 IP 资产，提供版权合规的二创素材，消除用户的冷启动摩擦。</p></div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">爱奇艺影视 IP 资产、版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">对接爱奇艺独家正片与 IP 资产，提供版权合规的二创素材，消除用户的冷启动摩擦。</p></div>
 </div>
 <span class="arch-arrow">→</span>
 <div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
 <div><h4 class="arch-h4">核心逻辑层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用模型 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">接入行业领先模型，通过 Prompt 工程与工作流定制，将模糊的用户意图转化为精准的场景算力。</p></div>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用模型 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">接入行业领先模型（可灵、Seedance），通过内部AI团队定制化调优，将模糊的用户意图转化为精准的场景算力。</p></div>
 </div>
 <span class="arch-arrow">→</span>
 <div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
@@ -189,8 +189,8 @@ export const projectData: Project[] = [
 </thead>
 <tbody>
 <tr><td class="lbl">用户需求</td><td>看完热播剧后，渴望找到同好圈层，讨论剧情、分享玩梗内容。</td><td>浏览二创作品时产生表达欲，希望了解参与创作的门槛与方式。</td><td>需要高清合规的影视素材作为二创基础，保障产出质量与效率。</td><td>不想面对复杂工具，希望用最简单的方式快速完成创作。</td></tr>
-<tr><td class="lbl">核心卡点</td><td><span class="jm-kw">误当成传统播放器</span>消费惯性过强，缺乏社区感知，用户看完即走、难以留存。</td><td><span class="jm-kw">不知道写什么</span>面对空白的自由创作环境，缺少引导和方向，普通用户极易放弃。</td><td><span class="jm-kw">素材获取链路断裂</span>站外缺乏合规版权，录屏、切片流转的沉没成本极高。</td><td><span class="jm-kw">工具门槛过高</span>复杂的视频编辑与参数设置，足以劝退毫无经验的普通观众。</td></tr>
-<tr><td class="lbl grn">设计策略</td><td class="strat"><span class="st w">建立社区认知</span>以双列瀑布流承载二创内容，用户进场即感知"能玩、能互动"的社区氛围，而非传统播放器。</td><td class="strat"><span class="st w">模板化降低门槛</span>提供海量爆款模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。</td><td class="strat"><span class="st w">站内素材闭环</span>一站式提供官方高清影视切片，打通独家版权资产到创作上游的完整链路。</td><td class="strat"><span class="st w">轻量交互转化</span>以台词改写、故事接龙等低门槛玩法，将普通观众自然转化为内容创作者。</td></tr>
+<tr><td class="lbl">核心卡点</td><td><span class="jm-kw">误当成传统播放器</span>消费惯性过强，缺乏社区感知，用户看完即走、难以留存。</td><td><span class="jm-kw">不知道写什么</span>面对空白的自由创作环境，缺少引导和方向，普通用户极易放弃。</td><td><span class="jm-kw">素材获取链路断裂</span>用户缺乏获取正版素材的渠道，录屏、切片成本既高有面临版权风险。</td><td><span class="jm-kw">工具门槛过高</span>复杂的视频编辑与参数设置，足以劝退毫无经验的普通观众。</td></tr>
+<tr><td class="lbl grn">设计策略</td><td class="strat"><span class="st w">建立社区认知</span>让用户进场即感知"能玩、能互动"的社区氛围，而非传统播放器。</td><td class="strat"><span class="st w">模板化降低门槛</span>提供海量爆款模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。</td><td class="strat"><span class="st w">站内素材闭环</span>一站式提供官方高清影视切片，打通独家版权资产到创作上游的完整链路。</td><td class="strat"><span class="st w">轻量交互转化</span>以台词改写、故事接龙等低门槛玩法，将普通观众自然转化为内容创作者。</td></tr>
 </tbody>
 </table>
 <div class="jm-mobile">
@@ -907,7 +907,7 @@ export const projectData: Project[] = [
 .p11-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:0.06em;position:relative;z-index:1}
 .p11-img-wrap{display:flex;flex-direction:column;align-items:center}
 .p11-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
-.p11-diagram{width:480px;height:auto;display:block;border-radius:8px;border:1px solid #27272a}
+.p11-diagram{width:480px;height:auto;display:block}
 @media(max-width:767px){.p11-row{flex-direction:column!important;gap:32px}.p11-col{width:100%!important}.p11-col-desc{max-width:100%!important}.p11-placeholder{width:100%;max-width:150px}.p11-img-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%}.p11-diagram{width:100%;max-width:480px}}
 </style>
 <div class="p11-row">
@@ -922,7 +922,7 @@ export const projectData: Project[] = [
 <div class="p11-col">
 <div class="p11-col-title">送礼效率优化</div>
 <p class="p11-col-desc" style="max-width:480px">通过<b>入口重构与连击机制</b>，将复杂的支付决策转化为高频互动的"感官节奏"，实现从动作触发到情感回馈的秒级响应。</p>
-<div data-preview style="display:inline-block"><img class="p11-diagram" src="/birdys-portfolio/images/whiteboard_exported_image.png" alt="送礼效率优化" /></div>
+<img class="p11-diagram" src="/birdys-portfolio/images/whiteboard_exported_image.png" alt="送礼效率优化" />
 </div>
 </div>`,
         },
@@ -954,17 +954,17 @@ export const projectData: Project[] = [
 <p class="p12-subdesc">从"孤立功能"到"组件矩阵"，通过构建标准化的交互模组，实现多元化商业玩法的高效迭代。</p>
 <div class="p12-flow">
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><span class="p12-flow-label">送礼入口占位图</span></div>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-tag.png" alt="玩法标签" style="height:100%;width:auto;display:block" /></div>
 <div class="p12-flow-text"><strong>送礼入口</strong>智能排布，最大化露出</div>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><span class="p12-flow-label">承接浮层占位图</span></div>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-entry.png" alt="活动入口" style="height:100%;width:auto;display:block" /></div>
 <div class="p12-flow-text"><strong>承接浮层</strong>沉浸式情感激励</div>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><span class="p12-flow-label">反馈动效占位图</span></div>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-overlay.png" alt="活动浮层" style="height:100%;width:auto;display:block" /></div>
 <div class="p12-flow-text"><strong>反馈动效</strong>即时视觉回馈</div>
 </div>
 </div>
@@ -982,6 +982,7 @@ export const projectData: Project[] = [
         </style>
         <div class="p12b-wrap">
         <p class="p12b-text">标准化的交互模组支撑了<b>冠名送礼、定制礼物、梯度礼物、心动套组、盲盒礼物</b>…<br>多元玩法快速落地，极大提升上线效率。</p>
+        <img src="/birdys-portfolio/images/play-methods.png" alt="玩法" style="width:100%;max-width:800px;height:auto;display:block;margin:24px auto 0" />
         </div>`,
         },
         // ═══ P13 终极玩法 ═══
