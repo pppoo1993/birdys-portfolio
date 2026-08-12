@@ -769,7 +769,7 @@ export const projectData: Project[] = [
           html: `<style>
 .ap-split{display:flex;gap:48px;align-items:center;max-width:800px;margin:0 auto}
 .ap-left{flex:0 0 280px;position:relative}
-.ap-phone{width:220px;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:2px solid #27272a;border-radius:24px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin:0 auto}
+.ap-phone{width:180px;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin:0 auto}
 .ap-phone::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .ap-right{flex:1;display:flex;flex-direction:column;gap:24px;max-width:380px}
 .ap-module{border-left:2px solid #333333;padding-left:20px}
@@ -784,7 +784,7 @@ export const projectData: Project[] = [
 <div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">我的页「一起聊」入口</div>
 <div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">搜索结果页「一起聊」入口</div>
 </div>
-<div class="ap-phone"><img src="/birdys-portfolio/images/agg-page.png" alt="聚合页" style="height:100%;width:auto;display:block" /></div>
+<div class="ap-phone"><img src="/birdys-portfolio/images/agg-page.png" alt="聚合页" style="width:100%;height:auto;display:block" /></div>
 </div>
 <div class="ap-right">
 <div class="ap-module"><p class="ap-module-title">直播 / 预约动态</p><p class="ap-module-desc"><b>时间心智重构</b>——通过"正在直播、预约中、回看"多状态时间轴，建立用户对明星陪看的长期时间预期。</p></div>
@@ -800,10 +800,10 @@ export const projectData: Project[] = [
           html: `<style>
 .tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:400}
 .tx-p b{color:#FFFFFF;font-weight:600}
-.entry-split{display:flex;gap:16px;align-items:stretch;margin:28px auto;width:fit-content;max-width:100%}
-.entry-left{flex:1.2;display:flex;gap:16px;align-items:stretch;min-width:0}
-.entry-right{flex:0.8;display:flex;flex-direction:column;gap:16px;min-width:0}
-.entry-img-box{flex:1;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168}
+.entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;width:fit-content;max-width:100%}
+.entry-left{flex:none;display:flex;gap:16px;align-items:stretch}
+.entry-right{flex:1;display:flex;flex-direction:column;gap:16px;min-width:0;max-width:380px}
+.entry-img-box{flex:0 0 auto;width:150px;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168}
 .entry-img-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .entry-img-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1}
 .p7-card{background:transparent;border:none;padding:0 0 0 30px;position:relative}
@@ -852,7 +852,7 @@ export const projectData: Project[] = [
 @media(max-width:767px){.im-row{flex-wrap:wrap;gap:12px}}
 </style>
 <div class="im-row">
-<div class="im-item"><p class="im-title">分层治理示意</p><div data-preview class="im-placeholder" style="width:511px;height:390px"><img src="/birdys-portfolio/images/im-layers.png" alt="分层治理" style="width:100%;height:100%;display:block" /></div></div>
+<div class="im-item"><p class="im-title">分层治理示意</p><img src="/birdys-portfolio/images/im-layers.png" alt="分层治理" style="width:511px;height:390px;display:block;border-radius:6px" /></div>
 <div class="im-item"><p class="im-title">控件隐藏</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-player.png" alt="精简播控" style="height:100%;width:auto;display:block" /></div></div>
 <div class="im-item"><p class="im-title">动态避让</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-avoid.png" alt="动态避让" style="height:100%;width:auto;display:block" /></div></div>
 </div>`,
@@ -905,6 +905,8 @@ export const projectData: Project[] = [
 .p11-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:150px;flex-shrink:0}
 .p11-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 .p11-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:0.06em;position:relative;z-index:1}
+.p11-img-wrap{display:flex;flex-direction:column;align-items:center}
+.p11-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
 .p11-diagram{width:480px;height:auto;display:block;border-radius:8px;border:1px solid #27272a}
 @media(max-width:767px){.p11-row{flex-direction:column!important;gap:32px}.p11-col{width:100%!important}.p11-col-desc{max-width:100%!important}.p11-placeholder{width:100%;max-width:150px}.p11-img-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%}.p11-diagram{width:100%;max-width:480px}}
 </style>
@@ -913,8 +915,8 @@ export const projectData: Project[] = [
 <div class="p11-col-title">资产流通体系</div>
 <p class="p11-col-desc" style="max-width:316px">深度整合<b>奇点支付与VIP积分抵扣</b>，打通会员权益，为用户提供低门槛的参与路径。</p>
 <div class="p11-img-row">
-<div data-preview class="p11-placeholder"><span>奇点支付入口</span></div>
-<div data-preview class="p11-placeholder"><span>会员抵扣页</span></div>
+<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/payment-method.png" alt="支付方式" style="height:100%;width:auto;display:block" /></div><span class="p11-img-label">支付方式</span></div>
+<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/points-deduct.png" alt="开启积分抵扣" style="height:100%;width:auto;display:block" /></div><span class="p11-img-label">开启积分抵扣</span></div>
 </div>
 </div>
 <div class="p11-col">
