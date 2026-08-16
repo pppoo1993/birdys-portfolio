@@ -5,14 +5,14 @@ export const projectData: Project[] = [
     id: 'project-3',
     title: '吃鲸AI',
     description:
-      '爱奇艺孵化的 AI 视频互动社区。以「以消带产」策略打通从观看到创作的链路，通过台词改写、故事接龙等轻量玩法激活影视 IP 资产。',
+      '爱奇艺孵化的 AI 视频互动社区。用「以消带产」策略打通从观看到创作的链路，通过台词改写、故事接龙等轻量玩法激活影视 IP 资产。以“把 AI 生成的不可控，校准为可控的体验”为核心设计方法论。',
     imagePath: 'https://picsum.photos/seed/project3/1200/800',
-    techStack: ['0→1 设计 Owner', '以消带产策略', 'AI 内容生态'],
+    techStack: ['0→1 设计 Owner', 'AI 交互设计', '玩法矩阵'],
     sourceUrl: 'https://github.com',
     detail: {
-      pageTitle: '吃鲸AI | AI 视频互动社区 · 从消费到共创',
+      pageTitle: '吃鲸AI | 从消费到共创',
       mainTitle: '',
-      subtitle: 'AI 视频互动社区 · 从消费到共创',
+      subtitle: '从消费到共创',
       sections: [
         {
           heading: '目录',
@@ -36,8 +36,8 @@ export const projectData: Project[] = [
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">项目背景</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">缘起</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">挑战与破局</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">定位重塑</span><span class="toc-page-num">P04</span></div><div class="toc-page-row" data-goto="4"><span class="toc-page-name">设计目标</span><span class="toc-page-num">P05</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
 <div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="5"><div><p class="toc-card-title">架构与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="5"><span class="toc-page-name">用户旅程</span><span class="toc-page-num">P06</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">产品框架</span><span class="toc-page-num">P07</span></div><div class="toc-page-row" data-goto="7"><span class="toc-page-name">底层逻辑</span><span class="toc-page-num">P08</span></div></div></div><span class="toc-card-tag">/ Architecture</span></div></div>
-<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="8"><div><p class="toc-card-title" style="margin-bottom:16px">交互呈现</p><div class="toc-card-pages sm"><div class="toc-page-row" data-goto="8"><span class="toc-page-name">以消带产</span><span class="toc-page-num">P09–10</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">创作中枢</span><span class="toc-page-num">P11–12</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">台词改写</span><span class="toc-page-num">P13</span></div><div class="toc-page-row" data-goto="13"><span class="toc-page-name">故事接龙</span><span class="toc-page-num">P14–16</span></div></div></div><span class="toc-card-tag">/ Interaction</span></div></div>
-<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="16"><div><p class="toc-card-title">沉淀与思考</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="16"><span class="toc-page-name">尾声</span><span class="toc-page-num">P17</span></div><div class="toc-page-row" data-goto="17"><span class="toc-page-name">沉淀资产</span><span class="toc-page-num">P18</span></div></div></div><span class="toc-card-tag">/ Reflection</span></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="8"><div><p class="toc-card-title">交互呈现</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="8"><span class="toc-page-name">以消带产</span><span class="toc-page-num">P09–10</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">创作中枢</span><span class="toc-page-num">P11–12</span></div><div class="toc-page-row" data-goto="12"><span class="toc-page-name">台词改写</span><span class="toc-page-num">P13</span></div><div class="toc-page-row" data-goto="13"><span class="toc-page-name">故事接龙</span><span class="toc-page-num">P14–16</span></div></div></div><span class="toc-card-tag">/ Interaction</span></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="16"><div><p class="toc-card-title">沉淀与思考</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="16"><span class="toc-page-name">尾声</span><span class="toc-page-num">P17</span></div><div class="toc-page-row" data-goto="17"><span class="toc-page-name">价值复盘</span><span class="toc-page-num">P18</span></div><div class="toc-page-row" data-goto="18"><span class="toc-page-name">未竟的事业</span><span class="toc-page-num">P19</span></div></div></div><span class="toc-card-tag">/ Reflection</span></div></div>
 </div>`,
         },
         {
@@ -87,7 +87,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '挑战与破局：找到不可复制的锚点',
-          body: '厘清三个瓶颈后，我需要更系统地去判断：爱奇艺跨界 AI 的真正优势是什么，风险又在哪里。\n\n我利用 SWOT 成了这轮结构化思考。结论是：<b>爱奇艺的核心优势不在技术，而在IP 版权</b>—这是我们不可被复制的东西，也是设计应该死死咬住的锚点。',
+          body: '厘清三个瓶颈后，我需要更系统地去判断：爱奇艺跨界 AI 的真正优势是什么，风险又在哪里。\n\n我利用 <b>SWOT</b> 完成了这轮结构化思考。结论是：<b>爱奇艺的核心优势不在技术，而在 IP 版权</b>——这是我们不可被复制的东西，也是设计应该死死咬住的锚点。',
           html: `<style>
 .quadrant-wrap{position:relative;width:100%;max-width:720px;margin:12px auto 32px}
 .quad-cell .qwatermark{position:absolute;top:6px;right:8px;font-size:80px;font-weight:900;color:rgba(255,255,255,.025);font-family:system-ui,-apple-system,sans-serif;line-height:1;pointer-events:none;z-index:0;letter-spacing:-0.02em}
@@ -118,7 +118,7 @@ export const projectData: Project[] = [
 </div>`,        },
         {
           heading: '定位重塑：消费型 AI 互动社区',
-          body: 'SWOT 分析后，我们面临产品定位的关键抉择：是否要做一个「专业 AI 创作工具」。\n\n专业工具路线看似合理—市场成熟、认知清晰。但两个致命问题让我们否掉了它：爱奇艺单一的营收模式无法cover AI 视频的巨额算力成本；技术上难以企及深耕多年的视频大模型厂商。\n\n因此我们选择了另一条路：做「消费型 AI 互动社区」，以轻量玩法和 IP 资产优势，打造普通观众也能参与的二创生态。',
+          body: 'SWOT 分析后，我们面临产品定位的关键抉择：<b>是否要做一个「专业 AI 创作工具」</b>。\n\n专业工具路线看似合理—市场成熟、认知清晰。但两个致命问题让我们否掉了它：爱奇艺单一的营收模式无法覆盖 AI 视频的巨额算力成本；技术上难以企及深耕多年的视频大模型厂商。\n\n因此我们选择了另一条路：做「消费型 AI 互动社区」，以轻量玩法和 IP 资产优势，打造普通观众也能参与的二创生态。',
           html: `<style>
 .decision-compare{display:flex;align-items:center;justify-content:center;gap:24px;margin:32px 0;flex-wrap:wrap}
 .decision-opt{display:flex;flex-direction:column;align-items:center;gap:8px;padding:24px 32px;border-radius:6px;min-width:260px;position:relative;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08)}
@@ -151,17 +151,42 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '设计目标：基于设计思维三要素推导',
-          body: '确定产品方向后，我基于 IDEO 设计思维的三要素框架：「Desirability：为谁设计」 / 「Feasibility：如何落地」 / 「Viability：怎样持续」进行吃鲸AI设计目标的推导。',
+          heading: '设计目标：基于设计要素进行推导',
+          body: '确定产品方向后，我基于<b> IDEO 设计思维的三要素框架</b>对吃鲸AI的设计目标进行推导。',
           html: `<style>
-.principles-img-wrap{text-align:center;margin:24px 0}
-.principles-img{width:100%;max-width:600px;display:block;margin:0 auto}
+.goal-row{display:flex;justify-content:center;align-items:flex-start;gap:clamp(32px,3.2vw,48px);max-width:860px;margin:28px auto}
+.goal-col{flex:1;display:flex;flex-direction:column;align-items:center;min-width:0}
+.goal-map-dv{color:#C7FF00;font-size:11px;font-weight:600;letter-spacing:0.04em}
+.goal-map-q{color:#71717a;font-size:12px;margin-top:2px;font-weight:600}
+.goal-map-down{color:#52525b;font-size:16px;margin:8px 0}
+.circle-node{width:110px;height:110px;border-radius:50%;border:1px solid rgba(255,255,255,0.08);background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;text-align:center;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.circle-node:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5)}
+.circle-node span{color:#FFFFFF;font-size:14px;font-weight:600;line-height:1.3;padding:10px}
+.circle-sub{color:#FFFFFF;font-size:12px;font-weight:600;text-align:center;margin:14px 0 6px;width:100%;white-space:nowrap}
+.circle-desc{color:#A0A0A0;font-size:11px;line-height:1.6;font-weight:400;text-align:center;margin:0;width:100%;white-space:nowrap}
+@media(max-width:767px){.goal-row{flex-direction:column;gap:24px}.goal-col{width:100%}.circle-node{width:90px;height:90px}.circle-node span{font-size:12px}}
 </style>
-<div class="principles-img-wrap"><img class="principles-img" src="/birdys-portfolio/images/chijing-principles.png" alt="吃鲸设计原则推演" /></div>`,
+<div class="goal-row">
+<div class="goal-col">
+<span class="goal-map-dv">Desirability</span><span class="goal-map-q">为谁设计</span><span class="goal-map-down">↓</span>
+<div class="circle-node"><span>身份重构</span></div>
+<p class="circle-sub">从"被动观看者"到"生态共创者"</p><p class="circle-desc">引导观众转型为共创者，实现社区归属。</p>
+</div>
+<div class="goal-col">
+<span class="goal-map-dv">Feasibility</span><span class="goal-map-q">怎样落地</span><span class="goal-map-down">↓</span>
+<div class="circle-node"><span>体验降维</span></div>
+<p class="circle-sub">从"重度生产力"到"消费级互动"</p><p class="circle-desc">隐藏模型复杂度，让创作像刷视频一样自然。</p>
+</div>
+<div class="goal-col">
+<span class="goal-map-dv">Viability</span><span class="goal-map-q">如何持续</span><span class="goal-map-down">↓</span>
+<div class="circle-node"><span>价值闭环</span></div>
+<p class="circle-sub">从"单向播放"到"IP增值循环"</p><p class="circle-desc">打通消费-创作-传播循环，激活IP增值。</p>
+</div>
+</div>`,
         },
         {
           heading: '用户旅程：从看剧观众到AI创作者',
-          body: '三条设计目标明确后，我需要验证这些方向是否真的切中了用户痛点。我用旅程地图还原了从<b>「看剧观众」到「AI 创作者」</b>的完整转化链路。',
+          body: '三条设计目标明确后，我需要验证这些方向是否真的切中了用户痛点。我们用<b>旅程地图</b>还原了从<b>「看剧观众」到「AI 创作者」</b>的完整转化链路。',
           html: `<style>
 .jm-insight{background:rgba(199,255,0,0.04);border-left:3px solid #C7FF00;padding:14px 18px;border-radius:0 6px 6px 0;margin-top:20px;max-width:1080px;margin-left:auto;margin-right:auto}
 .jm-insight p{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
@@ -185,44 +210,44 @@ export const projectData: Project[] = [
 </style>
 <table class="jm-table">
 <thead>
-<tr><th class="lbl">阶段</th><th><span class="t">探索发现</span><span class="s">寻找同好与共鸣</span></th><th><span class="t">激发灵感</span><span class="s">评估创作门槛</span></th><th class="core"><span class="t">获取资源</span><span class="s">获取版权素材 (核心)</span></th><th><span class="t">创作生产</span><span class="s">快速产出与分享</span></th></tr>
+<tr><th class="lbl">阶段</th><th><span class="t">探索发现</span><span class="s">寻找同好与共鸣</span></th><th><span class="t">激发灵感</span><span class="s">评估创作门槛</span></th><th><span class="t">获取资源</span><span class="s">获取版权素材</span></th><th><span class="t">创作生产</span><span class="s">快速产出与分享</span></th></tr>
 </thead>
 <tbody>
-<tr><td class="lbl">用户需求</td><td>看完热播剧后，渴望找到同好圈层，讨论剧情、分享玩梗内容。</td><td>浏览二创作品时产生表达欲，希望了解参与创作的门槛与方式。</td><td>需要高清合规的影视素材作为二创基础，保障产出质量与效率。</td><td>不想面对复杂工具，希望用最简单的方式快速完成创作。</td></tr>
-<tr><td class="lbl">核心卡点</td><td><span class="jm-kw">误当成传统播放器</span>消费惯性过强，缺乏社区感知，用户看完即走、难以留存。</td><td><span class="jm-kw">不知道写什么</span>面对空白的自由创作环境，缺少引导和方向，普通用户极易放弃。</td><td><span class="jm-kw">素材获取链路断裂</span>用户缺乏获取正版素材的渠道，录屏、切片成本既高有面临版权风险。</td><td><span class="jm-kw">工具门槛过高</span>复杂的视频编辑与参数设置，足以劝退毫无经验的普通观众。</td></tr>
-<tr><td class="lbl grn">设计策略</td><td class="strat"><span class="st w">建立社区认知</span>让用户进场即感知"能玩、能互动"的社区氛围，而非传统播放器。</td><td class="strat"><span class="st w">模板化降低门槛</span>提供海量爆款模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。</td><td class="strat"><span class="st w">站内素材闭环</span>一站式提供官方高清影视切片，打通独家版权资产到创作上游的完整链路。</td><td class="strat"><span class="st w">轻量交互转化</span>以台词改写、故事接龙等低门槛玩法，将普通观众自然转化为内容创作者。</td></tr>
+<tr><td class="lbl">用户需求</td><td>看完热播剧，想找同好讨论剧情、玩梗。</td><td>看二创作品产生表达欲，想了解创作门槛。</td><td>需要高清合规素材作为二创基础。</td><td>不想用复杂工具，想快速完成创作。</td></tr>
+<tr><td class="lbl">核心卡点</td><td><span class="jm-kw">误当成传统播放器</span>消费惯性过强，看完即走。</td><td><span class="jm-kw">不知道写什么</span>空白画布，缺少引导。</td><td><span class="jm-kw">素材获取链路断裂</span>缺乏正版渠道，版权风险高。</td><td><span class="jm-kw">工具门槛过高</span>复杂编辑参数，劝退普通观众。</td></tr>
+<tr><td class="lbl grn">设计策略</td><td class="strat"><span class="st w">建立社区认知</span>营造能看、能玩的社区氛围。</td><td class="strat"><span class="st w">模板化降低门槛</span>爆款模板 + 引导教程。</td><td class="strat"><span class="st w">站内素材闭环</span>提供官方高清影视切片。</td><td class="strat"><span class="st w">轻量交互转化</span>低门槛交互创意玩法。</td></tr>
 </tbody>
 </table>
 <div class="jm-mobile">
 <div class="jm-mobile-col">
 <div class="jm-mobile-col-header">探索发现 · 寻找同好与共鸣</div>
-<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">看完热播剧后，渴望找到同好圈层，讨论剧情、分享玩梗内容。</p></div>
-<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">误当成传统播放器</span>消费惯性过强，缺乏社区感知，用户看完即走、难以留存。</p></div>
-<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">建立社区认知 — 以双列瀑布流承载二创内容，用户进场即感知"能玩、能互动"的社区氛围。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">看完热播剧，想找同好讨论剧情、玩梗。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">误当成传统播放器</span>消费惯性过强，看完即走。</p></div>
+<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">建立社区认知 — 双列瀑布流营造社区氛围。</p></div>
 </div>
 <div class="jm-mobile-col">
 <div class="jm-mobile-col-header">激发灵感 · 评估创作门槛</div>
-<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">浏览二创作品时产生表达欲，希望了解参与创作的门槛与方式。</p></div>
-<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">不知道写什么</span>面对空白的自由创作环境，缺少引导和方向，普通用户极易放弃。</p></div>
-<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">模板化降低门槛 — 提供海量爆款模板与引导教程，将发散式创作转化为低阻力的"选择即创作"。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">看二创作品产生表达欲，想了解创作门槛。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">不知道写什么</span>空白画布，缺少引导。</p></div>
+<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">模板化降低门槛 — 爆款模板 + 引导教程。</p></div>
 </div>
 <div class="jm-mobile-col">
-<div class="jm-mobile-col-header">获取资源 · 获取版权素材 (核心)</div>
-<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">需要高清合规的影视素材作为二创基础，保障产出质量与效率。</p></div>
-<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">素材获取链路断裂</span>站外缺乏合规版权，录屏、切片流转的沉没成本极高。</p></div>
-<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">站内素材闭环 — 一站式提供官方高清影视切片，打通独家版权资产到创作上游的完整链路。</p></div>
+<div class="jm-mobile-col-header">获取资源 · 获取版权素材</div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">需要高清合规素材作为二创基础。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">素材获取链路断裂</span>缺乏正版渠道，版权风险高。</p></div>
+<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">站内素材闭环 — 官方高清影视切片。</p></div>
 </div>
 <div class="jm-mobile-col">
 <div class="jm-mobile-col-header">创作生产 · 快速产出与分享</div>
-<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">不想面对复杂工具，希望用最简单的方式快速完成创作。</p></div>
-<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">工具门槛过高</span>复杂的视频编辑与参数设置，足以劝退毫无经验的普通观众。</p></div>
-<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">轻量交互转化 — 以台词改写、故事接龙等低门槛玩法，将普通观众自然转化为内容创作者。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">用户需求</span><p class="jm-mobile-col-desc">不想用复杂工具，想快速完成创作。</p></div>
+<div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">工具门槛过高</span>复杂编辑参数，劝退普通观众。</p></div>
+<div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">轻量交互转化 — 低门槛影视创意玩法。</p></div>
 </div>
 <div class="jm-insight"><p>走完整条链路后，我用 Fogg 行为模型（B=MAT）重新审视：行为发生需要 Motivation、Ability、Trigger 三者同时触发。链路中用户不缺 Motivation 和 Trigger——真正断裂的是 Ability，而素材获取正是 Ability 的关键瓶颈。\n\n由此我做出关键判断：<b>素材库不能只做功能模块，必须升级为产品护城河</b>。这个判断也直接催生了后续「影视创意玩法」的设计方向。</p></div>`,
         },
         {
-          heading: '产品框架：以消带产，影视素材赋能创作',
-          body: '基于旅程洞察，我将产品框架收敛为「以消带产」的核心策略：在用户消费内容的高光时刻嵌入创作入口，将观看冲动直接转化为创作动力。\n\n框架左侧承载内容分发与消费闭环，右侧通过多层素材库降低创作门槛。其中「影视创意玩法」和「爱奇艺影视库」是两根核心支柱——前者降低创作的心理门槛，后者解决素材的获取障碍，二者共同构成了产品不可替代的体验壁垒。',
+          heading: '产品框架：以消带产，从消费到创作',
+          body: '基于旅程洞察，我们将产品框架收敛为<b>「以消带产」</b>的核心策略：在用户消费内容的高光时刻嵌入创作入口，<b>将观看冲动直接转化为创作动力</b>。\n\n框架左侧承载内容分发与消费闭环，右侧通过多层素材库降低创作门槛。其中<b>「影视创意玩法」</b>和<b>「爱奇艺影视库」</b>是两根核心支柱—前者降低创作的心理门槛，后者解决素材的获取障碍，二者共同构成了产品不可替代的<b>体验壁垒</b>。',
           html: `<style>
 .arch-flow{display:flex;flex-direction:column;align-items:center;gap:30px;max-width:1080px;margin:0 auto}
 .arch-flow-row{display:flex;align-items:center;justify-content:center;gap:20px;width:100%;max-width:1080px;margin:0 auto}
@@ -246,7 +271,7 @@ export const projectData: Project[] = [
 </style>
 <div class="arch-flow">
 <div class="arch-flow-row">
-<div class="arch-col"><div class="arch-col-label">分发页</div><div class="arch-col-items"><div class="arch-item">首页瀑布流</div><div class="arch-item">精选播放器</div><div class="arch-item">模板</div></div></div>
+<div class="arch-col"><div class="arch-col-label">分发页</div><div class="arch-col-items"><div class="arch-item">首页瀑布流</div><div class="arch-item">沉浸流播放器</div><div class="arch-item">模板/教程</div></div></div>
 <div class="arch-arrow"><div class="arch-arrow-line"></div><span class="arch-arrow-sym">↓</span><span class="arch-arrow-label">以消带产</span></div>
 <div class="arch-col"><div class="arch-col-label">创作页</div><div class="arch-col-items"><div class="arch-item">通用视频生成</div><div class="arch-item hl">影视创意玩法</div><div class="arch-item">上传AI视频作品</div></div></div>
 <div class="arch-arrow rev"><div class="arch-arrow-line"></div><span class="arch-arrow-sym">↑</span><span class="arch-arrow-label">赋能创作</span></div>
@@ -256,29 +281,29 @@ export const projectData: Project[] = [
         },
         {
           heading: '底层逻辑：三层协同的创作引擎',
-          body: '业务框架确定后，接下来要解决底层实现的问题。我的核心考量是：如何在借力外部 AI 模型的同时，让 UX 团队保持足够的控制权。\n\n最终选择了三层协同架构：底层对接爱奇艺 IP 资产（素材壁垒），中层接入三方模型（技术借力），顶层由 UX 完全掌控——以模板化交互包装底层算力，让用户感知不到「模型」的存在。',
+          body: '业务闭环确定了，但技术底座仍是难题：AI 生成依赖强大的基础模型，而爱奇艺不能自研（算力成本高，技术迭代无法追不上头部厂商）。\n\n因此借助外部厂商模型成为必然，但也意味着要承受外部模型不可控的风险。我的解法是「分层隔离」：',
           html: `<style>@media(max-width:767px){.arch-card{flex-direction:column!important;gap:16px!important}}.arch-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.arch-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}.arch-card.accent{background:rgba(199,255,0,.02)!important;border:1px solid rgba(199,255,0,.1)!important}.arch-card.accent:hover{background:rgba(199,255,0,.04)!important;border-color:rgba(199,255,0,.18)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(199,255,0,0.08)}.arch-row{display:flex;gap:0;align-items:stretch;margin:24px auto;max-width:1080px}.arch-arrow{display:flex;align-items:center;color:#52525b;font-size:16px;flex-shrink:0;padding:0 8px}.arch-row .arch-card{flex:1;width:auto!important;flex-direction:column!important;gap:16px!important}.arch-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}.arch-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.arch-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}.arch-h4.accent::after{background:#222226}@media(max-width:767px){.arch-row{flex-direction:column!important;gap:16px}.arch-row .arch-card{flex-direction:row!important}.arch-row .arch-arrow{display:none!important}}</style>
 <div class="arch-row">
 <div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
-<div><h4 class="arch-h4">生态输入层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">爱奇艺影视 IP 资产、版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">对接爱奇艺独家正片与 IP 资产，提供版权合规的二创素材，消除用户的冷启动摩擦。</p></div>
+<div><h4 class="arch-h4">底层：生态输入层</h4>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">IP 资产 + 版权素材库</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">独家正片与 IP 资产，提供版权合规素材。</p></div>
 </div>
 <span class="arch-arrow">→</span>
 <div class="arch-card" style="background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
-<div><h4 class="arch-h4">核心逻辑层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用模型 + 自研场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">接入行业领先模型（可灵、Seedance），通过内部AI团队定制化调优，将模糊的用户意图转化为精准的场景算力。</p></div>
+<div><h4 class="arch-h4">中层：核心逻辑层</h4>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">通用模型 + 场景化调优</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400">接入可灵、Seedance外部模型，内部AI团队针对具体需求场景精准调优。</p></div>
 </div>
 <span class="arch-arrow">→</span>
 <div class="arch-card" style="background:rgba(199,255,0,0.03);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(199,255,0,0.12);border-radius:6px;padding:24px;display:flex;gap:24px;align-items:flex-start">
-<div><h4 class="arch-h4">感知交互层</h4>
-<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">模板化交互，降低创作门槛</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400"><b style="color:#C7FF00">UX 设计核心阵地。</b>以模板化交互替代复杂控制面板，将底层算力包装为轻量玩法，让普通用户也能轻松参与创作。</p></div>
+<div><h4 class="arch-h4">顶层：感知交互层</h4>
+<p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px">模板化交互，降低门槛</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400"><b style="color:#C7FF00">设计的核心阵地，由UX完全掌控交互逻辑。</b></p></div>
 </div>
 </div>
 `,
         },
         {
-          heading: '以消带产：核心内容分发页',
-          body: '框架落定后，第一个要解决的是分发场景。核心问题：用户刷到 AI 视频时，如何让他们从「看看而已」变成「我也试试」。\n\n我想让用户跳过「要不要创作」的决策内耗。根据 Hook Model，外部 Trigger 可以替代用户的内部决策负担。因此核心策略是在消费场景中嵌入创作触发点——用瀑布流和模板入口作为 Trigger，让用户<b>「看到 → 想要 → 开始」</b>无缝衔接。',
+          heading: '以消带产：分层触点的落地',
+          body: '框架落定后，第一个要解决的是分发场景：如何把用户的观看冲动，低成本转化为创作行为。\n\n根据 Hook Model，外部 Trigger 可以替代用户的内部决策负担。针对用户不同时刻的心理，我们设计了三个分层的触发点：\n\n① <b>首页瀑布流（弱触发·建认知）</b>— 用双列 Feed 流让用户感知「这里能玩 AI」\n② <b>播放页（强刺激·捕冲动）</b> — 观看冲动最强的时刻，同款入口即时出现\n③ <b>模板 Tab（深加工·导行动）</b>— 把模糊意向转化为具体拍摄动作\n\n三个触点层层递进，配合全局「+」浮层兜底，让「看到 → 想要 → 开始」无缝衔接。',
           html: `<style>
 .dist-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .dist-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}@media(min-width:768px){.dist-col{align-items:flex-start}}
@@ -296,16 +321,16 @@ export const projectData: Project[] = [
 </style>
 <div class="dist-row">
 <div class="dist-col">
-<div class="dist-col-title">内容分发</div>
+<div class="dist-col-title">内容分发核心触点</div>
 <p class="dist-col-desc">在各分发场景下设置创作按钮，以便用户产生灵感后即可创作。</p>
 <div class="dist-img-row">
 <div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-home.png" alt="首页" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">首页</span></div>
 <div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-player.png" alt="播放页" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">播放页</span></div>
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-template.png" alt="模板tab" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">模板tab</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-template.png" alt="模板 Tab" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">模板 Tab</span></div>
 </div>
 </div>
 <div class="dist-col">
-<div class="dist-col-title">底部创作按钮</div>
+<div class="dist-col-title">全局「+」浮层</div>
 <p class="dist-col-desc">展示全部AI视频玩法。</p>
 <div class="dist-img-row">
 <div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-float.png" alt="+浮层" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">「+」浮层</span></div>
@@ -315,8 +340,8 @@ export const projectData: Project[] = [
 `,
         },
         {
-          heading: '以消带产：核心视频创作页',
-          body: '通用视频生成是平台基础能力，但它解决不了普通用户的真实困境——面对空白画布，大部分人不知道从何下手。\n\n我回到一个更根本的问题：一个影视片段由哪些可感知的维度构成？从影视学角度看，核心维度包括剧情走向、视觉画风、台词对白、镜头节奏、音效配乐等。但并非所有维度都适合让普通用户操控——音效和剪辑需要专业知识，而台词、画风、剧情是大众有天然认知且 AI 能够干预的三个维度。\n\n基于此，我聚焦这三个维度提炼出核心玩法——<b>画风转换</b>（操控视觉）、<b>台词改写</b>（操控对白）、<b>故事接龙</b>（操控叙事）——用户不需要从零构思，只需选择一个预设维度即可开始创作。',
+          heading: '以消带产：三个核心玩法的提炼',
+          body: '通用视频生成是平台基础能力，但解决不了普通用户的困境—面对空白画布，大多数人不知道从何下手。\n\n我回到一个更根本的问题：影视片段由哪些用户可操控的维度构成？从影视学角度看，核心维度包括剧情、画风、台词、镜头节奏、音效配乐等。但并非都适合普通用户操控——音效、剪辑需要专业知识，而台词、画风、剧情是大众有天然认知、AI 又能干预、且已被市场验证的三个维度。\n\n基于此，我们聚焦这三个维度，提炼出三个核心玩法—<b>画风转换</b>（操控视觉）、<b>台词改写</b>（操控对白）、<b>故事接龙</b>（操控叙事）。用户不需要从零构思，只需选择一个预设方向即可开始。',
           html: `<style>
 .cr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .cr-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -341,7 +366,7 @@ export const projectData: Project[] = [
 </div>
 <div class="cr-col">
 <div class="cr-col-title">影视创意玩法</div>
-<p class="cr-col-desc">选择影视素材后，即可针对该视频进行定向创作。</p>
+<p class="cr-col-desc">选择影视素材后，即可针对该视频进行定向维度的创作。</p>
 <div class="cr-img-row">
 <div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-lines-rewrite.png" alt="台词改写" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">台词改写</span></div>
 <div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-story-chain.png" alt="故事接龙" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">故事接龙</span></div>
@@ -352,7 +377,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '创作中枢：影视片段库搭建',
-          body: '三个方向明确了，但在深入具体玩法之前，有一个更底层的问题必须先解决——素材。\n用户旅程的洞察在这里第一次落地：既然素材获取是最大阻力，素材库就不能只做功能模块，必须成为产品壁垒。我的设计决策是：不追求素材数量，追求跟创作场景的匹配度。因此将素材库分为三层——<b>官方影视片段</b>（版权素材，降低风险）、<b>本地图片/视频</b>（兼容自由创作）、<b>已创作视频</b>（支持二次迭代）。同时针对每个核心玩法预置精选素材集，让「找素材」这件苦差事从用户的待办清单中消失。',
+          body: '深入具体玩法前，需要先解决素材获取这一基础问题。我的决策是：不追求素材数量，而是用三类来源覆盖全部创作场景—<b>官方影视片段</b>（版权素材）、<b>本地图片/视频</b>（自由创作）、<b>已创作视频</b>（二次迭代）。\n\n同时，我们把它封装成<b>通用模组</b>，在通用视频、影视创意玩法等环节均可调用，并针对每个玩法精细化影视片段的运营。随着影视片段内容的持续扩充，库的形态也随之调整—从基础的盖楼式结构，演进为左导航结构，并逐步加入<b>筛选、搜索</b>能力，提升选片效率。',
           html: `<style>
 .m-split{display:flex;gap:48px;align-items:flex-start;margin:0;width:fit-content;max-width:100%}
 .m-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -370,7 +395,7 @@ export const projectData: Project[] = [
 <div class="m-split">
 <div class="m-col">
 <div class="m-col-title">影视片段库形态演变预想</div>
-<p class="cr-col-desc">影视片段按照专辑维度聚合，随着素材的扩充，我们规划了不同形态，并增加相应功能。</p>
+<p class="cr-col-desc">随着影视片段内容的扩充，我们规划了不同形态，并增加相应功能。</p>
 <div class="m-img-row">
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.png" alt="初期" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">初期</span></div>
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.png" alt="中期" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">中期</span></div>
@@ -390,7 +415,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '创作中枢：参考添加调用',
-          body: 'AI 生成中用户经常需要引用参考图来控制输出。需求简单，但关键的 UX 决策在于：<b>素材选择应该在什么时机、以什么形式出现。</b>\n\n我对比了三种方案：\n\n① 侧栏拖拽 —— 操作精准，但打断输入心流\n② 独立选择页 —— 浏览全面，但跳出感强，上下文断裂\n③ @ 引用 —— 内嵌输入框，随想随引，不打断思路\n\n最终选了 @ 引用。它把「参数配置」的体感削弱为「对话」的一部分，让用户始终停留在创作上下文内。',
+          body: '在通用视频创作中，用户可引用参考图来控制生成方向。这里的基础机制是：参考被「添加」后进入参考池，被「调用」后则以标签形式嵌入输入框内。但调用真正的难点在于理清「用户在什么心智状态下需要它」。我以场景化思考切入，模拟用户自然输入剧情时的心流，按构想成熟度把用户分成三种状态：\n\nA. <b>构想已建立</b>—开始输入前一次性添加好所有参考\nB. <b>构想部分建立</b>—先加一部分，边输入边补充\nC. <b>构想未建立</b>—边写边即时添加\n\n三种状态的共同要求是：调用入口要足够灵活，既不要求用户预先想清楚，也不打破用户当前的心流。因此我把「调用」设计成三类入口：\n\n① <b>点击已添加的参考缩略图</b>—视觉浏览流\n② <b>输入 @ 唤起浮层点选</b>—键盘输入心流\n③ <b>点击已调用的参考标签唤起浮层替换</b>—修改替换流\n\n其中前两者是首次调用的互补入口，覆盖点击交互与键盘两种输入状态；后者兜底「调错想换」的场景。这样，无论用户处于哪种构想状态，都能在输入流中随时调用参考，而无需离开创作上下文。',
           html: `<style>
 .lr-label{font-size:12px;color:#A0A0A0;text-align:center}
 </style>
@@ -402,8 +427,8 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '台词改写：启发式交互设计',
-          body: '台词改写是短视频平台长盛不衰的二创玩法，但「自由输入框」对普通用户等同于空白恐惧。\n\n我的核心判断是：不同状态的用户需要不同层级的引导，一刀切必然顾此失彼。因此设计了三种入口形成渐进光谱：\n\n① <b>逐句点击改写</b>—— 已有想法，所见即所得\n② <b>AI 写台词浮层</b>—— 有方向缺灵感，输入主题由 AI 生成\n③ <b>底部主题标签</b>—— 完全没想法，一键生成\n\n基于 Scaffolding 渐进释放理论：入门阶段需要高引导，熟练后逐步归还自主权。因此我设计了三种入口逐级过渡——逐句点击（高引导）→ AI 写台词（中引导）→ 主题标签（最低引导），让用户在自己的节奏中自然进阶。',
+          heading: '台词改写：门槛递降，预期可见',
+          body: '改写经典影视台词，是短视频里长盛不衰的二创玩法—市面案例众多，却几乎都靠创作者「手搓」，从头改写的高门槛让普通用户望而却步。\n\n不同状态的用户需要不同层级的引导。<b>Scaffolding 渐进释放理论</b>指出：入门阶段需要高引导，熟练后逐步归还自主权。据此我设计了三种入口，引导强度从高到低逐级递减：\n\n① <b>底部主题标签</b>— 完全没想法，一键生成（高引导）\n② <b>AI 写台词浮层</b>— 有方向缺灵感，输入主题由 AI 生成（中引导）\n③ <b>逐句点击改写</b>— 已有想法，所见即所得（低引导）\n\n但「怎么改」只是第一步，改完之后还有一道坎—<b>预期管理</b>。改写后不会即时生成视频（解析需要时间），漫长的等待与不确定感极易劝退用户。为此我借鉴音乐播放器的歌词时间轴，解析影视片段台词，让<b>视频画面与台词时间轴联动预览</b>—改写时实时看到每句台词对应的画面，在生成前就校准「抽卡预期」，把不可控的等待变成可控的确认。',
           html: `<style>
 .lr-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;max-width:min(900px,100%);margin:0 auto}
 .lr-item{display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -429,14 +454,13 @@ export const projectData: Project[] = [
         },
         {
           heading: '故事接龙：AI视频链式共创',
-          body: '台词改写解决的是「单次创作」的灵感启动，但另一个更大的机会在于「持续创作」——如何让用户不止玩一次，而是不断回来。\n\n传统 UGC 的痛点是「发布即终点」——内容发出后便进入静态沉淀，没有持续参与的理由。我从影视 IP 的天然优势找到突破口：热播剧的大结局本身就是用户情绪的高点，也是创作欲最强的时刻。将接龙起点锚定在大结局处，让用户从「追完剧」自然过渡到「改写结局」——依托已有世界观降低冷启动门槛，每个灵感接续前文。\n\n这种<b>「接力式」共创</b>将零散创意汇聚成不断生长的社区叙事。',
+          body: '台词改写解决的是「一个人怎么创作」，故事接龙则要解决「一群人怎么共创」—两者的区别不在玩法复杂度，而在参与互动感的深化。\n\n而互动的持续，恰恰是传统 UGC 的软肋—「发布即终点」让内容发出后便静态沉淀，没有持续参与的理由。我从影视 IP 的天然优势找到突破口：热播剧的大结局本身就是用户情绪的高点，也是创作欲最强的时刻。把接龙起点锚定在大结局处—依托已有世界观降低冷启动门槛，让用户从「追完剧」自然过渡到「改写结局」，每个灵感接续前文、不断延展。\n\n这样一来，接龙不再是一堆孤立的二创，而是被串联成一部不断生长的<b>「AI 短剧」</b>。剧有情节、有进展，参与者和围观者会像追剧一样持续回来，形成持续消费的动力。',
           html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.png" alt="故事接龙" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin-top:8px">故事接龙逻辑示意</p></div>`,
         },
         {
           heading: '故事接龙：起点页方案探索',
-          body: '接龙的核心交互在于起点页——它要在一屏之内完成世界观透传、创作引导和生态图谱展示。没有成熟行业参考，我尝试了三个方向：评论盖楼式、平行宇宙式、地图探索式，每个方向都在信息密度和可理解性之间做了不同取舍。',
-          html: `<p style="color:#A0A0A0;font-size:13px;line-height:1.6;letter-spacing:0.02em;text-align:left;margin:0 0 24px;font-weight:400">作为驱动粉丝共创的核心创意玩法，「故事接龙起点页」承担着世界观透传、轻量化创作引导、以及生态图谱透传的核心职责。<br>面对复杂的故事线与剧情分支，在缺乏成熟行业参考的背景下，我们通过多轮脑洞大开的设计探索，力求将庞大的非线性叙事清晰、直观地呈现在用户面前。</p>
-<style>
+          body: '接龙的核心交互在于起点页—它要在一屏之内完成<b>世界观透传</b>、<b>创作引导</b>和<b>生态图谱展示</b>。没有成熟行业参考，我在信息密度和可理解性之间做了不同取舍，尝试了三个方向：\n\n① <b>评论盖楼式</b>—理解门槛低，单对剧情分支与多元走向的容量有限\n② <b>平行宇宙式</b>—多线并行、每条故事线独立完整，但概念抽象、理解门槛高\n③ <b>地图探索式</b>—空间化地图直观呈现非线性叙事、探索感强，但信息密度过高、用户易迷失',
+          html: `<style>
 .sk-wrapper{display:flex;gap:40px;justify-content:center;max-width:100%;flex-wrap:wrap}
 .sk-group{flex-shrink:0}
 .sk-item{width:150px;flex-shrink:0}
@@ -455,14 +479,14 @@ export const projectData: Project[] = [
 @media(max-width:767px){.sk-row{gap:10px}}
 </style>
 <div class="sk-wrapper">
-<div class="sk-group"><div class="sk-group-title">方向 A</div><p class="sk-group-desc">评论盖楼方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页A</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">方向 B</div><p class="sk-group-desc">平行宇宙方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="height:100%;width:auto;display:block" /></div><span class="sk-label">接龙宇宙</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">方向 C</div><p class="sk-group-desc">线路图方向</p><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="height:100%;width:auto;display:block" /></div><span class="sk-label">接龙地图</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">评论该楼式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页A</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">平行宇宙式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="height:100%;width:auto;display:block" /></div><span class="sk-label">接龙宇宙</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">地图探索式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="height:100%;width:auto;display:block" /></div><span class="sk-label">接龙地图</span></div></div></div>
 </div>`,
         },
         {
-          heading: '故事接龙：最终方案确定',
-          body: '多轮探索后，一个核心矛盾浮出水面：故事接龙的信息量太大——主线、支线、用户生成内容全堆在一起，用户打开就懵了。\n\n我的决策是大幅精简首屏：用列表呈现主线故事，将支线收纳进接龙播放器的选集列表。用户路径简化为一条直线——看起点页 → 点「去接龙」→ 看大结局 → 开启创作。只保留一根主线，其余交给后续交互自然展开，不让复杂度在第一秒就吓退用户。',
+          heading: '故事接龙：起点页减法收敛',
+          body: '多轮探索后，核心矛盾浮出水面：故事接龙承载的主线、支线信息量太大，若全部堆在首屏，用户一打开便迷失其中。\n\n最终方案是「减法」—首屏只保留主线故事，支线收纳进接龙播放器的选集列表，让用户第一眼只面对一件事。由此收敛出两条清晰的路径：\n\n① <b>想直接创作</b>—进入起点页，点「去接龙」，看完大结局再点「开始接龙」即可创作\n② <b>想先探索</b>—进入起点页，选择一条故事线，进入播放器顺着主线慢慢探索\n\n支线的展开交给后续交互自然发生。把复杂度拆开、后置，不让它第一秒就吓退用户。',
           html: `<style>
 .lr-video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);cursor:pointer;transition:all 0.3s ease}
 .lr-video-overlay:hover{background:rgba(0,0,0,0.15)}
@@ -480,38 +504,50 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '尾声：上线与沉淀',
-          body: '经过半年封闭开发，吃鲸AI 在 2026 年 4 月爱奇艺世界大会上正式发布。不久后项目因战略调整关停。\n\n但核心交互资产并未消失——创作页、播放器等关键模块已标准化封装为 SDK，嵌入爱奇艺主站，持续服务于 AI 创作能力的分发与落地。一个产品的生命周期结束了，但好的设计思考应该活得更久。',
-          html: `<p style="color:#A0A0A0;font-size:13px;line-height:1.6;letter-spacing:0.02em;margin:0 0 20px;font-weight:400">经过半年的封闭开发，吃鲸AI 正式上线并在 2026 年 4 月的爱奇艺世界大会上发布。不久后项目因战略调整关停。<br>但核心交互资产并未消失——创作页、播放器等关键模块已标准化并封装为 SDK，成功嵌入爱奇艺主站，持续服务于 AI 创作能力的分发与落地。</p><div style="display:flex;gap:60px;justify-content:center;align-items:flex-start;max-width:900px;margin:0 auto"><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI 正式发布</p><img src="/birdys-portfolio/images/ending.jpg" alt="发布" style="height:360px;width:auto;border-radius:8px;display:block;object-fit:contain" /></div><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI嵌入爱奇艺主站</p><img src="/birdys-portfolio/images/ending2.png" alt="嵌入" style="height:360px;width:auto;border-radius:8px;display:block;object-fit:contain" /></div></div>`,
+          heading: '尾声：上线与资产留存',
+          body: '2026 年 4 月，吃鲸AI 在爱奇艺世界大会正式发布，不久后因战略调整关停—这是一次战略选择，而非设计的失败。\n\n产品画上句号，但核心交互资产并未消失：创作页、播放器等<b>关键模块</b>已标准化封装为 SDK，<b>嵌入爱奇艺主站</b>，持续服务于 AI 创作能力的分发与落地。好的设计思考，应该比产品活得更久。',
+          html: `<div style="display:flex;gap:60px;justify-content:center;align-items:flex-start;max-width:900px;margin:0 auto"><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI 正式发布</p><img src="/birdys-portfolio/images/ending.jpg" alt="发布" style="height:360px;width:auto;border-radius:8px;display:block;object-fit:contain" /></div><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI嵌入爱奇艺主站</p><img src="/birdys-portfolio/images/ending2.png" alt="嵌入" style="height:360px;width:auto;border-radius:8px;display:block;object-fit:contain" /></div></div>`,
         },
         {
-          heading: '沉淀：当潮水退去，留下的交互资产',
-          body: '产品可以关停，但设计模式应该有更长久的生命力。回看吃鲸AI，最让我欣慰的不是某个功能的数据表现，而是沉淀了一套可复用的设计资产：从「影视素材库」的版权合规设计，到「模板化创作」的门槛降低策略，再到「@ 引用」的心流保护交互——这些思考已经超越单个产品的生命周期，成为团队后续 AI 项目的共同知识库。',
-          html: `<style>
-.sd-intro{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 auto 32px;font-weight:400;max-width:1080px}
-.sd-intro b{color:#FFFFFF;font-weight:600}
-.sd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 auto 32px;max-width:1080px}
+          heading: '价值复盘：给不可控的 AI，一个可控的锚',
+          body: '',
+          html: `<p style="color:#FFFFFF;font-size:18px;line-height:1.6;text-align:center;margin:0 0 36px;font-weight:500">回看吃鲸AI，设计的价值，正在于<span style="color:#C7FF00;font-weight:600">把 AI 生成技术的不可控，逐层校准为可控的体验</span>。</p>
+<style>
+.sd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 auto;max-width:1080px}
 .sd-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
 .sd-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.sd-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
-.sd-card:hover::before{opacity:.6}
-.sd-card-num{position:absolute;top:24px;right:14px;font-family:monospace;font-size:10px;color:#C7FF00;font-weight:600;letter-spacing:0.06em;background:rgba(199,255,0,0.08);border:1px solid rgba(199,255,0,0.15);border-radius:3px;padding:3px 10px;z-index:1}
 .sd-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;line-height:1.4;position:relative}.sd-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}.sd-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .sd-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .sd-card-desc b{color:#FFFFFF;font-weight:600}
-.sd-closing{margin:32px auto 0;max-width:1080px;background:linear-gradient(135deg,rgba(199,255,0,.02) 0%,rgba(199,255,0,.005) 100%);border:1px solid rgba(199,255,0,.08);border-left:3px solid #C7FF00;border-radius:4px;padding:24px 28px}
-.sd-closing-label{font-family:monospace;font-size:11px;color:#C7FF00;letter-spacing:0.08em;margin-bottom:10px;display:block;font-weight:600}
-.sd-closing p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0;font-weight:400}
-.sd-closing p b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.sd-grid{grid-template-columns:1fr!important}.sd-closing{padding:20px}}
+@media(max-width:767px){.sd-grid{grid-template-columns:1fr!important}}
 </style>
-<p class="sd-intro">即使「吃鲸AI」的产品生命周期画上了句号，但交互团队在从 0 到 1 的摸索中，为爱奇艺体系乃至生成式 AI 交互领域沉淀下了不可抹去的<b>无形资产</b>：</p>
 <div class="sd-grid">
-<div class="sd-card"><span class="sd-card-num">资产一</span><h4 class="sd-card-title">标准化组件与协同体系</h4><p class="sd-card-desc">将核心交互（如创作页、播放器）标准化为组件库，封装为 <b>SDK 模块</b>，成功支撑了 AI 创作能力在爱奇艺主站的无缝嵌入。这套标准化方案实现了<b>创作能力与主站生态的解耦</b>，为 AI 能力的规模化接入提供了底层支撑。</p></div>
-<div class="sd-card"><span class="sd-card-num">资产二</span><h4 class="sd-card-title">AI 生产链路交互重构</h4><p class="sd-card-desc">针对 AI 生成耗时较长的痛点，设计了<b>"即时反馈 + 异步处理"</b>交互闭环。通过后台任务队列与主动通知策略，将用户的<b>线性等待转化为并行体验</b>，有效解决生成过程中的流程阻塞问题，极大提升创作流顺畅度。</p></div>
-<div class="sd-card"><span class="sd-card-num">资产三</span><h4 class="sd-card-title">创作资源模块化管理</h4><p class="sd-card-desc">将不同玩法的素材与底层逻辑解耦，搭建统一的<b>资源共享池</b>。资源模块化架构使得创作侧玩法迭代不再依赖复杂底层重构，显著提升产品在处理复杂创作场景时的<b>灵活性与响应效率</b>。</p></div>
-</div>
-<div class="sd-closing"><span class="sd-closing-label">结语</span><p>「吃鲸AI」不仅是交互设计的实验场，更是<b>商业模型与算力成本博弈</b>的试金石。它警示我们：未来的 AI 设计，必须跳出体验的舒适区，将<b>技术 ROI 与平台基因</b>纳入设计的底层逻辑。</p></div>`,
+<div class="sd-card"><h4 class="sd-card-title">校准画面主体</h4><p class="sd-card-desc">用户不知道画面里该放什么，就用<b>官方素材库</b>锚定，把空白变成确定的起点。</p></div>
+<div class="sd-card"><h4 class="sd-card-title">校准影视元素</h4><p class="sd-card-desc">影视的构成要素太多，就拆解为<b>画风、台词、剧情</b>三类固定玩法，把复杂收敛成可理解的维度。</p></div>
+<div class="sd-card"><h4 class="sd-card-title">校准创作灵感</h4><p class="sd-card-desc">面对空白无从下笔，就用<b>渐进启发式引导</b>注入灵感，把门槛降到能启动。</p></div>
+</div>`,
+        },
+        {
+          heading: '未竟的事业：后续规划设想',
+          body: '项目因战略调整关停，但设计思考没有停止。下面这三个方向，是曾经规划、却没能落地验证的设想—也是「校准」这条思路的自然延伸。\n\n① <b>结构化输出</b>—把 AI 加工后的故事，拆解为角色、画面、台词、音乐，让用户在确定的维度上校准与编辑，而不是面对一段不可控的文本\n② <b>IP 聚合</b>—以 IP 而非功能为维度组织内容，用户是冲 IP 来的，入口就该顺着 IP 来\n③ <b>商业闭环</b>—用积分与订阅，把算力消耗变成可商业化的闭环，让商业模型与算力成本从对立走向平衡',
+          html: `<style>
+.sk-wrapper{display:flex;gap:40px;justify-content:center;max-width:100%;flex-wrap:wrap;align-items:flex-start}
+.sk-group{flex-shrink:0;display:flex;flex-direction:column;align-items:flex-start}
+.sk-group-title{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.sk-group-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.sk-row{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}@media(min-width:768px){.sk-row{display:flex;justify-content:flex-start}}
+.sk-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+.sk-placeholder{width:100%;max-width:150px;aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.sk-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.sk-placeholder img{width:100%;height:100%;object-fit:contain}
+.sk-label{font-size:12px;color:#A0A0A0;text-align:center}
+@media(max-width:767px){.sk-wrapper{flex-direction:column;align-items:center;gap:24px}.sk-group{flex:none;width:100%}.sk-row{gap:3%}.sk-item{width:auto;flex:1 1 0;min-width:0}.sk-placeholder{width:100%}}
+</style>
+<div class="sk-wrapper">
+<div class="sk-group"><div class="sk-group-title">结构化输出</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-create-video.png" alt="创作视频页" /></div><span class="sk-label">创作视频页</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-structured-output.png" alt="结构化输出" /></div><span class="sk-label">结构化输出</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">IP 聚合</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-ip-aggregation.png" alt="IP 聚合页" /></div><span class="sk-label">IP 聚合页</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">商业闭环</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-checkin-points.png" alt="签到积分" /></div><span class="sk-label">签到积分</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-membership.png" alt="会员订阅" /></div><span class="sk-label">会员订阅</span></div></div></div>
+</div>`,
         },
         {
           heading: 'Thanks',
