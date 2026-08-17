@@ -606,14 +606,14 @@ export const projectData: Project[] = [
 </style>
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">互动破局</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">目标拆解</span><span class="toc-page-num">P03</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
-<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><div><p class="toc-card-title">流量与入口</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="3"><span class="toc-page-name">流量蓄水</span><span class="toc-page-num">P04</span></div><div class="toc-page-row" data-goto="4"><span class="toc-page-name">播放页入口</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">明星陪看聚合页</span><span class="toc-page-num">P07</span></div></div></div><span class="toc-card-tag">/ Traffic</span></div></div>
-<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><div><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">沉浸式体验</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">直播间状态</span><span class="toc-page-num">P09</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
-<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="9"><div><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="9"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">基础送礼链路</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">进阶送礼</span><span class="toc-page-num">P12</span></div><div class="toc-page-row" data-goto="13"><span class="toc-page-name">终极爆灯</span><span class="toc-page-num">P13</span></div></div></div><span class="toc-card-tag">/ Revenue</span></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><div><p class="toc-card-title">流量与入口</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="3"><span class="toc-page-name">流量蓄水</span><span class="toc-page-num">P04</span></div><div class="toc-page-row" data-goto="4"><span class="toc-page-name">播放页入口</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">明星陪看聚合页</span><span class="toc-page-num">P06</span></div></div></div><span class="toc-card-tag">/ Traffic</span></div></div>
+<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><div><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="6"><span class="toc-page-name">直播间布局</span><span class="toc-page-num">P07</span></div><div class="toc-page-row" data-goto="7"><span class="toc-page-name">直播间状态</span><span class="toc-page-num">P08</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="8"><div><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="8"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P09</span></div><div class="toc-page-row" data-goto="9"><span class="toc-page-name">基础送礼链路</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">进阶送礼</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">终极爆灯</span><span class="toc-page-num">P12</span></div></div></div><span class="toc-card-tag">/ Revenue</span></div></div>
 </div>`,
         },
         {
-          heading: '互动破局：补上陪伴的真实感',
-          body: '明星陪看直播间是一个既有的业务，我接手时上面给的目标很明确：改版、升级互动体验，同时背起变现的目标。\n\n但对一个已经在跑的业务做体验升级，我的第一个问题不是「改成什么样」，而是<b>「它到底缺什么」</b>。回到业务现场我发现：原有的陪看是「文字/语音」形态—明星通过文字、语音弹幕和观众交流，虽然处于同一观看现场，但陪伴缺少真实感。于是我把切入点锚定在「实时视频陪看」—让明星真正出镜，把隔着屏幕的文字陪伴，升级成面对面的情感连接。',
+          heading: '互动破局：由业务目标到设计价值',
+          body: '明星陪看直播间是一个既有的业务，我接手时的业务目标很明确：<b>改版、升级互动体验、促进商家变现</b>。\n\n对一个已上线跑的业务做体验升级，我的第一个问题是<b>「它到底缺什么」</b>。回到业务现场我发现：原有的陪看是「文字/语音」形态—明星通过文字、语音弹幕和观众交流，陪伴缺真实感、情感连接弱，既不利于留存，也撑不起付费。',
           html: `<style>
 .hl-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 1.5rem;font-weight:400}
 .hl-p b{color:#FFFFFF;font-weight:600}
@@ -648,7 +648,7 @@ export const projectData: Project[] = [
             <div class="model-node-dot"></div>
             <div class="model-node-body">
                 <span class="model-node-title">现状诊断：文字/语音陪看，存在情感断层</span>
-                <p class="model-node-desc">文字、语音弹幕是唯一的交流方式，看得见文字、听得到声音，却感受不到「他此刻就在陪我」。</p>
+                <p class="model-node-desc">文字、语音弹幕是唯一的交流方式，看得见文字、听得到声音，却感受不到「他此刻在陪伴我」。</p>
             </div>
         </div>
     </div>
@@ -659,7 +659,7 @@ export const projectData: Project[] = [
             <div class="model-node-dot"></div>
             <div class="model-node-body">
                 <span class="model-node-title">破局方向：实时视频陪看，实现情感连接</span>
-                <p class="model-node-desc">引入实时视频，让明星真正出镜，把「形式陪伴」升级成「同频陪伴」。</p>
+                <p class="model-node-desc">引入实时视频，让明星真正出镜，把「形式陪伴」升级成「同频陪伴」，为商业变现打下基础。由此带来三个设计价值：</p>
 
                 <div class="val-dim-branch">
                     <div class="val-dim-branch-body">
@@ -674,7 +674,7 @@ export const projectData: Project[] = [
                             </div>
                             <div class="val-dim-card">
                                 <div class="val-dim-card-title">内容价值放大</div>
-                                <p class="val-dim-card-desc">把热播剧集转化为可跨周期复利的长尾资产，让单次直播持续驱动<b>「剧集与直播双向反哺」</b>。</p>
+                                <p class="val-dim-card-desc">把热播剧集转化为可跨周期复利的长尾资产，让单次直播持续驱动<b>「剧集与直播双向反哺」</b>，为变现持续创造空间。</p>
                             </div>
                         </div>
                     </div>
@@ -688,11 +688,11 @@ export const projectData: Project[] = [
         },
         // ═══ P3 目标拆解 ═══
         {
-          heading: '目标拆解：从业务诉求到设计策略',
-          body: '破局方向明确后，我把整条链路拆成<b>「流量蓄水 → 沉浸式体验 → 情感变现」</b>三段价值链，每一段对应一个核心设计命题—从入口触达、直播体验到商业转化，逐层推导出各自的设计目标、策略与手段。',
+          heading: '目标拆解：由业务环节到落地手段',
+          body: '为了把设计价值落成可执行的设计，我顺着业务环节拆解出了设计目标和手段。',
           html: `<style>
 .dt-table{width:100%;border-collapse:collapse;table-layout:fixed;min-width:600px}
-.dt-table th,.dt-table td{padding:24px 16px;font-size:12px;color:#A0A0A0;line-height:1.6;border-bottom:1px solid #222226;vertical-align:top;font-weight:400;text-align:left;word-break:break-word}
+.dt-table th,.dt-table td{padding:24px 16px;font-size:12px;color:#A0A0A0;line-height:1.6;border-bottom:1px solid #222226;vertical-align:middle;font-weight:400;text-align:left;word-break:break-word}
 .dt-table th{font-size:14px;font-weight:600;color:#FFFFFF;vertical-align:middle;padding:24px 16px}
 .dt-table .lbl{width:120px;font-size:11px;font-weight:600;color:#A0A0A0;vertical-align:middle;text-align:left;text-transform:uppercase;padding:24px 16px 24px 24px}
 .dt-table tr.hl td{background:rgba(199,255,0,0.06)}
@@ -705,7 +705,7 @@ export const projectData: Project[] = [
 <table class="dt-table">
     <thead>
         <tr>
-            <th class="lbl">维度</th>
+            <th class="lbl">环节</th>
             <th>流量蓄水</th>
             <th>沉浸式体验</th>
             <th>情感变现</th>
@@ -713,22 +713,16 @@ export const projectData: Project[] = [
     </thead>
     <tbody>
         <tr>
-            <td class="lbl" data-label="维度">目标</td>
-            <td data-label="流量蓄水">将观影流量转化为陪看参与，沉淀为长效资产。</td>
+            <td class="lbl" data-label="环节">目标</td>
+            <td data-label="流量蓄水">把观影流量转化为陪看参与，并沉淀为长效资产。</td>
             <td data-label="沉浸式体验">在复杂信息场景中保障观影沉浸感。</td>
-            <td data-label="情感变现">让付费融入情感互动，而非生硬交易。</td>
-        </tr>
-        <tr>
-            <td class="lbl" data-label="维度">策略</td>
-            <td data-label="流量蓄水">在观影路径嵌入动态入口，以聚合页沉淀资产。</td>
-            <td data-label="沉浸式体验">信息分层，按场景动态显隐。</td>
-            <td data-label="情感变现">以即时反馈驱动情感表达。</td>
+            <td data-label="情感变现">让付费成为情感表达，即时变现与长尾增收。</td>
         </tr>
         <tr class="hl">
-            <td class="lbl" data-label="维度">手段</td>
-            <td data-label="流量蓄水">播放页动态入口、陪看聚合页。</td>
-            <td data-label="沉浸式体验">重构连麦布局、规范互动栅格。</td>
-            <td data-label="情感变现">重构送礼面板、轻量化情感组件。</td>
+            <td class="lbl" data-label="环节">手段</td>
+            <td data-label="流量蓄水">构建播放页动态入口、陪看聚合页。</td>
+            <td data-label="沉浸式体验">重构陪看直播布局、页面内容进行信息分层、按场景显隐。</td>
+            <td data-label="情感变现">重构送礼面板、增加送礼玩法；直播/回看会员化。</td>
         </tr>
     </tbody>
 </table>
@@ -736,68 +730,31 @@ export const projectData: Project[] = [
 <div class="dt-mobile">
 <div class="dt-mobile-col">
 <div class="dt-mobile-col-header">流量蓄水</div>
-<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">目标</span><p class="dt-mobile-col-desc">将观影流量转化为陪看参与，沉淀为长效资产。</p></div>
-<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">策略</span><p class="dt-mobile-col-desc">在观影路径嵌入动态入口，以聚合页沉淀资产。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">目标</span><p class="dt-mobile-col-desc">把观影流量转化为陪看参与，沉淀为长效资产。</p></div>
 <div class="dt-mobile-col-item"><span class="dt-mobile-col-label">手段</span><p class="dt-mobile-col-desc">播放页动态入口、陪看聚合页。</p></div>
 </div>
 <div class="dt-mobile-col">
 <div class="dt-mobile-col-header">沉浸式体验</div>
 <div class="dt-mobile-col-item"><span class="dt-mobile-col-label">目标</span><p class="dt-mobile-col-desc">在复杂信息场景中保障观影沉浸感。</p></div>
-<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">策略</span><p class="dt-mobile-col-desc">信息分层，按场景动态显隐。</p></div>
-<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">手段</span><p class="dt-mobile-col-desc">重构连麦布局、规范互动栅格。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">手段</span><p class="dt-mobile-col-desc">信息分层、按场景显隐；重构连麦布局、规范互动栅格。</p></div>
 </div>
 <div class="dt-mobile-col">
 <div class="dt-mobile-col-header">情感变现</div>
-<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">目标</span><p class="dt-mobile-col-desc">让付费融入情感互动，而非生硬交易。</p></div>
-<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">策略</span><p class="dt-mobile-col-desc">以即时反馈驱动情感表达。</p></div>
-<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">手段</span><p class="dt-mobile-col-desc">重构送礼面板、轻量化情感组件。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">目标</span><p class="dt-mobile-col-desc">让付费成为情感表达，即时变现与长尾增收。</p></div>
+<div class="dt-mobile-col-item"><span class="dt-mobile-col-label">手段</span><p class="dt-mobile-col-desc">即时反馈；重构送礼面板、直播/回看会员化。</p></div>
 </div>
 </div>`,
         },
         // ═══ P4 流量蓄水 ═══
         {
-          heading: '流量蓄水：触达入口及陪看聚合页构建',
-          body: '',
-          html: `<style>
-.tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:400}
-.tx-p b{color:#FFFFFF;font-weight:600}
-/* 蓄水漏斗 */
-.funnel-row{display:flex;gap:32px;align-items:stretch;margin:28px auto;max-width:1080px}
-.funnel-card{flex:1;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;display:flex;flex-direction:column}
-.funnel-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.funnel-card::after{content:attr(data-arrow);position:absolute;right:-24px;top:50%;transform:translateY(-50%);color:#555555;font-size:16px;font-weight:400;z-index:2}
-.funnel-card:last-child::after{display:none}
-.funnel-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.funnel-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.funnel-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.funnel-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0;flex:1}
-.funnel-desc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.funnel-row{flex-direction:column!important;gap:40px!important}.funnel-card::after{right:50%;top:calc(100% + 20px);bottom:auto;transform:translate(50%,-50%) rotate(90deg)}}
-.image-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;padding:48px 20px;text-align:center;margin:16px 0;font-size:11px;color:#A0A0A0;font-family:system-ui,-apple-system,sans-serif;letter-spacing:0.05em;position:relative;overflow:hidden}
-.image-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.image-placeholder::after{content:'🖼';display:block;font-size:24px;margin-bottom:12px;opacity:.3;filter:grayscale(1)}
-</style>
-<p class="tx-p">作为「一起聊」流量体系的核心阵地，我们构建了<b>「播放页轻量触达 + 聚合页深度留存」</b>的流量蓄水布局，有效解决剧集长尾期流量衰减的痛点。</p>
-
-<div class="funnel-row">
-<div class="funnel-card" data-arrow="→">
-<div class="funnel-title">播放页触达</div>
-<p class="funnel-desc">依托核心播放场景，通过<b>动态状态卡片</b>构建即时交互触点，在不打断观影流的前提下完成从视频消费到直播互动的行为转化。</p>
-</div>
-<div class="funnel-card" data-arrow="→">
-<div class="funnel-title">聚合页留存</div>
-<p class="funnel-desc">设计「明星陪看」聚合阵地，通过直播/预约动态、陪看榜单、回看合集三大模块，将单次直播转化为<b>长效互动资产</b>。</p>
-</div>
-<div class="funnel-card">
-<div class="funnel-title">跨周期复利</div>
-<p class="funnel-desc">打通剧集正片与直播间的流量内循环，实现<b>剧集热度反哺直播、直播内容反哺剧集</b>的双向增值，破解长尾期流量断崖。</p>
-</div>
-</div>`,
+          heading: '流量蓄水：流量流转链路构建',
+          body: '流量蓄水的核心矛盾在于：看剧的流量是瞬时的，看完就走，不会自动沉淀。所以我把蓄水分成三步，形成「触达 → 留存 → 反哺」的循环：\n\n① <b>流量触达</b>—在播放页把「看剧」触达成「陪看」，解决「进来」\n② <b>资产留存</b>—在聚合页把「一次性的围观」沉淀成「可回访的资产」，解决「留下」\n③ <b>流量反哺</b>—打通剧集与直播的双向循环，让沉淀的资产反哺新流量，破解长尾期流量断崖',
+          html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/live-flow.png" alt="明星陪看流量流转图" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin-top:8px">明星陪看流量流转图</p></div>`,
         },
         // ═══ P5 播放页入口 ═══
         {
           heading: '播放页入口：动态链路触达',
-          body: '入口要解决的是「触达而不打扰」——既要把直播送到正在看剧的人面前，又不能打断观影心流。我把入口嵌在播放页选集下方，按直播状态动态显隐：开播时透出实时状态与角标，把「正在看剧」自然转化成「进来陪看」。',
+          body: '入口先要解决「放在哪」。我选了播放页—这里是观看冲动最强烈的时刻，用户对「和明星一起看」的意愿最高，转化也最自然。\n\n位置定了，再守住一个原则：<b>高效触达而不干扰</b>—把直播送到看剧的人面前，却不断观影心流。\n\n于是入口嵌在播放页选集下方，按直播状态动态显隐：开播时透出实时状态与角标，把「正在看剧」自然转化成「进来陪看」。',
           html: `<style>
 .entry-phone-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0 auto;max-width:800px}
 .entry-phone{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;margin:0 auto}
@@ -852,55 +809,10 @@ export const projectData: Project[] = [
 </div></div>`,
         },
         // ═══ P6 明星陪看聚合页 ═══
-        {
-          heading: '沉浸式体验：从「伴随式社交」到「沉浸式陪看」',
-          body: '',
-          html: `<style>
-.tx-p{color:#A0A0A0;font-size:14px;line-height:1.8;margin:0 0 24px;font-weight:400}
-.tx-p b{color:#FFFFFF;font-weight:600}
-.entry-split{display:flex;gap:32px;align-items:stretch;margin:28px auto;width:fit-content;max-width:100%}
-.entry-left{flex:none;display:flex;gap:16px;align-items:stretch}
-.entry-right{flex:1;display:flex;flex-direction:column;gap:16px;min-width:0;max-width:380px}
-.entry-img-box{flex:0 0 auto;width:150px;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#A0A0A0;font-size:13px;position:relative;overflow:hidden;aspect-ratio:1/2.168}
-.entry-img-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-.entry-img-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1}
-.p7-card{background:transparent;border:none;padding:0 0 0 30px;position:relative}
-.p7-card::after{content:'';position:absolute;left:15px;top:0;bottom:0;width:1px;background:#222226;z-index:0}
-.p7-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px;display:flex;align-items:center;gap:8px;position:relative}
-.p7-card-title::before{content:'';width:15px;height:15px;border-radius:50%;background:#121212;border:2px solid #71717a;flex-shrink:0;position:absolute;left:-22px;top:50%;transform:translateY(-50%);z-index:2}
-.p7-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
-.p7-card-desc b{color:#FFFFFF;font-weight:600}
-.card-arrow{display:none}
-@media(max-width:767px){.p7-card{padding:0 0 0 22px}.p7-card::after{left:15px}.p7-card-title::before{left:-14px}}
-</style>
-<p class="tx-p">在明星陪看这一垂类场景中，直播间已不仅是内容的消费窗口，更是粉丝实时情感共鸣的社交场。然而，早期基于图文/语音的互动模式面临着显著的<b>体验断层</b>：互动载体与视频内容在视觉上是剥离的，且难以承载明星丰富的情绪表达，导致用户在阅读与观看之间频繁产生<b>心智割裂</b>，明星变为剧集视频的附属。</p>
-
-<div class="entry-split">
-<div class="entry-left">
-<div data-preview class="entry-img-box">
-<span class="entry-img-label">视觉剥离示意</span>
-</div>
-<div data-preview class="entry-img-box">
-<span class="entry-img-label">沉浸式融合示意</span>
-</div>
-</div>
-<div class="entry-right">
-<div class="p7-card">
-<div class="p7-card-title">体验断层</div>
-<p class="p7-card-desc">早期互动区与视频播放区<b>物理分离</b>，用户在弹幕/聊天与观影之间频繁切换注意力，产生严重的<b>心智割裂</b>。<br><br>同时，纯图文/语音的互动载体<b>无法承载明星的丰富情绪</b>，削弱了「陪伴感」的核心价值，明星沦为视频的<b>"画外音"附属</b>。</p>
-</div>
-<div class="card-arrow">↓</div>
-<div class="p7-card">
-<div class="p7-card-title">沉浸式融合</div>
-<p class="p7-card-desc">将互动层与视频层<b>深度融合</b>，通过画中画、表情回应气泡、实时情绪可视化等手段，让明星的陪伴从<b>"背景音「升维为」在场感"</b>。</p>
-</div>
-</div>
-</div>`,
-        },
         // ═══ P8 陪看布局重构1 ═══
         {
-          heading: '沉浸式体验：直播间页面分层管理',
-          body: '直播间里同时挤着影视画面、明星陪看、弹幕互动和商业挂件，多源信息极易互相干扰。我的解法是「分层管理」——从底层到顶层依次为：影视视频 → 弹幕/礼物 → 商业挂件 → 明星画面，明星永远在最顶层，保证粉丝注意力不被稀释；各层再按场景动态显隐，让每个时刻只呈现当前最需要的信息。',
+          heading: '直播间布局：分层管理',
+          body: '直播间里同时挤着影视画面、明星陪看、弹幕互动和商业挂件，多源信息极易互相干扰。我的解法是「分层管理」——从底层到顶层依次为：影视视频 → 弹幕/礼物 → 商业挂件 → 明星画面，明星永远在最顶层，保证粉丝注意力不被稀释；各层再按场景动态显隐，让每个时刻只呈现当前最需要的信息。这一切的本质，是<b>保护观看的心流</b>—该收的收、该放的放，让注意力始终留在内容本身。',
           html: `<style>
 .im-row{display:flex;gap:24px;justify-content:center;align-items:flex-start;max-width:1080px;margin:24px auto 0}
 .im-item{display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex-shrink:0}
@@ -917,7 +829,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '直播间状态：场景化信息管理',
-          body: '直播间不止「直播中」一种状态，我按场景分别管理。预约态：把对明星的期待，转化为明确的一键预约与回访。\n回看态：引入播控，并做了「4 秒自动隐匿」——无操作时焦点自动回归画面；拖动进度时只出进度缩略图、自动收起飘评和挂件，把屏幕空间还给内容，服务深度复盘。',
+          body: '直播间不止「直播中」一种状态，我按场景分别管理。预约态：把对明星的期待，转化为明确的一键预约与回访。\n回看态：引入播控，并做了「4 秒自动隐匿」——无操作时焦点自动回归画面；拖动进度时只出进度缩略图、自动收起飘评和挂件，把屏幕空间还给内容。这些设计都指向同一件事：<b>保护心流</b>，让用户沉浸于内容，而不是被控件打断。',
           html: `<style>
 .sr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .sr-col{display:flex;flex-direction:column;gap:0;align-items:flex-start}
@@ -936,7 +848,7 @@ export const projectData: Project[] = [
         // ═══ P9 陪看布局重构2 ═══
         {
           heading: '情感变现：送礼分层玩法矩阵',
-          body: '变现的难点在于：付费不能破坏互动氛围，反而要成为情感表达的一部分。我把送礼拆成「基础、创意、成就」三层——基础层保障顺滑支付，创意层注入游戏化惊喜，成就层制造集体仪式感。这套分层最终推动直播项目营收创上线以来历史新高，也让「直播」与「弹幕」「卡牌」并列为爱奇艺互动体验设计的三大营收版图。',
+          body: '变现的难点在于：付费不能破坏互动氛围，反而要成为情感表达的一部分。我把送礼拆成「基础、创意、成就」三层——基础层保障顺滑支付，创意层注入游戏化惊喜，成就层制造集体仪式感。三层都贯穿同一个机制：<b>即时反馈</b>—送出礼物的瞬间立即得到情感回应，让付费行为被不断强化。这套分层最终推动直播项目营收创上线以来历史新高，也让「直播」与「弹幕」「卡牌」并列为爱奇艺互动体验设计的三大营收版图。',
           html: `<style>
 .pyramid-wrap{text-align:center;margin:24px 0}
 .pyramid-img{width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block;margin:0 auto}
@@ -1028,25 +940,10 @@ export const projectData: Project[] = [
 </div>
 </div>`,
         },
-        // ═══ P12.5 玩法矩阵落地 ═══
-        {
-          heading: '进阶创意送礼：组件化能力，组装送礼玩法「生产线」',
-          body: '',
-          html: `<style>
-        .p12b-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px 0}
-        .p12b-text{color:#A0A0A0;font-size:14px;line-height:1.8;font-weight:400;margin:0;max-width:600px}
-        .p12b-text b{color:#FFFFFF;font-weight:600}
-        @media(max-width:767px){.p12b-text{font-size:13px;line-height:1.8}}
-        </style>
-        <div class="p12b-wrap">
-        <p class="p12b-text">标准化的交互模组支撑了<b>冠名送礼、定制礼物、梯度礼物、心动套组、盲盒礼物</b>…<br>多元玩法快速落地，极大提升上线效率。</p>
-        <img src="/birdys-portfolio/images/play-methods.png" alt="玩法" style="width:100%;max-width:800px;height:auto;display:block;margin:24px auto 0" />
-        </div>`,
-        },
         // ═══ P13 终极玩法 ═══
         {
           heading: '终极玩法：明星爆灯的成就闭环',
-          body: '在「尖叫之夜」这类顶级活动里，单点付费撑不起氛围。我用「明星爆灯」把个人付费重构为全场共同推进的集体成就——粉丝的每次打赏都实时汇聚成全场进度，用高密度交互把明星影响力引爆为粉丝的社交能量。',
+          body: '在「尖叫之夜」这类顶级活动里，单点付费撑不起氛围。我用「明星爆灯」把个人付费重构为全场共同推进的集体成就——粉丝的每次打赏都实时汇聚成全场进度。这背后是<b>社会认同</b>的心理机制：当用户看到「所有人都在为偶像冲」，个体的付费就从「花钱」变成了「一起参与」，明星影响力由此引爆为粉丝的社交能量。',
           html: `<style>
 	.p13-chart{max-width:660px;margin:0 auto}
 	.p13-flow{display:flex;gap:28px;align-items:flex-start;margin:28px 0}
