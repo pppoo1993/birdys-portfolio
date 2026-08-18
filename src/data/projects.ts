@@ -324,16 +324,16 @@ export const projectData: Project[] = [
 <div class="dist-col-title">内容分发核心触点</div>
 <p class="dist-col-desc">在各分发场景下设置创作按钮，以便用户产生灵感后即可创作。</p>
 <div class="dist-img-row">
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-home.png" alt="首页" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">首页</span></div>
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-player.png" alt="播放页" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">播放页</span></div>
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-template.png" alt="模板 Tab" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">模板 Tab</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-home.png" alt="首页" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">首页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-player.png" alt="播放页" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">播放页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-template.png" alt="模板 Tab" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">模板 Tab</span></div>
 </div>
 </div>
 <div class="dist-col">
 <div class="dist-col-title">全局「+」浮层</div>
 <p class="dist-col-desc">展示全部AI视频玩法。</p>
 <div class="dist-img-row">
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-float.png" alt="+浮层" style="height:100%;width:auto;display:block" /></div><span class="dist-img-label">「+」浮层</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-float.png" alt="+浮层" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">「+」浮层</span></div>
 </div>
 </div>
 </div>
@@ -361,16 +361,16 @@ export const projectData: Project[] = [
 <div class="cr-col-title">通用视频生成</div>
 <p class="cr-col-desc">支持多模态输入自由创作。</p>
 <div class="cr-img-row">
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-create-video.png" alt="创作视频" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">通用创作入口</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-create-video.png" alt="创作视频" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">通用创作入口</span></div>
 </div>
 </div>
 <div class="cr-col">
 <div class="cr-col-title">影视创意玩法</div>
 <p class="cr-col-desc">选择影视素材后，即可针对该视频进行定向维度的创作。</p>
 <div class="cr-img-row">
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-lines-rewrite.png" alt="台词改写" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">台词改写</span></div>
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-story-chain.png" alt="故事接龙" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">故事接龙</span></div>
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-style-transfer.png" alt="画风转换" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">画风转换</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-lines-rewrite.png" alt="台词改写" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">台词改写</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-story-chain.png" alt="故事接龙" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">故事接龙</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-style-transfer.png" alt="画风转换" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">画风转换</span></div>
 </div>
 </div>
 </div>`,
@@ -397,17 +397,17 @@ export const projectData: Project[] = [
 <div class="m-col-title">影视片段库形态演变预想</div>
 <p class="cr-col-desc">随着影视片段内容的扩充，我们规划了不同形态，并增加相应功能。</p>
 <div class="m-img-row">
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.png" alt="初期" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">初期</span></div>
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.png" alt="中期" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">中期</span></div>
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-late.png" alt="后期" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">后期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.png" alt="初期" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">初期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.png" alt="中期" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">中期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-late.png" alt="后期" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">后期</span></div>
 </div>
 </div>
 <div class="m-col">
 <div class="m-col-title">支持多选场景</div>
 <p class="cr-col-desc">通用视频创作时支持多选素材。</p>
 <div class="m-img-row">
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-unselected.png" alt="多选未选择" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">多选-未选择</span></div>
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.png" alt="多选已选择" style="height:100%;width:auto;display:block" /></div><span class="cr-img-label">多选-已选择</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-unselected.png" alt="多选未选择" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">多选-未选择</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.png" alt="多选已选择" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">多选-已选择</span></div>
 </div>
 </div>
 </div>
@@ -479,9 +479,9 @@ export const projectData: Project[] = [
 @media(max-width:767px){.sk-row{gap:10px}}
 </style>
 <div class="sk-wrapper">
-<div class="sk-group"><div class="sk-group-title">评论该楼式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页A</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">平行宇宙式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="height:100%;width:auto;display:block" /></div><span class="sk-label">接龙宇宙</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">地图探索式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="height:100%;width:auto;display:block" /></div><span class="sk-label">起点页C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="height:100%;width:auto;display:block" /></div><span class="sk-label">接龙地图</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">评论该楼式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="width:100%;height:auto;display:block" /></div><span class="sk-label">起点页A</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">平行宇宙式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="width:100%;height:auto;display:block" /></div><span class="sk-label">起点页B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="width:100%;height:auto;display:block" /></div><span class="sk-label">接龙宇宙</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">地图探索式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="width:100%;height:auto;display:block" /></div><span class="sk-label">起点页C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="width:100%;height:auto;display:block" /></div><span class="sk-label">接龙地图</span></div></div></div>
 </div>`,
         },
         {
@@ -773,10 +773,10 @@ export const projectData: Project[] = [
 </div>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>播放页触达入口</p>
 <div class="entry-phone-grid">
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-no-entry.png" alt="无直播入口" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无直播时</span></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-has-entry.png" alt="有直播入口" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有直播时</span></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-entry-status.png" alt="直播入口状态" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">入口状态</span></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-booking.png" alt="一键预约弹窗" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">一键预约</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-no-entry.png" alt="无直播入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无直播时</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-has-entry.png" alt="有直播入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有直播时</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-entry-status.png" alt="直播入口状态" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">入口状态</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-booking.png" alt="一键预约弹窗" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">一键预约</span></div>
 </div>
 </div>`,
         },
@@ -921,15 +921,15 @@ export const projectData: Project[] = [
 <div class="p12-chart">
 <div class="p12-flow">
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-tag.png" alt="玩法标签" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">玩法标签</span>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-tag.png" alt="玩法标签" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">玩法标签</span>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-entry.png" alt="活动入口" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动入口</span>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-entry.png" alt="活动入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动入口</span>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-overlay.png" alt="活动浮层" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动浮层</span>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-overlay.png" alt="活动浮层" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动浮层</span>
 </div>
 </div>
 </div>`,
@@ -943,7 +943,7 @@ export const projectData: Project[] = [
 	.p13-flow{display:flex;gap:28px;align-items:flex-start;margin:28px 0}
 	.p13-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
 	.p13-arrow{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:170px}
-	.p13-item-img{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+	.p13-item-img{width:100%;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 	.p13-item-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 	.p13-item-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
 	.p13-item-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5;width:100%}
@@ -960,26 +960,23 @@ export const projectData: Project[] = [
 	@media(max-width:767px){.p13-chart,.p13-chart-wide{max-width:100%}.p13-tag-row{flex-wrap:wrap;gap:6px}.p13-tag{padding:4px 12px;font-size:12px}.p13-tag-arrow{font-size:12px}.p13-arrow{transform:rotate(90deg);margin-top:0}}
 	</style>
 	<div class="p13-chart-wide">
-	<div class="p13-subtitle">爆灯流程</div>
-	<div class="p13-tag-row">
+		<div class="p13-tag-row">
 	<span class="p13-tag">点击头像</span><span class="p13-tag-arrow">→</span><span class="p13-tag">选中反馈</span><span class="p13-tag-arrow">→</span><span class="p13-tag">展示助力任务</span><span class="p13-tag-arrow">→</span><span class="p13-tag">送出礼物</span><span class="p13-tag-arrow">→</span><span class="p13-tag">尖叫值达成</span><span class="p13-tag-arrow">→</span><span class="p13-tag">触发爆灯特效</span>
 	</div>
 	</div>
 	<div class="p13-chart">
 	<div class="p13-flow">
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><span class="p13-item-img-label">为TA爆灯组件</span></div>
-	<div class="p13-item-text"><strong>入口层</strong>通过高亮的<b>"为TA爆灯"</b>组件，明确引导用户产生指向性极强的交互目标。</div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-none.png" alt="送礼面板-未选明星" style="width:100%;height:auto;display:block" /></div>
 	</div>
-	<div class="p13-arrow">→</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><span class="p13-item-img-label">全屏爆灯特效</span></div>
-	<div class="p13-item-text"><strong>浮层与反馈层</strong>引入<b>全屏级的视觉特效</b>承接反馈，通过高规格的视听呈现给予用户巨大的成就满足感。</div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-selected.png" alt="送礼面板-已选明星" style="width:100%;height:auto;display:block" /></div>
 	</div>
-	<div class="p13-arrow">→</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><span class="p13-item-img-label">成就达成直播间</span></div>
-	<div class="p13-item-text"><strong>成就达成</strong>将用户转化为直播间的<b>「高价值活跃资产」</b>，完成从付费行为到社交资产的闭环。</div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-effect.png" alt="爆灯特效" style="width:100%;height:auto;display:block" /></div>
+	</div>
+	<div class="p13-item">
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-progress.png" alt="爆灯进度" style="width:100%;height:auto;display:block" /></div>
 	</div>
 	</div>
 	</div>`,
@@ -1199,7 +1196,7 @@ export const projectData: Project[] = [
 </style>
 <div class="pad6-split">
 <div class="pad6-left">
-<div data-preview class="pad6-mockup"><img src="/birdys-portfolio/images/pad-player.png" alt="Pad 播放页截图" style="height:100%;width:auto;display:block" /></div>
+<div data-preview class="pad6-mockup"><img src="/birdys-portfolio/images/pad-player.png" alt="Pad 播放页截图" style="width:100%;height:auto;display:block" /></div>
 </div>
 <div class="pad6-right">
 <div class="pad6-card"><h4 class="pad6-card-title">视觉重心失衡</h4><p class="pad6-card-desc">右侧推荐流占据过大权重，导致<b>播放主体被边缘化</b>，破坏了 Pad 端应有的沉浸心智。</p></div>
