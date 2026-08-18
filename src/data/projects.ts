@@ -42,7 +42,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '缘起：从业务瓶颈到设计机会',
-          body: '2025 年中，我以设计 owner 身份着手吃鲸AI前期探索。我的第一个问题不是「做什么功能」，而是<b>「爱奇艺为什么要做这件事」</b>—不理解业务动机，设计无从锚定。\n\n经过梳理我发现了长视频行业在生产端、变现端、流量端存在三个结构性瓶颈。它们看似是业务问题，但每一个都指向了设计机会—<b>AI 不只是降本，更是重构用户关系的杠杆</b>。\n\n基于此，我将每个瓶颈拆解为「痛点 → 解法」，作为后续所有设计决策的起点。',
+          body: '2025 年中，我以设计 owner 身份着手吃鲸AI前期探索。我的第一个问题不是「做什么功能」，而是<b>「爱奇艺为什么要做这件事」</b> — 不理解业务动机，设计无从锚定。\n\n经过梳理我发现了长视频行业在生产端、变现端、流量端存在三个结构性瓶颈。它们看似是业务问题，但每一个都指向了设计机会 — <b>AI 不只是降本，更是重构用户关系的杠杆</b>。\n\n基于此，我将每个瓶颈拆解为「痛点 → 解法」，作为后续所有设计决策的起点。',
                     html: `<style>
 .ba-section{display:flex;flex-direction:column;gap:16px;margin:0 auto;max-width:1080px}
 .ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:12px}
@@ -87,7 +87,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '挑战与破局：找到不可复制的锚点',
-          body: '厘清三个瓶颈后，我需要更系统地去判断：爱奇艺跨界 AI 的真正优势是什么，风险又在哪里。\n\n我利用 <b>SWOT</b> 完成了这轮结构化思考。结论是：<b>爱奇艺的核心优势不在技术，而在 IP 版权</b>——这是我们不可被复制的东西，也是设计应该死死咬住的锚点。',
+          body: '厘清三个瓶颈后，我需要更系统地去判断：爱奇艺跨界 AI 的真正优势是什么，风险又在哪里。\n\n我利用 <b>SWOT</b> 完成了这轮结构化思考。结论是：<b>爱奇艺的核心优势不在技术，而在 IP 版权</b> — 这是我们不可被复制的东西，也是设计应该死死咬住的锚点。',
           html: `<style>
 .quadrant-wrap{position:relative;width:100%;max-width:720px;margin:12px auto 32px}
 .quad-cell .qwatermark{position:absolute;top:6px;right:8px;font-size:80px;font-weight:900;color:rgba(255,255,255,.025);font-family:system-ui,-apple-system,sans-serif;line-height:1;pointer-events:none;z-index:0;letter-spacing:-0.02em}
@@ -118,7 +118,7 @@ export const projectData: Project[] = [
 </div>`,        },
         {
           heading: '定位重塑：消费型 AI 互动社区',
-          body: 'SWOT 分析后，我们面临产品定位的关键抉择：<b>是否要做一个「专业 AI 创作工具」</b>。\n\n专业工具路线看似合理—市场成熟、认知清晰。但两个致命问题让我们否掉了它：爱奇艺单一的营收模式无法覆盖 AI 视频的巨额算力成本；技术上难以企及深耕多年的视频大模型厂商。\n\n因此我们选择了另一条路：做「消费型 AI 互动社区」，以轻量玩法和 IP 资产优势，打造普通观众也能参与的二创生态。',
+          body: 'SWOT 分析后，我们面临产品定位的关键抉择：<b>是否要做一个「专业 AI 创作工具」</b>。\n\n专业工具路线看似合理 — 市场成熟、认知清晰。但两个致命问题让我们否掉了它：爱奇艺单一的营收模式无法覆盖 AI 视频的巨额算力成本；技术上难以企及深耕多年的视频大模型厂商。\n\n因此我们选择了另一条路：做「消费型 AI 互动社区」，以轻量玩法和 IP 资产优势，打造普通观众也能参与的二创生态。',
           html: `<style>
 .decision-compare{display:flex;align-items:center;justify-content:center;gap:24px;margin:32px 0;flex-wrap:wrap}
 .decision-opt{display:flex;flex-direction:column;align-items:center;gap:8px;padding:24px 32px;border-radius:6px;min-width:260px;position:relative;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08)}
@@ -243,11 +243,11 @@ export const projectData: Project[] = [
 <div class="jm-mobile-col-item"><span class="jm-mobile-col-label">核心卡点</span><p class="jm-mobile-col-desc"><span class="jm-kw">工具门槛过高</span>复杂编辑参数，劝退普通观众。</p></div>
 <div class="jm-mobile-col-item strat"><span class="jm-mobile-col-label">设计策略</span><p class="jm-mobile-col-desc">轻量交互转化 — 低门槛影视创意玩法。</p></div>
 </div>
-<div class="jm-insight"><p>走完整条链路后，我用 Fogg 行为模型（B=MAT）重新审视：行为发生需要 Motivation、Ability、Trigger 三者同时触发。链路中用户不缺 Motivation 和 Trigger——真正断裂的是 Ability，而素材获取正是 Ability 的关键瓶颈。\n\n由此我做出关键判断：<b>素材库不能只做功能模块，必须升级为产品护城河</b>。这个判断也直接催生了后续「影视创意玩法」的设计方向。</p></div>`,
+<div class="jm-insight"><p>走完整条链路后，我用 Fogg 行为模型（B=MAT）重新审视：行为发生需要 Motivation、Ability、Trigger 三者同时触发。链路中用户不缺 Motivation 和 Trigger — 真正断裂的是 Ability，而素材获取正是 Ability 的关键瓶颈。\n\n由此我做出关键判断：<b>素材库不能只做功能模块，必须升级为产品护城河</b>。这个判断也直接催生了后续「影视创意玩法」的设计方向。</p></div>`,
         },
         {
           heading: '产品框架：以消带产，从消费到创作',
-          body: '基于旅程洞察，我们将产品框架收敛为<b>「以消带产」</b>的核心策略：在用户消费内容的高光时刻嵌入创作入口，<b>将观看冲动直接转化为创作动力</b>。\n\n框架左侧承载内容分发与消费闭环，右侧通过多层素材库降低创作门槛。其中<b>「影视创意玩法」</b>和<b>「爱奇艺影视库」</b>是两根核心支柱—前者降低创作的心理门槛，后者解决素材的获取障碍，二者共同构成了产品不可替代的<b>体验壁垒</b>。',
+          body: '基于旅程洞察，我们将产品框架收敛为<b>「以消带产」</b>的核心策略：在用户消费内容的高光时刻嵌入创作入口，<b>将观看冲动直接转化为创作动力</b>。\n\n框架左侧承载内容分发与消费闭环，右侧通过多层素材库降低创作门槛。其中<b>「影视创意玩法」</b>和<b>「爱奇艺影视库」</b>是两根核心支柱 — 前者降低创作的心理门槛，后者解决素材的获取障碍，二者共同构成了产品不可替代的<b>体验壁垒</b>。',
           html: `<style>
 .arch-flow{display:flex;flex-direction:column;align-items:center;gap:30px;max-width:1080px;margin:0 auto}
 .arch-flow-row{display:flex;align-items:center;justify-content:center;gap:20px;width:100%;max-width:1080px;margin:0 auto}
@@ -303,7 +303,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '以消带产：分层触点的落地',
-          body: '框架落定后，第一个要解决的是分发场景：如何把用户的观看冲动，低成本转化为创作行为。\n\n根据 Hook Model，外部 Trigger 可以替代用户的内部决策负担。针对用户不同时刻的心理，我们设计了三个分层的触发点：\n\n① <b>首页瀑布流（弱触发·建认知）</b>— 用双列 Feed 流让用户感知「这里能玩 AI」\n② <b>播放页（强刺激·捕冲动）</b> — 观看冲动最强的时刻，同款入口即时出现\n③ <b>模板 Tab（深加工·导行动）</b>— 把模糊意向转化为具体拍摄动作\n\n三个触点层层递进，配合全局「+」浮层兜底，让「看到 → 想要 → 开始」无缝衔接。',
+          body: '框架落定后，第一个要解决的是分发场景：如何把用户的观看冲动，低成本转化为创作行为。\n\n根据 Hook Model，外部 Trigger 可以替代用户的内部决策负担。针对用户不同时刻的心理，我们设计了三个分层的触发点：\n\n① <b>首页瀑布流（弱触发·建认知）</b> — 用双列 Feed 流让用户感知「这里能玩 AI」\n② <b>播放页（强刺激·捕冲动）</b> — 观看冲动最强的时刻，同款入口即时出现\n③ <b>模板 Tab（深加工·导行动）</b> — 把模糊意向转化为具体拍摄动作\n\n三个触点层层递进，配合全局「+」浮层兜底，让「看到 → 想要 → 开始」无缝衔接。',
           html: `<style>
 .dist-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .dist-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}@media(min-width:768px){.dist-col{align-items:flex-start}}
@@ -341,7 +341,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '以消带产：三个核心玩法的提炼',
-          body: '通用视频生成是平台基础能力，但解决不了普通用户的困境—面对空白画布，大多数人不知道从何下手。\n\n我回到一个更根本的问题：影视片段由哪些用户可操控的维度构成？从影视学角度看，核心维度包括剧情、画风、台词、镜头节奏、音效配乐等。但并非都适合普通用户操控——音效、剪辑需要专业知识，而台词、画风、剧情是大众有天然认知、AI 又能干预、且已被市场验证的三个维度。\n\n基于此，我们聚焦这三个维度，提炼出三个核心玩法—<b>画风转换</b>（操控视觉）、<b>台词改写</b>（操控对白）、<b>故事接龙</b>（操控叙事）。用户不需要从零构思，只需选择一个预设方向即可开始。',
+          body: '通用视频生成是平台基础能力，但解决不了普通用户的困境 — 面对空白画布，大多数人不知道从何下手。\n\n我回到一个更根本的问题：影视片段由哪些用户可操控的维度构成？从影视学角度看，核心维度包括剧情、画风、台词、镜头节奏、音效配乐等。但并非都适合普通用户操控 — 音效、剪辑需要专业知识，而台词、画风、剧情是大众有天然认知、AI 又能干预、且已被市场验证的三个维度。\n\n基于此，我们聚焦这三个维度，提炼出三个核心玩法 — <b>画风转换</b>（操控视觉）、<b>台词改写</b>（操控对白）、<b>故事接龙</b>（操控叙事）。用户不需要从零构思，只需选择一个预设方向即可开始。',
           html: `<style>
 .cr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .cr-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -377,7 +377,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '创作中枢：影视片段库搭建',
-          body: '深入具体玩法前，需要先解决素材获取这一基础问题。我的决策是：不追求素材数量，而是用三类来源覆盖全部创作场景—<b>官方影视片段</b>（版权素材）、<b>本地图片/视频</b>（自由创作）、<b>已创作视频</b>（二次迭代）。\n\n同时，我们把它封装成<b>通用模组</b>，在通用视频、影视创意玩法等环节均可调用，并针对每个玩法精细化影视片段的运营。随着影视片段内容的持续扩充，库的形态也随之调整—从基础的盖楼式结构，演进为左导航结构，并逐步加入<b>筛选、搜索</b>能力，提升选片效率。',
+          body: '深入具体玩法前，需要先解决素材获取这一基础问题。我的决策是：不追求素材数量，而是用三类来源覆盖全部创作场景 — <b>官方影视片段</b>（版权素材）、<b>本地图片/视频</b>（自由创作）、<b>已创作视频</b>（二次迭代）。\n\n同时，我们把它封装成<b>通用模组</b>，在通用视频、影视创意玩法等环节均可调用，并针对每个玩法精细化影视片段的运营。随着影视片段内容的持续扩充，库的形态也随之调整 — 从基础的盖楼式结构，演进为左导航结构，并逐步加入<b>筛选、搜索</b>能力，提升选片效率。',
           html: `<style>
 .m-split{display:flex;gap:48px;align-items:flex-start;margin:0;width:fit-content;max-width:100%}
 .m-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -415,7 +415,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '创作中枢：参考添加调用',
-          body: '在通用视频创作中，用户可引用参考图来控制生成方向。这里的基础机制是：参考被「添加」后进入参考池，被「调用」后则以标签形式嵌入输入框内。但调用真正的难点在于理清「用户在什么心智状态下需要它」。我以场景化思考切入，模拟用户自然输入剧情时的心流，按构想成熟度把用户分成三种状态：\n\nA. <b>构想已建立</b>—开始输入前一次性添加好所有参考\nB. <b>构想部分建立</b>—先加一部分，边输入边补充\nC. <b>构想未建立</b>—边写边即时添加\n\n三种状态的共同要求是：调用入口要足够灵活，既不要求用户预先想清楚，也不打破用户当前的心流。因此我把「调用」设计成三类入口：\n\n① <b>点击已添加的参考缩略图</b>—视觉浏览流\n② <b>输入 @ 唤起浮层点选</b>—键盘输入心流\n③ <b>点击已调用的参考标签唤起浮层替换</b>—修改替换流\n\n其中前两者是首次调用的互补入口，覆盖点击交互与键盘两种输入状态；后者兜底「调错想换」的场景。这样，无论用户处于哪种构想状态，都能在输入流中随时调用参考，而无需离开创作上下文。',
+          body: '在通用视频创作中，用户可引用参考图来控制生成方向。这里的基础机制是：参考被「添加」后进入参考池，被「调用」后则以标签形式嵌入输入框内。但调用真正的难点在于理清「用户在什么心智状态下需要它」。我以场景化思考切入，模拟用户自然输入剧情时的心流，按构想成熟度把用户分成三种状态：\n\nA. <b>构想已建立</b> — 开始输入前一次性添加好所有参考\nB. <b>构想部分建立</b> — 先加一部分，边输入边补充\nC. <b>构想未建立</b> — 边写边即时添加\n\n三种状态的共同要求是：调用入口要足够灵活，既不要求用户预先想清楚，也不打破用户当前的心流。因此我把「调用」设计成三类入口：\n\n① <b>点击已添加的参考缩略图</b> — 视觉浏览流\n② <b>输入 @ 唤起浮层点选</b> — 键盘输入心流\n③ <b>点击已调用的参考标签唤起浮层替换</b> — 修改替换流\n\n其中前两者是首次调用的互补入口，覆盖点击交互与键盘两种输入状态；后者兜底「调错想换」的场景。这样，无论用户处于哪种构想状态，都能在输入流中随时调用参考，而无需离开创作上下文。',
           html: `<style>
 .lr-label{font-size:12px;color:#A0A0A0;text-align:center}
 </style>
@@ -428,7 +428,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '台词改写：门槛递降，预期可见',
-          body: '改写经典影视台词，是短视频里长盛不衰的二创玩法—市面案例众多，却几乎都靠创作者「手搓」，从头改写的高门槛让普通用户望而却步。\n\n不同状态的用户需要不同层级的引导。<b>Scaffolding 渐进释放理论</b>指出：入门阶段需要高引导，熟练后逐步归还自主权。据此我设计了三种入口，引导强度从高到低逐级递减：\n\n① <b>底部主题标签</b>— 完全没想法，一键生成（高引导）\n② <b>AI 写台词浮层</b>— 有方向缺灵感，输入主题由 AI 生成（中引导）\n③ <b>逐句点击改写</b>— 已有想法，所见即所得（低引导）\n\n但「怎么改」只是第一步，改完之后还有一道坎—<b>预期管理</b>。改写后不会即时生成视频（解析需要时间），漫长的等待与不确定感极易劝退用户。为此我借鉴音乐播放器的歌词时间轴，解析影视片段台词，让<b>视频画面与台词时间轴联动预览</b>—改写时实时看到每句台词对应的画面，在生成前就校准「抽卡预期」，把不可控的等待变成可控的确认。',
+          body: '改写经典影视台词，是短视频里长盛不衰的二创玩法 — 市面案例众多，却几乎都靠创作者「手搓」，从头改写的高门槛让普通用户望而却步。\n\n不同状态的用户需要不同层级的引导。<b>Scaffolding 渐进释放理论</b>指出：入门阶段需要高引导，熟练后逐步归还自主权。据此我设计了三种入口，引导强度从高到低逐级递减：\n\n① <b>底部主题标签</b> — 完全没想法，一键生成（高引导）\n② <b>AI 写台词浮层</b> — 有方向缺灵感，输入主题由 AI 生成（中引导）\n③ <b>逐句点击改写</b> — 已有想法，所见即所得（低引导）\n\n但「怎么改」只是第一步，改完之后还有一道坎 — <b>预期管理</b>。改写后不会即时生成视频（解析需要时间），漫长的等待与不确定感极易劝退用户。为此我借鉴音乐播放器的歌词时间轴，解析影视片段台词，让<b>视频画面与台词时间轴联动预览</b> — 改写时实时看到每句台词对应的画面，在生成前就校准「抽卡预期」，把不可控的等待变成可控的确认。',
           html: `<style>
 .lr-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;max-width:min(900px,100%);margin:0 auto}
 .lr-item{display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -454,12 +454,12 @@ export const projectData: Project[] = [
         },
         {
           heading: '故事接龙：AI视频链式共创',
-          body: '台词改写解决的是「一个人怎么创作」，故事接龙则要解决「一群人怎么共创」—两者的区别不在玩法复杂度，而在参与互动感的深化。\n\n而互动的持续，恰恰是传统 UGC 的软肋—「发布即终点」让内容发出后便静态沉淀，没有持续参与的理由。我从影视 IP 的天然优势找到突破口：热播剧的大结局本身就是用户情绪的高点，也是创作欲最强的时刻。把接龙起点锚定在大结局处—依托已有世界观降低冷启动门槛，让用户从「追完剧」自然过渡到「改写结局」，每个灵感接续前文、不断延展。\n\n这样一来，接龙不再是一堆孤立的二创，而是被串联成一部不断生长的<b>「AI 短剧」</b>。剧有情节、有进展，参与者和围观者会像追剧一样持续回来，形成持续消费的动力。',
+          body: '台词改写解决的是「一个人怎么创作」，故事接龙则要解决「一群人怎么共创」 — 两者的区别不在玩法复杂度，而在参与互动感的深化。\n\n而互动的持续，恰恰是传统 UGC 的软肋 — 「发布即终点」让内容发出后便静态沉淀，没有持续参与的理由。我从影视 IP 的天然优势找到突破口：热播剧的大结局本身就是用户情绪的高点，也是创作欲最强的时刻。把接龙起点锚定在大结局处 — 依托已有世界观降低冷启动门槛，让用户从「追完剧」自然过渡到「改写结局」，每个灵感接续前文、不断延展。\n\n这样一来，接龙不再是一堆孤立的二创，而是被串联成一部不断生长的<b>「AI 短剧」</b>。剧有情节、有进展，参与者和围观者会像追剧一样持续回来，形成持续消费的动力。',
           html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.png" alt="故事接龙" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin-top:8px">故事接龙逻辑示意</p></div>`,
         },
         {
           heading: '故事接龙：起点页方案探索',
-          body: '接龙的核心交互在于起点页—它要在一屏之内完成<b>世界观透传</b>、<b>创作引导</b>和<b>生态图谱展示</b>。没有成熟行业参考，我在信息密度和可理解性之间做了不同取舍，尝试了三个方向：\n\n① <b>评论盖楼式</b>—理解门槛低，单对剧情分支与多元走向的容量有限\n② <b>平行宇宙式</b>—多线并行、每条故事线独立完整，但概念抽象、理解门槛高\n③ <b>地图探索式</b>—空间化地图直观呈现非线性叙事、探索感强，但信息密度过高、用户易迷失',
+          body: '接龙的核心交互在于起点页 — 它要在一屏之内完成<b>世界观透传</b>、<b>创作引导</b>和<b>生态图谱展示</b>。没有成熟行业参考，我在信息密度和可理解性之间做了不同取舍，尝试了三个方向：\n\n① <b>评论盖楼式</b> — 理解门槛低，单对剧情分支与多元走向的容量有限\n② <b>平行宇宙式</b> — 多线并行、每条故事线独立完整，但概念抽象、理解门槛高\n③ <b>地图探索式</b> — 空间化地图直观呈现非线性叙事、探索感强，但信息密度过高、用户易迷失',
           html: `<style>
 .sk-wrapper{display:flex;gap:40px;justify-content:center;max-width:100%;flex-wrap:wrap}
 .sk-group{flex-shrink:0}
@@ -486,7 +486,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '故事接龙：起点页减法收敛',
-          body: '多轮探索后，核心矛盾浮出水面：故事接龙承载的主线、支线信息量太大，若全部堆在首屏，用户一打开便迷失其中。\n\n最终方案是「减法」—首屏只保留主线故事，支线收纳进接龙播放器的选集列表，让用户第一眼只面对一件事。由此收敛出两条清晰的路径：\n\n① <b>想直接创作</b>—进入起点页，点「去接龙」，看完大结局再点「开始接龙」即可创作\n② <b>想先探索</b>—进入起点页，选择一条故事线，进入播放器顺着主线慢慢探索\n\n支线的展开交给后续交互自然发生。把复杂度拆开、后置，不让它第一秒就吓退用户。',
+          body: '多轮探索后，核心矛盾浮出水面：故事接龙承载的主线、支线信息量太大，若全部堆在首屏，用户一打开便迷失其中。\n\n最终方案是「减法」 — 首屏只保留主线故事，支线收纳进接龙播放器的选集列表，让用户第一眼只面对一件事。由此收敛出两条清晰的路径：\n\n① <b>想直接创作</b> — 进入起点页，点「去接龙」，看完大结局再点「开始接龙」即可创作\n② <b>想先探索</b> — 进入起点页，选择一条故事线，进入播放器顺着主线慢慢探索\n\n支线的展开交给后续交互自然发生。把复杂度拆开、后置，不让它第一秒就吓退用户。',
           html: `<style>
 .lr-video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);cursor:pointer;transition:all 0.3s ease}
 .lr-video-overlay:hover{background:rgba(0,0,0,0.15)}
@@ -505,7 +505,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '尾声：上线与资产留存',
-          body: '2026 年 4 月，吃鲸AI 在爱奇艺世界大会正式发布，不久后因战略调整关停—这是一次战略选择，而非设计的失败。\n\n产品画上句号，但核心交互资产并未消失：创作页、播放器等<b>关键模块</b>已标准化封装为 SDK，<b>嵌入爱奇艺主站</b>，持续服务于 AI 创作能力的分发与落地。好的设计思考，应该比产品活得更久。',
+          body: '2026 年 4 月，吃鲸AI 在爱奇艺世界大会正式发布，不久后因战略调整关停 — 这是一次战略选择，而非设计的失败。\n\n产品画上句号，但核心交互资产并未消失：创作页、播放器等<b>关键模块</b>已标准化封装为 SDK，<b>嵌入爱奇艺主站</b>，持续服务于 AI 创作能力的分发与落地。好的设计思考，应该比产品活得更久。',
           html: `<div style="display:flex;gap:60px;justify-content:center;align-items:flex-start;max-width:900px;margin:0 auto"><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI 正式发布</p><img src="/birdys-portfolio/images/ending.jpg" alt="发布" style="height:360px;width:auto;border-radius:8px;display:block;object-fit:contain" /></div><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI嵌入爱奇艺主站</p><img src="/birdys-portfolio/images/ending2.png" alt="嵌入" style="height:360px;width:auto;border-radius:8px;display:block;object-fit:contain" /></div></div>`,
         },
         {
@@ -529,7 +529,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '未竟的事业：后续规划设想',
-          body: '项目因战略调整关停，但设计思考没有停止。下面这三个方向，是曾经规划、却没能落地验证的设想—也是「校准」这条思路的自然延伸。\n\n① <b>结构化输出</b>—把 AI 加工后的故事，拆解为角色、画面、台词、音乐，让用户在确定的维度上校准与编辑，而不是面对一段不可控的文本\n② <b>IP 聚合</b>—以 IP 而非功能为维度组织内容，用户是冲 IP 来的，入口就该顺着 IP 来\n③ <b>商业闭环</b>—用积分与订阅，把算力消耗变成可回收的收入，让商业模型与算力成本从对立走向平衡',
+          body: '项目因战略调整关停，但设计思考没有停止。下面这三个方向，是曾经规划、却没能落地验证的设想 — 也是「校准」这条思路的自然延伸。\n\n① <b>结构化输出</b> — 把 AI 加工后的故事，拆解为角色、画面、台词、音乐，让用户在确定的维度上校准与编辑，而不是面对一段不可控的文本\n② <b>IP 聚合</b> — 以 IP 而非功能为维度组织内容，用户是冲 IP 来的，入口就该顺着 IP 来\n③ <b>商业闭环</b> — 用积分与订阅，把算力消耗变成可回收的收入，让商业模型与算力成本从对立走向平衡',
           html: `<style>
 .sk-wrapper{display:flex;gap:40px;justify-content:center;max-width:100%;flex-wrap:wrap;align-items:flex-start}
 .sk-group{flex-shrink:0;display:flex;flex-direction:column;align-items:flex-start}
@@ -613,7 +613,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '互动破局：由业务目标到设计价值',
-          body: '明星陪看直播间是一个既有的业务，我接手时的业务目标很明确：<b>改版、升级互动体验、促进商家变现</b>。\n\n对一个已上线跑的业务做体验升级，我的第一个问题是<b>「它到底缺什么」</b>。回到业务现场我发现：原有的陪看是「文字/语音」形态—明星通过文字、语音弹幕和观众交流，陪伴缺真实感、情感连接弱，既不利于留存，也撑不起付费。',
+          body: '明星陪看直播间是一个既有的业务，我接手时的业务目标很明确：<b>改版、升级互动体验、促进商家变现</b>。\n\n对一个已上线跑的业务做体验升级，我的第一个问题是<b>「它到底缺什么」</b>。回到业务现场我发现：原有的陪看是「文字/语音」形态 — 明星通过文字、语音弹幕和观众交流，陪伴缺真实感、情感连接弱，既不利于留存，也撑不起付费。',
           html: `<style>
 .hl-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 1.5rem;font-weight:400}
 .hl-p b{color:#FFFFFF;font-weight:600}
@@ -748,13 +748,13 @@ export const projectData: Project[] = [
         // ═══ P4 流量蓄水 ═══
         {
           heading: '流量蓄水：流量流转链路构建',
-          body: '流量蓄水的核心矛盾在于：看剧的流量是瞬时的，看完就走，不会自动沉淀。所以我把蓄水分成三步，形成「触达 → 留存 → 反哺」的循环：\n\n① <b>流量触达</b>—在播放页把「看剧」触达成「陪看」，解决「进来」\n② <b>资产留存</b>—在聚合页把「一次性的围观」沉淀成「可回访的资产」，解决「留下」\n③ <b>流量反哺</b>—打通剧集与直播的双向循环，让沉淀的资产反哺新流量，破解长尾期流量断崖',
+          body: '流量蓄水的核心矛盾在于：看剧的流量是瞬时的，看完就走，不会自动沉淀。所以我把蓄水分成三步，形成「触达 → 留存 → 反哺」的循环：\n\n① <b>流量触达</b> — 在播放页把「看剧」触达成「陪看」，解决「进来」\n② <b>资产留存</b> — 在聚合页把「一次性的围观」沉淀成「可回访的资产」，解决「留下」\n③ <b>流量反哺</b> — 打通剧集与直播的双向循环，让沉淀的资产反哺新流量，破解长尾期流量断崖',
           html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/live-flow.png" alt="明星陪看流量流转图" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin-top:8px">明星陪看流量流转图</p></div>`,
         },
         // ═══ P5 播放页入口 ═══
         {
           heading: '播放页入口：低干扰的高效触达',
-          body: '明星陪看直播间入口设置在播放页—这里是流量最集中的地方，用户正沉浸在剧里，对「和明星一起看」的意愿最高，转化也最自然。\n\n但播放页本身还承担着全屏观影、评论互动、数据分发等更核心的任务，陪看只是其一。所以入口必须克制，守住一条原则：<b>高效触达而不干扰</b>—既把直播送到看剧的人面前，又不打断观影心流。',
+          body: '明星陪看直播间入口设置在播放页 — 这里是流量最集中的地方，用户正沉浸在剧里，对「和明星一起看」的意愿最高，转化也最自然。\n\n但播放页本身还承担着全屏观影、评论互动、数据分发等更核心的任务，陪看只是其一。所以入口必须克制，守住一条原则：<b>高效触达而不干扰</b> — 既把直播送到看剧的人面前，又不打断观影心流。',
           html: `<style>
 .entry-phone-grid{display:flex;justify-content:space-between;gap:20px;margin:0 auto;max-width:800px}
 .entry-phone{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;height:340px;margin:0 auto}
@@ -814,7 +814,7 @@ export const projectData: Project[] = [
         // ═══ P8 陪看布局重构1 ═══
         {
           heading: '直播间布局：基于认知负荷的分层管理',
-          body: '增加了陪看画面后的直播间同时挤着影视画面、明星陪看、弹幕互动和商业挂件，多源信息极易互相干扰。从<b>认知负荷理论</b>来看，过载的视觉噪音会降低界面的“信噪比”，无形中增加用户的外在认知负荷。\n\n我的解法是通过<b>「分层管理」</b>—将信息解耦为三层：\n\n① <b>底层（内容层）</b> — 影视视频、明星画面，构筑核心视觉焦点\n② <b>中层（互动层）</b> — 弹幕、礼物，承载社群氛围\n③ <b>顶层（控件层）</b> — 页面导航与全局控件。\n\n在此基础上，引入两个机制：1. 顶部控件在无操作时自动精简；2. 弹幕与礼物根据明星画面动态避让。在<b>保护观看心流</b>的前提下，让明星始终稳居 C 位，把注意力始终留在内容本身。',
+          body: '增加了陪看画面后的直播间同时挤着影视画面、明星陪看、弹幕互动和商业挂件，多源信息极易互相干扰。从<b>认知负荷理论</b>来看，过载的视觉噪音会降低界面的“信噪比”，无形中增加用户的外在认知负荷。\n\n我的解法是通过<b>「分层管理」</b> — 将信息解耦为三层：\n\n① <b>底层（内容层）</b> — 影视视频、明星画面，构筑核心视觉焦点\n② <b>中层（互动层）</b> — 弹幕、礼物，承载社群氛围\n③ <b>顶层（控件层）</b> — 页面导航与全局控件。\n\n在此基础上，引入两个机制：1. 顶部控件在无操作时自动精简；2. 弹幕与礼物根据明星画面动态避让。在<b>保护观看心流</b>的前提下，让明星始终稳居 C 位，把注意力始终留在内容本身。',
           html: `<style>
 .im-row{display:flex;gap:24px;justify-content:center;align-items:flex-start;max-width:1080px;margin:24px auto 0}
 .im-item{display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0}
@@ -937,13 +937,13 @@ export const projectData: Project[] = [
         // ═══ P13 终极玩法 ═══
         {
           heading: '终极玩法：明星爆灯的成就闭环',
-          body: '在「尖叫之夜」这类顶级活动里，单点付费撑不起氛围。我用「明星爆灯」把个人付费重构为全场共同推进的集体成就——粉丝的每次打赏都实时汇聚成全场进度。这背后是<b>社会认同</b>的心理机制：当用户看到「所有人都在为偶像冲」，个体的付费就从「花钱」变成了「一起参与」，明星影响力由此引爆为粉丝的社交能量。',
+          body: '在「尖叫之夜」这类顶级活动里，单点付费撑不起氛围。我用「明星爆灯」把个人付费重构为全场共同推进的集体成就 — 粉丝的每次打赏都实时汇聚成全场进度。这背后是<b>社会认同</b>的心理机制：当用户看到「所有人都在为偶像冲」，个体的付费就从「花钱」变成了「一起参与」，明星影响力由此引爆为粉丝的社交能量。',
           html: `<style>
 	.p13-chart{max-width:660px;margin:0 auto}
 	.p13-flow{display:flex;gap:28px;align-items:flex-start;margin:28px 0}
 	.p13-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
 	.p13-arrow{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:170px}
-	.p13-item-img{width:100%;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+	.p13-item-img{width:100%;aspect-ratio:752/1096;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 	.p13-item-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 	.p13-item-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
 	.p13-item-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5;width:100%}
@@ -967,16 +967,16 @@ export const projectData: Project[] = [
 	<div class="p13-chart">
 	<div class="p13-flow">
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-none.png" alt="送礼面板-未选明星" style="width:100%;height:auto;display:block" /></div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-none.png" alt="送礼面板-未选明星" style="width:100%;height:100%;object-fit:contain;display:block" /></div>
 	</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-selected.png" alt="送礼面板-已选明星" style="width:100%;height:auto;display:block" /></div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-selected.png" alt="送礼面板-已选明星" style="width:100%;height:100%;object-fit:contain;display:block" /></div>
 	</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-effect.png" alt="爆灯特效" style="width:100%;height:auto;display:block" /></div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-effect.png" alt="爆灯特效" style="width:100%;height:100%;object-fit:contain;display:block" /></div>
 	</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-progress.png" alt="爆灯进度" style="width:100%;height:auto;display:block" /></div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-progress.png" alt="爆灯进度" style="width:100%;height:100%;object-fit:contain;display:block" /></div>
 	</div>
 	</div>
 	</div>`,
