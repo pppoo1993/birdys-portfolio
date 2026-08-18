@@ -753,83 +753,85 @@ export const projectData: Project[] = [
         },
         // ═══ P5 播放页入口 ═══
         {
-          heading: '播放页入口：动态链路触达',
-          body: '入口先要解决「放在哪」。我选了播放页—这里是观看冲动最强烈的时刻，用户对「和明星一起看」的意愿最高，转化也最自然。\n\n位置定了，再守住一个原则：<b>高效触达而不干扰</b>—把直播送到看剧的人面前，却不断观影心流。\n\n于是入口嵌在播放页选集下方，按直播状态动态显隐：开播时透出实时状态与角标，把「正在看剧」自然转化成「进来陪看」。',
+          heading: '播放页入口：低干扰的高效触达',
+          body: '明星陪看直播间入口设置在播放页—这里是流量最集中的地方，用户正沉浸在剧里，对「和明星一起看」的意愿最高，转化也最自然。\n\n但播放页本身还承担着全屏观影、评论互动、数据分发等更核心的任务，陪看只是其一。所以入口必须克制，守住一条原则：<b>高效触达而不干扰</b>—既把直播送到看剧的人面前，又不打断观影心流。',
           html: `<style>
-.entry-phone-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0 auto;max-width:800px}
-.entry-phone{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;margin:0 auto}
+.entry-phone-grid{display:flex;justify-content:space-between;gap:20px;margin:0 auto;max-width:800px}
+.entry-phone{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;height:340px;margin:0 auto}
 .entry-phone::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .entry-phone span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
+.entry-phone.plain{background:none;border:none;border-radius:0}
+.entry-phone.plain::before{display:none}
 .entry-card{flex:1;background:rgba(30,30,34,0.7);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.entry-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-@media(max-width:767px){.entry-phone-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+@media(max-width:767px){.entry-phone-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
 </style>
 <div style="max-width:800px;margin:0 auto">
 <div style="display:flex;gap:16px;margin-bottom:24px">
-<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">低干扰</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">入口置于选集下方，仅在临近直播时显示，不打断观影流。</p></div>
-<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">高转化</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">实时展示直播状态与活动权益，辅助决策，一键切入陪看。</p></div>
-<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">心智建设</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">通过直播预告培养预约习惯，将剧集观众转化为直播间存量用户。</p></div>
+<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">低干扰</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">入口置于选集下方，随直播状态动态显隐，不打断观影流。</p></div>
+<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">高转化</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">开播时透出试试状态和角标，辅助决策，一键切入陪看。</p></div>
+<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">心智建设</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">培养预约习惯，并引导一键预约，将剧集观众转化为直播间存量用户。</p></div>
 </div>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>播放页触达入口</p>
 <div class="entry-phone-grid">
 <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-no-entry.png" alt="无直播入口" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无直播时</span></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-has-entry.png" alt="有直播入口" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有直播时</span></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-entry-status.png" alt="直播入口状态" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">入口状态</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-has-entry.png" alt="有直播入口" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有直播时</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-entry-status.png" alt="直播入口状态" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">入口状态</span></div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-booking.png" alt="一键预约弹窗" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">一键预约</span></div>
 </div>
 </div>`,
         },
         {
-          heading: '明星陪看聚合页：互动资产沉淀',
-          body: '聚合页是连接粉丝、沉淀社交资产的中枢，核心矛盾在于：追星热情是瞬时的，平台价值却要长效。我用「时效引导 + 数据可视化 + 资产沉淀」三个系统，把一次性的热情，沉淀成可持续回访的互动资产。',
+          heading: '明星陪看聚合页：从即时流量到平台资产',
+          body: '聚合页是连接粉丝、促成互动、沉淀社交与内容资产的中枢。为了让用户产生持续的价值认同并不断「回访」，我们引入 <b>Fogg 行为模型</b>（B=MAT）作为指导框架。\n\n我们通过三大模块设计，确保了产生行为所需的触发（Trigger）、动机（Motivation）和能力（Ability）三要素同时满足，让一次性的「围观」转化为长期的「回访」与资产沉淀。',
           html: `<style>
-.ap-split{display:flex;gap:48px;align-items:center;max-width:800px;margin:0 auto}
+.ap-split{display:flex;gap:20px;align-items:stretch;max-width:680px;margin:0 auto}
 .ap-left{flex:0 0 280px;position:relative}
 .ap-phone{width:180px;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin:0 auto}
 .ap-phone::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .ap-right{flex:1;display:flex;flex-direction:column;gap:24px;max-width:380px}
-.ap-module{border-left:2px solid #333333;padding-left:20px}
-.ap-module-title{color:#FFFFFF;font-size:15px;font-weight:600;margin:0 0 6px}
-.ap-module-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
+.ap-module{border-left:2px solid #333333;padding-left:20px;flex:1}
+.ap-module-title{color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 6px}
+.ap-module-desc{color:#A0A0A0;font-size:12px;line-height:1.75;font-weight:400;margin:0}
 .ap-module-desc b{color:#FFFFFF;font-weight:600}
 @media(max-width:767px){.ap-split{flex-direction:column!important}.ap-left{flex:none;width:100%}}
 </style>
 <div style="display:flex;justify-content:center;width:100%"><div class="ap-split">
 <div class="ap-left">
 <div style="position:absolute;left:-90px;top:30px;z-index:10;display:flex;flex-direction:column;gap:8px">
-<div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">我的页「一起聊」入口</div>
-<div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">搜索结果页「一起聊」入口</div>
+<div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">我的页→</div>
+<div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">搜索结果页→</div>
 </div>
 <div class="ap-phone"><img src="/birdys-portfolio/images/agg-page.png" alt="聚合页" style="width:100%;height:auto;display:block" /></div>
 </div>
 <div class="ap-right">
-<div class="ap-module"><p class="ap-module-title">直播 / 预约动态</p><p class="ap-module-desc"><b>时间心智重构</b>——通过「正在直播、预约中、回看」多状态时间轴，建立用户对明星陪看的长期时间预期。</p></div>
-<div class="ap-module"><p class="ap-module-title">陪看榜单</p><p class="ap-module-desc"><b>社群竞技场</b>——引入贡献榜、送礼榜与热力值可视化，借助粉丝荣誉感激发高频互动。</p></div>
-<div class="ap-module"><p class="ap-module-title">回看合集</p><p class="ap-module-desc"><b>长效资产沉淀</b>——将即时直播转化为可复用的版权衍生内容，破解「看后即走」的留存困境。</p></div>
+<div class="ap-module"><p class="ap-module-title">触发 (Trigger)：直播/预约动态</p><p class="ap-module-desc"><b>时间预期管理</b> — 通过「正在直播、预约中」时间轴与临近提醒机制，在关键时间节点给予用户精准的外部触发，建立用户对「明星陪看」的长期时间预期，保障直播触达率与回访率。</p></div>
+<div class="ap-module"><p class="ap-module-title">动机 (Motivation)：陪看榜单</p><p class="ap-module-desc"><b>社群竞技场</b> — 通过 IP 月榜、总榜等榜单数据，利用粉丝的荣誉感与从众心理，极大激发粉丝的竞争动机，从而促成高频互动与打榜行为。</p></div>
+<div class="ap-module"><p class="ap-module-title">能力 (Ability)：回看合集</p><p class="ap-module-desc"><b>长效资产沉淀</b> — 将实时的直播内容转化为可复用的版权衍生内容，以 IP 维度聚合回看合集。这不仅打破了「看完即走」的流量留存困境，更通过降低查找成本、提高查找效率，显著提升了用户消费历史内容与持续回访的能力。</p></div>
 </div>
 </div></div>`,
         },
         // ═══ P6 明星陪看聚合页 ═══
         // ═══ P8 陪看布局重构1 ═══
         {
-          heading: '直播间布局：分层管理',
-          body: '直播间里同时挤着影视画面、明星陪看、弹幕互动和商业挂件，多源信息极易互相干扰。我的解法是「分层管理」——从底层到顶层依次为：影视视频 → 弹幕/礼物 → 商业挂件 → 明星画面，明星永远在最顶层，保证粉丝注意力不被稀释；各层再按场景动态显隐，让每个时刻只呈现当前最需要的信息。这一切的本质，是<b>保护观看的心流</b>—该收的收、该放的放，让注意力始终留在内容本身。',
+          heading: '直播间布局：基于认知负荷的分层管理',
+          body: '增加了陪看画面后的直播间同时挤着影视画面、明星陪看、弹幕互动和商业挂件，多源信息极易互相干扰。从<b>认知负荷理论</b>来看，过载的视觉噪音会降低界面的“信噪比”，无形中增加用户的外在认知负荷。\n\n我的解法是通过<b>「分层管理」</b>—将信息解耦为三层：\n\n① <b>底层（内容层）</b> — 影视视频、明星画面，构筑核心视觉焦点\n② <b>中层（互动层）</b> — 弹幕、礼物，承载社群氛围\n③ <b>顶层（控件层）</b> — 页面导航与全局控件。\n\n在此基础上，引入两个机制：1. 顶部控件在无操作时自动精简；2. 弹幕与礼物根据明星画面动态避让。在<b>保护观看心流</b>的前提下，让明星始终稳居 C 位，把注意力始终留在内容本身。',
           html: `<style>
 .im-row{display:flex;gap:24px;justify-content:center;align-items:flex-start;max-width:1080px;margin:24px auto 0}
-.im-item{display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex-shrink:0}
-.im-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px}.im-title::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.im-item{display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0}
+.im-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px;align-self:flex-start}.im-title::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .im-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;height:390px;width:auto}
 .im-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 @media(max-width:767px){.im-row{flex-wrap:wrap;gap:12px}}
 </style>
 <div class="im-row">
-<div class="im-item"><p class="im-title">分层管理示意</p><img src="/birdys-portfolio/images/im-layers.png" alt="分层管理" style="width:511px;height:390px;display:block;border-radius:6px" /></div>
-<div class="im-item"><p class="im-title">控件隐藏</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-player.png" alt="精简播控" style="height:100%;width:auto;display:block" /></div></div>
-<div class="im-item"><p class="im-title">动态避让</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-avoid.png" alt="动态避让" style="height:100%;width:auto;display:block" /></div></div>
+<div class="im-item"><p class="im-title">分层管理</p><img src="/birdys-portfolio/images/im-layers.png" alt="页面分层示意" style="width:511px;height:390px;display:block;border-radius:6px" /><p style="color:#A0A0A0;font-size:12px;margin:0">页面分层示意</p></div>
+<div class="im-item"><p class="im-title">控件精简</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-player.png" alt="顶部控件4s后自动精简播控" style="height:100%;width:auto;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin:0">顶部控件自动精简</p></div>
+<div class="im-item"><p class="im-title">动态避让</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-avoid.png" alt="弹幕/礼物动态动态避让明星高度" style="height:100%;width:auto;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin:0">弹幕/礼物避让明星画面</p></div>
 </div>`,
         },
         {
-          heading: '直播间状态：场景化信息管理',
-          body: '直播间不止「直播中」一种状态，我按场景分别管理。预约态：把对明星的期待，转化为明确的一键预约与回访。\n回看态：引入播控，并做了「4 秒自动隐匿」——无操作时焦点自动回归画面；拖动进度时只出进度缩略图、自动收起飘评和挂件，把屏幕空间还给内容。这些设计都指向同一件事：<b>保护心流</b>，让用户沉浸于内容，而不是被控件打断。',
+          heading: '直播间状态：情景感知与任务聚焦',
+          body: '顺承分层逻辑，直播间不止“直播中”一种状态。为了避免一刀切的界面打碎用户的沉浸感，我引入了<b>情境感知的设计思路</b>，按场景增加三种状态：\n\n① <b>鉴权态</b> — 会员鉴权区分身份，付费用户顺畅进入、非付费用户引导开通，精准匹配不同用户的任务闭环\n② <b>预约态</b> — 把对明星的期待，转化为明确的一键预约与回访提醒，通过外部触发建立长期的心理预期\n③ <b>回看态</b> — 引入播控，并设计「播控动态显隐机制」：无操作时底部播控隐藏，展示互动控件；拖动进度时展示画面缩略图、自动收起飘评和挂件\n\n这些设计都指向同一件事：让用户聚焦于当前任务，而不是被过多的信息干扰。',
           html: `<style>
 .sr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .sr-col{display:flex;flex-direction:column;gap:0;align-items:flex-start}
@@ -841,14 +843,15 @@ export const projectData: Project[] = [
 @media(max-width:767px){.sr-row{flex-direction:column!important}}
 </style>
 <div class="sr-row">
-<div class="sr-col"><div class="sr-col-title">预约态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-book.png" alt="预约态" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">预约态</span></div></div></div>
+<div class="sr-col"><div class="sr-col-title">鉴权态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-auth.png" alt="鉴权态" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">鉴权态</span></div></div></div>
+<div class="sr-col"><div class="sr-col-title">预约态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-book.png" alt="预约态" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">直播预告</span></div></div></div>
 <div class="sr-col"><div class="sr-col-title">回看态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-ctrl-on.png" alt="有播控" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有播控</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-ctrl-off.png" alt="无播控" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无播控</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-seek.png" alt="调节进度" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">调节进度</span></div></div></div>
 </div>`,
         },
         // ═══ P9 陪看布局重构2 ═══
         {
-          heading: '情感变现：送礼分层玩法矩阵',
-          body: '变现的难点在于：付费不能破坏互动氛围，反而要成为情感表达的一部分。我把送礼拆成「基础、创意、成就」三层——基础层保障顺滑支付，创意层注入游戏化惊喜，成就层制造集体仪式感。三层都贯穿同一个机制：<b>即时反馈</b>—送出礼物的瞬间立即得到情感回应，让付费行为被不断强化。这套分层最终推动直播项目营收创上线以来历史新高，也让「直播」与「弹幕」「卡牌」并列为爱奇艺互动体验设计的三大营收版图。',
+          heading: '情感变现：送礼金分层金字塔设计',
+          body: '变现的核心难点在于：付费不能破坏互动氛围，反而要成为情感表达的延伸。根据<b>「自决理论」</b>，用户的付费本质上是为了满足胜任、自主和归属三种心理需求。据此，我将送礼体系拆解为「基础、创意、成就」三层分层金字塔.\n\n这套分层最终推动<b>直播项目营收创上线以来历史新高</b>，也让「直播」与「弹幕」「卡牌」并列为爱奇艺互动体验设计的三大营收版图。',
           html: `<style>
 .pyramid-wrap{text-align:center;margin:24px 0}
 .pyramid-img{width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block;margin:0 auto}
@@ -861,8 +864,8 @@ export const projectData: Project[] = [
         },
         // ═══ P11 基础送礼链路 ═══
         {
-          heading: '基础送礼链路：极简支付体验',
-          body: '送礼的第一要义是「别打断」。我把充值资产与送礼路径打通，压缩从决策到支付的步骤，让付费像内容消费一样顺滑，用户几乎感知不到「支付」这件事本身。',
+          heading: '基础送礼链路：权益打通与极简支付体验',
+          body: '在送礼支付环节，我们引入了会员积分体系，旨在为会员开通流量入口，同时在直播间内彰显会员权益。用户可自由选择纯奇点支付（爱奇艺站内货币体系），或使用部分会员积分进行抵扣。\n\n在支付架构设计上，我们通过打通会员中心与站内奇点收银台，在保障体验丝滑的同时，最大化复用现有能力、降低开发成本。',
           html: `<style>
 .p11-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .p11-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -871,35 +874,31 @@ export const projectData: Project[] = [
 .p11-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .p11-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .p11-col-desc b{color:#FFFFFF;font-weight:600}
-.p11-img-row{display:flex;gap:16px;width:316px}
-.p11-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:150px;flex-shrink:0}
+.p11-img-row{display:flex;gap:16px;width:496px}
+.p11-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:240px;flex-shrink:0}
 .p11-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 .p11-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:0.06em;position:relative;z-index:1}
 .p11-img-wrap{display:flex;flex-direction:column;align-items:center}
 .p11-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
 .p11-diagram{width:480px;height:auto;display:block}
-@media(max-width:767px){.p11-row{flex-direction:column!important;gap:32px}.p11-col{width:100%!important}.p11-col-desc{max-width:100%!important}.p11-placeholder{width:100%;max-width:150px}.p11-img-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%}.p11-diagram{width:100%;max-width:480px}}
+@media(max-width:767px){.p11-row{flex-direction:column!important;gap:32px}.p11-col{width:100%!important}.p11-col-desc{max-width:100%!important}.p11-placeholder{width:100%;max-width:240px}.p11-img-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%}.p11-diagram{width:100%;max-width:480px}}
 </style>
 <div class="p11-row">
 <div class="p11-col">
-<div class="p11-col-title">资产流通体系</div>
-<p class="p11-col-desc" style="max-width:316px">深度整合<b>奇点支付与VIP积分抵扣</b>，打通会员权益，为用户提供低门槛的参与路径。</p>
 <div class="p11-img-row">
-<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/payment-method.png" alt="支付方式" style="height:100%;width:auto;display:block" /></div><span class="p11-img-label">支付方式</span></div>
-<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/points-deduct.png" alt="开启积分抵扣" style="height:100%;width:auto;display:block" /></div><span class="p11-img-label">开启积分抵扣</span></div>
+<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/payment-method.png" alt="两种支付方式" style="width:100%;height:auto;display:block" /></div><span class="p11-img-label">两种支付方式</span></div>
+<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/points-deduct.png" alt="已开启积分抵扣" style="width:100%;height:auto;display:block" /></div><span class="p11-img-label">已开启积分抵扣</span></div>
 </div>
 </div>
 <div class="p11-col">
-<div class="p11-col-title">送礼效率优化</div>
-<p class="p11-col-desc" style="max-width:480px">通过<b>入口重构与连击机制</b>，将复杂的支付决策转化为高频互动的「感官节奏」，实现从动作触发到情感回馈的秒级响应。</p>
-<img class="p11-diagram" src="/birdys-portfolio/images/whiteboard_exported_image.png" alt="送礼效率优化" />
+<div class="p11-img-wrap"><img class="p11-diagram" src="/birdys-portfolio/images/whiteboard_exported_image.png" alt="支付流程示意" /><span class="p11-img-label">支付流程示意</span></div>
 </div>
 </div>`,
         },
         // ═══ P12 进阶创意送礼 ═══
         {
-          heading: '进阶创意送礼：组件化能力，组装送礼玩法「生产线」',
-          body: '如果送礼只是「选礼物 → 付款」，那它永远只是支付。我把送礼游戏化——用组件化能力快速组装玩法「生产线」，让每次付费都伴随即时反馈与惊喜，把「花钱」转译成「一起玩」。',
+          heading: '进阶创意送礼：组件化架构与玩法「生产线」',
+          body: '如果送礼只是「选礼物 → 付款」”，那它永远只是支付。我把<b>送礼游戏化</b>，并用组件化思维将送礼玩法拆解为「玩法标签 → 活动入口 → 活动浮层」三层组件。通过<b>快速组装玩法的「生产线」</b>，将单一的「花钱」转译成「一起玩」的丰富创意玩法。\n\n① <b>玩法标签</b> — 礼物图标右上角展示玩法名称，提供轻量感知\n② <b>活动入口</b> — 点击送礼标签，弹出活动入口，入口上展示玩法简介,供用户了解玩法参与门槛\n③ <b>活动浮层</b> — 进入活动浮层，展示玩法规则、排行榜、奖励等核心信息',
           html: `<style>
 .p12-subtitle{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:24px 0 8px}
 .p12-chart{max-width:660px;margin:0 auto}
@@ -920,22 +919,17 @@ export const projectData: Project[] = [
 @media(max-width:767px){.p12-chart{max-width:100%}.p12-flow-arrow{transform:rotate(90deg);margin-top:0}}
 </style>
 <div class="p12-chart">
-<div class="p12-subtitle">送礼玩法通用模板</div>
-<p class="p12-subdesc">从「孤立功能」到「组件矩阵」，通过构建标准化的交互模组，实现多元化商业玩法的高效迭代。</p>
 <div class="p12-flow">
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-tag.png" alt="玩法标签" style="height:100%;width:auto;display:block" /></div>
-<div class="p12-flow-text"><strong>送礼入口</strong>智能排布，最大化露出</div>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-tag.png" alt="玩法标签" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">玩法标签</span>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-entry.png" alt="活动入口" style="height:100%;width:auto;display:block" /></div>
-<div class="p12-flow-text"><strong>承接浮层</strong>沉浸式情感激励</div>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-entry.png" alt="活动入口" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动入口</span>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-overlay.png" alt="活动浮层" style="height:100%;width:auto;display:block" /></div>
-<div class="p12-flow-text"><strong>反馈动效</strong>即时视觉回馈</div>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-overlay.png" alt="活动浮层" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动浮层</span>
 </div>
 </div>
 </div>`,
