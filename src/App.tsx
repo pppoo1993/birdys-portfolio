@@ -28,23 +28,8 @@ function ScrollProgress() {
 export default function App() {
   const spotlightRef = useSpotlight()
 
-  useEffect(() => {
-    // Initialize glow off-screen, move to cursor on first mouse move
-    document.documentElement.style.setProperty('--mx', '-999px')
-    document.documentElement.style.setProperty('--my', '-999px')
-    const onMouseMove = (e: MouseEvent) => {
-      document.documentElement.style.setProperty('--mx', `${e.clientX}px`)
-      document.documentElement.style.setProperty('--my', `${e.clientY}px`)
-    }
-    window.addEventListener('mousemove', onMouseMove, { passive: true })
-    return () => window.removeEventListener('mousemove', onMouseMove)
-  }, [])
-
   return (
     <div className="bg-bg-primary text-text-primary min-h-screen" style={{ fontFamily: 'var(--font-sans)' }}>
-      {/* Global mouse glow - topmost layer */}
-      <div className="hero-bg-glow fixed inset-0 z-[100] pointer-events-none" />
-
       <Navigation />
       <main ref={spotlightRef} className="spotlight xl:pl-[226px]">
         <Introduction />

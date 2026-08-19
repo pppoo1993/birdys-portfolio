@@ -2,7 +2,7 @@ import type { IntroductionData } from '../types'
 
 export const introductionData: IntroductionData = {
   name: "Hi，I'm Birdy",
-  title: '资深体验设计师 / AI 内容生态 / 跨平台体验',
+  title: '产品设计师 / AI 内容生态 / 跨平台体验',
   photoPath: 'https://picsum.photos/seed/bg-hero/1400/900',
   avatarPath: '/images/头像.png',
   quote: '把设计作为方法',

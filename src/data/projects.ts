@@ -10,7 +10,7 @@ export const projectData: Project[] = [
     techStack: ['0→1 设计 Owner', 'AI 交互设计', '玩法矩阵'],
     sourceUrl: 'https://github.com',
     detail: {
-      pageTitle: '吃鲸AI | 从消费到共创',
+      pageTitle: '吃鲸AI | 从内容消费到AI共创',
       mainTitle: '',
       subtitle: '从消费到共创',
       sections: [
@@ -608,7 +608,7 @@ export const projectData: Project[] = [
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">互动破局</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">目标拆解</span><span class="toc-page-num">P03</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
 <div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><div><p class="toc-card-title">流量与入口</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="3"><span class="toc-page-name">流量蓄水</span><span class="toc-page-num">P04</span></div><div class="toc-page-row" data-goto="4"><span class="toc-page-name">播放页入口</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">明星陪看聚合页</span><span class="toc-page-num">P06</span></div></div></div><span class="toc-card-tag">/ Traffic</span></div></div>
 <div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="6"><div><p class="toc-card-title">体验设计</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="6"><span class="toc-page-name">直播间布局</span><span class="toc-page-num">P07</span></div><div class="toc-page-row" data-goto="7"><span class="toc-page-name">直播间状态</span><span class="toc-page-num">P08</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
-<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="8"><div><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="8"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P09</span></div><div class="toc-page-row" data-goto="9"><span class="toc-page-name">基础送礼链路</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">进阶送礼</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">终极爆灯</span><span class="toc-page-num">P12</span></div></div></div><span class="toc-card-tag">/ Revenue</span></div></div>
+<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="8"><div><p class="toc-card-title">商业化</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="8"><span class="toc-page-name">情感变现</span><span class="toc-page-num">P09</span></div><div class="toc-page-row" data-goto="9"><span class="toc-page-name">基础送礼链路</span><span class="toc-page-num">P10</span></div><div class="toc-page-row" data-goto="10"><span class="toc-page-name">进阶创意送礼</span><span class="toc-page-num">P11</span></div><div class="toc-page-row" data-goto="11"><span class="toc-page-name">终极玩法</span><span class="toc-page-num">P12</span></div></div></div><span class="toc-card-tag">/ Revenue</span></div></div>
 </div>`,
         },
         {
@@ -871,7 +871,6 @@ export const projectData: Project[] = [
 .p11-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .p11-col-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:0}
 .p11-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.p11-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .p11-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .p11-col-desc b{color:#FFFFFF;font-weight:600}
 .p11-img-row{display:flex;gap:16px;width:496px}
@@ -885,12 +884,14 @@ export const projectData: Project[] = [
 </style>
 <div class="p11-row">
 <div class="p11-col">
+<div class="p11-col-title">会员权益打通</div>
 <div class="p11-img-row">
 <div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/payment-method.png" alt="两种支付方式" style="width:100%;height:auto;display:block" /></div><span class="p11-img-label">两种支付方式</span></div>
 <div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/points-deduct.png" alt="已开启积分抵扣" style="width:100%;height:auto;display:block" /></div><span class="p11-img-label">已开启积分抵扣</span></div>
 </div>
 </div>
 <div class="p11-col">
+<div class="p11-col-title">支付架构设计</div>
 <div class="p11-img-wrap"><img class="p11-diagram" src="/birdys-portfolio/images/whiteboard_exported_image.png" alt="支付流程示意" /><span class="p11-img-label">支付流程示意</span></div>
 </div>
 </div>`,
@@ -937,14 +938,16 @@ export const projectData: Project[] = [
         // ═══ P13 终极玩法 ═══
         {
           heading: '终极玩法：明星爆灯的成就闭环',
-          body: '在「尖叫之夜」这类顶级活动里，单点付费撑不起氛围。我用「明星爆灯」把个人付费重构为全场共同推进的集体成就 — 粉丝的每次打赏都实时汇聚成全场进度。这背后是<b>社会认同</b>的心理机制：当用户看到「所有人都在为偶像冲」，个体的付费就从「花钱」变成了「一起参与」，明星影响力由此引爆为粉丝的社交能量。',
+          body: '在「爱奇艺尖叫之夜」这类顶级活动的直播里，单点付费礼物撑不起氛围。我用「明星爆灯」把个 <b>人付费重构为全场共同推进的集体成就</b> — 粉丝针对明星的个人打赏都将汇聚成全场进度，当进度达到一定阈值时，就会触发该明星的爆灯特效。\n\n这背后的核心驱动是<b>「社会认同的心理机制」</b>：当用户看到「所有都在为偶像冲」，个体的付费就从「花钱」变成了「一起参与」，明星影响力由此引爆为粉丝的社交能量。',
           html: `<style>
-	.p13-chart{max-width:660px;margin:0 auto}
-	.p13-flow{display:flex;gap:28px;align-items:flex-start;margin:28px 0}
-	.p13-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
+	.p13-chart{max-width:1080px;margin:0 auto}
+	.p13-flow{display:flex;gap:28px;align-items:flex-start;margin:28px auto;justify-content:center}
+	.p13-item{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
 	.p13-arrow{color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:170px}
-	.p13-item-img{width:100%;aspect-ratio:752/1096;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+	.p13-item-img{height:300px;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 	.p13-item-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
+.p13-item-img.plain{background:none;border:none}
+.p13-item-img.plain::before{display:none}
 	.p13-item-img-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
 	.p13-item-text{font-size:12px;color:#A0A0A0;text-align:center;line-height:1.5;width:100%}
 	.p13-item-text strong{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
@@ -953,30 +956,30 @@ export const projectData: Project[] = [
 	.p13-subtitle::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 	.p13-subtitle::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 	.p13-chart-wide{max-width:780px;margin:0 auto}
-	.p13-tag-row{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:nowrap;overflow-x:auto}
-	.p13-tag{display:inline-flex;align-items:center;padding:6px 16px;font-size:13px;font-weight:500;color:#FFFFFF;background:rgba(199,255,0,0.06);border:1px solid rgba(199,255,0,0.15);border-radius:20px;white-space:nowrap;transition:all 0.3s ease}
-	.p13-tag:hover{background:rgba(199,255,0,0.10);border-color:rgba(199,255,0,0.25);transform:translateY(-1px)}
-	.p13-tag-arrow{color:#71717a;font-size:14px;flex-shrink:0}
+	.p13-tag-row{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:nowrap;overflow-x:auto;background:#121212;padding:24px;border-radius:12px}
+	.p13-tag{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;font-size:14px;font-weight:500;color:#FFFFFF;background:#222222;border:1px solid #444;border-radius:8px;white-space:nowrap;text-align:center}
+	
+	.p13-tag-arrow{color:#9ca3af;font-size:18px;flex-shrink:0}
 	@media(max-width:767px){.p13-chart,.p13-chart-wide{max-width:100%}.p13-tag-row{flex-wrap:wrap;gap:6px}.p13-tag{padding:4px 12px;font-size:12px}.p13-tag-arrow{font-size:12px}.p13-arrow{transform:rotate(90deg);margin-top:0}}
 	</style>
 	<div class="p13-chart-wide">
 		<div class="p13-tag-row">
-	<span class="p13-tag">点击头像</span><span class="p13-tag-arrow">→</span><span class="p13-tag">选中反馈</span><span class="p13-tag-arrow">→</span><span class="p13-tag">展示助力任务</span><span class="p13-tag-arrow">→</span><span class="p13-tag">送出礼物</span><span class="p13-tag-arrow">→</span><span class="p13-tag">尖叫值达成</span><span class="p13-tag-arrow">→</span><span class="p13-tag">触发爆灯特效</span>
+	<span class="p13-tag">选择明星</span><span class="p13-tag-arrow">→</span><span class="p13-tag">查看任务进度</span><span class="p13-tag-arrow">→</span><span class="p13-tag">送出礼物</span><span class="p13-tag-arrow">→</span><span class="p13-tag">尖叫值达成</span><span class="p13-tag-arrow">→</span><span class="p13-tag">触发爆灯特效</span>
 	</div>
 	</div>
 	<div class="p13-chart">
 	<div class="p13-flow">
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-none.png" alt="送礼面板-未选明星" style="width:100%;height:100%;object-fit:contain;display:block" /></div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-none.png" alt="送礼面板-未选明星" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">送礼面板-未选明星</span>
 	</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-selected.png" alt="送礼面板-已选明星" style="width:100%;height:100%;object-fit:contain;display:block" /></div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-selected.png" alt="送礼面板-已选明星" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">送礼面板-已选明星</span>
 	</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-effect.png" alt="爆灯特效" style="width:100%;height:100%;object-fit:contain;display:block" /></div>
+	<div data-preview class="p13-item-img plain"><img src="/birdys-portfolio/images/burst-effect.png" alt="爆灯进度演变示意" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">爆灯进度演变示意</span>
 	</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-progress.png" alt="爆灯进度" style="width:100%;height:100%;object-fit:contain;display:block" /></div>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-progress.png" alt="爆灯特效" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">爆灯特效</span>
 	</div>
 	</div>
 	</div>`,
@@ -1022,7 +1025,7 @@ export const projectData: Project[] = [
           heading: '目录',
           body: '',
           html: `<style>
-.toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:100%;max-width:1080px;margin:0 auto}
+.toc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;width:100%;max-width:820px;margin:0 auto}
 .toc-col{display:flex;flex-direction:column}
 .toc-num{font-size:42px;font-weight:500;color:rgba(255,255,255,0.5);margin-bottom:8px;letter-spacing:-1px;font-family:var(--font-mono,monospace)}
 .toc-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;height:240px;box-sizing:border-box;cursor:pointer;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.toc-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
@@ -1032,98 +1035,95 @@ export const projectData: Project[] = [
 .toc-page-name{color:#A0A0A0;font-weight:400}
 .toc-page-num{color:#71717a;font-family:monospace;flex-shrink:0;margin-left:12px}
 .toc-card-tag{font-size:11px;color:#52525b;font-family:monospace;margin-top:8px}
-@media(max-width:767px){.toc-grid{grid-template-columns:1fr 1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:230px;padding:18px}.toc-card-title{font-size:13px}}
+@media(max-width:767px){.toc-grid{grid-template-columns:1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:230px;padding:18px}.toc-card-title{font-size:13px}}
 </style>
 <div class="toc-grid">
-<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与定位</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">重构背景</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">Pad 端重定位</span><span class="toc-page-num">P03</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
-<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="3"><div><p class="toc-card-title">体验重构</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="3"><span class="toc-page-name">待补充</span><span class="toc-page-num">P04</span></div></div></div><span class="toc-card-tag">/ Experience</span></div></div>
-<div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="4"><div><p class="toc-card-title">设计落地</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="4"><span class="toc-page-name">待补充</span><span class="toc-page-num">P05</span></div></div></div><span class="toc-card-tag">/ Execution</span></div></div>
-<div class="toc-col"><span class="toc-num">04</span><div class="toc-card" data-goto="5"><div><p class="toc-card-title">沉淀</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="5"><span class="toc-page-name">待补充</span><span class="toc-page-num">P06</span></div></div></div><span class="toc-card-tag">/ Summary</span></div></div>
+<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与洞察</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">重构背景</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">用户调研</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">双端心智差异模型</span><span class="toc-page-num">P04</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><div><p class="toc-card-title">诊断与定位</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="4"><span class="toc-page-name">架构诊断</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">Pad 端重定位</span><span class="toc-page-num">P06</span></div></div></div><span class="toc-card-tag">/ Strategy</span></div></div>
 </div>`,
         },
         {
-          heading: '重构背景：Pad 端的「沉浸式」增长困境',
-          body: '在审视 Pad 端业务表现时，我们意识到原有的架构已无法承载高净值用户的观影需求。继续沿用手机端的流量策略不仅是功能的冗余，更是对用户体验的干扰，这导致了留存价值的持续流失。因此，针对 Pad 端的重构已势在必行。',
+          heading: '重构背景：高价值用户为何持续流失',
+          body: '审视 Pad 播放页业务时，我们发现一个增长困境：习惯性沿用手机端的流量策略进行跨端适配，不仅造成了严重的视觉干扰，更导致高净值用户的留存价值持续流失。\n\n我把这个困境拆成两条线索：一是<b>业务数据鸿沟</b>，二是<b>界面交互断层</b>。它们看似分属业务与体验两个层面，实则指向同一个设计机会——<b>重新校准信息优先级</b>。',
           html: `<style>
-.pad2-row{display:flex;gap:16px;align-items:stretch;margin:24px 0}
-.pad2-card{flex:1;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);display:flex;flex-direction:column;border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-.pad2-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.pad2-header{color:#FFFFFF;font-size:14px;font-weight:600;margin-bottom:14px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.pad2-header::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.pad2-header::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.pad2-pair{display:flex;flex-direction:column;gap:16px}
-.pad2-item{padding:0;min-height:50px}
-.pad2-item h5{display:inline;color:#FFFFFF;font-size:13px;font-weight:600;margin:0}
-.pad2-item.solve h5{color:#FFFFFF}
-.pad2-item p{color:#A0A0A0;font-size:13px;line-height:1.6;margin:8px 0 0;font-weight:400}
-.pad2-item p b{color:#FFFFFF;font-weight:600}
-.pad2-label{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;margin-right:6px;font-family:monospace;font-weight:600}
-.pad2-label.pain{background:rgba(199,255,0,0.08);color:#C7FF00;border:1px solid rgba(199,255,0,0.2)}
-.pad2-label.solve{background:rgba(199,255,0,0.08);color:#C7FF00;border:1px solid rgba(199,255,0,0.2)}
-.pad2-arrow{color:#C7FF00;font-weight:600;letter-spacing:0.05em}@media(max-width:767px){.pad2-row{flex-direction:column!important}}
+.ba-section{display:flex;flex-direction:column;margin:0 auto;max-width:820px}
+.ba-header-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:16px}
+.ba-header{color:#FFFFFF;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;position:relative}
+.ba-header::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.ba-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:100%}
+.ba-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.ba-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
+.ba-card .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:2px;font-family:monospace;letter-spacing:.04em;font-weight:600;margin:0 6px 0 0;vertical-align:middle;background:rgba(199,255,0,0.1);color:#C7FF00;border:1px solid rgba(199,255,0,0.2)}
+.ba-card .ititle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0;display:inline;vertical-align:middle}
+.ba-arrow-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.ba-arrow-row span{text-align:center;color:#52525b;font-size:16px}
+.ba-card .idesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:8px 0 0}
+.ba-card .idesc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.ba-row{grid-template-columns:1fr;gap:16px}.ba-header-row{display:none}.ba-arrow-row{display:none}}
 </style>
-<div class="pad2-row">
-<div class="pad2-card">
-<div class="pad2-header">业务数据鸿沟</div>
-<div class="pad2-pair">
-<div class="pad2-item"><span class="pad2-label pain">现状</span><h5>用户价值被低估</h5><p>Pad 端虽用户量占比小于手机，但用户画像显示其多为<b>家庭高净值人群</b>，ARPU 值与会员付费倾向显著高于手机端。</p></div>
-<div class="pad2-item solve"><span class="pad2-label solve">痛点</span><h5>转化潜力被扼杀</h5><p>现有「三分屏」布局导致 Pad 端完播率与连播转化率长期滞后。手机的<b>「流量逻辑」</b>正在扼杀 Pad 端的「转化潜力」。</p></div>
+<div class="ba-section">
+<div class="ba-header-row"><div class="ba-header">业务数据鸿沟</div><div class="ba-header">用户心智错位</div></div>
+<div class="ba-row">
+<div class="ba-card"><span class="tag">现状</span><span class="ititle">用户价值被低估</span><p class="idesc">Pad 端用户占比虽小，但 ARPU 值与会员付费倾向显著高于手机端。</p></div>
+<div class="ba-card"><span class="tag">现状</span><span class="ititle">跨端适配照搬手机</span><p class="idesc">直接沿用手机端密集的推荐与分发布局，未考虑大屏心智。</p></div>
 </div>
-</div>
-<div class="pad2-card">
-<div class="pad2-header">界面干扰与交互断层</div>
-<div class="pad2-pair">
-<div class="pad2-item"><span class="pad2-label pain">现状</span><h5>视觉干扰严重</h5><p>改版前的布局在长视频消费中造成<b>视觉干扰</b>，且在横竖屏切换中存在自适应适配问题，严重影响操作连贯性。</p></div>
-<div class="pad2-item solve"><span class="pad2-label solve">对比</span><h5>与行业严重错位</h5><p>对比行业领先的 Pad 端沉浸式布局，我们现有的「三分屏」模式已与<b>用户心智形成严重错位</b>。</p></div>
-</div>
-</div>
-<div class="pad2-card">
-<div class="pad2-header">战略转型路径</div>
-<div class="pad2-pair">
-<div class="pad2-item"><span class="pad2-label pain">目标</span><h5>高净值消费基地</h5><p>重新明确目标，将 Pad 端定位为平台的<b>"高净值内容消费基地"</b>。</p></div>
-<div class="pad2-item solve"><span class="pad2-label solve">行动</span><h5>体验留存替代流量分发</h5><p>从<span class="pad2-arrow">流量分发 → 体验留存</span>，通过重构布局将商业路径嵌入沉浸场景，以品质留存换取付费转化。</p></div>
-</div>
+<div class="ba-arrow-row"><span>↓</span><span>↓</span></div>
+<div class="ba-row">
+<div class="ba-card"><span class="tag">痛点</span><span class="ititle">转化潜力被扼杀</span><p class="idesc">现有播放页布局导致完播率与连播率滞后，错失高额付费潜力。</p></div>
+<div class="ba-card"><span class="tag">痛点</span><span class="ititle">体验错位与干扰</span><p class="idesc">视觉干扰严重且横竖屏自适应存在缺陷，与大屏沉浸心智严重背离。</p></div>
 </div>
 </div>`,
         },
         {
           heading: '用户调研：不同终端的心智差异',
-          body: '我们通过 30+ 场深度访谈，在真实场景中观察 Pad/手机双端用户的行为轨迹，从而揭开了界面背后的心理差异。',
+          body: '为了验证上述「心智错位」的推论是否成立，我们通过后台数据锁定了 Pad 端的真实核心用户（19–31岁女性、大学生，核心场景高度集中在电视剧追剧）。\n\n为了探究其行为背后的心理动机，我们发起了 30+ 场深度访谈与真实场景观察。通过追踪这群核心用户在双端的跨端轨迹，我们终于揭示出不同终端的心智差异。',
           html: `<style>
-.pad3-row{display:flex;gap:48px;align-items:stretch;justify-content:center;margin:24px 0}
-.pad3-col{flex:0 1 380px;display:flex;flex-direction:column;gap:16px}
-.pad3-col-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px}
-.pad3-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.pad3-bubble{background:#1A1A1A;border:1px solid #333333;border-radius:8px;padding:14px 16px;position:relative;align-self:center}
+.pad3-compare{display:flex;flex-direction:column;gap:32px}
+.pad3-dim{display:flex;flex-direction:column;gap:14px}
+.pad3-dim-label{display:flex;align-items:center;justify-content:center;gap:14px;color:#C7FF00;font-size:12px;font-weight:600;letter-spacing:.12em}
+.pad3-dim-label::before,.pad3-dim-label::after{content:'';height:1px;width:44px;background:rgba(255,255,255,0.08)}
+.pad3-dim-body{display:grid;grid-template-columns:1fr 44px 1fr;gap:16px;align-items:center;max-width:840px;margin:0 auto;width:100%}
+.pad3-quote{display:flex;gap:10px;align-items:center;min-width:0}
+.pad3-avatar{width:44px;height:44px;border-radius:50%;flex-shrink:0;overflow:hidden;border:1.5px solid #333;align-self:center;display:flex;align-items:center;justify-content:center;background:#1a1a1e}
+.pad3-bubble{background:#1A1A1A;border:1px solid #333333;border-radius:8px;padding:13px 15px;position:relative;flex:1;min-width:0}
 .pad3-bubble.pad::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1A1A1A;border-left:1px solid rgba(199,255,0,0.25);border-bottom:1px solid rgba(199,255,0,0.25);transform:translateY(-50%) rotate(45deg)}
 .pad3-bubble.phone::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1A1A1A;border-left:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);transform:translateY(-50%) rotate(45deg)}
 .pad3-bubble.pad{background:rgba(199,255,0,0.06);border-color:rgba(199,255,0,0.25)}
-.pad3-bubble.phone{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.pad3-bubble-text{color:#A0A0A0;font-size:13px;line-height:1.7;font-weight:400}
+.pad3-bubble.phone{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.15)}
+.pad3-bubble-text{color:#A0A0A0;font-size:13px;line-height:1.7;font-weight:400;margin:0}
 .pad3-bubble-text b{color:#FFFFFF;font-weight:600}
-.pad3-quote{display:flex;gap:10px;align-items:center;margin-bottom:10px}
-.pad3-avatar{width:48px;height:48px;border-radius:50%;flex-shrink:0;overflow:hidden;border:1.5px solid #333;align-self:center;display:flex;align-items:center;justify-content:center;background:#1a1a1e}
-@media(max-width:767px){.pad3-row{flex-direction:column!important}}
+.pad3-vs{color:#71717a;font-size:11px;font-family:monospace;font-weight:600;letter-spacing:.06em;text-align:center;align-self:center}
+@media(max-width:767px){.pad3-dim-body{grid-template-columns:1fr;gap:10px}.pad3-vs{display:none}}
 </style>
-<div class="pad3-row">
-<div class="pad3-col">
-<div class="pad3-col-title">Pad 用户</div>
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-1.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">Pad 对我来说是<b>"私人电影院"</b>，我不希望在观影时被打断。</p></div></div>
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-2.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">右侧栏太多推荐和密集的标签，让我觉得<b>内容不够沉浸</b>。</p></div></div>
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-3.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">我希望 Pad 端有<b>更纯粹的观影体验</b>，像在电影院一样专注。</p></div></div>
-</div>
-<div class="pad3-col">
-<div class="pad3-col-title">手机用户</div>
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-1.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">手机是在<b>通勤路上</b>用的，操作越快越好。</p></div></div>
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-2.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">我习惯<b>一边看一边刷评论</b>，是种陪伴感。</p></div></div>
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-3.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text"><b>弹幕和互动</b>让看视频更有趣，一个人看太无聊了。</p></div></div>
+<div class="pad3-compare">
+<div class="pad3-dim">
+<div class="pad3-dim-label">使用场景</div>
+<div class="pad3-dim-body">
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-1.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">Pad 是我的<b>「私人电影院」</b>，我会完整、沉浸地追完一整部剧。</p></div></div>
+<div class="pad3-vs">VS</div>
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-1.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">手机是<b>「通勤搭子」</b>，碎片时间图个快、图个方便。</p></div></div>
 </div>
 </div>
-<p style="color:#d4d4d8;font-size:15px;margin:24px 0 0;text-align:center;font-weight:500;line-height:1.8">用户在不同终端下存在明确的心智差异。<br>手机端追求信息的即时反馈，而 Pad 端用户则寻求观影的深度留存与纯净体验。<br>此差异揭示了传统「一刀切」设计的本质局限。</p>`,
+<div class="pad3-dim">
+<div class="pad3-dim-label">互动诉求</div>
+<div class="pad3-dim-body">
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-2.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">看剧时<b>不想被打断</b>，弹幕和推荐对我来说反而是干扰。</p></div></div>
+<div class="pad3-vs">VS</div>
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-2.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">我喜欢<b>边看边刷评论</b>、发弹幕，热闹才有<b>陪伴感</b>。</p></div></div>
+</div>
+</div>
+<div class="pad3-dim">
+<div class="pad3-dim-label">核心期待</div>
+<div class="pad3-dim-body">
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-3.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">我期待像在<b>电影院一样专注</b>的沉浸体验。</p></div></div>
+<div class="pad3-vs">VS</div>
+<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-3.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">越<b>热闹</b>越好，<b>弹幕和互动</b>让看剧更有趣。</p></div></div>
+</div>
+</div>
+</div>`,
         },
         {
-          heading: '双端差异策略：手机做「互动」，Pad 做「降噪」',
-          body: '在不同的硬件终端下，用户对「内容消费」的定义完全不同。基于此，我们将这些感性诉求提炼为严谨的「双端心智差异模型」。',
+          heading: '双端心智差异模型：手机做「互动」，Pad 做「降噪」',
+          body: '把这些代表性语录并排放在一起，一个规律浮现出来：Pad 用户反复强调<b>「沉浸、专注、不被打断」</b>，手机用户反复强调<b>「快、互动、陪伴、热闹」</b>。\n\n我把这些高频诉求收敛成两个维度—<b>沉浸体验</b>与<b>互动效率</b>，并用一个二维坐标来锚定差异。这个模型将成为后续所有架构判断的标尺：<b>凡是与 Pad 的「沉浸体验」冲突的设计，都值得被重新审视</b>。',
           html: `<style>
 .pad4-chart{position:relative;width:100%;max-width:520px;height:340px;border-left:1px solid #3f3f46;border-bottom:1px solid #3f3f46;margin:40px auto 20px;background-image:linear-gradient(rgba(63,63,70,0.15) 1px,transparent 1px),linear-gradient(90deg,rgba(63,63,70,0.15) 1px,transparent 1px);background-size:50px 50px}
 .pad4-yl{position:absolute;left:8px;top:0px;font-size:13px;font-weight:500;color:#a0a0a0;white-space:nowrap}
@@ -1145,39 +1145,15 @@ export const projectData: Project[] = [
 <div class="pad4-cross-h"></div>
 <div class="pad4-yl">互动效率</div>
 <div class="pad4-xl">沉浸体验</div>
-<div class="pad4-box phone"><h3>Phone</h3><p>• 碎片化使用场景<br>• 机制驱动：高频触达<br>• 核心：社交与即时搜索</p></div>
-<div class="pad4-box pad"><h3>Pad</h3><p>• 沉浸式观影场景<br>• 视觉降噪：克制干扰<br>• 核心：品质与深层留存</p></div>
+<div class="pad4-box phone"><h3>Phone</h3><p>• 碎片化使用场景<br>• 高频触达，即时反馈<br>• 心智：互动效率优先</p></div>
+<div class="pad4-box pad"><h3>Pad</h3><p>• 沉浸式观影场景<br>• 视觉降噪，克制干扰<br>• 心智：沉浸体验优先</p></div>
 
 </div>
 `,
         },
         {
-          heading: 'Pad 端重定位：以沉浸为体，以商业为用',
-          body: '基于终端行为分析，我们将 Pad 端播放页的价值重新锚定为三大战略支点，以此校准信息优先级。',
-          html: `<style>
-.pad5-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
-.pad5-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-.pad5-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.pad5-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
-.pad5-card:hover::before{opacity:.6}
-.pad5-num{font-family:monospace;font-size:10px;color:#C7FF00;margin-bottom:8px;display:block;font-weight:600}
-.pad5-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.pad5-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.pad5-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.pad5-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400}
-.pad5-desc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.pad5-grid{grid-template-columns:1fr!important}}
-</style>
-<div class="pad5-grid">
-<div class="pad5-card"><h4 class="pad5-title">核心消费场景</h4><p class="pad5-desc"><b>构建纯净观影阵地：</b>保障播放画面的视觉纯净，确立 Pad 端作为长视频内容完整消费的核心阵地。</p></div>
-<div class="pad5-card"><h4 class="pad5-title">深层内容生态</h4><p class="pad5-desc"><b>推动体验升维：</b>将琐碎互动升级为深度关联信息聚合（演职员专访、原著解读），实现从「孤立观影」向「内容价值探索」的跃迁。</p></div>
-<div class="pad5-card"><h4 class="pad5-title">商业转化枢纽</h4><p class="pad5-desc"><b>变干扰为服务：</b>构建克制且顺滑的转化链路，在保障沉浸体验的前提下，实现商业闭环的自然嵌入。</p></div>
-</div>
-<p style="color:#71717a;font-size:13px;margin:20px 0 0;text-align:right;font-weight:400">接下来，我们将基于这三大支点，展开具体的架构重构与交互设计。</p>`,
-        },
-        {
           heading: '架构诊断：三分屏模式的体验错配',
-          body: '',
+          body: '将「双端心智差异模型」代入现有 Pad 播放页，我们发现沿用手机端的三分屏架构，在视觉、交互、商业三个维度上与 Pad 用户「沉浸消费」的心智形成了系统性错配。',
           html: `<style>
 .pad6-split{display:flex;gap:24px;align-items:stretch;margin:24px 0}
 .pad6-left{flex-shrink:0;display:flex}
@@ -1203,7 +1179,32 @@ export const projectData: Project[] = [
 <div class="pad6-card"><h4 class="pad6-card-title">交互路径冗余</h4><p class="pad6-card-desc">播放器下方功能平铺，造成严重的<b>视觉噪音与认知过载</b>。</p></div>
 <div class="pad6-card"><h4 class="pad6-card-title">商业触达错位</h4><p class="pad6-card-desc">生硬的权益植入不仅未提升转化，反而因<b>干扰体验推高了用户跳出率</b>。</p></div>
 </div>
-</div>`,
+</div>
+<p style="color:#71717a;font-size:13px;margin:20px 0 0;text-align:center;font-weight:400">三大错配指向同一个结论：三分屏是「手机逻辑」在大屏上的水土不服，需要为 Pad 端重新锚定信息优先级。</p>`,
+        },
+        {
+          heading: 'Pad 端重定位：以沉浸为体，以商业为用',
+          body: '基于架构诊断与双端心智模型，我们将 Pad 端播放页的价值重新锚定为三大战略支点，以此校准信息优先级。',
+          html: `<style>
+.pad5-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.pad5-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.pad5-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
+.pad5-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
+.pad5-card:hover::before{opacity:.6}
+.pad5-num{font-family:monospace;font-size:10px;color:#C7FF00;margin-bottom:8px;display:block;font-weight:600}
+.pad5-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
+.pad5-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.pad5-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.pad5-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400}
+.pad5-desc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.pad5-grid{grid-template-columns:1fr!important}}
+</style>
+<div class="pad5-grid">
+<div class="pad5-card"><h4 class="pad5-title">核心消费场景</h4><p class="pad5-desc"><b>构建纯净观影阵地：</b>保障播放画面的视觉纯净，确立 Pad 端作为长视频内容完整消费的核心阵地。</p></div>
+<div class="pad5-card"><h4 class="pad5-title">深层内容生态</h4><p class="pad5-desc"><b>推动体验升维：</b>将琐碎互动升级为深度关联信息聚合（演职员专访、原著解读），实现从「孤立观影」向「内容价值探索」的跃迁。</p></div>
+<div class="pad5-card"><h4 class="pad5-title">商业转化枢纽</h4><p class="pad5-desc"><b>变干扰为服务：</b>构建克制且顺滑的转化链路，在保障沉浸体验的前提下，实现商业闭环的自然嵌入。</p></div>
+</div>
+<p style="color:#71717a;font-size:13px;margin:20px 0 0;text-align:right;font-weight:400">以「沉浸为体、商业为用」为纲，我们据此重新校准了 Pad 端的信息优先级，接下来将展开二分屏架构的重构设计。</p>`,
         },
         {
           heading: 'Thanks',
