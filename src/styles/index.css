@@ -344,28 +344,6 @@ body {
   }
 }
 
-/* Mouse spotlight glow */
-.spotlight {
-  position: relative;
-}
-.spotlight::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    200px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
-    rgba(224, 255, 0, 0.15) 0%,
-    transparent 80%
-  );
-  z-index: 1;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-.spotlight.is-active::before {
-  opacity: 1;
-}
-
 /* Large screen font scaling (1920px and above) */
 @media (min-width: 1920px) {
   /* Base font size increase */

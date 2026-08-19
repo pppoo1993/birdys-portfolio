@@ -6,7 +6,6 @@ import WorkExperience from './components/sections/WorkExperience'
 import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
 import Cursor from './components/ui/Cursor'
-import { useSpotlight } from './hooks/useSpotlight'
 
 function ScrollProgress() {
   useEffect(() => {
@@ -26,12 +25,10 @@ function ScrollProgress() {
 }
 
 export default function App() {
-  const spotlightRef = useSpotlight()
-
   return (
     <div className="bg-bg-primary text-text-primary min-h-screen" style={{ fontFamily: 'var(--font-sans)' }}>
       <Navigation />
-      <main ref={spotlightRef} className="spotlight xl:pl-[226px]">
+      <main className="xl:pl-[226px]">
         <Introduction />
         <WorkExperience />
         <Projects />

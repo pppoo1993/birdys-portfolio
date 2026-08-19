@@ -136,7 +136,7 @@ export const projectData: Project[] = [
 .decision-arrow{color:#52525b;font-size:24px;font-weight:700;animation:decision-pulse 2s infinite}
 .decision-compare:hover .decision-arrow{color:#C7FF00;transform:translateX(4px);animation:none}
 @keyframes decision-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
-@media(max-width:767px){.decision-compare{gap:16px}.decision-opt{min-width:150px;padding:20px 24px}.decision-opt-label{font-size:15px}.decision-arrow{font-size:18px;transform:rotate(90deg)}.decision-compare:hover .decision-arrow{transform:rotate(90deg) translateY(4px)}}
+@media(max-width:767px){.decision-compare{flex-direction:column;gap:16px}.decision-opt{width:100%;max-width:280px;min-width:0;padding:20px 24px}.decision-opt-label{font-size:15px}.decision-arrow{font-size:18px;transform:rotate(90deg)}.decision-compare:hover .decision-arrow{transform:rotate(90deg) translateY(4px)}}
 </style>
 <div class="decision-compare">
 <div class="decision-opt reject">
@@ -506,7 +506,7 @@ export const projectData: Project[] = [
         {
           heading: '尾声：上线与资产留存',
           body: '2026 年 4 月，吃鲸AI 在爱奇艺世界大会正式发布，不久后因战略调整关停 — 这是一次战略选择，而非设计的失败。\n\n产品画上句号，但核心交互资产并未消失：创作页、播放器等<b>关键模块</b>已标准化封装为 SDK，<b>嵌入爱奇艺主站</b>，持续服务于 AI 创作能力的分发与落地。好的设计思考，应该比产品活得更久。',
-          html: `<div style="display:flex;gap:60px;justify-content:center;align-items:flex-start;max-width:900px;margin:0 auto"><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI 正式发布</p><img src="/birdys-portfolio/images/ending.jpg" alt="发布" style="height:360px;width:auto;border-radius:8px;display:block;object-fit:contain" /></div><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI嵌入爱奇艺主站</p><img src="/birdys-portfolio/images/ending2.png" alt="嵌入" style="height:360px;width:auto;border-radius:8px;display:block;object-fit:contain" /></div></div>`,
+          html: `<style>.ending-wrap{display:flex;gap:60px;justify-content:center;align-items:flex-start;max-width:900px;margin:0 auto}@media(max-width:767px){.ending-wrap{flex-direction:column;gap:16px;align-items:flex-start}}</style><div class="ending-wrap"><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI 正式发布</p><img src="/birdys-portfolio/images/ending.jpg" alt="发布" style="max-height:360px;border-radius:8px;display:block" /></div><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI嵌入爱奇艺主站</p><img src="/birdys-portfolio/images/ending2.png" alt="嵌入" style="max-height:360px;border-radius:8px;display:block" /></div></div>`,
         },
         {
           heading: '价值复盘：给不可控的 AI，一个可控的锚',
@@ -541,7 +541,7 @@ export const projectData: Project[] = [
 .sk-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .sk-placeholder img{width:100%;height:100%;object-fit:contain}
 .sk-label{font-size:12px;color:#A0A0A0;text-align:center}
-@media(max-width:767px){.sk-wrapper{flex-direction:column;align-items:center;gap:24px}.sk-group{flex:none;width:100%}.sk-row{gap:3%}.sk-item{width:auto;flex:1 1 0;min-width:0}.sk-placeholder{width:100%}}
+@media(max-width:767px){.sk-wrapper{flex-direction:column;align-items:center;gap:24px}.sk-group{flex:none;width:100%}.sk-row{gap:3%}.sk-item{width:auto;flex:1 1 0;min-width:0}.sk-placeholder{width:100%;max-width:180px}}
 </style>
 <div class="sk-wrapper">
 <div class="sk-group"><div class="sk-group-title">结构化输出</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-create-video.png" alt="创作视频页" /></div><span class="sk-label">创作视频页</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-structured-output.png" alt="结构化输出" /></div><span class="sk-label">结构化输出</span></div></div></div>
@@ -565,8 +565,8 @@ export const projectData: Project[] = [
 <div class="closing-left" style="flex:2;display:flex;justify-content:flex-start;align-items:center;min-width:0"><h1 style="font-size:150px;font-weight:800;color:#3a3a40;margin:0;line-height:1;letter-spacing:-6px">THANKS</h1></div>
 <div class="closing-right" style="flex:1;min-width:260px;max-width:340px;display:flex;flex-direction:column;gap:16px;padding-left:24px;border-left:1px solid #1c1c1f">
 <div style="display:flex;align-items:center;gap:8px;color:#C7FF00;font-size:13px;font-weight:500"><span style="width:6px;height:6px;background:#C7FF00;border-radius:50%;box-shadow:0 0 10px rgba(204,255,0,0.5)"></span>继续浏览</div>
-<a class="nav-card" href="#" data-cursor-hover><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">明星陪看直播间</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">视听布局重构与商业增长</p></div><span class="arrow" >→</span></div></a>
-<a class="nav-card" href="#" data-cursor-hover><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">爱奇艺 Pad 端</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">大屏沉浸式体验重构</p></div><span class="arrow" >→</span></div></a>
+<a class="nav-card" href="#" data-cursor-hover data-project-id="project-2"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">明星陪看直播间</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">视听布局重构与商业增长</p></div><span class="arrow" >→</span></div></a>
+<a class="nav-card" href="#" data-cursor-hover data-project-id="project-1"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">爱奇艺 Pad 端</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">大屏沉浸式体验重构</p></div><span class="arrow" >→</span></div></a>
 </div></div>`,
         },
       ],
@@ -1000,8 +1000,8 @@ export const projectData: Project[] = [
 <div class="closing-left" style="flex:2;display:flex;justify-content:flex-start;align-items:center;min-width:0"><h1 style="font-size:150px;font-weight:800;color:#3a3a40;margin:0;line-height:1;letter-spacing:-6px">THANKS</h1></div>
 <div class="closing-right" style="flex:1;min-width:260px;max-width:340px;display:flex;flex-direction:column;gap:16px;padding-left:24px;border-left:1px solid #1c1c1f">
 <div style="display:flex;align-items:center;gap:8px;color:#C7FF00;font-size:13px;font-weight:500"><span style="width:6px;height:6px;background:#C7FF00;border-radius:50%;box-shadow:0 0 10px rgba(204,255,0,0.5)"></span>继续浏览</div>
-<a class="nav-card" href="#" data-cursor-hover><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">吃鲸AI</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">AI视频消费与生成共创</p></div><span class="arrow">→</span></div></a>
-<a class="nav-card" href="#" data-cursor-hover><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">爱奇艺 Pad 端</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">大屏沉浸式体验重构</p></div><span class="arrow">→</span></div></a>
+<a class="nav-card" href="#" data-cursor-hover data-project-id="project-3"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">吃鲸AI</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">AI视频消费与生成共创</p></div><span class="arrow">→</span></div></a>
+<a class="nav-card" href="#" data-cursor-hover data-project-id="project-1"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">爱奇艺 Pad 端</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">大屏沉浸式体验重构</p></div><span class="arrow">→</span></div></a>
 </div></div>`,
         },
       ],
@@ -1221,8 +1221,8 @@ export const projectData: Project[] = [
 <div class="closing-left" style="flex:2;display:flex;justify-content:flex-start;align-items:center;min-width:0"><h1 style="font-size:150px;font-weight:800;color:#3a3a40;margin:0;line-height:1;letter-spacing:-6px">THANKS</h1></div>
 <div class="closing-right" style="flex:1;min-width:260px;max-width:340px;display:flex;flex-direction:column;gap:16px;padding-left:24px;border-left:1px solid #1c1c1f">
 <div style="display:flex;align-items:center;gap:8px;color:#C7FF00;font-size:13px;font-weight:500"><span style="width:6px;height:6px;background:#C7FF00;border-radius:50%;box-shadow:0 0 10px rgba(204,255,0,0.5)"></span>继续浏览</div>
-<a class="nav-card" href="#" data-cursor-hover><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">吃鲸AI</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">AI视频消费与生成共创</p></div><span class="arrow">→</span></div></a>
-<a class="nav-card" href="#" data-cursor-hover><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">明星陪看直播间</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">视听布局重构与商业增长</p></div><span class="arrow">→</span></div></a>
+<a class="nav-card" href="#" data-cursor-hover data-project-id="project-3"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">吃鲸AI</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">AI视频消费与生成共创</p></div><span class="arrow">→</span></div></a>
+<a class="nav-card" href="#" data-cursor-hover data-project-id="project-2"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="margin:0;font-size:16px;font-weight:600;color:#FFFFFF">明星陪看直播间</h3><p style="margin:8px 0 0;font-size:13px;color:#A0A0A0;line-height:1.6">视听布局重构与商业增长</p></div><span class="arrow">→</span></div></a>
 </div></div>`,
         },
       ],

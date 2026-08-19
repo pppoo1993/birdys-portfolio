@@ -6,9 +6,10 @@ import type { Project } from '../../types'
 interface ProjectDetailProps {
   project: Project | null
   onClose: () => void
+  onNavigate?: (projectId: string) => void
 }
 
-export default function ProjectDetail({ project, onClose }: ProjectDetailProps) {
+export default function ProjectDetail({ project, onClose, onNavigate }: ProjectDetailProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeIndex, setActiveIndex] = useState(0)
@@ -198,7 +199,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                   <span className="flex items-center gap-2">
                     <img src={import.meta.env.BASE_URL + (project!.id === 'project-3' ? 'images/吃鲸.webp' : project!.id === 'project-2' ? 'images/爱奇艺.webp' : 'images/爱奇艺Pad.webp')} alt="" className="w-7 h-7 rounded-md object-cover" />
                     {project!.title}
-                    {project!.detail.subtitle && <span className="text-zinc-500 font-normal"> &nbsp;|&nbsp; {project!.detail.subtitle}</span>}
+                    {project!.detail.subtitle && <span className="hidden md:inline text-zinc-500 font-normal"> &nbsp;|&nbsp; {project!.detail.subtitle}</span>}
                   </span>
                 )}
               </p>
@@ -304,7 +305,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               />
                             )}
                             {section.html && (
-                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); const vid = el.querySelector('video'); if (vid) { setPreviewVideo(vid.querySelector('source')?.src || vid.src); setPreviewSrc(null); setPreviewHtml(null) } else if (img) { setPreviewSrc(img.src); setPreviewVideo(null) } else { setPreviewHtml(el.outerHTML); setPreviewVideo(null) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src); setPreviewVideo(null) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const navEl = t.closest('[data-project-id]') as HTMLElement | null; if (navEl) { e.preventDefault(); onNavigate?.(navEl.dataset.projectId!); return } const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); const vid = el.querySelector('video'); if (vid) { setPreviewVideo(vid.querySelector('source')?.src || vid.src); setPreviewSrc(null); setPreviewHtml(null) } else if (img) { setPreviewSrc(img.src); setPreviewVideo(null) } else { setPreviewHtml(el.outerHTML); setPreviewVideo(null) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src); setPreviewVideo(null) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                             )}
                           </div>
                           {false && <div className="text-[12px] text-[#8a8a8a] font-light mt-4">
@@ -330,7 +331,7 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
                               />
                             )}
                             {section.html && (
-                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); const vid = el.querySelector('video'); if (vid) { setPreviewVideo(vid.querySelector('source')?.src || vid.src); setPreviewSrc(null); setPreviewHtml(null) } else if (img) { setPreviewSrc(img.src); setPreviewVideo(null) } else { setPreviewHtml(el.outerHTML); setPreviewVideo(null) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src); setPreviewVideo(null) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
+                              <div dangerouslySetInnerHTML={{ __html: section.html }} onClick={(e) => { const t = e.target as HTMLElement; const navEl = t.closest('[data-project-id]') as HTMLElement | null; if (navEl) { e.preventDefault(); onNavigate?.(navEl.dataset.projectId!); return } const el = t.closest('[data-preview]') as HTMLElement | null; if (el) { const img = el.querySelector('img'); const vid = el.querySelector('video'); if (vid) { setPreviewVideo(vid.querySelector('source')?.src || vid.src); setPreviewSrc(null); setPreviewHtml(null) } else if (img) { setPreviewSrc(img.src); setPreviewVideo(null) } else { setPreviewHtml(el.outerHTML); setPreviewVideo(null) } } else if (t.tagName === "IMG") { setPreviewSrc((t as HTMLImageElement).src); setPreviewVideo(null) } else { const gt = t.closest('[data-goto]') as HTMLElement | null; if (gt) { goTo(parseInt(gt.dataset.goto!)) } } }} className="[&_img]:cursor-pointer [&_[data-preview]]:cursor-pointer" />
                             )}
                           </div>
                         )}

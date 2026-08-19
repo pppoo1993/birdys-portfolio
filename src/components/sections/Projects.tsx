@@ -333,6 +333,9 @@ export default function Projects() {
       <ProjectDetail
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
+        onNavigate={(projectId) =>
+          setSelectedProject(projectData.find((p) => p.id === projectId) ?? null)
+        }
       />
 
       {/* ════ 3D Phone hover tilt + tag color ════ */}
