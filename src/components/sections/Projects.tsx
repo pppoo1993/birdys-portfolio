@@ -107,7 +107,7 @@ export default function Projects() {
 
   return (
     <section ref={sectionRef} id="projects" className="w-full bg-[#0d0d0d]/30 backdrop-blur-sm py-16 md:py-20 border-t border-zinc-900/60">
-      <div className="max-w-5xl mx-auto px-6 md:px-12">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-12">
         <p className="heading-section mb-4 md:hidden">Projects</p>
 
         <div className="flex flex-col gap-12 md:gap-20" >
@@ -131,7 +131,7 @@ export default function Projects() {
                 onMouseLeave={() => handleMouseLeave()}
                 data-cursor-interactive
                 ref={(el) => { cardRefs.current[i] = el }}
-                className="group cursor-pointer border rounded-xl overflow-visible min-h-[320px] md:min-h-[340px] active:scale-[0.99]"
+                className="project-card group cursor-pointer border rounded-xl overflow-visible min-h-[320px] md:min-h-[340px] active:scale-[0.99]"
                 style={{
                   boxShadow: isHovered
                     ? '0 30px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(199,255,0,0.08), inset 0 1px 0 rgba(255,255,255,0.04)'
@@ -288,7 +288,7 @@ export default function Projects() {
                     )}
 
                     {project.id === 'project-1' && (
-                      <div className="relative" style={{ width: '280px', aspectRatio: '280/210' }}>
+                      <div className="project-mockup-pad relative max-w-full" style={{ width: '280px', aspectRatio: '280/210' }}>
                         {/* Pad — stacked 3D dual tablets, landscape */}
                         <div className="phone-bg absolute w-[240px] h-[165px] bg-[#111114] rounded-[16px] overflow-hidden transition-all duration-500"
                           style={{

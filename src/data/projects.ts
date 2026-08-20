@@ -313,7 +313,7 @@ export const projectData: Project[] = [
 .dist-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .dist-img-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(min-width:768px){.dist-img-row{display:flex;justify-content:center}}
 @media(max-width:767px){.dist-row{flex-direction:column!important;gap:24px}.dist-col{width:100%!important;flex:none}}
-.dist-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;margin:0 auto}
+.dist-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;margin:0 auto}
 .dist-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .dist-img-wrap{display:flex;flex-direction:column;align-items:center}
 .dist-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
@@ -350,7 +350,7 @@ export const projectData: Project[] = [
 .cr-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .cr-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .cr-img-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(min-width:768px){.cr-img-row{display:flex;justify-content:center}}
-.cr-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;overflow:hidden}
+.cr-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;overflow:hidden}
 .cr-img-wrap{display:flex;flex-direction:column;align-items:center}
 .cr-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
 .cr-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
@@ -385,7 +385,7 @@ export const projectData: Project[] = [
 .m-col-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .m-col-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
 .m-img-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(min-width:768px){.m-img-row{display:flex;justify-content:center}}
-.m-placeholder{aspect-ratio:9/19.5;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:150px;overflow:hidden}
+.m-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:150px;overflow:hidden}
 .m-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .m-placeholder span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
 @media(max-width:767px){.m-split{flex-direction:column!important}.m-col{width:100%!important}}
@@ -758,15 +758,18 @@ export const projectData: Project[] = [
           html: `<style>
 .entry-phone-grid{display:flex;justify-content:space-between;gap:20px;margin:0 auto;max-width:800px}
 .entry-phone{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;height:340px;margin:0 auto}
+.entry-phone:not(.plain){width:auto;aspect-ratio:6/13}
 .entry-phone::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
+.entry-phone>img{width:100%!important;height:100%!important;object-fit:contain}
 .entry-phone span{color:#71717a;font-size:11px;font-family:monospace;letter-spacing:.06em;position:relative;z-index:1}
 .entry-phone.plain{background:none;border:none;border-radius:0}
 .entry-phone.plain::before{display:none}
+.entry-phone-transparent{background-color:transparent!important}
 .entry-card{flex:1;background:rgba(30,30,34,0.7);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}.entry-card:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-@media(max-width:767px){.entry-phone-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+@media(max-width:767px){.entry-cards{flex-direction:column!important;gap:12px!important}.entry-phone-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.entry-phone{height:clamp(220px,66vw,260px)}}
 </style>
 <div style="max-width:800px;margin:0 auto">
-<div style="display:flex;gap:16px;margin-bottom:24px">
+<div class="entry-cards" style="display:flex;gap:16px;margin-bottom:24px">
 <div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">低干扰</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">入口置于选集下方，随直播状态动态显隐，不打断观影流。</p></div>
 <div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">高转化</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">开播时透出试试状态和角标，辅助决策，一键切入陪看。</p></div>
 <div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">心智建设</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">培养预约习惯，并引导一键预约，将剧集观众转化为直播间存量用户。</p></div>
@@ -774,7 +777,7 @@ export const projectData: Project[] = [
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>播放页触达入口</p>
 <div class="entry-phone-grid">
 <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-no-entry.png" alt="无直播入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无直播时</span></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-has-entry.png" alt="有直播入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有直播时</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain entry-phone-transparent"><img src="/birdys-portfolio/images/live-has-entry.png" alt="有直播入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有直播时</span></div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-entry-status.png" alt="直播入口状态" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">入口状态</span></div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-booking.png" alt="一键预约弹窗" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">一键预约</span></div>
 </div>
@@ -793,11 +796,11 @@ export const projectData: Project[] = [
 .ap-module-title{color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 6px}
 .ap-module-desc{color:#A0A0A0;font-size:12px;line-height:1.75;font-weight:400;margin:0}
 .ap-module-desc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.ap-split{flex-direction:column!important}.ap-left{flex:none;width:100%}}
+@media(max-width:767px){.ap-split{flex-direction:column!important}.ap-left{flex:none;width:100%}.ap-page-tags{left:0!important}}
 </style>
 <div style="display:flex;justify-content:center;width:100%"><div class="ap-split">
 <div class="ap-left">
-<div style="position:absolute;left:-90px;top:30px;z-index:10;display:flex;flex-direction:column;gap:8px">
+<div class="ap-page-tags" style="position:absolute;left:-90px;top:30px;z-index:10;display:flex;flex-direction:column;gap:8px">
 <div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">我的页→</div>
 <div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">搜索结果页→</div>
 </div>
@@ -821,7 +824,7 @@ export const projectData: Project[] = [
 .im-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px;align-self:flex-start}.im-title::before{content:"";width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
 .im-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;height:390px;width:auto}
 .im-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-@media(max-width:767px){.im-row{flex-wrap:wrap;gap:12px}}
+@media(max-width:767px){.im-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.im-item{min-width:0;width:100%}.im-item:first-child{grid-column:1/-1}.im-item:first-child>img{width:100%!important;height:auto!important;max-width:100%}.im-item:not(:first-child) .im-placeholder{aspect-ratio:9/19.5;height:auto;width:100%;max-width:100%}.im-item:not(:first-child) .im-placeholder img{width:100%!important;height:100%!important;object-fit:contain}}
 </style>
 <div class="im-row">
 <div class="im-item"><p class="im-title">分层管理</p><img src="/birdys-portfolio/images/im-layers.png" alt="页面分层示意" style="width:511px;height:390px;display:block;border-radius:6px" /><p style="color:#A0A0A0;font-size:12px;margin:0">页面分层示意</p></div>
@@ -908,7 +911,7 @@ export const projectData: Project[] = [
 .p12-subdesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0 0 24px}
 .p12-flow{display:flex;gap:28px;align-items:flex-start;margin:0}
 .p12-flow-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
-.p12-flow-img{width:100%;aspect-ratio:1/2.168;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.p12-flow-img{width:100%;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .p12-flow-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
 .p12-flow-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
 .p12-flow-title{display:none}

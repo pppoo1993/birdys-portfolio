@@ -185,7 +185,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
           }}
         >
           <motion.div
-            className="relative w-full h-full md:w-[80vw] md:max-h-[85vh] mx-auto bg-[#121212] border border-zinc-800/60 md:rounded-2xl md:shadow-[0_30px_100px_rgba(0,0,0,0.8)] md:overflow-hidden flex flex-col"
+            className="relative w-full h-[100dvh] md:h-full md:w-[80vw] md:max-h-[85vh] mx-auto bg-[#121212] border border-zinc-800/60 md:rounded-2xl md:shadow-[0_30px_100px_rgba(0,0,0,0.8)] md:overflow-hidden flex flex-col"
             style={{ aspectRatio: '16 / 9' }}
             initial={{ scale: 0.96, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -193,7 +193,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
             transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             {/* ════ Fixed top bar ════ */}
-            <div className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-6 md:px-12 py-3.5 bg-gradient-to-b from-[#121212] via-[#121212]/95 to-transparent pointer-events-none">
+            <div className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-5 sm:px-6 md:px-12 pt-[calc(0.875rem_+_env(safe-area-inset-top))] pb-3.5 bg-gradient-to-b from-[#121212] via-[#121212]/95 to-transparent pointer-events-none">
               <p className="text-[18px] md:text-[24px] text-white font-bold tracking-tight line-clamp-2 md:truncate max-w-[88%] md:max-w-[65%]">
                 {activeIndex > 0 ? (sections[activeIndex]?.heading === 'Thanks' ? '' : sections[activeIndex]?.heading) : (
                   <span className="flex items-center gap-2">
@@ -213,7 +213,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
                     e.stopPropagation()
                     onClose()
                   }}
-                  className="absolute top-3.5 right-3 md:static group flex items-center justify-center w-8 h-8 border border-zinc-800 hover:border-accent rounded-lg transition-all duration-300 bg-zinc-900/50"
+                  className="group flex items-center justify-center w-8 h-8 border border-zinc-800 hover:border-accent rounded-lg transition-all duration-300 bg-zinc-900/50"
                   aria-label="关闭"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-zinc-400 group-hover:text-accent transform group-hover:rotate-90 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -271,7 +271,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 pt-20 pb-32 md:py-16">
+                  <div className="relative z-10 flex-1 flex flex-col justify-center px-5 sm:px-6 md:px-12 pt-20 pb-28 md:py-16">
                     {/* Page 0: split layout — text left, image right */}
                     {i === 0 ? (
                         <div className={`flex-1 flex flex-col ${'justify-center'}`}>
@@ -378,7 +378,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
             </div>
 
             {/* Mobile: page counter at bottom center */}
-            <div className="absolute bottom-0 left-0 right-0 flex justify-center py-3 bg-gradient-to-t from-[#121212] via-[#121212]/90 to-transparent md:hidden pointer-events-none z-50">
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center pt-3 pb-[calc(0.75rem_+_env(safe-area-inset-bottom))] bg-gradient-to-t from-[#121212] via-[#121212]/90 to-transparent md:hidden pointer-events-none z-50">
               <span className="text-[13px] font-mono text-zinc-500 tracking-wider">
                 {String(activeIndex + 1).padStart(2, '0')} / {String(sections.length).padStart(2, '0')}
               </span>
@@ -417,7 +417,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
         )}
         <button
           onClick={() => { setPreviewSrc(null); setPreviewVideo(null); setPreviewHtml(null) }}
-          className="absolute top-6 right-6 group flex items-center justify-center w-8 h-8 border border-zinc-800 hover:border-accent rounded-lg transition-all duration-300 bg-zinc-900/50"
+          className="absolute top-[calc(1rem_+_env(safe-area-inset-top))] right-4 sm:top-[calc(1.5rem_+_env(safe-area-inset-top))] sm:right-6 group flex items-center justify-center w-9 h-9 border border-zinc-800 hover:border-accent rounded-lg transition-all duration-300 bg-zinc-900/50"
           aria-label="关闭"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-zinc-400 group-hover:text-accent transform group-hover:rotate-90 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">

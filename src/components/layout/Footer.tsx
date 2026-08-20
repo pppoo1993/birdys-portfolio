@@ -17,7 +17,7 @@ export default function Footer() {
     <button
       onClick={() => scrollTo('intro')}
       aria-label="回到顶部"
-      className={`fixed bottom-6 right-6 z-50 flex items-center justify-center w-8 h-8 rounded-lg border border-zinc-800 bg-zinc-900/40 text-zinc-400 backdrop-blur transition-all hover:border-accent hover:text-accent ${
+      className={`fixed bottom-[calc(1rem_+_env(safe-area-inset-bottom))] right-4 sm:bottom-[calc(1.5rem_+_env(safe-area-inset-bottom))] sm:right-6 z-50 flex items-center justify-center w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/40 text-zinc-400 backdrop-blur transition-all hover:border-accent hover:text-accent ${
         visible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 pointer-events-none'
       }`}
     >

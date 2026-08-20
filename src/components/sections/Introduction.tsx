@@ -193,7 +193,7 @@ export default function Introduction() {
     <section
       id="intro"
       className="relative w-full text-white flex flex-col justify-center pt-20 pb-16 md:pt-16 md:pb-24 font-sans noise-overlay"
-      style={{ minHeight: '100vh', background: 'radial-gradient(circle at 50% 40%, rgba(204, 255, 0, 0.04) 0%, rgba(0, 0, 0, 0) 60%), #0a0a0c' }}
+      style={{ minHeight: '100svh', background: 'radial-gradient(circle at 50% 40%, rgba(204, 255, 0, 0.04) 0%, rgba(0, 0, 0, 0) 60%), #0a0a0c' }}
     >
       <motion.div
         className="fixed inset-0 z-0 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50 overflow-hidden"
@@ -210,7 +210,7 @@ export default function Introduction() {
       </motion.div>
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0a0a0c]/50 md:via-[#0a0a0c]/80 to-[#0a0a0c]" />
 
-      <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center overflow-visible px-6 md:px-12">
+      <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center overflow-visible px-5 sm:px-6 md:px-12">
         {/* 1. Title */}
         <h1 className="text-5xl md:text-6xl mb-3 md:mb-5" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 500 }}>
           {introductionData.name}
@@ -246,12 +246,19 @@ export default function Introduction() {
           >
             {(() => {
               const displayText = typed || introductionData.quote
+              const cursor = <span className="animate-cursor-blink relative -top-1 text-xl md:text-3xl" style={{ color: '#ccff00', WebkitTextFillColor: '#ccff00' }}>|</span>
               const commaIdx = introductionData.quote.indexOf('，')
+
+              // No comma → render a single line on every viewport (avoids a
+              // stray empty <br> line on mobile).
+              if (commaIdx === -1) {
+                return <span>{displayText}{cursor}</span>
+              }
+
               const beforeComma = displayText.slice(0, Math.min(displayText.length, commaIdx + 1))
               const afterComma = displayText.length > commaIdx + 1
                 ? displayText.slice(commaIdx + 1)
                 : ' '
-              const cursor = <span className="animate-cursor-blink relative -top-1 text-xl md:text-3xl" style={{ color: '#ccff00', WebkitTextFillColor: '#ccff00' }}>|</span>
               const stillOnLine1 = displayText.length <= commaIdx + 1
               return <>
                 <span className="md:hidden">

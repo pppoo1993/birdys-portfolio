@@ -33,6 +33,23 @@ html {
   scrollbar-gutter: stable;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body,
+#root {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  overscroll-behavior-x: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Global scrollbar: black track, yellow thumb */
@@ -328,6 +345,31 @@ body {
 /* Avatar parallax */
 .avatar-parallax {
   will-change: transform;
+}
+
+/* Small-phone polish: account for iOS browser chrome and keep mockups in frame. */
+@media (max-width: 767px) {
+  .mobile-safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .mobile-safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .project-mockup-pad {
+    transform: scale(0.88);
+    transform-origin: center;
+  }
+
+  .project-card {
+    overflow: hidden;
+  }
+
+  .project-card:focus-within {
+    outline: 2px solid rgba(204, 255, 0, 0.5);
+    outline-offset: 3px;
+  }
 }
 
 @media (max-width: 1023px) {

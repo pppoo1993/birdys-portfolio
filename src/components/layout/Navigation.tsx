@@ -233,14 +233,14 @@ export default function Navigation() {
   return (
     <>
       {/* Mobile/Tablet: top bar */}
-      <nav className={`fixed top-0 right-0 left-0 z-50 xl:hidden transition-transform duration-500 ${navVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+      <nav className={`mobile-safe-top fixed top-0 right-0 left-0 z-50 xl:hidden transition-transform duration-500 ${navVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="absolute inset-0 bg-[#0c0c0e]/50 backdrop-blur-md" />
         <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-b from-[#0c0c0e]/50 to-transparent translate-y-full" />
-        <div className="relative flex items-center justify-between px-6 md:px-12 py-3">
+        <div className="relative flex min-h-12 items-center justify-between px-5 py-3 sm:px-6 md:px-12">
           <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" style={{ width: '110px', height: '24px' }} className="object-contain opacity-90 flex-shrink-0 self-center" />
           {/* Mobile: hamburger */}
           <button
-            className="text-white/80 md:hidden"
+            className="text-white/80 md:hidden -mr-2 p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? '关闭菜单' : '打开菜单'}
           >
@@ -276,7 +276,7 @@ export default function Navigation() {
             className="absolute inset-0 bg-black/15"
             onClick={() => setMobileOpen(false)}
           />
-          <div className="absolute top-0 left-0 right-0 bg-[#161618] border-b border-[#1f1f23] rounded-b-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] px-6 py-[30px]">
+          <div className="absolute top-0 left-0 right-0 bg-[#161618] border-b border-[#1f1f23] rounded-b-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] px-5 pt-[calc(1.75rem_+_env(safe-area-inset-top))] pb-7 sm:px-6">
             {navLinks}
           </div>
         </div>
