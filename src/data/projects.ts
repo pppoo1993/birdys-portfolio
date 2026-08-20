@@ -843,7 +843,7 @@ export const projectData: Project[] = [
 .sr-img-row{display:flex;gap:16px}
 .sr-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:180px;flex-shrink:0}
 .sr-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
-@media(max-width:767px){.sr-row{flex-direction:column!important}}
+@media(max-width:767px){.sr-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.sr-col{display:contents}.sr-col-title{display:none}.sr-img-row{display:contents}.sr-placeholder{width:100%;max-width:180px;margin:0 auto;aspect-ratio:9/19.5}.sr-placeholder img{width:100%;height:100%;object-fit:contain}}
 </style>
 <div class="sr-row">
 <div class="sr-col"><div class="sr-col-title">鉴权态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-auth.png" alt="鉴权态" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">鉴权态</span></div></div></div>
@@ -920,7 +920,7 @@ export const projectData: Project[] = [
 .p12-flow-text strong{color:#FFFFFF;font-weight:600;display:block;margin-bottom:2px}
 .p12-flow-text b{color:#FFFFFF;font-weight:600}
 .p12-flow-arrow{display:flex;align-items:center;color:#A0A0A0;font-size:16px;flex-shrink:0;padding:0 6px;margin-top:170px}
-@media(max-width:767px){.p12-chart{max-width:100%}.p12-flow-arrow{transform:rotate(90deg);margin-top:0}}
+@media(max-width:767px){.p12-chart{max-width:100%}.p12-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.p12-flow-arrow{display:none}.p12-flow-img{max-width:180px;margin:0 auto}}
 </style>
 <div class="p12-chart">
 <div class="p12-flow">
@@ -963,7 +963,7 @@ export const projectData: Project[] = [
 	.p13-tag{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;font-size:14px;font-weight:500;color:#FFFFFF;background:#222222;border:1px solid #444;border-radius:8px;white-space:nowrap;text-align:center}
 	
 	.p13-tag-arrow{color:#9ca3af;font-size:18px;flex-shrink:0}
-	@media(max-width:767px){.p13-chart,.p13-chart-wide{max-width:100%}.p13-tag-row{flex-wrap:wrap;gap:6px}.p13-tag{padding:4px 12px;font-size:12px}.p13-tag-arrow{font-size:12px}.p13-arrow{transform:rotate(90deg);margin-top:0}}
+	@media(max-width:767px){.p13-chart,.p13-chart-wide{max-width:100%}.p13-flow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.p13-item{width:100%}.p13-item-img{height:auto;width:100%}.p13-item-img img{width:100%!important;height:auto!important}.p13-tag-row{flex-wrap:wrap;gap:6px}.p13-tag{padding:4px 12px;font-size:12px}.p13-tag-arrow{font-size:12px}.p13-arrow{transform:rotate(90deg);margin-top:0}}
 	</style>
 	<div class="p13-chart-wide">
 		<div class="p13-tag-row">
@@ -1042,37 +1042,49 @@ export const projectData: Project[] = [
 </style>
 <div class="toc-grid">
 <div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与洞察</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">重构背景</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">用户调研</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">双端心智差异模型</span><span class="toc-page-num">P04</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
-<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><div><p class="toc-card-title">诊断与定位</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="4"><span class="toc-page-name">架构诊断</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">Pad 端重定位</span><span class="toc-page-num">P06</span></div></div></div><span class="toc-card-tag">/ Strategy</span></div></div>
+<div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><div><p class="toc-card-title">诊断与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="4"><span class="toc-page-name">架构诊断</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">机型分布</span><span class="toc-page-num">P06</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">策略推导</span><span class="toc-page-num">P07</span></div></div></div><span class="toc-card-tag">/ Strategy</span></div></div>
 </div>`,
         },
         {
-          heading: '重构背景：高价值用户为何持续流失',
-          body: '审视 Pad 播放页业务时，我们发现一个增长困境：习惯性沿用手机端的流量策略进行跨端适配，不仅造成了严重的视觉干扰，更导致高净值用户的留存价值持续流失。\n\n我把这个困境拆成两条线索：一是<b>业务数据鸿沟</b>，二是<b>界面交互断层</b>。它们看似分属业务与体验两个层面，实则指向同一个设计机会——<b>重新校准信息优先级</b>。',
+          heading: '重构背景：完播率与连播率为何滞后',
+          body: '复盘 Pad 端播放页的数据时，我们发现了一个强烈反差：同样沿用手机端的密集布局，手机端表现稳健，Pad 端却遭遇了留存瓶颈。我们由此开启了假设和验证',
           html: `<style>
-.ba-section{display:flex;flex-direction:column;margin:0 auto;max-width:820px}
-.ba-header-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:16px}
-.ba-header{color:#FFFFFF;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;position:relative}
-.ba-header::before{content:"";width:4px;height:14px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.ba-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:100%}
-.ba-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-.ba-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.ba-card .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:2px;font-family:monospace;letter-spacing:.04em;font-weight:600;margin:0 6px 0 0;vertical-align:middle;background:rgba(199,255,0,0.1);color:#C7FF00;border:1px solid rgba(199,255,0,0.2)}
-.ba-card .ititle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0;display:inline;vertical-align:middle}
-.ba-arrow-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.ba-arrow-row span{text-align:center;color:#52525b;font-size:16px}
-.ba-card .idesc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:8px 0 0}
-.ba-card .idesc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.ba-row{grid-template-columns:1fr;gap:16px}.ba-header-row{display:none}.ba-arrow-row{display:none}}
+.ba-flow{display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:12px;max-width:960px;margin:24px auto 0}
+.ba-step{flex:1;min-width:0;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.ba-step:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
+.ba-step-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}
+.ba-step-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.ba-step-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.ba-step-sub{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px}
+.ba-step-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
+.ba-step-arrow{align-self:center;color:#52525b;font-size:18px;line-height:1;flex-shrink:0;margin:0}
+.ba-step.hypothesis{border-color:rgba(199,255,0,0.25);background:rgba(199,255,0,0.04)}
+.ba-step.verify{border-style:dashed;background:rgba(30,30,34,0.4)}
+@media(max-width:767px){.ba-flow{flex-direction:column;max-width:640px}.ba-step-arrow{transform:rotate(90deg)}}
 </style>
-<div class="ba-section">
-<div class="ba-header-row"><div class="ba-header">业务数据鸿沟</div><div class="ba-header">用户心智错位</div></div>
-<div class="ba-row">
-<div class="ba-card"><span class="tag">现状</span><span class="ititle">用户价值被低估</span><p class="idesc">Pad 端用户占比虽小，但 ARPU 值与会员付费倾向显著高于手机端。</p></div>
-<div class="ba-card"><span class="tag">现状</span><span class="ititle">跨端适配照搬手机</span><p class="idesc">直接沿用手机端密集的推荐与分发布局，未考虑大屏心智。</p></div>
+<div class="ba-flow">
+<div class="ba-step">
+<h4 class="ba-step-title">现象 · 数据反差</h4>
+<p class="ba-step-sub">布局同构，但 Pad 端留存遭遇瓶颈</p>
+<p class="ba-step-desc">手机端验证有效的密集布局，搬到 Pad 端后核心连播与完播率持续滞后，用户留存遇到增长瓶颈。</p>
 </div>
-<div class="ba-arrow-row"><span>↓</span><span>↓</span></div>
-<div class="ba-row">
-<div class="ba-card"><span class="tag">痛点</span><span class="ititle">转化潜力被扼杀</span><p class="idesc">现有播放页布局导致完播率与连播率滞后，错失高额付费潜力。</p></div>
-<div class="ba-card"><span class="tag">痛点</span><span class="ititle">体验错位与干扰</span><p class="idesc">视觉干扰严重且横竖屏自适应存在缺陷，与大屏沉浸心智严重背离。</p></div>
+<div class="ba-step-arrow">→</div>
+<div class="ba-step">
+<h4 class="ba-step-title">解读 · 业务影响</h4>
+<p class="ba-step-sub">高价值用户的价值被系统性低估</p>
+<p class="ba-step-desc">后台数据显示 Pad 端用户天然具备更高的消费净值与停留时长，但其贡献的流量在当前粗放的布局下，并未转化为与之匹配的留存价值与商业消费深度。</p>
+</div>
+<div class="ba-step-arrow">→</div>
+<div class="ba-step hypothesis">
+<h4 class="ba-step-title">假设 · 核心病灶</h4>
+<p class="ba-step-sub">物理形态与心智错配，手机经验失效</p>
+<p class="ba-step-desc">Pad 大屏拥有完全不同的物理视野与专注心智，盲目沿用手机端密集分发，反而压榨了观影沉浸感。</p>
+</div>
+<div class="ba-step-arrow">→</div>
+<div class="ba-step verify">
+<h4 class="ba-step-title">验证 · 下一步</h4>
+<p class="ba-step-sub">启动定性深访，寻找大屏破局点</p>
+<p class="ba-step-desc">拒绝主观臆断，通过真实用户深访与数据交叉验证，重新校准双端的心智边界。</p>
 </div>
 </div>`,
         },
@@ -1156,58 +1168,136 @@ export const projectData: Project[] = [
         },
         {
           heading: '架构诊断：三分屏模式的体验错配',
-          body: '将「双端心智差异模型」代入现有 Pad 播放页，我们发现沿用手机端的三分屏架构，在视觉、交互、商业三个维度上与 Pad 用户「沉浸消费」的心智形成了系统性错配。',
+          body: '原 Pad 端播放页沿用手机端的<b>「三分屏」</b>结构，整屏被拆分为三个功能区：\n\n① <b>左上 · 播放器区域</b> — 承载影视画面的核心观影区\n② <b>左下 · 信息互动区</b> — 采用上下双屏结构：第一屏为 TVG 区，集中展示剧集信息、功能按钮与选集选项；第二屏为评论互动区\n③ <b>右侧 · 内容推荐区域</b> — 负责相关内容的推荐分发\n\n结合站内用户数据，我们将功能需求按真实使用频次整理出优先级：<b>全屏观影（77.4%） > 切换选集（20.7%） > 内容推荐（6.8%） > 评论互动（0.92%）</b>。\n\n对照这份优先级，现有布局暴露出两处核心问题：\n\nA.<b>滑动热区促、操作不便</b> — 高频的「切换选集」被压缩在狭小的交互区域，导致操作成本偏高。\nB.<b>布局与用户需求存在结构性矛盾</b>——需求最高的「全屏观影」仅占据左上局部，而优先级最低的「内容推荐」却占满整个右侧区域，形成「需求越高、承载空间越少」的错位。',
           html: `<style>
-.pad6-split{display:flex;gap:24px;align-items:stretch;margin:24px 0}
-.pad6-left{flex-shrink:0;display:flex}
-.pad6-mockup{height:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #222226;border-radius:4px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.pad6-mockup::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,0.03) 0%,transparent 70%);pointer-events:none}
-.pad6-mockup-label{font-size:11px;color:#71717a;font-family:monospace;letter-spacing:0.06em;z-index:1;position:relative}
-.pad6-right{flex:1;display:flex;flex-direction:column;gap:16px}
-.pad6-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:20px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
-.pad6-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.pad6-card-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.pad6-card-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.pad6-card-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.pad6-card-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400}
-.pad6-card-desc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.pad6-split{flex-direction:column!important}.pad6-mockup{width:100%;max-width:240px;margin:0 auto}}
+.pad6-imgs{display:grid;grid-template-columns:repeat(2,auto);justify-content:center;gap:48px;max-width:1080px;margin:24px auto 0;align-items:start}
+.pad6-fig{display:flex;flex-direction:column;align-items:center;gap:10px}
+.pad6-fig img{height:320px;width:auto;max-width:100%;display:block;margin:0 auto}
+.pad6-cap{color:#A0A0A0;font-size:12px;text-align:center}
+@media(max-width:767px){.pad6-imgs{grid-template-columns:1fr}}
 </style>
-<div class="pad6-split">
-<div class="pad6-left">
-<div data-preview class="pad6-mockup"><img src="/birdys-portfolio/images/pad-player.png" alt="Pad 播放页截图" style="width:100%;height:auto;display:block" /></div>
-</div>
-<div class="pad6-right">
-<div class="pad6-card"><h4 class="pad6-card-title">视觉重心失衡</h4><p class="pad6-card-desc">右侧推荐流占据过大权重，导致<b>播放主体被边缘化</b>，破坏了 Pad 端应有的沉浸心智。</p></div>
-<div class="pad6-card"><h4 class="pad6-card-title">交互路径冗余</h4><p class="pad6-card-desc">播放器下方功能平铺，造成严重的<b>视觉噪音与认知过载</b>。</p></div>
-<div class="pad6-card"><h4 class="pad6-card-title">商业触达错位</h4><p class="pad6-card-desc">生硬的权益植入不仅未提升转化，反而因<b>干扰体验推高了用户跳出率</b>。</p></div>
-</div>
-</div>
-<p style="color:#71717a;font-size:13px;margin:20px 0 0;text-align:center;font-weight:400">三大错配指向同一个结论：三分屏是「手机逻辑」在大屏上的水土不服，需要为 Pad 端重新锚定信息优先级。</p>`,
+<div class="pad6-imgs">
+<div class="pad6-fig"><img src="/birdys-portfolio/images/pad-split-original.png" alt="原三分屏" /><span class="pad6-cap">原三分屏</span></div>
+<div class="pad6-fig"><img src="/birdys-portfolio/images/pad-split-online-data.png" alt="三分屏线上数据" /><span class="pad6-cap">三分屏线上数据</span></div>
+</div>`,
         },
         {
-          heading: 'Pad 端重定位：以沉浸为体，以商业为用',
-          body: '基于架构诊断与双端心智模型，我们将 Pad 端播放页的价值重新锚定为三大战略支点，以此校准信息优先级。',
+          heading: '机型分布：更宽的 Gpad，更大的市场',
+          body: '根据行业出货数据与平台终端复核，Gpad（安卓大屏）整体市场占比已达 48%，iPad 系列占比约 52%，且 Gpad 在爱奇艺站内的活跃占比呈现出逐年递增的稳健趋势。\n\n结合市场硬件演进趋势来看，Pad 端屏幕宽高比正从传统的 4:3（iPad 系列）、1.45:1（11寸 Pro） 持续向更宽的 1.6:1（主流安卓与 Gpad） 延伸。这种物理层面的变宽，为 Pad 端播放页的横向架构布局与多任务分屏提供了广阔的发挥空间。',
           html: `<style>
-.pad5-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
-.pad5-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-.pad5-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
-.pad5-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C7FF00,transparent);opacity:0;transition:opacity .3s ease}
-.pad5-card:hover::before{opacity:.6}
-.pad5-num{font-family:monospace;font-size:10px;color:#C7FF00;margin-bottom:8px;display:block;font-weight:600}
-.pad5-title{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 10px;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative}
-.pad5-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
-.pad5-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
-.pad5-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400}
-.pad5-desc b{color:#FFFFFF;font-weight:600}
-@media(max-width:767px){.pad5-grid{grid-template-columns:1fr!important}}
+.pad7-wrap{width:fit-content;max-width:100%;margin:0 auto}
+.pad7-devices{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:flex-start;gap:24px}
+.pad7-card{border:1px solid #C7FF00;background-color:rgba(199,255,0,0.12);border-radius:4px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;text-align:center;max-width:100%}
+.pad7-card-13{width:300px;aspect-ratio:4/3}
+.pad7-card-11-ipad{width:280px;aspect-ratio:1.45/1}
+.pad7-card-11-gpad{width:280px;aspect-ratio:1.6/1}
+.pad7-name{font-size:16px;font-weight:400;color:#ffffff;margin-bottom:12px;letter-spacing:0.5px}
+.pad7-ratio{font-size:13px;color:#C7FF00;letter-spacing:0.5px}
+.pad7-subtitle{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 16px;display:flex;align-items:center;gap:8px}
+.pad7-subtitle::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+@media(max-width:767px){.pad7-card{width:340px;max-width:100%}}
 </style>
-<div class="pad5-grid">
-<div class="pad5-card"><h4 class="pad5-title">核心消费场景</h4><p class="pad5-desc"><b>构建纯净观影阵地：</b>保障播放画面的视觉纯净，确立 Pad 端作为长视频内容完整消费的核心阵地。</p></div>
-<div class="pad5-card"><h4 class="pad5-title">深层内容生态</h4><p class="pad5-desc"><b>推动体验升维：</b>将琐碎互动升级为深度关联信息聚合（演职员专访、原著解读），实现从「孤立观影」向「内容价值探索」的跃迁。</p></div>
-<div class="pad5-card"><h4 class="pad5-title">商业转化枢纽</h4><p class="pad5-desc"><b>变干扰为服务：</b>构建克制且顺滑的转化链路，在保障沉浸体验的前提下，实现商业闭环的自然嵌入。</p></div>
+<div class="pad7-wrap">
+<div class="pad7-subtitle">主流Pad端机型示意</div>
+<div class="pad7-devices">
+<div class="pad7-card pad7-card-13"><div class="pad7-name">iPad Pro / Air 13"</div><div class="pad7-ratio">宽高比 4 : 3</div></div>
+<div class="pad7-card pad7-card-11-ipad"><div class="pad7-name">iPad Pro 11"</div><div class="pad7-ratio">宽高比 1.45 : 1</div></div>
+<div class="pad7-card pad7-card-11-gpad"><div class="pad7-name">Gpad 11"</div><div class="pad7-ratio">宽高比 1.6 : 1</div></div>
 </div>
-<p style="color:#71717a;font-size:13px;margin:20px 0 0;text-align:right;font-weight:400">以「沉浸为体、商业为用」为纲，我们据此重新校准了 Pad 端的信息优先级，接下来将展开二分屏架构的重构设计。</p>`,
+</div>`,
+        },
+        {
+          heading: '策略推导：从「控件错配」到「体验重构」',
+          body: '基于前述设计分析，我们梳理出核心解题思路：守护沉浸观影的体验底线，释放大屏物理空间的利用效率，实现商业价值与用户体感的温和共生。由此推导出三条设计策略：',
+          html: `<style>
+.pad8-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1080px;margin:24px auto 0}
+.pad8-card{background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:24px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.pad8-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
+.pad8-card.accent{background:rgba(199,255,0,0.02);border:1px solid rgba(199,255,0,0.1)}
+.pad8-card.accent:hover{background:rgba(199,255,0,0.04);border-color:rgba(199,255,0,0.18);box-shadow:0 20px 40px rgba(199,255,0,0.08)}
+.pad8-h4{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}
+.pad8-h4::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.pad8-h4::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.pad8-sub{color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 6px}
+.pad8-desc{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0;font-weight:400}
+.pad8-desc b{color:#FFFFFF;font-weight:600}
+@media(max-width:767px){.pad8-row{grid-template-columns:1fr}}
+</style>
+<div class="pad8-row">
+<div class="pad8-card accent"><div><h4 class="pad8-h4">内容优先</h4><p class="pad8-sub">重构沉浸阵地</p><p class="pad8-desc">播放器回归绝对主角。将占比达 77.4% 的全屏观影设为最高优先级，摒弃冗余干扰，将架构精简为「主内容 + 窄辅助」的二分屏，给用户纯净的沉浸体验。</p></div></div>
+<div class="pad8-card"><div><h4 class="pad8-h4">效率至上</h4><p class="pad8-sub">优化信息触达</p><p class="pad8-desc">让高频的<b>切换选集</b>触手可及；将低频互动与推荐合理收纳。通过碎片信息的有序聚合，推动体验从单一的「孤立观影」向「内容深度探索」升级。</p></div></div>
+<div class="pad8-card"><div><h4 class="pad8-h4">商业克制</h4><p class="pad8-sub">达成温和共生</p><p class="pad8-desc">改变生硬的「硬植入」逻辑，将商业触达转化为顺滑的场景服务。在坚守沉浸观影的前提下让商业自然融入，避免对用户注意力的过度争夺。</p></div></div>
+</div>`,
+        },
+        {
+          heading: '方案探索：从 L 型混排到二分屏架构的演进',
+          body: '基于前期推导的三大策略（内容优先、效率至上、商业克制），我们围绕 Pad 端横屏布局展开了多轮架构推演。通过对两种代表性方案的优劣势评估，最终收敛至最优解。',
+          html: `<style>
+.pad10-flow{display:flex;align-items:stretch;justify-content:center;gap:48px;max-width:960px;margin:24px auto 0}
+.pad10-group{flex:1;max-width:400px;display:flex;flex-direction:column;gap:12px}
+.pad10-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0;position:relative}
+.pad10-title::before{content:'';width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0}
+.pad10-title::after{content:'';position:absolute;bottom:0;left:0;width:80px;height:1px;background:#333333}
+.pad10-desc{display:flex;flex-direction:column;gap:8px}
+.pad10-desc p{font-size:12px;color:#A0A0A0;line-height:1.6;margin:0}
+.pad10-desc p b{color:#FFFFFF;font-weight:600}
+.pad10-img{width:100%;height:auto;display:block;border-radius:4px;border:1px solid #27272a;margin-top:auto}
+.pad10-conclusion{max-width:960px;margin:20px auto 0;text-align:center;color:#A0A0A0;font-size:13px;line-height:1.75}
+.pad10-conclusion b{color:#C7FF00;font-weight:600}
+@media(max-width:767px){.pad10-flow{flex-direction:column;align-items:center}.pad10-group{max-width:none;width:100%}}
+</style>
+<div class="pad10-flow">
+<div class="pad10-group">
+<h4 class="pad10-title">方案 A：L 型混排结构（已放弃）</h4>
+<div class="pad10-desc">
+<p><b>结构特征：</b>尝试拉宽观影区并将 TVG 下沉至底部。</p>
+<p><b>局限评估：</b>视线动线被严重折叠打断，主画面与高频选集错位；且异构屏幕（4:3 与 1.6:1）下的容器适配成本极高，违背「降噪」底线。</p>
+</div>
+<img class="pad10-img" src="/birdys-portfolio/images/pad-scheme-l.png" alt="L 型混排结构" />
+</div>
+<div class="pad10-group">
+<h4 class="pad10-title">方案 B：经典二分屏结构（最终胜出）</h4>
+<div class="pad10-desc">
+<p><b>结构特征：</b>确立「主内容 + 窄辅助」二分屏。左侧 77.4% 空间全屏观影；右侧纵向切分，上方承载高频 TVG，下方收纳推荐。</p>
+<p><b>价值评估：</b>完美契合用户心智与 Gpad 1.6:1 宽屏物理特性，兼顾沉浸感与宽屏效率。</p>
+</div>
+<img class="pad10-img" src="/birdys-portfolio/images/pad-scheme-dual.png" alt="经典二分屏结构" />
+</div>
+</div>
+<p class="pad10-conclusion">综合评估后，<b>二分屏架构</b>更契合「沉浸优先」的原则，被确定为最终方案。</p>`,
+        },
+        {
+          heading: '方案呈现',
+          body: '经过多轮方案推演与权衡，我们最终确立了「主内容 + 窄辅助」的二分屏架构。以下呈现最终方案的完整结构与核心设计点。',
+          html: `<style>
+.pad11-wrap{max-width:880px;margin:24px auto 0}
+.pad11-mock{aspect-ratio:16/10;background:#0d0d0f;border:1px solid #27272a;border-radius:6px;display:grid;grid-template-columns:3fr 1fr;gap:10px;padding:12px}
+.pad11-main{background:#1f1f23;border:1px solid #3f3f46;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.pad11-side{display:grid;grid-template-rows:1fr 1fr;gap:10px}
+.pad11-cell{background:#141416;border:1px solid #27272a;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.pad11-tag{font-size:11px;color:#C7FF00;font-weight:600;letter-spacing:0.06em}
+.pad11-name{font-size:12px;color:#a0a0a0}
+.pad11-note{font-size:10px;color:#52525b;font-family:monospace}
+.pad11-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.pad11-point{background:rgba(30,30,34,0.7);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:14px 16px}
+.pad11-point-title{color:#FFFFFF;font-size:13px;font-weight:600;margin:0 0 6px}
+.pad11-point-desc{color:#A0A0A0;font-size:12px;line-height:1.6;margin:0}
+@media(max-width:767px){.pad11-points{grid-template-columns:1fr}}
+</style>
+<div class="pad11-wrap">
+<div class="pad11-mock">
+<div class="pad11-main"><span class="pad11-tag">主内容区</span><span class="pad11-name">全屏观影</span><span class="pad11-note">约 77.4% 空间</span></div>
+<div class="pad11-side">
+<div class="pad11-cell"><span class="pad11-tag">TVG 区</span><span class="pad11-name">剧集信息 + 选集</span></div>
+<div class="pad11-cell"><span class="pad11-tag">推荐区</span><span class="pad11-name">内容收纳</span></div>
+</div>
+</div>
+<div class="pad11-points">
+<div class="pad11-point"><p class="pad11-point-title">内容优先</p><p class="pad11-point-desc">播放器回归主角，全屏观影纯净沉浸</p></div>
+<div class="pad11-point"><p class="pad11-point-title">效率至上</p><p class="pad11-point-desc">高频 TVG 就近可达，切换选集一步完成</p></div>
+<div class="pad11-point"><p class="pad11-point-title">商业克制</p><p class="pad11-point-desc">推荐收纳在侧，商业服务化自然嵌入</p></div>
+</div>
+</div>`,
         },
         {
           heading: 'Thanks',
