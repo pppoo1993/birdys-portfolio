@@ -1181,7 +1181,7 @@ export const projectData: Project[] = [
 </style>
 <div class="pad6-imgs">
 <div class="pad6-fig"><img src="/birdys-portfolio/images/pad-split-original.webp" alt="原三分屏" /></div>
-<div class="pad6-fig"><img src="/birdys-portfolio/images/pad-split-online-data.png" alt="三分屏线上数据" /></div>
+<div class="pad6-fig"><img src="/birdys-portfolio/images/pad-split-online-data.webp" alt="三分屏线上数据" /></div>
 </div>`,
         },
         {
@@ -1256,7 +1256,7 @@ export const projectData: Project[] = [
 <p><b>结构特征：</b>尝试拉宽观影区，并将周边视频调整至右侧，试图为选集释放更多操作空间。</p>
 <p><b>局限评估：</b>选集和周边视频逻辑上的亲密性，被拆分后视觉动线打断；不同屏幕比例设备适配成本高，后期维护困难。</p>
 </div>
-<img class="pad10-img" src="/birdys-portfolio/images/pad-scheme-l.png" alt="L 型混排结构" />
+<img class="pad10-img" src="/birdys-portfolio/images/pad-scheme-l.webp" alt="L 型混排结构" />
 </div>
 <div class="pad10-group">
 <h4 class="pad10-title">方案 B：更激进的二分屏结构（最终胜出）</h4>
@@ -1264,7 +1264,7 @@ export const projectData: Project[] = [
 <p><b>结构特征：</b>确立「主内容 + 窄辅助」二分屏。左侧全部空间服务于观影；右侧纵向切分，上方承载高频选集操作，下方收纳推荐。</p>
 <p><b>价值评估：</b>完美契合用户心智与 Gpad 1.6:1 宽屏物理特性，兼顾沉浸感与宽屏效率。</p>
 </div>
-<img class="pad10-img" src="/birdys-portfolio/images/pad-scheme-dual.png" alt="经典二分屏结构" />
+<img class="pad10-img" src="/birdys-portfolio/images/pad-scheme-dual.webp" alt="经典二分屏结构" />
 </div>
 </div>
 <p class="pad10-conclusion">综合评估后，<b>二分屏架构</b>更契合「沉浸优先」的原则，被确定为最终方案。</p>`,

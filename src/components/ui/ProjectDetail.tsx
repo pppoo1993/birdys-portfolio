@@ -169,26 +169,41 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
     }
   }, [project, handleKeyDown, blockScroll])
 
-  // ── Lazy-load detail images + shimmer placeholder until loaded ──
+  // ── Lazy-load detail images via IntersectionObserver + shimmer placeholder ──
   useEffect(() => {
     if (!project || !scrollRef.current) return
-    const imgs = scrollRef.current.querySelectorAll('img')
-    const cleanups: (() => void)[] = []
+    const container = scrollRef.current
+    const imgs = Array.from(container.querySelectorAll('img'))
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return
+          const img = entry.target as HTMLImageElement
+          const dataSrc = img.getAttribute('data-src')
+          if (dataSrc) {
+            img.src = dataSrc
+            img.removeAttribute('data-src')
+          }
+          observer.unobserve(img)
+        })
+      },
+      { root: container, rootMargin: '300px 0px' },
+    )
 
     imgs.forEach((img) => {
-      img.setAttribute('loading', 'lazy')
-      if ((img as HTMLImageElement).complete) return
+      const src = img.getAttribute('src')
+      if (!src || src.startsWith('data:')) return
       const done = () => img.classList.remove('detail-img-loading')
       img.classList.add('detail-img-loading')
       img.addEventListener('load', done)
       img.addEventListener('error', done)
-      cleanups.push(() => {
-        img.removeEventListener('load', done)
-        img.removeEventListener('error', done)
-      })
+      img.setAttribute('data-src', src)
+      img.removeAttribute('src')
+      observer.observe(img)
     })
 
-    return () => cleanups.forEach((fn) => fn())
+    return () => observer.disconnect()
   }, [project])
 
   return createPortal(
