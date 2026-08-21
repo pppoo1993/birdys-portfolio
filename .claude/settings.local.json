@@ -162,7 +162,14 @@
       "Bash(sed -n '160,175p' src/components/sections/Projects.tsx)",
       "Bash(sed -n '232,240p' src/components/ui/ProjectDetail.tsx)",
       "Bash(sed -n '318,330p' src/components/ui/ProjectDetail.tsx)",
-      "Bash(echo \"build exit: $?\")"
+      "Bash(echo \"build exit: $?\")",
+      "Bash(file public/videos/*.mov)",
+      "Bash(avconvert --help)",
+      "Bash(avconvert -s /Users/birdy/Documents/birdys-portfolio/public/videos/story-demo.mov -p Preset1280x720 -o /tmp/story-720.mp4 --replace --progress)",
+      "Bash(mdls -name kMDItemPixelWidth -name kMDItemPixelHeight -name kMDItemCodecs -name kMDItemTotalBitRate /tmp/story-720.mp4)",
+      "Bash(brew --version)",
+      "Bash(avconvert -s lines-demo.mov -p PresetMediumQuality -o lines-demo.mp4 --replace --progress)",
+      "Bash(avconvert -s story-demo.mov -p PresetMediumQuality -o story-demo.mp4 --replace --progress)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"

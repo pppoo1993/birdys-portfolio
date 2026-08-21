@@ -449,7 +449,7 @@ export const projectData: Project[] = [
 <div class="lr-item"><div data-preview class="lr-placeholder"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/lines-original.jpg" alt="原始台词" /></div><span class="lr-label">原始台词</span></div>
 <div class="lr-item"><div data-preview class="lr-placeholder"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/lines-manual.jpg" alt="手动编辑" /></div><span class="lr-label">手动编辑</span></div>
 <div class="lr-item"><div data-preview class="lr-placeholder"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/lines-ai.jpg" alt="AI写台词" /></div><span class="lr-label">AI写台词</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/lines-preview.jpg"><source src="/birdys-portfolio/videos/lines-demo.mov" type="video/quicktime" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/play-btn.png" alt="播放" /></span></div></div><span class="lr-label">台词生成过程</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/lines-preview.jpg"><source src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/videos/lines-demo.mp4" type="video/mp4" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/play-btn.png" alt="播放" /></span></div></div><span class="lr-label">台词生成过程</span></div>
 </div>`,
         },
         {
@@ -500,7 +500,7 @@ export const projectData: Project[] = [
 <div class="lr-item"><div data-preview class="lr-placeholder"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/sk-final-start.jpg" alt="起点页" /></div><span class="lr-label">起点页</span></div>
 <div class="lr-item"><div data-preview class="lr-placeholder"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/sk-final-ending.jpg" alt="大结局预览" /></div><span class="lr-label">大结局预览</span></div>
 <div class="lr-item"><div data-preview class="lr-placeholder"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/sk-final-create.jpg" alt="接龙创作页" /></div><span class="lr-label">接龙创作页</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/sk-final-player.jpg"><source src="/birdys-portfolio/videos/story-demo.mov" type="video/quicktime" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/play-btn.png" alt="播放" /></span></div></div><span class="lr-label">接龙播放器</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/sk-final-player.jpg"><source src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/videos/story-demo.mp4" type="video/mp4" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/play-btn.png" alt="播放" /></span></div></div><span class="lr-label">接龙播放器</span></div>
 </div>`,
         },
         {
