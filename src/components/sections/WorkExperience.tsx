@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { experienceData } from '../../data/experience'
 
 function formatDate(iso: string): string {
@@ -15,6 +15,11 @@ const ordered = [
 export default function WorkExperience() {
   const [active, setActive] = useState(0)
   const exp = ordered[active]
+  const didMount = useRef(false)
+
+  useEffect(() => {
+    didMount.current = true
+  }, [])
 
   const groups = (() => {
     const g: { header?: string; items: string[] }[] = []
@@ -33,7 +38,7 @@ export default function WorkExperience() {
   return (
     <section
       id="experience"
-      className="relative w-full bg-[#121214] border-b border-divider py-16"
+      className="relative w-full bg-[#121214] py-16"
     >
       <p className="heading-section mb-6 md:hidden px-4">Work Experience</p>
 
@@ -48,7 +53,7 @@ export default function WorkExperience() {
             const t = `${formatDate(item.startDate)} — ${(item.endDate ? formatDate(item.endDate) : '至今')}`
 
             const setRef = (el: HTMLDivElement | null) => {
-              if (el && isActive) {
+              if (el && isActive && didMount.current) {
                 el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: i === 0 ? 'start' : i === 1 ? 'center' : 'end' })
               }
             }

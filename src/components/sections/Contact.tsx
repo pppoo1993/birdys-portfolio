@@ -23,7 +23,7 @@ export default function Contact() {
           {/* Right column - QR card */}
           <div className="lg:col-span-5 flex items-center justify-center lg:justify-end">
             <div
-              className="relative p-6 rounded-lg border border-[#1f1f23] flex flex-col items-center gap-0 transition-all duration-300 group hover:border-[#C7FF00]/30 bg-[#0a0a0c]"
+              className="relative p-6 rounded-lg border border-[#1f1f23] flex flex-col items-center gap-0 transition-all duration-300 group hover:border-[#C7FF00]/30 bg-[#0a0a0c]/70"
               style={{
                 boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
                 transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',

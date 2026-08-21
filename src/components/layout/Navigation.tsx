@@ -235,7 +235,6 @@ export default function Navigation() {
       {/* Mobile/Tablet: top bar */}
       <nav className={`mobile-safe-top fixed top-0 right-0 left-0 z-50 xl:hidden transition-transform duration-500 ${navVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="absolute inset-0 bg-[#0c0c0e]/50 backdrop-blur-md" />
-        <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-b from-[#0c0c0e]/50 to-transparent translate-y-full" />
         <div className="relative flex min-h-12 items-center justify-between px-5 py-3 sm:px-6 md:px-12">
           <img src={'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/logo.svg'} alt="Logo" style={{ width: '110px', height: '24px' }} className="object-contain opacity-90 flex-shrink-0 self-center" />
           {/* Mobile: hamburger */}
@@ -283,7 +282,7 @@ export default function Navigation() {
       )}
 
       {/* Desktop: fixed left sidebar card */}
-      <aside className="fixed top-0 left-0 bottom-0 z-40 hidden xl:flex w-[220px] flex-col bg-[#121214]/75 backdrop-blur-xl border-r border-[#1f1f23] shadow-[4px_0_30px_rgba(0,0,0,0.6)]">
+      <aside className="fixed top-0 left-0 bottom-0 z-40 hidden xl:flex w-[220px] flex-col bg-[#121214]/75 backdrop-blur-xl border-r border-[#1f1f23]">
         <div className="px-5 pt-10 pb-6">
           <img src={'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/logo.svg'} alt="Logo" style={{ width: '110px', height: '24px' }} className="object-contain opacity-90 flex-shrink-0 self-center" />
         </div>
