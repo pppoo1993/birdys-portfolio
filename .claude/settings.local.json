@@ -153,7 +153,11 @@
       "Bash(cp \"/Users/birdy/Desktop/GPad播放页改版 \\(4\\)/无播控.png\" \"/Users/birdy/Documents/birdys-portfolio/public/images/pad-final-ctrl-off.png\")",
       "Bash(echo \"tsc exit code: $?\")",
       "Bash(file public/images/__TRACKED_VAR__)",
-      "Bash(echo \"tsc exit: $?\")"
+      "Bash(echo \"tsc exit: $?\")",
+      "Bash(gh --version)",
+      "Bash(unzip -o /tmp/job-logs.zip -d /tmp/joblogs)",
+      "Bash(npm uninstall *)",
+      "Bash(echo \"exit: $?\")"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"

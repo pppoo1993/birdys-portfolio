@@ -324,16 +324,16 @@ export const projectData: Project[] = [
 <div class="dist-col-title">内容分发核心触点</div>
 <p class="dist-col-desc">在各分发场景下设置创作按钮，以便用户产生灵感后即可创作。</p>
 <div class="dist-img-row">
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-home.png" alt="首页" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">首页</span></div>
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-player.png" alt="播放页" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">播放页</span></div>
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-template.png" alt="模板 Tab" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">模板 Tab</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-home.webp" alt="首页" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">首页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-player.webp" alt="播放页" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">播放页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-template.webp" alt="模板 Tab" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">模板 Tab</span></div>
 </div>
 </div>
 <div class="dist-col">
 <div class="dist-col-title">全局「+」浮层</div>
 <p class="dist-col-desc">展示全部AI视频玩法。</p>
 <div class="dist-img-row">
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-float.png" alt="+浮层" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">「+」浮层</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="/birdys-portfolio/images/chijing-float.webp" alt="+浮层" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">「+」浮层</span></div>
 </div>
 </div>
 </div>
@@ -361,16 +361,16 @@ export const projectData: Project[] = [
 <div class="cr-col-title">通用视频生成</div>
 <p class="cr-col-desc">支持多模态输入自由创作。</p>
 <div class="cr-img-row">
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-create-video.png" alt="创作视频" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">通用创作入口</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-create-video.webp" alt="创作视频" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">通用创作入口</span></div>
 </div>
 </div>
 <div class="cr-col">
 <div class="cr-col-title">影视创意玩法</div>
 <p class="cr-col-desc">选择影视素材后，即可针对该视频进行定向维度的创作。</p>
 <div class="cr-img-row">
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-lines-rewrite.png" alt="台词改写" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">台词改写</span></div>
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-story-chain.png" alt="故事接龙" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">故事接龙</span></div>
-<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-style-transfer.png" alt="画风转换" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">画风转换</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-lines-rewrite.webp" alt="台词改写" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">台词改写</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-story-chain.webp" alt="故事接龙" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">故事接龙</span></div>
+<div class="cr-img-wrap"><div data-preview class="cr-placeholder"><img src="/birdys-portfolio/images/chijing-style-transfer.webp" alt="画风转换" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">画风转换</span></div>
 </div>
 </div>
 </div>`,
@@ -391,23 +391,23 @@ export const projectData: Project[] = [
 @media(max-width:767px){.m-split{flex-direction:column!important}.m-col{width:100%!important}}
 </style>
 <div style="width:fit-content;margin:0 auto">
-<img src="/birdys-portfolio/images/material-hub.png" alt="素材库" style="width:640px;border-radius:6px;display:block;margin-bottom:24px" />
+<img src="/birdys-portfolio/images/material-hub.webp" alt="素材库" style="width:640px;border-radius:6px;display:block;margin-bottom:24px" />
 <div class="m-split">
 <div class="m-col">
 <div class="m-col-title">影视片段库形态演变预想</div>
 <p class="cr-col-desc">随着影视片段内容的扩充，我们规划了不同形态，并增加相应功能。</p>
 <div class="m-img-row">
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.png" alt="初期" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">初期</span></div>
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.png" alt="中期" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">中期</span></div>
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-late.png" alt="后期" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">后期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-early.webp" alt="初期" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">初期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-mid.webp" alt="中期" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">中期</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-late.webp" alt="后期" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">后期</span></div>
 </div>
 </div>
 <div class="m-col">
 <div class="m-col-title">支持多选场景</div>
 <p class="cr-col-desc">通用视频创作时支持多选素材。</p>
 <div class="m-img-row">
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-unselected.png" alt="多选未选择" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">多选-未选择</span></div>
-<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.png" alt="多选已选择" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">多选-已选择</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-unselected.webp" alt="多选未选择" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">多选-未选择</span></div>
+<div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="/birdys-portfolio/images/mat-multi-selected.webp" alt="多选已选择" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">多选-已选择</span></div>
 </div>
 </div>
 </div>
@@ -420,10 +420,10 @@ export const projectData: Project[] = [
 .lr-label{font-size:12px;color:#A0A0A0;text-align:center}
 </style>
 <div class="lr-row">
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-none.png" alt="未添加参考" /></div><span class="lr-label">未添加参考</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-unused.png" alt="未调用参考" /></div><span class="lr-label">未调用参考</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-used.png" alt="已调用参考" /></div><span class="lr-label">已调用参考</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-overlay.png" alt="已添加参考浮层" /></div><span class="lr-label">已添加参考浮层</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-none.webp" alt="未添加参考" /></div><span class="lr-label">未添加参考</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-unused.webp" alt="未调用参考" /></div><span class="lr-label">未调用参考</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-used.webp" alt="已调用参考" /></div><span class="lr-label">已调用参考</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/ref-overlay.webp" alt="已添加参考浮层" /></div><span class="lr-label">已添加参考浮层</span></div>
 </div>`,
         },
         {
@@ -446,16 +446,16 @@ export const projectData: Project[] = [
 @media(max-width:767px){.lr-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
 </style>
 <div class="lr-row">
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-original.png" alt="原始台词" /></div><span class="lr-label">原始台词</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-manual.png" alt="手动编辑" /></div><span class="lr-label">手动编辑</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-ai.png" alt="AI写台词" /></div><span class="lr-label">AI写台词</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="/birdys-portfolio/images/lines-preview.png"><source src="/birdys-portfolio/videos/lines-demo.mov" type="video/quicktime" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="/birdys-portfolio/images/play-btn.png" alt="播放" /></span></div></div><span class="lr-label">台词生成过程</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-original.webp" alt="原始台词" /></div><span class="lr-label">原始台词</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-manual.webp" alt="手动编辑" /></div><span class="lr-label">手动编辑</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/lines-ai.webp" alt="AI写台词" /></div><span class="lr-label">AI写台词</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="/birdys-portfolio/images/lines-preview.webp"><source src="/birdys-portfolio/videos/lines-demo.mov" type="video/quicktime" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="/birdys-portfolio/images/play-btn.webp" alt="播放" /></span></div></div><span class="lr-label">台词生成过程</span></div>
 </div>`,
         },
         {
           heading: '故事接龙：AI视频链式共创',
           body: '台词改写解决的是「一个人怎么创作」，故事接龙则要解决「一群人怎么共创」 — 两者的区别不在玩法复杂度，而在参与互动感的深化。\n\n而互动的持续，恰恰是传统 UGC 的软肋 — 「发布即终点」让内容发出后便静态沉淀，没有持续参与的理由。我从影视 IP 的天然优势找到突破口：热播剧的大结局本身就是用户情绪的高点，也是创作欲最强的时刻。把接龙起点锚定在大结局处 — 依托已有世界观降低冷启动门槛，让用户从「追完剧」自然过渡到「改写结局」，每个灵感接续前文、不断延展。\n\n这样一来，接龙不再是一堆孤立的二创，而是被串联成一部不断生长的<b>「AI 短剧」</b>。剧有情节、有进展，参与者和围观者会像追剧一样持续回来，形成持续消费的动力。',
-          html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.png" alt="故事接龙" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin-top:8px">故事接龙逻辑示意</p></div>`,
+          html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/story-chain.webp" alt="故事接龙" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin-top:8px">故事接龙逻辑示意</p></div>`,
         },
         {
           heading: '故事接龙：起点页方案探索',
@@ -479,9 +479,9 @@ export const projectData: Project[] = [
 @media(max-width:767px){.sk-row{gap:10px}}
 </style>
 <div class="sk-wrapper">
-<div class="sk-group"><div class="sk-group-title">评论该楼式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.png" alt="起点页A" style="width:100%;height:auto;display:block" /></div><span class="sk-label">起点页A</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">平行宇宙式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.png" alt="起点页B" style="width:100%;height:auto;display:block" /></div><span class="sk-label">起点页B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.png" alt="起点页B-展开地图" style="width:100%;height:auto;display:block" /></div><span class="sk-label">接龙宇宙</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">地图探索式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.png" alt="起点页C" style="width:100%;height:auto;display:block" /></div><span class="sk-label">起点页C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.png" alt="起点页C-展开地图" style="width:100%;height:auto;display:block" /></div><span class="sk-label">接龙地图</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">评论该楼式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-a.webp" alt="起点页A" style="width:100%;height:auto;display:block" /></div><span class="sk-label">起点页A</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">平行宇宙式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b.webp" alt="起点页B" style="width:100%;height:auto;display:block" /></div><span class="sk-label">起点页B</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-b-map.webp" alt="起点页B-展开地图" style="width:100%;height:auto;display:block" /></div><span class="sk-label">接龙宇宙</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">地图探索式</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c.webp" alt="起点页C" style="width:100%;height:auto;display:block" /></div><span class="sk-label">起点页C</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/sk-start-c-map.webp" alt="起点页C-展开地图" style="width:100%;height:auto;display:block" /></div><span class="sk-label">接龙地图</span></div></div></div>
 </div>`,
         },
         {
@@ -497,16 +497,16 @@ export const projectData: Project[] = [
 .lr-label{font-size:12px;color:#A0A0A0;text-align:center}
 </style>
 <div class="lr-row">
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/sk-final-start.png" alt="起点页" /></div><span class="lr-label">起点页</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/sk-final-ending.png" alt="大结局预览" /></div><span class="lr-label">大结局预览</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/sk-final-create.png" alt="接龙创作页" /></div><span class="lr-label">接龙创作页</span></div>
-<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="/birdys-portfolio/images/sk-final-player.png"><source src="/birdys-portfolio/videos/story-demo.mov" type="video/quicktime" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="/birdys-portfolio/images/play-btn.png" alt="播放" /></span></div></div><span class="lr-label">接龙播放器</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/sk-final-start.webp" alt="起点页" /></div><span class="lr-label">起点页</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/sk-final-ending.webp" alt="大结局预览" /></div><span class="lr-label">大结局预览</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><img src="/birdys-portfolio/images/sk-final-create.webp" alt="接龙创作页" /></div><span class="lr-label">接龙创作页</span></div>
+<div class="lr-item"><div data-preview class="lr-placeholder"><video muted playsInline poster="/birdys-portfolio/images/sk-final-player.webp"><source src="/birdys-portfolio/videos/story-demo.mov" type="video/quicktime" /></video><div class="lr-video-overlay"><span class="lr-play-circle"><img src="/birdys-portfolio/images/play-btn.webp" alt="播放" /></span></div></div><span class="lr-label">接龙播放器</span></div>
 </div>`,
         },
         {
           heading: '尾声：上线与资产留存',
           body: '2026 年 4 月，吃鲸AI 在爱奇艺世界大会正式发布，不久后因战略调整关停 — 这是一次战略选择，而非设计的失败。\n\n产品画上句号，但核心交互资产并未消失：创作页、播放器等<b>关键模块</b>已标准化封装为 SDK，<b>嵌入爱奇艺主站</b>，持续服务于 AI 创作能力的分发与落地。好的设计思考，应该比产品活得更久。',
-          html: `<style>.ending-wrap{display:flex;gap:60px;justify-content:center;align-items:flex-start;max-width:900px;margin:0 auto}@media(max-width:767px){.ending-wrap{flex-direction:column;gap:16px;align-items:flex-start}}</style><div class="ending-wrap"><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI 正式发布</p><img src="/birdys-portfolio/images/ending.jpg" alt="发布" style="max-height:360px;border-radius:8px;display:block" /></div><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI嵌入爱奇艺主站</p><img src="/birdys-portfolio/images/ending2.png" alt="嵌入" style="max-height:360px;border-radius:8px;display:block" /></div></div>`,
+          html: `<style>.ending-wrap{display:flex;gap:60px;justify-content:center;align-items:flex-start;max-width:900px;margin:0 auto}@media(max-width:767px){.ending-wrap{flex-direction:column;gap:16px;align-items:flex-start}}</style><div class="ending-wrap"><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI 正式发布</p><img src="/birdys-portfolio/images/ending.webp" alt="发布" style="max-height:360px;border-radius:8px;display:block" /></div><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI嵌入爱奇艺主站</p><img src="/birdys-portfolio/images/ending2.webp" alt="嵌入" style="max-height:360px;border-radius:8px;display:block" /></div></div>`,
         },
         {
           heading: '价值复盘：给不可控的 AI，一个可控的锚',
@@ -544,9 +544,9 @@ export const projectData: Project[] = [
 @media(max-width:767px){.sk-wrapper{flex-direction:column;align-items:center;gap:24px}.sk-group{flex:none;width:100%}.sk-row{gap:3%}.sk-item{width:auto;flex:1 1 0;min-width:0}.sk-placeholder{width:100%;max-width:180px}}
 </style>
 <div class="sk-wrapper">
-<div class="sk-group"><div class="sk-group-title">结构化输出</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-create-video.png" alt="创作视频页" /></div><span class="sk-label">创作视频页</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-structured-output.png" alt="结构化输出" /></div><span class="sk-label">结构化输出</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">IP 聚合</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-ip-aggregation.png" alt="IP 聚合页" /></div><span class="sk-label">IP 聚合页</span></div></div></div>
-<div class="sk-group"><div class="sk-group-title">商业闭环</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-checkin-points.png" alt="签到积分" /></div><span class="sk-label">签到积分</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-membership.png" alt="会员订阅" /></div><span class="sk-label">会员订阅</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">结构化输出</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-create-video.webp" alt="创作视频页" /></div><span class="sk-label">创作视频页</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-structured-output.webp" alt="结构化输出" /></div><span class="sk-label">结构化输出</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">IP 聚合</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-ip-aggregation.webp" alt="IP 聚合页" /></div><span class="sk-label">IP 聚合页</span></div></div></div>
+<div class="sk-group"><div class="sk-group-title">商业闭环</div><div class="sk-row"><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-checkin-points.webp" alt="签到积分" /></div><span class="sk-label">签到积分</span></div><div class="sk-item"><div data-preview class="sk-placeholder"><img src="/birdys-portfolio/images/uf-membership.webp" alt="会员订阅" /></div><span class="sk-label">会员订阅</span></div></div></div>
 </div>`,
         },
         {
@@ -749,7 +749,7 @@ export const projectData: Project[] = [
         {
           heading: '流量蓄水：流量流转链路构建',
           body: '流量蓄水的核心矛盾在于：看剧的流量是瞬时的，看完就走，不会自动沉淀。所以我把蓄水分成三步，形成「触达 → 留存 → 反哺」的循环：\n\n① <b>流量触达</b> — 在播放页把「看剧」触达成「陪看」，解决「进来」\n② <b>资产留存</b> — 在聚合页把「一次性的围观」沉淀成「可回访的资产」，解决「留下」\n③ <b>流量反哺</b> — 打通剧集与直播的双向循环，让沉淀的资产反哺新流量，破解长尾期流量断崖',
-          html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/live-flow.png" alt="明星陪看流量流转图" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin-top:8px">明星陪看流量流转图</p></div>`,
+          html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="/birdys-portfolio/images/live-flow.webp" alt="明星陪看流量流转图" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin-top:8px">明星陪看流量流转图</p></div>`,
         },
         // ═══ P5 播放页入口 ═══
         {
@@ -776,10 +776,10 @@ export const projectData: Project[] = [
 </div>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>播放页触达入口</p>
 <div class="entry-phone-grid">
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-no-entry.png" alt="无直播入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无直播时</span></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain entry-phone-transparent"><img src="/birdys-portfolio/images/live-has-entry.png" alt="有直播入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有直播时</span></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-entry-status.png" alt="直播入口状态" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">入口状态</span></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-booking.png" alt="一键预约弹窗" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">一键预约</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-no-entry.webp" alt="无直播入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无直播时</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain entry-phone-transparent"><img src="/birdys-portfolio/images/live-has-entry.webp" alt="有直播入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有直播时</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone plain"><img src="/birdys-portfolio/images/live-entry-status.webp" alt="直播入口状态" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">入口状态</span></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="entry-phone"><img src="/birdys-portfolio/images/live-booking.webp" alt="一键预约弹窗" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0">一键预约</span></div>
 </div>
 </div>`,
         },
@@ -804,7 +804,7 @@ export const projectData: Project[] = [
 <div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">我的页→</div>
 <div style="background:rgba(30,30,34,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:6px;font-size:11px;color:#A0A0A0;white-space:nowrap">搜索结果页→</div>
 </div>
-<div class="ap-phone"><img src="/birdys-portfolio/images/agg-page.png" alt="聚合页" style="width:100%;height:auto;display:block" /></div>
+<div class="ap-phone"><img src="/birdys-portfolio/images/agg-page.webp" alt="聚合页" style="width:100%;height:auto;display:block" /></div>
 </div>
 <div class="ap-right">
 <div class="ap-module"><p class="ap-module-title">触发 (Trigger)：直播/预约动态</p><p class="ap-module-desc"><b>时间预期管理</b> — 通过「正在直播、预约中」时间轴与临近提醒机制，在关键时间节点给予用户精准的外部触发，建立用户对「明星陪看」的长期时间预期，保障直播触达率与回访率。</p></div>
@@ -827,9 +827,9 @@ export const projectData: Project[] = [
 @media(max-width:767px){.im-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.im-item{min-width:0;width:100%}.im-item:first-child{grid-column:1/-1}.im-item:first-child>img{width:100%!important;height:auto!important;max-width:100%}.im-item:not(:first-child) .im-placeholder{height:auto;width:100%;max-width:100%}.im-item:not(:first-child) .im-placeholder img{width:100%!important;height:auto!important}}
 </style>
 <div class="im-row">
-<div class="im-item"><p class="im-title">分层管理</p><img src="/birdys-portfolio/images/im-layers.png" alt="页面分层示意" style="width:511px;height:390px;display:block;border-radius:6px" /><p style="color:#A0A0A0;font-size:12px;margin:0">页面分层示意</p></div>
-<div class="im-item"><p class="im-title">控件精简</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-player.png" alt="顶部控件4s后自动精简播控" style="height:100%;width:auto;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin:0">顶部控件自动精简</p></div>
-<div class="im-item"><p class="im-title">动态避让</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-avoid.png" alt="弹幕/礼物动态动态避让明星高度" style="height:100%;width:auto;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin:0">弹幕/礼物避让明星画面</p></div>
+<div class="im-item"><p class="im-title">分层管理</p><img src="/birdys-portfolio/images/im-layers.webp" alt="页面分层示意" style="width:511px;height:390px;display:block;border-radius:6px" /><p style="color:#A0A0A0;font-size:12px;margin:0">页面分层示意</p></div>
+<div class="im-item"><p class="im-title">控件精简</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-player.webp" alt="顶部控件4s后自动精简播控" style="height:100%;width:auto;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin:0">顶部控件自动精简</p></div>
+<div class="im-item"><p class="im-title">动态避让</p><div data-preview class="im-placeholder"><img src="/birdys-portfolio/images/im-avoid.webp" alt="弹幕/礼物动态动态避让明星高度" style="height:100%;width:auto;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin:0">弹幕/礼物避让明星画面</p></div>
 </div>`,
         },
         {
@@ -846,9 +846,9 @@ export const projectData: Project[] = [
 @media(max-width:767px){.sr-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.sr-col{display:contents}.sr-col-title{display:none}.sr-img-row{display:contents}.sr-placeholder{width:100%;max-width:180px;margin:0 auto}.sr-placeholder img{width:100%;height:auto}}
 </style>
 <div class="sr-row">
-<div class="sr-col"><div class="sr-col-title">鉴权态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-auth.png" alt="鉴权态" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">鉴权态</span></div></div></div>
-<div class="sr-col"><div class="sr-col-title">预约态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-book.png" alt="预约态" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">直播预告</span></div></div></div>
-<div class="sr-col"><div class="sr-col-title">回看态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-ctrl-on.png" alt="有播控" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有播控</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-ctrl-off.png" alt="无播控" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无播控</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-seek.png" alt="调节进度" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">调节进度</span></div></div></div>
+<div class="sr-col"><div class="sr-col-title">鉴权态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-auth.webp" alt="鉴权态" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">鉴权态</span></div></div></div>
+<div class="sr-col"><div class="sr-col-title">预约态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-book.webp" alt="预约态" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">直播预告</span></div></div></div>
+<div class="sr-col"><div class="sr-col-title">回看态</div><div class="sr-img-row"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-ctrl-on.webp" alt="有播控" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">有播控</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-ctrl-off.webp" alt="无播控" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">无播控</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div data-preview class="sr-placeholder"><img src="/birdys-portfolio/images/sr-seek.webp" alt="调节进度" style="width:100%;display:block" /></div><span style="font-size:11px;color:#A0A0A0">调节进度</span></div></div></div>
 </div>`,
         },
         // ═══ P9 陪看布局重构2 ═══
@@ -861,7 +861,7 @@ export const projectData: Project[] = [
 .pyramid-caption{color:#A0A0A0;font-size:12px;margin-top:8px}
 </style>
 <div class="pyramid-wrap">
-<div data-preview style="display:inline-block"><img class="pyramid-img" src="/birdys-portfolio/images/送礼金字塔.png" alt="送礼金字塔" /></div>
+<div data-preview style="display:inline-block"><img class="pyramid-img" src="/birdys-portfolio/images/送礼金字塔.webp" alt="送礼金字塔" /></div>
 <p class="pyramid-caption">送礼分层金字塔</p>
 </div>`,
         },
@@ -889,13 +889,13 @@ export const projectData: Project[] = [
 <div class="p11-col">
 <div class="p11-col-title">会员权益打通</div>
 <div class="p11-img-row">
-<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/payment-method.png" alt="两种支付方式" style="width:100%;height:auto;display:block" /></div><span class="p11-img-label">两种支付方式</span></div>
-<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/points-deduct.png" alt="已开启积分抵扣" style="width:100%;height:auto;display:block" /></div><span class="p11-img-label">已开启积分抵扣</span></div>
+<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/payment-method.webp" alt="两种支付方式" style="width:100%;height:auto;display:block" /></div><span class="p11-img-label">两种支付方式</span></div>
+<div class="p11-img-wrap"><div data-preview class="p11-placeholder"><img src="/birdys-portfolio/images/points-deduct.webp" alt="已开启积分抵扣" style="width:100%;height:auto;display:block" /></div><span class="p11-img-label">已开启积分抵扣</span></div>
 </div>
 </div>
 <div class="p11-col">
 <div class="p11-col-title">支付架构设计</div>
-<div class="p11-img-wrap"><img class="p11-diagram" src="/birdys-portfolio/images/whiteboard_exported_image.png" alt="支付流程示意" /><span class="p11-img-label">支付流程示意</span></div>
+<div class="p11-img-wrap"><img class="p11-diagram" src="/birdys-portfolio/images/whiteboard_exported_image.webp" alt="支付流程示意" /><span class="p11-img-label">支付流程示意</span></div>
 </div>
 </div>`,
         },
@@ -925,15 +925,15 @@ export const projectData: Project[] = [
 <div class="p12-chart">
 <div class="p12-flow">
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-tag.png" alt="玩法标签" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">玩法标签</span>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-tag.webp" alt="玩法标签" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">玩法标签</span>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-entry.png" alt="活动入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动入口</span>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-entry.webp" alt="活动入口" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动入口</span>
 </div>
 <div class="p12-flow-arrow">→</div>
 <div class="p12-flow-item">
-<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-overlay.png" alt="活动浮层" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动浮层</span>
+<div data-preview class="p12-flow-img"><img src="/birdys-portfolio/images/gift-overlay.webp" alt="活动浮层" style="width:100%;height:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">活动浮层</span>
 </div>
 </div>
 </div>`,
@@ -973,16 +973,16 @@ export const projectData: Project[] = [
 	<div class="p13-chart">
 	<div class="p13-flow">
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-none.png" alt="送礼面板-未选明星" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">送礼面板-未选明星</span>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-none.webp" alt="送礼面板-未选明星" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">送礼面板-未选明星</span>
 	</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-selected.png" alt="送礼面板-已选明星" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">送礼面板-已选明星</span>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/gift-panel-selected.webp" alt="送礼面板-已选明星" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">送礼面板-已选明星</span>
 	</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img plain"><img src="/birdys-portfolio/images/burst-effect.png" alt="爆灯进度演变示意" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">爆灯进度演变示意</span>
+	<div data-preview class="p13-item-img plain"><img src="/birdys-portfolio/images/burst-effect.webp" alt="爆灯进度演变示意" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">爆灯进度演变示意</span>
 	</div>
 	<div class="p13-item">
-	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-progress.png" alt="爆灯特效" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">爆灯特效</span>
+	<div data-preview class="p13-item-img"><img src="/birdys-portfolio/images/burst-progress.webp" alt="爆灯特效" style="height:100%;width:auto;display:block" /></div><span style="font-size:11px;color:#A0A0A0;text-align:center">爆灯特效</span>
 	</div>
 	</div>
 	</div>`,
@@ -1180,7 +1180,7 @@ export const projectData: Project[] = [
 @media(max-width:767px){.pad6-imgs{grid-template-columns:1fr}}
 </style>
 <div class="pad6-imgs">
-<div class="pad6-fig"><img src="/birdys-portfolio/images/pad-split-original.png" alt="原三分屏" /></div>
+<div class="pad6-fig"><img src="/birdys-portfolio/images/pad-split-original.webp" alt="原三分屏" /></div>
 <div class="pad6-fig"><img src="/birdys-portfolio/images/pad-split-online-data.png" alt="三分屏线上数据" /></div>
 </div>`,
         },
@@ -1282,8 +1282,8 @@ export const projectData: Project[] = [
 @media(max-width:767px){.pad12-row{grid-template-columns:1fr}}
 </style>
 <div class="pad12-row">
-<div class="pad12-fig"><img src="/birdys-portfolio/images/pad-final-ctrl-on.png" alt="上线样式-有播控" /><span class="pad12-cap">上线样式-有播控</span></div>
-<div class="pad12-fig"><img src="/birdys-portfolio/images/pad-final-ctrl-off.png" alt="上线样式-无播控" /><span class="pad12-cap">上线样式-无播控</span></div>
+<div class="pad12-fig"><img src="/birdys-portfolio/images/pad-final-ctrl-on.webp" alt="上线样式-有播控" /><span class="pad12-cap">上线样式-有播控</span></div>
+<div class="pad12-fig"><img src="/birdys-portfolio/images/pad-final-ctrl-off.webp" alt="上线样式-无播控" /><span class="pad12-cap">上线样式-无播控</span></div>
 </div>
 <p class="pad12-conclusion">数据验证：方案上线后，Pad 端<b>完播率与连播率均出现明显提升</b>，人均观看时长亦<b>同步上扬</b>，「沉浸优先」的重构价值得到正向印证。</p>`,
         },

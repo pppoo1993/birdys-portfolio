@@ -169,6 +169,28 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
     }
   }, [project, handleKeyDown, blockScroll])
 
+  // ── Lazy-load detail images + shimmer placeholder until loaded ──
+  useEffect(() => {
+    if (!project || !scrollRef.current) return
+    const imgs = scrollRef.current.querySelectorAll('img')
+    const cleanups: (() => void)[] = []
+
+    imgs.forEach((img) => {
+      img.setAttribute('loading', 'lazy')
+      if ((img as HTMLImageElement).complete) return
+      const done = () => img.classList.remove('detail-img-loading')
+      img.classList.add('detail-img-loading')
+      img.addEventListener('load', done)
+      img.addEventListener('error', done)
+      cleanups.push(() => {
+        img.removeEventListener('load', done)
+        img.removeEventListener('error', done)
+      })
+    })
+
+    return () => cleanups.forEach((fn) => fn())
+  }, [project])
+
   return createPortal(
     <>
     <AnimatePresence>
@@ -237,6 +259,8 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
               [data-preview]:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
               [data-goto]{cursor:pointer;transition:all 0.3s ease}
               [data-goto]:hover{background:rgba(255,255,255,0.03)}
+              .detail-img-loading{min-height:140px;background:#1a1a1e;background-image:linear-gradient(90deg,#1a1a1e 0%,#25252b 50%,#1a1a1e 100%);background-size:200% 100%;animation:detail-shimmer 1.5s linear infinite}
+              @keyframes detail-shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
             `}</style>
 
             {/* ════ Scroll pages ════ */}

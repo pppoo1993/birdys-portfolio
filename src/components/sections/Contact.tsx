@@ -35,7 +35,7 @@ export default function Contact() {
               <div className="w-40 h-40 aspect-square p-2 rounded-lg overflow-hidden">
                 <div className="w-full h-full flex items-center justify-center rounded-lg">
                   <img
-                    src={import.meta.env.BASE_URL + 'images/code.PNG'}
+                    src={import.meta.env.BASE_URL + 'images/code.webp'}
                     alt="WeChat QR"
                     className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
