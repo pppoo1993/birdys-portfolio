@@ -169,7 +169,8 @@
       "Bash(mdls -name kMDItemPixelWidth -name kMDItemPixelHeight -name kMDItemCodecs -name kMDItemTotalBitRate /tmp/story-720.mp4)",
       "Bash(brew --version)",
       "Bash(avconvert -s lines-demo.mov -p PresetMediumQuality -o lines-demo.mp4 --replace --progress)",
-      "Bash(avconvert -s story-demo.mov -p PresetMediumQuality -o story-demo.mp4 --replace --progress)"
+      "Bash(avconvert -s story-demo.mov -p PresetMediumQuality -o story-demo.mp4 --replace --progress)",
+      "Bash(file *)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"
