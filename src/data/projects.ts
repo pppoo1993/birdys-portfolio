@@ -313,7 +313,7 @@ export const projectData: Project[] = [
 .dist-col-desc{color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0}
 .dist-img-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(min-width:768px){.dist-img-row{display:flex;justify-content:center}}
 @media(max-width:767px){.dist-row{flex-direction:column!important;gap:24px}.dist-col{width:100%!important;flex:none}}
-.dist-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;margin:0 auto}
+.dist-placeholder{background:linear-gradient(135deg,#141416 0%,#1A1A1A 100%);border:1px solid #333333;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:100%;max-width:180px;margin:0 auto;aspect-ratio:740/1600}
 .dist-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(199,255,0,.03) 0%,transparent 70%);pointer-events:none}
 .dist-img-wrap{display:flex;flex-direction:column;align-items:center}
 .dist-img-label{font-size:11px;color:#A0A0A0;text-align:center;margin-top:6px}
@@ -324,16 +324,16 @@ export const projectData: Project[] = [
 <div class="dist-col-title">内容分发核心触点</div>
 <p class="dist-col-desc">在各分发场景下设置创作按钮，以便用户产生灵感后即可创作。</p>
 <div class="dist-img-row">
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/chijing-home.webp" alt="首页" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">首页</span></div>
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/chijing-player.webp" alt="播放页" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">播放页</span></div>
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/chijing-template.webp" alt="模板 Tab" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">模板 Tab</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/chijing-home.webp" alt="首页" style="width:100%;height:100%;object-fit:cover;display:block" /></div><span class="dist-img-label">首页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/chijing-player.webp" alt="播放页" style="width:100%;height:100%;object-fit:cover;display:block" /></div><span class="dist-img-label">播放页</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/chijing-template.webp" alt="模板 Tab" style="width:100%;height:100%;object-fit:cover;display:block" /></div><span class="dist-img-label">模板 Tab</span></div>
 </div>
 </div>
 <div class="dist-col">
 <div class="dist-col-title">全局「+」浮层</div>
 <p class="dist-col-desc">展示全部AI视频玩法。</p>
 <div class="dist-img-row">
-<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/chijing-float.webp" alt="+浮层" style="width:100%;height:auto;display:block" /></div><span class="dist-img-label">「+」浮层</span></div>
+<div class="dist-img-wrap"><div data-preview class="dist-placeholder"><img src="https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/chijing-float.webp" alt="+浮层" style="width:100%;height:100%;object-fit:cover;display:block" /></div><span class="dist-img-label">「+」浮层</span></div>
 </div>
 </div>
 </div>
