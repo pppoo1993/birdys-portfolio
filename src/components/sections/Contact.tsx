@@ -15,7 +15,7 @@ export default function Contact() {
           <div className="lg:col-span-7 flex flex-col justify-center space-y-8 text-center lg:text-left">
             <h3 className="text-2xl md:text-3xl font-light tracking-wide text-white leading-relaxed max-w-xl mx-auto lg:mx-0">
               技术在解构界面，<br />
-              但体验的本质<span className="text-accent font-semibold">不曾改变</span>。
+              但设计的本质<span className="text-accent font-semibold">不曾改变</span>。
             </h3>
 
             <p className="text-[#9a9a9a] text-sm md:text-base font-normal tracking-wider pt-2">

@@ -1016,13 +1016,13 @@ export const projectData: Project[] = [
     id: 'project-1',
     title: 'Pad端播放页',
     description:
-      'Pad 端播放页交互设计负责人，主导从「三分屏」到「二分屏」的架构重构，以沉浸消费为核心，显著提升长视频完播率与连播转化效率。',
+      'Pad 端播放页长期沿用手机端布局，与大屏「沉浸消费」的心智形成错配。主导从「三分屏」到「二分屏」的架构重构，以双端心智差异模型与站内数据为依据，用「沉浸优先」重新校准信息优先级。',
     imagePath: 'https://picsum.photos/seed/project1/1200/800',
     techStack: ['体验重构', 'Pad 端适配', '沉浸式交互'],
     detail: {
       pageTitle: 'Pad端播放页',
       mainTitle: '',
-      subtitle: '交互设计负责人 · Pad 端播放体验重构',
+      subtitle: '沉浸优先的架构重构',
       sections: [
         {
           heading: '目录',
@@ -1047,8 +1047,8 @@ export const projectData: Project[] = [
 </div>`,
         },
         {
-          heading: '重构背景：完播率与连播率为何滞后',
-          body: '复盘 Pad 端播放页的数据时，我们发现了一个强烈反差：同样是沿用手机端的密集布局，手机端表现稳健，Pad 端却遭遇了完播与留存瓶颈。\n\n这一反差让我们产生一个怀疑：手机端的布局策略，是否与 Pad 大屏用户「沉浸、专注」的心智相背离？带着这一怀疑，我们开启了后续验证。',
+          heading: '重构背景：由数据反差开启假设验证',
+          body: '复盘 Pad 端播放页的数据时，我们发现了一个强烈反差：同样是使用手机端布局思维，手机端表现稳健，Pad 端却遭遇了完播与留存瓶颈。\n\n这一反差让我们产生一个怀疑：手机端的布局策略，是否与 Pad 大屏用户的心智相背离？带着这一怀疑，我们开启了后续验证。',
           html: `<style>
 .ba-flow{display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:12px;max-width:960px;margin:24px auto 0}
 .ba-step{flex:1;min-width:0;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
@@ -1072,8 +1072,8 @@ export const projectData: Project[] = [
 <div class="ba-step-arrow">→</div>
 <div class="ba-step">
 <h4 class="ba-step-title">解读 · 业务影响</h4>
-<p class="ba-step-sub">高价值用户的价值被系统性低估</p>
-<p class="ba-step-desc">Pad 端用户消费净值更高，却未转化为匹配的留存与商业价值。</p>
+<p class="ba-step-sub">高净值用户的价值被低估</p>
+<p class="ba-step-desc">Pad 端用户虽少，但消费净值更高，其商业价值未得到充分体现。</p>
 </div>
 <div class="ba-step-arrow">→</div>
 <div class="ba-step hypothesis">
@@ -1091,7 +1091,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '用户调研：不同终端的心智差异',
-          body: '为了验证上述「心智错配」的推论是否成立，我们通过后台数据锁定了 Pad 端的真实核心用户（19–31岁女性、大学生，核心场景高度集中在电视剧追剧）。\n\n为了探究其行为背后的心理动机，我们发起了 30+ 场深度访谈与真实场景观察。通过追踪这群核心用户在双端的跨端轨迹，我们沉淀了大量真实语录与行为证据。',
+          body: '为了验证「心智错配」的推论，我们首先通过后台数据进行圈选，锁定了 Pad 端的核心基盘用户 — <b>19–31 岁、以电视剧追剧为核心场景的高活群体</b>。\n\n基于这群贡献了主要流量却遭遇留存瓶颈的关键人群，我们开展了 30+ 场深度访谈与真实场景观察。通过追踪他们在双端的跨端轨迹，我们排除了泛人群的干扰，精准捕获了核心用户在 Pad 大屏下的真实心智与痛点证据。',
           html: `<style>
 .pad3-compare{display:flex;flex-direction:column;gap:32px}
 .pad3-dim{display:flex;flex-direction:column;gap:14px}

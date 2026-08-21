@@ -174,7 +174,7 @@ export default function Projects() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <h3 className="text-2xl md:text-[32px] font-semibold text-white tracking-wider">
+                        <h3 className="text-2xl md:text-[32px] font-semibold text-white tracking-wider leading-snug">
                           {project.title}
                         </h3>
                       </div>
