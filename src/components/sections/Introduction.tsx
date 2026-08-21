@@ -215,7 +215,7 @@ export default function Introduction() {
 
       <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center overflow-visible px-5 sm:px-6 md:px-12">
         {/* 1. Title */}
-        <h1 className="text-5xl md:text-6xl mb-3 md:mb-5" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 500 }}>
+        <h1 className="text-5xl md:text-6xl mb-3 md:mb-5" style={{ fontFamily: "'Permanent Marker', cursive", fontWeight: 400 }}>
           {introductionData.name}
         </h1>
 
