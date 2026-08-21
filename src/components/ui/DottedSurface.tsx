@@ -1,153 +1,81 @@
 import { useEffect, useRef } from 'react'
-import * as THREE from 'three'
 
 interface DottedSurfaceProps {
   className?: string
 }
 
 export default function DottedSurface({ className }: DottedSurfaceProps) {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const sceneRef = useRef<{
-    scene: THREE.Scene
-    camera: THREE.PerspectiveCamera
-    renderer: THREE.WebGLRenderer
-    animationId: number
-    count: number
-  } | null>(null)
-
-  const mountedRef = useRef(false)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    if (!containerRef.current || mountedRef.current) return
-    mountedRef.current = true
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
 
-    // Remove any stale canvas from StrictMode double-mount
-    const existing = containerRef.current.querySelector('canvas')
-    if (existing) existing.remove()
+    const dpr = Math.min(window.devicePixelRatio || 1, 2)
+    let raf = 0
+    let t = 0
 
-    const SEPARATION = 150
-    const AMOUNTX = 40
-    const AMOUNTY = 60
-
-    // Scene setup
-    const scene = new THREE.Scene()
-    scene.fog = new THREE.Fog(0x0d0d0d, 2000, 10000)
-
-    const camera = new THREE.PerspectiveCamera(
-      60,
-      containerRef.current.offsetWidth / containerRef.current.offsetHeight,
-      1,
-      10000,
-    )
-    camera.position.set(0, 355, 1220)
-
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    renderer.setSize(containerRef.current.offsetWidth, containerRef.current.offsetHeight)
-    renderer.setClearColor(scene.fog.color, 0)
-    renderer.domElement.style.position = 'absolute'
-    renderer.domElement.style.top = '0'
-    renderer.domElement.style.left = '0'
-    containerRef.current.appendChild(renderer.domElement)
-
-    // Create particles
-    const positions: number[] = []
-    const colors: number[] = []
-
-    // Create geometry for all particles
-    const geometry = new THREE.BufferGeometry()
-
-    for (let ix = 0; ix < AMOUNTX; ix++) {
-      for (let iy = 0; iy < AMOUNTY; iy++) {
-        const x = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2
-        const z = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2
-        positions.push(x, 0, z)
-        colors.push(200 / 255, 200 / 255, 200 / 255)
-      }
+    const resize = () => {
+      const w = canvas.clientWidth
+      const h = canvas.clientHeight
+      canvas.width = Math.max(1, Math.floor(w * dpr))
+      canvas.height = Math.max(1, Math.floor(h * dpr))
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
     }
+    resize()
+    window.addEventListener('resize', resize)
 
-    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
-    geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3))
+    const render = () => {
+      raf = requestAnimationFrame(render)
+      const w = canvas.clientWidth
+      const h = canvas.clientHeight
+      ctx.clearRect(0, 0, w, h)
 
-    // Create material
-    const material = new THREE.PointsMaterial({
-      size: 8,
-      vertexColors: true,
-      transparent: true,
-      opacity: 0.4,
-      sizeAttenuation: true,
-    })
+      ctx.fillStyle = '#c8c8c8'
 
-    // Create points object
-    const points = new THREE.Points(geometry, material)
-    scene.add(points)
+      const cols = 44
+      const rows = 26
+      const horizon = h * 0.28
 
-    let count = 0
-    let animationId: number = 0
+      for (let r = 0; r < rows; r++) {
+        const depth = r / (rows - 1) // 0 = near/bottom, 1 = far/horizon
+        const rowY = horizon + (h - horizon) * Math.pow(depth, 1.7)
+        const size = 0.5 + (1 - depth) * 2.3
+        const alpha = 0.08 + (1 - depth) * 0.32
 
-    // Animation function
-    const animate = () => {
-      animationId = requestAnimationFrame(animate)
+        for (let c = 0; c < cols; c++) {
+          const waveX =
+            Math.sin(c * 0.32 + t * 0.9) * 5 * (0.5 + depth * 0.5) +
+            Math.sin((c + r) * 0.2 - t * 0.6) * 4
+          const waveY = Math.sin(r * 0.55 + t * 0.8) * 4 * (1 - depth)
+          const x = (c / (cols - 1)) * w + waveX
+          const y = rowY + waveY
 
-      const positionAttribute = geometry.attributes.position
-      const positions = positionAttribute.array as Float32Array
+          if (y < 0 || y > h || x < -10 || x > w + 10) continue
 
-      let i = 0
-      for (let ix = 0; ix < AMOUNTX; ix++) {
-        for (let iy = 0; iy < AMOUNTY; iy++) {
-          const index = i * 3
-
-          // Animate Y position with sine waves
-          positions[index + 1] =
-            Math.sin((ix + count) * 0.3) * 50 +
-            Math.sin((iy + count) * 0.5) * 50
-
-          i++
+          ctx.globalAlpha = alpha
+          ctx.beginPath()
+          ctx.arc(x, y, size, 0, Math.PI * 2)
+          ctx.fill()
         }
       }
-
-      positionAttribute.needsUpdate = true
-
-      renderer.render(scene, camera)
-      count += 0.05
+      t += 0.05
     }
+    render()
 
-    // Handle window resize
-    const handleResize = () => {
-      if (!containerRef.current) return
-      camera.aspect = containerRef.current.offsetWidth / containerRef.current.offsetHeight
-      camera.updateProjectionMatrix()
-      renderer.setSize(containerRef.current.offsetWidth, containerRef.current.offsetHeight)
-    }
-
-    window.addEventListener('resize', handleResize)
-
-    // Start animation
-    animate()
-
-    // Store references
-    sceneRef.current = { scene, camera, renderer, animationId, count }
-
-    // Cleanup function
     return () => {
-      mountedRef.current = false
-      window.removeEventListener('resize', handleResize)
-      if (sceneRef.current) {
-        cancelAnimationFrame(sceneRef.current.animationId)
-        geometry.dispose()
-        material.dispose()
-        renderer.dispose()
-        if (containerRef.current?.contains(renderer.domElement)) {
-          containerRef.current.removeChild(renderer.domElement)
-        }
-      }
+      cancelAnimationFrame(raf)
+      window.removeEventListener('resize', resize)
     }
   }, [])
 
   return (
-    <div
-      ref={containerRef}
-      className={`pointer-events-none absolute inset-0 z-0 ${className || ''}`}
+    <canvas
+      ref={canvasRef}
+      aria-hidden="true"
+      className={`pointer-events-none absolute inset-0 z-0 h-full w-full ${className || ''}`}
     />
   )
 }
