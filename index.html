@@ -46,15 +46,6 @@
     <script>
       history.scrollRestoration = 'manual';
       window.scrollTo(0, 0);
-      // Lock scroll position during page load
-      var lockScroll = function() { window.scrollTo(0, 0); };
-      window.addEventListener('scroll', lockScroll, { passive: false });
-      window.addEventListener('load', function() {
-        window.scrollTo(0, 0);
-        setTimeout(function() {
-          window.removeEventListener('scroll', lockScroll);
-        }, 500);
-      });
     </script>
   </head>
   <body>
