@@ -166,9 +166,9 @@ export default function Projects() {
                         <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden opacity-90">
                           <img
                             src={(
-                              project.id === 'project-3' ? '/birdys-portfolio/images/吃鲸.jpg' :
-                              project.id === 'project-2' ? '/birdys-portfolio/images/爱奇艺.jpg' :
-                              '/birdys-portfolio/images/爱奇艺Pad.jpg'
+                              project.id === 'project-3' ? 'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/吃鲸.jpg' :
+                              project.id === 'project-2' ? 'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/爱奇艺.jpg' :
+                              'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/爱奇艺Pad.jpg'
                             )}
                             alt=""
                             className="w-full h-full object-cover"

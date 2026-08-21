@@ -248,7 +248,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
               <p className="text-[18px] md:text-[24px] text-white font-bold tracking-tight line-clamp-2 md:truncate max-w-[88%] md:max-w-[65%]">
                 {activeIndex > 0 ? (sections[activeIndex]?.heading === 'Thanks' ? '' : sections[activeIndex]?.heading) : (
                   <span className="flex items-center gap-2">
-                    <img src={(project!.id === 'project-3' ? '/birdys-portfolio/images/吃鲸.jpg' : project!.id === 'project-2' ? '/birdys-portfolio/images/爱奇艺.jpg' : '/birdys-portfolio/images/爱奇艺Pad.jpg')} alt="" className="w-7 h-7 rounded-md object-cover" />
+                    <img src={(project!.id === 'project-3' ? 'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/吃鲸.jpg' : project!.id === 'project-2' ? 'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/爱奇艺.jpg' : 'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/爱奇艺Pad.jpg')} alt="" className="w-7 h-7 rounded-md object-cover" />
                     {project!.title}
                     {project!.detail.subtitle && <span className="hidden md:inline text-zinc-500 font-normal"> &nbsp;|&nbsp; {project!.detail.subtitle}</span>}
                   </span>
@@ -334,8 +334,8 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
                               <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden opacity-90">
                                 <img
                                   src={(
-                                    project!.id === 'project-2' ? '/birdys-portfolio/images/爱奇艺.jpg' :
-                                    '/birdys-portfolio/images/爱奇艺Pad.jpg'
+                                    project!.id === 'project-2' ? 'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/爱奇艺.jpg' :
+                                    'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/爱奇艺Pad.jpg'
                                   )}
                                   alt=""
                                   className="w-full h-full object-cover"

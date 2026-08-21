@@ -32,7 +32,7 @@ export default function Contact() {
               <div className="w-40 h-40 aspect-square p-2 rounded-lg overflow-hidden">
                 <div className="w-full h-full flex items-center justify-center rounded-lg">
                   <img
-                    src={'/birdys-portfolio/images/code.png'}
+                    src={'https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/code.png'}
                     alt="WeChat QR"
                     className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
