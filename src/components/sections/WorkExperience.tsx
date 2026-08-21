@@ -15,11 +15,20 @@ const ordered = [
 export default function WorkExperience() {
   const [active, setActive] = useState(0)
   const exp = ordered[active]
-  const didMount = useRef(false)
+  const timelineRef = useRef<HTMLDivElement>(null)
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
+  const prevActiveRef = useRef(0)
 
+  // 仅在横向时间轴容器内滚动，避免带动整个页面滚动
   useEffect(() => {
-    didMount.current = true
-  }, [])
+    if (prevActiveRef.current === active) return
+    prevActiveRef.current = active
+    const container = timelineRef.current
+    const item = itemRefs.current[active]
+    if (!container || !item) return
+    const target = item.offsetLeft - (container.clientWidth - item.offsetWidth) / 2
+    container.scrollTo({ left: Math.max(0, target), behavior: 'smooth' })
+  }, [active])
 
   const groups = (() => {
     const g: { header?: string; items: string[] }[] = []
@@ -45,6 +54,7 @@ export default function WorkExperience() {
       {/* ════ MOBILE: Horizontal timeline top + detail below ════ */}
       <div className="w-full max-w-5xl mx-auto px-6 md:px-12 md:hidden">
         <div
+          ref={timelineRef}
           className="flex flex-row gap-0 mb-4 overflow-x-auto scrollbar-none"
           style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}
         >
@@ -52,16 +62,10 @@ export default function WorkExperience() {
             const isActive = active === i
             const t = `${formatDate(item.startDate)} — ${(item.endDate ? formatDate(item.endDate) : '至今')}`
 
-            const setRef = (el: HTMLDivElement | null) => {
-              if (el && isActive && didMount.current) {
-                el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: i === 0 ? 'start' : i === 1 ? 'center' : 'end' })
-              }
-            }
-
             return (
               <div
                 key={item.id}
-                ref={setRef}
+                ref={(el) => { itemRefs.current[i] = el }}
                 onClick={() => setActive(i)}
                 data-cursor-interactive
                 className={`cursor-pointer flex-shrink-0 min-w-[180px] px-4 py-2 text-center transition-all duration-300 ${

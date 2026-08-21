@@ -193,7 +193,7 @@ export default function Introduction() {
   return (
     <section
       id="intro"
-      className="relative w-full text-white flex flex-col justify-center pt-20 pb-16 md:pt-16 md:pb-24 font-sans noise-overlay"
+      className="relative w-full text-white flex flex-col justify-center pt-32 pb-16 md:pt-16 md:pb-24 font-sans noise-overlay"
       style={{ minHeight: '100svh', background: 'radial-gradient(circle at 50% 40%, rgba(204, 255, 0, 0.04) 0%, rgba(0, 0, 0, 0) 60%), #0a0a0c' }}
     >
       <motion.div
@@ -211,7 +211,7 @@ export default function Introduction() {
           speed={0.6}
         />
       </motion.div>
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0a0a0c]/50 md:via-[#0a0a0c]/80 to-[#0a0a0c]" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0a0a0c]/50 via-35% md:via-[#0a0a0c]/80 md:via-50% to-[#0a0a0c] to-70% md:to-100%" />
 
       <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center overflow-visible px-5 sm:px-6 md:px-12">
         {/* 1. Title */}
