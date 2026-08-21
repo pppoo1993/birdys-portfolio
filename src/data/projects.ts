@@ -1048,7 +1048,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '重构背景：由数据反差开启假设验证',
-          body: '复盘 Pad 端播放页的数据时，我们发现了一个强烈反差：同样是使用手机端布局思维，手机端表现稳健，Pad 端却遭遇了完播与留存瓶颈。\n\n这一反差让我们产生一个怀疑：手机端的布局策略，是否与 Pad 大屏用户的心智相背离？带着这一怀疑，我们开启了后续验证。',
+          body: '复盘 Pad 端播放页数据时，我们发现了一个强烈反差：沿用手机端的密集布局，手机端表现稳健，Pad 端却遭遇了留存瓶颈。\n\n大屏天然的连播优势正在失效，这背后指向一个更严峻的问题：高价值用户的价值正被系统性低估。',
           html: `<style>
 .ba-flow{display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:12px;max-width:960px;margin:24px auto 0}
 .ba-step{flex:1;min-width:0;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
@@ -1066,26 +1066,26 @@ export const projectData: Project[] = [
 <div class="ba-flow">
 <div class="ba-step">
 <h4 class="ba-step-title">现象 · 数据反差</h4>
-<p class="ba-step-sub">布局同构，但 Pad 端留存遭遇瓶颈</p>
-<p class="ba-step-desc">密集布局搬到 Pad 端后，完播与连播率持续滞后。</p>
+<p class="ba-step-sub">同构不同效，Pad 留存遇瓶颈</p>
+<p class="ba-step-desc">手机端平移至 Pad 端，完播率与连播率持续滞后。</p>
 </div>
 <div class="ba-step-arrow">→</div>
 <div class="ba-step">
 <h4 class="ba-step-title">解读 · 业务影响</h4>
 <p class="ba-step-sub">高净值用户的价值被低估</p>
-<p class="ba-step-desc">Pad 端用户虽少，但消费净值更高，其商业价值未得到充分体现。</p>
+<p class="ba-step-desc">Pad 端用户天然具备更高消费净值，但粗放布局未匹配其留存与消费深度。</p>
 </div>
 <div class="ba-step-arrow">→</div>
 <div class="ba-step hypothesis">
 <h4 class="ba-step-title">假设 · 核心病灶</h4>
-<p class="ba-step-sub">物理形态与心智错配，手机经验失效</p>
-<p class="ba-step-desc">大屏的专注心智与手机端密集分发错配，反而压榨了沉浸感。</p>
+<p class="ba-step-sub">场景与心智错配</p>
+<p class="ba-step-desc">「密集推荐」违背大屏用户「沉浸、专注」的追剧心智。</p>
 </div>
 <div class="ba-step-arrow">→</div>
 <div class="ba-step verify">
-<h4 class="ba-step-title">验证 · 下一步</h4>
-<p class="ba-step-sub">启动定性深访，寻找大屏破局点</p>
-<p class="ba-step-desc">以真实用户深访与数据交叉验证，校准双端心智边界。</p>
+<h4 class="ba-step-title">验证 · 下一步行动</h4>
+<p class="ba-step-sub">启动深度调研验证</p>
+<p class="ba-step-desc">以真实用户深访追踪跨端行为，捕获真实心智。</p>
 </div>
 </div>`,
         },
@@ -1101,7 +1101,7 @@ export const projectData: Project[] = [
 .pad3-quote{display:flex;gap:10px;align-items:center;min-width:0}
 .pad3-avatar{width:44px;height:44px;border-radius:50%;flex-shrink:0;overflow:hidden;border:1.5px solid #333;align-self:center;display:flex;align-items:center;justify-content:center;background:#1a1a1e}
 .pad3-bubble{background:#1A1A1A;border:1px solid #333333;border-radius:8px;padding:13px 15px;position:relative;flex:1;min-width:0}
-.pad3-bubble.pad::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1A1A1A;border-left:1px solid rgba(199,255,0,0.25);border-bottom:1px solid rgba(199,255,0,0.25);transform:translateY(-50%) rotate(45deg)}
+.pad3-bubble.pad::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1D2011;border-left:1px solid rgba(199,255,0,0.25);border-bottom:1px solid rgba(199,255,0,0.25);transform:translateY(-50%) rotate(45deg)}
 .pad3-bubble.phone::after{content:'';position:absolute;top:50%;left:-6px;width:10px;height:10px;background:#1A1A1A;border-left:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);transform:translateY(-50%) rotate(45deg)}
 .pad3-bubble.pad{background:rgba(199,255,0,0.06);border-color:rgba(199,255,0,0.25)}
 .pad3-bubble.phone{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.15)}
@@ -1114,36 +1114,36 @@ export const projectData: Project[] = [
 <div class="pad3-dim">
 <div class="pad3-dim-label">使用场景</div>
 <div class="pad3-dim-body">
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-1.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">Pad 是我的<b>「私人电影院」</b>，我会完整、沉浸地追完一整部剧。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="#C7FF00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="19" height="13" rx="2.5"/><circle cx="11" cy="12.8" r="0.8" fill="#C7FF00" stroke="none"/></svg></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">Pad 是我的<b>「私人电影院」</b>，我会完整、沉浸地追完一整部剧。</p></div></div>
 <div class="pad3-vs">VS</div>
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-1.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">手机是<b>「通勤搭子」</b>，碎片时间图个快、图个方便。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><svg width="13" height="20" viewBox="0 0 13 20" fill="none" stroke="#a0a0a0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="10" height="17" rx="2.5"/><line x1="5" y1="3.5" x2="8" y2="3.5"/><circle cx="6.5" cy="16" r="0.8" fill="#a0a0a0" stroke="none"/></svg></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">手机是<b>「通勤搭子」</b>，碎片时间图个快、图个方便。</p></div></div>
 </div>
 </div>
 <div class="pad3-dim">
 <div class="pad3-dim-label">互动诉求</div>
 <div class="pad3-dim-body">
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-2.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">看剧时<b>不想被打断</b>，弹幕和推荐对我来说反而是干扰。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="#C7FF00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="19" height="13" rx="2.5"/><circle cx="11" cy="12.8" r="0.8" fill="#C7FF00" stroke="none"/></svg></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">看剧时<b>不想被打断</b>，弹幕和推荐对我来说反而是干扰。</p></div></div>
 <div class="pad3-vs">VS</div>
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-2.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">我喜欢<b>边看边刷评论</b>、发弹幕，热闹才有<b>陪伴感</b>。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><svg width="13" height="20" viewBox="0 0 13 20" fill="none" stroke="#a0a0a0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="10" height="17" rx="2.5"/><line x1="5" y1="3.5" x2="8" y2="3.5"/><circle cx="6.5" cy="16" r="0.8" fill="#a0a0a0" stroke="none"/></svg></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">我喜欢<b>边看边刷评论</b>、发弹幕，热闹才有<b>陪伴感</b>。</p></div></div>
 </div>
 </div>
 <div class="pad3-dim">
 <div class="pad3-dim-label">核心期待</div>
 <div class="pad3-dim-body">
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/pad-user-3.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">我期待像在<b>电影院一样专注</b>的沉浸体验。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="#C7FF00" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="19" height="13" rx="2.5"/><circle cx="11" cy="12.8" r="0.8" fill="#C7FF00" stroke="none"/></svg></div><div class="pad3-bubble pad"><p class="pad3-bubble-text">我期待像在<b>电影院一样专注</b>的沉浸体验。</p></div></div>
 <div class="pad3-vs">VS</div>
-<div class="pad3-quote"><div class="pad3-avatar"><img src="/birdys-portfolio/images/avatars/phone-user-3.jpg" alt="" style="width:100%;height:100%;object-cover" /></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">越<b>热闹</b>越好，<b>弹幕和互动</b>让看剧更有趣。</p></div></div>
+<div class="pad3-quote"><div class="pad3-avatar"><svg width="13" height="20" viewBox="0 0 13 20" fill="none" stroke="#a0a0a0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="10" height="17" rx="2.5"/><line x1="5" y1="3.5" x2="8" y2="3.5"/><circle cx="6.5" cy="16" r="0.8" fill="#a0a0a0" stroke="none"/></svg></div><div class="pad3-bubble phone"><p class="pad3-bubble-text">越<b>热闹</b>越好，<b>弹幕和互动</b>让看剧更有趣。</p></div></div>
 </div>
 </div>
 </div>`,
         },
         {
-          heading: '双端心智差异模型：手机做「互动」，Pad 做「降噪」',
-          body: '把这些代表性语录并排放在一起，一个规律浮现出来：Pad 用户反复强调<b>「沉浸、专注、不被打断」</b>，手机用户反复强调<b>「快、互动、陪伴、热闹」</b>。\n\n我把这些高频诉求收敛成两个维度——<b>沉浸体验</b>与<b>互动效率</b>，并用一个二维坐标来锚定差异。这个模型将成为后续所有架构判断的标尺：<b>凡是与 Pad 的「沉浸体验」冲突的设计，都值得被重新审视</b>。',
+          heading: '双端心智差异：手机做「互动」，Pad 做「降噪」',
+          body: '把这些代表性语录并排放在一起，一个规律浮现出来：Pad 用户反复强调<b>「沉浸、专注、不被打断」</b>，手机用户反复强调<b>「快、互动、陪伴、热闹」</b>。\n\n我把这些高频诉求收敛成两个维度 — <b>沉浸体验</b>与<b>互动效率</b>，并用一个二维坐标来锚定差异。',
           html: `<style>
 .pad4-chart{position:relative;width:100%;max-width:520px;height:340px;border-left:1px solid #3f3f46;border-bottom:1px solid #3f3f46;margin:40px auto 20px;background-image:linear-gradient(rgba(63,63,70,0.15) 1px,transparent 1px),linear-gradient(90deg,rgba(63,63,70,0.15) 1px,transparent 1px);background-size:50px 50px}
 .pad4-yl{position:absolute;left:8px;top:0px;font-size:13px;font-weight:500;color:#a0a0a0;white-space:nowrap}
-.pad4-xl{position:absolute;bottom:-28px;right:0;font-size:13px;font-weight:500;color:#a0a0a0}
+.pad4-xl{position:absolute;bottom:10px;right:12px;font-size:13px;font-weight:500;color:#a0a0a0}
 .pad4-cross-v{position:absolute;left:50%;top:0;bottom:0;width:0;border-left:1px dashed rgba(63,63,70,0.4)}
 .pad4-cross-h{position:absolute;left:0;right:0;top:50%;height:0;border-top:1px dashed rgba(63,63,70,0.4)}
 .pad4-box{width:190px;background:#141416;padding:16px 20px;border-radius:10px;position:absolute;box-shadow:0 4px 24px rgba(0,0,0,0.5)}
@@ -1153,8 +1153,10 @@ export const projectData: Project[] = [
 .pad4-box.phone h3{color:#FFFFFF}
 .pad4-box.pad h3{color:#C7FF00}
 .pad4-box p{font-size:12px;margin:0;color:#A0A0A0;line-height:1.6;white-space:nowrap}
+.pad4-principle{max-width:760px;margin:56px auto 0;text-align:center;font-size:18px;font-weight:600;color:#C7FF00;line-height:1.7;letter-spacing:0.02em}
+.pad4-principle-label{font-size:14px;font-weight:500;color:#A0A0A0;letter-spacing:0.04em}
 
-@media(max-width:767px){.pad4-chart{height:360px}.pad4-box{width:140px;padding:12px}.pad4-box p{white-space:normal}}
+@media(max-width:767px){.pad4-chart{height:360px}.pad4-box{width:140px;padding:12px}.pad4-box p{white-space:normal}.pad4-principle-label{font-size:12px}.pad4-principle{font-size:15px}}
 </style>
 <div class="pad4-chart">
 <div class="pad4-cross-v"></div>
@@ -1165,11 +1167,12 @@ export const projectData: Project[] = [
 <div class="pad4-box pad"><h3>Pad</h3><p>• 沉浸式观影场景<br>• 视觉降噪，克制干扰<br>• 心智：沉浸体验优先</p></div>
 
 </div>
+<p class="pad4-principle"><span class="pad4-principle-label">Pad端播放页设计准则</span><br>凡是与 Pad 的「沉浸体验」冲突的设计，都值得被重新审视。</p>
 `,
         },
         {
           heading: '架构诊断：三分屏模式的体验错配',
-          body: '把「沉浸体验」这把标尺放到现有设计上审视，我们发现原 Pad 端播放页沿用手机端的<b>「三分屏」</b>结构，整屏被拆分为三个功能区：\n\n① <b>左上 · 播放器区域</b> — 承载影视画面的核心观影区\n② <b>左下 · 信息互动区</b> — 采用上下双屏结构：第一屏为 TVG 区，集中展示剧集信息、功能按钮与选集选项；第二屏为评论互动区\n③ <b>右侧 · 内容推荐区域</b> — 负责相关内容的推荐分发\n\n结合站内用户数据，我们将功能需求按真实使用频次整理出优先级：<b>全屏观影（77.4%） > 切换选集（20.7%） > 内容推荐（6.8%） > 评论互动（0.92%）</b>。\n\n对照这份优先级，现有布局暴露出两处核心问题：\n\nA.<b>滑动热区局促、操作不便</b> — 高频的「切换选集」被压缩在狭小的交互区域，导致操作成本偏高。\nB.<b>布局与用户需求存在结构性矛盾</b>——需求最高的「全屏观影」仅占据左上局部，而优先级最低的「内容推荐」却占满整个右侧区域，形成「需求越高、承载空间越少」的错位。',
+          body: '把「沉浸体验」这把标尺放到现有设计上审视，我们发现原 Pad 端播放页沿用手机端的<b>「三分屏」</b>结构，整屏被拆分为三个功能区：\n\n① <b>左上 · 播放器区域</b> — 承载影视画面的核心观影区\n② <b>左下 · 信息互动区</b> — 采用上下双屏结构：第一屏为 TVG 区，集中展示剧集信息、功能按钮与选集选项；第二屏为评论互动区\n③ <b>右侧 · 内容推荐区域</b> — 负责相关内容的推荐分发\n\n结合站内用户数据，我们将功能需求按真实使用频次整理出优先级：<b>全屏观影（77.4%） > 切换选集（20.7%） > 内容推荐（6.8%） > 评论互动（0.92%）</b>。\n\n对照这份优先级，现有布局暴露出两处核心问题：\n\nA.<b>滑动热区局促、操作不便</b> — 高频的「切换选集」被压缩在狭小的交互区域，导致操作成本偏高。\nB.<b>布局与用户需求存在结构性矛盾</b>——需求最高的「全屏观影」仅占据左上局部，而优先级最低的「内容推荐」却占满整个右侧区域，形成「高需求，承载空间偏少」的错位。',
           html: `<style>
 .pad6-imgs{display:grid;grid-template-columns:repeat(2,auto);justify-content:center;gap:48px;max-width:1080px;margin:24px auto 0;align-items:start}
 .pad6-fig{display:flex;flex-direction:column;align-items:center}
@@ -1183,7 +1186,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '机型分布：更宽的 Gpad，更大的市场',
-          body: '除体验层的错配外，硬件端也在发生结构性变化：根据行业出货数据与平台终端复核，Gpad（安卓大屏）整体市场占比已达 48%，iPad 系列占比约 52%，且 Gpad 在爱奇艺站内的活跃占比呈现出逐年递增的稳健趋势。\n\n结合市场硬件演进趋势来看，Pad 端屏幕宽高比正从传统的 4:3（iPad 系列）、1.45:1（11 英寸 iPad Pro） 持续向更宽的 1.6:1（主流 Android 与 Gpad） 延伸。这种物理层面的变宽，为 Pad 端播放页的横向架构布局与多任务分屏提供了广阔的发挥空间。',
+          body: '除体验层的错配外，硬件端也在发生结构性变化：根据行业出货数据与平台终端复核，Gpad（安卓大屏）整体市场占比已达 48%，iPad 系列占比约 52%，且 <b>Gpad 出货量与在爱奇艺站内的活跃占比呈现出逐年递增的稳健趋势</b>。\n\n结合市场硬件演进趋势来看，Pad 端屏幕宽高比正从传统的 4:3（iPad 系列）、1.45:1（11 英寸 iPad Pro） 持续向更宽的 1.6:1（主流 Android 与 Gpad） 延伸。这种物理层面的变宽，为 Pad 端播放页的横向架构布局与多任务分屏提供了广阔的发挥空间。',
           html: `<style>
 .pad7-wrap{width:fit-content;max-width:100%;margin:0 auto}
 .pad7-devices{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:flex-start;gap:24px}
@@ -1224,7 +1227,7 @@ export const projectData: Project[] = [
 @media(max-width:767px){.pad8-row{grid-template-columns:1fr}}
 </style>
 <div class="pad8-row">
-<div class="pad8-card accent"><div><h4 class="pad8-h4">内容优先</h4><p class="pad8-sub">重构沉浸阵地</p><p class="pad8-desc">播放器回归绝对主角。将占比达 77.4% 的全屏观影设为最高优先级，摒弃冗余干扰，将架构精简为「主内容 + 窄辅助」的二分屏，给用户纯净的沉浸体验。</p></div></div>
+<div class="pad8-card accent"><div><h4 class="pad8-h4">内容优先</h4><p class="pad8-sub">重构沉浸阵地</p><p class="pad8-desc">播放器回归绝对主角。将进入全屏观影设为最高优先级，摒弃冗余干扰，将架构精简为「主内容 + 窄辅助」的二分屏，给用户纯净的沉浸体验。</p></div></div>
 <div class="pad8-card"><div><h4 class="pad8-h4">效率至上</h4><p class="pad8-sub">优化信息触达</p><p class="pad8-desc">让高频的<b>切换选集</b>触手可及；将低频互动与推荐合理收纳。通过碎片信息的有序聚合，推动体验从单一的「孤立观影」向「内容深度探索」升级。</p></div></div>
 <div class="pad8-card"><div><h4 class="pad8-h4">商业克制</h4><p class="pad8-sub">达成温和共生</p><p class="pad8-desc">改变生硬的「硬植入」逻辑，将商业触达转化为顺滑的场景服务。在坚守沉浸观影的前提下让商业自然融入，避免对用户注意力的过度争夺。</p></div></div>
 </div>`,
