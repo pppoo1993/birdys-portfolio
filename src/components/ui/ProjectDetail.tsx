@@ -2,6 +2,7 @@ import { useEffect, useCallback, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Project } from '../../types'
+import { imageDimensions } from '../../data/imageDimensions'
 
 interface ProjectDetailProps {
   project: Project | null
@@ -194,6 +195,19 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
     imgs.forEach((img) => {
       const src = img.getAttribute('src')
       if (!src || src.startsWith('data:')) return
+
+      // Reserve the correct space before loading to avoid layout shift (CLS).
+      const marker = '/public/images/'
+      const idx = src.lastIndexOf(marker)
+      if (idx !== -1) {
+        const key = src.slice(idx + marker.length)
+        const dims = imageDimensions[key]
+        if (dims) {
+          img.setAttribute('width', String(dims[0]))
+          img.setAttribute('height', String(dims[1]))
+        }
+      }
+
       const done = () => img.classList.remove('detail-img-loading')
       img.classList.add('detail-img-loading')
       img.addEventListener('load', done)
@@ -274,7 +288,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
               [data-preview]:hover{border-color:rgba(255,255,255,0.15)!important;transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
               [data-goto]{cursor:pointer;transition:all 0.3s ease}
               [data-goto]:hover{background:rgba(255,255,255,0.03)}
-              .detail-img-loading{min-height:140px;background:#1a1a1e;background-image:linear-gradient(90deg,#1a1a1e 0%,#25252b 50%,#1a1a1e 100%);background-size:200% 100%;animation:detail-shimmer 1.5s linear infinite}
+              .detail-img-loading{background:#1a1a1e;background-image:linear-gradient(90deg,#1a1a1e 0%,#25252b 50%,#1a1a1e 100%);background-size:200% 100%;animation:detail-shimmer 1.5s linear infinite}
               @keyframes detail-shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
             `}</style>
 
