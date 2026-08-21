@@ -5,14 +5,14 @@ export const projectData: Project[] = [
     id: 'project-3',
     title: '吃鲸AI',
     description:
-      '爱奇艺孵化的 AI 视频互动社区。用「以消带产」策略打通从观看到创作的链路，通过台词改写、故事接龙等轻量玩法激活影视 IP 资产。以「把 AI 生成的不可控，校准为可控的体验」为核心设计方法论。',
+      '爱奇艺孵化的 AI 视频互动社区，以IP资源赋能创作，用台词改写、故事接龙等轻量玩法，打通从观看到创作的链路。',
     imagePath: 'https://picsum.photos/seed/project3/1200/800',
-    techStack: ['0→1 设计 Owner', 'AI 交互设计', '玩法矩阵'],
+    techStack: ['0→1 设计 Owner', 'AI 交互设计', '轻量创作玩法'],
     sourceUrl: 'https://github.com',
     detail: {
       pageTitle: '吃鲸AI | 从内容消费到AI共创',
       mainTitle: '',
-      subtitle: '从消费到共创',
+      subtitle: '从内容消费到AI共创',
       sections: [
         {
           heading: '目录',
@@ -577,9 +577,9 @@ export const projectData: Project[] = [
     id: 'project-2',
     title: '明星陪看直播间',
     description:
-      '明星陪看把影视观影重构为「边看边聊」的社交现场，以明星实时陪伴与粉丝互动建立情感连接。送礼玩法优化后，直播项目营收创上线以来历史新高，与「弹幕」「卡牌」并列为爱奇艺互动体验设计的三大营收版图。',
+      '把影视观影重构为「边看边聊」的社交现场，以明星陪伴与送礼玩法带动直播营收创历史新高。',
     imagePath: 'https://picsum.photos/seed/project2/1200/800',
-    techStack: ['营收历史新高', '直播社交', '送礼玩法矩阵', '陪看体验设计'],
+    techStack: ['商业化增长', '直播体验设计', '情感变现'],
     liveUrl: 'https://example.com',
     sourceUrl: 'https://github.com',
     detail: {
@@ -1016,9 +1016,9 @@ export const projectData: Project[] = [
     id: 'project-1',
     title: 'Pad端播放页',
     description:
-      'Pad 端播放页长期沿用手机端布局，与大屏「沉浸消费」的心智形成错配。主导从「三分屏」到「二分屏」的架构重构，以双端心智差异模型与站内数据为依据，用「沉浸优先」重新校准信息优先级。',
+      '主导 Pad 端播放页从「三分屏」到「二分屏」的架构重构，以「沉浸优先」校准大屏观影体验。',
     imagePath: 'https://picsum.photos/seed/project1/1200/800',
-    techStack: ['体验重构', 'Pad 端适配', '沉浸式交互'],
+    techStack: ['大屏体验重构', '多端差异化设计', '沉浸化观影体验'],
     detail: {
       pageTitle: 'Pad端播放页',
       mainTitle: '',
@@ -1041,7 +1041,7 @@ export const projectData: Project[] = [
 @media(max-width:767px){.toc-grid{grid-template-columns:1fr;gap:16px}.toc-num{font-size:32px}.toc-card{height:180px;padding:16px}.toc-card-title{font-size:13px}}
 </style>
 <div class="toc-grid">
-<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与洞察</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">重构背景</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">用户调研</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">双端心智差异模型</span><span class="toc-page-num">P04</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
+<div class="toc-col"><span class="toc-num">01</span><div class="toc-card" data-goto="1"><div><p class="toc-card-title">背景与洞察</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="1"><span class="toc-page-name">重构背景</span><span class="toc-page-num">P02</span></div><div class="toc-page-row" data-goto="2"><span class="toc-page-name">用户调研</span><span class="toc-page-num">P03</span></div><div class="toc-page-row" data-goto="3"><span class="toc-page-name">双端心智差异</span><span class="toc-page-num">P04</span></div></div></div><span class="toc-card-tag">/ Context</span></div></div>
 <div class="toc-col"><span class="toc-num">02</span><div class="toc-card" data-goto="4"><div><p class="toc-card-title">诊断与策略</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="4"><span class="toc-page-name">架构诊断</span><span class="toc-page-num">P05</span></div><div class="toc-page-row" data-goto="5"><span class="toc-page-name">机型分布</span><span class="toc-page-num">P06</span></div><div class="toc-page-row" data-goto="6"><span class="toc-page-name">策略推导</span><span class="toc-page-num">P07</span></div></div></div><span class="toc-card-tag">/ Strategy</span></div></div>
 <div class="toc-col"><span class="toc-num">03</span><div class="toc-card" data-goto="7"><div><p class="toc-card-title">方案与呈现</p><div class="toc-card-pages"><div class="toc-page-row" data-goto="7"><span class="toc-page-name">方案探索</span><span class="toc-page-num">P08</span></div><div class="toc-page-row" data-goto="8"><span class="toc-page-name">方案呈现</span><span class="toc-page-num">P09</span></div></div></div><span class="toc-card-tag">/ Solution</span></div></div>
 </div>`,
@@ -1227,14 +1227,14 @@ export const projectData: Project[] = [
 @media(max-width:767px){.pad8-row{grid-template-columns:1fr}}
 </style>
 <div class="pad8-row">
-<div class="pad8-card accent"><div><h4 class="pad8-h4">内容优先</h4><p class="pad8-sub">重构沉浸阵地</p><p class="pad8-desc">播放器回归绝对主角。将进入全屏观影设为最高优先级，摒弃冗余干扰，将架构精简为「主内容 + 窄辅助」的二分屏，给用户纯净的沉浸体验。</p></div></div>
-<div class="pad8-card"><div><h4 class="pad8-h4">效率至上</h4><p class="pad8-sub">优化信息触达</p><p class="pad8-desc">让高频的<b>切换选集</b>触手可及；将低频互动与推荐合理收纳。通过碎片信息的有序聚合，推动体验从单一的「孤立观影」向「内容深度探索」升级。</p></div></div>
+<div class="pad8-card accent"><div><h4 class="pad8-h4">内容优先</h4><p class="pad8-sub">重构沉浸阵地</p><p class="pad8-desc">播放器回归绝对主角。将进入全屏观影设为最高优先级，摒弃冗余干扰，将架构精简为「主内容 + 窄辅助」，给用户纯净的沉浸体验。</p></div></div>
+<div class="pad8-card"><div><h4 class="pad8-h4">效率至上</h4><p class="pad8-sub">优化信息触达</p><p class="pad8-desc">让高频的<b>切换选集</b>触手可及；将低频评论互动进行合理隐藏收纳。通过碎片信息的有序聚合，推动体验从单一的「孤立观影」向「内容深度探索」升级。</p></div></div>
 <div class="pad8-card"><div><h4 class="pad8-h4">商业克制</h4><p class="pad8-sub">达成温和共生</p><p class="pad8-desc">改变生硬的「硬植入」逻辑，将商业触达转化为顺滑的场景服务。在坚守沉浸观影的前提下让商业自然融入，避免对用户注意力的过度争夺。</p></div></div>
 </div>`,
         },
         {
-          heading: '方案探索：从 L 型混排到二分屏架构的演进',
-          body: '基于前期推导的三大策略（内容优先、效率至上、商业克制），我们围绕 Pad 端横屏布局展开了多轮架构推演。通过对两种代表性方案的优劣势评估，最终收敛至最优解。',
+          heading: '方案探索：从三分屏到二分屏架构的演进',
+          body: '基于前期推导出的三大策略，我们围绕 Pad 横屏布局展开了多轮架构推演。最终，通过对两种代表性方案的优劣势评估，我们收敛至最优解。',
           html: `<style>
 .pad10-flow{display:flex;align-items:stretch;justify-content:center;gap:48px;max-width:960px;margin:24px auto 0}
 .pad10-group{flex:1;max-width:400px;display:flex;flex-direction:column;gap:12px}
@@ -1251,17 +1251,17 @@ export const projectData: Project[] = [
 </style>
 <div class="pad10-flow">
 <div class="pad10-group">
-<h4 class="pad10-title">方案 A：L 型混排结构（已放弃）</h4>
+<h4 class="pad10-title">方案 A：基于三分屏结构微调（已放弃）</h4>
 <div class="pad10-desc">
-<p><b>结构特征：</b>尝试拉宽观影区并将 TVG 下沉至底部。</p>
-<p><b>局限评估：</b>视线动线被严重折叠打断，主画面与高频选集错位；且异构屏幕（4:3 与 1.6:1）下的容器适配成本极高，违背「降噪」底线。</p>
+<p><b>结构特征：</b>尝试拉宽观影区，并将周边视频调整至右侧，试图为选集释放更多操作空间。</p>
+<p><b>局限评估：</b>选集和周边视频逻辑上的亲密性，被拆分后视觉动线打断；不同屏幕比例设备适配成本高，后期维护困难。</p>
 </div>
 <img class="pad10-img" src="/birdys-portfolio/images/pad-scheme-l.png" alt="L 型混排结构" />
 </div>
 <div class="pad10-group">
-<h4 class="pad10-title">方案 B：经典二分屏结构（最终胜出）</h4>
+<h4 class="pad10-title">方案 B：更激进的二分屏结构（最终胜出）</h4>
 <div class="pad10-desc">
-<p><b>结构特征：</b>确立「主内容 + 窄辅助」二分屏。左侧 77.4% 空间全屏观影；右侧纵向切分，上方承载高频 TVG，下方收纳推荐。</p>
+<p><b>结构特征：</b>确立「主内容 + 窄辅助」二分屏。左侧全部空间服务于观影；右侧纵向切分，上方承载高频选集操作，下方收纳推荐。</p>
 <p><b>价值评估：</b>完美契合用户心智与 Gpad 1.6:1 宽屏物理特性，兼顾沉浸感与宽屏效率。</p>
 </div>
 <img class="pad10-img" src="/birdys-portfolio/images/pad-scheme-dual.png" alt="经典二分屏结构" />
@@ -1270,8 +1270,22 @@ export const projectData: Project[] = [
 <p class="pad10-conclusion">综合评估后，<b>二分屏架构</b>更契合「沉浸优先」的原则，被确定为最终方案。</p>`,
         },
         {
-          heading: '方案呈现',
-          body: '',
+          heading: '方案呈现：线上形态与结果验证',
+          body: '最终方案以「二分屏」架构正式落地：左侧是纯粹让位给画面的观影区，右侧窄辅助列纵向承载高频的<b>选集操作</b>与低频的<b>内容推荐</b>，让信息各归其位。\n\n呼应「沉浸优先」的准则，播控条被设计为<b>动态显隐</b>：用户无操作时，播控自动收起、画面归于纯净（无播控）；一旦触达屏幕，播控即时唤起、操作触手可及（有播控），在沉浸与效率之间取得平衡。',
+          html: `<style>
+.pad12-row{display:grid;grid-template-columns:repeat(2,1fr);gap:48px;max-width:900px;margin:24px auto 0}
+.pad12-fig{display:flex;flex-direction:column;gap:10px;align-items:center}
+.pad12-fig img{width:100%;height:auto;display:block}
+.pad12-cap{color:#A0A0A0;font-size:12px;text-align:center}
+.pad12-conclusion{max-width:900px;margin:24px auto 0;text-align:center;color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400}
+.pad12-conclusion b{color:#C7FF00;font-weight:600}
+@media(max-width:767px){.pad12-row{grid-template-columns:1fr}}
+</style>
+<div class="pad12-row">
+<div class="pad12-fig"><img src="/birdys-portfolio/images/pad-final-ctrl-on.png" alt="上线样式-有播控" /><span class="pad12-cap">上线样式-有播控</span></div>
+<div class="pad12-fig"><img src="/birdys-portfolio/images/pad-final-ctrl-off.png" alt="上线样式-无播控" /><span class="pad12-cap">上线样式-无播控</span></div>
+</div>
+<p class="pad12-conclusion">数据验证：方案上线后，Pad 端<b>完播率与连播率均出现明显提升</b>，人均观看时长亦<b>同步上扬</b>，「沉浸优先」的重构价值得到正向印证。</p>`,
         },
         {
           heading: 'Thanks',
