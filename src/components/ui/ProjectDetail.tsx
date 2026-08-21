@@ -234,7 +234,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
               <p className="text-[18px] md:text-[24px] text-white font-bold tracking-tight line-clamp-2 md:truncate max-w-[88%] md:max-w-[65%]">
                 {activeIndex > 0 ? (sections[activeIndex]?.heading === 'Thanks' ? '' : sections[activeIndex]?.heading) : (
                   <span className="flex items-center gap-2">
-                    <img src={import.meta.env.BASE_URL + (project!.id === 'project-3' ? 'images/吃鲸.webp' : project!.id === 'project-2' ? 'images/爱奇艺.webp' : 'images/爱奇艺Pad.webp')} alt="" className="w-7 h-7 rounded-md object-cover" />
+                    <img src={(project!.id === 'project-3' ? 'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/吃鲸.webp' : project!.id === 'project-2' ? 'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/爱奇艺.webp' : 'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/爱奇艺Pad.webp')} alt="" className="w-7 h-7 rounded-md object-cover" />
                     {project!.title}
                     {project!.detail.subtitle && <span className="hidden md:inline text-zinc-500 font-normal"> &nbsp;|&nbsp; {project!.detail.subtitle}</span>}
                   </span>
@@ -319,9 +319,9 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
                             <h2 className="text-[28px] md:text-[32px] font-semibold text-white tracking-tight leading-tight mb-1 flex items-center gap-3">
                               <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden opacity-90">
                                 <img
-                                  src={import.meta.env.BASE_URL + (
-                                    project!.id === 'project-2' ? 'images/爱奇艺.webp' :
-                                    'images/爱奇艺Pad.webp'
+                                  src={(
+                                    project!.id === 'project-2' ? 'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/爱奇艺.webp' :
+                                    'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/爱奇艺Pad.webp'
                                   )}
                                   alt=""
                                   className="w-full h-full object-cover"

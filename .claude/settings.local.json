@@ -157,7 +157,12 @@
       "Bash(gh --version)",
       "Bash(unzip -o /tmp/job-logs.zip -d /tmp/joblogs)",
       "Bash(npm uninstall *)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(grep -rn \"BASE_URL + 'images/\\\\|BASE_URL + \\\\`images/\\\\|BASE_URL + \\\\\"images/\" src/)",
+      "Bash(sed -n '160,175p' src/components/sections/Projects.tsx)",
+      "Bash(sed -n '232,240p' src/components/ui/ProjectDetail.tsx)",
+      "Bash(sed -n '318,330p' src/components/ui/ProjectDetail.tsx)",
+      "Bash(echo \"build exit: $?\")"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"

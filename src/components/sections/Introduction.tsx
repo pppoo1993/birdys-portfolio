@@ -231,7 +231,7 @@ export default function Introduction() {
           style={{ isolation: 'isolate' }}
         >
           <img
-            src={import.meta.env.BASE_URL + introductionData.avatarPath.replace(/^\//, '')}
+            src={introductionData.avatarPath}
             alt="Birdy"
             className="w-full h-full object-cover pointer-events-none"
             style={{

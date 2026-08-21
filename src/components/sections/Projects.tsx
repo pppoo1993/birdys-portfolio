@@ -165,10 +165,10 @@ export default function Projects() {
                       <div className="flex items-center gap-3 mb-1">
                         <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-[#1a1a1e] border border-[#27272a] flex items-center justify-center shrink-0 overflow-hidden opacity-90">
                           <img
-                            src={import.meta.env.BASE_URL + (
-                              project.id === 'project-3' ? 'images/吃鲸.webp' :
-                              project.id === 'project-2' ? 'images/爱奇艺.webp' :
-                              'images/爱奇艺Pad.webp'
+                            src={(
+                              project.id === 'project-3' ? 'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/吃鲸.webp' :
+                              project.id === 'project-2' ? 'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/爱奇艺.webp' :
+                              'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@main/public/images/爱奇艺Pad.webp'
                             )}
                             alt=""
                             className="w-full h-full object-cover"
