@@ -1,5 +1,4 @@
 import ScrollReveal from '../animations/ScrollReveal'
-import DottedSurface from '../ui/DottedSurface'
 
 export default function Contact() {
   return (
@@ -7,8 +6,6 @@ export default function Contact() {
       id="contact"
       className="w-full bg-[#0d0d0d] py-32 md:py-24 relative overflow-hidden"
     >
-      <DottedSurface />
-
       <ScrollReveal>
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 items-center px-6 md:px-12">
           {/* Left column */}
