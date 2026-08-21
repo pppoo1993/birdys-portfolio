@@ -237,7 +237,7 @@ export default function Navigation() {
         <div className="absolute inset-0 bg-[#0c0c0e]/50 backdrop-blur-md" />
         <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-b from-[#0c0c0e]/50 to-transparent translate-y-full" />
         <div className="relative flex min-h-12 items-center justify-between px-5 py-3 sm:px-6 md:px-12">
-          <img src={'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@1fc75759801ced9d4d29a85e3be35c11e43ee1ae/public/images/logo.svg'} alt="Logo" style={{ width: '110px', height: '24px' }} className="object-contain opacity-90 flex-shrink-0 self-center" />
+          <img src={'/birdys-portfolio/images/logo.svg'} alt="Logo" style={{ width: '110px', height: '24px' }} className="object-contain opacity-90 flex-shrink-0 self-center" />
           {/* Mobile: hamburger */}
           <button
             className="text-white/80 md:hidden -mr-2 p-2"
@@ -285,7 +285,7 @@ export default function Navigation() {
       {/* Desktop: fixed left sidebar card */}
       <aside className="fixed top-0 left-0 bottom-0 z-40 hidden xl:flex w-[220px] flex-col bg-[#121214]/75 backdrop-blur-xl border-r border-[#1f1f23] shadow-[4px_0_30px_rgba(0,0,0,0.6)]">
         <div className="px-5 pt-10 pb-6">
-          <img src={'https://cdn.jsdelivr.net/gh/pppoo1993/birdys-portfolio@1fc75759801ced9d4d29a85e3be35c11e43ee1ae/public/images/logo.svg'} alt="Logo" style={{ width: '110px', height: '24px' }} className="object-contain opacity-90 flex-shrink-0 self-center" />
+          <img src={'/birdys-portfolio/images/logo.svg'} alt="Logo" style={{ width: '110px', height: '24px' }} className="object-contain opacity-90 flex-shrink-0 self-center" />
         </div>
         <nav className="flex-1 px-5">{desktopNavLinks}</nav>
 
