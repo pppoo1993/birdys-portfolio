@@ -33,7 +33,7 @@ export default function WorkExperience() {
   return (
     <section
       id="experience"
-      className="relative w-full section-darker border-b border-divider py-16"
+      className="relative w-full bg-[#121214] border-b border-divider py-16"
     >
       <p className="heading-section mb-6 md:hidden px-4">Work Experience</p>
 

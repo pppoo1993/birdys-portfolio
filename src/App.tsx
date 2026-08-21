@@ -28,7 +28,7 @@ export default function App() {
   return (
     <div className="bg-bg-primary text-text-primary min-h-screen" style={{ fontFamily: 'var(--font-sans)' }}>
       <Navigation />
-      <main className="xl:pl-[226px]">
+      <main className="xl:pl-[220px]">
         <Introduction />
         <WorkExperience />
         <Projects />

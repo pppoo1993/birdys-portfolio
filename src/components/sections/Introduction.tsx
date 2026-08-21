@@ -5,6 +5,7 @@ import type { BioSection } from '../../types'
 import ScrollReveal from '../animations/ScrollReveal'
 import { useScrollTo } from '../../hooks/useScrollTo'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
+import { DitheringShader } from '../ui/DitheringShader'
 
 function SplitRevealCard({ section }: { section: BioSection }) {
   const cardRef = useRef<HTMLDivElement>(null)
@@ -196,16 +197,18 @@ export default function Introduction() {
       style={{ minHeight: '100svh', background: 'radial-gradient(circle at 50% 40%, rgba(204, 255, 0, 0.04) 0%, rgba(0, 0, 0, 0) 60%), #0a0a0c' }}
     >
       <motion.div
-        className="fixed inset-0 z-0 pointer-events-none mix-blend-screen filter blur-[1px] saturate-50 overflow-hidden"
-        initial={{ opacity: 0, scale: 1.2, y: '6%', rotate: 1.2 }}
-        animate={{ opacity: 0.22, scale: 1.05, y: '0%', rotate: 0 }}
+        className="fixed inset-0 z-0 pointer-events-none mix-blend-screen overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.25 }}
         transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
-        style={{ transformOrigin: 'center top' }}
       >
-        <img
-          src={import.meta.env.BASE_URL + 'images/hero-bg.jpg'}
-          alt="code mesh background"
-          className="w-full h-full object-cover"
+        <DitheringShader
+          shape="wave"
+          type="8x8"
+          colorBack="#0a0a0c"
+          colorFront="#ccff00"
+          pxSize={3}
+          speed={0.6}
         />
       </motion.div>
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#0a0a0c]/50 md:via-[#0a0a0c]/80 to-[#0a0a0c]" />

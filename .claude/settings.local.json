@@ -150,7 +150,10 @@
       "Bash(cp \"/Users/birdy/Desktop/设计生涯.png\" \"/Users/birdy/Documents/birdys-portfolio/public/images/design-career.png\")",
       "Bash(cp \"/Users/birdy/Desktop/生活方式.png\" \"/Users/birdy/Documents/birdys-portfolio/public/images/lifestyle.png\")",
       "Bash(cp \"/Users/birdy/Desktop/GPad播放页改版 \\(4\\)/有播控.png\" \"/Users/birdy/Documents/birdys-portfolio/public/images/pad-final-ctrl-on.png\")",
-      "Bash(cp \"/Users/birdy/Desktop/GPad播放页改版 \\(4\\)/无播控.png\" \"/Users/birdy/Documents/birdys-portfolio/public/images/pad-final-ctrl-off.png\")"
+      "Bash(cp \"/Users/birdy/Desktop/GPad播放页改版 \\(4\\)/无播控.png\" \"/Users/birdy/Documents/birdys-portfolio/public/images/pad-final-ctrl-off.png\")",
+      "Bash(echo \"tsc exit code: $?\")",
+      "Bash(file public/images/__TRACKED_VAR__)",
+      "Bash(echo \"tsc exit: $?\")"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"

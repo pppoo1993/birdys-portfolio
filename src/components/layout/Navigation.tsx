@@ -283,7 +283,7 @@ export default function Navigation() {
       )}
 
       {/* Desktop: fixed left sidebar card */}
-      <aside className="fixed top-3 left-3 bottom-3 z-40 hidden xl:flex w-[220px] flex-col bg-[#121214] border border-[#1f1f23] rounded-2xl shadow-[4px_0_30px_rgba(0,0,0,0.6)] overflow-hidden">
+      <aside className="fixed top-0 left-0 bottom-0 z-40 hidden xl:flex w-[220px] flex-col bg-[#121214]/75 backdrop-blur-xl border-r border-[#1f1f23] shadow-[4px_0_30px_rgba(0,0,0,0.6)]">
         <div className="px-5 pt-10 pb-6">
           <img src={import.meta.env.BASE_URL + 'images/logo.svg'} alt="Logo" style={{ width: '110px', height: '24px' }} className="object-contain opacity-90 flex-shrink-0 self-center" />
         </div>

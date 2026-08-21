@@ -106,7 +106,7 @@ export default function Projects() {
   }, [inView])
 
   return (
-    <section ref={sectionRef} id="projects" className="w-full bg-[#0d0d0d]/30 backdrop-blur-sm py-16 md:py-20 border-t border-zinc-900/60">
+    <section ref={sectionRef} id="projects" className="relative z-10 w-full bg-[#0d0d0d] py-16 md:py-20 border-t border-zinc-900/60">
       <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-12">
         <p className="heading-section mb-4 md:hidden">Projects</p>
 
