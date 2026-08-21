@@ -170,7 +170,8 @@
       "Bash(brew --version)",
       "Bash(avconvert -s lines-demo.mov -p PresetMediumQuality -o lines-demo.mp4 --replace --progress)",
       "Bash(avconvert -s story-demo.mov -p PresetMediumQuality -o story-demo.mp4 --replace --progress)",
-      "Bash(file *)"
+      "Bash(file *)",
+      "Bash(tee /tmp/pm-font.css)"
     ],
     "additionalDirectories": [
       "/Users/birdy/.ssh"
