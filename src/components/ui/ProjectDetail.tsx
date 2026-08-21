@@ -378,7 +378,7 @@ export default function ProjectDetail({ project, onClose, onNavigate }: ProjectD
             </div>
 
             {/* Mobile: page counter at bottom center */}
-            <div className="absolute bottom-0 left-0 right-0 flex justify-center pt-3 pb-[calc(0.75rem_+_env(safe-area-inset-bottom))] bg-gradient-to-t from-[#121212] via-[#121212]/90 to-transparent md:hidden pointer-events-none z-50">
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center pt-1 pb-2.5 bg-gradient-to-t from-[#121212] via-[#121212]/90 to-transparent md:hidden pointer-events-none z-50">
               <span className="text-[13px] font-mono text-zinc-500 tracking-wider">
                 {String(activeIndex + 1).padStart(2, '0')} / {String(sections.length).padStart(2, '0')}
               </span>

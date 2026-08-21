@@ -291,7 +291,8 @@ export default function Navigation() {
 
         <div className="px-5 pb-4">
           <p className="text-[0.6rem] text-text-tertiary text-left">
-            &copy; BIRDY DESIGN 2026. ALL RIGHTS RESERVED. CODE WITH CLAUDE CODE.
+            &copy; BIRDY DESIGN 2026<br />
+            CODE WITH CLAUDE CODE
           </p>
         </div>
       </aside>
