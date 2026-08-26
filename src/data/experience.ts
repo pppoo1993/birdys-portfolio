@@ -25,7 +25,7 @@ export const experienceData: ExperienceEntry[] = [
     company: '全速创意设计',
     role: '资深用户体验设计师',
     startDate: '2020-05',
-    endDate: '2021-08',
+    endDate: '2021-07',
     description: [
       '##菜鸟驿站 · 智能小样派发终端',
       '建立并统一跨端视觉语言系统， 主导线下硬件大屏与线上小程序间的联动交互设计，重构核心核销链路。',
@@ -43,7 +43,7 @@ export const experienceData: ExperienceEntry[] = [
     company: '大树网络',
     role: '高级 UI 设计师',
     startDate: '2015-12',
-    endDate: '2020-12',
+    endDate: '2019-12',
     description: [
       '##功夫贷·互联网金融产品',
       '主导 App 与 Web 全端产品的体验架构升级，从零构建并推行统一的设计语言系统，确保多终端体验的品牌一致性与连贯性。',
