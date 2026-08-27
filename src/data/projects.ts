@@ -459,7 +459,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '故事接龙：起点页方案探索',
-          body: '接龙的核心交互在于起点页 — 它要在一屏之内完成<b>世界观透传</b>、<b>创作引导</b>和<b>生态图谱展示</b>。没有成熟行业参考，我在信息密度和可理解性之间做了不同取舍，尝试了三个方向：\n\n① <b>评论盖楼式</b> — 理解门槛低，单对剧情分支与多元走向的容量有限\n② <b>平行宇宙式</b> — 多线并行、每条故事线独立完整，但概念抽象、理解门槛高\n③ <b>地图探索式</b> — 空间化地图直观呈现非线性叙事、探索感强，但信息密度过高、用户易迷失',
+          body: '接龙的核心交互在于起点页 — 它要在一屏之内完成<b>世界观透传</b>、<b>创作引导</b>和<b>生态图谱展示</b>。没有成熟行业参考，我在信息密度和可理解性之间做了不同取舍，尝试了三个方向：\n\n① <b>评论盖楼式</b> — 理解门槛低，但对剧情分支与多元走向的容量有限\n② <b>平行宇宙式</b> — 多线并行、每条故事线独立完整，但概念抽象、理解门槛高\n③ <b>地图探索式</b> — 空间化地图直观呈现非线性叙事、探索感强，但信息密度过高、用户易迷失',
           html: `<style>
 .sk-wrapper{display:flex;gap:40px;justify-content:center;max-width:100%;flex-wrap:wrap}
 .sk-group{flex-shrink:0}
@@ -613,7 +613,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '互动破局：由业务目标到设计价值',
-          body: '明星陪看直播间是一个既有的业务，我接手时的业务目标很明确：<b>改版、升级互动体验、促进商家变现</b>。\n\n对一个已上线跑的业务做体验升级，我的第一个问题是<b>「它到底缺什么」</b>。回到业务现场我发现：原有的陪看是「文字/语音」形态 — 明星通过文字、语音弹幕和观众交流，陪伴缺真实感、情感连接弱，既不利于留存，也撑不起付费。',
+          body: '明星陪看直播间是一个既有的业务，我接手时的业务目标很明确：<b>升级互动体验、促进商业变现</b>。\n\n对一个已上线跑的业务做体验升级，我的第一个问题是<b>「它到底缺什么」</b>。回到业务现场我发现：原有的陪看是「文字/语音」形态 — 明星通过文字、语音弹幕和观众交流，陪伴缺真实感、情感连接弱，既不利于留存，也撑不起付费。',
           html: `<style>
 .hl-p{color:#A0A0A0;font-size:13px;line-height:1.75;margin:0 0 1.5rem;font-weight:400}
 .hl-p b{color:#FFFFFF;font-weight:600}
@@ -771,7 +771,7 @@ export const projectData: Project[] = [
 <div style="max-width:800px;margin:0 auto">
 <div class="entry-cards" style="display:flex;gap:16px;margin-bottom:24px">
 <div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">低干扰</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">入口置于选集下方，随直播状态动态显隐，不打断观影流。</p></div>
-<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">高转化</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">开播时透出试试状态和角标，辅助决策，一键切入陪看。</p></div>
+<div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">高转化</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">开播时透出实时状态和角标，辅助决策，一键切入陪看。</p></div>
 <div class="entry-card"><p style="color:#C7FF00;font-size:13px;font-weight:600;margin:0 0 4px">心智建设</p><p style="color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400;margin:0">培养预约习惯，并引导一键预约，将剧集观众转化为直播间存量用户。</p></div>
 </div>
 <p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>播放页触达入口</p>
@@ -834,7 +834,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '直播间状态：情景感知与任务聚焦',
-          body: '顺承分层逻辑，直播间不止“直播中”一种状态。为了避免一刀切的界面打碎用户的沉浸感，我引入了<b>情境感知的设计思路</b>，按场景增加三种状态：\n\n① <b>鉴权态</b> — 会员鉴权区分身份，付费用户顺畅进入、非付费用户引导开通，精准匹配不同用户的任务闭环\n② <b>预约态</b> — 把对明星的期待，转化为明确的一键预约与回访提醒，通过外部触发建立长期的心理预期\n③ <b>回看态</b> — 引入播控，并设计「播控动态显隐机制」：无操作时底部播控隐藏，展示互动控件；拖动进度时展示画面缩略图、自动收起飘评和挂件\n\n这些设计都指向同一件事：让用户聚焦于当前任务，而不是被过多的信息干扰。',
+          body: '直播间不止“直播中”一种状态。为了让用户在不同场景下聚焦于当前任务，我按场景增加三种状态：\n\n① <b>鉴权态</b> — 会员鉴权区分身份，付费用户顺畅进入、非付费用户引导开通，精准匹配不同用户的任务闭环\n② <b>预约态</b> — 把对明星的期待，转化为明确的一键预约与回访提醒，通过外部触发建立长期的心理预期\n③ <b>回看态</b> — 引入播控，并设计「播控动态显隐机制」：无操作时底部播控隐藏，展示互动控件；拖动进度时展示画面缩略图、自动收起飘评和挂件\n\n这些设计都指向同一件事：让用户聚焦于当前任务，而不是被过多的信息干扰。',
           html: `<style>
 .sr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .sr-col{display:flex;flex-direction:column;gap:0;align-items:flex-start}
@@ -1048,7 +1048,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '重构背景：由数据反差开启假设验证',
-          body: '复盘 Pad 端播放页数据时，我们发现了一个强烈反差：沿用手机端的密集布局，手机端表现稳健，Pad 端却遭遇了留存瓶颈。\n\n大屏天然的连播优势正在失效，这背后指向一个更严峻的问题：高价值用户的价值正被系统性低估。',
+          body: '复盘 Pad 端播放页数据时，我们发现了一个强烈反差：沿用手机端的密集布局、推荐策略，手机端表现稳健，Pad 端却遭遇了留存瓶颈。\n\n大屏天然的连播优势正在失效，这背后指向一个更严峻的问题：高价值用户的价值正被系统性低估。',
           html: `<style>
 .ba-flow{display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:12px;max-width:960px;margin:24px auto 0}
 .ba-step{flex:1;min-width:0;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
@@ -1073,7 +1073,7 @@ export const projectData: Project[] = [
 <div class="ba-step">
 <h4 class="ba-step-title">解读 · 业务影响</h4>
 <p class="ba-step-sub">高净值用户的价值被低估</p>
-<p class="ba-step-desc">Pad 端用户天然具备更高消费净值，但粗放布局未匹配其留存与消费深度。</p>
+<p class="ba-step-desc">Pad 端用户天然具备更高消费净值，但简单的设计适配未匹配其留存与消费深度。</p>
 </div>
 <div class="ba-step-arrow">→</div>
 <div class="ba-step hypothesis">
@@ -1091,7 +1091,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '用户调研：不同终端的心智差异',
-          body: '为了验证「心智错配」的推论，我们首先通过后台数据进行圈选，锁定了 Pad 端的核心基盘用户 — <b>19–31 岁、以电视剧追剧为核心场景的高活群体</b>。\n\n基于这群贡献了主要流量却遭遇留存瓶颈的关键人群，我们开展了 30+ 场深度访谈与真实场景观察。通过追踪他们在双端的跨端轨迹，我们排除了泛人群的干扰，精准捕获了核心用户在 Pad 大屏下的真实心智与痛点证据。',
+          body: '为了验证「心智错配」的推论，我们首先通过后台数据，锁定了 Pad 端的核心基盘用户 — <b>19–31 岁、以电视剧追剧为核心场景的高活群体</b>。\n\n基于这群贡献了主要流量却遭遇留存瓶颈的关键人群，我们通过投放问卷、筛选用户开展了 30+ 场深度访谈与真实场景观察。通过追踪他们在双端的跨端轨迹，我们排除了泛人群的干扰，精准捕获了核心用户在 Pad 大屏下的真实心智与痛点证据。',
           html: `<style>
 .pad3-compare{display:flex;flex-direction:column;gap:32px}
 .pad3-dim{display:flex;flex-direction:column;gap:14px}
@@ -1172,7 +1172,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '架构诊断：三分屏模式的体验错配',
-          body: '把「沉浸体验」这把标尺放到现有设计上审视，我们发现原 Pad 端播放页沿用手机端的<b>「三分屏」</b>结构，整屏被拆分为三个功能区：\n\n① <b>左上 · 播放器区域</b> — 承载影视画面的核心观影区\n② <b>左下 · 信息互动区</b> — 采用上下双屏结构：第一屏为 TVG 区，集中展示剧集信息、功能按钮与选集选项；第二屏为评论互动区\n③ <b>右侧 · 内容推荐区域</b> — 负责相关内容的推荐分发\n\n结合站内用户数据，我们将功能需求按真实使用频次整理出优先级：<b>全屏观影（77.4%） > 切换选集（20.7%） > 内容推荐（6.8%） > 评论互动（0.92%）</b>。\n\n对照这份优先级，现有布局暴露出两处核心问题：\n\nA.<b>滑动热区局促、操作不便</b> — 高频的「切换选集」被压缩在狭小的交互区域，导致操作成本偏高。\nB.<b>布局与用户需求存在结构性矛盾</b>——需求最高的「全屏观影」仅占据左上局部，而优先级最低的「内容推荐」却占满整个右侧区域，形成「高需求，承载空间偏少」的错位。',
+          body: '把「沉浸体验」这把标尺放到现有设计上审视，我们发现原 Pad 端播放页沿用手机端的<b>「三分屏」</b>结构，整屏被拆分为三个功能区：\n\n① <b>左上 · 播放器区域</b> — 承载影视画面的核心观影区\n② <b>左下 · 信息互动区</b> — 采用上下双屏结构：第一屏为 TVG 区，集中展示剧集信息、功能按钮与选集选项；第二屏为评论互动区\n③ <b>右侧 · 内容推荐区域</b> — 负责相关内容的推荐分发\n\n结合站内用户数据，我们将功能需求按真实使用频次整理出优先级：<b>全屏观影（77.4%） > 切换选集（20.7%） > 内容推荐（6.8%） > 评论互动（0.92%）</b>。\n\n对照这份优先级，现有布局暴露出两处核心问题：\n\nA.<b>滑动热区局促、操作不便</b> — 高频的「切换选集」被压缩在狭小的交互区域，导致操作成本偏高。\nB.<b>布局与用户需求存在结构性矛盾</b> — 需求最高的「全屏观影」仅占据左上局部，而优先级较低的「内容推荐」却占满整个右侧区域，形成「高需求，承载空间偏少」的错位。',
           html: `<style>
 .pad6-imgs{display:grid;grid-template-columns:repeat(2,auto);justify-content:center;gap:48px;max-width:1080px;margin:24px auto 0;align-items:start}
 .pad6-fig{display:flex;flex-direction:column;align-items:center}
