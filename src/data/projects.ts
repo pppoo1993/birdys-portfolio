@@ -42,7 +42,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '缘起：从业务瓶颈到设计机会',
-          body: '2025 年中，我以设计 owner 身份着手吃鲸AI前期探索。我的第一个问题不是「做什么功能」，而是<b>「爱奇艺为什么要做这件事」</b> — 不理解业务动机，设计无从锚定。\n\n经过梳理我发现了长视频行业在生产端、变现端、流量端存在三个结构性瓶颈。它们看似是业务问题，但每一个都指向了设计机会 — <b>AI 不只是降本，更是重构用户关系的杠杆</b>。\n\n基于此，我将每个瓶颈拆解为「痛点 → 解法」，作为后续所有设计决策的起点。',
+          body: '2025 年中，我以设计 owner 身份着手吃鲸AI前期探索。我的第一个问题不是「做什么功能」，而是<b>「爱奇艺为什么要切入AI赛道」</b> — 不理解业务动机，设计无从锚定。\n\n经过梳理我发现了长视频行业的三个结构性瓶颈。它们看似是业务问题，但每一个都指向了设计机会 — <b>AI 不只是降本，更是重构用户关系的杠杆</b>。\n\n基于此，我将每个瓶颈拆解为「痛点 → 解法」，作为后续所有设计决策的起点。',
                     html: `<style>
 .ba-section{display:flex;flex-direction:column;gap:16px;margin:0 auto;max-width:1080px}
 .ba-header-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:12px}
@@ -303,7 +303,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '以消带产：分层触点的落地',
-          body: '框架落定后，第一个要解决的是分发场景：如何把用户的观看冲动，低成本转化为创作行为。\n\n根据 Hook Model，外部 Trigger 可以替代用户的内部决策负担。针对用户不同时刻的心理，我们设计了三个分层的触发点：\n\n① <b>首页瀑布流（弱触发·建认知）</b> — 用双列 Feed 流让用户感知「这里能玩 AI」\n② <b>播放页（强刺激·捕冲动）</b> — 观看冲动最强的时刻，同款入口即时出现\n③ <b>模板 Tab（深加工·导行动）</b> — 把模糊意向转化为具体拍摄动作\n\n三个触点层层递进，配合全局「+」浮层兜底，让「看到 → 想要 → 开始」无缝衔接。',
+          body: '框架落定后，第一个要解决的是分发场景：如何把用户的观看冲动，低成本转化为创作行为。\n\n根据上瘾模型， <b>外部触发可以替代用户的内部决策负担</b>。针对用户不同时刻的心理，我们设计了三个分层的触发点：\n\n① <b>首页瀑布流（弱触发·建认知）</b> — 用双列 Feed 流让用户感知「这里能玩 AI」\n② <b>播放页（强刺激·捕冲动）</b> — 观看冲动最强的时刻，提供「创同款」按钮，即点即创作\n③ <b>模板 Tab（深加工·导行动）</b> — 为已有创作意图的用户，提供具体的创作方向，进一步转化为具体创作动作\n\n三个触点层层递进，配合全局「+」浮层兜底，让「看到 → 想要 → 开始」无缝衔接。',
           html: `<style>
 .dist-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .dist-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}@media(min-width:768px){.dist-col{align-items:flex-start}}
@@ -341,7 +341,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '以消带产：三个核心玩法的提炼',
-          body: '通用视频生成是平台基础能力，但解决不了普通用户的困境 — 面对空白画布，大多数人不知道从何下手。\n\n我回到一个更根本的问题：影视片段由哪些用户可操控的维度构成？从影视学角度看，核心维度包括剧情、画风、台词、镜头节奏、音效配乐等。但并非都适合普通用户操控 — 音效、剪辑需要专业知识，而台词、画风、剧情是大众有天然认知、AI 又能干预、且已被市场验证的三个维度。\n\n基于此，我们聚焦这三个维度，提炼出三个核心玩法 — <b>画风转换</b>（操控视觉）、<b>台词改写</b>（操控对白）、<b>故事接龙</b>（操控叙事）。用户不需要从零构思，只需选择一个预设方向即可开始。',
+          body: '通用视频生成是平台应该有的基础能力，面对空白的创作页面，普通用户可能不知道从何下手。\n\n我们从影视学角度进行分析，一个影视片段的核心维度包括剧情、画风、台词、镜头、音乐等。通过对市面上已有的影视二创短视频的调研分析，其中台词、画风、剧情是大众有天然认知、已被市场验证、AI又可高度干预的三个维度。\n\n基于此，我们提炼出了<b>画风转换</b>（操控视觉）、<b>台词改写</b>（操控对白）、<b>故事接龙</b>（操控叙事）三个核心玩法。',
           html: `<style>
 .cr-row{display:flex;gap:60px;align-items:flex-start;margin:14px auto;width:fit-content;max-width:100%}
 .cr-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -377,7 +377,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '创作中枢：影视片段库搭建',
-          body: '深入具体玩法前，需要先解决素材获取这一基础问题。我的决策是：不追求素材数量，而是用三类来源覆盖全部创作场景 — <b>官方影视片段</b>（版权素材）、<b>本地图片/视频</b>（自由创作）、<b>已创作视频</b>（二次迭代）。\n\n同时，我们把它封装成<b>通用模组</b>，在通用视频、影视创意玩法等环节均可调用，并针对每个玩法精细化影视片段的运营。随着影视片段内容的持续扩充，库的形态也随之调整 — 从基础的盖楼式结构，演进为左导航结构，并逐步加入<b>筛选、搜索</b>能力，提升选片效率。',
+          body: '在资源获取环节，我们将资源库封装成<b>通用模组</b>，在通用视频生成、影视创意玩法环节均可接入。\n\n素材库支持<b>官方影视片段</b>（版权素材）、<b>本地图片/视频</b>（自由创作）、<b>已创作视频</b>（二次迭代）三种素材类型。\n\n官方影视片段以IP为维度聚合展示，随着内容的持续扩充，库的形态也随之调整 — 从基础的盖楼式结构，演进为左导航结构，并逐步加入<b>推荐、筛选、搜索</b>能力，提升选取片段的效率。',
           html: `<style>
 .m-split{display:flex;gap:48px;align-items:flex-start;margin:0;width:fit-content;max-width:100%}
 .m-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
@@ -404,7 +404,7 @@ export const projectData: Project[] = [
 </div>
 <div class="m-col">
 <div class="m-col-title">支持多选场景</div>
-<p class="cr-col-desc">通用视频创作时支持多选素材。</p>
+<p class="cr-col-desc">通用视频创作开放多选功能。</p>
 <div class="m-img-row">
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/mat-multi-unselected.jpg" alt="多选未选择" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">多选-未选择</span></div>
 <div class="cr-img-wrap"><div data-preview class="m-placeholder"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/mat-multi-selected.jpg" alt="多选已选择" style="width:100%;height:auto;display:block" /></div><span class="cr-img-label">多选-已选择</span></div>
@@ -415,7 +415,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '创作中枢：参考添加调用',
-          body: '在通用视频创作中，用户可引用参考图来控制生成方向。这里的基础机制是：参考被「添加」后进入参考池，被「调用」后则以标签形式嵌入输入框内。但调用真正的难点在于理清「用户在什么心智状态下需要它」。我以场景化思考切入，模拟用户自然输入剧情时的心流，按构想成熟度把用户分成三种状态：\n\nA. <b>构想已建立</b> — 开始输入前一次性添加好所有参考\nB. <b>构想部分建立</b> — 先加一部分，边输入边补充\nC. <b>构想未建立</b> — 边写边即时添加\n\n三种状态的共同要求是：调用入口要足够灵活，既不要求用户预先想清楚，也不打破用户当前的心流。因此我把「调用」设计成三类入口：\n\n① <b>点击已添加的参考缩略图</b> — 视觉浏览流\n② <b>输入 @ 唤起浮层点选</b> — 键盘输入心流\n③ <b>点击已调用的参考标签唤起浮层替换</b> — 修改替换流\n\n其中前两者是首次调用的互补入口，覆盖点击交互与键盘两种输入状态；后者兜底「调错想换」的场景。这样，无论用户处于哪种构想状态，都能在输入流中随时调用参考，而无需离开创作上下文。',
+          body: '在通用视频创作中，用户可调用已添加参考来控制生成方向。调用功能设计的难点在于理清「用户在什么心智状态下需要它」。我以场景化思考切入，模拟用户输入心流，把用户分成三种状态：\n\nA. <b>构想已建立</b> — 开始输入前一次性添加好所有参考\nB. <b>构想部分建立</b> — 先加一部分，边输入边补充\nC. <b>构想未建立</b> — 边写边即时添加\n\n三种状态的共同要求是：调用入口足够灵活、可覆盖全部场景、不打断用户输入心流。因此我把「调用」设计成三类入口：\n\n① <b>点击已添加的参考缩略图</b> — 视觉浏览流\n② <b>输入 @ 唤起浮层点选</b> — 键盘输入心流\n③ <b>点击已调用的参考标签唤起浮层替换</b> — 修改替换流\n\n其中前两者解决首次调用的问题；后者兜底「调错想换」的场景。',
           html: `<style>
 .lr-label{font-size:12px;color:#A0A0A0;text-align:center}
 </style>
@@ -428,7 +428,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '台词改写：门槛递降，预期可见',
-          body: '改写经典影视台词，是短视频里长盛不衰的二创玩法 — 市面案例众多，却几乎都靠创作者「手搓」，从头改写的高门槛让普通用户望而却步。\n\n不同状态的用户需要不同层级的引导。<b>Scaffolding 渐进释放理论</b>指出：入门阶段需要高引导，熟练后逐步归还自主权。据此我设计了三种入口，引导强度从高到低逐级递减：\n\n① <b>底部主题标签</b> — 完全没想法，一键生成（高引导）\n② <b>AI 写台词浮层</b> — 有方向缺灵感，输入主题由 AI 生成（中引导）\n③ <b>逐句点击改写</b> — 已有想法，所见即所得（低引导）\n\n但「怎么改」只是第一步，改完之后还有一道坎 — <b>预期管理</b>。改写后不会即时生成视频（解析需要时间），漫长的等待与不确定感极易劝退用户。为此我借鉴音乐播放器的歌词时间轴，解析影视片段台词，让<b>视频画面与台词时间轴联动预览</b> — 改写时实时看到每句台词对应的画面，在生成前就校准「抽卡预期」，把不可控的等待变成可控的确认。',
+          body: '改写经典影视台词是短视频里长盛不衰的玩法，但重新编写一篇新台词的高门槛让非影视从业者望而却步。\n\n渐进释放理论指出<b>不同状态的用户需要不同层级的引导</b>：入门阶段需要高引导，熟练后逐步归还自主权。据此我设计了三种入口，引导强度从高到低逐级递减：\n\n① <b>底部主题标签</b> — 完全没想法，一键生成（高引导）\n② <b>AI 写台词</b> — 有方向、无改编能力，输入主题由 AI 生成（中引导）\n③ <b>点击手动改写</b> — 有改编能力，所见即所得（低引导）\n\n在具体页面交互上，我借鉴音乐播放器的歌词时间轴，让<b>视频画面与台词时间轴联动预览</b>，在生成前就校准「抽卡预期」。',
           html: `<style>
 .lr-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;max-width:min(900px,100%);margin:0 auto}
 .lr-item{display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -454,12 +454,12 @@ export const projectData: Project[] = [
         },
         {
           heading: '故事接龙：AI视频链式共创',
-          body: '台词改写解决的是「一个人怎么创作」，故事接龙则要解决「一群人怎么共创」 — 两者的区别不在玩法复杂度，而在参与互动感的深化。\n\n而互动的持续，恰恰是传统 UGC 的软肋 — 「发布即终点」让内容发出后便静态沉淀，没有持续参与的理由。我从影视 IP 的天然优势找到突破口：热播剧的大结局本身就是用户情绪的高点，也是创作欲最强的时刻。把接龙起点锚定在大结局处 — 依托已有世界观降低冷启动门槛，让用户从「追完剧」自然过渡到「改写结局」，每个灵感接续前文、不断延展。\n\n这样一来，接龙不再是一堆孤立的二创，而是被串联成一部不断生长的<b>「AI 短剧」</b>。剧有情节、有进展，参与者和围观者会像追剧一样持续回来，形成持续消费的动力。',
+          body: '台词改写解决的是「一个人怎么创作」，故事接龙则要解决「一群人怎么共创」\n\n传统 UGC 的软肋在于「发布即终点」，内容发布后便静态沉淀，用户没有持续参与的理由。我从影视 IP 的天然优势找到突破口：热播剧的大结局本身就是用户情绪的高点，也是创作欲最强的时刻。把接龙起点锚定在大结局处 — 依托已有世界观降低冷启动门槛，让用户从「追完剧」自然过渡到「改写结局」，每个灵感接续前文、不断延展。\n\n这样一来，接龙被串联成一部不断生长的<b>「AI 短剧」</b>。参与者和围观者也会进行「追更」，形成持续消费的动力。',
           html: `<div style="text-align:center"><div data-preview style="display:inline-block"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/story-chain.jpg" alt="故事接龙" style="width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block" /></div><p style="color:#A0A0A0;font-size:12px;margin-top:8px">故事接龙逻辑示意</p></div>`,
         },
         {
           heading: '故事接龙：起点页方案探索',
-          body: '接龙的核心交互在于起点页 — 它要在一屏之内完成<b>世界观透传</b>、<b>创作引导</b>和<b>生态图谱展示</b>。没有成熟行业参考，我在信息密度和可理解性之间做了不同取舍，尝试了三个方向：\n\n① <b>评论盖楼式</b> — 理解门槛低，但对剧情分支与多元走向的容量有限\n② <b>平行宇宙式</b> — 多线并行、每条故事线独立完整，但概念抽象、理解门槛高\n③ <b>地图探索式</b> — 空间化地图直观呈现非线性叙事、探索感强，但信息密度过高、用户易迷失',
+          body: '接龙起点页的设计难点在于已有故事线和剧情分支的生态图谱展示。没有成熟行业参考，我在信息密度和可理解性之间做了不同取舍，尝试了三个方向：\n\n① <b>评论盖楼式</b> — 理解门槛低，但纵向信息展示结构屏效低、信息展示容量有限\n② <b>平行宇宙式</b> — 多线并行、每条故事线独立完整，但概念抽象、理解门槛高\n③ <b>地图探索式</b> — 空间化地图直观呈现非线性叙事、探索感强，但信息密度过高、用户易迷失',
           html: `<style>
 .sk-wrapper{display:flex;gap:40px;justify-content:center;max-width:100%;flex-wrap:wrap}
 .sk-group{flex-shrink:0}
@@ -486,7 +486,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '故事接龙：起点页减法收敛',
-          body: '多轮探索后，核心矛盾浮出水面：故事接龙承载的主线、支线信息量太大，若全部堆在首屏，用户一打开便迷失其中。\n\n最终方案是「减法」 — 首屏只保留主线故事，支线收纳进接龙播放器的选集列表，让用户第一眼只面对一件事。由此收敛出两条清晰的路径：\n\n① <b>想直接创作</b> — 进入起点页，点「去接龙」，看完大结局再点「开始接龙」即可创作\n② <b>想先探索</b> — 进入起点页，选择一条故事线，进入播放器顺着主线慢慢探索\n\n支线的展开交给后续交互自然发生。把复杂度拆开、后置，不让它第一秒就吓退用户。',
+          body: '最终的方案上我们选择了减法 — 首屏只保留主线故事，支线收纳进接龙播放器的选集列表，把复杂度拆开，降低用户处理信息的压力。由此收敛出两条清晰的路径：\n\n① <b>想直接创作</b> — 进入起点页，点「去接龙」，看完大结局再点「开始接龙」即可创作\n② <b>想先探索</b> — 进入起点页，选择一条故事线，进入播放器顺着主线慢慢探索。',
           html: `<style>
 .lr-video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);cursor:pointer;transition:all 0.3s ease}
 .lr-video-overlay:hover{background:rgba(0,0,0,0.15)}
@@ -505,7 +505,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '尾声：上线与资产留存',
-          body: '2026 年 4 月，吃鲸AI 在爱奇艺世界大会正式发布，不久后因战略调整关停 — 这是一次战略选择，而非设计的失败。\n\n产品画上句号，但核心交互资产并未消失：创作页、播放器等<b>关键模块</b>已标准化封装为 SDK，<b>嵌入爱奇艺主站</b>，持续服务于 AI 创作能力的分发与落地。好的设计思考，应该比产品活得更久。',
+          body: '吃鲸AI 在 2026 年 4 月的爱奇艺世界大会正式发布，不久后因战略调整关停 — 这是一次战略选择，而非设计的失败。\n\n吃鲸AI 核心交互资产：创作页、播放器等<b>关键模块</b>已封装为 SDK <b>嵌入爱奇艺主站</b>，持续服务于 AI 创作能力的分发与落地。',
           html: `<style>.ending-wrap{display:flex;gap:60px;justify-content:center;align-items:flex-start;max-width:900px;margin:0 auto}@media(max-width:767px){.ending-wrap{flex-direction:column;gap:16px;align-items:flex-start}}</style><div class="ending-wrap"><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI 正式发布</p><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/ending.jpg" alt="发布" style="max-height:360px;border-radius:8px;display:block" /></div><div style="text-align:center"><p style="color:#FFFFFF;font-size:14px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:16px;background:#C7FF00;border-radius:2px;flex-shrink:0;display:inline-block"></span>吃鲸AI嵌入爱奇艺主站</p><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/ending2.jpg" alt="嵌入" style="max-height:360px;border-radius:8px;display:block" /></div></div>`,
         },
         {
