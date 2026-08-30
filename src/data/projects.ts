@@ -993,7 +993,7 @@ export const projectData: Project[] = [
           heading: '重构背景：由数据反差开启假设验证',
           body: '复盘 Pad 端播放页数据时，我们发现了一个强烈反差：沿用手机端的密集布局、推荐策略，手机端表现稳健，Pad 端却遭遇了留存瓶颈。\n\n大屏天然的连播优势正在失效，这背后指向一个更严峻的问题：高价值用户的价值正被系统性低估。',
           html: `<style>
-.ba-flow{display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:12px;max-width:960px;margin:24px auto 0}
+.ba-flow{display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:12px;max-width:1080px;margin:24px auto 0}
 .ba-step{flex:1;min-width:0;background:rgba(30,30,34,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:22px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
 .ba-step:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px);box-shadow:0 20px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.03)}
 .ba-step-title{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;margin:0 0 12px;position:relative}
@@ -1010,31 +1010,31 @@ export const projectData: Project[] = [
 <div class="ba-step">
 <h4 class="ba-step-title">现象 · 数据反差</h4>
 <p class="ba-step-sub">同构不同效，Pad 留存遇瓶颈</p>
-<p class="ba-step-desc">手机端平移至 Pad 端，完播率与连播率持续滞后。</p>
+<p class="ba-step-desc">手机布局平移大屏，完播率、连播率持续滞后。</p>
 </div>
 <div class="ba-step-arrow">→</div>
 <div class="ba-step">
 <h4 class="ba-step-title">解读 · 业务影响</h4>
 <p class="ba-step-sub">高净值用户的价值被低估</p>
-<p class="ba-step-desc">Pad 端用户天然具备更高消费净值，但简单的设计适配未匹配其留存与消费深度。</p>
+<p class="ba-step-desc">Pad 用户消费净值更高，简单适配却未匹配留存深度。</p>
 </div>
 <div class="ba-step-arrow">→</div>
 <div class="ba-step hypothesis">
 <h4 class="ba-step-title">假设 · 核心病灶</h4>
 <p class="ba-step-sub">场景与心智错配</p>
-<p class="ba-step-desc">「密集推荐」违背大屏用户「沉浸、专注」的追剧心智。</p>
+<p class="ba-step-desc">「密集推荐」违背大屏「沉浸、专注」的追剧心智。</p>
 </div>
 <div class="ba-step-arrow">→</div>
 <div class="ba-step verify">
 <h4 class="ba-step-title">验证 · 下一步行动</h4>
 <p class="ba-step-sub">启动深度调研验证</p>
-<p class="ba-step-desc">以真实用户深访追踪跨端行为，捕获真实心智。</p>
+<p class="ba-step-desc">以用户深访追踪跨端行为，捕获真实心智。</p>
 </div>
 </div>`,
         },
         {
           heading: '用户调研：不同终端的心智差异',
-          body: '为了验证「心智错配」的推论，我们首先通过后台数据，锁定了 Pad 端的核心基盘用户 — <b>19–31 岁、以电视剧追剧为核心场景的高活群体</b>。\n\n基于这群贡献了主要流量却遭遇留存瓶颈的关键人群，我们通过投放问卷、筛选用户开展了 30+ 场深度访谈与真实场景观察。通过追踪他们在双端的跨端轨迹，我们排除了泛人群的干扰，精准捕获了核心用户在 Pad 大屏下的真实心智与痛点证据。',
+          body: '我们首先通过后台数据，锁定了 Pad 端的核心用户 — <b>19–31 岁、以电视剧追剧为核心场景的高活群体</b>。\n\n基于核心用户，我们通过<b>后台圈人→投放问卷→回收问卷→筛选用户</b>，开展了 30+ 场深度访谈与真实场景观察。通过追踪他们在双端的使用习惯，我们排除了泛人群的干扰，精准捕获了核心用户在 Pad 大屏下的真实心智与痛点证据。',
           html: `<style>
 .pad3-compare{display:flex;flex-direction:column;gap:32px}
 .pad3-dim{display:flex;flex-direction:column;gap:14px}
@@ -1115,7 +1115,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '架构诊断：三分屏模式的体验错配',
-          body: '把「沉浸体验」这把标尺放到现有设计上审视，我们发现原 Pad 端播放页沿用手机端的<b>「三分屏」</b>结构，整屏被拆分为三个功能区：\n\n① <b>左上 · 播放器区域</b> — 承载影视画面的核心观影区\n② <b>左下 · 信息互动区</b> — 采用上下双屏结构：第一屏为 TVG 区，集中展示剧集信息、功能按钮与选集选项；第二屏为评论互动区\n③ <b>右侧 · 内容推荐区域</b> — 负责相关内容的推荐分发\n\n结合站内用户数据，我们将功能需求按真实使用频次整理出优先级：<b>全屏观影（77.4%） > 切换选集（20.7%） > 内容推荐（6.8%） > 评论互动（0.92%）</b>。\n\n对照这份优先级，现有布局暴露出两处核心问题：\n\nA.<b>滑动热区局促、操作不便</b> — 高频的「切换选集」被压缩在狭小的交互区域，导致操作成本偏高。\nB.<b>布局与用户需求存在结构性矛盾</b> — 需求最高的「全屏观影」仅占据左上局部，而优先级较低的「内容推荐」却占满整个右侧区域，形成「高需求，承载空间偏少」的错位。',
+          body: '把「沉浸体验」这把标尺放到现有设计上审视，我们发现原 Pad 端播放页是<b>「三分屏」</b>结构\n\n① <b>左上 · 播放器区域</b> — 承载影视画面的核心观影区\n② <b>左下 · 信息互动区</b> — 采用上下双屏结构：第一屏为 TVG 区，集中展示剧集信息、功能按钮与选集选项；第二屏为评论互动区\n③ <b>右侧 · 内容推荐区域</b> — 负责相关内容的推荐分发\n\n结合站内用户数据，我们将功能需求按真实使用频次整理出优先级：<b>全屏观影（77.4%） > 切换选集（20.7%） > 内容推荐（6.8%） > 评论互动（0.92%）</b>。\n\n对照这份优先级，现有布局暴露出两处核心问题：\n\nA.<b>滑动热区局促、操作不便</b> — 高频的「切换选集」被压缩在狭小的交互区域，导致操作成本偏高。\nB.<b>布局与用户需求存在结构性矛盾</b> — 需求最高的「全屏观影」仅占据左上局部，而优先级较低的「内容推荐」却占满整个右侧区域，形成「高需求，承载空间偏少」的错位。',
           html: `<style>
 .pad6-imgs{display:grid;grid-template-columns:repeat(2,auto);justify-content:center;gap:48px;max-width:1080px;margin:24px auto 0;align-items:start}
 .pad6-fig{display:flex;flex-direction:column;align-items:center}
@@ -1170,9 +1170,9 @@ export const projectData: Project[] = [
 @media(max-width:767px){.pad8-row{grid-template-columns:1fr}}
 </style>
 <div class="pad8-row">
-<div class="pad8-card accent"><div><h4 class="pad8-h4">内容优先</h4><p class="pad8-sub">重构沉浸阵地</p><p class="pad8-desc">播放器回归绝对主角。将进入全屏观影设为最高优先级，摒弃冗余干扰，将架构精简为「主内容 + 窄辅助」，给用户纯净的沉浸体验。</p></div></div>
-<div class="pad8-card"><div><h4 class="pad8-h4">效率至上</h4><p class="pad8-sub">优化信息触达</p><p class="pad8-desc">让高频的<b>切换选集</b>触手可及；将低频评论互动进行合理隐藏收纳。通过碎片信息的有序聚合，推动体验从单一的「孤立观影」向「内容深度探索」升级。</p></div></div>
-<div class="pad8-card"><div><h4 class="pad8-h4">商业克制</h4><p class="pad8-sub">达成温和共生</p><p class="pad8-desc">改变生硬的「硬植入」逻辑，将商业触达转化为顺滑的场景服务。在坚守沉浸观影的前提下让商业自然融入，避免对用户注意力的过度争夺。</p></div></div>
+<div class="pad8-card accent"><div><h4 class="pad8-h4">内容优先</h4><p class="pad8-sub">重构沉浸阵地</p><p class="pad8-desc">播放器回归绝对主角，将进入全屏观影设为最高优先级，给用户纯净的沉浸体验。</p></div></div>
+<div class="pad8-card"><div><h4 class="pad8-h4">效率至上</h4><p class="pad8-sub">优化信息触达</p><p class="pad8-desc">高频的<b>切换选集</b>触手可及，低频评论互动合理收纳，让页面信息有序聚合。</p></div></div>
+<div class="pad8-card"><div><h4 class="pad8-h4">商业克制</h4><p class="pad8-sub">达成温和共生</p><p class="pad8-desc">把生硬的「硬推荐」转为顺滑的场景化服务，在坚守沉浸观影的前提下让商业自然融入，避免过度争夺注意力。</p></div></div>
 </div>`,
         },
         {
@@ -1205,7 +1205,7 @@ export const projectData: Project[] = [
 <h4 class="pad10-title">方案 B：更激进的二分屏结构（最终胜出）</h4>
 <div class="pad10-desc">
 <p><b>结构特征：</b>确立「主内容 + 窄辅助」二分屏。左侧全部空间服务于观影；右侧纵向切分，上方承载高频选集操作，下方收纳推荐。</p>
-<p><b>价值评估：</b>完美契合用户心智与 Gpad 1.6:1 宽屏物理特性，兼顾沉浸感与宽屏效率。</p>
+<p><b>价值评估：</b>契合用户观影心智与 Gpad宽屏趋势物理特性，兼顾沉浸感与选集切换效率。</p>
 </div>
 <img class="pad10-img" src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/pad-scheme-dual.png" alt="经典二分屏结构" />
 </div>
@@ -1214,7 +1214,7 @@ export const projectData: Project[] = [
         },
         {
           heading: '方案呈现：线上形态与结果验证',
-          body: '最终方案以「二分屏」架构正式落地：左侧是纯粹让位给画面的观影区，右侧窄辅助列纵向承载高频的<b>选集操作</b>与低频的<b>内容推荐</b>，让信息各归其位。\n\n呼应「沉浸优先」的准则，播控条被设计为<b>动态显隐</b>：用户无操作时，播控自动收起、画面归于纯净（无播控）；一旦触达屏幕，播控即时唤起、操作触手可及（有播控），在沉浸与效率之间取得平衡。',
+          body: '最终方案以「二分屏」架构正式落地：左侧完全让位给画面的观影区，右侧纵向承载高频的<b>选集操作</b>与低频的<b>内容推荐</b>，让信息各归其位。',
           html: `<style>
 .pad12-row{display:grid;grid-template-columns:repeat(2,1fr);gap:48px;max-width:900px;margin:24px auto 0}
 .pad12-fig{display:flex;flex-direction:column;gap:10px;align-items:center}
