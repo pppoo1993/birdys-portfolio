@@ -654,7 +654,7 @@ export const projectData: Project[] = [
     <tbody>
         <tr>
             <td class="lbl" data-label="环节">目标</td>
-            <td data-label="流量蓄水">把观影流量转化为陪看参与，并沉淀为长效资产。</td>
+            <td data-label="流量蓄水">把观影用户转化为陪看用户，并沉淀长效资产。</td>
             <td data-label="沉浸式体验">在复杂信息场景中保障观影沉浸感。</td>
             <td data-label="情感变现">让付费成为情感表达，实现即时变现与长尾增收。</td>
         </tr>
@@ -747,9 +747,9 @@ export const projectData: Project[] = [
 <div class="ap-phone"><img src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/agg-page.jpg" alt="聚合页" style="width:100%;height:auto;display:block" /></div>
 </div>
 <div class="ap-right">
-<div class="ap-module"><p class="ap-module-title">追直播 · 直播时间轴</p><p class="ap-module-desc"><b>时间预期管理</b> — 以直播时间轴串联「直播中」与「预约」两种状态，明确「明星陪看」的长期观看预期，并通过预约提醒机制，在关键节点实现精准触达。</p></div>
-<div class="ap-module"><p class="ap-module-title">打榜 · 陪看榜单</p><p class="ap-module-desc"><b>社群竞技场</b> — 榜单聚合历史与实时打榜数据，借助粉丝的荣誉感与从众心理激发竞争欲望，驱动用户不断回访并进入直播间参与互动和打榜。</p></div>
-<div class="ap-module"><p class="ap-module-title">补看 · 回看合集</p><p class="ap-module-desc"><b>长效资产沉淀</b> — 将直播内容转化为可复用的版权衍生资产，以IP维度聚合回看合集，通过降低查找门槛的方式，驱动用户持续追补历史内容并反复回访。</p></div>
+<div class="ap-module"><p class="ap-module-title">追直播 · 直播时间轴</p><p class="ap-module-desc"><b>时间预期管理</b> — 以时间轴串联「直播中」与「预约」，配合预约提醒，建立长期观看预期。</p></div>
+<div class="ap-module"><p class="ap-module-title">打榜 · 陪看榜单</p><p class="ap-module-desc"><b>社群竞技场</b> — 榜单聚合历史与实时数据，借助荣誉感与从众心理激发竞争，驱动用户不断回访并进入直播间参与互动和打榜。</p></div>
+<div class="ap-module"><p class="ap-module-title">补看 · 回看合集</p><p class="ap-module-desc"><b>长效资产沉淀</b> — 将直播沉淀为可回看的版权资产，以IP维度聚合回看合集，降低查找门槛，驱动用户持续回访追补历史内容。</p></div>
 </div>
 </div></div>`,
         },
@@ -757,7 +757,7 @@ export const projectData: Project[] = [
         // ═══ P8 陪看布局重构1 ═══
         {
           heading: '直播间布局：基于认知负荷的分层管理',
-          body: '增加了陪看画面后的直播间同时挤着影视画面、明星陪看、弹幕互动和商业挂件，多源信息极易互相干扰。从<b>认知负荷理论</b>来看，过载的视觉噪音会降低界面的“信噪比”，无形中增加用户的外在认知负荷。\n\n我的解法是通过<b>「分层管理」</b> — 将信息解耦为三层：\n\n① <b>底层（内容层）</b> — 影视视频、明星画面，构筑核心视觉焦点\n② <b>中层（互动层）</b> — 弹幕、礼物，承载社群氛围\n③ <b>顶层（控件层）</b> — 页面导航与全局控件。\n\n在此基础上，引入两个机制：1. 顶部控件在无操作时自动精简；2. 弹幕与礼物根据明星画面动态避让。在<b>保护观看心流</b>的前提下，让明星始终稳居 C 位，把注意力始终留在内容本身。',
+          body: '增加了陪看画面后的直播间同时挤着影视画面、明星陪看、弹幕互动和商业挂件，多源信息极易互相干扰。从<b>认知负荷理论</b>来看，过载的视觉噪音会降低界面的「信噪比」，无形中增加用户的外在认知负荷。\n\n我的解法是通过<b>「分层管理」</b> — 将信息解耦为三层：\n\n① <b>底层（内容层）</b> — 影视视频、明星画面，构筑核心视觉焦点\n② <b>中层（互动层）</b> — 弹幕、礼物，承载社群氛围\n③ <b>顶层（控件层）</b> — 页面导航与全局控件。\n\n在此基础上，引入两个机制：1. 顶部控件在无操作时自动精简；2. 弹幕与礼物根据明星画面动态避让。在<b>保护观看心流</b>的前提下，让明星始终稳居 C 位，把注意力始终留在内容本身。',
           html: `<style>
 .im-row{display:flex;gap:24px;justify-content:center;align-items:flex-start;max-width:1080px;margin:24px auto 0}
 .im-item{display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0}
@@ -793,16 +793,19 @@ export const projectData: Project[] = [
         },
         // ═══ P9 陪看布局重构2 ═══
         {
-          heading: '情感变现：送礼金分层金字塔设计',
-          body: '变现的核心难点在于：付费不能破坏互动氛围，反而要成为情感表达的延伸。根据<b>「自决理论」</b>，用户的付费本质上是为了满足胜任、自主和归属三种心理需求。据此，我将送礼体系拆解为「基础、创意、成就」三层分层金字塔.\n\n这套分层最终推动<b>直播项目营收创上线以来历史新高</b>，也让「直播」与「弹幕」「卡牌」并列成为爱奇艺互动体验设计的三大营收模块。',
+          heading: '情感变现：送礼分层金字塔',
+          body: '变现的核心难点在于：付费不能破坏互动氛围，反而要成为情感表达的延伸。根据<b>「自决理论」</b>，用户的付费本质上是为了满足胜任、自主和归属三种心理需求。据此，我将送礼体系拆解为「基础、创意、成就」三层分层金字塔。',
           html: `<style>
 .pyramid-wrap{text-align:center;margin:24px 0}
 .pyramid-img{width:100%;max-width:800px;border-radius:8px;border:1px solid #27272a;display:block;margin:0 auto}
 .pyramid-caption{color:#A0A0A0;font-size:12px;margin-top:8px}
+.pyramid-conclusion{max-width:900px;margin:24px auto 0;text-align:center;color:#A0A0A0;font-size:13px;line-height:1.75;font-weight:400}
+.pyramid-conclusion b{color:#C7FF00;font-weight:600}
 </style>
 <div class="pyramid-wrap">
 <div data-preview style="display:inline-block"><img class="pyramid-img" src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/送礼金字塔.png" alt="送礼金字塔" /></div>
 <p class="pyramid-caption">送礼分层金字塔</p>
+<p class="pyramid-conclusion">这套分层最终推动<b>直播项目营收创上线以来历史新高</b>，也让「直播」与「弹幕」「卡牌」并列成为爱奇艺互动体验设计的三大营收模块。</p>
 </div>`,
         },
         // ═══ P11 基础送礼链路 ═══
@@ -842,7 +845,7 @@ export const projectData: Project[] = [
         // ═══ P12 进阶创意送礼 ═══
         {
           heading: '进阶创意送礼：组件化架构与玩法「生产线」',
-          body: '如果送礼只是「选礼物 → 付款」　，那它永远只是支付。我把<b>送礼游戏化</b>，并用组件化思维将送礼玩法拆解为「玩法标签 → 活动入口 → 活动浮层」三层组件。通过<b>快速组装玩法的「生产线」</b>，将单一的「花钱」转译成「一起玩」的丰富创意玩法。\n\n① <b>玩法标签</b> — 礼物图标右上角展示玩法名称，提供轻量感知\n② <b>活动入口</b> — 点击送礼标签，弹出活动入口，入口上展示玩法简介,供用户了解玩法参与门槛\n③ <b>活动浮层</b> — 进入活动浮层，展示玩法规则、排行榜、奖励等核心信息',
+          body: '如果送礼只是「选礼物 → 付款」，那它永远只是支付。我把<b>送礼游戏化</b>，并用组件化思维将送礼玩法拆解为「玩法标签 → 活动入口 → 活动浮层」三层组件。通过<b>快速组装玩法的「生产线」</b>，将单一的「花钱」转译成「一起玩」的创意体验。\n\n① <b>玩法标签</b> — 礼物图标右上角展示玩法名称，提供轻量感知\n② <b>活动入口</b> — 选择礼物后，弹出活动入口，入口上展示玩法简介,供用户了解玩法参与门槛\n③ <b>活动浮层</b> — 进入活动浮层，展示玩法规则、排行榜、奖励等核心信息',
           html: `<style>
 .p12-subtitle{color:#FFFFFF;font-size:14px;font-weight:600;padding-bottom:10px;display:flex;align-items:center;gap:8px;position:relative;margin:24px 0 8px}
 .p12-chart{max-width:660px;margin:0 auto}
@@ -881,7 +884,7 @@ export const projectData: Project[] = [
         // ═══ P13 终极玩法 ═══
         {
           heading: '终极玩法：明星爆灯的成就闭环',
-          body: '在「爱奇艺尖叫之夜」这类顶级活动的直播里，单点付费礼物撑不起氛围。我用「明星爆灯」把个 <b>人付费重构为全场共同推进的集体成就</b> — 粉丝针对明星的个人打赏都将汇聚成全场进度，当送礼进度达到目标值，就会触发该明星的全程爆灯特效。\n\n这背后的核心驱动是<b>「社会认同的心理机制」</b>：当用户看到「所有都在为偶像冲」，个体的付费就从「花钱」变成了「一起参与」，明星影响力由此引爆为粉丝的社交能量。',
+          body: '在「爱奇艺尖叫之夜」这类顶级活动的直播里，单点付费礼物撑不起氛围。我用「明星爆灯」把个 <b>人付费重构为全场共同推进的集体成就</b>。粉丝针对明星的个人打赏都将汇聚成全场进度，当送礼进度达到目标值，就会触发该明星的全程爆灯特效。\n\n这背后的核心驱动是<b>「社会认同的心理机制」</b>：当用户看到「所有都在为偶像冲」，个体的付费就从「花钱」变成了「一起参与」，明星影响力由此引爆为粉丝的社交能量。',
           html: `<style>
 	.p13-chart{max-width:1080px;margin:0 auto}
 	.p13-flow{display:flex;gap:28px;align-items:flex-start;margin:28px auto;justify-content:center}
