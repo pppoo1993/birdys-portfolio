@@ -115,6 +115,6 @@ export const imageDimensions: Record<string, [number, number]> = {
   '精选播放页.jpg': [739, 1600],
   '素材检索库.jpg': [600, 1290],
   '调用素材.jpg': [600, 1298],
-  '送礼金字塔.jpg': [1600, 632],
+  '送礼金字塔.png': [3160, 1248],
   '首页流分发.jpg': [739, 1600],
 }

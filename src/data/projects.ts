@@ -801,7 +801,7 @@ export const projectData: Project[] = [
 .pyramid-caption{color:#A0A0A0;font-size:12px;margin-top:8px}
 </style>
 <div class="pyramid-wrap">
-<div data-preview style="display:inline-block"><img class="pyramid-img" src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/送礼金字塔.jpg" alt="送礼金字塔" /></div>
+<div data-preview style="display:inline-block"><img class="pyramid-img" src="https://birdy-portfolio-2026.oss-cn-beijing.aliyuncs.com/images/送礼金字塔.png" alt="送礼金字塔" /></div>
 <p class="pyramid-caption">送礼分层金字塔</p>
 </div>`,
         },
